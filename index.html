@@ -3,364 +3,526 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Three Years Quiet. Thousands Of Purchase Orders. Zero Defaults. — The Totem Challenge</title>
+<title>Totem Members</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  /* ===========================================================
-     THE TOTEM CHALLENGE — Issue No. 01, editorial (Forbes-style) layout
-     Standalone article page. Original template; Totem-branded.
-     Palette: white ground, ink body, Totem navy #032165 + gold #b8860b accents.
-     Fonts: Spectral (serif editorial), Work Sans (sans UI).
-     =========================================================== */
-  :root{
-    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
-    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
-    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
-    --read:700px;
+  :root {
+    --navy: #032165;
+    --blue: #1a3a8f;
+    --gold: #b8860b;
+    --gold-bright: #fcb900;
+    --ink: #16181d;
+    --body: #26292f;
+    --muted: #6b7280;
+    --faint: #9aa0a8;
+    --line: #e4e6ea;
+    --paper: #ffffff;
+    --wash: #f7f8fa;
   }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
-  body{
-    background:var(--paper); color:var(--body);
-    font-family:'Spectral',Georgia,'Times New Roman',serif;
-    font-size:20px; line-height:1.72;
-    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--body);
+    font-family: 'Spectral', Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .sans { font-family: 'Work Sans', Arial, Helvetica, sans-serif; }
 
-  /* ---------- Masthead / nameplate ---------- */
-  .top{border-bottom:1px solid var(--line);}
-  .nameplate{max-width:1100px;margin:0 auto;padding:22px 24px 16px;text-align:center;}
-  .nameplate .wordmark{
-    font-family:'Spectral',serif;font-weight:800;font-size:34px;letter-spacing:-0.01em;
-    color:var(--ink);line-height:1;
+  /* ---- STICKY MASTHEAD ---- */
+  .top { border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 100; background: var(--paper); }
+  .nameplate {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 24px 10px;
+    text-align: center;
+    height: 94px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .nameplate .wordmark b{color:var(--navy);}
-  .nameplate .tagline{
-    font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;
-    text-transform:uppercase;color:var(--muted);margin-top:9px;
+  .nameplate .logo {
+    height: 52px;
+    display: block;
   }
-  /* section nav strip */
-  .nav{border-top:1px solid var(--line);}
-  .nav ul{
-    max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;
-    display:flex;justify-content:center;flex-wrap:wrap;gap:26px;
-  }
-  .nav li a{
-    display:block;padding:11px 0;font-family:'Work Sans',sans-serif;font-size:12px;
-    font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);
-    text-decoration:none;border-bottom:2px solid transparent;
-  }
-  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
-  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
-
-  /* ---------- Article header ---------- */
-  .wrap{max-width:var(--read);margin:0 auto;padding:0 24px;}
-  .article-head{padding:42px 0 0;}
-  .kicker{
-    font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:0.16em;
-    text-transform:uppercase;color:var(--navy);margin-bottom:18px;
-  }
-  .kicker .dot{color:var(--gold);margin:0 8px;}
-  h1.headline{
-    font-family:'Spectral',serif;font-weight:800;font-size:48px;line-height:1.08;
-    letter-spacing:-0.015em;color:var(--ink);margin-bottom:20px;
-  }
-  .dek{
-    font-family:'Spectral',serif;font-weight:400;font-size:23px;line-height:1.5;
-    color:#3b4048;margin-bottom:28px;
+  .nameplate .tagline {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--muted);
   }
 
-  /* byline */
-  .byline{display:flex;align-items:center;gap:13px;padding:6px 0 18px;}
-  .avatar{
-    width:46px;height:46px;border-radius:50%;background:var(--navy);flex:0 0 46px;
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--gold-bright);
+  /* ---- NAV ---- */
+  .nav { border-top: 1px solid var(--line); }
+  .nav ul {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 26px;
   }
-  .byid{font-family:'Work Sans',sans-serif;line-height:1.35;}
-  .byid .who{font-size:15px;font-weight:600;color:var(--ink);}
-  .byid .who .follow{
-    color:var(--navy);font-weight:600;cursor:pointer;margin-left:10px;font-size:13px;
-    border-bottom:1px solid var(--navy);
+  .nav li a {
+    display: block;
+    padding: 10px 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
   }
-  .byid .role{font-size:12.5px;color:var(--muted);}
-  .byid .role b{color:var(--gold);font-weight:600;}
-  .metarow{
-    display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;
-    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-    padding:12px 0;margin-bottom:30px;
-    font-family:'Work Sans',sans-serif;font-size:13px;color:var(--muted);
-  }
-  .metarow .stamp-time{color:var(--ink);font-weight:500;}
-  .metarow .sp{flex:1;}
-  .metarow .share a{color:var(--muted);text-decoration:none;font-weight:600;letter-spacing:0.04em;margin-left:14px;}
-  .metarow .share a:hover{color:var(--navy);}
+  .nav li a:hover { color: var(--navy); border-bottom-color: var(--gold); }
+  .nav li a.live { color: var(--navy); border-bottom-color: var(--navy); }
 
-  /* ---------- Hero lead-art ---------- */
-  figure.hero{margin:0 0 14px;}
-  .hero-art{
-    position:relative;width:100%;aspect-ratio:16/9;border-radius:2px;overflow:hidden;
+  /* ---- HUB LAYOUT ---- */
+  .hub {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 0;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr 1fr;
+    gap: 36px;
+    align-items: start;
+  }
+
+  /* ---- COLUMN TITLES ---- */
+  .col-title {
+    font-family: 'Spectral', serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+  .col-rule {
+    border: none;
+    height: 3px;
+    background: var(--navy);
+    margin-bottom: 18px;
+  }
+
+  /* ---- POST CARDS ---- */
+  .post-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    transition: background 0.15s;
+  }
+  .post-card:first-of-type { padding-top: 0; }
+  .post-card:hover .post-title { color: var(--navy); }
+  .post-title {
+    font-family: 'Spectral', serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--ink);
+    margin-bottom: 3px;
+    transition: color 0.15s;
+  }
+  .post-date {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .badge-new {
+    display: inline-block;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--gold);
+    color: white;
+    padding: 2px 7px;
+    border-radius: 2px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* ---- CENTER HERO ---- */
+  .center-col { display: flex; flex-direction: column; }
+  .hero-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  }
+  .hero-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.12); }
+  .hero-image {
+    width: 100%;
+    aspect-ratio: 16/9;
     background:
       radial-gradient(120% 140% at 78% 18%, rgba(252,185,0,0.16), rgba(252,185,0,0) 46%),
       radial-gradient(120% 120% at 12% 95%, rgba(52,96,197,0.40), rgba(52,96,197,0) 55%),
-      linear-gradient(160deg,#04204f 0%,#032165 46%,#01102f 100%);
-    color:#fff;display:flex;flex-direction:column;justify-content:center;
-    padding:7% 8%;
+      linear-gradient(160deg, #04204f 0%, #032165 46%, #01102f 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7% 8%;
+    color: #fff;
   }
-  .hero-art .over{
-    font-family:'Work Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.28em;
-    text-transform:uppercase;color:rgba(255,255,255,0.62);margin-bottom:14px;
+  .hero-image .over {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.62);
+    margin-bottom: 10px;
   }
-  .hero-art .big{
-    font-family:'Spectral',serif;font-weight:800;font-size:clamp(56px,11vw,120px);line-height:0.9;
-    color:#fff;letter-spacing:-0.02em;
+  .hero-image .big {
+    font-family: 'Spectral', serif;
+    font-weight: 800;
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 0.95;
+    color: #fff;
+    letter-spacing: -0.02em;
   }
-  .hero-art .big em{font-style:normal;color:var(--gold-bright);}
-  .hero-art .sub{
-    font-family:'Work Sans',sans-serif;font-size:clamp(12px,2.4vw,16px);font-weight:600;
-    letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.82);margin-top:18px;
+  .hero-image .big em { font-style: normal; color: var(--gold-bright); }
+  .hero-image .rule { width: 42px; height: 3px; background: var(--gold-bright); margin: 16px 0 0; }
+  .hero-caption {
+    padding: 18px 20px;
+    background: var(--wash);
+    border: 1px solid var(--line);
+    border-top: none;
   }
-  .hero-art .rule{width:54px;height:3px;background:var(--gold-bright);margin:22px 0 0;}
-  figure.hero figcaption{
-    font-family:'Work Sans',sans-serif;font-size:12.5px;color:var(--faint);line-height:1.5;
-    padding:9px 2px 0;
+  .hero-caption .cap-kicker {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 5px;
   }
-  figure.hero figcaption .credit{text-transform:uppercase;letter-spacing:0.08em;color:#b7bcc4;}
-
-  /* ---------- Body ---------- */
-  .body{padding:30px 0 8px;}
-  .body p{margin:0 0 24px;color:var(--body);}
-  .body p.lead-first::first-letter{
-    float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);
-    font-size:74px;line-height:0.74;padding:8px 12px 0 0;
+  .hero-caption .cap-title {
+    font-family: 'Spectral', serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--ink);
+    margin-bottom: 4px;
   }
-  .lead-word{font-weight:700;color:var(--ink);}
-  .emph{font-weight:700;color:var(--ink);font-size:21px;}
-  h2.sub{
-    font-family:'Spectral',serif;font-weight:700;font-size:29px;line-height:1.2;
-    letter-spacing:-0.01em;color:var(--ink);margin:40px 0 16px;
-  }
-  .body a{color:var(--navy);text-decoration:underline;text-underline-offset:2px;}
-  .vlead{font-weight:700;color:var(--ink);}
-
-  /* pull quote */
-  blockquote.pull{
-    margin:36px 0;padding:6px 0 6px 26px;border-left:4px solid var(--gold);
-    font-family:'Spectral',serif;font-style:italic;font-weight:500;
-    font-size:30px;line-height:1.32;color:var(--navy);
-  }
-
-  /* data figure (the stamp) */
-  figure.data{margin:34px 0;border:1px solid var(--line);background:var(--wash);}
-  figure.data .grid{display:flex;}
-  figure.data .cell{flex:1;text-align:center;padding:30px 16px;border-right:1px solid var(--line);}
-  figure.data .cell:last-child{border-right:0;}
-  figure.data .num{
-    font-family:'Spectral',serif;font-weight:800;font-size:40px;line-height:1;color:var(--navy);
-  }
-  figure.data .lbl{
-    font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;
-    text-transform:uppercase;color:var(--muted);margin-top:10px;
-  }
-  figure.data figcaption{
-    font-family:'Work Sans',sans-serif;font-size:12px;color:var(--faint);
-    padding:11px 16px;border-top:1px solid var(--line);line-height:1.5;
+  .hero-caption .cap-date {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
   }
 
-  /* CTA */
-  .cta-row{margin:30px 0 8px;}
-  a.cta{
-    display:inline-block;background:var(--navy);color:#fff;text-decoration:none;
-    font-family:'Work Sans',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.05em;
-    text-transform:uppercase;padding:15px 32px;border-radius:2px;
+  /* ---- SUBSCRIBE ---- */
+  .subscribe {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 44px 0 36px;
+    border-top: 1px solid var(--line);
+    margin-top: 24px;
   }
-  a.cta:hover{background:#04204f;}
-  .fineprint{font-family:'Work Sans',sans-serif;font-size:13px;color:var(--muted);font-style:italic;margin-top:12px;}
+  .subscribe h2 {
+    font-family: 'Spectral', serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .subscribe p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 20px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .subscribe-form {
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .subscribe-form input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid var(--line);
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    color: var(--ink);
+  }
+  .subscribe-form input:focus { border-color: var(--navy); }
+  .subscribe-form button {
+    padding: 12px 24px;
+    background: var(--navy);
+    color: white;
+    border: none;
+    border-radius: 0 2px 2px 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .subscribe-form button:hover { background: #04204f; }
 
-  .signoff{
-    font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--navy);
-    margin-top:26px;letter-spacing:-0.01em;
+  /* ---- FOOTER ---- */
+  footer.site {
+    border-top: 1px solid var(--line);
+    background: var(--wash);
   }
-  .issue-foot{font-family:'Work Sans',sans-serif;font-size:13px;color:var(--muted);margin-top:6px;}
+  footer.site .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 24px;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+  }
+  footer.site .fm {
+    font-family: 'Spectral', serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  footer.site .fm b { color: var(--navy); }
+  footer.site .legal {
+    font-size: 12px;
+    color: var(--faint);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
 
-  /* disclaimer + footer */
-  .disclaimer{
-    border-top:1px solid var(--line);margin-top:34px;padding-top:24px;
-    font-family:'Work Sans',sans-serif;font-size:12.5px;line-height:1.65;color:var(--muted);
+  /* ---- MODAL ---- */
+  .modal-overlay {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45); z-index: 999; align-items: center; justify-content: center;
   }
-  footer.site{border-top:1px solid var(--line);margin-top:48px;background:var(--wash);}
-  footer.site .inner{
-    max-width:1100px;margin:0 auto;padding:30px 24px;text-align:center;
-    font-family:'Work Sans',sans-serif;
+  .modal-overlay.active { display: flex; }
+  .modal {
+    background: var(--paper); border-radius: 4px; padding: 48px 40px; max-width: 440px;
+    width: 90%; text-align: center; box-shadow: 0 8px 40px rgba(0,0,0,0.18); position: relative;
   }
-  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:20px;color:var(--ink);}
-  footer.site .fm b{color:var(--navy);}
-  footer.site .fl{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-top:8px;}
+  .modal-close {
+    position: absolute; top: 14px; right: 18px; background: none; border: none;
+    font-size: 22px; color: var(--muted); cursor: pointer; font-family: 'Work Sans', sans-serif;
+  }
+  .modal-close:hover { color: var(--ink); }
+  .modal-icon {
+    width: 56px; height: 56px; border-radius: 50%; background: var(--navy);
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;
+    font-family: 'Spectral', serif; font-weight: 800; font-size: 26px; color: var(--gold-bright);
+  }
+  .modal h3 {
+    font-family: 'Spectral', serif; font-weight: 800; font-size: 22px;
+    color: var(--ink); margin-bottom: 12px;
+  }
+  .modal p {
+    font-family: 'Spectral', serif; font-size: 16px; line-height: 1.6;
+    color: var(--body); margin-bottom: 8px;
+  }
+  .modal .signoff {
+    font-family: 'Work Sans', sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy); margin-top: 20px;
+  }
 
-  @media (max-width:680px){
-    body{font-size:18px;}
-    h1.headline{font-size:34px;}
-    .dek{font-size:20px;}
-    h2.sub{font-size:24px;}
-    blockquote.pull{font-size:24px;}
-    figure.data .grid{flex-direction:column;}
-    figure.data .cell{border-right:0;border-bottom:1px solid var(--line);}
-    figure.data .cell:last-child{border-bottom:0;}
-    .nameplate .wordmark{font-size:27px;}
-    .hero-art{aspect-ratio:4/3;padding:10% 8%;}
-    .hero-art .over{font-size:11px;letter-spacing:0.22em;}
-    .hero-art .big{font-size:64px;}
-    .hero-art .sub{font-size:13px;letter-spacing:0.06em;}
+  /* ---- CHALLENGE HERO VARIANT ---- */
+  .hero-image--challenge {
+    background:
+      radial-gradient(120% 140% at 78% 18%, rgba(252,185,0,0.20), rgba(252,185,0,0) 46%),
+      radial-gradient(120% 120% at 12% 95%, rgba(52,96,197,0.45), rgba(52,96,197,0) 55%),
+      linear-gradient(160deg, #04204f 0%, #032165 46%, #01102f 100%);
+  }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 780px) {
+    .hub {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .center-col { order: -1; }
+    .subscribe { grid-column: 1; }
   }
 </style>
 </head>
 <body>
 
-  <!-- ===== MASTHEAD ===== -->
-  <header class="top">
-    <div class="nameplate">
-      <div class="wordmark">The Totem <b>Challenge</b></div>
-      <div class="tagline">The Home of 20% Returns</div>
-    </div>
-    <nav class="nav">
-      <ul>
-        <li><a href="#">Daily Market Pulse</a></li>
-        <li><a href="#" class="live">Weekly Challenge</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- MASTHEAD -->
+<div class="top">
+  <div class="nameplate">
+    <img class="logo" src="logo.png" alt="Totem LC Group">
+    <div class="tagline">Member Publications</div>
+  </div>
+  <div class="nav">
+    <ul>
+      <li><a href="index.html" class="live">Home</a></li>
+      <li><a href="market_pulse_june5_2026.html">Market Pulse</a></li>
+      <li><a href="totem_challenge_issue_01_forbes_june5.html">The Challenge</a></li>
+      <li><a href="archive.html">Archive</a></li>
+    </ul>
+  </div>
+</div>
 
-  <!-- ===== ARTICLE HEADER ===== -->
-  <article>
-    <div class="wrap article-head">
-      <div class="kicker">Capital Markets <span class="dot">&bull;</span> The Introductory Issue</div>
-      <h1 class="headline">Three Years Quiet. Thousands Of Purchase Orders. Zero Defaults.</h1>
-      <p class="dek">Inside Totem LC Group, a commercial transaction platform where members fund individual purchase orders from verified Fortune 100 buyers &mdash; built and tested in private for a year and a half before it opened its doors.</p>
+<!-- HUB -->
+<div class="hub">
 
-    </div>
+  <!-- LEFT: MARKET PULSE -->
+  <div class="left-col">
+    <div class="col-title">Market Pulse</div>
+    <hr class="col-rule">
 
-    <!-- ===== HERO LEAD-ART (swap in a licensed photo here if desired) ===== -->
-    <div class="wrap">
-      <figure class="hero">
-        <div class="hero-art">
-          <div class="over">Totem LC Group &mdash; Operating Record</div>
-          <div class="big"><em>0.00%</em></div>
-          <div class="sub">Default rate &nbsp;&middot;&nbsp; 3 years &nbsp;&middot;&nbsp; thousands of purchase orders filled</div>
-          <div class="rule"></div>
-        </div>
-        <figcaption>The operating record Totem points to since inception. Past performance does not guarantee future results. <span class="credit">&nbsp;|&nbsp; Illustration: Totem LC Group</span></figcaption>
-      </figure>
+    <a class="post-card" href="market_pulse_june5_2026.html">
+      <div class="post-title">S&amp;P 500 Hits 7,600, SpaceX IPO, NAR Membership Declining <span class="badge-new">New</span></div>
+      <div class="post-date">June 5, 2026</div>
+    </a>
+  </div>
 
-      <div class="byline">
-        <div class="avatar">T</div>
-        <div class="byid sans">
-          <div class="who">Totem LC Group <span class="follow">Follow</span></div>
-          <div class="role"><b>Contributor</b> &nbsp;&middot;&nbsp; The Totem Challenge Editorial Desk</div>
-        </div>
+  <!-- CENTER: FEATURED (swaps by day of week) -->
+  <div class="center-col">
+
+    <!-- Mon-Thu: Market Pulse thumbnail -->
+    <a class="hero-card" id="hero-pulse" href="market_pulse_june5_2026.html">
+      <div class="hero-image">
+        <div class="over">Totem LC Group - Latest Edition</div>
+        <div class="big">Market<br><em>Pulse</em></div>
+        <div class="rule"></div>
       </div>
-      <div class="metarow sans">
-        <span class="stamp-time">Jun 5, 2026, 08:00am EDT</span>
-        <span>7 min read</span>
-        <span class="sp"></span>
-        <span class="share">Share<a href="#">Save</a><a href="#">Print</a></span>
+      <div class="hero-caption">
+        <div class="cap-kicker">June 5, 2026 - Weekly Briefing</div>
+        <div class="cap-title">S&amp;P 500 hits 7,600, SpaceX IPO priced at $135/share, NAR membership declining 6.5%, consumer stress deepening across every category</div>
+        <div class="cap-date">Week of Monday, June 2, 2026</div>
       </div>
+    </a>
+
+    <!-- Fri-Sun: Totem Challenge thumbnail -->
+    <a class="hero-card" id="hero-challenge" href="totem_challenge_issue_01_forbes_june5.html" style="display:none;">
+      <div class="hero-image hero-image--challenge">
+        <div class="over">Totem LC Group - Weekly Newsletter</div>
+        <div class="big">The Totem<br><em>Challenge</em></div>
+        <div class="rule"></div>
+      </div>
+      <div class="hero-caption">
+        <div class="cap-kicker">Issue 01 - The Totem Challenge</div>
+        <div class="cap-title">Three Years Quiet. Thousands of Purchase Orders. Zero Defaults.</div>
+        <div class="cap-date">The Home of 20% Returns</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- RIGHT: TOTEM CHALLENGE -->
+  <div class="right-col">
+    <div class="col-title">The Totem Challenge</div>
+    <hr class="col-rule">
+
+    <a class="post-card" href="totem_challenge_issue_01_forbes_june5.html">
+      <div class="post-title">Three Years Quiet. Thousands of Purchase Orders. Zero Defaults.</div>
+      <div class="post-date">Issue 01 - The Totem Challenge</div>
+    </a>
+  </div>
+
+  <!-- SUBSCRIBE -->
+  <div class="subscribe">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+    <div class="subscribe-form" id="subscribe-form">
+      <input type="email" id="subscribe-email" placeholder="Email address" required>
+      <button type="button" id="subscribe-btn">Subscribe</button>
     </div>
+    <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+  </div>
 
-    <!-- ===== BODY ===== -->
-    <div class="wrap body">
+</div>
 
-      <p class="lead-first"><span class="lead-word">Welcome.</span> We are glad you are here. Whether you read this issue once and unsubscribe, schedule a verification call somewhere along the way, or eventually participate in the program itself, the work we do here is to tell you what we are seeing. Same way you would expect a sharp friend to.</p>
-      <p>Most of you have not heard of Totem LC Group. That was on purpose, we tested the system for over a year before we onboarded our first member. Before we get into what we built, let us start with who we are, how we got here, and why the next 12 months matter.</p>
+<!-- THANK YOU MODAL -->
+<div class="modal-overlay" id="thank-you-modal">
+  <div class="modal">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <div class="modal-icon">T</div>
+    <h3>Thank You for Signing Up</h3>
+    <p>We're looking forward to being a friend for you in this space.</p>
+    <div class="signoff">Totem Founders</div>
+  </div>
+</div>
 
-      <h2 class="sub">Who we are</h2>
-      <p>Totem's leadership spent careers looking for creative ways to support our families and solve problems other people had given up on, were not interested in, or simply did not even know existed. We share a belief: the world's biggest problems are the world's greatest business opportunities. The harder the problem, the more valuable the solution. That is what gets us up in the morning.</p>
+<!-- FOOTER -->
+<footer class="site">
+  <div class="inner">
+    <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+    <div class="legal">A publication of Totem LC Group. General information only - not investment advice or a recommendation to buy or sell anything.</div>
+  </div>
+</footer>
 
-      <h2 class="sub">How we got here</h2>
-      <p>The Totem concept emerged during COVID.</p>
-      <p>Totem identified vendors supplying Fortune companies, vendors who were winning purchase orders consistently. The problem was capital. The orders were there. Delivery was scheduled. The money just could not move fast enough to front the cost of the goods. Banks were too slow. Private offices were too costly for the cycle. There was a need for a faster, cleaner solution.</p>
-      <p>Totem was founded by problem solvers. Vendors came to us with the problem. A big one that no one was paying attention to, no one was interested in solving, no one even cared to look at. We did.</p>
-      <p>We looked at it. The problem looked small on the surface, but the mechanics behind it were massive. We saw a chance to solve a real problem with a clean structure, and to do it in a way that worked for everyone in the chain.</p>
-      <p class="emph">We tested the solution.</p>
-      <p>We tested the process with our own money first. Totem's system worked. Then we presented the opportunity to select members of our inner circle, even family. These were Totem's first participants. The early transactions performed exactly as promised. We are happy to report that these initial members are still with Totem to this day, because the opportunity is that good. The great thing about Totem's origin story is that the opportunity then is the opportunity now, except today the structure also includes insurance policies underwritten and provided by top tier insurers like AIG and Allianz.</p>
-      <p>After nearly a year and a half of alpha testing transactions, agreements, workflows, and procedures, we achieved a level of transparency and confidence to feel comfortable opening our networks slowly, deliberately, with one introduction at a time. Every member who has participated has been someone we know personally, or someone introduced by a person we trust. The program has grown by relationship and referral, not through marketing.</p>
-      <p>To this day, Totem still participates in transactions with our funds. This is not a structure we built for other people. It is a structure we built for ourselves and then shared with the people in our lives we trust and respect the most.</p>
+<script>
+  // Swap hero thumbnail: Friday(5), Saturday(6), Sunday(0) = Challenge; Mon-Thu = Market Pulse
+  (function(){
+    var day = new Date().getDay();
+    var isFriday = (day === 5 || day === 6 || day === 0);
+    document.getElementById('hero-pulse').style.display = isFriday ? 'none' : 'block';
+    document.getElementById('hero-challenge').style.display = isFriday ? 'block' : 'none';
+  })();
 
-      <h2 class="sub">Why now</h2>
-      <p>3 years in, we have a record we can point to. Millions of dollars in capital deployed across tens of thousands of purchase orders filled. Zero defaults. Dozens of members have joined and moved through the program. Every receivable has been received on time. No hiccups. No delays.</p>
-      <p>That is why we are writing now. After 3 years of an unbroken operational record, we believe we have something worth sharing. So we are.</p>
+  // Subscribe form
+  document.getElementById('subscribe-btn').addEventListener('click', function(){
+    var email = document.getElementById('subscribe-email').value.trim();
+    var msg = document.getElementById('subscribe-msg');
+    var btn = this;
+    if(!email || email.indexOf('@') === -1){
+      msg.style.display = 'block';
+      msg.style.color = '#9b2c2c';
+      msg.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email})
+    }).then(function(){
+      document.getElementById('subscribe-email').value = '';
+      btn.textContent = 'Subscribed';
+      document.getElementById('thank-you-modal').classList.add('active');
+    }).catch(function(){
+      msg.style.display = 'block';
+      msg.style.color = '#9b2c2c';
+      msg.textContent = 'Something went wrong. Please try again.';
+      btn.textContent = 'Subscribe';
+      btn.disabled = false;
+    });
+  });
 
-      <h2 class="sub">What Totem is</h2>
-      <p>Totem is a commercial transaction platform. Members allocate capital to specific purchase orders from verified Fortune 100 buyers. The capital allows Totem's vendors to fulfill the orders. The buyers pay the receivable. The transaction closes. Members get paid.</p>
-      <p>Every transaction is independent. There is no fund. There is no pool. There is no blind allocation. You see the buyer. You see the goods. You see the compensation amount before you accept. You accept the deal or you pass. The next one looks different. You see that number too.</p>
-      <p>The buyers are real. Amazon, Bank of America, UPS, CVS Health, Boeing, Toyota Motor North America. The vendors are vetted. The purchase orders exist before any capital moves. The insurance is in place before any capital moves. The structure runs the same way every time.</p>
-      <p>This is the entire model. It is not complicated. It is not exotic. It is commerce, with capital placed where the commerce actually happens, with&hellip; fortune 100 buyers!</p>
-
-      <figure class="data">
-        <div class="grid">
-          <div class="cell"><div class="num">3 years</div><div class="lbl">In operation</div></div>
-          <div class="cell"><div class="num">Thousands</div><div class="lbl">Of purchase orders filled</div></div>
-          <div class="cell"><div class="num">0.00%</div><div class="lbl">Default rate since inception</div></div>
-        </div>
-        <figcaption>Totem LC Group operating record since inception. Past performance does not guarantee future results.</figcaption>
-      </figure>
-
-      <p>The proof is operational. As of June 2026, Totem has helped to fill, again, thousands of purchase orders with zero defaults! We know you have read those numbers a few times already in this issue. They are the same numbers because the program is the same program. The structure has not changed. The buyers pay. The transactions close. The members get paid. 3 years of the same answer is the answer. Verifiable on a phone call with Totem's vendors and/or insurance representative before any capital moves (if you need that type of due diligence).</p>
-
-      <h2 class="sub">What is to come</h2>
-      <p class="emph">The work is operational. The pipeline is not.</p>
-      <p>We know any orgin story is important. It sets context, give you an idea of the work that went into building something special. Hopefully that earns some trust points, or at the very least, starts to build it&hellip;. Now the exciting thing that we really love to talk about is what's to come and this is what we are really excited to share with you!</p>
-      <p>The volume of purchase orders coming into the program has accelerated over the past months. New buyers. New vendors. New transaction categories. New cycles opening faster than we can stage them. Members feel this first, because they see the open POs on their dashboard (or in private emails) before anyone else does.</p>
-      <p>The acceleration traces back to Totem's flagship vendors, one of which just won a multi-million dollar expansion supply contract with Amazon Corporate spanning 4 countries. With Totem's support, this vendor is now the #1 MBE supplier to Amazon. Totem has first option to fund every PO accepted&hellip;Let me repeat that again in case you missed it&hellip; Totem has first option to fund every PO accepted, which means YOU have the first option to fund any of those POs!</p>
-      <p>And it doesn't stop there&hellip;While one vendor grows, more are joining.</p>
-      <p>The model that worked for Totem's first vendor works for other vendors in similar positions. Working only with trusted operators holding verified buyer relationships, with real POs in hand, and a capital bottleneck between the order and fulfillment, Totem is the catalyst. Each new vendor we onboard expands the supply of transactions members can participate in. Extensive underwriting ensures we are deliberate and selective about vendors we allow to join. The operating record matters more to us than the growth rate. But the pipeline is opening, and we want members and prospective members to know.</p>
-      <p>This is also why we are opening the door now.</p>
-      <p>We are growing thoughtfully. Members who come in now will see structural advantages over time that newer members will not. We are not in a rush. We are not running a launch. We are introducing the program to people who would benefit from it, through relationship and introduction, the same way we always have. The difference is that the door is open in a way it was not before.</p>
-      <p>If you are reading this and the program sounds like something you want to know more about, the verification offer at the bottom of this issue is the cleanest place to start.</p>
-
-      <h2 class="sub">What is coming in the newsletter</h2>
-      <p>Starting with Issue 02, every Friday brings a new issue.</p>
-      <p>Each issue will work through a different way of thinking about capital allocation. Cash. Bonds. Private credit. Real estate. The 6 questions we use to evaluate Totem (which we will reveal in the next issue). We will not tell you what to do with your money. We will give you a clearer framework for thinking about it. Where Totem fits, where it does not, where other structures might serve you better, just like a friend would...</p>
-      <p>Members get a separate edition each week with the operational view that does not appear in the public issue. Open POs. Running ledger. Vendor news. The parts of the program that stay inside the membership (membership is free, no solicitation, no pressure, just a free membership into our community).</p>
-
-      <h2 class="sub">The verification offer</h2>
-      <p>Before we end this, we want you to know that we do something that is very unique in this world&hellip;we actually welcome "skepticism", or should I say, "healthy skepticism" into this program! That is the right response to anything new. We are ok with that because transparency supports the structure itself. We do not ask you to take anything we do on faith.</p>
-      <blockquote class="pull">We ask you to Trust, but Verify.</blockquote>
-      <p>Every claim in this issue is independently verifiable. Schedule any of the paths below through to us or reply to this email and we will contact you!</p>
-      <p><span class="vlead">The Insurance Agent.</span> Walk through Totem's bespoke insurance policy, the coverage, and the claim path. Independent third-party confirmation that the insurance structure is real and active. Insurance arrangements are subject to carrier terms, policy exclusions, and carrier performance.</p>
-      <p><span class="vlead">The Buyer Relationships.</span> The buyers themselves issue the purchase orders Totem finances. The verification is underwritten by Totem, our insurance agent, and the insurance company. No buyer is approved without final underwriting and no insurance is issued to unapproved buyers. You will know and recognize each and every buyer name.</p>
-      <p><span class="vlead">The Vendors (members only).</span> Member-only access. Reach out to an Account Manager to ask about coordinating a call. That's it. It really is that simple&hellip;</p>
-      <p><span class="vlead">The Management Team.</span> Any structural question about the program, account mechanics, vendor relationships, or repayment, answered directly by the team that runs it.</p>
-      <p>No other newsletter we read ends with that offer. We end every issue with this offer because the verification is the close. Welcome the scrutiny.</p>
-
-      <h2 class="sub">Subscribe</h2>
-      <p class="fineprint" style="margin-top:0;">Free to join. Members get more.</p>
-      <p>The Totem Challenge is published weekly and is free to subscribe. Members get access to something the public newsletter does not include.</p>
-      <p><span class="vlead">Complete control over your capital.</span> Members receive regular updates, so you will see active purchase orders as they come available, review Transaction Execution Schedules, and choose the transactions you want to fund.</p>
-      <p><span class="vlead">Member updates not published here.</span> Open transaction opportunities, vendor relationship news, transaction-level operational details, and the parts of the program that stay inside the membership.</p>
-      <p><span class="vlead">Access to insider vendor information.</span> Members move first when requesting calls with vendors, Totem's insurance agent, and the management team.</p>
-      <div class="cta-row"><a class="cta" href="https://totemlcg.com">Subscribe at totemlcg.com</a></div>
-      <p class="fineprint">Free to subscribe. No credit card. Unsubscribe anytime.</p>
-
-      <h2 class="sub">Closing</h2>
-      <p><span class="lead-word">Welcome.</span> We are glad you are here.</p>
-      <p>Next Friday, the scorecard. 6 questions. Same set every time (you'll know what that means after you read it). We start with Totem, and the rest of the work is yours.</p>
-      <p>Until next Friday, the verification line is open.</p>
-      <div class="signoff">Totem LC Group</div>
-      <div class="issue-foot">Issue No. 01 &nbsp;&middot;&nbsp; June 5, 2026 &nbsp;&middot;&nbsp; The Introductory Issue</div>
-
-      <p class="disclaimer">This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes. Insurance arrangements are subject to carrier terms, policy exclusions, claims processes, and carrier performance and do not guarantee transaction performance or repayment. Totem LC Group, LLC is a Wyoming limited liability company.</p>
-    </div>
-  </article>
-
-  <footer class="site">
-    <div class="inner">
-      <div class="fm">The Totem <b>Challenge</b></div>
-      <div class="fl">Totem LC Group &bull; Market Pulse &bull; June 5, 2026</div>
-    </div>
-  </footer>
-
+  // Modal close
+  document.getElementById('modal-close').addEventListener('click', function(){
+    document.getElementById('thank-you-modal').classList.remove('active');
+  });
+  document.getElementById('thank-you-modal').addEventListener('click', function(e){
+    if(e.target === this) this.classList.remove('active');
+  });
+</script>
 </body>
 </html>
