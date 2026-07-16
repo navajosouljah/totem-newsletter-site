@@ -1,0 +1,10 @@
+{
+  "publishes": {
+    "lapis-ritual-m8eq": {
+      "siteUrl": "https://lapis-ritual-m8eq.here.now/",
+      "claimToken": "c5cb8f51dda5be8e066b105642e0d98169dc46035c1f0b42daa0c0745cf75664",
+      "claimUrl": "https://here.now/claim?slug=lapis-ritual-m8eq&token=c5cb8f51dda5be8e066b105642e0d98169dc46035c1f0b42daa0c0745cf75664",
+      "expiresAt": "2026-06-21T01:26:14.265Z"
+    }
+  }
+}

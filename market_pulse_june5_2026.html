@@ -157,6 +157,27 @@
   footer.site .fm b{color:var(--navy);}
   footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
 
+  /* ---------- Subscribe ---------- */
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+
+  /* ---------- Modal ---------- */
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+
   /* ---------- Responsive ---------- */
   @media(max-width:860px){
     .page-layout{grid-template-columns:1fr;max-width:var(--read);}
@@ -178,7 +199,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#" class="live">Market Pulse</a></li>
-        <li><a href="totem_challenge_issue_01_forbes_june5.html">The Challenge</a></li>
+        <li><a href="totem_challenge_issue_02.html">The Challenge</a></li>
         <li><a href="archive.html">Archive</a></li>
       </ul>
     </nav>
@@ -400,17 +421,86 @@
         <li><a href="#world">Around the World</a></li>
         <li><a href="#events">Upcoming Events</a></li>
       </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_june8_2026.html">June 8, 2026</a></li>
+          <li><a href="market_pulse_june7_2026.html">June 7, 2026</a></li>
+          <li><a href="market_pulse_june5_2026.html">June 5, 2026</a></li>
+        </ul>
+      </div>
     </aside>
 
+  </div>
+
+  <!-- SUBSCRIBE -->
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <!-- THANK YOU MODAL -->
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We're looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
   </div>
 
   <!-- FOOTER -->
   <footer class="site">
     <div class="inner">
       <div class="fm">Market <b>Pulse</b> &bull; The Totem <b>Challenge</b></div>
-      <div class="legal">A publication of Totem LC Group. General information only - not investment advice or a recommendation to buy or sell anything.</div>
+      <div class="legal">A publication of Totem LC Group. General information only - not investment advice or a recommendation to buy or sell anything.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
     </div>
   </footer>
 
+<script>
+  document.getElementById('subscribe-btn').addEventListener('click', function(){
+    var email = document.getElementById('subscribe-email').value.trim();
+    var msg = document.getElementById('subscribe-msg');
+    var btn = this;
+    if(!email || email.indexOf('@') === -1){
+      msg.style.display = 'block';
+      msg.style.color = '#9b2c2c';
+      msg.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email})
+    }).then(function(){
+      document.getElementById('subscribe-email').value = '';
+      btn.textContent = 'Subscribed';
+      document.getElementById('thank-you-modal').classList.add('active');
+    }).catch(function(){
+      msg.style.display = 'block';
+      msg.style.color = '#9b2c2c';
+      msg.textContent = 'Something went wrong. Please try again.';
+      btn.textContent = 'Subscribe';
+      btn.disabled = false;
+    });
+  });
+  document.getElementById('modal-close').addEventListener('click', function(){
+    document.getElementById('thank-you-modal').classList.remove('active');
+  });
+  document.getElementById('thank-you-modal').addEventListener('click', function(e){
+    if(e.target === this) this.classList.remove('active');
+  });
+</script>
 </body>
 </html>

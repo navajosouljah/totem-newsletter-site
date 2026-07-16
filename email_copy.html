@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Copy - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,700;0,800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #032165; --blue: #1a3a8f; --gold: #b8860b; --gold-bright: #fcb900;
+    --ink: #16181d; --body: #26292f; --muted: #6b7280; --faint: #9aa0a8;
+    --line: #e4e6ea; --paper: #ffffff; --wash: #f7f8fa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper); color: var(--body);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ---- STICKY MASTHEAD ---- */
+  .top { border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 100; background: var(--paper); }
+  .nameplate {
+    max-width: 1100px; margin: 0 auto; padding: 14px 24px 10px; text-align: center;
+    height: 94px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .nameplate .logo { height: 52px; display: block; }
+  .nameplate .tagline {
+    font-family: 'Work Sans', sans-serif; font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.34em; text-transform: uppercase; color: var(--muted); margin-top: 4px;
+  }
+  .nav { border-top: 1px solid var(--line); }
+  .nav ul {
+    max-width: 1100px; margin: 0 auto; padding: 0 24px; list-style: none;
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 26px;
+  }
+  .nav li a {
+    display: block; padding: 10px 0; font-family: 'Work Sans', sans-serif; font-size: 11px;
+    font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink);
+    text-decoration: none; border-bottom: 2px solid transparent;
+  }
+  .nav li a:hover { color: var(--navy); border-bottom-color: var(--gold); }
+  .nav li a.live { color: var(--navy); border-bottom-color: var(--navy); }
+
+  /* ---- PAGE HEADER ---- */
+  .page-header {
+    max-width: 900px; margin: 0 auto; padding: 48px 24px 32px;
+    border-bottom: 1px solid var(--line);
+  }
+  .page-header h1 {
+    font-family: 'Spectral', Georgia, serif; font-weight: 800; font-size: 42px;
+    letter-spacing: -0.02em; color: var(--ink); line-height: 1.05; margin-bottom: 10px;
+  }
+  .page-header .subtitle {
+    font-family: 'Work Sans', sans-serif; font-size: 15px; font-weight: 400;
+    color: var(--muted); line-height: 1.5; max-width: 580px;
+  }
+
+  /* ---- MAIN CONTENT ---- */
+  .page-content {
+    max-width: 900px; margin: 0 auto; padding: 36px 24px 64px;
+  }
+
+  /* ---- AUDIENCE TABS (top level) ---- */
+  .audience-bar {
+    display: flex; gap: 0; margin-bottom: 24px;
+    border-bottom: 2px solid var(--line);
+  }
+  .audience-btn {
+    background: none; border: none; cursor: pointer;
+    font-family: 'Work Sans', sans-serif; font-size: 14px; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+    padding: 12px 24px 12px 0; margin-right: 24px;
+    border-bottom: 3px solid transparent; margin-bottom: -2px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .audience-btn:hover { color: var(--navy); }
+  .audience-btn.active { color: var(--navy); border-bottom-color: var(--navy); }
+
+  .audience-badge {
+    display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 2px 7px; border-radius: 2px; margin-left: 8px;
+    vertical-align: middle; position: relative; top: -1px;
+  }
+  .badge-gold { background: var(--gold); color: #fff; }
+  .badge-navy { background: var(--navy); color: #fff; }
+
+  /* ---- SUB-TABS (Preview / Source) ---- */
+  .sub-tab-bar {
+    display: flex; gap: 0; margin-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+  .sub-tab-btn {
+    background: none; border: none; cursor: pointer;
+    font-family: 'Work Sans', sans-serif; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+    padding: 8px 16px 8px 0; margin-right: 16px;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .sub-tab-btn:hover { color: var(--navy); }
+  .sub-tab-btn.active { color: var(--navy); border-bottom-color: var(--gold); }
+
+  /* ---- PANELS ---- */
+  .audience-panel { display: none; }
+  .audience-panel.active { display: block; }
+  .sub-panel { display: none; }
+  .sub-panel.active { display: block; }
+
+  .email-shell {
+    background: #dce0e8;
+    border-radius: 6px;
+    padding: 32px 24px;
+    display: flex;
+    justify-content: center;
+  }
+  .email-frame-wrap {
+    width: 100%; max-width: 620px;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13), 0 1px 4px rgba(0,0,0,0.07);
+    overflow: hidden;
+  }
+  .email-frame-wrap iframe {
+    display: block;
+    width: 100%;
+    border: none;
+    min-height: 900px;
+  }
+
+  /* ---- SOURCE ---- */
+  .source-actions {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .source-label {
+    font-family: 'Work Sans', sans-serif; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+  }
+  .copy-btn {
+    display: inline-block;
+    background: var(--navy); color: #fff;
+    border: none; border-radius: 3px;
+    padding: 10px 28px;
+    font-family: 'Work Sans', sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    cursor: pointer; transition: background 0.15s;
+  }
+  .copy-btn:hover { background: #04204f; }
+  .copy-btn.copied { background: #2a6b3a; }
+
+  .source-block {
+    background: #f0f2f5;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 24px;
+    overflow-x: auto;
+    max-height: 640px;
+    overflow-y: auto;
+  }
+  .source-block pre {
+    font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
+    font-size: 12px; line-height: 1.7; color: var(--ink);
+    white-space: pre-wrap; word-break: break-all;
+  }
+
+  /* ---- FOOTER ---- */
+  footer.site { border-top: 1px solid var(--line); background: var(--wash); }
+  footer.site .inner {
+    max-width: 1100px; margin: 0 auto; padding: 24px 24px; text-align: center;
+    font-family: 'Work Sans', sans-serif;
+  }
+  footer.site .fm { font-family: 'Spectral', serif; font-weight: 800; font-size: 18px; color: var(--ink); }
+  footer.site .fm b { color: var(--navy); }
+  footer.site .legal { font-size: 11px; color: var(--faint); line-height: 1.6; max-width: 600px; margin: 4px auto 0; }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 680px) {
+    .page-header h1 { font-size: 30px; }
+    .email-shell { padding: 16px 8px; }
+    .copy-btn { padding: 10px 18px; }
+    .audience-btn { font-size: 12px; padding-right: 16px; margin-right: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="top">
+  <div class="nameplate">
+    <a href="https://totemlcg.com"><img class="logo" src="logo.png" alt="Totem LC Group"></a>
+    <div class="tagline">Member Publications</div>
+  </div>
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="market_pulse_july15_2026.html">Market Pulse</a></li>
+      <li><a href="totem_challenge_issue_07.html">The Challenge</a></li>
+      <li><a href="email_copy.html" class="live">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      <li><a href="archive.html">Archive</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <h1>Email Copy</h1>
+  <p class="subtitle">Preview and copy Mailchimp-ready emails for members and non-members. Each audience gets curated content.</p>
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="page-content">
+
+  <!-- AUDIENCE TABS -->
+  <div class="audience-bar">
+    <button class="audience-btn active" onclick="switchAudience('members')">Members <span class="audience-badge badge-gold">Active</span></button>
+    <button class="audience-btn" onclick="switchAudience('nonmembers')">Non-Members <span class="audience-badge badge-navy">Public</span></button>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- MEMBERS PANEL                           -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="audience-panel active" id="panel-members">
+    <div class="sub-tab-bar">
+      <button class="sub-tab-btn active" onclick="switchSubTab('members','preview')">Preview</button>
+      <button class="sub-tab-btn" onclick="switchSubTab('members','source')">Source</button>
+    </div>
+
+    <div class="sub-panel active" id="members-preview">
+      <div class="email-shell">
+        <div class="email-frame-wrap">
+          <iframe id="members-iframe" title="Member Email Preview" scrolling="auto"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-panel" id="members-source">
+      <div class="source-actions">
+        <span class="source-label">Raw HTML &mdash; Mailchimp-ready (Members)</span>
+        <button class="copy-btn" onclick="copyToClipboard('members')">Copy to Clipboard</button>
+      </div>
+      <div class="source-block">
+        <pre id="members-source-pre"></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- NON-MEMBERS PANEL                       -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="audience-panel" id="panel-nonmembers">
+    <div class="sub-tab-bar">
+      <button class="sub-tab-btn active" onclick="switchSubTab('nonmembers','preview')">Preview</button>
+      <button class="sub-tab-btn" onclick="switchSubTab('nonmembers','source')">Source</button>
+    </div>
+
+    <div class="sub-panel active" id="nonmembers-preview">
+      <div class="email-shell">
+        <div class="email-frame-wrap">
+          <iframe id="nonmembers-iframe" title="Non-Member Email Preview" scrolling="auto"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-panel" id="nonmembers-source">
+      <div class="source-actions">
+        <span class="source-label">Raw HTML &mdash; Mailchimp-ready (Non-Members)</span>
+        <button class="copy-btn" onclick="copyToClipboard('nonmembers')">Copy to Clipboard</button>
+      </div>
+      <div class="source-block">
+        <pre id="nonmembers-source-pre"></pre>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="inner">
+    <div class="fm">The Totem <b>Challenge</b> &amp; Market Pulse</div>
+    <div class="legal">A publication of Totem LC Group. General information only &mdash; not financial advice or a recommendation to buy, sell, or hold any security. &nbsp;<a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+  </div>
+</footer>
+
+<script>
+var defined_article_url = "https://totem-challenge-preview.vercel.app/market_pulse_july15_2026.html";
+var memberEmailHTML=`<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Market Pulse &middot; July 15, 2026 &middot; Totem LC Group</title>
+<style type="text/css">
+  body, table, td, p, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+  table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+  body { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+  .ExternalClass { width: 100%; }
+  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+  @media only screen and (max-width: 600px) {
+    .container { width: 100% !important; max-width: 100% !important; }
+    .px-mobile { padding-left: 22px !important; padding-right: 22px !important; }
+    .contact-cell { display: block !important; width: 100% !important; padding-bottom: 12px !important; }
+  }
+</style>
+</head>
+<body style="margin: 0 !important; padding: 0 !important; background-color: #f7f8fa; font-family: 'Inter', Helvetica, Arial, sans-serif;">
+
+<div style="display: none; max-height: 0; overflow: hidden; mso-hide: all; font-size: 1px; line-height: 1px; color: #f7f8fa;">
+  PPI fell 0.3% - confirming the CPI beat. Jordan intercepted three Iranian missiles at dawn. Brent hit $86. Two inflation wins, one widening war.
+</div>
+
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f7f8fa;">
+  <tr>
+    <td align="center" style="padding: 32px 16px;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" class="container" style="max-width: 600px; background-color: #FFFFFF;">
+
+        <!-- MASTHEAD -->
+        <tr>
+          <td style="padding: 36px 36px 6px 36px; text-align: center;">
+            <p style="margin: 0; font-family: 'Spectral', Georgia, 'Times New Roman', serif; font-size: 36px; font-weight: 800; letter-spacing: -0.02em; color: #16181d; line-height: 1;">
+              TOTEM <span style="color: #032165; font-weight: 800;">LC GROUP</span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 36px 16px 36px; text-align: center;">
+            <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: #b8860b;">
+              Funding Execution, Not Expectation
+            </p>
+          </td>
+        </tr>
+
+        <!-- Navy date bar -->
+        <tr>
+          <td style="background-color: #032165; padding: 10px 36px;">
+            <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #ffffff; text-align: center;">
+              Tuesday, July 15, 2026 &nbsp;&middot;&nbsp; Member Edition
+            </p>
+          </td>
+        </tr>
+
+        <!-- HERO BLOCK -->
+        <tr>
+          <td class="px-mobile" style="padding: 24px 36px 0 36px;">
+            <a href="https://totem-challenge-preview.vercel.app/market_pulse_july15_2026.html" style="text-decoration: none; color: inherit; display: block;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td style="background: linear-gradient(160deg, #04204f 0%, #032165 46%, #01102f 100%); padding: 28px 32px 24px 32px; border-radius: 4px 4px 0 0; text-align: center;">
+                    <p style="margin: 0 0 8px 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 8px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.50);">
+                      Totem LC Group &middot; Your Friend in the News
+                    </p>
+                    <p style="margin: 0; font-family: 'Spectral', Georgia, 'Times New Roman', serif; font-weight: 800; font-size: 38px; line-height: 1; color: #ffffff; letter-spacing: -0.02em;">
+                      Market <span style="color: #fcb900;">Pulse</span>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e4e6ea; border-top: none; background-color: #ffffff; border-radius: 0 0 4px 4px;">
+                <tr>
+                  <td style="padding: 20px 24px 8px 24px; text-align: center;">
+                    <p style="margin: 0 0 4px 0; font-family: 'Spectral', Georgia, serif; font-size: 20px; font-weight: 700; line-height: 1.3; color: #16181d;">
+                      Back-to-Back Inflation Beats. PPI Confirms the CPI Story. Iran Escalates - Jordan Intercepts Missiles, Brent Hits $86.
+                    </p>
+                    <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 11px; color: #6b7280;">
+                      Tuesday, July 15, 2026
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 14px 24px 22px 24px; text-align: center;">
+                    <span style="display: inline-block; background-color: #032165; border-radius: 3px; padding: 14px 32px; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #ffffff;">
+                      Read Today's Market Pulse
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </a>
+          </td>
+        </tr>
+
+        <tr><td style="height: 24px;"></td></tr>
+
+        <!-- LEAD HIGHLIGHT -->
+        <tr>
+          <td class="px-mobile" style="padding: 0 36px 16px 36px;">
+            <p style="margin: 0 0 14px 0; font-family: 'Spectral', Georgia, serif; font-size: 21px; font-weight: 700; line-height: 1.35; color: #16181d;">
+              Two days, two inflation beats. The PPI fell 0.3% in June - producer goods prices dropped 1.4% on falling fuel costs. Core PPI rose just 0.2%, below consensus.
+            </p>
+            <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.65; color: #26292f;">
+              Back-to-back sub-consensus prints strengthen the rate-cut case. But Iran targeted U.S. bases in Kuwait, Bahrain, and Jordan overnight. Jordan intercepted three ballistic missiles at dawn. Brent crude climbed to $86 as the conflict widens beyond the Strait.
+            </p>
+          </td>
+        </tr>
+
+        <!-- SECTION LINK -->
+        <tr>
+          <td style="padding: 0 36px 28px 36px; text-align: center;">
+            <a href="https://totem-challenge-preview.vercel.app/market_pulse_july15_2026.html#rates" style="font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 700; color: #032165; text-decoration: none; letter-spacing: 0.04em;">
+              Read about what this means for rates and the Fed &rarr;
+            </a>
+          </td>
+        </tr>
+
+        <!-- DIVIDER -->
+        <tr>
+          <td style="padding: 0 36px;">
+            <hr style="border: none; height: 1px; background-color: #e4e6ea; margin: 0;">
+          </td>
+        </tr>
+
+        <tr><td style="height: 20px;"></td></tr>
+
+        <!-- HIGHLIGHTS HEADER -->
+        <tr>
+          <td class="px-mobile" style="padding: 0 36px 12px 36px;">
+            <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #b8860b;">
+              Also in This Week's Briefing
+            </p>
+          </td>
+        </tr>
+
+        <!-- HIGHLIGHT BULLETS -->
+        <tr>
+          <td class="px-mobile" style="padding: 0 36px 6px 36px;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td valign="top" width="20" style="padding-top: 2px;">
+                  <p style="margin: 0; font-family: 'Spectral', Georgia, serif; font-size: 16px; font-weight: 800; color: #b8860b; line-height: 1.65;">&bull;</p>
+                </td>
+                <td style="padding-bottom: 12px;">
+                  <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.65; color: #26292f;">
+                    <strong>Brent crude climbed to $86 - up 20% in two weeks</strong> - the conflict expanded to Jordan, with Iranian ballistic missiles intercepted over Jordanian airspace at dawn.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="20" style="padding-top: 2px;">
+                  <p style="margin: 0; font-family: 'Spectral', Georgia, serif; font-size: 16px; font-weight: 800; color: #b8860b; line-height: 1.65;">&bull;</p>
+                </td>
+                <td style="padding-bottom: 12px;">
+                  <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.65; color: #26292f;">
+                    <strong>Bitcoin jumped 3.6% to $64,751</strong> - crypto is pricing in rate cuts more aggressively than equities after two straight sub-consensus inflation prints.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="20" style="padding-top: 2px;">
+                  <p style="margin: 0; font-family: 'Spectral', Georgia, serif; font-size: 16px; font-weight: 800; color: #b8860b; line-height: 1.65;">&bull;</p>
+                </td>
+                <td style="padding-bottom: 12px;">
+                  <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.65; color: #26292f;">
+                    <strong>Gold fell to $4,032 despite the PPI beat</strong> - the third straight session where gold failed to rally on a clear catalyst, suggesting the safe-haven bid is exhausted.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="20" style="padding-top: 2px;">
+                  <p style="margin: 0; font-family: 'Spectral', Georgia, serif; font-size: 16px; font-weight: 800; color: #b8860b; line-height: 1.65;">&bull;</p>
+                </td>
+                <td style="padding-bottom: 12px;">
+                  <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.65; color: #26292f;">
+                    <strong>Mortgage rates rose to 6.57% despite the inflation beat</strong> - the bond market and the mortgage market are telling different stories as oil-driven risk widens spreads.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="20" style="padding-top: 2px;">
+                  <p style="margin: 0; font-family: 'Spectral', Georgia, serif; font-size: 16px; font-weight: 800; color: #b8860b; line-height: 1.65;">&bull;</p>
+                </td>
+                <td style="padding-bottom: 4px;">
+                  <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.65; color: #26292f;">
+                    <strong>Gas prices at $3.89 and climbing</strong> - up $0.09 in a week as the pump catches up to crude. If Brent holds above $85, expect $4.00 nationally by late July.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr><td style="height: 8px;"></td></tr>
+
+        <!-- FINAL CTA BUTTON -->
+        <tr>
+          <td style="padding: 8px 36px 28px 36px; text-align: center;">
+            <a href="https://totem-challenge-preview.vercel.app/market_pulse_july15_2026.html" style="display: inline-block; background-color: #032165; border-radius: 3px; padding: 16px 44px; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #ffffff; text-decoration: none;">
+              Read the Full Briefing
+            </a>
+          </td>
+        </tr>
+
+        <!-- DIVIDER -->
+        <tr>
+          <td style="padding: 0 36px;">
+            <hr style="border: none; height: 1px; background-color: #e4e6ea; margin: 0;">
+          </td>
+        </tr>
+
+        <!-- CONTACT -->
+        <tr>
+          <td class="px-mobile" style="padding: 24px 36px 6px 36px; text-align: center;">
+            <p style="margin: 0 0 6px 0; font-family: 'Spectral', Georgia, serif; font-size: 20px; font-weight: 800; color: #16181d; line-height: 1.25;">
+              Questions about a transaction or your membership?
+            </p>
+            <p style="margin: 0 0 20px 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.5; color: #6b7280;">
+              You are a member, not a ticket number. Call or email the desk and a person answers.
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="px-mobile" style="padding: 0 36px 16px 36px;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td class="contact-cell" width="50%" valign="top" style="padding-right: 6px; text-align: center;">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td style="background-color: #032165; border-radius: 4px; padding: 16px 12px; text-align: center;">
+                        <a href="tel:+12089960435" style="font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 700; color: #ffffff; text-decoration: none; letter-spacing: 0.02em;">(208) 996-0435</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-top: 8px; text-align: center;">
+                        <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280;">Call the Team</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="contact-cell" width="50%" valign="top" style="padding-left: 6px; text-align: center;">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td style="background-color: #032165; border-radius: 4px; padding: 16px 12px; text-align: center;">
+                        <a href="mailto:partnership@totemlcg.com" style="font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; text-decoration: none; letter-spacing: 0.01em;">partnership@totemlcg.com</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-top: 8px; text-align: center;">
+                        <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7280;">Email the Desk</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="px-mobile" style="padding: 0 36px 28px 36px; text-align: center;">
+            <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: #b8860b;">
+              Funding Execution, Not Expectation
+            </p>
+          </td>
+        </tr>
+
+        <!-- FOOTER -->
+        <tr>
+          <td style="padding: 0 36px;">
+            <hr style="border: none; height: 1px; background-color: #e4e6ea; margin: 0;">
+          </td>
+        </tr>
+        <tr>
+          <td class="px-mobile" style="padding: 16px 36px 4px 36px; text-align: center;">
+            <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 10px; color: #9aa0a8; line-height: 1.5;">
+              You are receiving this email as a member of Totem LC Group.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 36px 24px 36px; text-align: center;">
+            <p style="margin: 0 0 4px 0; font-family: 'Spectral', Georgia, 'Times New Roman', serif; font-size: 16px; font-weight: 800; color: #16181d;">
+              Totem <span style="color: #032165;">LC Group</span>
+            </p>
+            <p style="margin: 0; font-family: 'Courier New', Courier, monospace; font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #b8860b;">
+              Home of 20% Returns
+            </p>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>`;
+var nonMemberEmailHTML=`<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Market Pulse - July 15, 2026</title>
+<style type="text/css">
+  body, table, td, p, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+  table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+  body { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+  .ExternalClass { width: 100%; }
+  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+  @media only screen and (max-width: 600px) {
+    .container { width: 100% !important; max-width: 100% !important; }
+    .px-mobile { padding-left: 22px !important; padding-right: 22px !important; }
+  }
+</style>
+</head>
+<body style="margin: 0 !important; padding: 0 !important; background-color: #f7f8fa; font-family: 'Inter', Helvetica, Arial, sans-serif;">
+
+<!-- Preheader -->
+<div style="display: none; max-height: 0; overflow: hidden; mso-hide: all; font-size: 1px; line-height: 1px; color: #f7f8fa;">
+  PPI fell 0.3% - the second straight inflation beat in two days. But Iran hit U.S. ally bases and Jordan intercepted missiles at dawn. Brent climbed to $86. Crypto rallied hard.
+</div>
+
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f7f8fa;">
+  <tr>
+    <td align="center" style="padding: 32px 16px;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" class="container" style="max-width: 600px; background-color: #FFFFFF;">
+
+        <!-- MASTHEAD: Centered TOTEM LC GROUP + gold tagline -->
+        <tr>
+          <td class="px-mobile" style="padding: 28px 36px 20px 36px; text-align: center;">
+            <p style="margin: 0 0 6px 0; font-family: 'Spectral', Georgia, 'Times New Roman', serif; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; color: #16181d; line-height: 1;">
+              TOTEM <span style="color: #032165;">LC GROUP</span>
+            </p>
+            <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 8px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: #b8860b;">
+              Funding Execution, Not Expectation
+            </p>
+          </td>
+        </tr>
+
+        <!-- HERO BLOCK (date inside the gradient, no separate navy date bar) -->
+        <tr>
+          <td class="px-mobile" style="padding: 0 36px;">
+            <a href="https://totem-challenge-preview.vercel.app/market_pulse_july15_2026.html" style="text-decoration: none; color: inherit; display: block;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td style="background: linear-gradient(160deg, #04204f 0%, #032165 46%, #01102f 100%); padding: 32px 32px 28px 32px; border-radius: 4px 4px 0 0; text-align: center;">
+                    <p style="margin: 0 0 6px 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 8px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.50);">
+                      Tuesday, July 15, 2026 &middot; Weekly Briefing
+                    </p>
+                    <p style="margin: 0 0 4px 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 8px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.35);">
+                      Totem LC Group &middot; Your Friend in the News
+                    </p>
+                    <p style="margin: 0; font-family: 'Spectral', Georgia, 'Times New Roman', serif; font-weight: 800; font-size: 36px; line-height: 1; color: #ffffff; letter-spacing: -0.02em;">
+                      Market <span style="color: #fcb900;">Pulse</span>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #e4e6ea; border-top: none; background-color: #ffffff; border-radius: 0 0 4px 4px;">
+                <tr>
+                  <td style="padding: 20px 24px 8px 24px; text-align: center;">
+                    <p style="margin: 0 0 6px 0; font-family: 'Spectral', Georgia, serif; font-size: 20px; font-weight: 700; line-height: 1.3; color: #16181d;">
+                      Back-to-Back Inflation Beats. PPI Confirms the CPI Story. Iran Escalates - Jordan Intercepts Missiles, Brent Hits $86.
+                    </p>
+                    <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 11px; color: #6b7280;">
+                      Tuesday, July 15, 2026
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 14px 24px 22px 24px; text-align: center;">
+                    <span style="display: inline-block; background-color: #032165; border-radius: 3px; padding: 14px 32px; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #ffffff;">
+                      Read Today's Market Pulse
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </a>
+          </td>
+        </tr>
+
+        <tr><td style="height: 24px;"></td></tr>
+
+        <!-- LEAD HIGHLIGHT -->
+        <tr>
+          <td class="px-mobile" style="padding: 0 36px 16px 36px;">
+            <p style="margin: 0 0 14px 0; font-family: 'Spectral', Georgia, serif; font-size: 21px; font-weight: 700; line-height: 1.35; color: #16181d;">
+              Two days, two inflation beats. The PPI fell 0.3% in June - producer goods prices dropped 1.4% on falling fuel costs. Core PPI rose just 0.2%, below consensus.
+            </p>
+            <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.65; color: #26292f;">
+              Back-to-back sub-consensus prints strengthen the rate-cut case. But Iran targeted U.S. bases in Kuwait, Bahrain, and Jordan overnight. Jordan intercepted three ballistic missiles at dawn. Brent crude climbed to $86 as the conflict widens beyond the Strait.
+            </p>
+          </td>
+        </tr>
+
+        <!-- SECTION LINK -->
+        <tr>
+          <td style="padding: 0 36px 28px 36px; text-align: center;">
+            <a href="https://totem-challenge-preview.vercel.app/market_pulse_july15_2026.html#rates" style="font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 700; color: #032165; text-decoration: none; letter-spacing: 0.04em;">
+              Read about what this means for rates and the Fed &rarr;
+            </a>
+          </td>
+        </tr>
+
+        <!-- DIVIDER -->
+        <tr>
+          <td style="padding: 0 36px;">
+            <hr style="border: none; height: 1px; background-color: #e4e6ea; margin: 0;">
+          </td>
+        </tr>
+
+        <tr><td style="height: 20px;"></td></tr>
+
+        <!-- HIGHLIGHTS HEADER -->
+        <tr>
+          <td class="px-mobile" style="padding: 0 36px 12px 36px;">
+            <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #b8860b;">
+              Also in This Week's Briefing
+            </p>
+          </td>
+        </tr>
+
+        <!-- HIGHLIGHT BULLETS -->
+        <tr>
+          <td class="px-mobile" style="padding: 0 36px 6px 36px;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td valign="top" width="20" style="padding-top: 2px;">
+                  <p style="margin: 0; font-family: 'Spectral', Georgia, serif; font-size: 16px; font-weight: 800; color: #b8860b; line-height: 1.65;">&bull;</p>
+                </td>
+                <td style="padding-bottom: 12px;">
+                  <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.65; color: #26292f;">
+                    <strong>Brent crude climbed to $86 - up 20% in two weeks</strong> - the conflict expanded to Jordan, with Iranian ballistic missiles intercepted over Jordanian airspace at dawn.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="20" style="padding-top: 2px;">
+                  <p style="margin: 0; font-family: 'Spectral', Georgia, serif; font-size: 16px; font-weight: 800; color: #b8860b; line-height: 1.65;">&bull;</p>
+                </td>
+                <td style="padding-bottom: 12px;">
+                  <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.65; color: #26292f;">
+                    <strong>Bitcoin jumped 3.6% to $64,751</strong> - crypto is pricing in rate cuts more aggressively than equities after two straight sub-consensus inflation prints.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="20" style="padding-top: 2px;">
+                  <p style="margin: 0; font-family: 'Spectral', Georgia, serif; font-size: 16px; font-weight: 800; color: #b8860b; line-height: 1.65;">&bull;</p>
+                </td>
+                <td style="padding-bottom: 12px;">
+                  <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.65; color: #26292f;">
+                    <strong>Gold fell to $4,032 despite the PPI beat</strong> - the third straight session where gold failed to rally on a clear catalyst, suggesting the safe-haven bid is exhausted.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="20" style="padding-top: 2px;">
+                  <p style="margin: 0; font-family: 'Spectral', Georgia, serif; font-size: 16px; font-weight: 800; color: #b8860b; line-height: 1.65;">&bull;</p>
+                </td>
+                <td style="padding-bottom: 12px;">
+                  <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.65; color: #26292f;">
+                    <strong>Mortgage rates rose to 6.57% despite the inflation beat</strong> - the bond market and the mortgage market are telling different stories as oil-driven risk widens spreads.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="20" style="padding-top: 2px;">
+                  <p style="margin: 0; font-family: 'Spectral', Georgia, serif; font-size: 16px; font-weight: 800; color: #b8860b; line-height: 1.65;">&bull;</p>
+                </td>
+                <td style="padding-bottom: 12px;">
+                  <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.65; color: #26292f;">
+                    <strong>Gas prices at $3.89 and climbing</strong> - up $0.09 in a week as the pump catches up to crude. If Brent holds above $85, expect $4.00 nationally by late July.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="20" style="padding-top: 2px;">
+                  <p style="margin: 0; font-family: 'Spectral', Georgia, serif; font-size: 16px; font-weight: 800; color: #b8860b; line-height: 1.65;">&bull;</p>
+                </td>
+                <td style="padding-bottom: 4px;">
+                  <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.65; color: #26292f;">
+                    <strong>July 24 tariff expiration on 60+ countries is 9 days away</strong> - Brent above $85 plus potential permanent tariffs creates a double squeeze for emerging markets.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr><td style="height: 8px;"></td></tr>
+
+        <!-- FINAL CTA BUTTON -->
+        <tr>
+          <td style="padding: 8px 36px 36px 36px; text-align: center;">
+            <a href="https://totem-challenge-preview.vercel.app/market_pulse_july15_2026.html" style="display: inline-block; background-color: #032165; border-radius: 3px; padding: 16px 44px; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #ffffff; text-decoration: none;">
+              Read the Full Briefing
+            </a>
+          </td>
+        </tr>
+
+        <!-- FOOTER -->
+        <tr>
+          <td style="padding: 0 36px;">
+            <hr style="border: none; height: 1px; background-color: #e4e6ea; margin: 0;">
+          </td>
+        </tr>
+        <tr>
+          <td class="px-mobile" style="padding: 16px 36px 4px 36px; text-align: center;">
+            <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 10px; color: #9aa0a8; line-height: 1.5;">
+              A free weekly snapshot for the Totem community. General information only - not investment advice or a recommendation to buy or sell anything.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 36px 24px 36px; text-align: center;">
+            <p style="margin: 0 0 4px 0; font-family: 'Spectral', Georgia, 'Times New Roman', serif; font-size: 16px; font-weight: 800; color: #16181d;">
+              Totem <span style="color: #032165;">LC Group</span>
+            </p>
+            <p style="margin: 0; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 10px; color: #9aa0a8;">
+              <a href="https://totemlcg.com" style="color: #b8860b; text-decoration: none;">totemlcg.com</a>
+            </p>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>`;
+var emails={members:memberEmailHTML,nonmembers:nonMemberEmailHTML};window.addEventListener("DOMContentLoaded",function(){injectEmail("members");injectEmail("nonmembers")});function injectEmail(a){var f=document.getElementById(a+"-iframe"),d=f.contentDocument||f.contentWindow.document;d.open();d.write(emails[a]);d.close();var r=function(){try{var h=f.contentDocument.body.scrollHeight;if(h>200)f.style.height=(h+40)+"px"}catch(e){}};f.onload=r;setTimeout(r,300);document.getElementById(a+"-source-pre").textContent=emails[a]}function switchAudience(a){document.querySelectorAll(".audience-panel").forEach(function(p){p.classList.remove("active")});document.querySelectorAll(".audience-btn").forEach(function(b){b.classList.remove("active")});document.getElementById("panel-"+a).classList.add("active");event.currentTarget.classList.add("active")}function switchSubTab(a,t){var p=document.getElementById("panel-"+a);p.querySelectorAll(".sub-panel").forEach(function(x){x.classList.remove("active")});p.querySelectorAll(".sub-tab-btn").forEach(function(b){b.classList.remove("active")});document.getElementById(a+"-"+t).classList.add("active");event.currentTarget.classList.add("active")}function copyToClipboard(a){var b=event.currentTarget,h=emails[a];if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(h).then(function(){showCopied(b)}).catch(function(){fallbackCopy(b,h)})}else{fallbackCopy(b,h)}}function fallbackCopy(b,h){var t=document.createElement("textarea");t.value=h;t.style.position="fixed";t.style.opacity="0";document.body.appendChild(t);t.focus();t.select();try{document.execCommand("copy");showCopied(b)}catch(e){}document.body.removeChild(t)}function showCopied(b){b.textContent="Copied!";b.classList.add("copied");setTimeout(function(){b.textContent="Copy to Clipboard";b.classList.remove("copied")},2000)}
+</script>
+</body>
+</html>

@@ -21,7 +21,7 @@
     --read:700px;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
   body{
     background:var(--paper); color:var(--body);
     font-family:'Spectral',Georgia,'Times New Roman',serif;
@@ -55,6 +55,26 @@
   }
   .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
   .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+
+  /* ---------- Page layout with sidebar ---------- */
+  .page-layout{
+    max-width:1000px;margin:0 auto;padding:0 24px;
+    display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;
+  }
+  .sidebar{position:sticky;top:120px;padding-top:42px;}
+  .toc-title{
+    font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:12px;
+  }
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{
+    font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;
+    color:var(--muted);text-decoration:none;line-height:1.4;
+    display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;
+    transition:color 0.15s, border-color 0.15s;
+  }
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
 
   /* ---------- Article header ---------- */
   .wrap{max-width:var(--read);margin:0 auto;padding:0 24px;}
@@ -200,7 +220,19 @@
   footer.site .fm b{color:var(--navy);}
   footer.site .fl{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-top:8px;}
 
-  @media (max-width:680px){
+  /* ---------- Subscribe ---------- */
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+
+  @media (max-width:860px){
+    .page-layout{grid-template-columns:1fr;max-width:var(--read);}
+    .sidebar{display:none;}
     body{font-size:18px;}
     h1.headline{font-size:34px;}
     .dek{font-size:20px;}
@@ -228,27 +260,28 @@
     <nav class="nav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="market_pulse_june5_2026.html">Market Pulse</a></li>
-        <li><a href="#" class="live">The Challenge</a></li>
+        <li><a href="market_pulse_june18_2026.html">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_03.html">The Challenge</a></li>
         <li><a href="archive.html">Archive</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ===== ARTICLE HEADER ===== -->
+  <!-- ===== PAGE LAYOUT ===== -->
+  <div class="page-layout">
   <article>
-    <div class="wrap article-head">
-      <div class="kicker">Capital Markets <span class="dot">&bull;</span> The Introductory Issue</div>
+    <div class="article-head">
+      <div class="kicker">Capital Markets <span class="dot">&bull;</span> The Introductory Issue <span class="dot">&bull;</span> June 5, 2026</div>
       <h1 class="headline">Three Years Quiet. Thousands Of Purchase Orders. Zero Defaults.</h1>
-      <p class="dek">Inside Totem LC Group, a commercial transaction platform where members fund individual purchase orders from verified Fortune 100 buyers &mdash; built and tested in private for a year and a half before it opened its doors.</p>
+      <p class="dek">Inside Totem LC Group, a commercial transaction platform where members fund individual purchase orders from verified Fortune 100 buyers  - built and tested in private for a year and a half before it opened its doors.</p>
 
     </div>
 
-    <!-- ===== HERO LEAD-ART (swap in a licensed photo here if desired) ===== -->
-    <div class="wrap">
+    <!-- ===== HERO LEAD-ART ===== -->
+    <div>
       <figure class="hero">
         <div class="hero-art">
-          <div class="over">Totem LC Group &mdash; Operating Record</div>
+          <div class="over">Totem LC Group  - Operating Record</div>
           <div class="big"><em>0.00%</em></div>
           <div class="sub">Default rate &nbsp;&middot;&nbsp; 3 years &nbsp;&middot;&nbsp; thousands of purchase orders filled</div>
           <div class="rule"></div>
@@ -256,31 +289,23 @@
         <figcaption>The operating record Totem points to since inception. Past performance does not guarantee future results. <span class="credit">&nbsp;|&nbsp; Illustration: Totem LC Group</span></figcaption>
       </figure>
 
-      <div class="byline">
-        <div class="avatar">T</div>
-        <div class="byid sans">
-          <div class="who">Totem LC Group <span class="follow">Follow</span></div>
-          <div class="role"><b>Contributor</b> &nbsp;&middot;&nbsp; The Totem Challenge Editorial Desk</div>
-        </div>
-      </div>
       <div class="metarow sans">
-        <span class="stamp-time">Jun 5, 2026, 08:00am EDT</span>
         <span>7 min read</span>
         <span class="sp"></span>
-        <span class="share">Share<a href="#">Save</a><a href="#">Print</a></span>
+        <span class="share"><a href="mailto:?subject=The%20Totem%20Challenge&body=Check%20this%20out%3A%20https%3A%2F%2Ftotem-challenge-preview.vercel.app%2Ftotem_challenge_issue_01_forbes_june5.html">Share</a></span>
       </div>
     </div>
 
     <!-- ===== BODY ===== -->
-    <div class="wrap body">
+    <div class="body">
 
       <p class="lead-first"><span class="lead-word">Welcome.</span> We are glad you are here. Whether you read this issue once and unsubscribe, schedule a verification call somewhere along the way, or eventually participate in the program itself, the work we do here is to tell you what we are seeing. Same way you would expect a sharp friend to.</p>
       <p>Most of you have not heard of Totem LC Group. That was on purpose, we tested the system for over a year before we onboarded our first member. Before we get into what we built, let us start with who we are, how we got here, and why the next 12 months matter.</p>
 
-      <h2 class="sub">Who we are</h2>
+      <h2 class="sub" id="who">Who we are</h2>
       <p>Totem's leadership spent careers looking for creative ways to support our families and solve problems other people had given up on, were not interested in, or simply did not even know existed. We share a belief: the world's biggest problems are the world's greatest business opportunities. The harder the problem, the more valuable the solution. That is what gets us up in the morning.</p>
 
-      <h2 class="sub">How we got here</h2>
+      <h2 class="sub" id="how">How we got here</h2>
       <p>The Totem concept emerged during COVID.</p>
       <p>Totem identified vendors supplying Fortune companies, vendors who were winning purchase orders consistently. The problem was capital. The orders were there. Delivery was scheduled. The money just could not move fast enough to front the cost of the goods. Banks were too slow. Private offices were too costly for the cycle. There was a need for a faster, cleaner solution.</p>
       <p>Totem was founded by problem solvers. Vendors came to us with the problem. A big one that no one was paying attention to, no one was interested in solving, no one even cared to look at. We did.</p>
@@ -290,11 +315,11 @@
       <p>After nearly a year and a half of alpha testing transactions, agreements, workflows, and procedures, we achieved a level of transparency and confidence to feel comfortable opening our networks slowly, deliberately, with one introduction at a time. Every member who has participated has been someone we know personally, or someone introduced by a person we trust. The program has grown by relationship and referral, not through marketing.</p>
       <p>To this day, Totem still participates in transactions with our funds. This is not a structure we built for other people. It is a structure we built for ourselves and then shared with the people in our lives we trust and respect the most.</p>
 
-      <h2 class="sub">Why now</h2>
+      <h2 class="sub" id="why">Why now</h2>
       <p>3 years in, we have a record we can point to. Millions of dollars in capital deployed across tens of thousands of purchase orders filled. Zero defaults. Dozens of members have joined and moved through the program. Every receivable has been received on time. No hiccups. No delays.</p>
       <p>That is why we are writing now. After 3 years of an unbroken operational record, we believe we have something worth sharing. So we are.</p>
 
-      <h2 class="sub">What Totem is</h2>
+      <h2 class="sub" id="what">What Totem is</h2>
       <p>Totem is a commercial transaction platform. Members allocate capital to specific purchase orders from verified Fortune 100 buyers. The capital allows Totem's vendors to fulfill the orders. The buyers pay the receivable. The transaction closes. Members get paid.</p>
       <p>Every transaction is independent. There is no fund. There is no pool. There is no blind allocation. You see the buyer. You see the goods. You see the compensation amount before you accept. You accept the deal or you pass. The next one looks different. You see that number too.</p>
       <p>The buyers are real. Amazon, Bank of America, UPS, CVS Health, Boeing, Toyota Motor North America. The vendors are vetted. The purchase orders exist before any capital moves. The insurance is in place before any capital moves. The structure runs the same way every time.</p>
@@ -311,7 +336,7 @@
 
       <p>The proof is operational. As of June 2026, Totem has helped to fill, again, thousands of purchase orders with zero defaults! We know you have read those numbers a few times already in this issue. They are the same numbers because the program is the same program. The structure has not changed. The buyers pay. The transactions close. The members get paid. 3 years of the same answer is the answer. Verifiable on a phone call with Totem's vendors and/or insurance representative before any capital moves (if you need that type of due diligence).</p>
 
-      <h2 class="sub">What is to come</h2>
+      <h2 class="sub" id="tocome">What is to come</h2>
       <p class="emph">The work is operational. The pipeline is not.</p>
       <p>We know any orgin story is important. It sets context, give you an idea of the work that went into building something special. Hopefully that earns some trust points, or at the very least, starts to build it&hellip;. Now the exciting thing that we really love to talk about is what's to come and this is what we are really excited to share with you!</p>
       <p>The volume of purchase orders coming into the program has accelerated over the past months. New buyers. New vendors. New transaction categories. New cycles opening faster than we can stage them. Members feel this first, because they see the open POs on their dashboard (or in private emails) before anyone else does.</p>
@@ -322,12 +347,12 @@
       <p>We are growing thoughtfully. Members who come in now will see structural advantages over time that newer members will not. We are not in a rush. We are not running a launch. We are introducing the program to people who would benefit from it, through relationship and introduction, the same way we always have. The difference is that the door is open in a way it was not before.</p>
       <p>If you are reading this and the program sounds like something you want to know more about, the verification offer at the bottom of this issue is the cleanest place to start.</p>
 
-      <h2 class="sub">What is coming in the newsletter</h2>
+      <h2 class="sub" id="newsletter">What is coming in the newsletter</h2>
       <p>Starting with Issue 02, every Friday brings a new issue.</p>
       <p>Each issue will work through a different way of thinking about capital allocation. Cash. Bonds. Private credit. Real estate. The 6 questions we use to evaluate Totem (which we will reveal in the next issue). We will not tell you what to do with your money. We will give you a clearer framework for thinking about it. Where Totem fits, where it does not, where other structures might serve you better, just like a friend would...</p>
       <p>Members get a separate edition each week with the operational view that does not appear in the public issue. Open POs. Running ledger. Vendor news. The parts of the program that stay inside the membership (membership is free, no solicitation, no pressure, just a free membership into our community).</p>
 
-      <h2 class="sub">The verification offer</h2>
+      <h2 class="sub" id="verification">The verification offer</h2>
       <p>Before we end this, we want you to know that we do something that is very unique in this world&hellip;we actually welcome "skepticism", or should I say, "healthy skepticism" into this program! That is the right response to anything new. We are ok with that because transparency supports the structure itself. We do not ask you to take anything we do on faith.</p>
       <blockquote class="pull">We ask you to Trust, but Verify.</blockquote>
       <p>Every claim in this issue is independently verifiable. Schedule any of the paths below through to us or reply to this email and we will contact you!</p>
@@ -337,16 +362,7 @@
       <p><span class="vlead">The Management Team.</span> Any structural question about the program, account mechanics, vendor relationships, or repayment, answered directly by the team that runs it.</p>
       <p>No other newsletter we read ends with that offer. We end every issue with this offer because the verification is the close. Welcome the scrutiny.</p>
 
-      <h2 class="sub">Subscribe</h2>
-      <p class="fineprint" style="margin-top:0;">Free to join. Members get more.</p>
-      <p>The Totem Challenge is published weekly and is free to subscribe. Members get access to something the public newsletter does not include.</p>
-      <p><span class="vlead">Complete control over your capital.</span> Members receive regular updates, so you will see active purchase orders as they come available, review Transaction Execution Schedules, and choose the transactions you want to fund.</p>
-      <p><span class="vlead">Member updates not published here.</span> Open transaction opportunities, vendor relationship news, transaction-level operational details, and the parts of the program that stay inside the membership.</p>
-      <p><span class="vlead">Access to insider vendor information.</span> Members move first when requesting calls with vendors, Totem's insurance agent, and the management team.</p>
-      <div class="cta-row"><a class="cta" href="https://totemlcg.com">Subscribe at totemlcg.com</a></div>
-      <p class="fineprint">Free to subscribe. No credit card. Unsubscribe anytime.</p>
-
-      <h2 class="sub">Closing</h2>
+      <h2 class="sub" id="closing">Closing</h2>
       <p><span class="lead-word">Welcome.</span> We are glad you are here.</p>
       <p>Next Friday, the scorecard. 6 questions. Same set every time (you'll know what that means after you read it). We start with Totem, and the rest of the work is yours.</p>
       <p>Until next Friday, the verification line is open.</p>
@@ -357,12 +373,100 @@
     </div>
   </article>
 
+  <!-- SIDEBAR TOC -->
+  <aside class="sidebar">
+    <div class="toc-title">Sections</div>
+    <ul class="toc">
+      <li><a href="#who">Who We Are</a></li>
+      <li><a href="#how">How We Got Here</a></li>
+      <li><a href="#why">Why Now</a></li>
+      <li><a href="#what">What Totem Is</a></li>
+      <li><a href="#tocome">What Is to Come</a></li>
+      <li><a href="#newsletter">The Newsletter</a></li>
+      <li><a href="#verification">The Verification Offer</a></li>
+      <li><a href="#closing">Closing</a></li>
+    </ul>
+
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="totem_challenge_issue_02.html">Issue 02 - June 12, 2026</a></li>
+          <li><a href="#">Issue 01 - June 5, 2026</a></li>
+        </ul>
+      </div>
+  </aside>
+
+  </div>
+
+  <!-- SUBSCRIBE -->
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form">
+        <input type="email" id="subscribe-email-bottom" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn-bottom">Subscribe</button>
+      </div>
+      <div id="subscribe-msg-bottom" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
   <footer class="site">
     <div class="inner">
       <div class="fm">The Totem <b>Challenge</b></div>
-      <div class="fl">Totem LC Group &bull; Market Pulse &bull; June 5, 2026</div>
+      <div class="fl">Totem LC Group &bull; <a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
     </div>
   </footer>
 
+<!-- THANK YOU MODAL -->
+<div id="thank-you-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;">
+    <button id="modal-close" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:#6b7280;cursor:pointer;font-family:'Work Sans',sans-serif;">&times;</button>
+    <div style="width:56px;height:56px;border-radius:50%;background:#032165;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:#fcb900;">T</div>
+    <h3 style="font-family:'Spectral',serif;font-weight:800;font-size:22px;color:#16181d;margin-bottom:12px;">Thank You for Signing Up</h3>
+    <p style="font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:#26292f;margin-bottom:8px;">We're looking forward to being a friend for you in this space.</p>
+    <div style="font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#032165;margin-top:20px;">Totem Founders</div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('subscribe-btn-bottom').addEventListener('click', function(){
+    var email = document.getElementById('subscribe-email-bottom').value.trim();
+    var msg = document.getElementById('subscribe-msg-bottom');
+    var btn = this;
+    if(!email || email.indexOf('@') === -1){
+      msg.style.display = 'block';
+      msg.style.color = '#9b2c2c';
+      msg.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email})
+    }).then(function(){
+      document.getElementById('subscribe-email-bottom').value = '';
+      btn.textContent = 'Subscribed';
+      var modal = document.getElementById('thank-you-modal');
+      modal.style.display = 'flex';
+    }).catch(function(){
+      msg.style.display = 'block';
+      msg.style.color = '#9b2c2c';
+      msg.textContent = 'Something went wrong. Please try again.';
+      btn.textContent = 'Subscribe';
+      btn.disabled = false;
+    });
+  });
+
+  document.getElementById('modal-close').addEventListener('click', function(){
+    document.getElementById('thank-you-modal').style.display = 'none';
+  });
+  document.getElementById('thank-you-modal').addEventListener('click', function(e){
+    if(e.target === this) this.style.display = 'none';
+  });
+</script>
 </body>
 </html>

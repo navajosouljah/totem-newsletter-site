@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - June 8, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:19px; line-height:1.72;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+
+  /* ---------- Sticky Masthead ---------- */
+  .top{
+    position:sticky;top:0;z-index:100;background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{
+    font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;
+    color:var(--ink);line-height:1;
+  }
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{
+    font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;
+    text-transform:uppercase;color:var(--muted);margin-top:7px;
+  }
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{
+    max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;
+    display:flex;justify-content:center;flex-wrap:wrap;gap:26px;
+  }
+  .nav li a{
+    display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;
+    font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);
+    text-decoration:none;border-bottom:2px solid transparent;
+  }
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+
+  /* ---------- Content layout with sidebar ---------- */
+  .page-layout{
+    max-width:1000px;margin:0 auto;padding:0 24px;
+    display:grid;grid-template-columns:var(--read) 1fr;gap:40px;
+    align-items:start;
+  }
+
+  /* ---------- Article header ---------- */
+  .article-head{padding:32px 0 0;}
+  .kicker{
+    font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;
+    text-transform:uppercase;color:var(--navy);margin-bottom:14px;
+  }
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{
+    font-family:'Spectral',serif;font-weight:800;font-size:42px;line-height:1.1;
+    letter-spacing:-0.015em;color:var(--ink);margin-bottom:14px;
+  }
+  .dek{
+    font-family:'Spectral',serif;font-weight:400;font-size:20px;line-height:1.5;
+    color:#3b4048;margin-bottom:0;
+  }
+
+  /* ---------- Sidebar TOC ---------- */
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{
+    font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:12px;
+  }
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{
+    font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;
+    color:var(--muted);text-decoration:none;line-height:1.4;
+    display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;
+    transition:color 0.15s, border-color 0.15s;
+  }
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+
+  /* ---------- Body ---------- */
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 20px;color:var(--body);font-size:18px;line-height:1.72;}
+  .body p.lead-first::first-letter{
+    float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);
+    font-size:68px;line-height:0.74;padding:8px 10px 0 0;
+  }
+
+  /* section headings */
+  h2.section-title{
+    font-family:'Spectral',serif;font-weight:700;font-size:26px;line-height:1.2;
+    letter-spacing:-0.01em;color:var(--ink);
+    margin:32px 0 6px;padding-top:24px;border-top:1px solid var(--line);
+  }
+  .section-intro{
+    font-family:'Spectral',serif;font-style:italic;font-size:16px;line-height:1.55;
+    color:var(--muted);margin-bottom:14px;
+  }
+
+  /* data lines */
+  .data-line{margin-bottom:6px;font-size:16px;line-height:1.5;font-family:'Spectral',serif;}
+  .data-label{font-weight:700;color:var(--ink);}
+  .up-green{color:#2d6a4f;font-weight:600;}
+  .down-green{color:#2d6a4f;font-weight:600;}
+  .up-red{color:#9b2c2c;font-weight:600;}
+  .down-red{color:#9b2c2c;font-weight:600;}
+
+  /* bottom line callout */
+  .bottom-line-label{
+    font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;
+    text-transform:uppercase;color:var(--gold);margin-top:14px;margin-bottom:6px;
+  }
+  .bottom-line-list{list-style:none;padding:0;margin:0 0 8px;}
+  .bottom-line-list li{
+    padding-left:18px;position:relative;margin-bottom:8px;
+    font-size:16px;line-height:1.65;color:var(--body);
+  }
+  .bottom-line-list li::before{
+    content:"\2022";position:absolute;left:0;color:var(--gold);font-weight:700;
+  }
+
+  /* bullet list (news) */
+  .bullet-list{list-style:none;padding:0;margin:0;}
+  .bullet-list li{
+    padding-left:18px;position:relative;margin-bottom:10px;
+    font-size:16px;line-height:1.65;
+  }
+  .bullet-list li::before{
+    content:"\2022";position:absolute;left:0;color:var(--navy);font-weight:700;
+  }
+
+  /* disclaimer + footer */
+  .disclaimer{
+    border-top:1px solid var(--line);margin-top:28px;padding-top:20px;
+    font-family:'Work Sans',sans-serif;font-size:12px;line-height:1.65;color:var(--muted);
+  }
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{
+    max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;
+    font-family:'Work Sans',sans-serif;
+  }
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+
+  /* ---------- Subscribe ---------- */
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+
+  /* ---------- Modal ---------- */
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:860px){
+    .page-layout{grid-template-columns:1fr;max-width:var(--read);}
+    .sidebar{display:none;}
+    h1.headline{font-size:32px;}
+    h2.section-title{font-size:22px;}
+  }
+</style>
+</head>
+<body>
+
+  <!-- ===== STICKY MASTHEAD ===== -->
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_02.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE LAYOUT ===== -->
+  <div class="page-layout">
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <div class="article-head">
+        <div class="kicker">Weekly Briefing <span class="dot">&bull;</span> <span class="date">June 8, 2026</span></div>
+        <h1 class="headline">172,000 Jobs Shatter Forecasts. Markets Break a 10-Week Streak.</h1>
+        <p class="dek">A blowout May jobs report triggers a $1T+ tech selloff, the VIX spikes 34%, and crypto drops 15-17%. The savings rate hits 2.6% - the lowest since 2008. Foreclosure completions surge 45% YoY. Wheat production forecast down 25%.</p>
+      </div>
+
+      <div class="body">
+
+        <!-- THIS WEEK IN THE NEWS -->
+        <h2 class="section-title" id="news">This Week in the News</h2>
+        <p class="section-intro">The headlines shaping markets right now.</p>
+        <ul class="bullet-list">
+          <li><span class="data-label">Jobs report crushes estimates, kills rate-cut hopes:</span> The economy added 172,000 jobs in May - more than double the 85,000 consensus - while unemployment held at 4.3%. Treasury yields surged, and the Nasdaq dropped 4.2% on Friday alone as markets priced out any near-term Fed cuts.</li>
+          <li><span class="data-label">Tech selloff wipes $1T+ in a single session:</span> Friday's blowout jobs number triggered the worst Nasdaq session since April 2025, ending a 10-week winning streak for the S&P 500. The semiconductor index fell over 10%, exposing just how narrow the rally had been - 8 of 11 S&P sectors declined in May even as the index rose 5.3%.</li>
+          <li><span class="data-label">US-China trade framework taking shape:</span> Ahead of a June 11 announcement, both sides are finalizing terms that would retain 30% baseline tariffs while pausing higher levies for 60 days. Separately, the USTR proposed an additional 12.5% tariff tied to a forced-labor investigation covering 45 countries.</li>
+          <li><span class="data-label">Oil stays elevated on Hormuz disruption:</span> Brent crude spiked above $97 mid-week on Iran-Israel tensions before settling near $93. The Strait of Hormuz remains effectively closed since April, shutting in an estimated 10.5 million barrels per day and keeping energy inflation entrenched.</li>
+        </ul>
+
+        <!-- THE QUICK READ -->
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="lead-first"><span class="data-label">The week's story is simple: a hot jobs report exposed how fragile this rally really is.</span> Stocks snapped a 10-week winning streak on Friday's selloff, the VIX jumped 34% in a single session, crypto lost 15-17%, and the personal savings rate hit 2.6% - the lowest since 2008. Meanwhile, foreclosure completions are up 45% year-over-year, nearly half of buy-now-pay-later users are paying late, and subprime auto delinquencies are at a 32-year high. The consumer is stretched thin, and markets just got a reminder that the Fed isn't coming to help anytime soon.</p>
+        <p>The jobs beat was real, but the market's reaction tells you where sentiment actually sits. A strong number should be good news - instead it triggered over $1 trillion in tech losses because it means the Fed stays on hold at 3.50-3.75%. The 10-year Treasury pushed to 4.55%, and mortgages are stuck at 6.48%. With 8 of 11 S&P sectors declining even during May's 5.3% rally, this market is being carried almost entirely by a handful of tech names. That kind of concentration is a setup for exactly the kind of unwind we saw Friday.</p>
+        <p>Abroad, the Strait of Hormuz closure continues to distort energy markets, with WTI hovering near $94 and gas nationally at $4.19. Gold pulled back sharply to $4,337 as the dollar strengthened, while cattle hit record highs on the smallest US herd since 1951. The USDA's wheat crop is in deep trouble - only 26% rated good or excellent, with production forecast down 25% and nearly half the country in drought. These are the structural pressures that don't disappear with one good jobs print.</p>
+
+        <!-- STOCK MARKET -->
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <p class="section-intro">The 10-week winning streak ended with a thud on Friday's jobs-driven selloff.</p>
+        <div class="data-line"><span class="data-label">S&amp;P 500:</span> 7,383.74 <span class="down-red">&minus;2.64% Fri (first losing week in 10)</span></div>
+        <div class="data-line"><span class="data-label">Dow Jones:</span> 50,866.78 <span class="down-red">&minus;0.32% wk</span></div>
+        <div class="data-line"><span class="data-label">Nasdaq:</span> 25,709.43 <span class="down-red">&minus;4.68% wk</span></div>
+        <div class="data-line"><span class="data-label">Russell 2000 (small caps):</span> 2,833.50 <span class="down-red">&minus;3.5% wk</span></div>
+        <div class="data-line"><span class="data-label">Fear gauge (VIX):</span> 21.51 <span class="up-red">+34% Fri</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Friday was a reality check. The VIX jumping from 15.40 to 21.51 in one session tells you how complacent this market had become. The 10-week streak was built on narrow tech leadership, and the unwinding was swift once rate-cut hopes evaporated.</li>
+          <li>Eight of eleven S&P sectors declined in May even as the index rose 5.3%. When the headline number goes up but the average stock goes down, that's not a healthy market - it's a handful of names masking broad weakness.</li>
+          <li>Small caps got hit hard too. The Russell 2000 dropping 3.5% signals that the risk-off move wasn't just about overpriced tech - it was a broad repricing of the "rates stay higher" reality hitting the most rate-sensitive companies.</li>
+        </ul>
+
+        <!-- INTEREST RATES -->
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <p class="section-intro">The jobs blowout pushed yields higher and cemented expectations that the Fed holds steady at June's meeting.</p>
+        <div class="data-line"><span class="data-label">Fed policy rate:</span> 3.50-3.75% (effective 3.62%)</div>
+        <div class="data-line"><span class="data-label">2-year Treasury:</span> 4.17%</div>
+        <div class="data-line"><span class="data-label">10-year Treasury:</span> 4.55% <span class="up-red">+11 bps wk</span></div>
+        <div class="data-line"><span class="data-label">30-year Treasury:</span> 5.01%</div>
+        <div class="data-line"><span class="data-label">30-year mortgage (avg.):</span> 6.48% <span class="down-green">&minus;5 bps wk</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The 30-year Treasury crossed 5% - a psychological barrier that historically signals tighter financial conditions ahead. The 2s/10s spread remains inverted at -38 bps, a recession signal that has been flashing for months.</li>
+          <li>Markets are pricing over 95% probability of no cut at the June 16-17 FOMC meeting. This will be Jerome Powell's final press conference before Kevin Warsh takes over - the transition itself adds uncertainty to the rate outlook.</li>
+          <li>Mortgages ticked down 5 bps to 6.48%, but that's cold comfort when the median home costs $417,800. Monthly payments remain near record highs, keeping first-time buyers locked out.</li>
+        </ul>
+
+        <!-- SAVINGS & CD RATES -->
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <p class="section-intro">The gap between the national average and the best available rates remains enormous.</p>
+        <div class="data-line"><span class="data-label">National avg 1-yr CD:</span> 1.55% APY</div>
+        <div class="data-line"><span class="data-label">Best online 1-yr CD:</span> 4.10-4.11% APY (Popular Direct, E*TRADE)</div>
+        <div class="data-line"><span class="data-label">Best credit union CD:</span> 5.00% APY (A+ Federal Credit Union)</div>
+        <div class="data-line"><span class="data-label">Best high-yield savings:</span> 4.03-5.00% APY (Vio Bank, Varo Bank)</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>If your savings are sitting in a big-bank account earning 0.3%, you're losing over 3% per year to inflation in real terms. The best CDs at 4-5% at least keep pace, and they're FDIC insured.</li>
+          <li>Six major high-yield savings accounts cut rates in May. With the Fed holding steady, expect top rates to drift lower through the summer - locking in a 12-month CD now may be the better move.</li>
+        </ul>
+
+        <!-- ENERGY & GAS PRICES -->
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <p class="section-intro">Crude remains elevated on Middle East supply disruption, but pump prices are finally cooling.</p>
+        <div class="data-line"><span class="data-label">WTI crude:</span> $94.43/bbl <span class="up-red">elevated</span></div>
+        <div class="data-line"><span class="data-label">Brent crude:</span> $93.00/bbl <span class="up-red">spiked above $97 mid-week</span></div>
+        <div class="data-line"><span class="data-label">National gas avg:</span> $4.19/gal <span class="down-green">&minus;$0.05 wk</span></div>
+        <div class="data-line"><span class="data-label">West Coast:</span> $4.76/gal</div>
+        <div class="data-line"><span class="data-label">Cheapest region:</span> Gulf South (Indiana $3.48/gal)</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The Strait of Hormuz has been effectively closed since April, shutting in an estimated 10.5 million barrels per day. That's not a headline risk - it's an ongoing supply shock propping up prices well above where fundamentals suggest they should be.</li>
+          <li>Pump prices dipped 5 cents this week, which is welcome, but $4.19 national and $4.76 on the West Coast are still painful for working families. The $1.28 gap between Indiana and California highlights how much state policy and refinery geography drive what you actually pay.</li>
+          <li>Longer term, US actions to increase domestic supply and settle oil in USD point toward lower prices. But the Hormuz situation has to resolve first, and that's a geopolitical question, not a market one.</li>
+        </ul>
+
+        <!-- COMMODITIES -->
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <p class="section-intro">Gold and silver pulled back sharply as the dollar strengthened on the hot jobs print.</p>
+        <div class="data-line"><span class="data-label">Gold / oz:</span> $4,337 <span class="down-red">&minus;3.7% wk</span></div>
+        <div class="data-line"><span class="data-label">Silver / oz:</span> $68 <span class="down-red">&minus;8% wk</span></div>
+        <div class="data-line"><span class="data-label">Copper / lb:</span> $6.32 <span class="up-green">+0.96%</span></div>
+        <div class="data-line"><span class="data-label">Corn / bushel:</span> $4.20 <span class="down-red">4-month low</span></div>
+        <div class="data-line"><span class="data-label">Soybeans / bushel:</span> $11.15 <span class="down-red">&minus;0.6%</span></div>
+        <div class="data-line"><span class="data-label">Live cattle / cwt:</span> $258 <span class="up-red">record high</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Gold dropping $166 from its June 4 high of $4,503 shows how quickly the "safe haven" trade reverses when the dollar strengthens. At $4,337 it's still up 30% year-over-year, but the pullback reminds you that metals don't just go up in a straight line.</li>
+          <li>Cattle at $258/cwt is the highest on record, driven by the smallest US herd since 1951. This translates directly to higher beef prices at the grocery store - another squeeze on household budgets that CPI data captures with a lag.</li>
+          <li>Corn at four-month lows on favorable planting weather is one bright spot for food prices. But the wheat situation more than offsets it - production forecast down 25% year-over-year.</li>
+        </ul>
+
+        <!-- CROP WEATHER -->
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <p class="section-intro">Wheat is in deep trouble. Corn is off to a decent start. Drought covers nearly half the country.</p>
+        <div class="data-line"><span class="data-label">Corn:</span> 66% good/excellent (first rating of season, 1 pt below year-ago). Planting 93% complete.</div>
+        <div class="data-line"><span class="data-label">Wheat:</span> Only 26% good/excellent; 44% poor/very poor. Production forecast down 25% YoY to 1.048B bushels. Farm price projected at $6.50/bu, up $1.50.</div>
+        <div class="data-line"><span class="data-label">Drought:</span> 48.8% of contiguous US in drought (improving slightly from 50.8%). Extreme-to-exceptional drought entrenched in the West and Plains; expanding rapidly in the Upper Midwest.</div>
+        <div class="data-line"><span class="data-label">Global:</span> World wheat production forecast at 819M MT, down 24.7M MT from last year's record. El Nino probability 61-87% by mid-2026.</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The wheat crop is a genuine concern. Only 26% rated good or excellent, with 44% in poor or very poor condition. USDA projects Hard Red Winter production down 25% and the season-average farm price jumping $1.50 to $6.50/bu. This flows directly into bread, pasta, and cereal prices by fall.</li>
+          <li>A 61-87% probability of El Nino emerging by mid-2026 threatens production across South Asia, Southern Africa, and East Asia. Global grain stocks are tightening on multiple fronts simultaneously.</li>
+          <li>Corn at 66% good/excellent is a reasonable start, but drought stress in the Upper Midwest and Great Lakes is expanding rapidly. The next few weeks of weather will be decisive for the corn crop.</li>
+        </ul>
+
+        <!-- REAL ESTATE -->
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <p class="section-intro">Foreclosure completions surged 45% year-over-year. The distress pipeline is accelerating.</p>
+        <div class="data-line"><span class="data-label">Foreclosure starts:</span> 82,631 (Q1 2026) <span class="up-red">+20% YoY</span></div>
+        <div class="data-line"><span class="data-label">Completed foreclosures/REO:</span> 14,020 <span class="up-red">+45% YoY</span></div>
+        <div class="data-line"><span class="data-label">Total foreclosure filings:</span> 118,727 <span class="up-red">+26% YoY</span></div>
+        <div class="data-line"><span class="data-label">Mortgage delinquency rate:</span> 4.44% <span class="up-red">+40 bps YoY</span></div>
+        <div class="data-line"><span class="data-label">FHA delinquency rate:</span> ~11.52% <span class="up-red">+126 bps YoY</span></div>
+        <div class="data-line"><span class="data-label">Existing-home sales (annual pace):</span> 4.02M <span class="up-green">+0.2% MoM</span></div>
+        <div class="data-line"><span class="data-label">% listings cutting price:</span> 35.4%</div>
+        <div class="data-line"><span class="data-label">30-year mortgage:</span> 6.48%</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>REO completions up 45% year-over-year is the number that matters most. These are homes that went all the way through the foreclosure process and are now bank-owned. The pipeline from starts (+20%) to completions (+45%) shows acceleration, not stabilization.</li>
+          <li>FHA delinquency at 11.52% - roughly 6.5 times the conventional rate of 1.78% - reflects how stressed lower-income and first-time buyers are. MBA attributes part of the spike to a reporting change after pandemic-era FHA relief expired in September 2025, but the trend is clearly worsening.</li>
+          <li>Over a third of all listings are cutting prices, and sales volume at 4.02M annualized remains near multi-decade lows. At 6.48% rates and a $417,800 median price, the math simply doesn't work for most buyers. This market is frozen by affordability, and the distress underneath is growing.</li>
+        </ul>
+
+        <!-- HOUSEHOLD FINANCE -->
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <p class="section-intro">The savings rate hit 2.6% in April - the lowest since 2008. The consumer is running on fumes.</p>
+        <div class="data-line"><span class="data-label">Total household debt:</span> $18.8 trillion <span class="up-red">+$18B QoQ</span></div>
+        <div class="data-line"><span class="data-label">Credit card debt:</span> $1.252 trillion; avg APR ~21.0%</div>
+        <div class="data-line"><span class="data-label">Avg. new-car payment:</span> $772/mo <span class="up-red">record</span></div>
+        <div class="data-line"><span class="data-label">Subprime auto 60+ days late:</span> 6.90% <span class="up-red">(32-year high)</span></div>
+        <div class="data-line"><span class="data-label">BNPL users paying late:</span> 47% <span class="up-red">+6 pts YoY</span></div>
+        <div class="data-line"><span class="data-label">Personal savings rate:</span> 2.6% <span class="down-red">(lowest since 2008)</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>A 2.6% savings rate means Americans are spending almost everything they earn. The long-run average is 8.4%. Every prior reading this low preceded significant economic stress. This is not a statistic you can spin positively.</li>
+          <li>Subprime auto delinquency at 6.90% is the highest since 1994. Nearly half of buy-now-pay-later users are paying late. These are the cracks that appear before a broader consumer pullback - people who can't keep up with their existing obligations aren't going to drive spending growth.</li>
+          <li>Credit card debt dipped $25B from Q4's record - a seasonal pattern as tax refunds arrived - but at $1.252 trillion and a 21% APR, the interest burden alone is staggering. The card debt dip is a brief pause, not a turnaround.</li>
+        </ul>
+
+        <!-- CRYPTO -->
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <p class="section-intro">A brutal week across the board as longs lost $1.28 billion on June 6 alone.</p>
+        <div class="data-line"><span class="data-label">Bitcoin (BTC):</span> ~$62,000 <span class="down-red">&minus;15 to &minus;17% wk</span></div>
+        <div class="data-line"><span class="data-label">Ethereum (ETH):</span> ~$1,611 <span class="down-red">&minus;11% wk</span></div>
+        <div class="data-line"><span class="data-label">Solana (SOL):</span> ~$64 <span class="down-red">multi-week downtrend</span></div>
+        <div class="data-line"><span class="data-label">XRP:</span> ~$1.16 <span class="down-red">&minus;15% wk</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Crypto sold off in lockstep with tech - a reminder that in a risk-off environment, digital assets behave like leveraged Nasdaq, not like the inflation hedge their proponents claim. Bitcoin dropping 15-17% in a week erases weeks of gains in days.</li>
+          <li>The $1.28 billion in liquidated longs on June 6 tells you how over-leveraged the market was. Some stabilization appeared over the weekend, but the total market cap sitting at $2.19 trillion is well off recent highs.</li>
+          <li>Institutional interest remains a structural tailwind, but weeks like this expose the gap between institutional positioning (patient, hedged) and retail behavior (leveraged, momentum-chasing). The divergence continues to widen.</li>
+        </ul>
+
+        <!-- AROUND THE WORLD -->
+        <h2 class="section-title" id="world">Around the World</h2>
+        <p class="section-intro">The US jobs surprise rippled through global markets, hitting tech-heavy indices hardest.</p>
+        <div class="data-line"><span class="data-label">Japan:</span> Nikkei 225 <span class="up-green">+0.39% wk</span>. Hit all-time highs early in the week but gave back gains sharply Thursday and Friday, dropping 2.7% in two sessions as the global tech selloff hit semiconductor stocks.</div>
+        <div class="data-line"><span class="data-label">Europe:</span> Stoxx 600 <span class="down-red">&minus;0.53% wk</span>. Hit a two-week low on new US tariff proposals (10-12.5% on additional countries) and Iran-driven energy inflation hitting the continent harder than the US.</div>
+        <div class="data-line"><span class="data-label">China:</span> CSI 300 <span class="down-red">&minus;1.54% wk</span>. Uneven recovery continues, though the index remains up 27.5% over the trailing year. The US-China trade framework with 30% baseline tariffs is a structural headwind.</div>
+        <div class="data-line"><span class="data-label">Emerging markets:</span> Mixed. Strong YTD run (+14.7% in April alone) but late-week risk-off pressure from the US jobs surprise weighed broadly.</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Japan's Nikkei hitting all-time highs then reversing sharply exposes how correlated the Japanese rally has been to the global AI trade. The yen weakness that powered the rally is a double-edged sword when risk sentiment turns.</li>
+          <li>Europe faces a unique squeeze: new US tariff proposals, the ECB potentially hiking while the Fed holds, and Iran-driven energy inflation. The Stoxx 600 at a two-week low reflects that pressure from multiple directions.</li>
+          <li>China's CSI 300 dipping 1.54% is noise in the context of a 27.5% trailing-year gain. But the US-China trade framework taking shape with 30% baseline tariffs caps how far the recovery rally can extend from here.</li>
+        </ul>
+
+        <!-- UPCOMING EVENTS -->
+        <h2 class="section-title" id="events">Upcoming Events</h2>
+        <p class="section-intro">A packed two weeks ahead - CPI, the Fed meeting, and Powell's final press conference.</p>
+        <div class="data-line"><span class="data-label">Jun 9</span> - NAR existing-home sales (May data).</div>
+        <div class="data-line"><span class="data-label">Jun 10</span> - May CPI report. Highest-impact release of the week. Markets watching for any softening from the 3.8% YoY print.</div>
+        <div class="data-line"><span class="data-label">Jun 11</span> - May PPI report. US-China trade framework announcement expected.</div>
+        <div class="data-line"><span class="data-label">Jun 16-17</span> - FOMC meeting; rate decision June 17. Jerome Powell's final press conference as Fed Chair. Near-unanimous expectation for no change.</div>
+        <div class="data-line"><span class="data-label">Jun 17</span> - Advance retail sales (May). Consumer spending pulse check after the gas price surge.</div>
+        <div class="data-line"><span class="data-label">Ongoing</span> - Strait of Hormuz crisis remains the biggest swing factor. Any diplomatic breakthrough or further escalation moves markets immediately.</div>
+
+        <!-- DISCLAIMER -->
+        <div class="disclaimer">
+          <p>A free weekly snapshot for the Totem community. General information only - not investment advice or a recommendation to buy or sell anything. Figures reflect the latest readings available as of June 8, 2026 and may change.</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- SIDEBAR TOC -->
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#news">This Week in the News</a></li>
+        <li><a href="#quick-read">The Quick Read</a></li>
+        <li><a href="#stocks">Stock Market</a></li>
+        <li><a href="#rates">Interest Rates</a></li>
+        <li><a href="#savings">Savings &amp; CD Rates</a></li>
+        <li><a href="#energy">Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities">Commodities</a></li>
+        <li><a href="#crops">Crop Weather</a></li>
+        <li><a href="#realestate">Real Estate</a></li>
+        <li><a href="#household">Household Finance</a></li>
+        <li><a href="#crypto">Crypto</a></li>
+        <li><a href="#world">Around the World</a></li>
+        <li><a href="#events">Upcoming Events</a></li>
+      </ul>
+
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_june8_2026.html">June 8, 2026</a></li>
+          <li><a href="market_pulse_june7_2026.html">June 7, 2026</a></li>
+          <li><a href="market_pulse_june5_2026.html">June 5, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- SUBSCRIBE -->
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <!-- THANK YOU MODAL -->
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We're looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">Market <b>Pulse</b> &bull; The Totem <b>Challenge</b></div>
+      <div class="legal">A publication of Totem LC Group. General information only - not investment advice or a recommendation to buy or sell anything.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+<script>
+  document.getElementById('subscribe-btn').addEventListener('click', function(){
+    var email = document.getElementById('subscribe-email').value.trim();
+    var msg = document.getElementById('subscribe-msg');
+    var btn = this;
+    if(!email || email.indexOf('@') === -1){
+      msg.style.display = 'block';
+      msg.style.color = '#9b2c2c';
+      msg.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email})
+    }).then(function(){
+      document.getElementById('subscribe-email').value = '';
+      btn.textContent = 'Subscribed';
+      document.getElementById('thank-you-modal').classList.add('active');
+    }).catch(function(){
+      msg.style.display = 'block';
+      msg.style.color = '#9b2c2c';
+      msg.textContent = 'Something went wrong. Please try again.';
+      btn.textContent = 'Subscribe';
+      btn.disabled = false;
+    });
+  });
+  document.getElementById('modal-close').addEventListener('click', function(){
+    document.getElementById('thank-you-modal').classList.remove('active');
+  });
+  document.getElementById('thank-you-modal').addEventListener('click', function(e){
+    if(e.target === this) this.classList.remove('active');
+  });
+</script>
+</body>
+</html>
