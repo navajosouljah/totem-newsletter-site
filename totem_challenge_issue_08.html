@@ -93,6 +93,21 @@
   .scorecard-table tr.total-row td{background:rgba(3,33,101,0.04);font-weight:700;vertical-align:bottom;padding-top:18px;padding-bottom:18px;}
   .scorecard-table tr.total-row td:nth-child(4){font-weight:800;font-size:16px;}
   .scorecard-table .st-note{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--faint);padding:11px 20px;border-top:1px solid var(--line);line-height:1.5;font-style:italic;}
+  .blueprint-fig{margin:34px 0;border:1px solid var(--line);}
+  .blueprint-fig .bf-head{background:linear-gradient(160deg,#04204f 0%,#032165 60%,#01102f 100%);color:#fff;text-align:center;padding:24px 20px;}
+  .blueprint-fig .bf-title{font-family:'Spectral',serif;font-weight:800;font-size:26px;line-height:1.15;}
+  .blueprint-fig .bf-title em{font-style:normal;color:var(--gold-bright);}
+  .blueprint-fig .bf-sub{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.72);margin-top:7px;}
+  .blueprint-fig .bf-cols{display:grid;grid-template-columns:1fr 1.6fr 1.6fr;}
+  .blueprint-fig .bf-cell{padding:14px 16px;border-top:1px solid var(--line);font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.55;color:var(--body);}
+  .blueprint-fig .bf-cell.rowlab{font-weight:700;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);background:var(--wash);}
+  .blueprint-fig .bf-cell.colhead{font-weight:700;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;text-align:center;background:var(--wash);}
+  .blueprint-fig .bf-cell.colhead.re{color:var(--muted);}
+  .blueprint-fig .bf-cell.colhead.totem{color:var(--navy);box-shadow:inset 0 -2px 0 var(--gold);}
+  .blueprint-fig .mark{display:inline-block;font-weight:700;margin-right:7px;font-size:14px;}
+  .blueprint-fig .mark.no{color:var(--muted);}
+  .blueprint-fig .mark.yes{color:var(--gold);}
+  .blueprint-fig .bf-note{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--faint);padding:11px 16px;border-top:1px solid var(--line);line-height:1.5;font-style:italic;}
   .outreach-log{margin:34px 0;border:1px solid var(--line);background:var(--wash);}
   .outreach-log .ol-status{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);padding:16px 24px 0;}
   .outreach-log .ol-meta{font-family:'Work Sans',sans-serif;font-size:13px;color:var(--muted);padding:8px 24px 14px;border-bottom:1px solid var(--line);line-height:1.7;}
@@ -141,6 +156,9 @@
     .hero-art .big{font-size:48px;}
     .hero-art .sub{font-size:13px;letter-spacing:0.06em;}
     .scorecard-table td,.scorecard-table th{padding:10px 14px;}
+    .blueprint-fig .bf-cols{grid-template-columns:1fr;}
+    .blueprint-fig .bf-cell.colhead:first-child{display:none;}
+    .blueprint-fig .bf-title{font-size:21px;}
     .closing-block p{font-size:19px;}
   }
 </style>
@@ -251,6 +269,39 @@
       <p>At Totem, member capital deploys on a fixed 90-day cycle. It requires zero renovations, zero tenant phone calls, and zero management overhead. The compensation is a 5% origination fee per cycle, fixed and known upfront before capital moves.</p>
       <p>Most importantly, both principal and the cycle fee are covered under trade credit insurance arrangements with Allianz Trade, alongside a first-position performance guarantee. If a tenant disappears, the landlord absorbs the loss alone. If a Fortune 100 buyer defaults on a Totem transaction, the Allianz policy stands behind the gap, subject to its terms.</p>
 
+      <figure class="blueprint-fig" id="blueprint">
+        <div class="bf-head">
+          <div class="bf-title">The 2026 Wealth Preservation <em>Blueprint</em></div>
+          <div class="bf-sub">Tangibility vs. Insured Execution</div>
+        </div>
+        <div class="bf-cols">
+          <div class="bf-cell colhead"></div>
+          <div class="bf-cell colhead re">2026 Rental Playbook</div>
+          <div class="bf-cell colhead totem">Totem Insured Commerce</div>
+
+          <div class="bf-cell rowlab">Principal Protection</div>
+          <div class="bf-cell"><span class="mark no">&#10005;</span>Market swings, vacancy, and property damage land on the owner, uninsured</div>
+          <div class="bf-cell"><span class="mark yes">&#10003;</span>Allianz trade credit insurance arrangements plus a first-position performance guarantee</div>
+
+          <div class="bf-cell rowlab">Return Protection</div>
+          <div class="bf-cell"><span class="mark no">&#10005;</span>Rents vary with tenants, maintenance, and local rules - no coverage</div>
+          <div class="bf-cell"><span class="mark yes">&#10003;</span>5% origination fee per cycle, fixed and known upfront</div>
+
+          <div class="bf-cell rowlab">Capital Cycle</div>
+          <div class="bf-cell"><span class="mark no">&#10005;</span>Multi-year hold; exiting takes months and heavy transaction fees</div>
+          <div class="bf-cell"><span class="mark yes">&#10003;</span>Fixed 90-day cycle tied to specific purchase orders</div>
+
+          <div class="bf-cell rowlab">Counterparty</div>
+          <div class="bf-cell"><span class="mark no">&#10005;</span>Local tenants, contractors, and property managers</div>
+          <div class="bf-cell"><span class="mark yes">&#10003;</span>Verified Fortune 100 buyers you can call before capital moves</div>
+
+          <div class="bf-cell rowlab">Basis</div>
+          <div class="bf-cell"><span class="mark no">&#10005;</span>Forecasts: appreciation, rate cuts, and market sentiment</div>
+          <div class="bf-cell"><span class="mark yes">&#10003;</span>Documented obligations: purchase orders in hand before funding</div>
+        </div>
+        <div class="bf-note">Totem funds documented obligations, not speculative growth. Insurance arrangements are subject to carrier terms, policy exclusions, claims processes, and carrier performance.</div>
+      </figure>
+
       <h2 class="sub" id="scorecard">The Totem Scorecard</h2>
       <p>To keep the scoring objective, we ran both options through our standard six-category Wealth Preservation Blueprint. Each category is scored from 0 to 5, with 30 being a perfect score.</p>
 
@@ -305,7 +356,7 @@
             <tr>
               <td>6. Track Record</td>
               <td>Centuries of historical data as an asset class</td>
-              <td>Over 2,000 completed transactions, $3M+ deployed; company records indicate no realized payment defaults</td>
+              <td>Over 6,000 completed transactions, $7M+ in member participation YTD; company records indicate no realized payment defaults</td>
               <td>4 / 5</td>
             </tr>
             <tr class="total-row">
@@ -361,10 +412,11 @@
       </div>
 
       <h2 class="sub" id="numbers">Totem by the Numbers</h2>
+      <!-- Canonical counts per JJ, July 26, 2026: 6,000+ successful transactions, zero realized defaults, $7M+ YTD member participation. Supersedes 2,000+/$3M+ draft figures. -->
       <figure class="data">
         <div class="grid">
           <div class="cell">
-            <div class="num">2,000+</div>
+            <div class="num">6,000+</div>
             <div class="lbl">Completed Transactions</div>
           </div>
           <div class="cell">
@@ -386,8 +438,8 @@
             <div class="lbl">Allianz Coverage Endorsement</div>
           </div>
           <div class="cell">
-            <div class="num">$3M+</div>
-            <div class="lbl">Capital Deployed</div>
+            <div class="num">$7M+</div>
+            <div class="lbl">Member Participation YTD</div>
           </div>
         </div>
         <figcaption>Company records as of Issue No. 08. Insurance arrangements are subject to carrier terms, policy exclusions, claims processes, and carrier performance. Past performance does not guarantee future results.</figcaption>
