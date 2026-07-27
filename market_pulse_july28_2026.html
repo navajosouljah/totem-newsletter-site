@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - July 28, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:19px; line-height:1.72;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:32px 0 0;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:42px;line-height:1.1;letter-spacing:-0.015em;color:var(--ink);margin-bottom:14px;}
+  .dek{font-family:'Spectral',serif;font-weight:400;font-size:20px;line-height:1.5;color:#3b4048;margin-bottom:0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 20px;color:var(--body);font-size:18px;line-height:1.72;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:68px;line-height:0.74;padding:8px 10px 0 0;}
+  h2.section-title{font-family:'Spectral',serif;font-weight:700;font-size:26px;line-height:1.2;letter-spacing:-0.01em;color:var(--ink);margin:32px 0 6px;padding-top:24px;border-top:1px solid var(--line);}
+  .section-intro{font-family:'Spectral',serif;font-style:italic;font-size:16px;line-height:1.55;color:var(--muted);margin-bottom:14px;}
+  .data-line{margin-bottom:6px;font-size:16px;line-height:1.5;font-family:'Spectral',serif;}
+  .data-label{font-weight:700;color:var(--ink);}
+  .up-green{color:#2d6a4f;font-weight:600;}
+  .down-green{color:#2d6a4f;font-weight:600;}
+  .up-red{color:#9b2c2c;font-weight:600;}
+  .down-red{color:#9b2c2c;font-weight:600;}
+  .flat{color:var(--muted);font-weight:600;}
+  .bottom-line-label{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-top:14px;margin-bottom:6px;}
+  .bottom-line-list{list-style:none;padding:0;margin:0 0 8px;}
+  .bottom-line-list li{padding-left:18px;position:relative;margin-bottom:8px;font-size:16px;line-height:1.65;color:var(--body);}
+  .bottom-line-list li::before{content:"\2022";position:absolute;left:0;color:var(--gold);font-weight:700;}
+  .bullet-list{list-style:none;padding:0;margin:0;}
+  .bullet-list li{padding-left:18px;position:relative;margin-bottom:10px;font-size:16px;line-height:1.65;}
+  .bullet-list li::before{content:"\2022";position:absolute;left:0;color:var(--navy);font-weight:700;}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:12px;line-height:1.65;color:var(--muted);}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:32px;}h2.section-title{font-size:22px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_07.html">The Challenge</a></li>
+        <li><a href="email_copy.html">Email Copy</a></li>
+        <li><a href="emergency_po.html">Emergency PO</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Weekly Briefing <span class="dot">&bull;</span> <span class="date">Monday, July 28, 2026</span></div>
+        <h1 class="headline">Brent Falls Below $90. Chips Crater 4%. Fed Decides Tomorrow - MSFT and META Report the Same Night.</h1>
+        <p class="dek">The Iran strike pause delivered the oil break the market had been waiting for - Brent fell below $90 for the first time in three weeks and WTI closed near $83.60. But the relief rally was uneven: chips fell hard as the AI-spending question intensified, and the Nasdaq barely budged. The FOMC wraps its two-day meeting tomorrow at 2 PM ET, with Microsoft and Meta reporting the same evening. Apple, Amazon, Q2 GDP, and June PCE all arrive Thursday.</p>
+      </div>
+
+      <div class="body">
+
+        <h2 class="section-title" id="news">Today in the News</h2>
+        <ul class="bullet-list">
+          <li><strong>The Iran strike pause held its first full trading day, sending oil down more than 7% as a relief rally opened markets sharply higher.</strong> WTI crude closed near $83.60 and Brent fell below $90 - reversing a significant portion of the conflict-driven price surge. Tehran denied reports of a formal 10-day ceasefire, keeping the situation incomplete, but the absence of overnight strikes was enough for energy markets to move decisively.</li>
+          <li><strong>Chip stocks broke lower independent of the Iran news, with the semiconductor ETF (SMH) falling 3.7% and AMD and Micron each dropping more than 6%.</strong> The sell-off reflects the ongoing AI-capital-spending question Alphabet's earnings raised last week: how much infrastructure spend is too much, and when does it appear on the margin line. That question follows Microsoft and Meta into earnings tomorrow.</li>
+          <li><strong>Treasury yields fell across the curve as cheaper oil reduced the immediate inflation case for a rate hike.</strong> The 10-year fell from 4.69% toward 4.54%, and the 2-year moved from 4.34% toward 4.19%. The FOMC began its two-day meeting today; the decision and Chair Warsh's press conference come tomorrow at 2:00 PM and 2:30 PM ET respectively.</li>
+          <li><strong>The USDA released its weekly crop progress report Monday afternoon covering the week ending July 27.</strong> With the western Corn Belt drought persisting through the grain-fill stage and spring wheat under heat pressure, the ratings bear close watching before Thursday's GDP and PCE data arrive.</li>
+        </ul>
+
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="lead-first"><span class="data-label">Oil broke below $90 today, and the market's reaction told you everything about where the real tension now sits.</span> Brent fell as much as 7.4% - closing near $88-89 at the intraday low before a modest recovery - and WTI settled around $83.60, reversing most of its conflict-driven premium from the past three weeks. The Iran strike pause, which Tehran declined to officially call a ceasefire, was enough for energy futures to move decisively. The rate-hike odds that had climbed to 34% last week retreated further Monday as yields fell across the curve. If oil holds below $90 into Wednesday's Fed decision, the case for a July hike is effectively gone.</p>
+        <p>But the semiconductor sector has its own story, and it is not about Iran. AMD fell more than 7%. Micron dropped more than 6%. The VanEck Semiconductor ETF (SMH) lost 3.7% on the day - a remarkable divergence from the broader market that finished essentially flat. What is driving it is the same question Alphabet's earnings last Thursday raised for the entire Magnificent Seven: when capital spending scales to the levels now being disclosed, does it compress margins before it delivers returns? That question hits Microsoft and Meta directly tomorrow. Both companies have been increasing AI infrastructure spend at pace. The tape will decide Wednesday morning whether tonight's numbers answer it or deepen it.</p>
+        <p>The Dow gained about 300 points as energy-cost relief boosted transports and industrials. The S&P 500 added roughly 0.2%. The Nasdaq finished essentially unchanged. Those three numbers in the same session - Dow up 0.6%, chips down nearly 4%, Nasdaq flat - describe a market that is rotating within itself rather than moving directionally. That is a reasonable response to a week that still has three of its most consequential data points ahead: the Fed statement, four megacap earnings, Q2 GDP, and June PCE, all landing by Thursday afternoon. The VIX has retreated from 18.58 toward 16, which is lower but still not calm.</p>
+
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <p class="section-intro">A split session: energy, industrials, and financials all rallied on oil relief; chips and some tech names dragged the Nasdaq and kept the S&P from a stronger close. Intraday volatility was sharp before settling.</p>
+        <div class="data-line"><span class="data-label">S&P 500:</span> 7,427 <span class="up-green">+0.2% Monday; slim gain as chip weakness offset broad relief rally</span></div>
+        <div class="data-line"><span class="data-label">Dow Jones:</span> 52,260 <span class="up-green">+0.6%; transports, industrials, and financials lifted by oil decline</span></div>
+        <div class="data-line"><span class="data-label">Nasdaq:</span> 24,961 <span class="flat">essentially flat; chip drag offset gains elsewhere</span></div>
+        <div class="data-line"><span class="data-label">Semiconductors (SMH):</span> <span class="down-red">&minus;3.7% Monday; AMD &minus;7.2%, Micron &minus;6.4%; AI-capex-margin debate intensifying</span></div>
+        <div class="data-line"><span class="data-label">Fear gauge (VIX):</span> ~16.4 <span class="down-green">retreating from Friday's 18.58; lower but still elevated for a pre-FOMC tape</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The chip divergence is the most important signal of the day. The broader market greeted the oil drop with a relief rally; chips sold off anyway. That tells you the semiconductor sector has its own fundamental headwind that lower oil doesn't fix. When Microsoft and Meta report after the close tomorrow, the market will apply the same lens it used on Alphabet: how much are you spending, when does it show on the margin, and what is the return timeline?</li>
+          <li>The Dow outperforming the Nasdaq by 0.6 percentage points in a single session - while the VIX is still 16 heading into a Fed decision - describes a market that is sector-rotating on the oil story rather than expressing broad confidence. If the FOMC statement is explicitly dovish tomorrow and chips stabilize, the setup for a broader rally improves. If the statement is neutral and chips continue lower, the Nasdaq has further room to fall despite oil relief.</li>
+        </ul>
+
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <p class="section-intro">Oil's 7% drop removed the primary argument for a July hike. Yields fell across the curve, and futures now price a hold with even higher confidence heading into tomorrow's 2 PM decision.</p>
+        <div class="data-line"><span class="data-label">Fed policy rate:</span> 3.50-3.75% (hold expected; decision tomorrow 2:00 PM ET; Chair Warsh press conference 2:30 PM)</div>
+        <div class="data-line"><span class="data-label">2-year Treasury:</span> 4.19% <span class="down-green">fell from 4.34% Friday; oil-driven inflation risk fading</span></div>
+        <div class="data-line"><span class="data-label">10-year Treasury:</span> 4.54% <span class="down-green">fell from 4.69%; Treasuries rallied across the curve</span></div>
+        <div class="data-line"><span class="data-label">30-year Treasury:</span> 5.04% <span class="down-green">fell from 5.18%; first time below 5.10% since the conflict began</span></div>
+        <div class="data-line"><span class="data-label">30-year mortgage (avg.):</span> 6.58% <span class="flat">Freddie Mac July 23; weekly reading due Thursday; may soften if yields hold lower</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The rate market moved meaningfully today. A 15-basis-point drop in the 10-year and 2-year in a single session reflects the market repricing what a sustained oil move below $90 means for the August CPI - the reading that will carry the first full month of Section 301 tariff effects. If the oil decline holds, the August CPI argument for hiking disappears, and the Fed's path to cuts reopens for September or November.</li>
+          <li>Tomorrow's statement will be read for two things beyond the decision itself: any mention of the oil price move and its implication for August inflation, and any language around Section 301 tariffs as a new price-level factor. Chair Warsh has spoken before about the distinction between temporary price effects and embedded inflation. The word choice tomorrow will tell the bond market whether the Fed has shifted its view, and the 2-year will move on the nuance more than on the decision.</li>
+          <li>For mortgage borrowers, the 10-year settling below 4.60% is the first meaningful signal of potential rate relief. The 30-year mortgage tracks the 10-year with a spread; if the 10-year holds this range into Thursday's Freddie Mac reading, borrowers could see 6.40-6.45% offers emerge. That is not relief, but it is a direction change after four consecutive weekly increases.</li>
+        </ul>
+
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <p class="section-intro">Top CD offers have not yet moved in response to Monday's yield decline. Banks typically take a week or more to adjust deposit rate offers after Treasury moves.</p>
+        <div class="data-line"><span class="data-label">National avg 1-yr CD:</span> ~1.70% APY (FDIC est.) <span class="flat">unchanged</span></div>
+        <div class="data-line"><span class="data-label">Best online 1-yr CD:</span> 4.50% APY (Southland Credit Union); 4.35% (Bankrate top pick)</div>
+        <div class="data-line"><span class="data-label">Best high-yield savings:</span> ~4.15% APY (leading online banks)</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>A 4.50% top CD against a CPI of 3.5% still delivers a real return of roughly 1 full percentage point. The yield decline today does not immediately change that math - CD offers are sticky downward. But if the 10-year holds below 4.60% through August and cut expectations resurface, competitive CD rates will begin to compress by September. The lock-in argument remains intact now; the window may be measured in weeks rather than months.</li>
+        </ul>
+
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <p class="section-intro">The oil move the market was waiting for: WTI settled near $83.60 and Brent fell below $90. Gas prices remain elevated - the crude decline takes 2-3 weeks to reach the pump.</p>
+        <div class="data-line"><span class="data-label">WTI crude (Monday close):</span> ~$83.60/bbl <span class="down-green">&minus;6.4% Monday; down from $89.30 Friday close</span></div>
+        <div class="data-line"><span class="data-label">Brent crude (Monday close):</span> ~$89.00/bbl <span class="down-green">&minus;7.7% from Friday's $96.80; first close below $90 since early July</span></div>
+        <div class="data-line"><span class="data-label">Iran pause status:</span> Strike halt held through the full US trading session Monday. Tehran denied a formal 10-day ceasefire - the pause is informal, fragile, and not guaranteed to hold.</div>
+        <div class="data-line"><span class="data-label">National gas avg:</span> $4.11/gal <span class="flat">unchanged; pump prices trail crude by 2-3 weeks</span></div>
+        <div class="data-line"><span class="data-label">West Coast (California):</span> $5.57/gal <span class="up-red">still highest in the nation</span></div>
+        <div class="data-line"><span class="data-label">Cheapest region (Gulf Coast):</span> ~$3.65/gal (Mississippi)</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>WTI at $83.60 represents the largest single-day drop since the conflict began. If it holds - the critical condition - the deflationary signal reaches August CPI data and eventually the Freddie Mac mortgage rate survey. The pump relief will take until mid-August. The Fed will see the futures price Monday and Tuesday as it deliberates; oil this low makes a hike tomorrow essentially indefensible.</li>
+          <li>Tehran's denial of a formal ceasefire is the variable that keeps the word "if" in every sentence above. The previous ceasefire attempt ended when Iran struck commercial vessels bypassing its preapproved route. This pause has the same informal, unverified character. One overnight strike restores the $96 Brent level. That asymmetry - relief is slow, reversal is instant - is why gold is holding $4,097 even as oil falls.</li>
+          <li>Gas at $4.11 nationally means households are absorbing $4 fuel costs regardless of what crude does Monday. The geographic split - California at $5.57 versus Mississippi at $3.65 - reflects refinery constraints and state taxes that the Iran situation doesn't resolve. Californians are paying nearly $2 more per gallon for the same crude-input story.</li>
+        </ul>
+
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <p class="section-intro">Gold bounced to $4,097 - up from Friday's $4,053 - as the Iran pause left enough uncertainty to keep the safe-haven bid alive. Copper fell on growth concerns. Grains held firm on weather.</p>
+        <div class="data-line"><span class="data-label">Gold / oz:</span> $4,097 <span class="up-green">+$44 from Friday's $4,053; uncertainty intact despite oil drop</span></div>
+        <div class="data-line"><span class="data-label">Silver / oz:</span> ~$58.40 <span class="flat">steady; following gold's mild recovery</span></div>
+        <div class="data-line"><span class="data-label">Copper / lb:</span> ~$6.24 <span class="down-red">&minus;1.0%; weaker global growth read offsetting oil-relief optimism</span></div>
+        <div class="data-line"><span class="data-label">Corn / bushel:</span> ~$4.67 <span class="up-red">+0.6%; drought pressure in the western Corn Belt persisting during grain fill</span></div>
+        <div class="data-line"><span class="data-label">Soybeans / bushel:</span> ~$12.55 <span class="up-red">+0.6%; European heat maintaining pressure on global supply</span></div>
+        <div class="data-line"><span class="data-label">Live cattle / cwt:</span> ~$227.50 <span class="flat">holding the prior week's partial rebound; herd constraints unchanged</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Gold recovering to $4,097 while oil fell 7% on the same day is the most informative signal of the session. These two typically move in different directions when a geopolitical risk premium unwinds - oil falls, gold falls with it as the fear subsides. The fact that gold moved in the opposite direction tells you the market does not believe the Iran pause is permanent. Tehran's denial of a formal ceasefire is the likely driver; if this pause breaks down like the April ceasefire did, gold reclaims $4,135 quickly.</li>
+          <li>Corn and soybean prices continuing to firm during the grain-fill window signals a real weather risk, not a speculative one. The western Corn Belt drought persisting through the most yield-sensitive period of the crop cycle creates the risk of a late-summer grain price surge that hits food costs just as the Section 301 tariff effects are entering the August CPI. These are separate forces pointing in the same inflationary direction for food prices specifically.</li>
+        </ul>
+
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <p class="section-intro">The USDA crop progress report for the week ending July 27 was released Monday afternoon. The grain-fill stage for corn is the highest-stakes period of the growing season; this week's ratings carry the most weight until August.</p>
+        <div class="data-line"><span class="data-label">Corn (week ending July 27):</span> 67% good-to-excellent (holding steady from prior week). Grain fill stage advancing; yield outcome increasingly locked in over the next three weeks.</div>
+        <div class="data-line"><span class="data-label">Soybeans (week ending July 27):</span> 64-66% good-to-excellent range; blooming progress continues above five-year average pace.</div>
+        <div class="data-line"><span class="data-label">Spring wheat:</span> Continued pressure from Northern Plains heat; prior week reading was 53% good-to-excellent, down 5 points over two weeks.</div>
+        <div class="data-line"><span class="data-label">Drought:</span> Roughly 19-20% of US corn acres in some degree of drought, concentrated in the western Corn Belt. Late July heat remains a factor ahead of final grain fill.</div>
+        <div class="data-line"><span class="data-label">Global:</span> Europe's heatwave maintained pressure on French maize (13-year low condition rating). EU wheat estimate at 140.8 Mt; Black Sea harvest partially offsets European losses.</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The crop picture matters more this week than usual because Thursday's PCE report will show May's savings rate - built before the current drought conditions were fully priced into food costs. The next CPI reading (August 12) will be the first to capture both the Section 301 tariff effects and any July grain price movement. If corn ratings slip below 65% before grain fill completes, grain and food prices will be a contributing factor in that print alongside energy and tariffs.</li>
+        </ul>
+
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <p class="section-intro">No new housing data this week - the picture from last week stands. A record median price, rising foreclosures, a 6.58% mortgage rate heading into a Fed decision that could shift the rate trajectory for the first time in months.</p>
+        <div class="data-line"><span class="data-label">Foreclosure starts (June):</span> 26,217 <span class="up-red">+20% YoY</span></div>
+        <div class="data-line"><span class="data-label">H1 2026 foreclosure filings:</span> 227,548 <span class="up-red">+21% YoY</span></div>
+        <div class="data-line"><span class="data-label">Completed foreclosures (June):</span> 4,773 <span class="up-red">+23% YoY</span></div>
+        <div class="data-line"><span class="data-label">Mortgage delinquency rate:</span> 4.44% <span class="up-red">+40 bps YoY</span></div>
+        <div class="data-line"><span class="data-label">FHA delinquency:</span> 11.88% <span class="up-red">highest since 2021</span></div>
+        <div class="data-line"><span class="data-label">Existing-home sales (June):</span> 4.09M ann. <span class="down-red">&minus;2.4% MoM; below the 4.20M expected</span></div>
+        <div class="data-line"><span class="data-label">Median existing-home price:</span> $440,600 <span class="up-red">record; 36th straight month of YoY gains</span></div>
+        <div class="data-line"><span class="data-label">Sellers cutting asking price:</span> 35.4% <span class="up-red">near last August's record (Redfin)</span></div>
+        <div class="data-line"><span class="data-label">Months of supply:</span> 4.6</div>
+        <div class="data-line"><span class="data-label">30-year mortgage:</span> 6.58% <span class="flat">Freddie Mac July 23; next reading Thursday</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Monday's Treasury yield move - the 10-year settling near 4.54% - is the first meaningful shift in the rate environment since mortgage rates began their four-week climb. If the 10-year holds below 4.60% through Thursday's Freddie Mac reading, the August mortgage rate survey could break the uptrend for the first time since mid-June. That is the first step toward affordability improvement, but the gap between 6.50% and the roughly 5.50% needed to meaningfully expand buyer purchasing power is still measured in years of rate normalization, not weeks.</li>
+          <li>The foreclosure data continuing to accelerate - 20-23% YoY increases across starts, completions, and filings - reflects a cohort of homeowners who absorbed the 2022-2023 rate shock and are now running out of buffer. A 4.44% delinquency rate on all mortgages and 11.88% on FHA loans indicates the stress is concentrated in the lower-equity, lower-income segment. Lower crude oil and eventual mortgage rate relief help this group, but slowly and only if the labor market holds.</li>
+        </ul>
+
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <p class="section-intro">Thursday's June PCE and savings rate update is the week's most important household read. May's 3.0% savings rate was built before $4 gas and Section 301 tariff costs hit budgets. The June number will be the first post-conflict household data point.</p>
+        <div class="data-line"><span class="data-label">Total household debt:</span> $18.8 trillion <span class="up-red">record</span></div>
+        <div class="data-line"><span class="data-label">Credit card debt:</span> $1.25 trillion <span class="up-red">+5.9% YoY; avg new-offer APR 23.8%</span></div>
+        <div class="data-line"><span class="data-label">Card balances 90+ days late:</span> 13.1% <span class="up-red">highest in roughly 15 years</span></div>
+        <div class="data-line"><span class="data-label">Avg. new-car payment:</span> $777/mo <span class="up-red">third consecutive record; avg $44,156 financed at 7.0% APR</span></div>
+        <div class="data-line"><span class="data-label">84+ month auto loans:</span> 23.9% of new financings <span class="up-red">record</span></div>
+        <div class="data-line"><span class="data-label">BNPL users paying late:</span> 47% <span class="up-red">+6 pts YoY; 29% now use BNPL for groceries</span></div>
+        <div class="data-line"><span class="data-label">Personal savings rate:</span> 3.0% (May 2026; June reading due Thursday)</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Thursday's savings rate will be the market's first look at whether June's oil surge and tariff transition began squeezing the savings buffer or whether households drew on credit instead. A reading below 2.5% would signal accelerating balance-sheet pressure. A reading at 3% or above would suggest the consumer has more cushion than the debt metrics imply - and would be bullish for the Amazon earnings call that afternoon. The two data points land within hours of each other for a reason: the savings rate is the consumption capacity number, and Amazon reports the consumption behavior number.</li>
+          <li>The structural divide this briefing returns to most often - between the balance-sheet-positive household clearing 4.50% on a CD and the cardholder at 23.8% APR with a 90-day delinquency - is not improved by lower oil prices alone. The Section 301 tariff cost increases on imported consumer goods land on the second group. The first group sees a net improvement when energy costs fall. Two different economies, same week of data.</li>
+        </ul>
+
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <p class="section-intro">Bitcoin held the $63,000-$66,000 range for a fourth consecutive week. The FOMC decision tomorrow is the near-term catalyst - a hold with dovish language could break the range higher; a hawkish surprise would do the opposite.</p>
+        <div class="data-line"><span class="data-label">Bitcoin (BTC):</span> ~$65,800 <span class="up-green">+$441 Monday; still range-bound between $63K and $66K for a month</span></div>
+        <div class="data-line"><span class="data-label">Ethereum (ETH):</span> ~$1,880 <span class="up-green">modestly higher as risk appetite improved on oil decline</span></div>
+        <div class="data-line"><span class="data-label">Range behavior:</span> BTC has now failed to close above $66,500 or below $63,000 for four consecutive weeks; the band is tightening.</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Bitcoin moved marginally higher Monday as risk sentiment improved on oil's decline. But the move was mild - $441 - compared to what a genuine risk-on shift would typically produce. The FOMC tomorrow is the first real catalyst that could break the four-week range. A hold with language that restores cut expectations for September or November would remove the Treasury-yield headwind that has kept BTC's ceiling at approximately $66,500. A hawkish statement - possible if the Fed wants to preserve optionality - renews the yield pressure and sends BTC back toward $63,000.</li>
+          <li>The overhead supply problem above $66,500 remains unchanged regardless of tomorrow's Fed language. Anyone who bought BTC above $75,000 on the way to the $126,000 all-time high is still sitting on a loss. That trapped supply has capped every rally. Resolving it structurally requires either a sustained fundamental catalyst or time - neither of which the FOMC decision provides on its own.</li>
+        </ul>
+
+        <h2 class="section-title" id="world">Around the World</h2>
+        <p class="section-intro">Asian markets opened Monday sharply higher on the Iran pause before chip weakness trimmed gains. European markets closed up broadly. The dollar softened as hold expectations solidified and yields fell.</p>
+        <div class="data-line"><span class="data-label">Japan:</span> Nikkei opened up more than 2% on oil relief before paring gains as chips fell; yen strengthened slightly against the dollar as the trade-deficit calculation improved.</div>
+        <div class="data-line"><span class="data-label">Europe:</span> STOXX 600 gained roughly 0.8%; energy stocks fell as oil dropped; defense and banking names rose on Iran-pause optimism. London and Frankfurt both up.</div>
+        <div class="data-line"><span class="data-label">China:</span> Shanghai Composite rose modestly; Hang Seng outperformed as oil-importing economies benefited from energy cost relief. Chinese tech names mixed.</div>
+        <div class="data-line"><span class="data-label">Dollar index (DXY):</span> ~100.4 <span class="down-red">slightly lower from ~101 as yield differentials compressed; EM currencies gained</span></div>
+        <div class="data-line"><span class="data-label">Emerging markets:</span> MSCI EM up as dollar weakened and energy import costs fell; largest gainers were the most oil-dependent economies from last month's selloff.</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The global picture clarified today. Oil-importing economies - Japan, South Korea, most of Europe, and the oil-heavy EM basket - all benefited directly from Brent below $90. The dollar softened slightly as the yield differential between US Treasuries and overseas debt compressed on the rate-hike-odds move. A weaker dollar is net positive for EM dollar-denominated debt and reduces pressure on the reserves of commodity-importing countries that have been burning through holdings to defend their currencies against the energy-driven dollar bid.</li>
+          <li>Japan's situation is the sharpest example of the geopolitical-to-financial transmission. Japan imports virtually all of its crude; a sustained Brent below $90 directly improves the trade balance, reduces inflation pressure on the Bank of Japan, and gives the yen room to recover from its energy-driven depreciation. Monday's Nikkei morning surge reflected all of that in real time. The chip-sector weight in the Nikkei 225 limited the close, but the macro direction for Japan improved more in a single session than it had in three weeks of conflict.</li>
+        </ul>
+
+        <h2 class="section-title" id="events">Upcoming Events</h2>
+        <p class="section-intro">The most data-dense 72 hours of the summer begins tomorrow: Fed decision, two megacap earnings reports, then GDP, PCE, and two more earnings - all by Thursday afternoon.</p>
+        <div class="data-line"><span class="data-label">Jul 28 (Mon, today)</span> - Iran strike pause holding. Markets closed with oil below $90. USDA Weekly Crop Progress report released Monday afternoon (week ending July 27). FOMC Day 1 underway.</div>
+        <div class="data-line"><span class="data-label">Jul 29 (Tue)</span> - FOMC decision 2:00 PM ET; Chair Warsh press conference 2:30 PM ET. No Summary of Economic Projections (no dot plot). Microsoft (MSFT) and Meta (META) Q2 earnings after the close.</div>
+        <div class="data-line"><span class="data-label">Jul 30 (Wed)</span> - Treasury auctions. Markets process Tuesday's FOMC and earnings data.</div>
+        <div class="data-line"><span class="data-label">Jul 31 (Thu)</span> - Q2 2026 GDP advance estimate (BEA, 8:30 AM ET). June PCE inflation and savings rate (BEA, 8:30 AM ET). Apple (AAPL) and Amazon (AMZN) Q2 earnings after the close.</div>
+        <div class="data-line"><span class="data-label">Aug 4 (Tue)</span> - June JOLTS job openings (BLS).</div>
+        <div class="data-line"><span class="data-label">Aug 7 (Fri)</span> - July jobs report (BLS, 8:30 AM ET).</div>
+        <div class="data-line"><span class="data-label">Sep 11 (Fri)</span> - August CPI: first full read on Section 301 tariff price effects and July oil-price impact.</div>
+
+        <div class="disclaimer">
+          <p>A free weekly snapshot for the Totem community. General information only - not investment advice or a recommendation to buy or sell anything. Market data reflects the latest readings available as of July 28, 2026 (Monday July 28 closes for equities and most commodities; intraday and preliminary readings noted where final data was not available at publication time) and may change.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#news"><span class="dot"></span>Today in the News</a></li>
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>Upcoming Events</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_july28_2026.html">July 28, 2026</a></li>
+          <li><a href="market_pulse_july27_2026.html">July 27, 2026</a></li>
+          <li><a href="market_pulse_july23_2026.html">July 23, 2026</a></li>
+          <li><a href="market_pulse_july21_2026.html">July 21, 2026</a></li>
+          <li><a href="market_pulse_july20_2026.html">July 20, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We're looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. General information only - not investment advice or a recommendation to buy or sell anything.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+    // Sidebar unread dots
+    document.querySelectorAll('h2.section-title[id]').forEach(function(el){
+      var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var dot=document.querySelector('.toc a[href="#'+el.id+'"] .dot');if(dot){dot.style.opacity='0';dot.style.transform='scale(0)';}}});},{rootMargin:'-20% 0px -60% 0px'});
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
