@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - July 30, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:19px; line-height:1.72;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:32px 0 0;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:42px;line-height:1.1;letter-spacing:-0.015em;color:var(--ink);margin-bottom:14px;}
+  .dek{font-family:'Spectral',serif;font-weight:400;font-size:20px;line-height:1.5;color:#3b4048;margin-bottom:0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 20px;color:var(--body);font-size:18px;line-height:1.72;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:68px;line-height:0.74;padding:8px 10px 0 0;}
+  h2.section-title{font-family:'Spectral',serif;font-weight:700;font-size:26px;line-height:1.2;letter-spacing:-0.01em;color:var(--ink);margin:32px 0 6px;padding-top:24px;border-top:1px solid var(--line);}
+  .section-intro{font-family:'Spectral',serif;font-style:italic;font-size:16px;line-height:1.55;color:var(--muted);margin-bottom:14px;}
+  .data-line{margin-bottom:6px;font-size:16px;line-height:1.5;font-family:'Spectral',serif;}
+  .data-label{font-weight:700;color:var(--ink);}
+  .up-green{color:#2d6a4f;font-weight:600;}
+  .down-green{color:#2d6a4f;font-weight:600;}
+  .up-red{color:#9b2c2c;font-weight:600;}
+  .down-red{color:#9b2c2c;font-weight:600;}
+  .flat{color:var(--muted);font-weight:600;}
+  .bottom-line-label{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-top:14px;margin-bottom:6px;}
+  .bottom-line-list{list-style:none;padding:0;margin:0 0 8px;}
+  .bottom-line-list li{padding-left:18px;position:relative;margin-bottom:8px;font-size:16px;line-height:1.65;color:var(--body);}
+  .bottom-line-list li::before{content:"\2022";position:absolute;left:0;color:var(--gold);font-weight:700;}
+  .bullet-list{list-style:none;padding:0;margin:0;}
+  .bullet-list li{padding-left:18px;position:relative;margin-bottom:10px;font-size:16px;line-height:1.65;}
+  .bullet-list li::before{content:"\2022";position:absolute;left:0;color:var(--navy);font-weight:700;}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:12px;line-height:1.65;color:var(--muted);}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:32px;}h2.section-title{font-size:22px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_07.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="email_copy.html">Email Copy</a></li>
+        <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Weekly Briefing <span class="dot">&bull;</span> <span class="date">Thursday, July 30, 2026</span></div>
+        <h1 class="headline">Three Dissenters Voted to Hike - Not Cut. Warsh's Hawkish Hold Sends Dow Down 1,153 Points and September Cut Odds to Zero. Iran Strikes Resume - Oil Back Above $90. Microsoft +8% on Azure's $100 Billion Year. Meta -9% on Margin Collapse. Q2 GDP and PCE at 8:30 AM; Apple and Amazon Tonight.</h1>
+        <p class="dek">Wednesday's FOMC meeting produced the most hawkish surprise in years: the vote to hold was 9-3, but all three dissenters - Hammack, Kashkari, and Logan - voted for a 25-basis-point hike, not a cut. Chair Warsh offered no September guidance. Markets that had priced 80% probability of a September cut now price 60% probability of a September hike. The Dow fell 1,153 points - its worst single-session point loss since April 2025. Overnight, US strikes on Iran resumed after an Iranian missile struck a US base in Jordan; Iran rejected Oman's Hormuz 50/50 proposal and Brent crude is back above $90. Microsoft reported a massive Q4 FY26 beat - Azure crossed a $100 billion annual run rate and CapEx came in below estimates - and is trading +8% premarket. Meta missed badly on earnings per share ($6.18 vs. $7.22 estimated) as margins collapsed from 43% to 31% and expenses surged 55%, sending shares -9% premarket. Q2 GDP and June PCE release at 8:30 AM ET this morning. Apple - Tim Cook's final earnings call - and Amazon report tonight after the close.</p>
+      </div>
+
+      <div class="body">
+
+        <h2 class="section-title" id="news">Today in the News</h2>
+        <ul class="bullet-list">
+          <li><strong>Wednesday's FOMC meeting ended with a 9-3 vote to hold rates at 3.50-3.75%, but the three dissenters all voted for a hike - not a cut.</strong> Cleveland Fed President Hammack, Minneapolis Fed President Kashkari, and Dallas Fed President Logan all advocated for a 25-basis-point rate increase. Chair Warsh held but explicitly declined to signal any September action in either direction. Markets interpreted the three hike votes and the absence of dovish guidance as a fundamental reassessment of the rate path. The 10-year Treasury jumped 7 basis points to 4.677% during the press conference. September cut probability, which had been priced at 80% heading into the meeting, collapsed. September hike probability is now priced at approximately 60% - a complete reversal of the pre-meeting consensus in under three hours.</li>
+          <li><strong>The Dow Jones Industrial Average fell 1,153 points Wednesday to close at 51,594.14, its worst single-session point decline since April 2025.</strong> The S&P 500 fell 1.52% to 7,316.15. The Nasdaq Composite fell 1.74% to 24,442.94, now more than 10% below its all-time high. The broad selloff was driven by the hawkish FOMC surprise and amplified by Meta's earnings miss. MSFT's after-hours beat partially offset sentiment but could not reverse the damage from the rate shock. US premarket Thursday morning - reflecting Microsoft's results - shows a partial recovery: Dow +158 points (+0.31%), S&P +0.35%, Nasdaq +0.61%.</li>
+          <li><strong>US strikes on Iran resumed overnight after an Iranian missile struck a US base in Jordan, ending a four-day pause in military activity.</strong> Iran separately rejected Oman's proposed Hormuz reopening framework, which had offered a 50/50 revenue-sharing arrangement. Brent crude, which had recovered to $86.80 on Wednesday morning, is back above $90 per barrel as of early Thursday. The resumption erases the disinflation trajectory that had been building from oil's decline since July 21 and removes the primary argument Warsh had used - or might have used - to justify a September cut signal. Strikes are now in their 13th night since the conflict began.</li>
+          <li><strong>Microsoft Q4 FY26 results delivered a broad beat that reversed weeks of AI-spending skepticism.</strong> Revenue came in at $90.01 billion versus the $87.62 billion consensus estimate. EPS was $4.74 versus $4.24 estimated. Azure cloud growth accelerated to 43% year-over-year, and Azure crossed a $100 billion annual revenue run rate for the first time. Capital expenditure for the quarter was $41 billion - below analyst estimates of roughly $45-47 billion - answering the CapEx-discipline question markets had been asking since the chip rout began Monday. Microsoft shares are trading +8% in premarket.</li>
+          <li><strong>Meta Q2 2026 results missed badly on earnings and signaled a structural margin shift.</strong> Revenue of $60.8 billion beat the $60.2 billion consensus estimate, but EPS came in at $6.18 versus the $7.22 estimate - a 14% miss. Operating margin collapsed from 43% in Q1 to 31% in Q2 as total expenses surged 55% year-over-year. AI capital expenditure in the quarter was $31 billion alone; full-year 2026 CapEx guidance was revised to $130-145 billion from the prior $125-145 billion range. The earnings miss represents a split verdict from the two AI-infrastructure bellwethers: Microsoft demonstrated CapEx discipline and accelerating returns; Meta demonstrated accelerating spend without proportional earnings delivery. Meta shares are -9% in premarket.</li>
+          <li><strong>Q2 2026 GDP advance estimate and June PCE inflation data release this morning at 8:30 AM ET.</strong> The Atlanta Fed's GDPNow model entered the week projecting +1.5% annualized growth; Wall Street consensus is approximately +1.8%. Core PCE for June is expected near 3.3-3.4% year-over-year (May was 3.4%). A GDP reading below 1.5% alongside PCE that fails to show deceleration would further complicate the Fed's position after Wednesday's hawkish surprise. Apple - with an estimate of $108.9 billion in revenue and $1.89 EPS, and Tim Cook's final earnings call as CEO - and Amazon - estimated at $196.71 billion revenue, $1.82 EPS, with AWS growth estimated at 31-33% - both report tonight after the close.</li>
+        </ul>
+
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="lead-first"><span class="data-label">Three votes for a hike is not a close call - it is a policy signal.</span> The framing of Wednesday's FOMC as a "hold" is technically accurate and substantively misleading. When three of twelve voting members advocate raising rates at a meeting where the other nine vote to hold, the committee is not in neutral. It is in a configuration where the hawkish minority is organized, named, and on the record. Hammack, Kashkari, and Logan did not dissent quietly; they dissented with a specific prescription: rates need to go higher. The absence of a cut dissent - zero members advocated for easing - tells you the distribution of opinion within the committee has shifted entirely to the right of the rate dial. September is not a cut meeting. The question is whether it is a hold meeting or a hike meeting.</p>
+        <p>The 80% September cut probability that markets had priced heading into Wednesday did not reflect a considered read of the committee's internal distribution. It reflected a consensus that had built over weeks on the logic of oil prices declining, inflation trending down, and a historically cautious chair. All three of those inputs remain partially valid - oil had been declining, inflation had been trending lower, and Warsh is temperamentally deliberate. But the hike votes reframe each one. If three members of the FOMC looked at the same oil decline, the same inflation trend, and the same chair and concluded rates need to go up, then either they have information markets don't, or they weigh the available data very differently. Wednesday's press conference suggests the latter: the dissenters appear to be reacting to the persistence of core services inflation and the labor market's refusal to soften enough to justify further patience.</p>
+        <p>The Microsoft-Meta split is the AI-spending verdict that the past two weeks of chip-sector turbulence was waiting for. Microsoft demonstrated that AI capital expenditure can produce near-term revenue acceleration - Azure's $100 billion run rate and 43% growth rate are the evidence. Meta demonstrated the opposite: $31 billion in a single quarter of AI CapEx produced a margin collapse, not a revenue surge proportional to the spend. The distinction matters for how the market prices the entire AI-infrastructure trade going forward. If Microsoft's result is the template - spend heavily, see accelerating cloud revenue, CapEx below forecast - the AI thesis survives the chip-rout scrutiny. If Meta's result - spend more than expected, miss earnings, compress margins - is the template, the thesis requires a longer time horizon than equity markets can comfortably price. Thursday's premarket reaction to both results suggests markets are treating Microsoft as the template for now and Meta as an outlier. That assignment may be correct. It may also reflect that Microsoft's results were reported first and the premarket is still processing Meta's implications.</p>
+
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <p class="section-intro">Asian markets produced a mixed session Thursday morning: the Nikkei recovered modestly on Microsoft's beat while the Kospi extended its semiconductor-sector losses into a third consecutive session. US markets closed sharply lower Wednesday on the hawkish FOMC surprise; premarket Thursday is attempting a partial recovery led by Microsoft's results.</p>
+        <div class="data-line"><span class="data-label">Nikkei 225 (Tokyo - Thursday close):</span> ~62,003 <span class="up-green">+0.71%; Microsoft's Azure beat supported Japanese tech-ecosystem and semiconductor-equipment names; partial recovery from Wednesday's session</span></div>
+        <div class="data-line"><span class="data-label">Kospi (Seoul - Thursday close):</span> ~5,587 <span class="down-red">&minus;1.1% to &minus;1.2%; third consecutive session of losses; SK Hynix &minus;5% to &minus;6%; Samsung Electronics &minus;1% despite record Q2 operating profit of 89.49 trillion KRW (+1,813% YoY)</span></div>
+        <div class="data-line"><span class="data-label">Samsung Q2 operating profit:</span> 89.49 trillion KRW <span class="up-green">+1,813% year-over-year; third consecutive quarterly record; AI chip demand driving the windfall. Stock declined anyway on supply-chain concentration concerns.</span></div>
+        <div class="data-line"><span class="data-label">S&P 500 (Wednesday US close):</span> 7,316.15 <span class="down-red">&minus;1.52%; hawkish FOMC surprise and Meta earnings miss drove broad-based selling</span></div>
+        <div class="data-line"><span class="data-label">Nasdaq Composite (Wednesday US close):</span> 24,442.94 <span class="down-red">&minus;1.74%; more than 10% below all-time high; rate-sensitive growth names hit hardest by hawkish FOMC</span></div>
+        <div class="data-line"><span class="data-label">Dow Jones Industrial Average (Wednesday US close):</span> 51,594.14 <span class="down-red">&minus;2.19%, &minus;1,153 points; worst single-session point decline since April 2025</span></div>
+        <div class="data-line"><span class="data-label">MSFT premarket (Thursday ~6 AM ET):</span> <span class="up-green">+8%; Q4 FY26 beat on revenue, EPS, Azure growth; CapEx below estimates; answers the AI-discipline question</span></div>
+        <div class="data-line"><span class="data-label">META premarket (Thursday ~6 AM ET):</span> <span class="down-red">&minus;9%; Q2 EPS miss ($6.18 vs. $7.22 est.); margin collapse 43%&rarr;31%; expenses +55% YoY; CapEx guidance raised to $130-145B</span></div>
+        <div class="data-line"><span class="data-label">US premarket (Thursday ~6 AM ET):</span> Dow +158 pts (+0.31%); S&P +0.35%; Nasdaq +0.61%; Microsoft's beat providing lift even as Meta weighs</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Samsung's record Q2 operating profit of 89.49 trillion KRW - up 1,813% year-over-year and the third consecutive quarterly record - falling on a day when the Kospi declined for a third straight session is one of the clearest demonstrations of how structural concerns can override fundamentals in real time. The AI chip demand driving Samsung's profits is precisely what the market is now questioning: if the biggest buyers of memory and compute (Microsoft, Meta) are reporting divergent returns on their AI investment, the demand sustainability question that drove the Kospi's first two-day correction has not been answered. A record profit reported in a bear market for your stock tells you the earnings are backward-looking; the stock is forward-looking. Thursday's Kospi tells you the forward view has not improved.</li>
+          <li>The Microsoft-Meta split creates a structural interpretive problem for the AI trade that did not exist 24 hours ago. Before Wednesday night's earnings, the AI-spending narrative was unified: all major hyperscalers were spending aggressively on infrastructure and the market was waiting to see whether returns would justify it. Microsoft's results say yes, at least in Azure. Meta's results say not yet, at least in advertising-driven margin. The market now has to decide whether to weight Microsoft (CapEx discipline plus revenue acceleration) or Meta (margin compression plus guided-up CapEx) as the more representative AI-spending outcome. The premarket answer - S&P +0.35%, Nasdaq +0.61% - suggests Microsoft is winning the interpretation battle this morning. Tonight's Apple and Amazon results will either confirm that Microsoft is the template or complicate the narrative further.</li>
+          <li>The Dow's 1,153-point decline Wednesday - its worst since April 2025 - reflects the rate shock more than the earnings shock. A 2.19% decline in the price-weighted Dow on a day when the primary surprise was a hawkish FOMC, not a broad earnings catastrophe, signals that the repricing of rate expectations is doing more damage to equity valuations than the Meta miss alone could explain. Every discounted-cash-flow model for every S&P 500 company just increased its discount rate. The partial premarket recovery Thursday is Microsoft-driven, not rate-driven. The 10-year remains at 4.677% and September hike probability remains near 60%. The rate shock is not reversing overnight.</li>
+        </ul>
+
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <p class="section-intro">Wednesday's FOMC produced the most hawkish surprise since the hiking cycle. Three dissenters voted for a rate increase. The 10-year Treasury jumped 7 basis points to 4.677% during the press conference. September hike probability is now priced near 60% - a complete reversal from the 80% cut probability that markets held before the meeting.</p>
+        <div class="data-line"><span class="data-label">Fed policy rate:</span> 3.50-3.75% <span class="flat">held July 29, 9-3; fifth consecutive hold since December 2025; three dissenters (Hammack, Kashkari, Logan) voted for +25 bp hike; no September forward guidance offered</span></div>
+        <div class="data-line"><span class="data-label">2-year Treasury:</span> <span class="up-red">~4.50%+; most rate-sensitive part of the curve; moved sharply higher on the hike-dissent news during the 2:30 PM press conference; pricing significant probability of tightening resumption</span></div>
+        <div class="data-line"><span class="data-label">10-year Treasury:</span> ~4.677% <span class="up-red">+7 bps from pre-FOMC level; moved during Warsh press conference as three-dissent news was absorbed; highest since late June</span></div>
+        <div class="data-line"><span class="data-label">30-year Treasury:</span> ~5.15-5.20% <span class="up-red">long end moved with the rest of the curve on hawkish surprise; fiscal premium remains embedded</span></div>
+        <div class="data-line"><span class="data-label">30-year mortgage (avg.):</span> 6.58% <span class="flat">Freddie Mac July 23; new weekly survey releases today at noon ET; expected to move higher given 10-year at 4.677% - first reading to reflect post-FOMC rate shock</span></div>
+        <div class="data-line"><span class="data-label">Dollar index (DXY):</span> ~102-103 <span class="up-green">strengthened significantly on hawkish FOMC; from ~101.5 pre-meeting to ~102-103; higher rates attract dollar-denominated flows</span></div>
+        <div class="data-line"><span class="data-label">September FOMC (Sep 15-16) implied probability:</span> <span class="up-red">~60% hike; complete reversal from ~80% cut pre-meeting; this is the most important number in markets today</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The repricing from 80% September cut to 60% September hike is not a marginal adjustment - it is a categorical reversal of the market's policy expectation. Every asset priced on the assumption of lower rates in September has to be repriced. That includes equities (higher discount rate), housing (higher mortgage rates), corporate bonds (wider spreads), and gold (stronger dollar headwind). The repricing was not driven by new economic data; it was driven by three named FOMC members publicly advocating for a rate hike at a meeting where easing was the consensus expectation. The market had been pricing the modal outcome; Wednesday revealed that the distribution of FOMC opinion was far more hawkish than the modal view suggested. That mismatch between priced-in consensus and actual committee distribution is the source of Wednesday's volatility.</li>
+          <li>Today's Freddie Mac noon survey will be the first mortgage market reading to incorporate the post-FOMC rate environment. The 10-year at 4.677% - up from roughly 4.60% before Wednesday's meeting - translates to upward pressure on mortgage rates. The directional move that had been building from oil's decline now reverses: oil's disinflation signal was never realized in mortgage rates, and the FOMC surprise and oil's return above $90 both point toward higher for longer. Homebuyers who had been waiting for rate relief face a harder wait now than they did 48 hours ago. The Q3 housing market - which had briefly been pricing in September relief - needs to reprice against a scenario where September is more likely a hike than a cut.</li>
+        </ul>
+
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <p class="section-intro">The rate environment reversed completely on Wednesday. Banks that were expected to begin lowering CD offers in anticipation of September cuts must now reconsider. Savers who locked in high-yield CDs before Wednesday's meeting are positioned better than they expected 48 hours ago.</p>
+        <div class="data-line"><span class="data-label">National avg 1-yr CD:</span> ~1.70% APY (FDIC est.) <span class="flat">unchanged; banks adjust slowly; repricing of September expectations will take 1-2 weeks to appear in deposit offers</span></div>
+        <div class="data-line"><span class="data-label">Best online 1-yr CD:</span> 4.50% APY (Southland Credit Union); 4.35% (Bankrate top pick)</div>
+        <div class="data-line"><span class="data-label">Best high-yield savings:</span> ~4.15% APY (leading online banks)</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The strategic calculus for CD decisions shifted materially on Wednesday. Before the FOMC, the standard advice was to lock in a 1-year CD at 4.50% before September cuts reduced available yields. Now, with September hike probability at 60%, online banks will likely hold or even raise their 1-year CD offers rather than lower them. The 4.50% rate that was "at risk of declining" is now "positioned to hold or improve." That said, locking in now still guarantees a positive real return against a 3.3-3.4% expected core PCE, which is meaningful. The reversal does not hurt savers who moved last week; it hurts those who were waiting for a rate-lock decision point they may have thought was approaching. The window may have extended rather than shortened.</li>
+        </ul>
+
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <p class="section-intro">The four-day pause in US-Iran military activity ended overnight. US strikes resumed after an Iranian missile struck a US base in Jordan; Iran rejected Oman's Hormuz 50/50 revenue-sharing proposal. Brent crude, which had recovered to $86.80 Wednesday morning, is back above $90. The disinflation narrative from oil is suspended.</p>
+        <div class="data-line"><span class="data-label">Brent crude (Thursday early morning):</span> ~$90-92/bbl <span class="up-red">back above $90 from $86.80 Wednesday; strikes resumed, Iran rejected Hormuz deal; erases the $6-8 relief that had built over four days of pause</span></div>
+        <div class="data-line"><span class="data-label">WTI crude (Thursday early morning):</span> ~$84-85/bbl <span class="up-red">from $81.95 Wednesday morning; consistent move with Brent; back above the $83-84 range that prevailed before the diplomatic pause</span></div>
+        <div class="data-line"><span class="data-label">Iran conflict update:</span> 13th night of US strikes; Iranian missile struck US base in Jordan triggering US retaliation and resumption of broader strike campaign; Iran formally rejected Oman's Hormuz 50/50 revenue-sharing proposal; no ceasefire framework in active negotiation as of early Thursday</div>
+        <div class="data-line"><span class="data-label">National gas avg:</span> ~$4.09/gal <span class="flat">July 23 reference; no new reading yet; oil back above $90 means the mid-August pump price relief that had been building is now delayed or canceled</span></div>
+        <div class="data-line"><span class="data-label">West Coast (California):</span> ~$5.57/gal <span class="up-red">still highest nationally; oil's reversal removes any near-term relief trajectory for the West Coast premium</span></div>
+        <div class="data-line"><span class="data-label">Cheapest region (Gulf Coast):</span> ~$3.65/gal (Mississippi)</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Oil's return above $90 Brent overnight is a two-variable event, not one. The resumption of US strikes is the supply-side story: conflict risk premium is back in the price. Iran's rejection of Oman's Hormuz proposal is the structural story: the pathway to Hormuz normalization and the Goldman Sachs $80 year-end target requires a framework that Iran has now declined to enter. Neither development is temporary. The supply-risk premium can reverse quickly if a ceasefire emerges; the Oman framework rejection is a statement of position that will take weeks to renegotiate. Oil above $90 with Iran's Hormuz counterproposal off the table is a materially different environment than oil at $86.80 with the pause holding.</li>
+          <li>The energy story and the FOMC story are now reinforcing in the same hawkish direction. Oil above $90 means July energy prices - which feed the August CPI, released September 11 - are higher than the trend implied three days ago. Core PCE at 3.3-3.4% (expected this morning at 8:30 AM) plus energy re-accelerating above $90 Brent plus three FOMC members already voting to hike combines into a policy environment where the September hike probability at 60% may be understating the case by the time the August CPI is released. The mid-August pump price relief that consumers had been anticipating based on two weeks of crude decline is effectively canceled for now. Gas at $4.09 nationally may hold or move higher rather than declining toward $3.85-$3.95 as had been projected under the prior oil trajectory.</li>
+        </ul>
+
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <p class="section-intro">Gold moved higher on dual safe-haven demand: geopolitical risk from resumed Iran strikes and rate uncertainty from the hawkish FOMC. Silver tracked gold. Grain markets held recent levels with the August 4 USDA crop progress report the next catalyst.</p>
+        <div class="data-line"><span class="data-label">Gold / oz:</span> $4,080.76 <span class="up-green">+0.36%; safe-haven bid on resumed Iran strikes and FOMC rate shock; moved from ~$4,045 Wednesday to $4,080 Thursday morning</span></div>
+        <div class="data-line"><span class="data-label">Silver / oz:</span> ~$57.50 <span class="flat">tracking gold; geopolitical bid partially offset by stronger dollar (DXY ~102-103)</span></div>
+        <div class="data-line"><span class="data-label">Copper / lb:</span> <span class="flat">moderate pressure; hawkish Fed and stronger dollar weigh on industrial metals; risk-off sentiment from FOMC surprise</span></div>
+        <div class="data-line"><span class="data-label">Corn (Dec futures):</span> ~$4.89/bushel <span class="up-red">drought conditions in western Corn Belt persisting through grain-fill window; no relief forecast in the 10-day outlook; August 4 USDA crop progress is the next data point</span></div>
+        <div class="data-line"><span class="data-label">Soybeans / bushel:</span> ~$12.61 <span class="up-red">holding near recent highs; European heat and Corn Belt drought maintaining supply pressure</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Gold at $4,080.76 is being driven by two independent safe-haven inputs simultaneously - geopolitical risk (Iran strikes resumed) and rate-regime uncertainty (60% September hike now priced, which typically strengthens the dollar and is a headwind for gold). The fact that gold rose despite dollar strengthening reflects how dominant the geopolitical input is right now. DXY at 102-103 would ordinarily suppress gold. The resumed Iran conflict is overcoming that headwind. The gold price is telling you the market's net assessment is that geopolitical risk today outweighs the dollar-strength discount.</li>
+          <li>Corn at $4.89 with no forecast rainfall for the western Corn Belt in the 10-day outlook is the food-price story running parallel to - and largely invisible within - the FOMC and Iran headlines. The grain-fill window for corn ends in roughly two to three weeks. If the August 4 USDA crop progress report shows good-to-excellent ratings falling from the current 67% level, the food component of the September CPI will be moving higher at the same time that energy prices are re-accelerating from oil above $90. The Fed would then face a second consecutive month of both core food and energy moving against the inflation trend. That is the scenario that makes the three FOMC hike dissenters look prescient and pushes September hike probability above 60%.</li>
+        </ul>
+
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <p class="section-intro">No new USDA data until the crop progress report covering the week ending August 3 is released Monday August 4. The prior week's baseline - corn 67% good-to-excellent, soybeans 64-66% - is unchanged. Drought stress in the western Corn Belt is the key variable heading into the critical final weeks of grain fill.</p>
+        <div class="data-line"><span class="data-label">Corn (week ending July 27):</span> 67% good-to-excellent. Grain fill at peak sensitivity. Western Corn Belt drought affecting approximately 19-20% of corn acres. Ten-day forecasts show limited rainfall relief for drought-stressed areas.</div>
+        <div class="data-line"><span class="data-label">Soybeans (week ending July 27):</span> 64-66% good-to-excellent; blooming progress above five-year average pace; heat stress conditions ongoing.</div>
+        <div class="data-line"><span class="data-label">Spring wheat:</span> ~53% good-to-excellent; Northern Plains heat maintained pressure; at the low end of the five-year range.</div>
+        <div class="data-line"><span class="data-label">Global:</span> EU wheat estimate 140.8 million metric tons; French maize conditions at a 13-year rating low; Black Sea harvest partially offsetting European losses; European heat forecasts through early August remain elevated.</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The August 4 USDA crop progress report is the most important non-financial data release of the next week. With the western Corn Belt drought entering the grain-fill window without forecast relief, the risk to the current 67% good-to-excellent corn rating is asymmetric to the downside. A rating drop to 63-64% or below would signal meaningful yield loss and confirm the corn above $4.89 as the early stage of a food-price move, not a speculative premium. The combination of oil back above $90 and a deteriorating crop picture entering August would give the three FOMC hike dissenters all the inflationary evidence they need to push for action in September.</li>
+        </ul>
+
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <p class="section-intro">The mortgage rate environment took a significant adverse turn Wednesday. The 10-year Treasury jumped to 4.677% on the hawkish FOMC surprise; today's Freddie Mac noon survey will be the first reading to capture this shift. The housing market, which had been cautiously anticipating September relief, now faces the prospect of a September hike instead.</p>
+        <div class="data-line"><span class="data-label">30-year mortgage (Freddie Mac, July 23):</span> 6.58% <span class="flat">prior reading; today's new survey releases at noon ET; expected higher given 10-year move to 4.677% post-FOMC</span></div>
+        <div class="data-line"><span class="data-label">Foreclosure starts (June):</span> 26,217 <span class="up-red">+20% YoY</span></div>
+        <div class="data-line"><span class="data-label">H1 2026 foreclosure filings:</span> 227,548 <span class="up-red">+21% YoY; 77% of US metros showing increases</span></div>
+        <div class="data-line"><span class="data-label">Completed foreclosures (June):</span> 4,773 <span class="up-red">+23% YoY</span></div>
+        <div class="data-line"><span class="data-label">Mortgage delinquency rate:</span> 4.44% <span class="up-red">+40 bps YoY</span></div>
+        <div class="data-line"><span class="data-label">FHA delinquency:</span> 11.88% <span class="up-red">highest since 2021</span></div>
+        <div class="data-line"><span class="data-label">Median existing-home price:</span> $440,600 <span class="up-red">record; 36th straight month of YoY gains</span></div>
+        <div class="data-line"><span class="data-label">Sellers cutting asking price:</span> 35.4% <span class="up-red">near last August's record (Redfin)</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Today's Freddie Mac noon survey will capture mortgage rate locks placed this week - meaning the bonds locked after Wednesday's FOMC hawkish surprise and with oil back above $90 Thursday morning are likely embedded in the rate lenders are quoting. The 10-year at 4.677% versus 4.60% at the start of the week represents meaningful upward pressure on 30-year mortgage rates. A move from 6.58% to 6.70-6.75% would not be surprising given the size of the 10-year move. That directional reversal - from the modest rate relief that had been building - removes the most important precondition for any housing market recovery. Existing-home sales at 4.09 million annualized were already well below the 5.0-5.5 million level at which the market operates normally. A mortgage rate rising above 6.75% deepens the freeze.</li>
+          <li>The foreclosure data deserves a clear-eyed read: 77% of US metros showing year-over-year foreclosure increases in H1 2026 is a structural housing stress signal that predates Wednesday's FOMC and is not resolved by any rate path. These are households that entered forbearance programs or took variable-rate mortgages in 2022-2023 and are now at the end of their runway. Higher rates slow the buyer pool from the demand side; foreclosure acceleration adds supply from the distress side. Both forces put downward pressure on prices in the middle and lower thirds of the price distribution even as the overall median remains at $440,600 driven by the upper third. The housing market is not one market; it is three markets performing very differently by price tier.</li>
+        </ul>
+
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <p class="section-intro">June PCE inflation and the personal savings rate release this morning at 8:30 AM ET. Core PCE is expected near 3.3-3.4% year-over-year. The savings rate for June - which follows May's 3.0% - arrives at a moment when oil is back above $90 and the FOMC has signaled a potential hike, not a cut, for September. The household stress indicators remain at multi-year extremes.</p>
+        <div class="data-line"><span class="data-label">June PCE (releasing 8:30 AM ET today):</span> Core PCE expected ~3.3-3.4% YoY (May was 3.4%); headline expected approximately &minus;0.1% MoM on energy; actual reading not yet available as of this edition</div>
+        <div class="data-line"><span class="data-label">Personal savings rate - June (releasing 8:30 AM ET today):</span> May was 3.0%; June reading arrives this morning; oil above $4 nationally all month could put pressure on savings</div>
+        <div class="data-line"><span class="data-label">Total household debt:</span> $18.8 trillion <span class="up-red">record</span></div>
+        <div class="data-line"><span class="data-label">Credit card debt:</span> $1.25 trillion <span class="up-red">+5.9% YoY; avg new-offer APR 23.8%</span></div>
+        <div class="data-line"><span class="data-label">Card balances 90+ days late:</span> 13.1% <span class="up-red">highest in roughly 15 years</span></div>
+        <div class="data-line"><span class="data-label">Avg. new-car payment:</span> $777/mo <span class="up-red">third consecutive record; avg $44,156 financed at 7.0% APR</span></div>
+        <div class="data-line"><span class="data-label">BNPL users paying late:</span> 47% <span class="up-red">+6 pts YoY; 29% now use BNPL for groceries</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>June PCE and savings rate data release at 8:30 AM ET - after this edition was published. The context in which those numbers land has changed materially since yesterday morning. A PCE reading that comes in at 3.4% or above, combined with the FOMC's three hike dissenters and oil back above $90, would strengthen the case that the committee made the right call in holding. A reading that shows deceleration to 3.2% or below would create a brief interpretive challenge: the data says ease, three committee members say hike, oil says neither. Watch the 2-year Treasury's reaction in the 30 minutes after 8:30 AM for the market's verdict on which signal wins.</li>
+          <li>Credit card delinquency at 13.1% - 90-plus-day delinquency, the measure of genuine financial strain rather than short-term cash flow management - is the household finance number that most directly contradicts the "resilient consumer" narrative. At 13.1%, roughly one in eight credit card dollars is severely delinquent. That rate prevailed at the depth of the 2010-2011 recovery from the financial crisis. The households contributing to that number are not the median consumer that PCE or savings rate data describes; they are the households who absorbed $4-plus gas, 23.8% credit card APRs, $777 monthly car payments, and now face a September hike rather than a September cut. The institutional investor who studies the aggregate PCE print and concludes the consumer is fine is looking at the average. The 13.1% delinquency rate is looking at the tail - and the tail is what creates systemic risk.</li>
+        </ul>
+
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <p class="section-intro">Bitcoin is under pressure from the hawkish FOMC outcome. A September hike now priced at 60% is a direct headwind for risk assets. Crypto, which had been holding its range waiting for FOMC clarity, now has its answer - and the answer is hawkish. Fear and Greed Index remains in Fear territory.</p>
+        <div class="data-line"><span class="data-label">Bitcoin (BTC):</span> ~$63,900 <span class="down-red">under pressure from hawkish FOMC; September hike probability at 60% is negative for risk assets; holding above $62,500 support but the higher-for-longer environment is a structural headwind</span></div>
+        <div class="data-line"><span class="data-label">Ethereum (ETH):</span> ~$1,905-1,920 <span class="flat">modest recovery from prior-session lows; tracking broader risk sentiment; more macro-sensitive than BTC</span></div>
+        <div class="data-line"><span class="data-label">Fear/Greed Index:</span> Fear territory; global crypto market cap under pressure from hawkish FOMC outcome</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The FOMC outcome is unambiguously negative for crypto on the rate path alone. Bitcoin thrives - historically - in environments where the risk-free rate is declining or expected to decline. A September hike at 60% probability means the risk-free rate may be rising at the next meeting. That is not a crypto-supportive environment. The premarket equity recovery on Microsoft's results provides some risk-on offset, but equities are not the primary driver of crypto in this rate environment - the rate itself is. BTC near $63,900 is holding above the $62,500 support that has defined the range for four weeks. A sustained break below $62,500 would be the first technical signal that the rate regime shift is breaking the four-week range to the downside.</li>
+          <li>The Microsoft-Meta split matters for crypto in an indirect but real way. If Microsoft's result confirms that AI capital expenditure generates measurable near-term returns, the broader technology risk-premium compresses - and crypto trades as a technology-adjacent risk asset when the macro environment allows. If Meta's margin collapse story dominates investor thinking over the next 48 hours, the AI-skepticism narrative that drove the Korean chip selloff this week re-emerges, and crypto faces a risk-off impulse from both the rate shock and the earnings narrative. Tonight's Apple and Amazon results will clarify which story the market treats as the template heading into August.</li>
+        </ul>
+
+        <h2 class="section-title" id="world">Around the World</h2>
+        <p class="section-intro">Asian markets split on Thursday morning: the Nikkei recovered modestly on Microsoft's beat while the Kospi extended semiconductor losses for a third straight session despite Samsung's record operating profit. The dollar strengthened materially on the hawkish FOMC, pressuring oil-importing emerging markets. Iran's rejection of the Oman Hormuz proposal closes the most direct route to oil normalization.</p>
+        <div class="data-line"><span class="data-label">Japan (Nikkei 225 - Thursday close):</span> ~62,003 <span class="up-green">+0.71%; Microsoft's Azure beat and CapEx-discipline result supported Japanese semiconductor-equipment and tech-ecosystem names; partial recovery from Wednesday</span></div>
+        <div class="data-line"><span class="data-label">South Korea (Kospi - Thursday close):</span> ~5,587 <span class="down-red">&minus;1.1% to &minus;1.2%; third consecutive session of losses; SK Hynix &minus;5% to &minus;6%; Samsung &minus;1% despite record Q2 profit; market pricing forward supply-chain risk, not backward earnings</span></div>
+        <div class="data-line"><span class="data-label">Europe:</span> Oil back above $90 on resumed Iran strikes - energy names benefit but importing industries face renewed cost pressure; FOMC hawkish surprise adds dollar-strength headwind for European exporters; ECB faces its own divergence from US policy path</div>
+        <div class="data-line"><span class="data-label">Dollar index (DXY):</span> ~102-103 <span class="up-green">materially stronger on hawkish FOMC; from ~101.5 pre-meeting to ~102-103; rate differential with rest of world widened further</span></div>
+        <div class="data-line"><span class="data-label">Emerging markets:</span> <span class="down-red">oil-importing EMs under dual pressure: oil back above $90 (import cost) plus stronger dollar (~102-103 DXY) tightening dollar-denominated debt service; the brief EM relief window from oil's decline is now closed</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The Kospi's third consecutive session of losses - even as Samsung reports the largest quarterly operating profit in the company's history - is the clearest signal yet that the AI-demand narrative is being weighed against the supply-chain concentration risk narrative in real time. Samsung's 1,813% year-over-year profit increase reflects the AI hardware buildout at its most direct. The Kospi's decline reflects the market's response to two weeks of evidence that the AI buildout's sustainability is uncertain, that China's CXMT is building domestic alternatives, and that the largest AI spender (Meta) just posted a margin collapse. A company can report record profits and a declining stock simultaneously only when investors have decided the forward view has changed more than the backward earnings indicate.</li>
+          <li>The DXY moving from ~101.5 to ~102-103 in a single FOMC session is a global macro event, not just a US rate story. A stronger dollar at this pace affects every dollar-denominated commodity price, every EM debt service schedule, and every multinational earnings translation in the next quarter. Oil above $90 plus a stronger dollar is a particularly acute combination for oil-importing EMs - the bill rises in both raw price and currency terms simultaneously. The four-day pause in Iran strikes had briefly created a window where EMs could anticipate relief on both dimensions. That window closed overnight. The EM stress that had been building since July 21 is now back on an accelerating trajectory with fewer near-term relief catalysts than there were 24 hours ago.</li>
+        </ul>
+
+        <h2 class="section-title" id="events">Upcoming Events</h2>
+        <p class="section-intro">Today's 8:30 AM data release and tonight's Apple and Amazon earnings make Thursday the second consecutive data-dense session. The next two weeks then build toward August CPI, which will settle the September FOMC debate retroactively.</p>
+        <div class="data-line"><span class="data-label">Jul 30 (Thu, today) 8:30 AM ET</span> - Q2 2026 GDP advance estimate (BEA); June PCE inflation and savings rate (BEA). First read on Q2 growth; core PCE expected ~3.3-3.4% YoY. These data land in the context of three FOMC members already voting for a hike.</div>
+        <div class="data-line"><span class="data-label">Jul 30 (Thu, today) noon ET</span> - Freddie Mac 30-year mortgage rate weekly survey. First reading to incorporate post-FOMC rate shock. Expected higher given 10-year at 4.677%.</div>
+        <div class="data-line"><span class="data-label">Jul 30 (Thu, tonight) after close</span> - Apple Q3 FY26 (est. $108.9B revenue, est. $1.89 EPS; Tim Cook's final earnings call as CEO). Amazon Q2 2026 (est. $196.71B revenue, est. $1.82 EPS; AWS growth estimated +31-33%). Results will be reported in Friday's edition.</div>
+        <div class="data-line"><span class="data-label">Jul 31 (Fri)</span> - Markets process Apple and Amazon earnings alongside GDP, PCE, and the full week's events. Personal income and spending data (BEA).</div>
+        <div class="data-line"><span class="data-label">Aug 4 (Mon)</span> - USDA Weekly Crop Progress report (week ending August 3). Most important crop condition reading of the summer for corn and soybean yield estimates.</div>
+        <div class="data-line"><span class="data-label">Aug 5 (Tue)</span> - June JOLTS job openings (BLS). Labor market data gains new importance given three FOMC members' stated concern about wage and employment conditions as a basis for their hike dissent.</div>
+        <div class="data-line"><span class="data-label">Aug 7 (Fri)</span> - July jobs report (BLS, 8:30 AM ET). First comprehensive employment read since the hawkish FOMC. A strong jobs report would validate the dissenters' position.</div>
+        <div class="data-line"><span class="data-label">Sep 11 (Thu)</span> - August CPI: first comprehensive read on July energy prices (Brent above $90), tariff pass-through, and crop-weather effects. The data point that retroactively settles whether the September FOMC hikes or holds.</div>
+        <div class="data-line"><span class="data-label">Sep 15-16 (Mon-Tue)</span> - Next FOMC meeting. September hike probability currently priced at approximately 60%. Dot plot and Summary of Economic Projections will be released at this meeting - the first SEP since March.</div>
+
+        <div class="disclaimer">
+          <p>A free weekly snapshot for the Totem community. General information only - not investment advice or a recommendation to buy or sell anything. Market data reflects Asian closing levels for Thursday, July 30, 2026 and US premarket conditions as of approximately 6:00 AM ET; oil, gold, and commodity prices as of early morning July 30, 2026. All figures confirmed from multiple sources; minor variations between vendors may apply. Q2 GDP advance estimate and June PCE data are scheduled for 8:30 AM ET release today and are not yet reflected in this edition. Freddie Mac mortgage rate survey releases at noon ET today. Apple and Amazon earnings after the close tonight will be reported in Friday's edition.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#news"><span class="dot"></span>Today in the News</a></li>
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>Upcoming Events</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_july30_2026.html">July 30, 2026</a></li>
+          <li><a href="market_pulse_july29_2026.html">July 29, 2026</a></li>
+          <li><a href="market_pulse_july28_2026.html">July 28, 2026</a></li>
+          <li><a href="market_pulse_july27_2026.html">July 27, 2026</a></li>
+          <li><a href="market_pulse_july23_2026.html">July 23, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We're looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. General information only - not investment advice or a recommendation to buy or sell anything.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+    // Sidebar unread dots
+    document.querySelectorAll('h2.section-title[id]').forEach(function(el){
+      var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var dot=document.querySelector('.toc a[href="#'+el.id+'"] .dot');if(dot){dot.style.opacity='0';dot.style.transform='scale(0)';}}});},{rootMargin:'-20% 0px -60% 0px'});
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
