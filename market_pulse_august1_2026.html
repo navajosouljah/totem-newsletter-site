@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - August 1, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:19px; line-height:1.72;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:32px 0 0;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:42px;line-height:1.1;letter-spacing:-0.015em;color:var(--ink);margin-bottom:14px;}
+  .dek{font-family:'Spectral',serif;font-weight:400;font-size:20px;line-height:1.5;color:#3b4048;margin-bottom:0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 20px;color:var(--body);font-size:18px;line-height:1.72;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:68px;line-height:0.74;padding:8px 10px 0 0;}
+  h2.section-title{font-family:'Spectral',serif;font-weight:700;font-size:26px;line-height:1.2;letter-spacing:-0.01em;color:var(--ink);margin:32px 0 6px;padding-top:24px;border-top:1px solid var(--line);}
+  .section-intro{font-family:'Spectral',serif;font-style:italic;font-size:16px;line-height:1.55;color:var(--muted);margin-bottom:14px;}
+  .data-line{margin-bottom:6px;font-size:16px;line-height:1.5;font-family:'Spectral',serif;}
+  .data-label{font-weight:700;color:var(--ink);}
+  .up-green{color:#2d6a4f;font-weight:600;}
+  .down-green{color:#2d6a4f;font-weight:600;}
+  .up-red{color:#9b2c2c;font-weight:600;}
+  .down-red{color:#9b2c2c;font-weight:600;}
+  .flat{color:var(--muted);font-weight:600;}
+  .bottom-line-label{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-top:14px;margin-bottom:6px;}
+  .bottom-line-list{list-style:none;padding:0;margin:0 0 8px;}
+  .bottom-line-list li{padding-left:18px;position:relative;margin-bottom:8px;font-size:16px;line-height:1.65;color:var(--body);}
+  .bottom-line-list li::before{content:"\2022";position:absolute;left:0;color:var(--gold);font-weight:700;}
+  .bullet-list{list-style:none;padding:0;margin:0;}
+  .bullet-list li{padding-left:18px;position:relative;margin-bottom:10px;font-size:16px;line-height:1.65;}
+  .bullet-list li::before{content:"\2022";position:absolute;left:0;color:var(--navy);font-weight:700;}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:12px;line-height:1.65;color:var(--muted);}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:32px;}h2.section-title{font-size:22px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_09.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="email_copy.html">Email Copy</a></li>
+        <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Weekly Briefing <span class="dot">&bull;</span> <span class="date">Saturday, August 1, 2026</span></div>
+        <h1 class="headline">Amazon Closes Up 15% at a Record as AWS Confirms the AI Revenue Thesis. Apple Falls ~9% on Guidance - ~$390B in Market Cap Gone. S&P 500 Ends July Down 0.79% Despite a 5-Day Late-Month Rally. Iran Conflict Enters Day 15 - Brent at ~$92. Nonfarm Payrolls August 7 Is Now the Key Test for September.</h1>
+      </div>
+
+      <div class="body">
+
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="lead-first"><span class="data-label">The week closes with a clean split that the market has been building toward all month.</span> Amazon confirmed the AI infrastructure trade on the revenue side - up 15% on Friday, closing what appears to be a record session on the back of AWS at 37% year-over-year growth. Apple confirmed the hardware-margin stress side - down approximately 9.17% as Q4 guidance missed consensus and management cited supply constraints and rising memory costs explicitly. The two-tier AI framework that opened the week - cloud platforms that monetize AI demand versus consumer hardware players that pay higher prices for AI components - survived four earnings reports undefeated. Microsoft and Amazon are on one side. Meta and Apple are on the other. The market has now priced both sides with a degree of conviction that a single-quarter reversal is unlikely to undo.</p>
+        <p>July is now closed at -0.79% for the S&P 500. That number requires both respect and skepticism. Respect, because the index absorbed a chip rout that erased 22% from the KOSPI in a single month, a hawkish FOMC with three dissents for a rate hike, US-Iran strikes resuming after a four-day pause that had briefly built an oil-disinflation argument, a Meta earnings collapse, and an Apple guidance miss - and ended the month nearly flat. Skepticism, because the -0.79% result is an artifact of calendar timing. Microsoft and Amazon both reported in the final three sessions of July. If the earnings sequence had been reversed - the AI wins in the first three days and the FOMC and Iran escalation in the last three - July would have ended down 6% or 7%, not down less than 1%. The S&P 500's resilience is real. So is its concentration risk in the handful of names whose results can move the index by 1-2% in a single session.</p>
+        <p>The August agenda opens immediately. ISM Manufacturing comes Monday morning - the first read on whether goods production is responding to the slower Q2 GDP growth or holding near the 50-point neutral line. The USDA releases its August crop progress report Monday at 4 PM ET, the most important agriculture data point of the month given the drought conditions in the western Corn Belt that have pushed corn's good-to-excellent rating down to 63%. And the event that dominates the first week of August: July nonfarm payrolls on Friday August 7 at 8:30 AM ET. June came in at 57,000 jobs, well below the 110,000 consensus and the lowest monthly reading in four months. July's number will either confirm that softening trend - creating a potential release valve for the ~81% September hike probability that currently sits in the market - or reverse it, handing the three FOMC dissenters the data confirmation they voted expecting.</p>
+        <p>The full first week of August is one of the densest data calendars of the year. JOLTS on Tuesday, ADP and ISM Services on Wednesday, jobless claims Thursday, payrolls Friday. Between those five releases, the market will receive more information about the labor market and services sector than it has had since before the July FOMC. The September 15 meeting is 44 days away. The data that will determine whether three dissenters become five - or whether the committee settles back toward a consensus hold - arrives largely this week.</p>
+
+        <h2 class="section-title" id="news">Today in the News</h2>
+        <ul class="bullet-list">
+          <li><strong>Amazon closed up 15.32% to $271.58 on Friday July 31, reaching a record close, following Thursday evening's Q2 earnings beat: revenue $200.6 billion (first time over $200B), AWS $42.2 billion (+37% YoY), EPS $5.75.</strong> The EPS figure includes a $53.4 billion non-operating pre-tax gain from Amazon's Anthropic investment stake. Alphabet, Amazon, and Microsoft added nearly $1.5 trillion in combined market value this week - the largest single-week value creation for the big-three cloud platforms since the AI buildout began in earnest. AMZN's Friday gain caps the most consequential tech earnings week since Q4 2023.</li>
+          <li><strong>Apple closed down approximately 9.17% on Friday, wiping approximately $390 billion in market capitalization - the largest single-day dollar loss for a US company this year.</strong> Q3 revenue of $109.4 billion beat estimates, iPhone revenue rose 22%, and EPS of $2.02 beat $1.89 consensus. But Services missed at $30.74 billion versus $31.22 billion expected, and Q4 guidance of 9-11% revenue growth fell short of the 12% consensus. Management cited supply constraints and rising DRAM and NAND memory prices as accelerating headwinds into September. It was CEO Tim Cook's final earnings call.</li>
+          <li><strong>US stock indices closed July in the green on Friday but down for the month: S&P 500 finished July at 7,489.72 (+0.70% Friday, -0.79% for the month); Nasdaq at 25,373.85 (+1.01% Friday); Dow at 52,485.03 (+0.53% Friday).</strong> The Dow has now posted four straight winning months, cushioned by industrial and financial names that are less exposed to AI hardware cost pressures than the Nasdaq. The monthly S&P figure of -0.79% masks a peak-to-trough drawdown of approximately 7% during the mid-July chip rout that preceded the recovery.</li>
+          <li><strong>US-Iran conflict enters its 15th day with no diplomatic framework active; Brent crude settled at approximately $92.27 on Friday.</strong> Iran's rejection of Oman's Hormuz revenue-sharing proposal remains in effect. WTI settled at $86.80. The brief four-day ceasefire pause that had pushed Brent below $85 is now more than reversed - July WTI finished approximately 20% higher for the month. Gas at the pump sits at $4.09 nationally as the conflict's energy premium shows no sign of receding.</li>
+          <li><strong>Gold fell to approximately $4,043 on Friday as the dollar firmed and equity risk-on sentiment from Amazon's earnings partially displaced safe-haven demand.</strong> The decline from Thursday's level is consistent with the pattern seen each time a major positive tech earnings print temporarily suppresses the geopolitical bid. The 10-year Treasury held at 4.74%. Bitcoin slipped from the $65,000 level seen in early Friday trading to approximately $62,865 as the risk-on impulse from Amazon was partially offset by the persistence of ~81% September hike probability in the rates market.</li>
+          <li><strong>The August data calendar is the most consequential in months: ISM Manufacturing (Monday August 3), JOLTS (Tuesday), ADP and ISM Services (Wednesday), July nonfarm payrolls (Friday August 7).</strong> The June jobs report added only 57,000 positions - the weakest month in four months. July's number, arriving with 44 days before the September 15-16 FOMC, will be the single most watched data point in the near-term rate debate. A strong number pushes hike probability toward 85-90%. A second consecutive soft number creates a credible argument for a hold that even the three dissenting FOMC members would need to weigh.</li>
+        </ul>
+
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <p class="section-intro">Friday's US close confirmed what the overnight futures had telegraphed. Amazon's +15% gain was the session's defining move. Apple's -9.17% was the partial offset. The net result was a positive session across all three major US indices - enough to lift the Dow to its fourth consecutive winning month even as the S&P closed July marginally negative for the month.</p>
+        <div class="data-line"><span class="data-label">S&P 500 (Friday close):</span> 7,489.72 <span class="up-green">+0.70%; July 31 session closed higher on Amazon's gain and Nasdaq leadership; Russell 2000 closed -0.50%, the only major index to finish lower Friday, lagging on rate sensitivity</span></div>
+        <div class="data-line"><span class="data-label">S&P 500 monthly performance (July 2026):</span> <span class="down-red">-0.79%; the index closed July lower than it began despite the final five sessions recovering the bulk of a 7% mid-month drawdown driven by the chip rout, FOMC shock, and Iran resumption</span></div>
+        <div class="data-line"><span class="data-label">Nasdaq Composite (Friday close):</span> 25,373.85 <span class="up-green">+1.01%; AI cloud names led; Amazon and Microsoft each contributed meaningfully to the day's gain; Apple's -9.17% was a partial Nasdaq drag</span></div>
+        <div class="data-line"><span class="data-label">Dow Jones Industrial Average (Friday close):</span> 52,485.03 <span class="up-green">+0.53%; fourth consecutive winning month for the Dow; industrials and financials cushioned the Amazon-Apple split better than pure growth indices</span></div>
+        <div class="data-line"><span class="data-label">AMZN (Friday close):</span> <span class="up-green">+15.32% to $271.58; record close; Q2 revenue $200.6B, AWS $42.2B (+37% YoY); Alphabet, Amazon, and Microsoft added nearly $1.5T in combined market cap this week</span></div>
+        <div class="data-line"><span class="data-label">AAPL (Friday close):</span> <span class="down-red">-approximately 9.17%; market cap loss approximately $390 billion; Services $30.74B missed $31.22B estimate; Q4 guidance 9-11% vs. 12% consensus; memory cost inflation cited; Tim Cook's final earnings call</span></div>
+        <div class="data-line"><span class="data-label">KOSPI (Seoul - Friday close, confirmed):</span> 6,595.45 <span class="up-green">+17.91%; largest single-day gain in index history; SK Hynix +29.95% to the 30% daily upper limit; Samsung +27%; July monthly performance still approximately -22% - worst since 1997</span></div>
+        <div class="data-line"><span class="data-label">Nikkei 225 (Tokyo - Friday close, confirmed):</span> ~64,362 <span class="up-green">+4.03%; semiconductor-equipment names and tech ecosystem stocks led; confirmed on the same AI demand signal from Amazon AWS</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Amazon's 15% Friday close is the capstone of a week that tested the AI infrastructure thesis at the highest level and found it intact on the revenue side. Four mega-cap reports in five days - Microsoft, Meta, Amazon, Apple - produced a framework the market will carry into August: cloud platforms that directly monetize AI inference and training demand (Microsoft Azure, Amazon AWS) are being rewarded at a multiple that reflects structural acceleration. Consumer hardware and advertising platforms where AI capital costs are rising faster than AI-attributable revenue (Meta, Apple) are being repriced lower. That framework has now been confirmed by eight consecutive quarters across four companies. It is no longer a hypothesis.</li>
+          <li>The S&P 500's -0.79% monthly performance for July is the cleanest illustration of how concentrated the US equity market has become in the names that define its direction. The index absorbed a 22% Korean chip-market rout, a hawkish FOMC surprise, an Iranian missile strike on a US military base, three consecutive oil-above-$90 weeks, a Meta earnings miss, and an Apple guidance shortfall - and the net monthly result is a loss of less than one percent. The mechanism is not mysterious: Microsoft, Amazon, and Alphabet between them generated enough market cap recovery in the final three days of the month to offset most of the prior three weeks' damage. That is not resilience in the broad-market sense. It is concentration expressed as apparent resilience.</li>
+          <li>The Russell 2000's -0.50% close on Friday - the only major index to finish in the red on a day when Nasdaq gained 1% - is the domestic-equity signal most relevant to the August rate debate. Small-cap stocks are more rate-sensitive than large-cap technology because they carry more floating-rate debt, have thinner margins to absorb higher financing costs, and have less pricing power against input cost inflation. The Russell closing lower reflects the ~81% September hike probability sitting in the bond market. If that probability rises above 85-90% on a strong August 7 jobs report, the Russell's relative underperformance will deepen. If it drops to 55-60% on a second soft jobs print, small caps have the most to recover.</li>
+        </ul>
+
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <p class="section-intro">The 10-year Treasury held at 4.74% through Friday's session, closing out July near its post-FOMC elevated level. The bond market absorbed a positive Amazon earnings print, a soft Q2 GDP number, a modestly disinflationary PCE read, and a dollar that firmed slightly Friday - and held yields near the levels that the hawkish FOMC established on July 29. The persistence of 4.74% through the week's positive macro and earnings data tells you the bond market is treating the three-dissenter committee distribution as a structurally more important signal than any individual data print.</p>
+        <div class="data-line"><span class="data-label">Fed policy rate:</span> 3.50-3.75% <span class="flat">held July 29, 9-3; fifth consecutive hold since December 2025; three dissenters (Hammack, Kashkari, Logan) voted for +25bp hike; Chair Warsh gave no September guidance</span></div>
+        <div class="data-line"><span class="data-label">September FOMC (Sep 15-16) hike probability:</span> <span class="up-red">approximately 81%; has risen significantly since the July 29 meeting as core inflation data has remained sticky; August 7 payrolls is the next major catalyst</span></div>
+        <div class="data-line"><span class="data-label">10-year Treasury (Friday close):</span> 4.74% <span class="up-red">essentially unchanged from post-FOMC level; held through all of this week's macro data and earnings; the most important rate signal for the mortgage market and equity valuations</span></div>
+        <div class="data-line"><span class="data-label">2-year Treasury:</span> <span class="up-red">~4.50%+; front end most sensitive to hike probability; has not recovered despite Thursday's softer GDP and PCE; pricing meaningful probability of tightening resumption</span></div>
+        <div class="data-line"><span class="data-label">30-year Treasury:</span> ~5.15-5.20% <span class="up-red">long end elevated; fiscal premium and hawkish FOMC distribution both embedding into the curve; 30-year yield level is relevant to mortgage pricing and long-duration asset valuations</span></div>
+        <div class="data-line"><span class="data-label">Dollar index (DXY):</span> ~102-103 <span class="flat">firmed slightly Friday; regaining some of Thursday's modest softening; remains well above pre-FOMC ~101.5; rate differential with rest of world is the dominant driver as other central banks hold or ease</span></div>
+        <div class="data-line"><span class="data-label">30-year mortgage (Freddie Mac, July 30):</span> 6.66% <span class="up-red">confirmed survey; up from 6.58% July 23; 15-year at 6.04%; first Freddie Mac reading to fully reflect post-FOMC rate environment; 10-year at 4.74% suggests further mortgage pressure more likely than relief near-term</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The 10-year Treasury ending July at 4.74% is the rate story of the month summarized in a single number. The 10-year began July around 4.40-4.50% on market expectation of a September cut. It ends July at 4.74% after the FOMC repriced September from a cut to a likely hike. That 25-30 basis point shift is the single most consequential financial market event of July measured by downstream effects: mortgage rates up to 6.66%, small-cap stocks underperforming, housing affordability further deteriorating, variable-rate borrowers facing higher costs. The softer GDP and PCE data Thursday - which would ordinarily push the 10-year lower - barely moved the needle because the bond market has concluded that the question for September is not whether the macro data is soft enough to cut, but whether it is soft enough to hold against three FOMC members who have already publicly committed to a hike.</li>
+          <li>The path from ~81% September hike probability to either 90%+ or 55% runs through the August 7 payrolls report and the August CPI (released September 11). June's 57,000 job reading was anomalously low - below the four-month trailing average of approximately 90,000. If July rebounds to 100,000-plus, the three FOMC dissenters have the labor market confirmation they were looking for at the July meeting. If July produces another 50,000-70,000 reading, the argument for holding becomes harder for even the most hawkish committee members to dismiss. The honest assessment is that one payrolls print is rarely enough to move already-committed FOMC dissenting votes. But if July comes in below 75,000, Chair Warsh faces a more difficult press conference in September than he did in July. He has stated publicly the Fed will not hesitate to stop inflation. A sub-75,000 jobs print with core PCE still at 3.3% would test that formulation directly.</li>
+        </ul>
+
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <p class="section-intro">The rate environment that had briefly looked like it was on the cusp of shifting toward cuts is now firmly in hold-or-hike territory. The CD decision calculus that changed on July 29 has not changed back. Savers who locked in 1-year CDs at 4.50% before the FOMC meeting are in a demonstrably better position than they expected one week ago.</p>
+        <div class="data-line"><span class="data-label">National avg 1-yr CD:</span> ~1.70% APY (FDIC est.) <span class="flat">national average moves slowly; the post-FOMC repricing will take 2-4 weeks to fully appear in deposit rate offers at mainstream banks</span></div>
+        <div class="data-line"><span class="data-label">Best online 1-yr CD:</span> 4.50% APY (Southland Credit Union); 4.35% (Bankrate top pick) <span class="flat">online institutions still offering competitive rates; September hike scenario means these rates may hold or improve through Q3</span></div>
+        <div class="data-line"><span class="data-label">Best high-yield savings:</span> ~4.15% APY (leading online banks)</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The CD question has simplified since July 29. Before the FOMC, the choice between a 4.50% 1-year CD and a 4.15% high-yield savings account was framed as "lock in before cuts arrive versus stay flexible." That framing is now inverted. With September hike probability at ~81%, the case for a savings account's flexibility is that rates may rise further, not that cuts are coming. The savings account wins if September brings a hike and rates subsequently increase to 4.50-4.75% on new offers. The CD wins if rates hold at current levels through mid-2027 and the savings account's rate eventually drifts lower as other banks compete down. Neither scenario is a losing position for the saver. Both are materially better than where savers were in a zero-rate world. The relevant frame for August has shifted from "when do cuts come" to "when do hikes stop."</li>
+        </ul>
+
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <p class="section-intro">The US-Iran conflict enters its 15th day as August begins. Brent settled at approximately $92.27 on Friday - above $90 and holding elevated well above any level seen during July's brief ceasefire pause, which had briefly pushed Brent below $85. Iran has rejected all diplomatic frameworks currently on the table. Secretary of State Rubio stated publicly this week that Iran is not serious about reaching a deal. No ceasefire framework is in active negotiation. July ends as the strongest month for crude oil prices since March, with WTI up approximately 20% for the month.</p>
+        <div class="data-line"><span class="data-label">Brent crude (Friday close):</span> ~$92.27/bbl <span class="up-red">above $90; WTI at $86.80; Brent-WTI spread widened by the Iran conflict's disproportionate impact on seaborne crude pricing; Iran conflict geopolitical premium fully embedded; July WTI monthly gain approximately 20%</span></div>
+        <div class="data-line"><span class="data-label">Iran conflict update (Day 15):</span> US strikes ongoing; Iran rejected Oman's Hormuz revenue-sharing framework; Secretary Rubio says Iran "not serious" about peace; no ceasefire framework active; Strait of Hormuz operational but geopolitical premium persists</div>
+        <div class="data-line"><span class="data-label">National gas avg:</span> ~$4.09/gal <span class="flat">AAA most recent reading; oil at ~$92 Brent extends the timeline before any pump-price relief; the mid-August improvement scenario remains suspended indefinitely as long as the conflict continues</span></div>
+        <div class="data-line"><span class="data-label">West Coast (California):</span> ~$5.57/gal <span class="up-red">highest nationally; highest-cost region feels Iran premium most acutely; elevated oil removes near-term relief trajectory</span></div>
+        <div class="data-line"><span class="data-label">Cheapest region (Gulf Coast):</span> ~$3.65/gal (Mississippi)</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Brent closing at $92.27 on Friday reflects the full geopolitical premium from the US-Iran conflict holding at the monthly settlement level. Amazon's earnings-driven equity rally that partially displaced safe-haven gold demand did not reduce the crude oil bid in any meaningful way. Oil at $92 Brent is the baseline heading into August. While US-Iran strikes continue and no diplomatic track is active, there is no realistic path to Brent sustaining below $88 for any meaningful period. The four-day ceasefire pause that had briefly established price discovery around $84-86 Brent is now more than reversed. The question for August is whether the conflict can move from active engagement to a managed standoff - not a ceasefire, but a lower-intensity phase that allows some oil price normalization. Secretary Rubio's "not serious" characterization of Iran's negotiating posture makes even a managed standoff unlikely near-term.</li>
+          <li>The energy component of the August CPI - the data that will shape the September FOMC debate - is now locked in based on July's oil prices. If Brent averaged approximately $88-92 for July, the energy contribution to August CPI will be a meaningful positive. That calculation is not speculative. July's oil average is a fact as of the final trading day; what remains unknown is the magnitude of the energy contribution, which depends on the precise timing and magnitude of the pass-through from wholesale crude to refined products and consumer prices. The three FOMC members who voted for a hike on July 29 will receive the August CPI on September 11, four days before their meeting. They did not vote to hike because they expected energy prices to fall in August. They voted to hike expecting them to remain elevated. The data is on track to confirm their assumption.</li>
+        </ul>
+
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <p class="section-intro">Gold fell on Friday as the dollar firmed and Amazon's earnings-driven risk-on sentiment displaced some safe-haven demand. The decline from Thursday's elevated level is a familiar pattern: positive tech earnings temporarily compress the geopolitical bid, but the underlying demand for gold as a conflict hedge has not structurally diminished. The grain market closed the week with modest declines as favorable weather forecasts in parts of the Corn Belt provided mild relief, but drought stress persists in the western portion of the belt.</p>
+        <div class="data-line"><span class="data-label">Gold / oz (Friday close):</span> ~$4,043 <span class="down-red">-approximately 1.1%; profit-taking and dollar firming drove the decline from Thursday's ~$4,086 level; geopolitical bid partially suspended by risk-on from Amazon earnings; still above $4,000 despite the sell-off, reflecting the persistent conflict floor</span></div>
+        <div class="data-line"><span class="data-label">Silver / oz:</span> ~$57.79 <span class="flat">tracking gold with similar modest decline; safe-haven bid partially offset by industrial demand concerns tied to rate outlook; dollar strength limiting upside</span></div>
+        <div class="data-line"><span class="data-label">Copper / lb:</span> <span class="flat">modest pressure from stronger dollar and persistent rate-risk environment; industrial demand read is mixed - KOSPI recovery implies AI hardware demand intact, but ~81% September hike implies slower US construction and manufacturing</span></div>
+        <div class="data-line"><span class="data-label">Corn (Sep futures - Friday close):</span> $4.40&frac34;/bushel <span class="down-red">down 5 cents on the day; drought stress in western Corn Belt persists; grain-fill entering final sensitive window; next catalyst: August 3 USDA crop progress report (4 PM ET)</span></div>
+        <div class="data-line"><span class="data-label">Soybeans (Aug futures - Friday close):</span> $11.72/bushel <span class="down-red">down 5&frac14; cents; blooming above five-year average pace; European heat ongoing; modest decline on some favorable forecast patches in eastern belt; USDA August 3 will update conditions</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Gold closing above $4,000 on a day when Amazon gained 15%, equities rose broadly, and the dollar firmed is the most telling signal in the commodity space this week. In any prior market cycle, a +15% move in the index's most important stock on a day of broad equity gains would be expected to push gold meaningfully below the prior week's level as investors rotated from safe-haven to growth assets. The fact that gold held above $4,000 - even as it gave back roughly $40 from Thursday's level - reflects how deeply the Iran conflict's geopolitical premium has been priced into the precious metals market. The floor has moved. Pre-conflict gold averaged below $3,200. The market does not expect a return to that level as long as US-Iran hostilities continue. The $4,000 level is functioning as a new psychological support, not a ceiling.</li>
+          <li>Corn's decline to $4.40 on Friday does not change the structural supply picture for the August CPI. The relevant question is not whether corn futures moved 5 cents in a single session but whether the drought in the western Corn Belt has caused enough cumulative damage to reduce the yield below current estimates. The good-to-excellent rating at 63% for the week ending July 26 is the most recent baseline. The August 3 USDA report - covering the week ending August 3 - will be the first update to those ratings since the grain-fill stress period that typically runs through late July and early August. A further decline in the rating, particularly below 60%, would signal meaningful yield loss and move corn futures higher in a way that filters into food prices over the following 60-90 days. That timing puts corn-driven food inflation directly in the September CPI that feeds the September FOMC debate - alongside oil at ~$92 Brent, creating a scenario where both the energy and food components of the August CPI push in the inflationary direction simultaneously.</li>
+        </ul>
+
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <p class="section-intro">The most recent USDA crop progress data, for the week ending July 26, shows corn at 63% good-to-excellent and soybeans at approximately 63% good-to-excellent. Both figures are below the five-year average pace and reflect persistent drought stress in the western Corn Belt. The August 3 USDA report - the most important non-financial data release of the first week of August - will provide the first update to crop condition ratings since the final two weeks of July's grain-fill stress period. The next Freddie Mac mortgage survey also comes this week.</p>
+        <div class="data-line"><span class="data-label">Corn (week ending July 26 - last available):</span> 63% good-to-excellent. Grain fill in final weeks of peak sensitivity. Western Corn Belt drought affecting approximately 19-20% of corn acres. Ten-day forecasts showing limited rainfall for drought-stressed areas. Next USDA update: August 3 at 4 PM ET.</div>
+        <div class="data-line"><span class="data-label">Soybeans (week ending July 26 - last available):</span> approximately 63% good-to-excellent; blooming progress above five-year average pace; heat stress conditions ongoing in key producing states; pod-set entering sensitivity window.</div>
+        <div class="data-line"><span class="data-label">Spring wheat:</span> ~53% good-to-excellent; Northern Plains heat sustained pressure; at or below the low end of the five-year range; winter wheat harvest ongoing in southern plains.</div>
+        <div class="data-line"><span class="data-label">Global:</span> EU wheat estimate 140.8 million metric tons; French maize conditions at a 13-year rating low; European heat forecasts through early August remain elevated; Black Sea harvest providing partial offset to European shortfalls.</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The August 3 USDA crop progress report is the most consequential agriculture data release of the summer, not because grain markets individually move the needle on the S&P 500, but because of the downstream CPI implications at precisely the moment the Fed is deciding whether to hike. The pathway from corn condition ratings to September CPI is concrete: drought reduces yield estimates, which lifts cash corn prices, which over 6-10 weeks filters into food price indexes including the food-at-home category that has the largest direct impact on household budgets. The July 26 reading of 63% good-to-excellent for corn is already materially below the 70-74% rating that was prevailing in early July before the drought stress intensified. A further decline to 58-60% in the August 3 report would signal a meaningful yield reduction and shift the corn price trajectory meaningfully higher. That trajectory, combined with oil at ~$92 Brent, creates a scenario where both the energy and food components of the August CPI push in the inflationary direction simultaneously - exactly the data environment in which the three FOMC dissenters' case for a September hike is strongest.</li>
+        </ul>
+
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <p class="section-intro">The 30-year mortgage at 6.66% as of July 30 is the housing market's dominant data point entering August. The Freddie Mac survey that confirmed 6.66% was the first reading to fully reflect the post-FOMC rate environment. The 10-year Treasury, which closed Friday at 4.74%, has not materially declined from its post-FOMC level despite three days of softer macro data. As long as the 10-year holds above the 4.70% level, the 30-year mortgage is unlikely to meaningfully retreat below 6.60%. The next Freddie Mac survey releases Thursday August 6.</p>
+        <div class="data-line"><span class="data-label">30-year mortgage (Freddie Mac, July 30):</span> 6.66% <span class="up-red">up from 6.58% July 23; 15-year at 6.04% up from 5.96%; 10-year Treasury at 4.74% suggests August Freddie Mac reads more likely to rise than fall; September hike scenario would push 30-year toward 6.80-6.90%</span></div>
+        <div class="data-line"><span class="data-label">Foreclosure starts (June):</span> 26,217 <span class="up-red">+20% YoY; distressed supply building from below median price tier upward</span></div>
+        <div class="data-line"><span class="data-label">H1 2026 foreclosure filings:</span> 227,548 <span class="up-red">+21% YoY; 77% of US metros showing increases; post-forbearance expiration and variable-rate stress driving the acceleration</span></div>
+        <div class="data-line"><span class="data-label">Completed foreclosures (June):</span> 4,773 <span class="up-red">+23% YoY</span></div>
+        <div class="data-line"><span class="data-label">Mortgage delinquency rate:</span> 4.44% <span class="up-red">+40 bps YoY</span></div>
+        <div class="data-line"><span class="data-label">FHA delinquency:</span> 11.88% <span class="up-red">highest since 2021; FHA borrowers - typically lower-income, lower-equity homeowners - are disproportionately exposed to payment stress at 6.66% rates</span></div>
+        <div class="data-line"><span class="data-label">Median existing-home price:</span> $440,600 <span class="up-red">record; 36th straight month of YoY gains; seller price cuts rising despite median holding at record</span></div>
+        <div class="data-line"><span class="data-label">Sellers cutting asking price:</span> 35.4% <span class="up-red">near last August's record (Redfin); bifurcation between headline median and transaction reality is widening</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>August opens with housing in the same position it has been in all summer, only more so. Mortgage rates are at 6.66% and rising, not falling. The buyer who deferred a purchase in June expecting September rate cuts now faces a September hike probability of ~81% and a mortgage rate that has moved 16 basis points in the wrong direction in the past week alone. At 6.66% on a median home price of $440,600 with a 20% down payment, the monthly principal-and-interest payment is approximately $2,440 - a level that price-to-income ratios suggest is beyond reach for a median household in most of the country's major metropolitan areas. The market is not locked; it is fractured. The upper tier - move-up buyers with equity from prior purchases and high-income professionals with stable employment - is transacting. The entry-level and mid-tier buyer - first-time purchasers, FHA borrowers, households who stretched to buy at 2021-2022 prices on adjustable rates - is increasingly under stress. Both descriptions are true simultaneously. The median price being at a record does not contradict 35% of sellers cutting prices. It reflects that the sellers who are transacting are doing so at the high end, while the sellers cutting prices are concentrated at the lower end.</li>
+          <li>The H1 foreclosure acceleration - 227,548 filings, +21% year-over-year, across 77% of US metros - is the housing market's most underreported story and its most consequential supply signal. These filings represent households that acquired their properties at lower rates, on flexible terms, or with thin equity buffers that have been exhausted by a combination of price appreciation that did not translate into personal financial gains, payment resets on adjustable mortgages, or income disruptions in a cooling labor market. At 6.66% rates, fewer qualified buyers exist to absorb the distressed supply as it flows through the foreclosure process. The net effect is downward pressure on the lower and middle segments of the price distribution - which the aggregate median does not capture - and an increasing divergence between the housing market that shows up in national statistics and the housing market that a first-time buyer encounters.</li>
+        </ul>
+
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <p class="section-intro">The June PCE and personal finance data released Thursday July 30 remains the most recent comprehensive read on household conditions. No major new household finance data releases are scheduled for the first week of August, though the July jobs report on August 7 will provide labor market context that is directly relevant to consumer income and spending trajectory. The savings rate at 2.7% heading into August is the lowest since the pandemic reopening period.</p>
+        <div class="data-line"><span class="data-label">June headline PCE:</span> <span class="down-green">-0.1% MoM; +3.7% YoY; first monthly price decline in six years; energy price decline drove the monthly drop; reversal likely in August given July oil above $90 Brent</span></div>
+        <div class="data-line"><span class="data-label">June core PCE:</span> <span class="flat">+0.1% MoM; +3.3% YoY; 130 basis points above the Fed's 2% target; the most important number the Fed is watching and the one that has not meaningfully declined since March</span></div>
+        <div class="data-line"><span class="data-label">Personal savings rate (June):</span> 2.7% <span class="down-red">down from 4.5% in January 2026; six consecutive months of compression; spending persistently growing faster than income; the buffer that supported consumer resilience through 2023-2024 is materially thinner</span></div>
+        <div class="data-line"><span class="data-label">Total household debt:</span> $18.8 trillion <span class="up-red">record</span></div>
+        <div class="data-line"><span class="data-label">Credit card debt:</span> $1.25 trillion <span class="up-red">+5.9% YoY; avg new-offer APR 23.8%; balances carried month-to-month accruing at these rates represent a direct transfer of household income to financial institutions</span></div>
+        <div class="data-line"><span class="data-label">Card balances 90+ days late:</span> 13.1% <span class="up-red">highest in approximately 15 years; roughly one in eight credit card dollars is in severe delinquency</span></div>
+        <div class="data-line"><span class="data-label">Avg. new-car payment:</span> $777/mo <span class="up-red">third consecutive record; avg $44,156 financed at 7.0% APR; auto loan delinquencies rising alongside credit card delinquencies</span></div>
+        <div class="data-line"><span class="data-label">BNPL users paying late:</span> 47% <span class="up-red">+6 pts YoY; 29% now use BNPL for groceries - a structural signal of budget stress, not consumer discretion</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The household sector enters August with its buffers materially thinner than at any point since the pandemic reopening. The personal savings rate at 2.7% means households are saving less than three cents per dollar earned. The credit card severe delinquency rate at 13.1% means roughly one in eight credit card dollars is in deep arrears. 47% of BNPL users are paying late, and 29% are using buy-now-pay-later services for grocery purchases - a metric that speaks to structural cash flow stress rather than discretionary financing behavior. Together, these indicators describe a consumer sector that has maintained aggregate spending through a combination of savings drawdown, credit expansion, and BNPL deferral. All three of those mechanisms become more expensive and harder to access if September brings a rate hike. The potential August stress cascade - oil above $90 at the pump, a September rate hike that raises variable borrowing costs, and a jobs market that may continue softening - lands on a household sector with substantially less cushion to absorb it than existed at the start of 2026.</li>
+          <li>The divergence between aggregate consumer spending data and household financial stress metrics is the central tension in reading the US economy heading into August. The PCE spending number looks resilient. The delinquency data, savings rate, and BNPL metrics look stressed. Both are accurate descriptions of different parts of the same population. The K-shaped consumer recovery - high-income households spending freely, protected by equity-market wealth and stable employment - is generating the aggregate spending figures. Lower-income and middle-income households - squeezed by higher gas prices, credit card rates above 23%, and savings buffers near zero - are generating the delinquency figures. A September rate hike does not affect both halves of that K symmetrically. The high-income household with substantial fixed-rate assets is largely insulated. The household carrying a variable-rate balance at 23.8% APR is directly and immediately exposed to any rate increase.</li>
+        </ul>
+
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <p class="section-intro">Bitcoin slipped from the approximately $65,000 level seen in early Friday trading - when Amazon's premarket surge drove broad risk-on sentiment - to approximately $62,865 as the 10-year Treasury held at 4.74% and the dollar firmed. The risk-on impulse from Amazon's earnings was real but partial. The structural headwinds for crypto - ~81% September hike probability, 10-year yield at 4.74%, dollar at 102-103 - did not change because of one earnings beat.</p>
+        <div class="data-line"><span class="data-label">Bitcoin (BTC):</span> ~$62,865 <span class="flat">slipped from early-Friday $65,000 high as dollar firmed and rates held; holding above the $62,500 support level; Amazon-driven risk-on was transient; ~81% September hike probability is structural; global crypto market cap approximately $2.2-2.3 trillion</span></div>
+        <div class="data-line"><span class="data-label">Ethereum (ETH):</span> ~$1,865 <span class="flat">tracking BTC decline from session high; BTC dominance approximately 56%; no new regulatory developments this week</span></div>
+        <div class="data-line"><span class="data-label">Fear/Greed Index:</span> recovering from Fear territory; Amazon earnings provided a short-term positive impulse; FOMC headwind (~81% September hike) remains the dominant structural signal; rate environment has not materially changed since July 29</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Bitcoin at $62,865 heading into August reflects the precise position crypto occupies in the current macro environment: sensitive enough to risk sentiment to rise on Amazon's earnings-driven euphoria, but anchored enough to the rate environment to give most of it back when the 10-year holds at 4.74% and the dollar firms. The path to a sustained BTC move above $65,000 into new territory requires either a meaningful reduction in September hike probability - which would need a sequence of soft macro data starting with August 7 payrolls - or a resolution of the Iran conflict that removes the geopolitical safe-haven bid from the dollar and pushes risk appetite into growth assets broadly. Neither condition is imminent. The base case for August is BTC trading in a $60,000-$67,000 range as the market waits for the jobs and CPI data that will determine September's direction. Range-bound crypto in an ~81% hike environment is not a bearish outcome; it is a neutral one in a macro context that could easily be worse.</li>
+        </ul>
+
+        <h2 class="section-title" id="world">Around the World</h2>
+        <p class="section-intro">July ends with a historic session in Seoul bookending a historic month of losses. The KOSPI's 17.91% gain on Friday - confirmed as the largest single-session rise in the index's history - did not fully reverse July's 22% monthly decline. The net July performance is still the KOSPI's worst month since the 1997 Asian financial crisis. Europe faces continued oil-cost pressure and a dollar at 102-103 that creates translation headwinds for exporters. Japan's semiconductor-equipment names and tech ecosystem stocks rallied alongside the KOSPI recovery.</p>
+        <div class="data-line"><span class="data-label">South Korea (KOSPI - confirmed Friday close):</span> 6,595.45 <span class="up-green">+17.91%; largest single-day gain in index history; SK Hynix at 30% daily upper limit; Samsung +27%; July monthly performance: approximately -22%, worst since 1997 despite the record recovery session</span></div>
+        <div class="data-line"><span class="data-label">Japan (Nikkei 225 - confirmed Friday close):</span> ~64,362 <span class="up-green">+4.03%; semiconductor-equipment and tech names rallied on KOSPI recovery and Amazon AWS data; July Nikkei monthly performance was positive, cushioned by yen weakness and AI supply chain exposure</span></div>
+        <div class="data-line"><span class="data-label">Europe:</span> Brent above $92 adds renewed energy cost pressure for oil-importing industries; dollar at 102-103 creates translation headwinds for European exporters; ECB watching US rate divergence as Fed leans hawkish while European growth continues to slow; no resolution path on US-Iran conflict that would relieve European energy costs</div>
+        <div class="data-line"><span class="data-label">China:</span> <span class="flat">tech sector cautiously positive on AI demand signal from AWS; real estate sector stress ongoing; domestic stimulus measures not yet sufficient to reverse property market deflation; Hang Seng moderately positive on the week</span></div>
+        <div class="data-line"><span class="data-label">Dollar index (DXY):</span> ~102-103 <span class="flat">firmed Friday after modest Thursday softening; rate differential with rest of world remains wide given ~81% September hike probability versus most other central banks on hold or easing; strong dollar is a universal headwind for commodity-importing emerging markets</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The KOSPI's July story - 22% down for the month, 18% up in a single session, net still approximately 6% below where July began - is the purest expression of forward-fear dynamics in 2026. The index did not decline 22% because Samsung's factories stopped producing chips. It did not decline 22% because SK Hynix's HBM3 orders evaporated. It declined 22% because the market concluded - based on Meta's EPS miss, Nvidia's $250B guarantee uncertainty, and the Fed's hawkish surprise - that AI demand was not converting into sustainable revenue at the hyperscaler level. Amazon's AWS at 37% growth disproved that conclusion in a single data point on Thursday evening, and the Korean market repriced 18% of the fear premium in a single Friday session. The remaining gap - July still ended approximately -6% on net - reflects two things: the market appropriately pricing some of the fear forward, since Amazon confirming AI demand does not automatically resolve the FOMC dissent or the Iran conflict or the mortgage rate trajectory; and the mechanical reality that a 22% decline requires a 28% recovery to be flat, and 18% is not 28%.</li>
+          <li>Japan's 4% Friday gain and relatively positive July monthly performance tells the structural story of the AI supply chain more clearly than Korea's volatile month does. Japan's semiconductor equipment companies - Tokyo Electron, Advantest, and their peers - benefit from AI demand one step removed from the direct memory and chip producers. When AI demand is confirmed at the hyperscaler level, the equipment companies that supply the factories that produce the AI chips get the pull-through demand signal without the same degree of direct fear exposure that Korean foundry and memory stocks carry. The Nikkei's relative stability through July - compared to the KOSPI's 22% decline - reflects this structural position in the supply chain. It is a less volatile way to hold AI exposure, but it is also a less leveraged one in either direction.</li>
+        </ul>
+
+        <h2 class="section-title" id="events">Upcoming Events</h2>
+        <p class="section-intro">August opens with the densest economic data week of the quarter. Five major releases in five days will provide the first post-FOMC read on labor markets, services activity, and manufacturing. The week culminates with the July nonfarm payrolls on Friday August 7 - the number that will define the September rate debate more than any other single data point.</p>
+        <div class="data-line"><span class="data-label">Aug 1 (Sat, today)</span> - Market Pulse Saturday edition. No major scheduled data. August opens with oil at ~$92 Brent, S&P 500 -0.79% for July, September hike probability at ~81%, and the most consequential data week of Q3 beginning Monday.</div>
+        <div class="data-line"><span class="data-label">Aug 3 (Mon)</span> - ISM Manufacturing PMI for July (10 AM ET). The June ISM was 53.3%, in expansion territory. July's read will indicate whether goods production is maintaining expansion momentum or beginning to cool. Followed by USDA Weekly Crop Progress report at 4 PM ET - the most important agriculture release of the summer. Current baseline: corn 63% good-to-excellent, drought stress in western Corn Belt.</div>
+        <div class="data-line"><span class="data-label">Aug 4 (Tue)</span> - JOLTS Job Openings for June (BLS, 10 AM ET). Labor market tightness data; the three FOMC dissenters cited labor market conditions as part of their hike case. A significant decline in openings would soften that argument.</div>
+        <div class="data-line"><span class="data-label">Aug 5 (Wed)</span> - ADP National Employment Report for July (8:15 AM ET). Private-sector payrolls preview; June ADP was soft. Also ISM Services PMI for July (10 AM ET). Services activity has been the resilient corner of the economy; any crack in services would shift the September calculus.</div>
+        <div class="data-line"><span class="data-label">Aug 6 (Thu)</span> - Weekly jobless claims (8:30 AM ET). Also Freddie Mac weekly mortgage rate survey releases Thursday - the first read on whether 10-year at 4.74% has pushed 30-year mortgage rates further above 6.66%.</div>
+        <div class="data-line"><span class="data-label">Aug 7 (Fri)</span> - July nonfarm payrolls (BLS, 8:30 AM ET). The key number. June was 57,000 - well below the 110,000 consensus and the lowest in four months. A strong July rebound pushes September hike probability above 85-90%. A second consecutive sub-75,000 reading creates a credible hold argument even for the three FOMC dissenters. Unemployment rate and average hourly earnings will accompany the headline figure.</div>
+        <div class="data-line"><span class="data-label">Sep 11 (Thu)</span> - August CPI: the data point that retroactively determines the September FOMC debate. First comprehensive read on July energy (Brent above $90 for most of the month), tariff pass-through, crop-weather effects on food prices, and services inflation. Four days before the FOMC.</div>
+        <div class="data-line"><span class="data-label">Sep 15-16 (Mon-Tue)</span> - Next FOMC meeting. September hike probability currently at approximately 81%. First meeting with new Summary of Economic Projections (dot plot) since March. The dot plot will show whether the three dissenters' hike view has gained or lost additional committee support since July.</div>
+
+        <div class="disclaimer">
+          <p>A free weekly snapshot for the Totem community. General information only - not investment advice or a recommendation to buy or sell anything. Market data updated as of approximately 6:00 AM ET, Saturday, August 1, 2026. US stock index figures (S&P 500, Nasdaq, Dow) reflect Friday July 31, 2026 closing levels. AMZN and AAPL price moves reflect Friday July 31 closing levels. KOSPI and Nikkei figures reflect Friday July 31 Asian market closing levels as reported. Brent crude and WTI reflect Friday July 31, 2026 closing settlement prices. Gold price reflects approximate Friday July 31 closing level. Corn and soybean futures reflect Friday July 31 settlement prices. Bitcoin and Ethereum reflect approximate prices as of Saturday morning August 1. June PCE, personal income, and savings rate reflect BEA data released Thursday July 30 at 8:30 AM ET. Freddie Mac 30-year mortgage rate reflects the July 30, 2026 PMMS survey. National gas average reflects AAA most recent data as of July 31. Crop ratings reflect USDA data for the week ending July 26; next update August 3 at 4 PM ET. S&P 500 July 2026 monthly performance calculated from July 1 to July 31 closing levels. All figures confirmed from multiple sources; minor variations between vendors may apply.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#news"><span class="dot"></span>Today in the News</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>Upcoming Events</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_august1_2026.html">August 1, 2026</a></li>
+          <li><a href="market_pulse_july31_2026.html">July 31, 2026</a></li>
+          <li><a href="market_pulse_july30_2026.html">July 30, 2026</a></li>
+          <li><a href="market_pulse_july29_2026.html">July 29, 2026</a></li>
+          <li><a href="market_pulse_july28_2026.html">July 28, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We're looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. General information only - not investment advice or a recommendation to buy or sell anything.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+    // Sidebar unread dots
+    document.querySelectorAll('h2.section-title[id]').forEach(function(el){
+      var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var dot=document.querySelector('.toc a[href="#'+el.id+'"] .dot');if(dot){dot.style.opacity='0';dot.style.transform='scale(0)';}}});},{rootMargin:'-20% 0px -60% 0px'});
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
