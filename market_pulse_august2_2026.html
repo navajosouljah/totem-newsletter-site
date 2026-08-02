@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - August 2, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:19px; line-height:1.72;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:32px 0 0;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:42px;line-height:1.1;letter-spacing:-0.015em;color:var(--ink);margin-bottom:14px;}
+  .dek{font-family:'Spectral',serif;font-weight:400;font-size:20px;line-height:1.5;color:#3b4048;margin-bottom:0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 20px;color:var(--body);font-size:18px;line-height:1.72;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:68px;line-height:0.74;padding:8px 10px 0 0;}
+  h2.section-title{font-family:'Spectral',serif;font-weight:700;font-size:26px;line-height:1.2;letter-spacing:-0.01em;color:var(--ink);margin:32px 0 6px;padding-top:24px;border-top:1px solid var(--line);}
+  .section-intro{font-family:'Spectral',serif;font-style:italic;font-size:16px;line-height:1.55;color:var(--muted);margin-bottom:14px;}
+  .data-line{margin-bottom:6px;font-size:16px;line-height:1.5;font-family:'Spectral',serif;}
+  .data-label{font-weight:700;color:var(--ink);}
+  .up-green{color:#2d6a4f;font-weight:600;}
+  .down-green{color:#2d6a4f;font-weight:600;}
+  .up-red{color:#9b2c2c;font-weight:600;}
+  .down-red{color:#9b2c2c;font-weight:600;}
+  .flat{color:var(--muted);font-weight:600;}
+  .bottom-line-label{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-top:14px;margin-bottom:6px;}
+  .bottom-line-list{list-style:none;padding:0;margin:0 0 8px;}
+  .bottom-line-list li{padding-left:18px;position:relative;margin-bottom:8px;font-size:16px;line-height:1.65;color:var(--body);}
+  .bottom-line-list li::before{content:"\2022";position:absolute;left:0;color:var(--gold);font-weight:700;}
+  .bullet-list{list-style:none;padding:0;margin:0;}
+  .bullet-list li{padding-left:18px;position:relative;margin-bottom:10px;font-size:16px;line-height:1.65;}
+  .bullet-list li::before{content:"\2022";position:absolute;left:0;color:var(--navy);font-weight:700;}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:12px;line-height:1.65;color:var(--muted);}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:32px;}h2.section-title{font-size:22px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_09.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="email_copy.html">Email Copy</a></li>
+        <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Sunday Briefing <span class="dot">&bull;</span> <span class="date">Sunday, August 2, 2026</span></div>
+        <h1 class="headline">Consumer Confidence Hits a Five-Month High Even as the Fed's Dissenters Sharpen Their Case - The Week That Decides the September Rate Path Begins Monday. Bitcoin Recovers to $63,454. July Jobs Report Friday Is the Number Everyone Is Watching.</h1>
+        <p class="dek">Households are more confident than they were in February, the Fed's three hawks are unmoved, and five labor market releases over the next five days will determine which side of that tension writes the September 15-16 story.</p>
+      </div>
+
+      <div class="body">
+
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="lead-first"><span class="data-label">The setup entering the week:</span> markets closed Friday at the same levels they closed Thursday - the S&amp;P 500 at 7,490 - and the weekend has added one surprise and one confirmation. The surprise is that consumer sentiment for July came in at 55.2 on Friday's final reading, a nearly 12% jump from June and a five-month high, with broad-based gains across income groups and political affiliations. The confirmation is that Bitcoin has recovered to $63,454 Sunday morning while Ethereum sits at $1,867, both above their Friday closes, as crypto is the only major asset class still trading. Gold has eased slightly to $4,045 from Friday's close.</p>
+        <p>The market framework for this week is entirely about labor. Three FOMC members voted to hike on July 29; what it would take to move a fourth is exactly what the next five days will try to answer. JOLTS job openings land Tuesday, ADP private payrolls Wednesday, initial claims Thursday, and then the full Bureau of Labor Statistics July jobs report on Friday morning - consensus expects +91,000 new jobs and an unemployment rate that edges up to 4.3%. One strong print does not flip three committed dissents into a majority. Three or four weak prints might.</p>
+        <p>The consumer sentiment number is worth understanding before the labor data starts arriving. At 55.2, the index is a five-month high and a meaningful bounce from June, but it is still 11% below where it was a year ago and the current-conditions component (54.8) and expectations component (55.4) are nearly identical - households have no more clarity on where things are going than they do on where things stand now. One-year inflation expectations held at 4.2%, which means the sentiment improvement is about fewer immediate fears, not a belief that the inflation problem is solved. The Fed's dissenters will read that as continued cover for their position.</p>
+
+        <h2 class="section-title" id="weekend">This Weekend's Updates</h2>
+        <ul class="bullet-list">
+          <li><strong>University of Michigan Consumer Sentiment hit 55.2 for the final July reading (released Friday, August 1), a five-month high and a near-12% jump from June.</strong> Current Conditions rose to 54.8 and Expectations climbed to 55.4 - the narrowest gap between the two components in months. Gains were broad-based across income, age, education, wealth, and political party. One-year inflation expectations held at 4.2% and 5-10 year held at 3.3%, meaning the improved mood is about easing near-term anxiety, not a belief that inflation is defeated. (University of Michigan)</li>
+          <li><strong>Bitcoin recovered to $63,454 early Sunday morning after closing Friday around $62,689.</strong> The weekend move is modest but directionally positive, reversing part of the weekly decline that saw BTC fall roughly 1.9% when equity markets rallied on earnings. U.S. spot Bitcoin ETFs saw only $172.8 million in inflows over July - a divergence worth watching as the price recovered but institutional interest stayed muted. (CoinDesk, Bloomberg)</li>
+          <li><strong>No new geopolitical flash points broke over Saturday and Sunday.</strong> The Middle East situation that kept Brent above $90 mid-July remains active but contained at current levels, with WTI holding near $84-85. The relief from the $93 mid-July crude peak is still the dominant energy story heading into the week.</li>
+          <li><strong>China's July manufacturing PMI final reading confirmed the contraction signaled by the flash: 49.2, below the 50.0 neutral line and the 50.3 reading in June.</strong> Analysts cited domestic demand weakness and typhoon disruptions to factory activity. The number is relevant to the U.S. because it reinforces that global demand is slowing even as U.S. inflation remains sticky - a combination that historically argues for Fed patience, not additional hikes. The dissenters disagree.</li>
+          <li><strong>The June jobs context, a reminder heading into Friday:</strong> the Bureau of Labor Statistics reported on July 2 that nonfarm payrolls rose just 57,000 in June - the slowest month since early 2021 and well below the 115,000 consensus. The unemployment rate fell to 4.2% only because labor force participation dropped 0.3 points to 61.5%, a five-year low. Professional and business services led gains (+36,000); manufacturing shed jobs for a third straight month. Average hourly earnings rose 0.3% to $37.64. Friday's July report (consensus: +91,000, unemployment 4.3%) will show whether June was an anomaly or a trend. (BLS, July 2)</li>
+        </ul>
+
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <p class="section-intro">Markets are closed Sunday. The Friday close stands as the last trade; the week ahead opens Monday with the first of five labor market reads.</p>
+        <div class="data-line"><span class="data-label">S&amp;P 500:</span> 7,489.72 <span class="up-green">+1.0% for the week; -0.9% for July overall</span></div>
+        <div class="data-line"><span class="data-label">Dow Jones Industrial Average:</span> 52,485.03 <span class="up-green">+1.0% for the week; cloud earnings and not much else</span></div>
+        <div class="data-line"><span class="data-label">Nasdaq Composite:</span> 25,373.85 <span class="up-green">+1.6% for the week; Microsoft and Amazon did the work</span></div>
+        <div class="data-line"><span class="data-label">Russell 2000:</span> 2,931.34 <span class="flat">flat on the week; small caps excluded from the cloud rally on rate sensitivity</span></div>
+        <div class="data-line"><span class="data-label">VIX:</span> 15.99 <span class="down-green">fell from 18.67; the fear premium unwound with earnings</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The S&amp;P's weekly gain was the product of two earnings reports, not a broad economic re-rating. At 7,490 with a hawkish three-dissent Fed, the index is priced for a soft landing with no room for the labor market to disappoint. Friday's jobs number is the most consequential single data point the market has seen since the July 29 FOMC decision. A strong print (above 150K) would validate the dissenters and likely send the 10-year back toward 4.85%. A weak print (below 75K) would give the doves oxygen - but also raise recession questions the bulls have been successfully dismissing.</li>
+          <li>The consumer sentiment bounce to 55.2 is a mildly constructive input for equities if it holds. Sentiment was running well below the level that typically accompanies a recession and the broad-based improvement across demographics suggests the July gas-price anxiety may have peaked. The pass-through from $84 WTI to the pump will determine whether August sentiment holds that gain.</li>
+        </ul>
+
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <p class="section-intro">The 10-year enters this week at 4.75%. Every labor print this week is an argument in the hike-vs-hold debate that three Fed officials already answered on July 29.</p>
+        <div class="data-line"><span class="data-label">Fed policy rate:</span> 3.50-3.75% <span class="flat">held July 29; 9-3 vote; three dissents in favor of +25bp hike; next meeting September 15-16</span></div>
+        <div class="data-line"><span class="data-label">2-year Treasury:</span> 4.29% <span class="flat">July 31 close; front end priced for tightening risk, not cuts; up from 4.23% on July 30 after FOMC digestion</span></div>
+        <div class="data-line"><span class="data-label">10-year Treasury:</span> 4.75% <span class="up-red">+10 bps last week; rose through a GDP miss and the first monthly PCE decline since 2020</span></div>
+        <div class="data-line"><span class="data-label">30-year Treasury:</span> 5.28% <span class="up-red">+15 bps last week; long-end fiscal premium intact</span></div>
+        <div class="data-line"><span class="data-label">30-year mortgage (Freddie Mac, July 30):</span> 6.66% <span class="up-red">up from 6.58% prior week; next reading August 7 - the day of the jobs report</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The 10-year at 4.75% and the 30-year mortgage at 6.66% are the two numbers with the most direct household impact this week. The Freddie Mac weekly survey publishes the same day as the July jobs report (Thursday/Friday, August 7), which means the two biggest rate signals of the week land simultaneously. A stronger-than-expected jobs number could push the next mortgage reading toward 6.80%.</li>
+          <li>For CD savers: the case for locking a 1-year CD at 4.40% has improved, not weakened, since the hawkish FOMC. If the dissenters are right and September brings a hike, the 4.40% you lock this week is the floor, not the ceiling.</li>
+        </ul>
+
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <p class="section-intro">The savers' window held open by three dissenting Fed votes.</p>
+        <div class="data-line"><span class="data-label">National avg 1-yr CD (FDIC, July):</span> 1.68% APY <span class="flat">what most deposit dollars are still earning</span></div>
+        <div class="data-line"><span class="data-label">Best online 1-yr CD:</span> 4.40% APY <span class="up-green">(E*TRADE, no minimum); a 2.6x premium over the national average on the same insured product</span></div>
+        <div class="data-line"><span class="data-label">Best credit union 1-yr CD:</span> 4.05% APY <span class="up-green">(NASA Federal CU, $1K minimum)</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The September meeting is 44 days away. A 1-year CD locked this week at 4.40% captures one full year regardless of what happens in that meeting or the one after it. The ladder argument - spread maturities rather than lump-summing into a single term - has more merit now that the rate path is genuinely uncertain in both directions.</li>
+        </ul>
+
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <p class="section-intro">WTI is holding near $84-85 on the weekend. The gap between the crude retreat and the pump price is still closing.</p>
+        <div class="data-line"><span class="data-label">WTI Crude (July 31):</span> $84.67 <span class="flat">+$1.08 on the day; well below the $93 mid-July peak; Middle East premium stable; Brent Crude ~$90.12</span></div>
+        <div class="data-line"><span class="data-label">Natural gas (July 31):</span> $2.747/MMBtu <span class="flat">-$0.011 on the day; summer cooling demand is the primary driver; flat on the week</span></div>
+        <div class="data-line"><span class="data-label">National gas avg (EIA, most recent):</span> $4.10/gal <span class="up-red">the July crude spike still working its way to the pump; EIA updates Monday</span></div>
+        <div class="data-line"><span class="data-label">West Coast:</span> $5.12/gal <span class="up-red">California at $5.49; the widest regional spread in the country</span></div>
+        <div class="data-line"><span class="data-label">Gulf Coast:</span> $3.69/gal <span class="flat">cheapest region; 97 cents below California on the same gallon</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The EIA publishes its next weekly retail gasoline survey on Monday, August 3. Given the two-to-four week lag from crude to pump, and the fact that WTI peaked at $93 two weeks ago, this week's reading is likely to show further upward pressure before relief arrives from the current $84-85 level. EIA's own 3Q26 forecast calls for the national average to ease toward $3.80 by quarter-end - that relief is two to three months out, not this week.</li>
+        </ul>
+
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <p class="section-intro">Gold eased slightly Sunday morning. Copper and grains carry the most macro signal this week.</p>
+        <div class="data-line"><span class="data-label">Gold / oz:</span> ~$4,045 <span class="down-red">eased from Friday's close near $4,107; the weekend move is thin-market; safe-haven floor structurally intact</span></div>
+        <div class="data-line"><span class="data-label">Silver / oz:</span> ~$57.79 <span class="flat">-2.35% Friday as the dollar firmed post-FOMC; little additional weekend movement; industrial demand in focus with the week's macro data</span></div>
+        <div class="data-line"><span class="data-label">Copper / lb:</span> ~$6.47 <span class="up-green">the cleanest forward-looking industrial demand read; rose 2% last week on the cloud-earnings beat</span></div>
+        <div class="data-line"><span class="data-label">Corn (Sep) / bu:</span> ~$4.64 <span class="up-red">+2.7% last week on heat and declining crop ratings; grain fill at peak sensitivity</span></div>
+        <div class="data-line"><span class="data-label">Live cattle / lb:</span> ~$2.27 <span class="up-red">beef costs grinding higher; food-price channel still open</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Gold's small weekend decline is a thin-market move - Asian and Middle Eastern demand typically reasserts by Monday's open. The metal holding above $4,000 through a strong equity week and a hawkish Fed says the structural bid is geopolitical and central bank driven, not just a rates trade. That bid does not reverse on a single labor report.</li>
+          <li>Copper at $6.47 is the commodity to watch against Friday's jobs number. If payrolls disappoint materially, copper will price a growth-slowdown read faster than any equity index will.</li>
+        </ul>
+
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <p class="section-intro">The drought map expanded through a third straight week. Corn yield estimates will be reset in the August 12 USDA report.</p>
+        <div class="data-line"><span class="data-label">Corn:</span> 63% good-to-excellent (USDA, week ending July 27) <span class="up-red">down 4 points in one week; grain fill at peak heat sensitivity; next USDA reading this Monday</span></div>
+        <div class="data-line"><span class="data-label">Drought:</span> 47.9% of the Lower 48 in moderate drought or worse; Northern Plains deteriorated for a third straight week <span class="up-red"></span></div>
+        <div class="data-line"><span class="data-label">Key date:</span> August 12 - USDA crop production report. The first official yield estimate that fully reflects July's heat stress.</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The USDA crop condition report drops this Monday morning and the crop production report with the first full yield estimate lands August 12 - the same day as July CPI. If corn ratings fall a fourth consecutive week, the futures market will price additional food-price risk into a CPI print that the Fed's dissenters are already watching as their primary justification. Two pressure points landing on the same morning.</li>
+        </ul>
+
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <p class="section-intro">No new data over the weekend. The 6.66% mortgage and rising delinquencies are the unchanged frame.</p>
+        <div class="data-line"><span class="data-label">30-yr fixed mortgage:</span> 6.66% <span class="up-red">as of July 30; next reading August 7 - the day of the jobs report</span></div>
+        <div class="data-line"><span class="data-label">Foreclosure starts (H1 2026, ATTOM):</span> 164,566 <span class="up-red">+18% YoY; June alone +20% YoY</span></div>
+        <div class="data-line"><span class="data-label">Median existing-home price (June):</span> $440,600 <span class="flat">a record, even as 20.2% of listings carry a price cut</span></div>
+        <div class="data-line"><span class="data-label">FHA delinquency:</span> 11.88% <span class="up-red">nine points above conventional; first-time buyers under the most pressure</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>A Friday jobs miss that pushed the 10-year back below 4.60% would be the most direct relief for the housing market in months - it would pull mortgage rates down faster than any policy shift could. A jobs beat that sent the 10-year toward 4.85% would cement a 6.80-plus mortgage heading into fall's buying season. The Friday number is a housing market event as much as a labor market one.</li>
+        </ul>
+
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <p class="section-intro">Consumer sentiment surprised to the upside Friday. The underlying balance sheet pressures are unchanged.</p>
+        <div class="data-line"><span class="data-label">U of Michigan Sentiment (July final):</span> 55.2 <span class="up-green">near-12% jump from June; five-month high; broad-based across income, age, wealth, and party</span></div>
+        <div class="data-line"><span class="data-label">Current Conditions component:</span> 54.8 <span class="up-green">households slightly more positive on the present</span></div>
+        <div class="data-line"><span class="data-label">Expectations component:</span> 55.4 <span class="up-green">roughly equal to current conditions; no clear optimism about the forward path</span></div>
+        <div class="data-line"><span class="data-label">1-yr inflation expectations (July final):</span> 4.2% <span class="flat">held flat; improvement in mood is not driven by a belief inflation is solved</span></div>
+        <div class="data-line"><span class="data-label">5-10 yr inflation expectations:</span> 3.3% <span class="flat">held; long-run inflation anchoring is not deteriorating, a key Fed input</span></div>
+        <div class="data-line"><span class="data-label">Conference Board Consumer Confidence (July):</span> 90.8 <span class="down-red">down 1.4 points from 92.2 in June; present situation held but expectations component weakened on job market concerns — the opposite direction of the Michigan read</span></div>
+        <div class="data-line"><span class="data-label">CPI (June, BLS):</span> +3.5% YoY <span class="down-green">down from 4.2% in May; -0.4% MoM, the largest monthly decline since April 2020; energy fell 5.7%; core (ex-food &amp; energy) at 2.6% YoY, flat MoM</span></div>
+        <div class="data-line"><span class="data-label">Retail sales (June, Commerce Dept.):</span> +0.2% overall <span class="up-green">+0.7% excluding gasoline price effects; the underlying consumer is spending, just not energetically</span></div>
+        <div class="data-line"><span class="data-label">Personal savings rate (June):</span> 2.7% <span class="down-red">spending has outrun income; the sentiment bounce needs a jobs foundation to last</span></div>
+        <div class="data-line"><span class="data-label">Credit card APR (Fed G.19, May):</span> 21.15% <span class="up-red">on interest-bearing accounts; the cost of spending on thin savings</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The Michigan-Conference Board split is the most interesting consumer data point this week. Michigan (55.2, up nearly 12%) picks up near-term mood, gas prices, and present conditions — gas fell, mood improved. The Conference Board (90.8, down 1.4) weights forward-looking job market expectations more heavily, and those expectations deteriorated. Same consumer, same month, opposite directions. The divergence usually resolves toward wherever the next jobs report lands, which is Friday.</li>
+          <li>The June CPI read (3.5%, down from 4.2%) is the most constructive inflation data since January, but it was almost entirely energy-driven. Core at 2.6% is the cleaner signal, and it is still a full point above the Fed's 2% target. The sentiment bounce needs lower gas prices to persist and a labor market that does not roll over. Friday's jobs number is the sentiment report's most important near-term input.</li>
+          <li>The K-shaped balance sheet: the savings rate at 2.7%, credit card balances at $1.25 trillion growing at 5.9% annually at a 21% APR, and FHA delinquency at 11.88% are all worsening even as the headline sentiment index improves. Sentiment surveys measure mood; the balance sheet data measures facts. The households whose delinquency rates are rising are also among those reporting better sentiment — because June gas prices fell from May's highs. That is a real improvement in real life. It does not change the balance sheet math.</li>
+        </ul>
+
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <p class="section-intro">Weekend recovery. Bitcoin is the only major asset class with a Sunday price.</p>
+        <div class="data-line"><span class="data-label">Bitcoin (BTC):</span> $63,454 <span class="up-green">+1.2% from Friday's close of $62,689; recovering from the week's rate-driven selloff</span></div>
+        <div class="data-line"><span class="data-label">Ethereum (ETH):</span> $1,867 <span class="up-green">+1.6% from Friday's close; trading in its August range of $1,850-1,890</span></div>
+        <div class="data-line"><span class="data-label">Solana (SOL):</span> ~$71-72 <span class="flat">little weekend movement</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The weekend recovery in BTC and ETH is consistent with the pattern from last week: crypto sold off alongside rate-sensitive assets when the hawkish FOMC read came through Thursday, and it is recovering on lower weekend volume. The institutional signal is more cautious - spot Bitcoin ETF inflows were a modest $172.8 million across all of July even as the price recovered, suggesting large institutional buyers are waiting for clarity on the rate path before adding. Friday's jobs report is as relevant to crypto as it is to bonds.</li>
+        </ul>
+
+        <h2 class="section-title" id="world">Around the World</h2>
+        <p class="section-intro">China confirmed factory contraction. Europe and Japan enter the week with their own rate debates running.</p>
+        <div class="data-line"><span class="data-label">China:</span> Official manufacturing PMI 49.2 (July final) <span class="down-red">contraction; missed 50.0 expected; domestic demand slump and typhoon disruption cited; Shanghai Composite near 3,832</span></div>
+        <div class="data-line"><span class="data-label">Japan:</span> Nikkei near 64,362 <span class="flat">BoJ held at 1.00% on July 31 with one vote for a hike; core inflation warning; Asia's central bank divergence from the Fed's direction is narrowing</span></div>
+        <div class="data-line"><span class="data-label">Europe:</span> STOXX 600 at 649 <span class="up-green">a fourth straight monthly gain; July inflation ticked up; ECB rate path uncertain</span></div>
+        <div class="data-line"><span class="data-label">South Korea (KOSPI):</span> still processing last week's 17.9% single-day recovery <span class="flat">the index remains down roughly 1.4% for the week after July's 22% slide; AI memory demand validated by cloud earnings</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>China's contraction is the most consequential international number of the weekend. A 49.2 manufacturing PMI out of the world's largest goods producer sends two signals simultaneously: global demand is weaker than the AI-earnings narrative implies, and commodity prices (particularly copper and industrial metals) have a ceiling. That ceiling is relevant to the inflation thesis that is keeping three FOMC officials in the hike camp.</li>
+          <li>The BoJ's one dissenting vote toward a hike mirrors the structure at the Fed. The global cheap-money era is not reopening from any direction - central banks from Tokyo to Frankfurt to Washington are all leaning the same way, just at different speeds.</li>
+        </ul>
+
+        <h2 class="section-title" id="events">This Week's Events</h2>
+        <p class="section-intro">The most data-dense week between the July 29 FOMC and the September 15-16 meeting. Every release feeds directly into the hike-or-hold calculation.</p>
+        <div class="data-line"><span class="data-label">Mon Aug 3</span> - USDA Weekly Crop Progress (corn condition ratings, drought update). Aug ISM Manufacturing PMI. Construction spending June.</div>
+        <div class="data-line"><span class="data-label">Tue Aug 4</span> - June JOLTS job openings (BLS, 10:00 AM ET). Consensus: slight decline from May's 7.7M. The first post-FOMC labor read; a strong number validates the three dissenters.</div>
+        <div class="data-line"><span class="data-label">Wed Aug 5</span> - ADP July private payrolls (8:15 AM ET). Treasury Quarterly Refunding statement - sets the long-end supply that has been pressuring the 30-year yield. ISM Services PMI.</div>
+        <div class="data-line"><span class="data-label">Thu Aug 6</span> - Initial jobless claims (weekly, 8:30 AM ET). A number below 225K would be incrementally hawkish.</div>
+        <div class="data-line"><span class="data-label">Fri Aug 7</span> - July jobs report (BLS, 8:30 AM ET). Consensus: +91,000 nonfarm payrolls, unemployment rate 4.3%. This is the number. A print above 150K makes the September hike case; below 75K gives the doves oxygen. Freddie Mac mortgage rate survey also publishes Friday morning.</div>
+        <div class="data-line"><span class="data-label">Aug 12 (Wed)</span> - July CPI (BLS). First full inflation read with July's $90+ Brent and new tariff baseline baked in. USDA crop production report (first full yield estimate of the season) lands the same morning.</div>
+        <div class="data-line"><span class="data-label">Sep 15-16</span> - Next FOMC meeting, with a fresh dot plot. The question is whether the three-dissent minority becomes a four- or five-vote bloc - or gets voted down by data.</div>
+
+        <div class="disclaimer">
+          <p>A free weekly snapshot for the Totem community. General information only - not investment advice or a recommendation to buy or sell anything. Figures reflect the latest readings available as of Sunday, August 2, 2026. US equity and Treasury figures reflect July 31, 2026 closing levels (most recent trading day). Crypto prices reflect Sunday morning August 2 readings. Gold reflects Sunday morning spot. Gas prices reflect the most recent EIA weekly survey (July 27). Consumer sentiment reflects the University of Michigan July 2026 final release (August 1, 2026). International equity levels are approximate based on most recent available closes.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#weekend"><span class="dot"></span>This Weekend's Updates</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>This Week's Events</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_august2_2026.html">August 2, 2026</a></li>
+          <li><a href="market_pulse_august1_2026.html">August 1, 2026</a></li>
+          <li><a href="market_pulse_july31_2026.html">July 31, 2026</a></li>
+          <li><a href="market_pulse_july30_2026.html">July 30, 2026</a></li>
+          <li><a href="market_pulse_july29_2026.html">July 29, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We're looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. General information only - not investment advice or a recommendation to buy or sell anything.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+    // Sidebar unread dots
+    document.querySelectorAll('h2.section-title[id]').forEach(function(el){
+      var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var dot=document.querySelector('.toc a[href="#'+el.id+'"] .dot');if(dot){dot.style.opacity='0';dot.style.transform='scale(0)';}}});},{rootMargin:'-20% 0px -60% 0px'});
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
