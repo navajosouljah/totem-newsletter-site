@@ -21,17 +21,29 @@ There are three Vercel projects. Never confuse them.
 ### Phase 2 live deploy sequence (exact commands)
 
 ```bash
-# 1. Strip editorial nav links from today's article (Email Copy + Emergency PO <li> items)
+# 1. Strip editorial nav links from ALL public HTML files (Email Copy + Emergency PO <li> items).
+#    Use a Python script — never sed (sed has corrupted files before).
+#    Skip email_copy.html and emergency_po.html themselves.
+#    Pattern to remove (match by content, ignore leading whitespace):
+#      <li><a href="email_copy.html">Email Copy</a></li>
+#      <li><a href="emergency_po.html">Emergency PO</a></li>
+#    Reference script: scratchpad/strip_nav.py (created 2026-08-04)
+
 # 2. Link CLI to the correct live project
 npx vercel link --yes --project totem-challenge-preview
 # 3. Deploy
 npx vercel --prod --yes
-# 4. Restore editorial nav links in the article file
+# 4. Restore editorial nav links in ALL files (reverse of step 1)
+#    Reference script: scratchpad/restore_nav.py (created 2026-08-04)
 # 5. Relink CLI back to the editorial project (keeps .vercel/project.json tidy)
 npx vercel link --yes --project totem-newsletter-site
+# 6. Commit and push the restored files so the editorial site stays in sync
+git add -A && git commit -m "Restore editorial nav links" && git push origin main
 ```
 
 Always verify the aliased URL in the deploy output reads `totem-challenge-preview.vercel.app` before declaring Phase 2 complete.
+
+**Why all files, not just today's article:** Every page on the site (index, archive, all articles, all challenge issues) shares the same nav. Stripping only the new article leaves Email Copy and Emergency PO visible to readers on every other page.
 
 ## Agent skills
 
