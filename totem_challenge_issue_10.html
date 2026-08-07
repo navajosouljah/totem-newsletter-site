@@ -108,6 +108,25 @@
   .blueprint-fig .mark.no{color:var(--muted);}
   .blueprint-fig .mark.yes{color:var(--gold);}
   .blueprint-fig .bf-note{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--faint);padding:11px 16px;border-top:1px solid var(--line);line-height:1.5;font-style:italic;}
+  .scorecard-fig{margin:34px 0;border:1px solid var(--line);}
+  .scorecard-fig .sf-head{background:linear-gradient(160deg,#04204f 0%,#032165 60%,#01102f 100%);color:#fff;text-align:center;padding:24px 20px;}
+  .scorecard-fig .sf-title{font-family:'Spectral',serif;font-weight:800;font-size:26px;line-height:1.15;}
+  .scorecard-fig .sf-title em{font-style:normal;color:var(--gold-bright);}
+  .scorecard-fig .sf-sub{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.72);margin-top:7px;}
+  .scorecard-fig .sf-cols{display:grid;grid-template-columns:0.95fr 1.45fr 1.45fr 0.55fr;}
+  .scorecard-fig .sf-cell{padding:14px 16px;border-top:1px solid var(--line);font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.55;color:var(--body);}
+  .scorecard-fig .sf-cell.rowlab{font-weight:700;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);background:var(--wash);}
+  .scorecard-fig .sf-cell.colhead{font-weight:700;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;text-align:center;background:var(--wash);}
+  .scorecard-fig .sf-cell.colhead.re{color:var(--muted);}
+  .scorecard-fig .sf-cell.colhead.totem{color:var(--navy);box-shadow:inset 0 -2px 0 var(--gold);}
+  .scorecard-fig .sf-cell.colhead.score{color:var(--muted);}
+  .scorecard-fig .sf-cell.scoreval{text-align:center;font-weight:700;font-size:14px;color:var(--navy);display:flex;align-items:center;justify-content:center;}
+  .scorecard-fig .sf-total{grid-column:1 / -1;border-top:1px solid var(--line);background:rgba(3,33,101,0.04);padding:20px 16px;text-align:center;font-family:'Work Sans',sans-serif;font-size:14px;color:var(--body);}
+  .scorecard-fig .sf-total strong{color:var(--ink);}
+  .scorecard-fig .mark{display:inline-block;font-weight:700;margin-right:7px;font-size:14px;}
+  .scorecard-fig .mark.no{color:var(--muted);}
+  .scorecard-fig .mark.yes{color:var(--gold);}
+  .scorecard-fig .sf-note{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--faint);padding:11px 16px;border-top:1px solid var(--line);line-height:1.5;font-style:italic;}
   .outreach-log{margin:34px 0;border:1px solid var(--line);background:var(--wash);}
   .outreach-log .ol-status{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);padding:16px 24px 0;}
   .outreach-log .ol-meta{font-family:'Work Sans',sans-serif;font-size:13px;color:var(--muted);padding:8px 24px 14px;border-bottom:1px solid var(--line);line-height:1.7;}
@@ -159,6 +178,11 @@
     .blueprint-fig .bf-cols{grid-template-columns:1fr;}
     .blueprint-fig .bf-cell.colhead:first-child{display:none;}
     .blueprint-fig .bf-title{font-size:21px;}
+    .scorecard-fig .sf-cols{grid-template-columns:1fr;}
+    .scorecard-fig .sf-cell.colhead:first-child{display:none;}
+    .scorecard-fig .sf-cell.colhead.score{display:none;}
+    .scorecard-fig .sf-cell.scoreval::before{content:"Score (ETF / Totem):";font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-right:8px;}
+    .scorecard-fig .sf-title{font-size:21px;}
     .closing-block p{font-size:19px;}
   }
 </style>
@@ -210,7 +234,7 @@
 
     <div class="body">
 
-      <p class="lead-first"><span class="lead-word">Every issue,</span> we analyze the published strategies of prominent voices in the wealth-building space. Where we agree, we say so. Where we differ, we run both strategies through our six-question Wealth Preservation Blueprint and publish the comparison. This week we take on the loudest income trade on the feed: covered-call and option-income ETFs, the funds behind the viral "10 dividend ETFs that pay HUGE and don't decay" posts circulating in early August.</p>
+      <p class="lead-first"><span class="lead-word">Every issue,</span> we analyze the published strategies of prominent voices in the wealth-building space. Where we agree, we say so. Where we differ, we run both strategies through our six-question Totem Scorecard and publish the comparison. This week we take on the loudest income trade on the feed: covered-call and option-income ETFs, the funds behind the viral "10 dividend ETFs that pay HUGE and don't decay" posts circulating in early August.</p>
 
       <h2 class="sub" id="who">This Week's Target</h2>
       <p>For once, the target is not a single commentator. It is a genre. Across X this week, income accounts have been screenshotting distribution yields from a family of option-income ETFs: <strong>CHPY</strong> (YieldMax's semiconductor option-income portfolio), <strong>QDTE</strong> and its zero-days-to-expiration siblings, <strong>QQQI</strong> and <strong>SPYI</strong> from NEOS, and the two giants of the category, JPMorgan's <strong>JEPI</strong> and <strong>JEPQ</strong>, which together hold more than $80B in assets.</p>
@@ -268,107 +292,57 @@
       <p>The deeper difference is the starting point. An option-income fund begins with a hope: that prices and premiums cooperate for another month. Totem begins after the sale has already happened. A large institutional buyer has committed to goods it operationally needs. A qualified vendor holds that purchase order and needs capital to fulfill it. Members fund a documented obligation and can see the specific transaction they are funding through the cycle.</p>
       <p>Here is the honest sentence the screenshots never include: in a persistent bull tape, the best funds in this genre can approach, and briefly exceed, the fixed-fee path. In every other regime, and on every line of the risk ledger - protection, predictability, what the payout actually is - the comparison is not close.</p>
 
-      <figure class="blueprint-fig" id="blueprint">
-        <div class="bf-head">
-          <div class="bf-title">The 2026 Wealth Preservation <em>Blueprint</em></div>
-          <div class="bf-sub">Distribution Rates vs. Insured Execution</div>
-        </div>
-        <div class="bf-cols">
-          <div class="bf-cell colhead"></div>
-          <div class="bf-cell colhead re">Covered-Call Income ETFs</div>
-          <div class="bf-cell colhead totem">Totem Insured Commerce</div>
-
-          <div class="bf-cell rowlab">Starting Point</div>
-          <div class="bf-cell"><span class="mark no">&#10005;</span>A hope that prices and option premiums cooperate for another month</div>
-          <div class="bf-cell"><span class="mark yes">&#10003;</span>A documented purchase order from a verified Fortune 100 buyer, in hand before funding</div>
-
-          <div class="bf-cell rowlab">Stated vs. Kept</div>
-          <div class="bf-cell"><span class="mark no">&#10005;</span>11% to 41% distribution rates; total returns often far lower and behind the underlying index</div>
-          <div class="bf-cell"><span class="mark yes">&#10003;</span>5% origination fee per 90-day cycle, fixed and known upfront - the stated number is the kept number</div>
-
-          <div class="bf-cell rowlab">Principal Protection</div>
-          <div class="bf-cell"><span class="mark no">&#10005;</span>Full equity drawdown risk, with recovery capped by the same overlay that pays the yield</div>
-          <div class="bf-cell"><span class="mark yes">&#10003;</span>Principal plus the cycle fee, 105 cents on every participating dollar, covered under trade credit insurance arrangements with an A-rated global carrier, plus a first-position performance guarantee</div>
-
-          <div class="bf-cell rowlab">Capital Cycle</div>
-          <div class="bf-cell"><span class="mark no">&#10005;</span>Daily liquidity, but income floats with volatility and no cycle ever completes</div>
-          <div class="bf-cell"><span class="mark yes">&#10003;</span>Fixed 90-day cycle tied to a specific purchase order, with successive cycles available</div>
-
-          <div class="bf-cell rowlab">Visibility</div>
-          <div class="bf-cell"><span class="mark no">&#10005;</span>Fund-level holdings and monthly statements</div>
-          <div class="bf-cell"><span class="mark yes">&#10003;</span>The specific transaction, trackable through the cycle from funding to completion</div>
-        </div>
-        <div class="bf-note">Totem funds documented obligations, not option premiums. Insurance arrangements are subject to carrier terms, policy exclusions, claims processes, and carrier performance.</div>
-      </figure>
-
       <h2 class="sub" id="scorecard">The Totem Scorecard</h2>
-      <p>To keep the scoring objective, we ran both options through our standard six-category Wealth Preservation Blueprint. Each category is scored from 0 to 5, with 30 being a perfect score.</p>
+      <p>To keep the scoring objective, we ran both options through our standard six questions. Each category is scored from 0 to 5, with 30 being a perfect score.</p>
 
-      <div class="scorecard-table">
-        <div class="st-title">The Totem Scorecard - Issue No. 10 - Side by Side</div>
-        <table>
-          <colgroup>
-            <col class="col-q">
-            <col class="col-re">
-            <col class="col-totem">
-            <col class="col-score">
-          </colgroup>
-          <thead>
-            <tr>
-              <th>Blueprint Category</th>
-              <th>Covered-Call Income ETFs</th>
-              <th>Totem Commerce Program</th>
-              <th>Score<br><span style="font-size:10px;font-weight:500;color:var(--faint);letter-spacing:0;text-transform:none;white-space:nowrap;">ETF / Totem</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1. Principal Protection</td>
-              <td>Full equity drawdown exposure; the premium cushion is modest and recovery is capped</td>
-              <td>Backed by trade credit insurance arrangements with an A-rated global carrier plus a first-position performance guarantee</td>
-              <td>1 / 5</td>
-            </tr>
-            <tr>
-              <td>2. Return Protection</td>
-              <td>Distributions are real but variable, and a portion is often return of capital</td>
-              <td>5% fee per cycle, fixed and known upfront, covered under the insurance arrangements</td>
-              <td>2 / 5</td>
-            </tr>
-            <tr>
-              <td>3. Cycle Clarity</td>
-              <td>Liquid daily, but income floats with volatility and no cycle ever defines itself</td>
-              <td>Engineered, fixed 90-day cycle tied to specific purchase orders</td>
-              <td>3 / 5</td>
-            </tr>
-            <tr>
-              <td>4. Verification Path</td>
-              <td>Public NAV, daily disclosed holdings, audited funds</td>
-              <td>Live phone verification with our insurance broker, vendor contacts, and Totem account executives before capital moves</td>
-              <td>4 / 5</td>
-            </tr>
-            <tr>
-              <td>5. Accessibility</td>
-              <td>Any brokerage account, any size</td>
-              <td>Low operational friction, but requires partner accreditation</td>
-              <td>5 / 4</td>
-            </tr>
-            <tr>
-              <td>6. Track Record</td>
-              <td>Older buy-write funds show a decade of NAV erosion; the hot funds are barely a year old</td>
-              <td>Over 6,000 completed transactions, $7M+ in member participation YTD; company records indicate no realized payment defaults</td>
-              <td>2 / 5</td>
-            </tr>
-            <tr class="total-row">
-              <td><strong>Total</strong></td>
-              <td colspan="3" style="text-align:center;padding:20px 16px;">
-                <span style="display:inline-block;margin-right:40px;text-align:center;"><strong>Income ETF Score:</strong><br>17 out of 30</span>
-                <span style="display:inline-block;text-align:center;"><strong>Totem Score:</strong><br>29 out of 30</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="st-note">Totem takes the scorecard, 29 to 17. Insurance arrangements are subject to carrier terms, policy exclusions, claims processes, and carrier performance and do not guarantee transaction performance or repayment. Past performance does not guarantee future results.</div>
-      </div>
+      <figure class="scorecard-fig">
+        <div class="sf-head">
+          <div class="sf-title">The Totem <em>Scorecard</em></div>
+          <div class="sf-sub">Issue No. 10 &middot; Covered-Call Income ETFs vs. Totem</div>
+        </div>
+        <div class="sf-cols">
+          <div class="sf-cell colhead"></div>
+          <div class="sf-cell colhead re">Covered-Call Income ETFs</div>
+          <div class="sf-cell colhead totem">Totem Commerce Program</div>
+          <div class="sf-cell colhead score">Score<br>ETF / Totem</div>
+
+          <div class="sf-cell rowlab">1. Principal Protection</div>
+          <div class="sf-cell"><span class="mark no">&#10005;</span>Full equity drawdown risk, with recovery capped by the same overlay that pays the yield</div>
+          <div class="sf-cell"><span class="mark yes">&#10003;</span>Principal plus the cycle fee, 105 cents on every participating dollar, covered under trade credit insurance arrangements with an A-rated global carrier, plus a first-position performance guarantee</div>
+          <div class="sf-cell scoreval">1 / 5</div>
+
+          <div class="sf-cell rowlab">2. Return Protection</div>
+          <div class="sf-cell"><span class="mark no">&#10005;</span>Distributions are real but variable, and a portion is often return of capital</div>
+          <div class="sf-cell"><span class="mark yes">&#10003;</span>5% origination fee per 90-day cycle, fixed and known upfront - the stated number is the kept number</div>
+          <div class="sf-cell scoreval">2 / 5</div>
+
+          <div class="sf-cell rowlab">3. Cycle Clarity</div>
+          <div class="sf-cell"><span class="mark no">&#10005;</span>Liquid daily, but income floats with volatility and no cycle ever completes</div>
+          <div class="sf-cell"><span class="mark yes">&#10003;</span>Engineered, fixed 90-day cycle tied to a specific purchase order, with successive cycles available</div>
+          <div class="sf-cell scoreval">3 / 5</div>
+
+          <div class="sf-cell rowlab">4. Verification Path</div>
+          <div class="sf-cell"><span class="mark no">&#10005;</span>Public NAV and disclosed holdings, but forward results cannot be verified in advance</div>
+          <div class="sf-cell"><span class="mark yes">&#10003;</span>Live phone verification with our insurance broker, vendor contacts, and Totem account executives before capital moves</div>
+          <div class="sf-cell scoreval">4 / 5</div>
+
+          <div class="sf-cell rowlab">5. Accessibility</div>
+          <div class="sf-cell"><span class="mark yes">&#10003;</span>Any brokerage account, any size</div>
+          <div class="sf-cell"><span class="mark yes">&#10003;</span>Low operational friction, but requires partner accreditation</div>
+          <div class="sf-cell scoreval">5 / 4</div>
+
+          <div class="sf-cell rowlab">6. Track Record</div>
+          <div class="sf-cell"><span class="mark no">&#10005;</span>Older buy-write funds show a decade of NAV erosion; the hot funds are barely a year old</div>
+          <div class="sf-cell"><span class="mark yes">&#10003;</span>Over 6,000 completed transactions, $7M+ in member participation YTD; company records indicate no realized payment defaults</div>
+          <div class="sf-cell scoreval">2 / 5</div>
+
+          <div class="sf-total">
+            <span style="display:inline-block;margin-right:40px;"><strong>Income ETF Score:</strong><br>17 out of 30</span>
+            <span style="display:inline-block;"><strong>Totem Score:</strong><br>29 out of 30</span>
+          </div>
+        </div>
+        <div class="sf-note">Totem takes the scorecard, 29 to 17. Insurance arrangements are subject to carrier terms, policy exclusions, claims processes, and carrier performance and do not guarantee transaction performance or repayment. Past performance does not guarantee future results.</div>
+      </figure>
 
       <h2 class="sub" id="verify">Verification Offered</h2>
       <p>Do not take our word for any of this. Before deploying a single dollar of capital, Totem invites every prospective partner to independently verify our entire infrastructure. We will happily schedule a phone call to put you in touch with:</p>
