@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - August 7, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:19px; line-height:1.72;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:32px 0 0;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:42px;line-height:1.1;letter-spacing:-0.015em;color:var(--ink);margin-bottom:14px;}
+  .dek{font-family:'Spectral',serif;font-weight:400;font-size:20px;line-height:1.5;color:#3b4048;margin-bottom:0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 20px;color:var(--body);font-size:18px;line-height:1.72;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:68px;line-height:0.74;padding:8px 10px 0 0;}
+  h2.section-title{font-family:'Spectral',serif;font-weight:700;font-size:26px;line-height:1.2;letter-spacing:-0.01em;color:var(--ink);margin:32px 0 6px;padding-top:24px;border-top:1px solid var(--line);}
+  .section-intro{font-family:'Spectral',serif;font-style:italic;font-size:16px;line-height:1.55;color:var(--muted);margin-bottom:14px;}
+  .data-line{margin-bottom:6px;font-size:16px;line-height:1.5;font-family:'Spectral',serif;}
+  .data-label{font-weight:700;color:var(--ink);}
+  .up-green{color:#2d6a4f;font-weight:600;}
+  .down-green{color:#2d6a4f;font-weight:600;}
+  .up-red{color:#9b2c2c;font-weight:600;}
+  .down-red{color:#9b2c2c;font-weight:600;}
+  .flat{color:var(--muted);font-weight:600;}
+  .bottom-line-label{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-top:14px;margin-bottom:6px;}
+  .bottom-line-list{list-style:none;padding:0;margin:0 0 8px;}
+  .bottom-line-list li{padding-left:18px;position:relative;margin-bottom:8px;font-size:16px;line-height:1.65;color:var(--body);}
+  .bottom-line-list li::before{content:"\2022";position:absolute;left:0;color:var(--gold);font-weight:700;}
+  .bullet-list{list-style:none;padding:0;margin:0;}
+  .bullet-list li{padding-left:18px;position:relative;margin-bottom:10px;font-size:16px;line-height:1.65;}
+  .bullet-list li::before{content:"\2022";position:absolute;left:0;color:var(--navy);font-weight:700;}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:12px;line-height:1.65;color:var(--muted);}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:32px;}h2.section-title{font-size:22px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_09.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Friday Briefing <span class="dot">&bull;</span> <span class="date">Friday, August 7, 2026</span></div>
+        <h1 class="headline">Jobless Claims Fall to 199,000 - Third Consecutive Week Below 200K, Longest Such Streak Since 1969 - Directly Contradicting ADP's 44,000 Miss. Oil Rebounds 3.4% to $77.75 on Iran-Oman Hormuz Route Agreement. Dow Snaps Three-Day Record Streak, Down 464. Challenger Cuts at Two-Year Low. Freddie Mac 30-Year Rises to 6.69%. BLS July Jobs Report at 8:30 AM ET This Morning.</h1>
+        <p class="dek">Thursday's initial jobless claims at 199,000 - the third consecutive week below 200,000 and the longest such streak since 1969 - directly contradicted Wednesday's ADP print of 44,000 and partially restored the September rate hike case. The two readings describe the same labor market from opposite sides: layoffs are historically rare while new hiring has slowed sharply. Oil reversed Wednesday's deal-optimism decline, rebounding 3.4% to approximately $77.75 as Iran and Oman agreed in principle on Hormuz shipping lane coordinates - a framework, not yet a signed deal. Higher crude weighed on the cyclical names that had driven the Dow's three-day record run, snapping the streak with a 464-point decline. Treasury yields rose on the strong claims data and oil recovery. Freddie Mac's 30-year mortgage moved to 6.69%, reversing the direction that analysts had anticipated from Wednesday's disinflation trade. The BLS July jobs report releases at 8:30 AM ET this morning - the tiebreaker between Thursday's resilient claims and Wednesday's historically weak ADP.</p>
+      </div>
+
+      <div class="body">
+
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="lead-first"><span class="data-label">What Thursday settled - and what it didn't:</span> Initial jobless claims for the week ending August 1 came in at 199,000 - up just 1,000 from the prior week's revised 198,000, below the 205,000 consensus forecast, and below 200,000 for the third consecutive week. The four-week moving average fell to 198,750. That is the lowest sustained level in this metric since 1969, when the US workforce was roughly half its current size. The reading is a direct labor market data point, and it says the same thing every week it prints below 200,000: employers are not letting workers go. Whatever caused ADP to report 44,000 new private sector jobs in July - the weakest reading in six months - it was not a wave of layoffs. The two readings are measuring different things. ADP measures gross new hiring. Claims measure gross layoffs. They can diverge when employers simultaneously slow new hiring and slow layoffs. That is the most coherent explanation for this week's labor data: the US labor market is in a freeze, not a freefall.</p>
+        <p>Oil reversed course sharply on Thursday. WTI crude rebounded approximately 3.4% from Wednesday's close near $75 to approximately $77.75 per barrel, driven by news that Iran and Oman have reached agreement in principle on the geographic coordinates for a Hormuz shipping lane. The phrase "agreed in principle" is doing substantial work in that sentence. As of Thursday, no deal had been formally signed, no shipping lanes had been reopened, and the US-Iran gap over sovereignty and toll authority remained open. Treasury Secretary Bessent's "today or tomorrow" language from Wednesday has not yet produced a signed agreement. The market treated the framework agreement as a constructive signal - but not enough to add to Wednesday's 7% crude decline. WTI at $77.75 is approximately $5 above Wednesday's close and approximately $15 below its mid-July peak of approximately $93. The directional story on crude is still lower if the deal is consummated. The risk is that it isn't.</p>
+        <p>The Dow snapped its three-day record streak, falling 464 points to 53,885. Higher oil prices directly reversed the dynamic that had driven Wednesday's Dow record: the cyclical and industrial names that benefit from lower crude were sold as oil rebounded. The S&P 500 fell 0.18% to 7,709.96. The Nasdaq declined just 0.06% to 26,348.35, a smaller loss than the Dow because semiconductor names, which had led the Nasdaq's weakness earlier in the week via AppLovin and the Korean chip sell-off, did not extend their declines on Thursday. The Russell 2000 fell 0.58% to 3,001.55, giving back a portion of Wednesday's 1.85% gain - rate-sensitive small-caps sold off modestly as Treasury yields rose on the strong claims data.</p>
+        <p>Freddie Mac released its Primary Mortgage Market Survey Thursday, showing the 30-year fixed rate moved to 6.69% - up 3 basis points from the prior week's 6.66%. The direction surprised the market. Wednesday's oil-driven disinflation trade had pushed the 10-year Treasury toward 4.63%, and analysts had anticipated a modest decline in the Freddie Mac reading. Instead, the combined effect of Thursday's strong claims data and the oil rebound pushed the 10-year back to approximately 4.668% - and the Freddie Mac survey, which captures the prior week's lending environment, reflected a market that had not yet fully adjusted to the August 5 ADP miss. The net result: mortgage rates went up, not down, in the first official weekly reading following the Hormuz deal optimism.</p>
+        <p>This morning at 8:30 AM ET, the BLS July jobs report releases. Economists are forecasting approximately 83,000-87,500 nonfarm payrolls and an unemployment rate holding at 4.2%. The ADP reading of 44,000 has moved the whisper number well below consensus. The initial claims reading of 199,000 has partially restored it. The BLS number is the tiebreaker - and it is the single most consequential data point for the Fed's September 15-16 decision between the July 29 hold and the next meeting. A BLS print above 100,000 restores the September hike probability toward 55-60%. A print below 50,000 - consistent with the ADP signal - likely removes September from the base case. The range between 50,000 and 100,000 leaves the September decision genuinely two-sided, with the three FOMC dissenters and Chair Warsh's majority continuing to hold irreconcilable interpretations of the same data.</p>
+
+        <h2 class="section-title" id="friday-morning">Friday Morning</h2>
+        <ul class="bullet-list">
+          <li><strong>Initial jobless claims (week ending August 1): 199,000 - third consecutive week below 200K, longest streak since 1969.</strong> Claims rose just 1,000 from the prior week's revised 198,000 and came in well below the 205,000 consensus forecast. The four-week moving average fell to 198,750 - down 4,500 from the prior week's revised 203,250. Continuing claims for the week ending July 25 rose to 1,801,000 - up 24,000, above the 1,789,000 forecast - suggesting that while layoffs remain rare, re-employment is taking slightly longer for those who do lose jobs. The claims reading lands in direct opposition to Wednesday's ADP print. The correct interpretation is not that one is right and the other wrong: layoffs at historic lows (claims) and new hiring at a six-month low (ADP) describe a labor market in stasis - employers are neither letting people go nor bringing new workers on at the rate of the prior two years.</li>
+          <li><strong>Challenger, Gray &amp; Christmas job cuts (July 2026): 33,429 - lowest monthly total in two years.</strong> July's announced corporate layoff total was down 27% from June's 45,849 and down 46% from July 2025's 62,075. Artificial intelligence was cited as the top reason for job eliminations for the fifth consecutive month, accounting for 10,970 of the 33,429 announced cuts. The Challenger data reinforces the claims picture: the economy is not in a layoff cycle. It is in a hiring pause, concentrated in the sectors where AI is displacing roles that historically required human headcount.</li>
+          <li><strong>Oil rebounds 3.4% to $77.75 on Iran-Oman Hormuz route agreement in principle.</strong> Iran and Oman agreed in principle on the geographic coordinates for a proposed Hormuz shipping corridor. The US position, stated by Treasury Secretary Bessent and the White House, is that any deal cannot allow Iran to charge transit tolls or claim sovereignty over shipping lanes. Iran's foreign ministry said the framework "is not subject to US interference." The gap between "agreed in principle between Iran and Oman" and "operationally reopened with US approval" remains significant. Oil markets treated Thursday's news as constructive but not transformative: WTI moved from $75 to $77.75, recovering about half of Wednesday's deal-optimism decline. If the deal is formally signed and lanes reopen, WTI has a plausible path toward $70-72. If negotiations collapse, oil likely returns toward $82-85.</li>
+          <li><strong>Dow snaps three-day record streak, falling 464 points to 53,885 as oil reversal hits cyclicals.</strong> Wednesday's Dow record at 54,349 was driven by the same logic as Monday's and Tuesday's records: oil falling from $81 to $75 benefited the industrials, energy-adjacent companies, and transportation names that dominate the Dow's composition. Thursday's oil recovery from $75 to $77.75 partially reversed that thesis. Caterpillar, 3M, and Boeing - three of the most oil-sensitive Dow components - were among the day's larger decliners. The S&P 500 fell a modest 0.18% to 7,709.96. The Nasdaq declined just 0.06% to 26,348.35, cushioned by the relative stability of the large-cap technology names that had already taken their biggest hits earlier in the week.</li>
+          <li><strong>Treasury yields rise: 10-year to 4.668%, 2-year to 4.241% - September hike probability partially restored.</strong> The strong claims data and oil recovery are both inflationary signals that reduce the September rate-cut case and modestly restore the hike case. The 2-year Treasury, the most direct gauge of near-term Fed rate expectations, rose approximately 3 basis points on Thursday. The 10-year rose approximately 5 basis points to 4.668%. The 30-year moved to approximately 5.22%. The September rate hike probability - which fell sharply following Wednesday's ADP and ISM Services employment prints - partially recovered Thursday on the claims strength. The net position heading into this morning's BLS report: September is genuinely uncertain, with the market pricing approximately 40-50% probability of a hike, caught between the ADP miss and the claims resilience.</li>
+          <li><strong>Freddie Mac 30-year mortgage rises to 6.69%, reversing expected post-Hormuz direction.</strong> The weekly Primary Mortgage Market Survey released Thursday showed the 30-year fixed rate at 6.69%, up 3 basis points from 6.66% last week. The 15-year rate fell to 6.01% from 6.04%. Analysts had anticipated a modest decline in the 30-year reading following Wednesday's bond market rally on disinflation expectations. Instead, the strong claims data and oil recovery pushed yields higher during the survey period, and the Freddie Mac reading captured that shift. A 30-year rate at 6.69% - up, not down - is not what the housing market needed heading into fall buying season.</li>
+        </ul>
+
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <p class="section-intro">Thursday's session erased the Dow's record-setting momentum and replaced it with a more familiar dynamic: oil up, cyclicals down. The underlying market is resilient - three of four major indices fell less than 1% - but the rotation that drove Wednesday's Dow gains ran in reverse as crude rebounded.</p>
+        <div class="data-line"><span class="data-label">Dow Jones Industrial Average (Thursday close):</span> 53,885.10 <span class="down-red">-464 pts, -0.85%; snapped three-day record streak; oil rebound from $75 to $77.75 directly reversed the thesis that drove Monday-Wednesday's gains; industrial and energy-adjacent components were the primary decliners; the Dow remains within 1% of its 54,349.06 record, but the immediate momentum has broken</span></div>
+        <div class="data-line"><span class="data-label">S&amp;P 500 (Thursday close):</span> 7,709.96 <span class="down-red">-13.59, -0.18%; held well above Tuesday's record 7,736.52; the index's modest decline reflects the S&amp;P's more balanced composition relative to the Dow - large-cap technology, which was not the primary mover Thursday, provides a partial buffer against oil-driven cyclical weakness</span></div>
+        <div class="data-line"><span class="data-label">Nasdaq Composite (Thursday close):</span> 26,348.35 <span class="down-red">-14.86, -0.06%; essentially flat; the semiconductor names that dominated this week's Nasdaq weakness - AppLovin -28.7% Wednesday, the Korean chip spillover - did not extend their declines on Thursday; the Nasdaq's near-flat performance alongside the Dow's 0.85% drop illustrates how completely Thursday's market was about oil-sensitive cyclicals, not technology</span></div>
+        <div class="data-line"><span class="data-label">Russell 2000 (Thursday close):</span> 3,001.55 <span class="down-red">-0.58%; gave back a portion of Wednesday's 1.85% gain as the strong claims data pushed Treasury yields higher; rate-sensitive small-cap domestic companies benefit from falling rate expectations and are hurt when those expectations reverse; the 0.58% decline on a 3 basis point 2-year yield rise is proportional</span></div>
+        <div class="data-line"><span class="data-label">SanDisk / Western Digital - tech headwind Thursday:</span> <span class="down-red">SanDisk's fiscal Q1 2027 revenue guidance disappointed, triggering losses in memory-adjacent names; the guidance miss, following SK Hynix's 10%+ decline on Wednesday, reinforced the theme that the memory chip market is encountering inventory and demand-rate pressure independent of the broader AI capex story</span></div>
+        <div class="data-line"><span class="data-label">Q2 earnings season context:</span> ~86% beat rate; aggregate S&P 500 profits +47% YoY <span class="flat">unchanged from Wednesday; the aggregate picture remains historically strong; individual misses (AppLovin, SanDisk guidance) are outliers in the aggregate earnings cycle, not leading indicators of an overall earnings deterioration</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The Dow's 464-point decline on Thursday is the market mechanics of the oil-Dow relationship working in reverse: what oil's fall gave the Dow on Monday through Wednesday, oil's 3.4% rebound partially took back on Thursday. This is not a change in the market's fundamental view on either the economy or equities. The S&P 500 is still within 27 points of its all-time record. The Nasdaq is down less than 0.5% from its all-time high. The rotation story of this week - from mega-cap tech toward small-caps and cyclicals - paused on Thursday as yields rose and oil recovered. Whether it resumes depends on this morning's BLS number and what it does to September rate expectations.</li>
+          <li>The S&P 500 futures as of early Friday morning were up 0.13%, suggesting the pre-market is not immediately pricing in a catastrophic BLS number. A Polymarket contract implied approximately 67% probability that the S&P 500 opens higher Friday. The market's pre-open positioning is consistent with a BLS number in the 60,000-90,000 range - weak enough to support a rate-hold narrative, not so weak as to trigger recession concerns. A number below 40,000 - consistent with the bottom end of the ADP signal range - would likely produce a significant morning move.</li>
+        </ul>
+
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <p class="section-intro">Thursday's claims data and oil rebound moved the rate conversation in the opposite direction from Wednesday. The September hike probability, which ADP and ISM Services employment had pushed sharply lower, partially recovered as two inflationary signals - resilient labor market and rising crude - came through simultaneously. The BLS print this morning decides which Wednesday or Thursday was the more accurate signal.</p>
+        <div class="data-line"><span class="data-label">Fed policy rate:</span> 3.50-3.75% <span class="flat">held July 29; 9-3 vote; three dissenters in favor of +25bp hike; next meeting September 15-16</span></div>
+        <div class="data-line"><span class="data-label">September hike probability (futures market):</span> <span class="flat">approximately 40-50% heading into Friday's BLS; ADP's 44,000 miss drove odds sharply lower Wednesday; Thursday's 199,000 claims reading partially restored them; the two data points are pulling in opposite directions and the BLS number at 8:30 AM ET is the decisive input for the September decision</span></div>
+        <div class="data-line"><span class="data-label">2-year Treasury:</span> ~4.241% <span class="up-red">+3 bps from Wednesday's ~4.21%; the front end moved higher as the strong claims reading partially restored the September hike thesis; a BLS number above 100,000 takes the 2-year toward 4.35-4.40% as the hike case solidifies; a print below 50,000 takes the 2-year back toward 4.00% or lower</span></div>
+        <div class="data-line"><span class="data-label">10-year Treasury:</span> ~4.668% <span class="up-red">+5 bps from Wednesday's ~4.63%; oil recovering from $75 to $77.75 added inflation expectations to the long end; the 10-year's direction is now determined by this morning's BLS number and whether it confirms or contradicts the week's two major labor signals</span></div>
+        <div class="data-line"><span class="data-label">30-year Treasury:</span> ~5.22% <span class="up-red">+7 bps from Wednesday's ~5.15%; the long end is absorbing both the oil rebound and the strong claims data; fiscal supply remains a structural feature that keeps long-end yields elevated regardless of where the Fed moves in September</span></div>
+        <div class="data-line"><span class="data-label">Yield curve (10s-2s spread):</span> approximately +43 basis points <span class="flat">positively sloped; the curve held its structure despite Thursday's yield increases across the board; a steeper curve would emerge if BLS is very weak (2-year falls faster) and a flatter curve if BLS is strong (short end rises more than the long end)</span></div>
+        <div class="data-line"><span class="data-label">30-year mortgage (Freddie Mac, August 7):</span> 6.69% <span class="up-red">up 3 bps from last week's 6.66%; the direction reversed analyst expectations; the 15-year fell to 6.01% from 6.04%, the one bright spot for shorter-term borrowers; the BLS number this morning has direct implications for where mortgage rates trade next week</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The week has produced three separate labor market signals, all pointing different directions. ADP said 44,000 - hiring stopped. ISM Services employment contracted to 47.4% - service businesses are cutting headcount. Initial claims printed at 199,000 for the third consecutive week - no one is getting fired. The economic scenario that makes all three readings simultaneously true is a labor market freeze: employers who got burned in 2021-2022 by over-hiring and then had to lay off are now managing headcount conservatively - not adding, not cutting. That is a labor market that is "healthy" by the metrics that capture layoffs and "weak" by the metrics that capture new hiring. The Fed's three dissenters built their September hike case on a tight labor market. The data this week says the labor market is tight in the sense of low unemployment and low layoffs, but not tight in the sense of sustained new hiring pressure. That distinction matters enormously for whether wage inflation re-accelerates.</li>
+          <li>The Freddie Mac 30-year mortgage at 6.69% is the week's clearest illustration of how much depends on this morning's BLS number. A 6.69% rate was priced when the market was uncertain whether Wednesday's ADP miss or Thursday's claims strength was the real signal. A BLS number above 100,000 - confirming claims over ADP - likely pushes mortgage rates toward 6.75-6.85% by next Thursday, as September hike probability moves above 60%. A BLS number below 50,000 - confirming ADP over claims - likely pulls mortgage rates back toward 6.50-6.60% as the September hold becomes the base case and the bond market begins pricing the first cut. The 20-30 basis point range between those outcomes represents approximately $45-70 per month on a $400,000 mortgage - a meaningful real-money consequence of a single employment report.</li>
+        </ul>
+
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <p class="section-intro">The CD market is in a holding pattern that this morning's BLS number will resolve. If Friday's jobs report is consistent with the ADP signal, the September hike comes off the table and CD rates begin trending lower. If it confirms claims, the hike remains live and rates hold or drift slightly higher. Either way, this week has clarified that the window for 4.40%+ CD rates is closing - not because the Fed has acted, but because the market is now pricing the range of outcomes that follows today's report.</p>
+        <div class="data-line"><span class="data-label">National avg 1-yr CD (FDIC):</span> 1.68% APY <span class="flat">what most deposit dollars still earn at the average bank</span></div>
+        <div class="data-line"><span class="data-label">Best online 1-yr CD:</span> 4.40-4.50% APY <span class="up-green">top institutions including E*TRADE; a 2.6x+ premium over the national average on the same FDIC-insured product; rates have been slowly declining in recent weeks - 9 of 12 tracked institutions lowered rates since June</span></div>
+        <div class="data-line"><span class="data-label">Best high-yield savings account:</span> 4.21% APY <span class="up-green">Newtek Bank Personal High Yield Savings; broader range 4.01-4.21% at top institutions; liquid alternative to the 1-year CD if BLS this morning materially changes the rate path</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The rate trajectory over the next 60 days now depends almost entirely on whether today's BLS number confirms the ADP miss or the claims resilience. CD rates at 4.40-4.50% are available today. If BLS is above 100,000, September hike probability recovers toward 55-65% and there is a plausible case that 1-year CD rates drift toward 4.50-4.60% by late August as the bond market prices the September 16 meeting. If BLS is below 60,000, the hike comes off the table, 2-year Treasury moves toward 4.00%, and CD rates begin the cycle of declines that accompanies an expected rate pivot. In that scenario, 4.40% today is not a compromise - it is likely the peak available for an extended period. The window narrows further if the BLS print is in the 60,000-100,000 range: not weak enough to clearly remove September, not strong enough to clearly restore it. That middle scenario is the one where waiting costs savers the most.</li>
+        </ul>
+
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <p class="section-intro">Oil's Thursday rebound to $77.75 is the clearest illustration of where the Hormuz deal actually stands: agreed in principle between Iran and Oman, but not signed, not implemented, and not yet accepted by the US on its key sovereignty conditions. The market took back approximately half of Wednesday's 7% decline, pricing the framework as progress without treating it as a done deal.</p>
+        <div class="data-line"><span class="data-label">WTI Crude (Thursday close):</span> ~$77.75/barrel <span class="up-red">+3.37% from Wednesday's ~$75; rebounded as Iran and Oman announced agreement in principle on Hormuz shipping lane coordinates; WTI at $77.75 is approximately $15 below mid-July peak near $93 and approximately $5 above Wednesday's deal-optimism low; the range between a signed deal ($70-72 WTI) and a collapsed deal ($82-85 WTI) remains the oil market's central uncertainty</span></div>
+        <div class="data-line"><span class="data-label">Brent Crude:</span> ~$80-81/barrel <span class="up-red">rebounded in parallel with WTI; the Houthi attack on a Saudi tanker Wednesday continues to weigh on the risk premium separately from the Hormuz framework; Brent's spread to WTI reflects the global risk premium that a Hormuz deal alone does not eliminate</span></div>
+        <div class="data-line"><span class="data-label">Natural gas (Henry Hub):</span> ~$2.67/MMBtu <span class="down-red">-0.84% Thursday; US Lower 48 production averaged a record 110.7 Bcf/day in July; record supply is keeping a ceiling on prices even as summer cooling demand remains elevated</span></div>
+        <div class="data-line"><span class="data-label">National gas avg (AAA, August 6-7):</span> $4.063/gallon <span class="down-green">down from $4.098 last week; the crude price decline from last week is beginning to filter through the pump; half of all US states are now averaging below $4.00/gallon</span></div>
+        <div class="data-line"><span class="data-label">West Coast:</span> ~$5.05-5.14/gallon <span class="up-red">California near $5.40-5.62; Hawaii $5.45; West Coast refinery constraints amplify crude moves in both directions; relief from crude's mid-week decline will arrive last in California</span></div>
+        <div class="data-line"><span class="data-label">Lowest-price states:</span> Indiana $3.54, South Carolina $3.61, Tennessee $3.61 <span class="down-green">Gulf Coast states benefiting most from lower crude and proximity to refinery capacity; these markets will reflect Thursday's oil rebound first</span></div>
+        <div class="data-line"><span class="data-label">Hormuz deal status:</span> Iran and Oman agreed in principle on shipping lane coordinates; a joint statement described as "in the final drafting stage"; the US has rejected any arrangement that (a) grants Iran toll authority or (b) establishes Iranian sovereignty over the strait; Iran's foreign ministry said the framework "is not subject to US interference" - the US-Iran gap on this point is structural, not a drafting issue</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Thursday's oil rebound to $77.75 is not a reversal of the Hormuz deal thesis - it is the market's recalibration to where the deal actually stands. Wednesday priced a signed deal. Thursday priced a framework. The distance between those two states is larger than the market assumed on Wednesday afternoon when Bessent said "today or tomorrow." The US-Iran sovereignty dispute over whether Iran can charge transit fees for ships using the Hormuz corridor is not a drafting detail. It is a fundamental question about who controls the strait. Iran's position - that the framework is between Iran and Oman and is not subject to US interference - is incompatible with the US position that no deal can include Iranian toll authority. Those two positions have to be reconciled or the deal fails. Oil at $77.75 is pricing a roughly 50/50 probability that the reconciliation happens. A signed deal takes WTI toward $70-72 within days. A breakdown takes it back above $82-83.</li>
+          <li>Gas at $4.063 nationally is moving in the right direction for household budgets, but the 2-to-4 week lag between crude price movements and pump prices means Thursday's oil rebound will show up at the pump in mid-to-late August. For Gulf Coast consumers who were approaching $3.50 earlier this week on the WTI drop toward $75, Thursday's rebound to $77.75 removes roughly $0.08-0.12 of the anticipated pump-price decline. For California drivers who were not going to see pump relief anyway, the crude move in either direction matters less than the refinery capacity constraints that keep California prices structurally above the national average regardless of WTI levels.</li>
+        </ul>
+
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <p class="section-intro">Gold held near $4,262 on Thursday as the strong claims data and oil rebound created a mixed signal for precious metals: hawkish indicators (strong claims, rising crude) would normally pressure gold, but the Hormuz deal's incompleteness kept the geopolitical bid intact. Silver consolidated after Wednesday's 4.61% gain. Copper held above $6.70.</p>
+        <div class="data-line"><span class="data-label">Gold / oz:</span> ~$4,262 <span class="flat">approximately flat from Wednesday's $4,278; strong claims data and rising Treasury yields applied modest downward pressure; Hormuz deal uncertainty - the framework is not yet a signed agreement - maintained the safe-haven bid; gold has traded above $4,000 for over a week and remains near its all-time high</span></div>
+        <div class="data-line"><span class="data-label">Silver / oz:</span> $61.41 <span class="down-red">-0.99% Thursday; gave back a small portion of Wednesday's 4.61% gain; silver's dual industrial-and-safe-haven character means Thursday's mixed signals - rising oil (positive for industrial demand) but higher yields (negative for non-yielding assets) - produced a modest net decline; silver remains strongly bid relative to its 2025 levels</span></div>
+        <div class="data-line"><span class="data-label">Copper / lb:</span> $6.71 <span class="up-green">+0.11% Thursday; holding above $6.60 support; ISM Manufacturing at 55.6% from Monday continues to provide a fundamental demand floor for copper; the oil rebound and claims strength are both modestly supportive for the copper demand thesis</span></div>
+        <div class="data-line"><span class="data-label">Corn (Sep) / bu:</span> $4.39 <span class="up-green">+2.25 cents Thursday; the Monday USDA Crop Progress update will be the next pricing event; corn holds a weather premium ahead of the August 12 official yield estimate</span></div>
+        <div class="data-line"><span class="data-label">Natural gas (Henry Hub):</span> $2.67/MMBtu <span class="down-red">-0.84% Thursday; record US production of 110.7 Bcf/day in July continues to cap prices despite summer cooling demand</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Gold's near-flat performance on Thursday - despite rising Treasury yields that would normally pressure gold sharply lower - is the clearest signal that institutional demand for gold is not simply a rate-path trade. Central banks and sovereign wealth funds that have been buying gold for the past 18 months are not selling because the 10-year moved from 4.63% to 4.67% on a single day's claims data. They are buying gold because of structural concerns: dollar reserve diversification, geopolitical risk that a single framework agreement does not resolve, and the judgment that real interest rates (nominal yield minus inflation) remain lower than historical precedent at a time when government fiscal deficits continue to expand. Those structural buyers are not moved by Thursday's 5 basis point yield increase.</li>
+          <li>Silver's 0.99% decline after Wednesday's 4.61% gain is not a reversal - it is a consolidation. The fundamental thesis for silver - dual safe-haven and industrial demand - remains intact. Thursday's mixed signals produced a mixed outcome. If the Hormuz deal is formally signed and crude continues its decline, silver's industrial component strengthens. If the deal fails and geopolitical uncertainty intensifies, the safe-haven component strengthens. Both scenarios are bullish for silver from current levels. The scenario that is bearish - a clean "risk-on" environment where rates rise sharply and geopolitical risk premia compress simultaneously - is not the current environment.</li>
+        </ul>
+
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <p class="section-intro">The next USDA Crop Progress update arrives Monday August 10 - the last weekly rating before the August 12 official yield estimate. The corn market has built in a weather premium on four consecutive weeks of declining good-to-excellent ratings. The August 12 report will quantify whether that premium was correctly sized.</p>
+        <div class="data-line"><span class="data-label">Corn (USDA Crop Progress, Aug 3 reading - most recent available):</span> 61% good-to-excellent <span class="up-red">fourth consecutive weekly decline; down from 63% (July 27), 65% (July 20), and 67% (July 13); four weeks of rating declines during grain fill's critical heat-sensitive window; soybeans at 63% good-to-excellent, unchanged from prior week</span></div>
+        <div class="data-line"><span class="data-label">Drought (latest USDA monitor):</span> approximately 47.9% of the Lower 48 in moderate drought or worse <span class="up-red">Northern Plains continuing to deteriorate; Corn Belt conditions are the primary driver of the four-week corn rating decline</span></div>
+        <div class="data-line"><span class="data-label">Corn development:</span> approximately 90% silking; grain fill in its final critical window; the heat stress accumulated over July has been absorbed by the crop and will be reflected in the August 12 official yield number</div>
+        <div class="data-line"><span class="data-label">Corn futures (Sep) / bu:</span> $4.39 <span class="up-green">+2.25 cents; holding the weather premium ahead of Monday's USDA Crop Progress and the August 12 yield estimate; the market is in a wait-and-see posture; the premium has been stable because no new weather data has materially changed the supply picture since July</span></div>
+        <div class="data-line"><span class="data-label">Key dates:</span> Monday Aug 10 - USDA Crop Progress (last weekly rating before the official yield); Wednesday Aug 12 - USDA crop production report (first official yield incorporating July heat stress) and July CPI, both at 8:30 AM ET</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The August 12 USDA crop production report will quantify what four weeks of declining corn ratings and July heat stress have done to yield prospects. If the official yield comes in below the USDA's current baseline (around 181 bushels per acre), corn futures will likely rally sharply and add a food-inflation component to the August 12 CPI reading that arrives simultaneously. The scenario that most complicates the Fed's September decision is a below-trend corn yield combined with July CPI showing food price re-acceleration. That combination restores the three FOMC dissenters' strongest remaining argument - that supply-side inflation is not over - even if Friday's BLS number is soft enough to weaken the labor-market side of the hike case.</li>
+        </ul>
+
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <p class="section-intro">Freddie Mac's 30-year mortgage rising to 6.69% on Thursday reversed the expected direction. The housing market needed rates to fall, not rise, and this week's data has produced the opposite result. The BLS print this morning has a more direct short-term impact on mortgage rates than any other event this month.</p>
+        <div class="data-line"><span class="data-label">30-yr fixed mortgage (Freddie Mac, August 7):</span> 6.69% <span class="up-red">up 3 bps from 6.66% last week; the PMMS captures the prior Thursday-Wednesday lending environment; this reading reflects a market that absorbed Wednesday's disinflation trade but also Thursday's strong claims data and yield increases; next reading August 14</span></div>
+        <div class="data-line"><span class="data-label">15-yr fixed mortgage (Freddie Mac, August 7):</span> 6.01% <span class="down-green">down 3 bps from 6.04%; refinance-oriented borrowers with shorter time horizons see a slight improvement</span></div>
+        <div class="data-line"><span class="data-label">National median list price (July 2026):</span> $428,950 <span class="down-red">-2.4% year-over-year; ninth consecutive month of year-over-year price declines; the market's asking price is moving in the right direction for buyers, but the combination of 6.69% rates and prices still near all-time highs keeps affordability constrained</span></div>
+        <div class="data-line"><span class="data-label">Listings with price reductions:</span> 20.0% <span class="flat">one in five active listings is carrying a price cut; sellers are adjusting to a market where buyers are constrained by both rate levels and median prices that remain elevated relative to incomes</span></div>
+        <div class="data-line"><span class="data-label">Completed home sales (Zillow, July estimate):</span> +7% YoY <span class="up-green">strongest year-over-year gain of 2026; but new purchase contracts fell -7.7% month-over-month and -3.7% week-over-week per Redfin pending sales; the divergence suggests a spring-to-summer transition effect that may be reversing as mortgage rates rise</span></div>
+        <div class="data-line"><span class="data-label">FHA delinquency:</span> 11.88% <span class="up-red">nine points above conventional delinquency; first-time and lower-income buyers under sustained affordability stress</span></div>
+        <div class="data-line"><span class="data-label">Foreclosure starts (H1 2026, ATTOM):</span> 164,566 <span class="up-red">+18% year-over-year; June alone +20% YoY; concentrated in markets where median home prices rose most sharply in 2022-2023</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Freddie Mac's 30-year rate at 6.69% - moving up, not down - is the housing market's week-in-review in a single number. Buyers who were watching for a post-Hormuz, post-ADP rate decline to materialize in the weekly survey got the opposite. The 10-year Treasury at 4.668% on Thursday is still approximately 5 basis points higher than Wednesday's level, and the Freddie Mac survey captured exactly that move. The path to meaningful mortgage rate relief - 6.50% or below - requires either a definitive Hormuz deal reopening (lower inflation expectations for oil) combined with a soft BLS print (lower rate path), or a standalone BLS miss so large that September is definitively removed from the table. Neither condition is confirmed as of this morning. The BLS number at 8:30 AM ET is the next direct input. If it comes in below 60,000, mortgage rates could fall materially by next Thursday's Freddie Mac reading. If it comes in above 100,000, 6.69% may look like a temporary floor.</li>
+          <li>The divergence in the housing data - completed sales +7% YoY while new contracts fall 7.7% month-over-month - is a timing artifact of when the spring buying season transactions closed. The contracts signed in May and June (when rates were briefly lower and seasonal demand was at its peak) are closing now, producing the positive YoY completed-sales figure. The new contract data shows what is happening in real time: buyers are stepping back as rates hold above 6.65%. That step-back will appear in completed-sales data in 30-60 days. The August data will tell a different story from the July data that looks positive today.</li>
+        </ul>
+
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <p class="section-intro">Thursday's claims and ADP divergence is the household finance story of the week, and the BLS report this morning is its resolution. The labor market determines household income growth. Two labor indicators - ADP and claims - are telling opposite stories. The third - BLS - settles it.</p>
+        <div class="data-line"><span class="data-label">Initial claims (week ending Aug 1):</span> 199,000 <span class="down-green">third consecutive week below 200K; the safest leading indicator of household income stability is layoffs; at 199,000, layoffs are at a 57-year sustained low; households are keeping their jobs even as hiring slows</span></div>
+        <div class="data-line"><span class="data-label">ADP July private payrolls:</span> +44,000 <span class="down-red">worst in six months; the household income growth rate slows when new hiring slows; at 44,000 new jobs per month, total employment is growing by less than one-tenth of a percent per month, which is below the rate required to absorb new workforce entrants and sustain income growth across the full labor force</span></div>
+        <div class="data-line"><span class="data-label">Challenger job cuts (July 2026):</span> 33,429 <span class="down-green">lowest in two years; AI cited as top reason for 5th consecutive month; the pattern - AI eliminations concentrated in white-collar roles while overall layoffs are historically low - is creating a K-shaped labor market within the knowledge economy itself: AI-adjacent roles are gaining and AI-replaceable roles are under structural pressure</span></div>
+        <div class="data-line"><span class="data-label">PCE inflation (June, Commerce Dept.):</span> -0.1% MoM <span class="down-green">+3.7% YoY; July CPI releases August 12; the June PCE deflation is the most recent read on whether household purchasing power is improving</span></div>
+        <div class="data-line"><span class="data-label">Core PCE (ex-food &amp; energy, June):</span> +0.1% MoM <span class="flat">+3.3% YoY; 1.3 percentage points above target; three consecutive months at or above 3.3%</span></div>
+        <div class="data-line"><span class="data-label">Gas prices (national avg, Aug 6-7):</span> $4.063/gallon <span class="down-green">down from $4.098 last week; 50% of US states now below $4.00; the oil price movements of this week have not yet fully transmitted to the pump; the net effect of this week's oil volatility ($81 to $75 to $77.75) will appear at pumps in mid-to-late August</span></div>
+        <div class="data-line"><span class="data-label">Credit card APR (composite avg, Aug 2026):</span> ~22.18% <span class="flat">remains historically elevated; will not decline until the Fed cuts rates; the ADP miss and soft BLS risk have moved the rate-cut timeline earlier but not yet confirmed it; households carrying revolving balances are paying over $220 per year in interest for every $1,000 on their card</span></div>
+        <div class="data-line"><span class="data-label">Personal savings rate (June):</span> 2.7% <span class="down-red">spending continues to outrun income at the national level; at 44,000 new jobs per month, income growth decelerates further; if BLS confirms ADP this morning, the savings rate trajectory becomes even more concerning</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The Challenger data - 33,429 announced cuts in July, the lowest in two years, with AI as the top reason for the fifth month running - is the most granular description of what is actually happening to household employment. AI is eliminating specific roles (data processing, customer service, certain white-collar analytical tasks) at the same time that overall layoffs are historically low. The result is a labor market where the experience of job loss is concentrated in identifiable categories while the aggregate statistics remain benign. Claims at 199,000 are the aggregate statistic. The Challenger data is the category-level reality. For households in AI-exposed roles, the question of whether the labor market is "healthy" is not answered by the claims number.</li>
+          <li>Gas at $4.063 nationally - down from $4.098 last week - is the one unambiguous household budget positive of the week. The 2-to-4 week transmission lag means consumers are seeing crude from approximately two weeks ago at the pump, which was in the $79-82 range. If $77.75 WTI holds through next week, pump prices move toward $3.90-4.00 nationally by late August, potentially crossing below $4.00 for the first time since early July. That is approximately $15 per fill-up of relief on a 15-gallon tank compared to mid-July prices. For the median household spending $130 per month on fuel, that is roughly $30-40 per month in purchasing power recovery - real relief, but insufficient to offset a 2.7% savings rate and 22% credit card APR.</li>
+        </ul>
+
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <p class="section-intro">Bitcoin held near $64,400 through Thursday and into Friday morning's pre-market as the labor market uncertainty and Hormuz deal ambiguity kept risk assets range-bound. The BLS report at 8:30 AM ET is the most direct near-term macro input for crypto as well as equities.</p>
+        <div class="data-line"><span class="data-label">Bitcoin (BTC):</span> ~$64,400 Thursday; ~$64,382 early Friday morning <span class="flat">-0.69% Friday pre-market; holding above the $63,000 support level; institutional ETF inflows remain a structural bid - BlackRock's IBIT pulled in over $170 million of the $211 million in total daily ETF inflows Thursday; Bitcoin is not reacting materially to either the ADP miss or the claims strength, continuing its pattern of behavioral uncorrelation with both equity sectors</span></div>
+        <div class="data-line"><span class="data-label">Ethereum (ETH):</span> ~$1,907 Thursday <span class="flat">neutral momentum; holding support at $1,807; the CLARITY Act continues to provide a constructive regulatory backdrop</span></div>
+        <div class="data-line"><span class="data-label">Rate-path context:</span> <span class="flat">September hike probability at approximately 40-50% heading into BLS; a soft BLS print (below 60,000) reduces September probability materially and is marginally positive for crypto via lower rate expectations; a strong BLS print (above 100,000) raises September probability and is modestly negative; neither outcome is large enough to drive Bitcoin outside its current $63,000-$66,000 range on its own</span></div>
+        <div class="data-line"><span class="data-label">CLARITY Act context:</span> crypto regulatory legislation advancing in Congress; providing a policy backdrop that has unlocked institutional allocators who required regulatory clarity before making material new allocations to digital assets</div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Bitcoin's modest -0.69% Friday pre-market move, following a week that included a 28.7% crash in AppLovin, a 10%+ crash in SK Hynix, a 7% oil drop, and a 3.4% oil recovery, underscores the uncorrelation thesis that institutional Bitcoin buyers have been making for 18 months. The asset is simply not reacting to the week's volatility at scale. BlackRock's IBIT inflows at $170 million Thursday - the largest single-day ETF inflow this week - suggest that the institutional bid is treating Bitcoin's current $63,000-$66,000 range as an accumulation zone rather than a distribution zone. The BLS number at 8:30 AM ET will produce a short-term directional move in crypto as it produces moves across risk assets. But the structural story - regulatory clarity, institutional ETF flows, and behavioral uncorrelation from equity sectors - is unlikely to change on the basis of one employment report.</li>
+        </ul>
+
+        <h2 class="section-title" id="world">Around the World</h2>
+        <p class="section-intro">Asian markets edged modestly lower in the Friday session as semiconductor stocks stabilized after the week's severe declines. European markets closed positive Thursday, benefiting from declining crude ahead of the Dow's late-day sell-off. Brazil's ongoing rate-cut cycle continues to offer a potential preview of developed market rate trajectories.</p>
+        <div class="data-line"><span class="data-label">Nikkei 225 (Thursday Aug 6):</span> <span class="down-red">declined as semiconductor-related names remained under pressure; Tokyo Electron and Advantest extended losses from Wednesday as the Korean chip rout spread through the global semiconductor supply chain; broader TOPIX was more resilient, with non-tech names partially offsetting the chip-stock weakness</span></div>
+        <div class="data-line"><span class="data-label">Korean market (context):</span> <span class="down-red">the KOSPI's -4.58% decline on Wednesday (Samsung -6.3%, SK Hynix -10.37%) represented the most consequential single session in the Korean semiconductor market since July 31's historic 18% rebound; Goldman Sachs and JPMorgan maintained Buy ratings on SK Hynix and Samsung post-decline, noting forward P/E ratios of approximately 3.5-3.6x that are "detached from fundamentals" at current price levels; the circuit-breaker triggered briefly on the KOSPI during the session</span></div>
+        <div class="data-line"><span class="data-label">Asian markets (Friday Asia session):</span> <span class="flat">edged modestly lower as markets awaited the BLS jobs report at 8:30 AM ET; the Middle East awaited a formal Hormuz announcement; semiconductor stocks stabilized after the week's severe declines rather than extending them</span></div>
+        <div class="data-line"><span class="data-label">European markets (Thursday close):</span> DAX +0.5%, FTSE 100 +0.4%, CAC 40 +0.1%, Euro Stoxx 50 +0.49% <span class="up-green">all closed positive before the US session deteriorated; European markets benefited from lower crude and solid corporate earnings; the positive European close reflects a continent whose manufacturing sector benefits directly from lower energy prices</span></div>
+        <div class="data-line"><span class="data-label">Brazil:</span> Copom delivered its fourth consecutive rate cut, lowering the Selic rate to 14.00%; Brazil's rate cycle is running approximately 12-18 months ahead of the US and other developed markets; in the scenario where Friday's BLS print is weak enough to put the first US rate cut on the table, Brazil's current cycle is the most relevant historical analogue for what that pivot looks like in practice</div>
+        <div class="data-line"><span class="data-label">China Manufacturing PMI (July official):</span> 49.2 <span class="down-red">first contraction in five months; weak domestic demand; the US-China manufacturing divergence - US ISM at 55.6%, China official PMI at 49.2% - continues to widen; AI infrastructure spending, semiconductor supply chains, and power infrastructure investment are concentrated outside China in this cycle</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The SK Hynix and Samsung declines from Wednesday are the international story that matters most for the AI investment thesis this week. Goldman Sachs and JPMorgan maintaining Buy ratings at 3.5-3.6x forward P/E for Samsung and SK Hynix is a signal that institutional money views Wednesday's decline as an inventory-cycle correction, not a demand-destruction event. The AI infrastructure spending cycle - Nvidia, AMD, hyperscaler capex - is not ending. The memory chip inventory build-up cycle that always accompanies rapid demand growth is producing the same kind of correction that semiconductor cycles always produce: supply catches up, inventory rises, prices and margins compress, stocks correct. What is happening in Korea is a mid-cycle inventory normalization within a multi-year structural demand expansion, not the end of the AI capex cycle. The distinction matters for anyone who owns semiconductor-adjacent assets.</li>
+          <li>European markets closing positive Thursday - DAX +0.5%, FTSE +0.4%, CAC +0.1% - reflect the most direct beneficiary of lower crude oil prices among the major developed market economies. Europe imports essentially all of its crude; a sustained WTI at $75-78 versus the mid-July peak near $93 is a direct GDP benefit equivalent to several tenths of a percentage point of growth. European manufacturing, which has been under pressure from Chinese competition and high energy costs, benefits disproportionately from lower oil. The DAX's positive close on a day when the Dow fell 464 points illustrates that energy-importing economies experience lower oil prices differently from oil-exporting or oil-neutral economies.</li>
+        </ul>
+
+        <h2 class="section-title" id="events">This Week's Events</h2>
+        <p class="section-intro">Four of the five trading days of the most data-dense week of the summer are behind us. Every day produced a major data point. Friday's BLS report resolves the week's central labor market question.</p>
+        <div class="data-line"><span class="data-label">Monday Aug 3 (done)</span> - ISM Manufacturing: 55.6% (4-year high; vs 49.5 consensus). USDA Crop Progress: corn fell to ~61% good-to-excellent, fourth consecutive weekly decline. Trump canceled Iran military strikes - oil -7% to ~$79 WTI. Markets: Dow record 53,178, S&amp;P 500 7,600.50.</div>
+        <div class="data-line"><span class="data-label">Tuesday Aug 4 (done)</span> - JOLTS June job openings: 7.359M (slight miss; low-hire, low-fire equilibrium). S&amp;P 500: 7,736.52 (record). Dow: 54,085.88 (record). Palantir +29% (revenue $1.935B, +93% YoY). SpaceX Q2: $7.8B revenue, SPCX -8.56% after-hours on $18.4B quarterly capex. AMD Q2: $11.5B revenue record, data center +107%; -8.94% after-hours. September hike probability: ~55-56%.</div>
+        <div class="data-line"><span class="data-label">Wednesday Aug 5 (done)</span> - ADP July private payrolls: +44,000 (vs ~70,000 forecast; worst in 6 months). ISM Services PMI: 54.1%; employment index 47.4% (back in contraction). Treasury Secretary Bessent: Hormuz deal "today or tomorrow" - WTI fell from $81 to ~$75. Houthis claim attack on Saudi tanker. AppLovin -28.7% on 0.8% revenue miss. Dow: third consecutive record 54,349.06. KOSPI: -4.58%; Samsung -6.3%, SK Hynix -10.37%. September hike probability fell sharply.</div>
+        <div class="data-line"><span class="data-label">Thursday Aug 6 (done)</span> - Initial jobless claims (week ending Aug 1): 199,000 (third consecutive week below 200K; longest streak since 1969; 4-week average 198,750). Challenger job cuts: 33,429 (2-year low; AI top reason for 5th month). Iran-Oman agree in principle on Hormuz shipping lane coordinates (not yet signed). WTI rebounds 3.4% to $77.75. Dow snaps 3-day record streak: -464 to 53,885. S&amp;P 500: -0.18% to 7,709.96. Nasdaq: -0.06% to 26,348.35. Russell 2000: -0.58% to 3,001.55. 10-yr Treasury: 4.668%. Freddie Mac 30-yr: 6.69% (up from 6.66%). September hike probability partially restored on strong claims.</div>
+        <div class="data-line"><span class="data-label">Today, Fri Aug 7</span> - BLS July jobs report (8:30 AM ET): the decisive input for September rate probability; consensus ~83,000-87,500 nonfarm payrolls, unemployment rate 4.2%; ADP's 44,000 puts the whisper number well below consensus; claims at 199,000 partially restores it; above 100,000 restores September hike probability toward 55-60%; below 50,000 likely removes September from the base case; June was 57,000. S&amp;P 500 futures +0.13% early Friday.</div>
+        <div class="data-line"><span class="data-label">Aug 10 (Mon)</span> - USDA Crop Progress: last weekly crop rating before the August 12 official yield estimate; fifth consecutive week of corn readings will set the final weather-premium level ahead of the official number.</div>
+        <div class="data-line"><span class="data-label">Aug 12 (Wed)</span> - July CPI + USDA crop production report (first official corn yield estimate incorporating July heat stress): both at 8:30 AM ET. The double-header that determines whether food-driven inflation re-accelerates ahead of the September FOMC. A below-trend corn yield combined with re-accelerating food CPI is the data package that would most restore the three FOMC dissenters' September hike case even after today's BLS number.</div>
+        <div class="data-line"><span class="data-label">Sep 15-16</span> - Next FOMC meeting. September probability is currently approximately 40-50%, caught between Wednesday's ADP miss and Thursday's strong claims; today's BLS number is the highest-leverage single input remaining before that meeting.</div>
+
+        <div class="disclaimer">
+          <p>A free weekly snapshot for the Totem community. General information only - not investment advice or a recommendation to buy or sell anything. Figures reflect the latest readings available as of Friday, August 7, 2026. US equity figures reflect August 6, 2026 closing levels (most recent trading day). Treasury yields reflect August 6, 2026 trading levels. Crypto prices reflect August 6-7 pre-market readings. Mortgage rates reflect the Freddie Mac PMMS survey (August 7, 2026). Gas prices reflect the most recent AAA data as of August 6-7. PCE data reflects the Commerce Department June 2026 release. CPI reflects the BLS June 2026 release. ADP data reflects the August 5, 2026 ADP National Employment Report for the July 2026 survey period. ISM Services data reflects the August 5, 2026 ISM release. Jobless claims reflect the August 6, 2026 Department of Labor release (week ending August 1, 2026). Challenger job cuts reflect the August 6, 2026 Challenger, Gray &amp; Christmas release for July 2026. Hormuz status reflects August 6-7 reporting. Commodity prices reflect August 6, 2026 trading levels. Crop progress reflects the USDA weekly release of August 3, 2026.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#friday-morning"><span class="dot"></span>Friday Morning</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>This Week's Events</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_august7_2026.html">August 7, 2026</a></li>
+          <li><a href="market_pulse_august6_2026.html">August 6, 2026</a></li>
+          <li><a href="market_pulse_august5_2026.html">August 5, 2026</a></li>
+          <li><a href="market_pulse_august4_2026.html">August 4, 2026</a></li>
+          <li><a href="market_pulse_august3_2026.html">August 3, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We're looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. General information only - not investment advice or a recommendation to buy or sell anything.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+    document.querySelectorAll('h2.section-title[id]').forEach(function(el){
+      var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var dot=document.querySelector('.toc a[href="#'+el.id+'"] .dot');if(dot){dot.style.opacity='0';dot.style.transform='scale(0)';}}});},{rootMargin:'-20% 0px -60% 0px'});
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
