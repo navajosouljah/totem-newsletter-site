@@ -45,6 +45,18 @@ Always verify the aliased URL in the deploy output reads `totem-challenge-previe
 
 **Why all files, not just today's article:** Every page on the site (index, archive, all articles, all challenge issues) shares the same nav. Stripping only the new article leaves Email Copy and Emergency PO visible to readers on every other page.
 
+## Market Pulse — Tracked Assets
+
+### Crypto (always research and include data lines for all of these)
+
+| Asset | Ticker | Notes |
+|---|---|---|
+| Bitcoin | BTC | Price, ETF inflows (IBIT etc.), rate-path sensitivity |
+| Ethereum | ETH | Price, regulatory backdrop (CLARITY Act), support levels |
+| XRP | XRP | Price, ETF inflows, CLARITY Act legislative status, on-chain metrics (DAA, network growth), escrow unlocks |
+
+Search for each asset's price every morning. For XRP specifically: check ETF inflows (cumulative and monthly), CLARITY Act Senate status, on-chain metrics (Daily Active Addresses, network growth from Santiment), and Ripple escrow unlock schedule.
+
 ## Agent skills
 
 ### Issue tracker
