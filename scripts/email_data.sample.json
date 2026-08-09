@@ -1,0 +1,26 @@
+{
+  "_comment": "Worked example: the August 1, 2026 edition. Copy this file to email_data.json, replace every field from the FINISHED article (never from memory), then run: node scripts/build_emails.mjs scripts/email_data.json",
+  "edition_file": "market_pulse_august1_2026.html",
+  "day_date": "Saturday, August 1, 2026",
+  "date_label": "August 1, 2026",
+  "headline_short": "Cloud Earnings Outrun a Divided Fed",
+  "preheader": "Three Fed officials voted to hike. The 30-year mortgage hit 6.66%. Gas is up 97 cents in a year. And the best 1-year CDs at 4.40% suddenly look durable.",
+  "lead": {
+    "headline": "Three Fed officials voted to raise rates this week - the first triple dissent toward a hike this cycle - and the bond market listened. The 10-year Treasury ended the week at 4.75% and the 30-year mortgage at 6.66%, even after a soft GDP print and the first monthly decline in consumer prices since April 2020.",
+    "context": "Stocks rallied anyway on the strength of the cloud earnings below. The bigger takeaway: cheap money is not coming back on the schedule markets assumed a month ago, and that changes the math for savers and borrowers alike.",
+    "link_anchor": "rates",
+    "link_text": "Read what a divided Fed means for rates, CDs, and mortgages"
+  },
+  "bullets": [
+    { "bold": "Big Tech split into two tiers.", "rest": "Microsoft rose 15% on Azure's 43% growth and Amazon crossed $200B in quarterly revenue with AWS up 37% - while Meta fell 9% on weak guidance and Apple guided below consensus on rising memory costs." },
+    { "bold": "The week's gain hides a narrow market.", "rest": "The S&amp;P 500 added 1.0% and the Nasdaq 1.6%, but the Russell 2000 sat flat - small caps got no invitation to the cloud rally. The VIX fell to 16." },
+    { "bold": "Gas crossed $4.10 nationally, up 97 cents from a year ago.", "rest": "California is paying $5.49 while the Gulf Coast pays $3.69 - the widest practical spread in the country." },
+    { "bold": "Foreclosure starts are up 18% year over year, and FHA delinquency hit 11.88%.", "rest": "Distress is building at the edges of the housing market even as the median price set a record $440,600 - two markets wearing one average." },
+    { "bold": "The best 1-year CDs at 4.40% now look durable rather than fleeting.", "rest": "The national average bank still pays 1.68% on the same insured product - a 2.6x gap that a phone call closes." }
+  ],
+  "subjects": [
+    { "subject": "Three Fed officials just voted to raise rates. The market rallied anyway.", "note": "Curiosity-driven - the dissent-vs-rally tension is the week's hook" },
+    { "subject": "Cloud Earnings Outrun a Divided Fed - August 1 Market Pulse", "note": "Data-first, scannable - works well for financial audiences" },
+    { "subject": "Gas crossed $4.10 the same week the Fed closed the door on rate relief.", "note": "Narrative - connects the pump price to the Fed decision" }
+  ]
+}
