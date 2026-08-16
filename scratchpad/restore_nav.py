@@ -2,7 +2,7 @@
 """Restore editorial-only nav links to all public HTML files after live deploy."""
 import os, re, glob
 
-REPO = "/home/user/totem-newsletter-site"
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root, works on any machine
 SKIP = {"email_copy.html", "emergency_po.html"}
 
 EMAIL_COPY_LI = '      <li><a href="email_copy.html">Email Copy</a></li>'
