@@ -9,7 +9,8 @@ EMAIL_COPY_LI = '      <li><a href="email_copy.html">Email Copy</a></li>'
 EMERGENCY_PO_LI = '      <li><a href="emergency_po.html">Emergency PO</a></li>'
 
 # Insert before </ul> inside the nav block (first occurrence)
-ANCHOR = re.compile(r'(<li><a href="archive\.html">Archive</a></li>)(.*?)(</ul>)', re.DOTALL)
+# [^>]* tolerates class="live" on archive.html's own nav (missed archive.html on Aug 15 without it)
+ANCHOR = re.compile(r'(<li><a href="archive\.html"[^>]*>Archive</a></li>)(.*?)(</ul>)', re.DOTALL)
 
 changed = []
 for path in glob.glob(os.path.join(REPO, "*.html")):
