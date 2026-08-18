@@ -2,14 +2,15 @@
 """Restore editorial-only nav links to all public HTML files after live deploy."""
 import os, re, glob
 
-REPO = "/home/user/totem-newsletter-site"
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root, works on any machine
 SKIP = {"email_copy.html", "emergency_po.html"}
 
 EMAIL_COPY_LI = '      <li><a href="email_copy.html">Email Copy</a></li>'
 EMERGENCY_PO_LI = '      <li><a href="emergency_po.html">Emergency PO</a></li>'
 
 # Insert before </ul> inside the nav block (first occurrence)
-ANCHOR = re.compile(r'(<li><a href="archive\.html">Archive</a></li>)(.*?)(</ul>)', re.DOTALL)
+# [^>]* tolerates class="live" on archive.html's own nav (missed archive.html on Aug 15 without it)
+ANCHOR = re.compile(r'(<li><a href="archive\.html"[^>]*>Archive</a></li>)(.*?)(</ul>)', re.DOTALL)
 
 changed = []
 for path in glob.glob(os.path.join(REPO, "*.html")):

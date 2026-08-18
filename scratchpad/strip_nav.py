@@ -2,7 +2,7 @@
 """Strip editorial-only nav links from all public HTML files before live deploy."""
 import os, re, glob
 
-REPO = "/home/user/totem-newsletter-site"
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root, works on any machine
 SKIP = {"email_copy.html", "emergency_po.html"}
 PATTERNS = [
     re.compile(r'\s*<li><a href="email_copy\.html">Email Copy</a></li>\n?'),
