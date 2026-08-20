@@ -54,6 +54,48 @@ Always verify the aliased URL in the deploy output reads `totem-challenge-previe
 
 This applies to: index.html post-cards, archive.html post-cards, and the hero `cap-title` on index.html.
 
+## Market Pulse Email Format
+
+**Never change the email format without JJ's explicit instruction.** Content updates only - dates, data, links. The structure is locked.
+
+### Schedule
+- **Monday - Thursday:** Market Pulse email only. Member and non-member use the same structure (see below). No additions, no extra sections.
+- **Friday:** Different format (Challenge lead + Market Pulse). Do not apply Friday's structure to Mon-Thu.
+
+### Structure (Mon-Thu, both member and non-member)
+
+1. **Masthead** - TOTEM LC GROUP + tagline
+2. **Navy date bar** - "Day, Month DD, YYYY · Member Edition" (members) or baked into the hero kicker (non-members)
+3. **Market Pulse hero block** - navy gradient, linked to today's article on totem-challenge-preview.vercel.app
+4. **Hero headline** - article's 2-3 sentence headline, date below it, "Read Today's Market Pulse" CTA button
+5. **Lead paragraph** (Spectral 21px bold) - **3-4 sentences max. Teaser/trailer only.** Hook with the biggest data point, add 2-3 supporting facts. Stop. The goal is to make the reader click - not to summarize the briefing. If you would keep reading past sentence 4, cut it.
+6. **Data snapshot** (Inter 14px) - quick-reference line: key closes, crypto, energy, upcoming catalysts
+7. **Inline link** - one sentence pointing to the most compelling section of the article
+8. **Divider**
+9. **"Also in Today's Briefing"** - gold-bullet label, then 5 bullets. Each bullet: bold topic sentence + 2-3 sentences of context. Scannable, not exhaustive.
+10. **"Read the Full Briefing"** CTA button - links to today's article
+11. **Footer** - disclaimer + Totem LC Group sig
+
+### Lead paragraph rule (the most violated rule)
+
+The lead is a movie trailer, not a plot summary. Good test: if someone could skip clicking after reading it because they already know the story, it is too long. Cut until they have to click to find out what happened.
+
+**Too long (7 sentences - do not do this):**
+> "July housing starts crashed to 1.239 million SAAR - 11% below the 1.39 million consensus and the biggest miss since mid-2020. Building permits beat at 1.443 million, the one constructive datapoint in Tuesday's report. The 30-year Treasury surged to 5.33%, a 19-year high, as bond markets priced stagflation: a housing-led slowdown with no Fed relief in sight. Chip stocks led Nasdaq down 1.33% to 26,289.71. S&P 500 settled at 7,691.76. Gold fell toward $4,340 as the real yield surge outweighed Brent's inflation support. Brent approached $92 - fourth consecutive session of gains, still no successor MOU."
+
+**Correct (4 sentences - approved format):**
+> "July housing starts crashed to 1.239 million SAAR - 11% below the 1.39 million consensus, the biggest miss since mid-2020. The 30-year Treasury hit 5.33%, a 19-year high, as markets priced stagflation. Chip stocks led Nasdaq down 1.33% to 26,289.71. Brent approaching $92 for a fourth straight session."
+
+### Member vs. non-member differences (only these two)
+
+| Element | Member | Non-member |
+|---|---|---|
+| `<title>` | `Market Pulse - [Date] - Member Edition` | `Market Pulse - [Date]` |
+| Hero kicker | `[Day], [Date] · Member Edition` | `[Day], [Date] · [Day] Briefing` |
+| Footer disclaimer | "You are receiving this email as a member of Totem LC Group..." | "A free weekly snapshot for the Totem community..." |
+
+Everything else is identical. Do not add member-only sections, greetings, transaction alerts, or Challenge blocks to Mon-Thu emails without explicit authorization.
+
 ## Market Pulse — Tracked Assets
 
 ### Crypto (always research and include data lines for all of these)
