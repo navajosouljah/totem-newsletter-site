@@ -108,17 +108,19 @@ This applies to: index.html post-cards, archive.html post-cards, and the hero `c
 
 ### Structure (Mon-Thu, both member and non-member)
 
+**LOCKED FORMAT (confirmed Aug 25, 2026 — do not change without JJ's explicit instruction):**
+
 1. **Masthead** - TOTEM LC GROUP + tagline
-2. **Navy date bar** - "Day, Month DD, YYYY · Member Edition" (members) or baked into the hero kicker (non-members)
-3. **Market Pulse hero block** - navy gradient, linked to today's article on totem-challenge-preview.vercel.app
-4. **Hero headline** - article's 2-3 sentence headline, date below it, "Read Today's Market Pulse" CTA button
+2. **Gold 1px `<hr>` rule** - between masthead and hero block
+3. **Navy hero block** (navy gradient, `border-radius: 4px`) - self-contained, contains ALL of: kicker line, "Market Pulse" logo text, short headline (3 punchy sentences, white Spectral bold), and gold CTA button. Links to today's article on totem-challenge-preview.vercel.app. **No separate white card below the hero.**
+4. **Gold CTA button** (`#fcb900` background, dark text `#16181d`, `border-radius: 3px`) - inside the hero block. Label: "Read Today's Briefing". **No second CTA button anywhere else in the email.**
 5. **Lead paragraph** (Spectral 21px bold) - **the tension frame, not a teaser of the top story.** Two sentences. It must open a second subject to whatever the hero headline led with. See the Subject Variety Rule.
-6. **Data snapshot** (Inter 14px) - one line. Rounded figures. Never restates the lead paragraph in prose.
-7. **Inline link** - one sentence pointing readers to a section of the article that is NOT the day's biggest story. Its job is to prove there is a second read past the hero.
-8. **Divider**
-9. **"Five Things Only Totem Will Tell You Today"** - gold-bullet label, then 5 bullets. Each bullet: bold topic sentence + 2-3 sentences of context. Every bullet opens a distinct subject; no bullet may re-tell the hero story. See the Bullet Rule.
-10. **"Read the Full Briefing"** CTA button - links to today's article
-11. **Footer** - disclaimer + Totem LC Group sig
+6. **Data snapshot** (Inter 14px) - one line. Rounded figures. **Gold left border: 3px gold `<td>` + 14px padding-left.** Never restates the lead paragraph in prose.
+7. **Divider**
+8. **"Five Things Only Totem Will Tell You Today"** - gold-bullet label, then 5 bullets. Each bullet: bold topic sentence + 2-3 sentences of context. Every bullet opens a distinct subject; no bullet may re-tell the hero story. See the Bullet Rule.
+9. **Footer** - disclaimer + Totem LC Group sig
+
+**What is NOT in this email (do not add):** inline link row, second CTA button, separate white article card below the hero, navy date bar as a separate element (it is baked into the hero kicker).
 
 ### The lead paragraph is the tension frame
 
@@ -137,10 +139,9 @@ Read only the first 8 words of each of these opening units in order:
 2. Hero headline
 3. Lead paragraph
 4. Data snapshot
-5. Inline link
-6. Each of the five bullets
+5. Each of the five bullets
 
-**No two consecutive units may lead with the same subject.** On Aug 20 before the fix, 8 of 9 email units opened with or landed on Treasury. That is the failure mode. If the hero is the buyback, the lead is the consumer, the inline link points to Household Finance, and bullet 1 tells the reader something they can't get on CNBC about the buyback's *consequence*, not its facts.
+**No two consecutive units may lead with the same subject.** On Aug 20 before the fix, 8 of 9 email units opened with or landed on Treasury. That is the failure mode. If the hero is the buyback, the lead is the consumer, bullet 1 tells the reader something they can't get on CNBC about the buyback's *consequence*, not its facts.
 
 ### The Bullet Rule
 
