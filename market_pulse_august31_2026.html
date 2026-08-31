@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - August 31, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:32px 0 0;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:28px;line-height:1.15;letter-spacing:-0.015em;color:var(--ink);margin-bottom:12px;}
+  .dek{font-family:'Spectral',serif;font-weight:400;font-size:18px;line-height:1.5;color:#3b4048;margin-bottom:0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  h2.section-title{font-family:'Spectral',serif;font-weight:700;font-size:22px;line-height:1.2;letter-spacing:-0.01em;color:var(--ink);margin:26px 0 6px;padding-top:20px;border-top:1px solid var(--line);}
+  .section-intro{font-family:'Spectral',serif;font-style:italic;font-size:15px;line-height:1.5;color:var(--muted);margin-bottom:12px;}
+  .data-line{margin-bottom:6px;font-size:16px;line-height:1.5;font-family:'Spectral',serif;}
+  .data-label{font-weight:700;color:var(--ink);}
+  .up-green{color:#2d6a4f;font-weight:600;}
+  .down-green{color:#2d6a4f;font-weight:600;}
+  .up-red{color:#9b2c2c;font-weight:600;}
+  .down-red{color:#9b2c2c;font-weight:600;}
+  .flat{color:var(--muted);font-weight:600;}
+  .bottom-line-label{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-top:14px;margin-bottom:6px;}
+  .bottom-line-list{list-style:none;padding:0;margin:0 0 8px;}
+  .bottom-line-list li{padding-left:18px;position:relative;margin-bottom:7px;font-size:16px;line-height:1.55;color:var(--body);}
+  .bottom-line-list li::before{content:"\2022";position:absolute;left:0;color:var(--gold);font-weight:700;}
+  .bullet-list{list-style:none;padding:0;margin:0;}
+  .bullet-list li{padding-left:18px;position:relative;margin-bottom:8px;font-size:16px;line-height:1.55;}
+  .bullet-list li::before{content:"\2022";position:absolute;left:0;color:var(--navy);font-weight:700;}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:12px;line-height:1.65;color:var(--muted);}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}h2.section-title{font-size:20px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_august31_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_11.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Monday, August 31, 2026</span></div>
+        <h1 class="headline">US Strikes Iran's Larak Island - Brent Crosses $90 as Hormuz Tensions End August. S&amp;P Futures -0.27%, Gold -3% to $4,459 as Warsh's 57% September Odds Override the Safe-Haven Bid.</h1>
+        <p class="dek">The USDA Crop Progress at 4pm ET today is the day's only domestic binary. A fourth consecutive below-60% corn good-to-excellent reading sets the food-channel trajectory Warsh's September 11 CPI will have to answer.</p>
+      </div>
+
+      <div class="body">
+
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="lead-first"><span class="data-label">US forces struck two Iranian rocket launchers on Larak Island early Sunday</span> - the first US military strike in the Strait of Hormuz in over a month, ending weeks of relative calm under the Iran-Oman temporary corridor framework. The sequence matters: US Central Command said IRGC forces were preparing rockets capable of deploying sea mines into the Strait; Iran retaliated overnight with missile and drone strikes on US air bases in Jordan; and Brent crude crossed $90 per barrel before Monday's US equity open, up from $88.29 Friday. The escalation collapses the corridor framework that held Brent below $93 since late August and removes the immediate de-escalation path the market had been pricing. That is the whole mechanism - Hormuz is no longer in a holding pattern, Brent at $90+ is now the day's opening price signal, and August CPI on September 11 has already locked in 14+ days of elevated Brent before the new escalation added further pressure. What happens to oil between now and September 11 feeds September CPI (October 13), not the August print the FOMC votes on.</p>
+        <p>Today's USDA Weekly Crop Progress report - arriving approximately 4pm ET - is the day's only scheduled domestic input. The four-week corn good-to-excellent trend: 65% (August 9), 61% (August 16), 57% (August 23). A fourth consecutive decline crossing below 57% would be the fourth week below the historical threshold most reliably predictive of September WASDE downward revisions. September 11 runs August CPI and the September WASDE simultaneously - and the Iran-strike shock arriving today creates a compounded inflation signal that Warsh's "underlying trends" framework reads as structural on both the energy and food channels at once. September hike odds rose to 57-58% by Monday morning, up from 46% Friday's post-Warsh close.</p>
+        <p>The slow pressure that doesn't pause for geopolitical shocks: gas still at $4.09-4.14 per gallon nationally (now delayed further from relief as Brent adds another $2+ premium), credit card delinquency at 13.1%, real wages at -0.5% year-over-year, Canada's retaliatory tariffs entering Day 8 with dairy and appliance retail pass-through arriving late September. Gold's 3% drop to $4,459 despite an Iran-strike day is the session's counterintuitive signal - the 11-point jump in September hike odds (from 46% to 57%) strengthened the dollar and raised real yields enough to overwhelm the traditional safe-haven bid. When a war escalation sends gold down 3%, Warsh's repricing is doing more work than the geopolitical news.</p>
+
+        <h2 class="section-title" id="week-opens">How Monday Opens</h2>
+        <ul class="bullet-list">
+          <li><strong>What the Larak Island strike means past this week - and what actually breaks the escalation.</strong> Sunday's US strike is structurally different from earlier Hormuz incidents: it targeted active launch preparation, not a vessel or a patrol, which means the US assessed an imminent mine-laying threat and acted. Iran's retaliation on US Jordan bases confirms the exchange has moved to direct military action rather than proxy harassment. The escalation ladder now has two rungs between today and a formal Hormuz closure: Iranian mining operations in the Strait (the next likely step, now that one preparation attempt was intercepted), and a US naval response. Brent at $90+ prices two extra rungs of risk premium. The corridor framework - which held for roughly two weeks - is no longer a credible de-escalation signal. Bessent's secondary sanctions deployment (targeting Chinese and Indian crude buyers) remains the undeployed lever that could restrain Iranian revenue without further military escalation. Whether that lever gets pulled before Iran's next Hormuz move is the week's most consequential unknown.</li>
+          <li><strong>Gold falling 3% on an Iran-strike day tells you the September hike repricing is larger than the geopolitical shock.</strong> A US military strike on Iran has historically been a gold buy. Not today - gold opened near $4,459, down roughly $149 from Friday's $4,608 close, even as Brent jumped above $90. The explanation is arithmetic: Warsh's hawkish signal moved September hike odds from 46% to 57% over the weekend, strengthening the dollar and raising real yields. At current gold price sensitivity to real yields, an 11-point increase in September hike probability translates to roughly 2-3% of gold price pressure that overwhelms the safe-haven premium an Iran strike would normally add. The structural floor thesis - the $40 trillion public debt argument - requires a long-run horizon. On a short Monday morning, the rate-path repricing wins. Gold held above $4,600 through Friday's hawkish speech; below $4,460 on Monday's Iran strike tells you Monday's driver is Warsh, not Larak Island.</li>
+          <li><strong>BTC at $78,840 is the institutional floor test entering Monday's US equity session.</strong> Bitcoin held the $78K level through Monday morning after Sunday's $77.8K overnight dip, recovering to approximately $78,840. The Iran-strike geopolitical risk-off did not break the floor - the same institutional ETF bid that drove $3+ billion in August inflows absorbed the Sunday shock. August became the strongest BTC ETF inflow month in 2026. The current test: does the 57% September hike probability produce a second leg lower for BTC, the way Friday's post-Warsh speech pushed from $81K to $79K? Or does the institutional bid treat $78K as the accumulated floor it has been all week? The 2-year Treasury at 4.34% (up from 4.29% Friday) is the rate-path signal BTC investors are watching for the second leg - a move toward 4.40%+ would test whether the ETF bid holds at $77-78K or breaks toward $75-76K. The Friday September 4 jobs report remains the terminal binary for that test.</li>
+          <li><strong>The CLARITY Act's September 15 cloture vote is now 15 days away - and the Iran shock compresses Senate bandwidth exactly when the ethics divestiture standoff needs floor time.</strong> XRP held near $1.41 Monday morning, tracking BTC's risk-off floor test rather than reflecting new legislative movement. The cloture math is unchanged: 60 votes required, 51 reliable Republican yes votes, 9 Democratic crossovers needed, ethics divestiture dispute (requiring officials holding more than $1 million in digital assets to divest) unresolved. But Senate emergency sessions and national security discussions following the Iran strike can displace crypto legislative scheduling. Senate Majority Leader Thune confirmed the September 15 date before the Larak Island strike; whether that schedule holds after an Iran retaliation on US Jordan bases is the week's legislative unknown. A cloture failure on September 15 closes the 2026 window entirely - both chambers are out nearly all of October before the November 3 midterms.</li>
+          <li><strong>57% September odds changes the jobs report calculus more than 46% did - the zone of ambiguity is gone.</strong> At 46%, Friday's September hike probability was a coin-flip in which even a modest jobs beat kept September in play and a modest miss kept it out. At 57%, the math shifts: a jobs beat above 150,000 with wages near 3.5% pushes September above 65-70% and produces near-certainty pricing, not a coin-flip adjustment. A jobs miss below 100,000 drops September from 57% to roughly 30-35%, a larger percentage move but still not a clean "September is done" signal. The 57% baseline means September 4 jobs data produces a bigger intraday rate move in either direction than Friday's baseline would have. The 2-year Treasury at 4.34% will move 8-12 basis points on a strong beat versus 6-8 basis points it would have moved from 46%. The "quieter Fed" doctrine means no Fed communication corrects either market reaction before September 15-16.</li>
+        </ul>
+
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <p class="section-intro">S&amp;P 500, Nasdaq, and Dow futures opened lower Monday morning as the Larak Island strike and Iran retaliation absorbed into equity pricing overnight. S&amp;P futures -0.27%, Nasdaq futures -0.23%, Dow futures -0.26%. The last official closes - S&amp;P 7,711.76, Nasdaq 26,402.42, Dow 53,559.99 - were Friday's post-Warsh read. Monday is the last trading day of August. The key dynamics: geopolitical risk-off from Iran-Jordan exchange competes against elevated September hike odds (57%) to set the opening tone; the USDA Crop Progress at 4pm ET is Monday's only scheduled domestic catalyst.</p>
+        <div class="data-line"><span class="data-label">S&amp;P 500 futures (Monday August 31 pre-market):</span> <span class="down-red">-0.27% from Friday's close of 7,711.76; futures reflect the overnight Iran-strike shock and the post-Warsh 57% September hike baseline; support at 7,680-7,700 is the first technical level on a negative open; the August 14 record close of 7,798.99 is 87 points above Friday's close; a jobs beat September 4 is required to approach that level; a geopolitical risk-off extension today that holds the S&amp;P above 7,700 on close would confirm the equity market is treating the Larak Island strike as a tactical exchange rather than a structural escalation</span></div>
+        <div class="data-line"><span class="data-label">Nasdaq futures (Monday August 31 pre-market):</span> <span class="down-red">-0.23% from Friday's 26,402.42; Nasdaq's smaller percentage decline than historical geopolitical shocks reflects the rate-sensitivity offset - Brent above $90 is negative for energy cost inputs, but Nasdaq's growth components are more directly sensitive to the 57% September hike probability than to oil; the two pressures partially offset in Nasdaq's case, producing a smaller gap than the S&amp;P</span></div>
+        <div class="data-line"><span class="data-label">Dow futures (Monday August 31 pre-market):</span> <span class="down-red">-0.26% from Friday's 53,559.99; the Dow's industrial and defense components face a mixed signal: defense contractors benefit from Hormuz escalation spending expectations, while industrial inputs and consumer staples face Brent-driven margin pressure; Canada lumber tariff costs (Day 8) continue accumulating in homebuilder and contractor guidance</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Monday opens with equity futures modestly lower on a geopolitical-plus-hike-probability double pressure. The S&amp;P's 7,700 support is the first test. August ends today - the month that included the all-time record of 7,798.99 (August 14), three FOMC dissents, Nvidia's $108 billion Q3 guide, Warsh's Jackson Hole keynote, and now a Hormuz military exchange. September 4 jobs is the first input that resolves the month-end uncertainty.</li>
+        </ul>
+
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <p class="section-intro">September hike odds moved to 57-58% by Monday morning, up from 46% at Friday's post-Warsh close. The 2-year Treasury reached approximately 4.34% (up from 4.29% Friday). The 10-year reached approximately 4.72% (up from 4.68-4.70%). The Iran-strike geopolitical shock would normally compress Treasury yields through safe-haven flows - that the 2-year moved higher instead confirms the Warsh repricing is larger than the flight-to-safety response. No Fed communications are scheduled before September 15-16. The "quieter Fed" doctrine means 57% is the standing baseline until September 4 jobs prints at 8:30am ET.</p>
+        <div class="data-line"><span class="data-label">Fed policy rate:</span> 3.50-3.75% <span class="flat">held July 29 (9-3 vote); three dissenters (Logan, Hammack, Kashkari) voted for immediate +25bp; next meeting September 15-16; September hike probability approximately 57-58% as of Monday morning August 31 - up from 46% post-Warsh Friday; the 11-point weekend move is the largest three-day September-probability shift since the Jackson Hole cycle began; December 2026 approximately 69%; March 2027 approximately 81%; no Fed officials speaking publicly between now and September 15-16 under Warsh's "quieter Fed" doctrine</span></div>
+        <div class="data-line"><span class="data-label">2-year Treasury (Monday August 31 morning):</span> approximately 4.34% <span class="up-red">up from 4.29% Friday; the 2-year rising on an Iran-strike day (versus the normal safe-haven decline) confirms the 57% September probability is the dominant market force; from 4.34%, a September 4 jobs beat pushes the 2-year toward 4.40-4.45%; a jobs miss brings it back toward 4.18-4.22%; the 57% baseline means the directional moves are larger than they were from the 46% Friday baseline</span></div>
+        <div class="data-line"><span class="data-label">10-year Treasury (Monday August 31 morning):</span> approximately 4.72% <span class="flat">up from 4.68-4.70% Friday; still below the 4.75% threshold that begins transmitting into 6.70%+ Freddie Mac PMMS readings within 2-3 survey cycles; the next PMMS publishes Thursday September 3 and will survey this week's 10-year range; a sustained move above 4.75% this week pushes mortgage rates above 6.70% within 2-3 weeks</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The 2-year Treasury rising on an Iran-strike morning is the week's clearest signal about what the rate market is actually pricing: Warsh's September probability matters more than geopolitical safe-haven flows right now. CD and HYSA holders enter the week with a 57% September hike baseline - higher than Friday's coin-flip, but still short of the 65-70% threshold that would make a pre-jobs CD lock definitively the wrong move. September 4 at 8:30am ET is the resolution.</li>
+        </ul>
+
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <p class="section-intro">The savings decision framework advances from Friday's 46% coin-flip to Monday's 57% majority probability. At 57%, holding HYSA through September 4 costs approximately 19 basis points per week against the top online CD rate - still a small price for the post-hike window optionality, but the 57% baseline means the post-hike window (CD rates at 4.55-4.75% in October-November) is now more likely than not. No change to the recommended hold-through-September-4 posture - but the math has shifted toward locking after a confirmed hike rather than waiting for the rate to come back down.</p>
+        <div class="data-line"><span class="data-label">National avg 1-yr CD (FDIC):</span> 1.68% APY <span class="flat">unchanged; the 260-270 basis point spread between national average and online top rates remains the most actionable financial gap in this rate environment</span></div>
+        <div class="data-line"><span class="data-label">Best online 1-yr CD (as of August 31):</span> 4.25-4.40% APY <span class="flat">unchanged; at 57% September odds, the post-hike October-November window of 4.55-4.75% is the more-likely scenario; a September 4 miss below 100,000 that drops September probability below 30% makes the current 4.40% top rate the better lock before pricing contracts</span></div>
+        <div class="data-line"><span class="data-label">Best high-yield savings account:</span> approximately 4.21% APY <span class="flat">Axos Bank and select online institutions; unchanged; the HYSA-vs-CD gap of 19 basis points per week represents the cost of September 4 optionality at 57% odds; that cost is worth paying when the post-hike window could yield an additional 15-35 basis points above current top CD rates</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Hold HYSA through September 4 at 57% September odds. The decision trigger remains Friday September 4 at 8:30am ET. Monday and Tuesday are not decision days. The Iran-strike shock does not directly move savings rate recommendations - it moves Brent and equity tone, not the HYSA-vs-CD calculus.</li>
+        </ul>
+
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <p class="section-intro">Brent crossed $90 per barrel Monday morning after US forces struck Iranian rocket launchers on Larak Island and Iran retaliated with missiles and drones on US Jordan bases. The Iran-Oman temporary corridor framework - which held Brent near $88-89 for roughly two weeks - is no longer an active de-escalation mechanism following Sunday's exchange. WTI reached approximately $86/barrel. National gas prices remained approximately $4.09-4.14/gallon entering Monday, with the $2+ Brent surge adding further delay to the pump relief that had been projected for September 10-15.</p>
+        <div class="data-line"><span class="data-label">Brent Crude (Monday August 31 morning):</span> approximately $90-91/barrel <span class="up-red">up from $88.29 Friday close; the Larak Island strike ended the Iran-Oman corridor's two-week holding period; Brent's $90 level reflects two independent risk premiums now operating simultaneously: Russia-Ukraine Black Sea escalation (Putin confirmed no talks progress) and the direct US-Iran military exchange; for Brent to return toward $85-87, resolution on both fronts is required, not just one; the next Bessent lever - secondary sanctions on Chinese and Indian crude buyers - could restrain Iranian revenue without further military action, but has not been deployed; August CPI on September 11 captures this surge's full first day and any further escalation through September 10</span></div>
+        <div class="data-line"><span class="data-label">WTI Crude (Monday August 31 morning):</span> approximately $86/barrel <span class="up-red">up from approximately $83.45 Friday; the WTI-Brent spread near $4-5 reflects standard differentials; WTI above $85 directly supports domestic refiner margin calculations and extends the $4.10+ gas average beyond the September 10-15 original relief window</span></div>
+        <div class="data-line"><span class="data-label">Iran-Oman corridor framework (Monday status):</span> <span class="up-red">effectively suspended following Sunday's Larak Island strike and Iran's retaliation on US Jordan bases; the corridor was designed to allow diplomatic back-channel while military postures de-escalated; Sunday's exchange confirms the de-escalation window has closed; any restoration requires a new framework negotiation, which historically takes 1-3 weeks minimum; Oman remains the likely intermediary but has not publicly commented on the exchange</span></div>
+        <div class="data-line"><span class="data-label">Russia-Ukraine energy escalation (Monday):</span> <span class="up-red">Putin's Sunday confirmation of no talks progress and intensified operations continues adding approximately $1-2 of independent Brent premium above the Iran-Oman baseline; no ceasefire signals; the Russia channel compounds the Iran channel rather than offsetting it</span></div>
+        <div class="data-line"><span class="data-label">National gas average (AAA, Monday August 31):</span> approximately $4.09-4.14/gallon <span class="flat">unchanged from Sunday; the 2-4 week pump lag means Brent's surge above $90 today does not reach the pump until approximately September 14-21 - delaying rather than canceling the prior Brent mid-August relief; August CPI captures three-plus weeks of $4.10+ gas prices; September CPI (October 13) will capture both the delayed relief and the new $90+ surge's partial pass-through</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Brent at $90+ this morning is the energy story that changes August 31's market tone. The Iran-Oman corridor is no longer operative. The pump relief projected for September 10-15 faces a new delay mechanism as Brent adds a $2+ premium on top of the $88 level it had been holding. August CPI on September 11 captures the escalation's first day. September CPI (October 13) captures the broader damage. The consumer does not get gas relief before the FOMC votes on September 15-16.</li>
+        </ul>
+
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <p class="section-intro">Gold's 3% decline to $4,459 despite a US-Iran military exchange is the session's most counterintuitive commodity signal. Silver fell approximately 4% to near $66.39. Copper held near $6.54/lb. Corn futures held above $5.14/bushel entering Monday's session with the USDA Crop Progress at 4pm ET as the day's catalyst. The gold story is about the relative size of the Warsh September-probability repricing versus the traditional Iran safe-haven bid - and this morning the repricing won.</p>
+        <div class="data-line"><span class="data-label">Gold / oz (Monday August 31 morning):</span> approximately $4,459 <span class="down-red">down approximately $149 (-3.2%) from Friday's $4,608 close; gold falling on a US-Iran military exchange morning confirms that the 11-point jump in September hike odds (from 46% to 57%) and the dollar's accompanying strengthening overwhelmed the traditional safe-haven premium; the structural fiscal floor thesis (US public debt past $40 trillion) is a long-run argument that operates on a time horizon incompatible with one session's geopolitical reaction; the short-run real-yield sensitivity to rate-path repricing is what's operating today; gold below $4,460 on an Iran-strike day is Warsh's signal, not Iran's</span></div>
+        <div class="data-line"><span class="data-label">Silver / oz (Monday August 31 morning):</span> approximately $66.39 <span class="down-red">down approximately 4% from Friday's $69.35; silver's larger percentage decline than gold reflects its higher industrial demand component (more sensitive to manufacturing slowdown risk from rate-hike fears) layered on top of the same rate-path repricing pressure; gold-to-silver ratio moves toward 67-68x on the divergence</span></div>
+        <div class="data-line"><span class="data-label">Corn futures (Monday August 31 morning):</span> approximately $5.14-5.20/bushel <span class="flat">holding above $5.10 entering Monday's session; the 4pm ET USDA Crop Progress report is the day's discrete catalyst; the four-week trajectory - 65% G/E (August 9), 61% (August 16), 57% (August 23) - has the market watching for a fourth consecutive decline; a reading below 57% G/E accelerates the path toward $5.30-5.50 ahead of the September 11 WASDE; the Brent surge above $90 adds indirect positive pressure on corn (higher energy costs raise agricultural production and transport costs), providing a secondary support mechanism even without a crop-conditions change</span></div>
+        <div class="data-line"><span class="data-label">Copper (LME, Monday August 31 morning):</span> approximately $6.54/lb <span class="flat">near Friday's close; the Iran-strike geopolitical shock did not meaningfully move copper, consistent with Brent being the dominant commodity signal on a Hormuz escalation day; AI infrastructure and electrification demand remain the structural copper bid independent of the week's news cycle</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>Gold down 3% on an Iran-strike morning is the commodity market's clearest statement about what is dominating August 31 pricing: the Warsh September repricing is larger than the geopolitical shock. Corn's Monday behavior before the 4pm ET report is the domestic commodity story to watch - if it holds above $5.20 through the morning, the crop progress reading is being partially front-run. The report at 4pm ET is the day's most consequential scheduled domestic release.</li>
+        </ul>
+
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <p class="section-intro">Monday August 31's USDA Weekly Crop Progress report - arriving approximately 4pm ET - is today's most consequential scheduled release. The three-week corn good-to-excellent trend (65%, 61%, 57%) sets the fourth reading's stakes: a further decline below 57% would be the fourth consecutive week in the below-60% range that historical analysis ties most reliably to September WASDE downward revisions. The drought footprint held at approximately 47-48% of the Lower 48 in moderate drought or worse as of August 27, unchanged from the prior week. Corn futures held above $5.14-5.20/bushel Monday morning.</p>
+        <div class="data-line"><span class="data-label">Monday August 31 USDA Weekly Crop Progress (upcoming, approximately 4pm ET):</span> <span class="flat">fourth consecutive weekly reading; prior three: 65% G/E (August 9), 61% G/E (August 16), 57% G/E (August 23); a fourth decline to 54-56% G/E would be the most consistent predictor of a September WASDE revision below Pro Farmer's 173.2 bpa estimate; a stabilization at 57-59% G/E would partially moderate September WASDE expectations and could see corn consolidate near $5.00-5.10 before September 11; the Iran oil shock adds a secondary energy-cost support mechanism for corn regardless of crop conditions; September 11 runs CPI and the WASDE simultaneously</span></div>
+        <div class="data-line"><span class="data-label">Drought footprint (USDA Drought Monitor, August 27 update):</span> approximately 47-48% of the Lower 48 in moderate drought or worse <span class="flat">unchanged from prior week; persistent drought through the final kernel-fill weeks is consistent with Pro Farmer's 173.2-bpa estimate; next Drought Monitor update: Thursday September 4 - same day as the August jobs report; September 4 is the densest single data day before August CPI</span></div>
+        <div class="data-line"><span class="data-label">Pro Farmer 2026 Crop Tour corn yield estimate:</span> 173.2 bpa <span class="flat">versus USDA's 180.7-bpa August WASDE forecast; 7.5-bpa gap, largest since 2012; corn at $5.14-5.20 is pricing approximately the Pro Farmer estimate; Monday's crop progress reading calibrates whether the below-60% pattern that drove the yield downgrade is continuing or stabilizing; September WASDE on September 11 is the first formal USDA revision since August 12</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The USDA Crop Progress at 4pm ET is Monday's defining scheduled release. The three-week below-60% pattern has already priced a 7.5-bpa WASDE gap into corn at $5.14+. A fourth consecutive below-57% reading locks in September WASDE downward revision expectations and pushes corn toward $5.30 Tuesday - accelerating the food-channel CPI pressure that Warsh's "underlying trends" language explicitly covers. The Iran-strike Brent surge arriving simultaneously with a crop-stress reading would make September 11 (CPI plus WASDE) a compounded inflation event the FOMC faces one week before its September 15-16 vote.</li>
+        </ul>
+
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <p class="section-intro">No new mortgage rate data since Thursday August 27's Freddie Mac PMMS of 6.62%. The 10-year Treasury at approximately 4.72% Monday morning is still approaching the 4.75% transmission threshold that begins moving PMMS above 6.70% within 2-3 survey cycles. The next PMMS publishes Thursday September 3 and surveys this week's 10-year range. Canada's lumber tariffs are Day 8 today - costs accumulating in active construction projects, with mid-September August housing starts data the first formal measurement of tariff impact on new construction volumes.</p>
+        <div class="data-line"><span class="data-label">Freddie Mac PMMS (Thursday August 27):</span> 6.62% <span class="flat">next PMMS publishes Thursday September 3; that survey compiles this week's 10-year range; with the 10-year at 4.72% Monday morning - 3 basis points below the 4.75% threshold - September 3's PMMS is most likely to show 6.62-6.67%, not a dramatic increase; a sustained 10-year move above 4.75% this week (possible if Iran escalation extends or jobs data surprises) would push September 3's PMMS toward 6.70-6.75% within 2-3 survey cycles</span></div>
+        <div class="data-line"><span class="data-label">Canada lumber tariff impact (Day 8 - August 31):</span> <span class="up-red">projects purchasing lumber in the second week of the tariff face approximately the same 50% premium as week one; fixed-price construction contracts continue absorbing margin compression; the $7,000-12,000 lumber cost increase per median new single-family home is accumulating; August housing starts data (released mid-September) will be the first formal measure; the Brent surge above $90 adds secondary pressure through diesel and transport cost increases on materials delivery</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>No change to the mortgage rate framework: 6.62% PMMS, 10-year approaching but not yet through the 4.75% threshold, Canada lumber tariffs accumulating. The Iran-strike shock could push the 10-year through 4.75% this week if the safe-haven offset proves insufficient - that would be the trigger for the PMMS to move above 6.70% in 2-3 weeks. Thursday's PMMS is the next housing rate signal.</li>
+        </ul>
+
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <p class="section-intro">Household finance enters Monday with the three chronic pressures unchanged plus a new fourth: Brent above $90 delays the September 10-15 gas relief that was the nearest positive for the consumer. Gas at $4.09-4.14 per gallon will not begin declining before September 14-21 given the new $90+ Brent level and the 2-4 week pump lag. Credit card delinquency at 13.1%. Real wages at -0.5% year-over-year. September APR hike probability at 57% - a majority threat to this billing cycle, compared to Friday's coin-flip.</p>
+        <div class="data-line"><span class="data-label">Real wages (July 2026):</span> <span class="down-red">-0.5% year-over-year: average hourly wages +3.2% YoY minus July PCE 3.7% YoY; the first negative real wage reading since H1 2025; August wages data arrives September 4 alongside the jobs report; a Brent-driven food and energy pass-through raises the PCE denominator for future real wage calculations</span></div>
+        <div class="data-line"><span class="data-label">Gas prices (AAA, Monday August 31):</span> approximately $4.09-4.14/gallon <span class="flat">unchanged; the prior relief projection (September 10-15 based on Brent's mid-August decline from $93 to $88) is now extended to September 14-21 minimum given Brent's $90+ Monday level; August CPI captures the full month of elevated pump prices; the consumer does not get gas relief before the FOMC votes September 15-16</span></div>
+        <div class="data-line"><span class="data-label">Credit card delinquencies (90+ days):</span> 13.1% <span class="up-red">15-year high; unchanged; at 57% September hike odds, the probability that APRs rise from 22.18% after September 15 is now a majority scenario rather than Friday's coin-flip; a consumer carrying a $10,000 balance faces approximately $15-25 per month in additional interest cost if a September +25bp hike fully passes through within 1-2 billing cycles; the Iran-strike does not directly affect APR timing but extends the energy cost pressure that limits households' ability to absorb a rate increase</span></div>
+        <div class="data-line"><span class="data-label">Canada tariff retail pass-through timeline (Day 8):</span> <span class="up-red">dairy and appliance price increases appear at retail within 4-8 weeks of the August 24 effective date; first retail increases arrive September 21 - October 24; the November 19 FOMC is the first meeting to face the full consumer impact; the September 15-16 FOMC does not have this data when it votes</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The Larak Island strike's household finance consequence is direct: gas relief is delayed 1-2 weeks further than Friday's projection. At 57% September APR hike probability, the consumer enters Monday facing a majority likelihood of higher borrowing costs in the same billing cycle where gas costs are not declining as quickly as projected. Real wages negative, delinquencies at a 15-year high, gas pump relief deferred - the chronic pressures are each unchanged, but the Brent $90+ spike removes the nearest positive the consumer was expecting before September 15-16.</li>
+        </ul>
+
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <p class="section-intro">Bitcoin held the $78K institutional floor through Monday morning's Iran-strike risk-off environment, trading near $78,840. Ethereum near $2,472. XRP near $1.41. August becomes the strongest BTC ETF inflow month of 2026, with cumulative inflows above $3 billion. The crypto market's behavior on Monday - holding $78K through an Iran-strike shock and a 57% September hike repricing - is the institutional ETF bid's most direct test so far: two independent downward pressures simultaneously, and the floor is holding above the $78K line entering the US equity open.</p>
+        <div class="data-line"><span class="data-label">Bitcoin (BTC):</span> approximately $78,840 (Monday August 31 morning) <span class="flat">from Friday's close near $79,000-79,500 and Sunday night's low near $77,845; BTC held the $78K institutional floor through the Iran-strike geopolitical shock overnight; August became the strongest ETF inflow month of 2026 with cumulative inflows above $3 billion; the institutional ETF bid is the working floor mechanism; the test for Monday's US equity session: does the Brent $90+ spike and 57% September hike combination produce a second leg lower toward $76-77K, or does the institutional bid treat the $78K zone as accumulated support? September 4 jobs remains the terminal binary; a 2-year Treasury move above 4.40-4.45% on a jobs beat would be the clearest stress test of the institutional floor</span></div>
+        <div class="data-line"><span class="data-label">Bitcoin spot ETF flows (August 2026):</span> <span class="up-green">August became the strongest BTC ETF inflow month in 2026, with cumulative inflows above $3 billion; the August 24-28 week alone drew approximately $924.5 million; four-day inflow peak reached $1.61 billion in the third week of August; institutional accumulation at these levels is the floor mechanism that held BTC above $78K through the post-Warsh repricing and the Iran-strike shock; August Friday ETF flow data (covering August 28's session) publishes Monday with the typical T+1 lag</span></div>
+        <div class="data-line"><span class="data-label">Ethereum (ETH):</span> approximately $2,472 (Monday August 31 morning) <span class="flat">from Friday's close near $2,505; ETH's decline is proportional to BTC's - tracking the broader rate-path repricing and geopolitical risk-off rather than reflecting new ETH-specific news; Fidelity's FETH staking amendment regulatory timeline remains the ETH-specific catalyst that would move it independently of BTC; that timeline is unchanged by Sunday's Larak Island strike</span></div>
+        <div class="data-line"><span class="data-label">XRP (Ripple):</span> approximately $1.41 (Monday August 31 morning) <span class="flat">tracking BTC's floor test; the CLARITY Act legislative calendar (September 15 cloture vote, 15 days away) is the XRP-specific driver - but Senate bandwidth may be compressed following the Iran-Jordan exchange; 60-vote cloture threshold; 51 reliable Republican yes votes; 9 Democratic crossovers needed; ethics divestiture dispute unresolved; Polymarket passage probability approximately 20-24%; a cloture failure on September 15 closes the 2026 legislative window entirely</span></div>
+        <div class="data-line"><span class="data-label">CLARITY Act (Monday status):</span> <span class="flat">Senate Majority Leader Thune had confirmed the September 15 cloture vote date before Sunday's Larak Island strike; whether the Iran-Jordan military exchange prompts Senate emergency sessions that displace the crypto legislative schedule is the week's legislative unknown; the ethics divestiture dispute remains the unresolved blocking issue; Senate returns September 14 - 14 calendar days from today; a failure to hold September 15's date would effectively kill the 2026 legislative window</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>BTC at $78,840 through a dual-pressure Monday morning - Iran-strike risk-off and 57% September hike repricing simultaneously - is the institutional ETF bid's most direct test of the August inflow-built floor. The floor is holding entering the US equity open. The risk is a second leg lower if the 2-year Treasury moves above 4.40% on a jobs beat September 4, not today's geopolitical shock. XRP investors should note the Iran-Jordan exchange may compress Senate bandwidth in the 15 days before the cloture vote - the legislative calendar is the XRP risk that doesn't appear in Monday's prices.</li>
+        </ul>
+
+        <h2 class="section-title" id="world">Around the World</h2>
+        <p class="section-intro">Asian markets opened Sunday evening ET with the Larak Island strike as the dominant overnight signal. China's Monday open absorbed the strike, Iran's Jordan retaliation, and Brent crossing $90 simultaneously - the most compressed geopolitical-oil-rate signal Asian institutional investors have faced since the Hormuz crisis began in July. The dollar strengthened on both the safe-haven flow and the Warsh 57% September hike repricing, adding pressure to EM currencies and commodity-importing nations. Japan's yen at approximately 159/dollar compounds Brent's $90 surge through yen-denominated import costs.</p>
+        <div class="data-line"><span class="data-label">China CSI 300 (Monday morning context):</span> approximately 4,725-4,740 area <span class="flat">China's Monday session absorbed the Larak Island strike and Brent's $90+ move while also monitoring Bessent's undeployed secondary sanctions threat targeting Chinese crude buyers of Iranian oil; a Brent above $90 raises China's import costs at a moment when domestic economic indicators remain mixed; the dollar's post-Warsh strengthening adds modest additional pressure to China's USD-CNY peg management; how China's institutional investors absorbed the full package - Iran-strike plus 57% US hike odds plus Brent at $90 - is the first global read available before US equity opens Monday</span></div>
+        <div class="data-line"><span class="data-label">Japan yen (Monday morning):</span> approximately 159/dollar <span class="flat">yen weakened modestly as dollar strength from 57% September odds offset the normal safe-haven yen bid on geopolitical news; Japan imports approximately 90% of its crude - yen at 159 with Brent at $90+ compounds the yen-denominated import burden more severely than Brent at $88 with yen at 158; BOJ September communication will reference Warsh's "underlying trends" framework from Jackson Hole; a more hawkish US baseline constrains BOJ's normalization path and limits the yen's ability to strengthen even on a Japan-supportive geopolitical shock</span></div>
+        <div class="data-line"><span class="data-label">Global geopolitical update (Monday):</span> <span class="up-red">US Central Command confirmed strikes on two Iranian rocket launchers on Larak Island in the Strait of Hormuz on Sunday, ending weeks of calm under the Iran-Oman corridor framework; Iran confirmed retaliatory missile and drone strikes on US military bases in Jordan; no casualty figures released by either side as of Monday morning US time; the corridor framework is effectively suspended; Oman's intermediary role remains the likeliest path to a new de-escalation framework, but no timeline is available; Russia-Ukraine: Putin's Sunday no-talks confirmation continues adding $1-2 independent Brent premium; no ceasefire signals</span></div>
+        <div class="bottom-line-label">Bottom Line</div>
+        <ul class="bottom-line-list">
+          <li>The global signal entering Monday's US equity session: Brent at $90+ is the commodity market's verdict on the Larak Island strike; gold at $4,459 (down 3%) is the rate market's verdict that Warsh's September repricing is larger than the geopolitical shock; yen near 159 confirms the dollar's dominance over the safe-haven trade. Asian markets absorbed all three signals before the US open. The US equity session's opening 30 minutes is the first domestic institutional verdict on how to weight Iran escalation against 57% September hike probability in a single equity session.</li>
+        </ul>
+
+        <h2 class="section-title" id="events">The Week Ahead - September Convergence Calendar</h2>
+        <p class="section-intro">Today is Monday August 31 - the last trading day of August and Day 15 of the Hormuz escalation cycle. The calendar to September 15-16 FOMC now runs through a US-Iran direct military exchange, Brent above $90, and 57% September hike odds. Warsh's "quieter Fed" doctrine means no Fed communication arrives before September 4. Every event on the calendar below moves September probability based on raw data, with no Fed translation layer available. The Iran-strike adds energy inflation pressure to each event's reading.</p>
+        <div class="data-line"><span class="data-label">Today - Monday August 31:</span> <span class="flat">USDA Weekly Crop Progress report after market close (approximately 4pm ET); fourth consecutive reading following 65%/61%/57% G/E corn trajectory; last trading day of August; market digests Iran-strike, Iran Jordan retaliation, and Brent $90+ simultaneously in the US session; S&amp;P futures -0.27% pre-market</span></div>
+        <div class="data-line"><span class="data-label">Thursday September 3 - Freddie Mac PMMS:</span> <span class="flat">next weekly mortgage rate survey; surveys this week's 10-year yield range (approximately 4.70-4.75%); if the 10-year moves above 4.75% on Iran escalation this week, September 3's PMMS begins the clock on 6.70%+ mortgage rates; Canada tariff Day 10</span></div>
+        <div class="data-line"><span class="data-label">Friday September 4 - August Jobs Report (8:30am ET) plus USDA Drought Monitor update:</span> <span class="flat">first major data point after Warsh's speech; 57% September hike baseline entering the report; a beat above 150,000 with wages near 3.5% pushes September above 65-70% and produces the second repricing leg; a miss below 100,000 drops September to 30-35% but does not eliminate it at 57% baseline (more resilient than the 46% baseline's 20-25% miss floor); Drought Monitor update same day - densest single data day before August CPI; no Fed communications between now and 8:30am September 4</span></div>
+        <div class="data-line"><span class="data-label">Monday September 8 - Canada retaliatory tariffs (Day 15):</span> <span class="up-red">wholesale price signals beginning to reach retail distributors by Day 15; dairy and appliance categories are the leading pass-through channels; the same week as August CPI and September WASDE (September 11) and FOMC (September 15-16)</span></div>
+        <div class="data-line"><span class="data-label">Thursday September 11 - August CPI plus September WASDE simultaneously (8:30am ET CPI; 11am ET WASDE):</span> <span class="flat">August CPI now captures: full month Brent average (above $90 for 13+ days, then $88-89, now above $90 again on August 31); full month gas average ($4.10+ for three-plus weeks); Canada tariff shock week one; Iran corridor suspension day one; September WASDE is first formal USDA yield revision since 180.7-bpa August forecast - if Monday's crop progress confirms the below-60% pattern, the revision to 174-176 bpa accelerates corn above $5.30; September 11 is the most data-dense inflation day before the FOMC vote</span></div>
+        <div class="data-line"><span class="data-label">September 15-16 - FOMC Meeting plus CLARITY Act Cloture Vote:</span> <span class="flat">September hike probability approximately 57-58% entering Monday August 31; cloture vote requires 60 votes; CLARITY Act passage probability approximately 20-24% (Polymarket); Senate schedule may be impacted by Iran-Jordan military exchange; a cloture failure on September 15 closes the 2026 legislative window entirely; Senate returns September 14 - one day before the vote</span></div>
+
+        <div class="disclaimer">
+          <p>A free weekly snapshot for the Totem community. General information only - not investment advice or a recommendation to buy or sell anything. Figures reflect the latest readings available as of Monday, August 31, 2026. Friday August 28, 2026 final closing levels: S&amp;P 500 7,711.76 (-0.25%), Dow Jones 53,559.99 (-0.02%), Nasdaq 26,402.42 (-0.52%). Monday August 31 pre-market futures: S&amp;P -0.27%, Nasdaq -0.23%, Dow -0.26%. Federal Reserve Chair Kevin Warsh delivered his Jackson Hole keynote Friday August 28, 2026; September 2026 FOMC hike probability approximately 57-58% as of Monday August 31 morning, up from 46% post-Warsh Friday close (CME FedWatch). Federal Reserve policy rate 3.50-3.75% held July 29, 2026 (9-3 vote). US strikes on Iranian rocket launchers at Larak Island confirmed by US Central Command on Sunday August 30, 2026; Iran retaliated with missile and drone strikes on US military bases in Jordan. Brent crude approximately $90-91/barrel (Monday August 31 morning, up from $88.29 Friday August 28 close); WTI approximately $86/barrel. Gold spot approximately $4,459 (Monday August 31 morning, down approximately 3.2% from Friday's $4,608 close); silver approximately $66.39 (down approximately 4%); copper approximately $6.54/lb. National gas average approximately $4.09-4.14/gallon (AAA, as of Monday August 31, 2026). Crypto prices Monday August 31 morning: BTC approximately $78,840; ETH approximately $2,472; XRP approximately $1.41. Bitcoin spot ETF August 2026 cumulative inflows above $3 billion (strongest month of 2026). 2-year Treasury approximately 4.34% (Monday morning, up from 4.29% Friday August 28 close); 10-year Treasury approximately 4.72% (Monday morning, up from 4.68-4.70% Friday). Freddie Mac PMMS August 27, 2026: 6.62%. CLARITY Act Polymarket 2026 passage probability approximately 20-24%; Senate cloture vote September 15, 2026. USDA Weekly Crop Progress August 23, 2026: corn 57% good-to-excellent. Pro Farmer Crop Tour 2026 corn yield estimate: 173.2 bpa vs USDA 180.7 bpa. Drought footprint approximately 47-48% of Lower 48 (USDA Drought Monitor August 27, 2026). July 2026 housing starts 1.239 million SAAR. Credit card delinquency rate (90+ days) 13.1% (15-year high). Credit card APR composite approximately 22.18%. Average hourly wages July 2026 +3.2% YoY; real wages approximately -0.5% against July PCE 3.7%. Canada retaliatory tariffs effective August 24, 2026 (Day 8 as of August 31). Russia-Ukraine: Putin confirmed Sunday August 30, 2026 no talks progress. Corn futures approximately $5.14-5.20/bushel. Japan yen approximately 159/dollar. Upcoming: USDA Weekly Crop Progress August 31 (after market close, approximately 4pm ET). Freddie Mac PMMS September 3, 2026. August jobs report September 4, 2026. August CPI plus September WASDE September 11, 2026. September FOMC September 15-16, 2026. CLARITY Act Senate cloture vote September 15, 2026.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#week-opens"><span class="dot"></span>How Monday Opens</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_august30_2026.html">August 30, 2026</a></li>
+          <li><a href="market_pulse_august29_2026.html">August 29, 2026</a></li>
+          <li><a href="market_pulse_august28_2026.html">August 28, 2026</a></li>
+          <li><a href="market_pulse_august27_2026.html">August 27, 2026</a></li>
+          <li><a href="market_pulse_august26_2026.html">August 26, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We're looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. General information only - not investment advice or a recommendation to buy or sell anything.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+    document.querySelectorAll('h2.section-title[id]').forEach(function(el){
+      var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var dot=document.querySelector('.toc a[href="#'+el.id+'"] .dot');if(dot){dot.style.opacity='0';dot.style.transform='scale(0)';}}});},{rootMargin:'-20% 0px -60% 0px'});
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
