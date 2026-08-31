@@ -18,6 +18,12 @@ There are three Vercel projects. Never confuse them.
 | `totem-editorial-review` | totem-editorial-review.vercel.app | Editorial review - auto-deploys on every `git push origin main`. |
 | `totem-newsletter-site` | totem-newsletter-site.vercel.app | **Do not use for live deploys.** This was mistakenly used on 2026-08-03. |
 
+### Morning deploy authorization (locked 2026-08-31)
+
+**The site deploys automatically. No approval gate.** After Phase 1 completes (build + push to editorial), proceed immediately to Phase 2 without stopping to ask JJ.
+
+**The one exception:** JJ reviews email copy on his own schedule before sending in Mailchimp. The agent does not send email and does not wait. After Phase 2, send JJ a push notification with the live article URL and the email copy review link — then stop.
+
 ### Phase 2 live deploy sequence (exact commands)
 
 ```bash
