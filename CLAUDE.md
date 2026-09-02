@@ -95,6 +95,16 @@ Use precise figures the first time only. Every subsequent mention rounds: $71,75
 
 The 13 deep sections (Stock Market, Interest Rates, Savings & CD, Energy, Commodities, Crop Weather, Real Estate, Household Finance, Crypto, Around the World, This Week's Events) are the product and stay. But a section whose data has not moved since yesterday runs as a two-line "no change" note rather than three paragraphs of restatement. Crop Weather when corn is flat, Around the World when China's number is unchanged - those get compressed, not padded.
 
+## Article disclaimer (locked 2026-09-02)
+
+The article ends with **exactly two paragraphs** in the `.disclaimer` block, and nothing else:
+
+1. The General Disclaimer from the Totem Compliance Manual, verbatim, never paraphrased:
+   > This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.
+2. One as-of line: "Figures reflect the latest readings available as of [Day, Month D, YYYY], before the US market open. Sources are listed at the end of each section."
+
+**Never append a data recitation to the disclaimer.** Before Sept 2 the block restated every figure in the article (closes, rates, crypto, crop data, the week's calendar) as a 600-word "citation" paragraph. That is not a disclosure; it is the article a second time. Sourcing lives in each section's "Curated from" line. The site footer carries the Website Disclaimer verbatim ("This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice."). Do not shorten either to "general information only, not investment advice"; the manual lists that paraphrase as an anti-pattern.
+
 ## Post-card and hero headline length
 
 **Keep post-card and hero cap-title headlines to 2-3 sentences max.** Pick the 2-3 most important data points - the ones that would stop a reader mid-scroll. Do not dump the full article headline into the post-card. The article itself carries the detail.
