@@ -20,7 +20,8 @@ PO = '<li><a href="emergency_po.html">Emergency PO</a></li>'
 STRIP_RE = re.compile(
     r'[ \t]*<li><a href="(?:email_copy|emergency_po)\.html">(?:Email Copy|Emergency PO)</a></li>[ \t]*\n?'
 )
-NAV_CLOSE_RE = re.compile(r'(<nav class="nav">.*?)(\n?)([ \t]*)(</ul>)', re.S)
+NAV_CLOSE_RE = re.compile(r'(<(?:nav|div) class="nav"[^>]*>.*?)(\n?)([ \t]*)(</ul>)', re.S)
+SITE_NAV_MARK = 'href="archive.html"'   # only real site navs carry the editorial links
 
 
 def files():
@@ -40,6 +41,8 @@ def strip(src):
 def restore(src):
     if has_links(src):
         return src
+    if SITE_NAV_MARK not in src:
+        return src  # standalone page with no site nav (e.g. challenge_issue_01_original.html)
     m = NAV_CLOSE_RE.search(src)
     if not m:
         return None
@@ -68,8 +71,9 @@ def main(mode):
         if new != src:
             open(path, "w", encoding="utf-8").write(new)
             changed += 1
-    total = len(files())
-    with_links = sum(has_links(open(p, encoding="utf-8").read()) for p in files())
+    site_pages = [p for p in files() if SITE_NAV_MARK in open(p, encoding="utf-8").read()]
+    total = len(site_pages)
+    with_links = sum(has_links(open(p, encoding="utf-8").read()) for p in site_pages)
     if mode != "check":
         print(f"{mode}: {changed} files changed")
     print(f"{with_links} of {total} public files carry the editorial links")
