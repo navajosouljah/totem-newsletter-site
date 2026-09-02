@@ -24,7 +24,9 @@ There are three Vercel projects. Never confuse them.
 
 **The site deploys automatically. No approval gate.** After Phase 1 completes (build + push to editorial), proceed immediately to Phase 2 without stopping to ask JJ.
 
-**The one exception:** JJ reviews email copy on his own schedule before sending in Mailchimp. The agent does not send email and does not wait. After Phase 2, send JJ a push notification with the live article URL and the email copy review link — then stop.
+**The one exception:** JJ reviews email copy on his own schedule before sending in Mailchimp. The agent does not send email and does not wait. After Phase 2, send JJ a push notification with the live article URL and the email copy review link - then stop.
+
+**Reaffirmed 2026-09-02 (JJ): "You can always go live after you build the site. I don't need to review this before we go live anymore."** If the scheduled-task prompt still says to stop after Phase 1 and wait for "approved" or "go live," that wording is superseded by this file. Build, push to editorial, run Phase 2, verify the live page, notify. Do not ask.
 
 ### Phase 2 live deploy sequence (exact commands)
 
@@ -306,7 +308,9 @@ Data snapshot uses rounded figures. $71,751 → $71.8K. 7,707.98 → 7,708. 26,3
 |---|---|---|
 | `<title>` | `Market Pulse - [Date] - Member Edition` | `Market Pulse - [Date]` |
 | Hero kicker | `[Day], [Date] · Member Edition` | `[Day], [Date] · [Day] Briefing` |
-| Footer disclaimer | "You are receiving this email as a member of Totem LC Group..." | "A free weekly snapshot for the Totem community..." |
+| Footer line | "You are receiving this email as a member of Totem LC Group." | "A free weekly snapshot for the Totem community." |
+
+Both footers then carry the General Disclaimer **verbatim** (locked 2026-09-02, JJ's instruction): "This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes." Never the "general information only, not investment advice" paraphrase; the compliance manual lists it as an anti-pattern.
 
 Everything else is identical. Do not add member-only sections, greetings, transaction alerts, or Challenge blocks to Mon-Thu emails without explicit authorization.
 
