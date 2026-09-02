@@ -66,6 +66,29 @@
   .bullet-list{list-style:none;padding:0;margin:0;}
   .bullet-list li{padding-left:18px;position:relative;margin-bottom:8px;font-size:16px;line-height:1.55;}
   .bullet-list li::before{content:"\2022";position:absolute;left:0;color:var(--navy);font-weight:700;}
+  /* ---- v2 section treatment (Stock Market pilot, 2026-09-02) ---- */
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
   .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:12px;line-height:1.65;color:var(--muted);}
   footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
   footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
@@ -135,15 +158,22 @@
           <li><strong>CLARITY Act: four working Senate days remain, and Thursday September 3 is the next legislative session - the best remaining window for ethics divestiture compromise language.</strong> The Senate working days before the September 15 cloture vote are September 3, 8, 9, and 10. Wednesday September 2 is not a Senate session day; Thursday September 3 is the next working day. The ethics divestiture provision - requiring officials with $1 million+ in digital assets to divest - remains the primary blocking issue with no reported compromise language as of Wednesday morning. Nine Democratic crossover votes remain unsecured. Polymarket at 30%. Senate bandwidth is compressed by the Iran-Jordan military exchange and now the tanker-strike escalation. A cloture failure on September 15 closes the 2026 legislative window entirely: both chambers are nearly fully out in October before the November 3 midterms, and the Senate's 2026 legislative calendar has no second window. XRP at $1.35 is pricing the four-day countdown with 30% odds.</li>
         </ul>
 
+        <div class="sec-v2">
         <h2 class="section-title" id="stocks">Stock Market</h2>
-        <p class="section-intro">The S&amp;P 500 closed September 1 at 7,631.47 (-0.71%), Nasdaq at 26,099.77 (-1.03%), Dow at 52,766.88 (-0.79%). September's first session delivered the seasonal headwind the calendar promised: historically -0.7% for the month, compounded by 66% rate hike odds entering the new week. Wednesday morning opens with ADP's 47K in-line print providing no directional catalyst. The next market-moving input is Thursday's Freddie Mac PMMS and jobless claims, followed by Friday's 8:30 ET NFP - the terminal event before the FOMC votes September 15-16.</p>
-        <div class="data-line"><span class="data-label">S&amp;P 500 (September 1 close):</span> 7,631.47 <span class="down-red">-0.71% on September 1; S&amp;P sits 167 points below the August 14 record of 7,798.99; support at 7,590-7,620 below Tuesday's close; the 7,631 level opens September in a position that requires both a Friday jobs beat and an in-line or better August CPI on September 11 to reclaim the 7,798.99 record before the September 15-16 FOMC vote; Wednesday's ADP in-line print at 47K provides no catalyst; the seasonal headwind (-0.7% historical September average since 1950) combined with 66% hike odds creates a double headwind for September's opening week</span></div>
-        <div class="data-line"><span class="data-label">Nasdaq (September 1 close):</span> 26,099.77 <span class="down-red">-1.03%; the Nasdaq's larger September 1 decline versus the S&amp;P confirms that rate-path repricing at 66% September hike odds hits higher-multiple technology names disproportionately; the ISM Prices sub-index holding at 71.1% (same as July) adds to Nasdaq's rate-sensitivity headwind - sustained input cost inflation is not moderating; Wednesday ADP in-line provides no relief; Friday NFP is the first potential Nasdaq catalyst</span></div>
-        <div class="data-line"><span class="data-label">Dow Jones (September 1 close):</span> 52,766.88 <span class="down-red">-0.79%, losing 419.02 points on September 1; energy components (Chevron, ExxonMobil) partially offset the rate-driven decline as Brent surged from $91.28 to approximately $94.73 during Tuesday's session; defense names (RTX, Honeywell) benefited from the tanker-for-tanker policy escalation; the Dow's modest outperformance versus Nasdaq reflects the value tilt's lower rate-path sensitivity - energy and defense partially cushion the September seasonal headwind</span></div>
-        <div class="bottom-line-label">Bottom Line</div>
-        <ul class="bottom-line-list">
-          <li>September's first session showed the seasonal pattern the calendar has always delivered. ADP's 47K Wednesday morning does not change the equity calculus - it confirms the labor market is neither accelerating nor cracking. Friday's NFP is the equity market's first chance to shift the September 15 calculus. A miss below 100K generates the first rate-relief rally of September; a beat above 150K with 3.5%+ wages extends the September sell-off into CPI week.</li>
-        </ul>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">7,631</div><div class="d down">&#9660; 0.71%</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">26,100</div><div class="d down">&#9660; 1.03%</div></div>
+          <div><div class="k">Dow</div><div class="v">52,767</div><div class="d down">&#9660; 0.79%</div></div>
+        </div>
+        <p class="setup">September opened the way the calendar said it would: the seasonal headwind, compounded by 66% hike odds. ADP's 47K this morning changes nothing. The number that does is <b>Friday's jobs report at 8:30 ET</b>, the last read before the Fed votes September 15.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (September 1 close):</span> <span class="num">7,631.47</span> <span class="d down">&#9660; 0.71%</span><span class="why">167 points below the August 14 record of 7,798.99. Support at 7,590 to 7,620. Reclaiming the record needs both a Friday jobs beat and a calm August CPI on September 11.</span></div>
+          <div class="line"><span class="lb">Nasdaq (September 1 close):</span> <span class="num">26,099.77</span> <span class="d down">&#9660; 1.03%</span><span class="why">Fell hardest because 66% hike odds hit high-multiple tech first. The ISM prices index holding at 71.1% says input costs are not cooling.</span></div>
+          <div class="line"><span class="lb">Dow Jones (September 1 close):</span> <span class="num">52,766.88</span> <span class="d down">&#9660; 0.79%</span><span class="why">Lost 419 points but held up best. Chevron and Exxon caught Brent's run to $94.86; RTX and Honeywell caught the tanker news.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>No catalyst until Friday. A miss under 100K is September's first rate-relief rally. A beat over 150K with wages above 3.5% carries the selloff into CPI week.</p></div>
+        <div class="src"><b>Curated from</b> CME FedWatch &middot; ADP &middot; ISM &middot; Axios</div>
+        </div>
 
         <h2 class="section-title" id="rates">Interest Rates</h2>
         <p class="section-intro">September hike odds at approximately 66% entering Wednesday, up from 57% going into September 1. The ISM Manufacturing PMI at 54.6% - below 55.2% forecast but in expansion for the eighth consecutive month - confirmed the Warsh "underlying trends" framework without triggering a hawkish acceleration in odds. ADP at 47K this morning adds no new rate-path signal. The 10-year Treasury at 4.81% crossed the 4.75% threshold on September 1, starting the clock on PMMS above 6.70% within 2-3 survey cycles. No Fed communication is available before September 15-16 under the "quieter Fed" doctrine.</p>
