@@ -30,26 +30,27 @@ There are three Vercel projects. Never confuse them.
 
 ```bash
 # 1. Strip editorial nav links from ALL public HTML files (Email Copy + Emergency PO <li> items).
-#    Use a Python script — never sed (sed has corrupted files before).
-#    Skip email_copy.html and emergency_po.html themselves.
-#    Pattern to remove (match by content, ignore leading whitespace):
-#      <li><a href="email_copy.html">Email Copy</a></li>
-#      <li><a href="emergency_po.html">Emergency PO</a></li>
-#    Reference script: scratchpad/strip_nav.py (created 2026-08-04)
+#    The script is in the repo. Never sed (sed has corrupted files before).
+#    It exits non-zero if any public file still carries a link.
+python3 scripts/nav_links.py strip
 
 # 2. Link CLI to the correct live project
-npx vercel link --yes --project totem-challenge-preview
+npx vercel link --yes --project totem-challenge-preview --token "$VERCEL_TOKEN"
 # 3. Deploy
-npx vercel --prod --yes
-# 4. Restore editorial nav links in ALL files (reverse of step 1)
-#    Reference script: scratchpad/restore_nav.py (created 2026-08-04)
+npx vercel --prod --yes --token "$VERCEL_TOKEN"
+# 4. Restore editorial nav links in ALL files. Exits non-zero unless every
+#    public file carries both links again. If it fails, restore from git:
+#    git checkout <pre-strip commit> -- *.html
+python3 scripts/nav_links.py restore
 # 5. Relink CLI back to the editorial project (keeps .vercel/project.json tidy)
-npx vercel link --yes --project totem-newsletter-site
+npx vercel link --yes --project totem-newsletter-site --token "$VERCEL_TOKEN"
 # 6. Commit and push the restored files so the editorial site stays in sync
 git add -A && git commit -m "Restore editorial nav links" && git push origin main
 ```
 
-Always verify the aliased URL in the deploy output reads `totem-challenge-preview.vercel.app` before declaring Phase 2 complete.
+Always verify the aliased URL in the deploy output reads `totem-challenge-preview.vercel.app` before declaring Phase 2 complete. Then `curl` the live article and confirm: the new headline, no `email_copy.html` link, anchors `open-1` through `open-5` present.
+
+**Lesson from 2026-09-02:** the first restore script anchored on the Archive `<li>` being on its own line. In 58 older files it shares a line with The Challenge link, so those files were committed to main without the editorial links. The repo script now inserts before the nav's `</ul>` and refuses to exit clean unless every file is restored. Do not replace it with a scratchpad one-off.
 
 **Why all files, not just today's article:** Every page on the site (index, archive, all articles, all challenge issues) shares the same nav. Stripping only the new article leaves Email Copy and Emergency PO visible to readers on every other page.
 
