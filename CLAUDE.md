@@ -134,6 +134,30 @@ JJ has flagged this repeatedly. Every time the email carries the "why," the read
 
 **Never write these into the email:** a mechanism, a scenario table ("a miss below 100K does X, a beat above 150K does Y"), a second-order consequence spelled out, a number the reader could not have guessed. Those are the article. If it would make a reader say "got it" instead of "wait, why?", it belongs on the website.
 
+### THE OPPORTUNITY FRAME (locked 2026-09-02 - JJ's instruction, applies to every email)
+
+**Less war. Less fear. Lead with what is available *for* the reader, not what is happening *to* them.** JJ's words: news defaults to Crisis News Network energy, and that is not what people want to wake up to. A threat headline earns one open and then trains the reader to dread the email. An opportunity headline carries its own reason to click.
+
+This is **not spin**. The facts do not change and nothing is hidden - the reality check stays in the email as data (snapshot line) and the article carries the full story. What changes is the **order and the verb**: the first eight words of every opening unit are about the reader's money, not Tehran.
+
+**Rules:**
+
+1. **Headline test.** Does the hero's first sentence describe a threat to the reader or an opening for the reader? Lead with the opening. If the day's biggest fact is a conflict event, frame it by its consequence for the reader (rates, a price that got cheaper, a sector that held) - never by the event itself.
+2. **Bullet ratio.** Of the five bullets, at least **three** point at something the reader can use, gain, or act on. At most **one** leads with a conflict or fear word. The war, if it appears, is one bullet, never the frame.
+3. **First-eight-words ban list** for subject line, preheader, hero headline, and lead: *strikes, war, crisis, collapse, crash, fear, plunge, panic, attack, escalation.* These words may appear in the article; they do not open the email.
+4. **The "what's working" pass.** Before writing the email, list the five most constructive facts in today's article (a rate on savings going up, a price that got cheaper, a state crop reading that beat, a sector that held while the index fell, a legislative window still open). That list is the bullet pool. Sept 2 proof: all five opportunity bullets were already inside the article - Iowa corn 77%, energy and defense holding the Dow, gold cheaper, the CD wait decision, four CLARITY Act days. They were just never surfaced.
+5. **Compliance stays on.** Opportunity framing is not a promise. "Savers are 66% likely to get a raise" passes; "savers will get a raise" does not. Never a buy, never a guarantee. Run the totem-compliance-screen posture on every hero.
+
+**Sept 2 example - same facts, both frames:**
+
+| Threat frame (shipped first) | Opportunity frame (what JJ asked for) |
+|---|---|
+| US Strikes Iranian Tankers - Brent Surges to $94.86. September Hike Odds Hit 66%. | Savers Are 66% Likely to Get a Raise This Month. Gold Just Got 2.9% Cheaper. |
+| Why the tanker strikes hit Iran's wallet harder than its missiles. | The one move CD savers should wait to make before September 15. |
+| What gold falling on a war day says about where institutions are positioned. | Gold got cheaper on a day it should have gotten expensive - what that opens up. |
+
+**Measure it.** Mailchimp subject-line A/B: run the opportunity subject against the threat subject on each send for two weeks and tag the sends. Ten sends decide it with data, not opinion.
+
 ### Schedule
 - **Monday - Thursday:** Market Pulse email only. Member and non-member use the same structure (see below). No additions, no extra sections.
 - **Friday:** Different format (Challenge lead + Market Pulse). Do not apply Friday's structure to Mon-Thu.
