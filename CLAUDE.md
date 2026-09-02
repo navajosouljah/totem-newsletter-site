@@ -8,6 +8,8 @@ Examples:
 - Correct: [totem-newsletter-site.vercel.app/market_pulse_july30_2026.html](https://totem-newsletter-site.vercel.app/market_pulse_july30_2026.html)
 - Wrong: `https://totem-newsletter-site.vercel.app/market_pulse_july30_2026.html`
 
+**Every clock time carries AM or PM and the time zone.** Write "8:30 AM ET," "2:00 PM ET," "11:00 AM ET." Never "8:30 ET," "8:30," "10am," or "2 PM" without the zone. The reader should not need to know that jobs data is a morning release to read the time. Applies to the article, the email, post-cards, and chat replies. (JJ, 2026-09-02.)
+
 ## Vercel environments
 
 There are three Vercel projects. Never confuse them.
