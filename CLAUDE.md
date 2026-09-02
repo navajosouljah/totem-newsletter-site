@@ -336,6 +336,10 @@ Issues live in GitHub Issues on `navajosouljah/totem-newsletter-site` (via the `
 
 Default vocabulary: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`. See `docs/agents/triage-labels.md`.
 
+### Obsidian memory
+
+JJ's vault is local (`~/Vaults/BOLT/`, not reachable from cloud sessions). The standing-decisions note for Market Pulse is kept vault-ready in the repo at `docs/obsidian/Totem_Market_Pulse_MEMORY.md` with its target vault path in the frontmatter. **Whenever a rule in this file changes, update that note in the same commit.** A local session with vault access copies it to `~/Vaults/BOLT/20_Businesses/Totem/MEMORY.md`.
+
 ### Domain docs
 
 Single-context: one `CONTEXT.md` at the repo root plus `docs/adr/`. See `docs/agents/domain.md`.
