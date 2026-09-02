@@ -53,7 +53,78 @@ Always verify the aliased URL in the deploy output reads `totem-challenge-previe
 
 **Why all files, not just today's article:** Every page on the site (index, archive, all articles, all challenge issues) shares the same nav. Stripping only the new article leaves Email Copy and Emergency PO visible to readers on every other page.
 
-## The Attention Rules (locked 2026-08-20)
+## Market Pulse Article Format v2 (locked 2026-09-02 - JJ approved after a full live-data run)
+
+**This is the article template. Every morning run builds the page this way. No exceptions, no reverting to the pre-September-2 format.** The newest article file is the template; copy its full `<style>` block (the `.sec-v2` rules are the format) and its section markup exactly. The September 2, 2026 article is the reference implementation.
+
+### Why it exists
+
+Before September 2 the article ran 5,752 words (25 minutes). Every section said each fact three times: an italic gray intro, then semicolon-chained data lines in colored semi-bold, then a bottom line. JJ's verdict: an hour-long read that looked like contract fine print. The fix is not fewer facts. It is each fact said once, plainly, with the source named. September 2 closing edition: 3,499 words, every data line intact.
+
+### The opening (replaces headline + dek + Quick Read + bullets)
+
+1. **Kicker**: `Market Pulse • [Day], [Month D, YYYY]`. Centered.
+2. **Headline**: **12 words max, two sentences**, centered, Spectral 800 at `clamp(34px,4.6vw,46px)`, sitting 56px below the kicker. **Identical, word for word, to the email hero headline** so the click lands on the sentence the reader just read. Opportunity Frame applies (see the email rules): lead with what is available for the reader, never with the conflict.
+3. **No dek.** Retired 2026-09-02. Its job (the day's tension) is the first sentence of Quick Read paragraph 1.
+4. **The Quick Read**: three paragraphs, **250 words hard cap**, Work Sans title, drop cap on paragraph 1. Paragraph 1 = the tension, then the cause and its mechanism, ending on the mechanism. Paragraph 2 = what today (or Friday) decides, with the thresholds. Paragraph 3 = what keeps building underneath. Closes with a `Curated from` sources line.
+5. **How [Day] Opens** (or **Closed** for a post-close edition): **exactly five bullets, and they are the five answers to the five email bullets, in the same order.** Each `<li>` has `id="open-1"` through `id="open-5"`. Each opens with the email bullet's text **verbatim in bold**, gives the answer in 40 to 50 words, and ends with an `<a class="more" href="#section">Section name →</a>` link to the section that carries the full data. The email bullets deep-link to `...html#open-1` through `#open-5`. This is the email-to-web handoff; it is not optional.
+
+### Every topic section (11 of them, same skeleton, in this order: Stock Market, Interest Rates, Savings & CD Rates, Energy & Gas Prices, Commodities, Crop Weather, Real Estate, Household Finance, Crypto, Around the World, The Week Ahead)
+
+Wrapped in `<div class="sec-v2">`:
+
+1. **Title** `h2.section-title` (Work Sans 800, 24px).
+2. **Stat strip** `div.strip`: three cells, each `k` (label) / `v` (rounded figure, tabular numerals) / `d` (direction: `up`, `down`, or `flat`, with ▲ ▼ and the change or "Unchanged"). This is the section's headline. Fixed contents:
+
+| Section | Strip cells |
+|---|---|
+| Stock Market | S&P 500 · Nasdaq · Dow |
+| Interest Rates | Fed funds · 2-year · 10-year |
+| Savings & CD | Top 1-yr CD · Top HYSA · Nat'l avg 1-yr CD |
+| Energy | Brent · WTI · Gas (AAA) |
+| Commodities | Gold · Silver · Copper |
+| Crop Weather | Corn G/E · Soybeans G/E · Corn futures (or drought share) |
+| Real Estate | 30-yr mortgage (Freddie Mac) · 10-year · Canada lumber tariff day |
+| Household Finance | Layoffs or real wages · Card delinquency 90+ · Gas (AAA) |
+| Crypto | Bitcoin · Ethereum · XRP |
+| Around the World | Nikkei · Hang Seng · Yen (swap in the day's mover) |
+| The Week Ahead | Next three dated catalysts |
+
+3. **Setup paragraph** `p.setup`, **italic** (the CSS does it), 40 to 70 words, one or two bold phrases max. What moved and why, once. Never a list of the numbers that follow.
+4. **Data lines** `div.lines > div.line`: gold dot bullet (CSS), then `span.lb` label with the date in parentheses (e.g. "S&P 500 (September 2 close):"), `span.num` the **precise figure to the decimal**, `span.d` direction, then `span.why` on its own line: one to three plain sentences, **regular weight, body color**, saying why it moved and what it means. **Keep every data line readers come for. Never chain clauses with semicolons. Never restate the setup.**
+5. **Bottom line** `div.bottom`: gold left rule, `span.lbl` label, one `<p>` of one to three sentences. The call, not a summary.
+6. **Sources line** `div.src`: `<b>Curated from</b> Source · Source · Source`. Only sources actually used. This is the "we went to ten places so you don't have to" promise, printed on every section.
+
+### Typography and emphasis rules
+
+- Bold is for labels, numbers, and at most two key phrases per section. Nothing else. If everything is bold, nothing is.
+- Muted gray (`--muted`) is for metadata only: dates, strip labels, sources, sidebar. **Never for a content sentence.** The `.flat` direction marker is the one exception.
+- Colored text is for direction markers only (`.up` green, `.down` red). Never color a sentence.
+- Bullets are the 5px gold dot, 22px indent, vertically centered on the first line. Same dot on How [Day] Opens and on every data line.
+- Times: always AM/PM plus zone (see Formatting).
+- Hyphens for asides, never em dashes.
+
+### Word budget
+
+| Unit | Cap |
+|---|---|
+| Headline | 12 words |
+| Quick Read | 250 |
+| How [Day] Opens | 5 × 65 (bold lead + answer + link) |
+| Each topic section | 200 to 380 |
+| Whole article | 3,000 to 3,600 |
+
+Under 3,000 means data lines were dropped; over 3,600 means something is being said twice. A section whose data has not moved says so in the setup line and keeps its data lines; it does not pad.
+
+### Data accuracy (the ADP lesson, 2026-09-02)
+
+The morning article carried ADP at 47K. That was the consensus; the release was 38K. **Use the released figure, never the forecast.** When a figure is not yet released, say "due at [time]" and do not put a number in the strip. When a figure cannot be found, write "not available" or carry the last reading with its date; never carry a stale number as if it were today's. Mark estimates as estimated (WTI). Every strip figure and data line needs a source that appears in the section's Curated from line.
+
+### Disclaimer
+
+See "Article disclaimer" below. Two paragraphs, verbatim General Disclaimer plus the as-of line. Nothing else.
+
+## The Attention Rules (locked 2026-08-20; opening-block sequence superseded by Article Format v2 on 2026-09-02 - the dek is retired, the Subject Variety Rule and the Bullet Rule still apply)
 
 These govern the **opening block** of every article and every email - the first thing the reader sees. They exist because 11,000-word briefings with the correct data still get archived unread when the top of the page fails to earn the scroll. Length was never the real problem; **sequence** was. Each opening unit must earn its place by being different from the one before it.
 
