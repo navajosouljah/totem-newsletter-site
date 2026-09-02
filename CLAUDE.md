@@ -108,6 +108,32 @@ This applies to: index.html post-cards, archive.html post-cards, and the hero `c
 
 **Never change the email format without JJ's explicit instruction.** Content updates only - dates, data, links. The structure is locked.
 
+### THE CLICK RULE (locked 2026-09-02 - overrides every other email rule below)
+
+**The email's only job is the click.** It is not a briefing. It is not a summary. It is a hook. Success is measured on two numbers only: open rate and click rate. 90-day Mailchimp baseline (Jun-Aug 2026): 32.5% open, **2.0% click**. The best-performing send (June 5) hit 16.4% click; the worst dozen sends hit 0.0%. The 0.0% sends had 30%+ opens - people opened, read, and had no reason to leave the inbox. **That is the failure mode: an email that answers its own questions.**
+
+JJ has flagged this repeatedly. Every time the email carries the "why," the reader gets the payoff in the inbox and never clicks. The website carries the answers. The email carries only the questions.
+
+**Hard caps - not targets, caps. Count the words before pushing.**
+
+| Unit | Cap | Form |
+|---|---|---|
+| Preheader | 12 words | One line that creates a gap, not a summary |
+| Hero headline | 20 words, 2 sentences | The two biggest facts, nothing else |
+| Lead paragraph | 25 words, 1-2 sentences | A tension or a question. Never an explanation. |
+| Data snapshot | 5 items max | Rounded figures only |
+| Each of the Five Things | **15 words, one bold sentence, NO context sentence** | Names what the article explains and withholds the explanation |
+| Total body copy (preheader + lead + snapshot + five bullets) | **120 words** | If it is over, cut - do not tighten, cut |
+
+**The Curiosity Gap Test (run on every bullet before pushing):** Read the bullet alone. Does it make the reader ask "why?" or "what?" - and is the answer *only* on the website? If the bullet contains its own answer, it has failed. Cut the answer, keep the question.
+
+- Failed (Sept 2 before fix, 58 words): "The 'tanker for tanker' doctrine targets Iran's revenue, not just its weapons. Each struck tanker reduces Tehran's immediate hard currency flow from crude exports - a pressure that secondary sanctions haven't touched directly. The Bessent secondary-sanctions lever remains undeployed..."
+- Passed (11 words): "Why the tanker strikes hit Iran's wallet harder than its missiles."
+
+**Every bullet is a link to the article.** The five bullets are five click targets, not five paragraphs. The bottom CTA button sits directly under them.
+
+**Never write these into the email:** a mechanism, a scenario table ("a miss below 100K does X, a beat above 150K does Y"), a second-order consequence spelled out, a number the reader could not have guessed. Those are the article. If it would make a reader say "got it" instead of "wait, why?", it belongs on the website.
+
 ### Schedule
 - **Monday - Thursday:** Market Pulse email only. Member and non-member use the same structure (see below). No additions, no extra sections.
 - **Friday:** Different format (Challenge lead + Market Pulse). Do not apply Friday's structure to Mon-Thu.
@@ -118,19 +144,20 @@ This applies to: index.html post-cards, archive.html post-cards, and the hero `c
 
 1. **Masthead** - TOTEM LC GROUP + tagline
 2. **Gold 1px `<hr>` rule** - between masthead and hero block
-3. **Navy hero block** (navy gradient, `border-radius: 4px`) - self-contained, contains ALL of: kicker line, "Market Pulse" logo text, short headline (3 punchy sentences, white Spectral bold), and gold CTA button. Links to today's article on totem-challenge-preview.vercel.app. **No separate white card below the hero.**
-4. **Gold CTA button** (`#fcb900` background, dark text `#16181d`, `border-radius: 3px`) - inside the hero block. Label: "Read Today's Briefing". **No second CTA button anywhere else in the email.**
-5. **Lead paragraph** (Spectral 21px bold) - **the tension frame, not a teaser of the top story.** Two sentences. It must open a second subject to whatever the hero headline led with. See the Subject Variety Rule.
-6. **Data snapshot** (Inter 14px) - one line. Rounded figures. **Gold left border: 3px gold `<td>` + 14px padding-left.** Never restates the lead paragraph in prose.
+3. **Navy hero block** (navy gradient, `border-radius: 4px`) - self-contained, contains ALL of: kicker line, "Market Pulse" logo text, short headline (2 sentences, 20 words max, white Spectral bold), and gold CTA button. Links to today's article on totem-challenge-preview.vercel.app. **No separate white card below the hero.**
+4. **Gold CTA button** (`#fcb900` background, dark text `#16181d`, `border-radius: 3px`) - inside the hero block. Label: "Read Today's Briefing".
+5. **Lead paragraph** (Spectral 21px bold) - **the tension frame, not a teaser of the top story.** 25 words max. It must open a second subject to whatever the hero headline led with. See the Subject Variety Rule.
+6. **Data snapshot** (Inter 14px) - one line, 5 items max. Rounded figures. **Gold left border: 3px gold `<td>` + 14px padding-left.** Never restates the lead paragraph in prose.
 7. **Divider**
-8. **"Five Things Only Totem Will Tell You Today"** - gold-bullet label, then 5 bullets. Each bullet: bold topic sentence + 2-3 sentences of context. Every bullet opens a distinct subject; no bullet may re-tell the hero story. See the Bullet Rule.
-9. **Footer** - disclaimer + Totem LC Group sig
+8. **"Five Things Only Totem Will Tell You Today"** - gold-bullet label, then 5 bullets. **Each bullet is ONE bold sentence, 15 words max, linked to the article. No context sentence.** Every bullet opens a distinct subject; no bullet may re-tell the hero story. See The Click Rule and the Bullet Rule.
+9. **Bottom CTA button** - same gold button, directly under the five bullets. Added 2026-09-02 on JJ's click-rate instruction; it is the click target for a reader the bullets just hooked.
+10. **Footer** - disclaimer + Totem LC Group sig
 
-**What is NOT in this email (do not add):** inline link row, second CTA button, separate white article card below the hero, navy date bar as a separate element (it is baked into the hero kicker).
+**What is NOT in this email (do not add):** inline link row, separate white article card below the hero, navy date bar as a separate element (it is baked into the hero kicker), any explanatory sentence after a bullet.
 
 ### The lead paragraph is the tension frame
 
-The lead in the email is not a teaser of the top story - the hero headline already carries that. Its job is to name **the day's hinge**: the question the day is about to answer, or the tension the market is holding. Two sentences. If the reader could guess what your top story is by the end of sentence one, the lead is not doing its job.
+The lead in the email is not a teaser of the top story - the hero headline already carries that. Its job is to name **the day's hinge**: the question the day is about to answer, or the tension the market is holding. 25 words max, one or two sentences. If the reader could guess what your top story is by the end of sentence one, the lead is not doing its job. If the lead *explains* the hinge instead of naming it, it is too long.
 
 **Correct (tension frame, Aug 20):**
 > "Rates fell, crypto ripped, and equities bounced. Walmart opens its books at 6am against a consumer 13.1% behind on credit cards - the number that says whether any of it holds."
@@ -151,12 +178,15 @@ Read only the first 8 words of each of these opening units in order:
 
 ### The Bullet Rule
 
-The bullet label was changed from "Also in Today's Briefing" to **"Five Things Only Totem Will Tell You Today"** to enforce the standard. Every bullet must be an editorial read - the "why," the "so what," or the second-order consequence - not a data restatement.
+The bullet label was changed from "Also in Today's Briefing" to **"Five Things Only Totem Will Tell You Today"** to enforce the standard. Every bullet must *point at* an editorial read - the "why," the "so what," or the second-order consequence - without delivering it. The bullet is the question; the article is the answer.
 
-Bad bullet opening: "Treasury doubles long-bond buybacks to $4B - 30-year falls to 5.19%." (data restatement)
-Good bullet opening: "The rate ceiling has an expiration date." (the read)
+Bad bullet: "Treasury doubles long-bond buybacks to $4B - 30-year falls to 5.19%." (data restatement)
+Also bad: "The rate ceiling has an expiration date. Buybacks at $4B/operation exhaust Treasury's authority in 6 weeks, after which..." (the read, fully delivered - no reason to click)
+Good bullet: "The rate ceiling has an expiration date." (the read, withheld - 7 words, one sentence, links to the article)
 
-Test: strike the article's Quick Read from the email and re-read each bullet. If a bullet loses its point, it was a restatement; rewrite it.
+Two tests, both must pass:
+1. Strike the article's Quick Read from the email and re-read each bullet. If a bullet loses its point, it was a restatement; rewrite it.
+2. Read each bullet alone. If it answers its own question, it is too long; cut it to the question.
 
 ### Rounding in the email
 
