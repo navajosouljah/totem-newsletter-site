@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - September 7, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:28px 0 0;text-align:center;}
+  .body{padding-top:0;}
+  .body > .sec-v2:first-child h2.section-title{margin-top:0;}
+  h1.headline{text-wrap:balance;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:clamp(34px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;color:var(--ink);margin:56px 0 0;}
+  .dek{font-family:'Spectral',serif;font-weight:400;font-size:18px;line-height:1.5;color:#3b4048;margin-bottom:0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  h2.section-title{font-family:'Spectral',serif;font-weight:700;font-size:22px;line-height:1.2;letter-spacing:-0.01em;color:var(--ink);margin:26px 0 6px;padding-top:20px;border-top:1px solid var(--line);}
+  .section-intro{font-family:'Spectral',serif;font-style:italic;font-size:15px;line-height:1.5;color:var(--muted);margin-bottom:12px;}
+  .data-line{margin-bottom:6px;font-size:16px;line-height:1.5;font-family:'Spectral',serif;}
+  .data-label{font-weight:700;color:var(--ink);}
+  .up-green{color:#2d6a4f;font-weight:600;}
+  .down-green{color:#2d6a4f;font-weight:600;}
+  .up-red{color:#9b2c2c;font-weight:600;}
+  .down-red{color:#9b2c2c;font-weight:600;}
+  .flat{color:var(--muted);font-weight:600;}
+  .bottom-line-label{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-top:14px;margin-bottom:6px;}
+  .bottom-line-list{list-style:none;padding:0;margin:0 0 8px;}
+  .bottom-line-list li{padding-left:18px;position:relative;margin-bottom:7px;font-size:16px;line-height:1.55;color:var(--body);}
+  .bottom-line-list li::before{content:"\2022";position:absolute;left:0;color:var(--gold);font-weight:700;}
+  .bullet-list{list-style:none;padding:0;margin:0;}
+  .bullet-list li{padding-left:18px;position:relative;margin-bottom:8px;font-size:16px;line-height:1.55;}
+  .bullet-list li::before{content:"\2022";position:absolute;left:0;color:var(--navy);font-weight:700;}
+  /* ---- v2 section treatment ---- */
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .strip + p.setup{font-style:italic;}
+  .sec-v2 .strip + p.setup b{font-style:italic;}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);position:relative;padding-left:22px;}
+  .sec-v2 .line::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:18px;}
+  .sec-v2 .opens li{padding-left:22px;position:relative;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens li::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .opens li b{font-weight:700;color:var(--ink);}
+  .sec-v2 .opens li:target{background:var(--wash);box-shadow:0 0 0 10px var(--wash);border-radius:2px;}
+  .sec-v2 .opens a.more{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;margin-left:6px;}
+  .sec-v2 .opens a.more:hover{border-bottom:2px solid var(--gold);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p.asof{color:var(--muted);margin-bottom:0;}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}h2.section-title{font-size:20px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_september7_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_11.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Monday, September 7, 2026</span></div>
+        <h1 class="headline">Hike Odds Ease to 55%. Brent Hits $97 Before Tuesday.</h1>
+      </div>
+
+      <div class="body">
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="setup lead-first">The weekend's 70% rate-hike reading did not survive the CME futures open. FedWatch reset to approximately <b>55%</b> Monday morning as the market absorbed three competing forces: the three-tanker strike pushing Brent to $97, gold's $130 fall on the same escalation day, and a broader repricing that split the inflation signal from the energy-cost shock. The mechanism is the collision between two inputs that normally reinforce each other - war-day oil gains and war-day rate-hike expectations - pulling apart for the second time in a week. At 55%, September 15 is still the slight majority case, but the 70%-to-55% round trip since Friday is the rate market's first honest pricing of the contradiction.</p>
+        <p class="setup">Tuesday September 8 is the first US market session to absorb all of it simultaneously: 55% hike odds, Brent at $97, gold at <b>$4,446</b>, Nikkei up 2% and Hang Seng down 0.9%. Three CLARITY Act Senate working days open Tuesday - the last window before the September 14 return and September 15 cloture at 2:15 PM ET. Freddie Mac PMMS lands Thursday September 10. August CPI at 8:30 AM ET and September WASDE at noon arrive Friday September 11. Every number this week feeds September 15.</p>
+        <p class="setup">Gold's second war-day decline in a week - from approximately $4,575 Friday to $4,446 Monday - signals institutional cash is moving into energy and not to traditional safe havens. The 13.1% credit-card delinquency reading and $4.15 gas sit unchanged beneath the headline debate, compressing household margin whether the Fed moves September 15 or not. Iran's Parliament Speaker hardened the weekend's tone Sunday: "any attack will receive a faster, heavier and more painful response" - no new kinetic action through Monday morning, but the rhetoric-to-action gap is the market's working assumption for Tuesday.</p>
+        <div class="src"><b>Curated from</b> CME FedWatch &middot; BLS &middot; CENTCOM &middot; CoinDesk &middot; AAA</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="week-opens">How Tuesday Opens</h2>
+        <ul class="opens">
+          <li id="open-1"><b>What hike odds easing to 55% reopens for CD savers still on the fence.</b> The weekend's 70% read made waiting the clear call. At 55%, the lock-vs-wait math is genuinely close again - the first time since Friday's jobs print. September 11 CPI is the tiebreaker: above 3.5% rebuilds the waiting edge; below 3.2% tips toward locking 4.40% now. <a class="more" href="#savings">Savings &amp; CD &rarr;</a></li>
+          <li id="open-2"><b>Why gold fell $130 on the day oil gained $2.</b> Gold dropped from approximately $4,575 Friday to $4,446 Monday - the second war-day selloff in a week. Institutions are not running to safe havens; they are running to energy. The September 2 pattern repeated exactly. What that capital flow says about where Tuesday's equity and commodity money goes. <a class="more" href="#commodities">Commodities &rarr;</a></li>
+          <li id="open-3"><b>What the Nikkei's 2% Labor Day rally needs from Tuesday to confirm.</b> Tokyo posted its best Monday since July: Kioxia +7.2%, SoftBank +6.1%, Tokyo Electron +5.3%. The session absorbed $97 Brent, 55% hike odds, and three tankers struck - and rallied anyway. Whether New York opens with the same AI-trade weight or reprices the rate-and-energy headwind is Tuesday's first signal. <a class="more" href="#world">Around the World &rarr;</a></li>
+          <li id="open-4"><b>Where $97 Brent puts gas prices in the September pump window.</b> The tanker-strike premium is now in crude - Brent up $1.57-2.17 from Friday's close. The 14-to-21-day pump lag puts the September 16-24 retail window directly in line with Monday's crude level. For a household driving 1,100 miles a month, the next pump-window reading is the test of whether $4.15 holds or breaks higher. <a class="more" href="#energy">Energy &amp; Gas &rarr;</a></li>
+          <li id="open-5"><b>What Tuesday's first CLARITY Senate working day means for XRP at $1.43.</b> Three working days remain before the September 14 return session and September 15 cloture vote at 2:15 PM ET. The ethics divestiture clause is still unresolved. Polymarket passage odds: approximately 20%. Tuesday's Senate floor activity - or silence - is the first signal of whether the three-day window produces any movement. <a class="more" href="#crypto">Crypto &rarr;</a></li>
+        </ul>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">7,718.60</div><div class="d up">&#9650; +0.68% Sept 4</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">26,506.99</div><div class="d up">&#9650; +1.10% Sept 4</div></div>
+          <div><div class="k">Dow</div><div class="v">53,414.25</div><div class="d up">&#9650; +0.66% Sept 4</div></div>
+        </div>
+        <p class="setup">US equities are frozen at their best levels of last week. No American session can update the Friday closes until Tuesday September 8 at 9:30 AM ET. What changes between now and Tuesday's open: hike odds reset from 70% to 55%, Brent at <b>$97</b>, gold at $4,446, and the Nikkei's Monday 2% rally are the new inputs waiting at the gate. Tuesday prices all of it simultaneously.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (Friday September 4 close, last US trade):</span> <span class="num">7,718.60</span> <span class="d up">&#9650; +0.68% from Thursday</span><span class="why">The 80-point distance to the September record at 7,798.99 enters Tuesday with two inputs the Friday session never priced: Brent at $97 and hike odds settling at 55% rather than confirming the weekend's 70% high. The Nikkei's 2% Monday session - driven by the AI trade, not the rate or energy narrative - is the most bullish external read. Tuesday's direction depends on which signal New York weights.</span></div>
+          <div class="line"><span class="lb">Nasdaq (Friday September 4 close):</span> <span class="num">26,506.99</span> <span class="d up">&#9650; +1.10% from Thursday</span><span class="why">Tech's best session of last week is the most directly confirmed by Monday's Nikkei data: Kioxia +7.2%, Tokyo Electron +5.3%, SoftBank +6.1% are the same AI-infrastructure and memory names that drove Nasdaq's Friday strength. At 55% hike odds versus the 70% weekend fear, the rate headwind is present but narrower than Sunday implied.</span></div>
+          <div class="line"><span class="lb">Dow Jones (Friday September 4 close):</span> <span class="num">53,414.25</span> <span class="d up">&#9650; +0.66% from Thursday</span><span class="why">Energy and defense names led Friday on the jobs signal. At $97 Brent, energy names within the Dow carry a direct crude tailwind into Tuesday that the Friday session's $95.23 close did not have. Rate-sensitive sectors - utilities, real estate - face Tuesday with 55% hike odds: still a slight majority, narrower than Sunday's 70% implied.</span></div>
+          <div class="line"><span class="lb">CME E-mini futures (Monday abbreviated holiday session):</span> <span class="d flat">early close 12:00 PM CT</span><span class="why">Futures on US equity indexes traded Monday before the 12:00 PM CT holiday close. Direction of any Monday futures move will be the first concrete signal of how Tuesday's session opens relative to Friday's closes and the new weekend inputs.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>US equities frozen at Friday's best close. Tuesday's 9:30 AM ET open is the first full session to price Brent at $97, hike odds at 55%, and Asian Monday divergence simultaneously. The Nikkei's 2% rally is the most constructive external read entering Tuesday.</p></div>
+        <div class="src"><b>Curated from</b> CNBC &middot; Yahoo Finance &middot; CME Group &middot; Investing.com</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <div class="strip">
+          <div><div class="k">Fed funds</div><div class="v">3.50&ndash;3.75%</div><div class="d flat">Held July 29</div></div>
+          <div><div class="k">2-year</div><div class="v">~4.37%</div><div class="d flat">Cash closed Mon</div></div>
+          <div><div class="k">10-year</div><div class="v">~4.79%</div><div class="d flat">Cash closed Mon</div></div>
+        </div>
+        <p class="setup">The weekend's most significant development is not new economic data - it is the <b>hike-odds round trip</b>: 52.6% Friday morning before the jobs print, up to approximately 70% over the weekend futures peak, back to approximately 55% as CME fully reopened Monday. At 55%, September 15 remains the slight majority case but has lost the "base case by a clear margin" character that Sunday's 70% implied. The cash bond market is closed Monday for Labor Day.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Fed policy rate:</span> <span class="num">3.50&ndash;3.75%</span> <span class="d flat">held July 29 on 9-3 vote</span><span class="why">At 55%, the September 15 hike is still the most probable single outcome but the spread has compressed from 70/30 to 55/45. The three July dissenters - who favored a hike then - see 162,000 August jobs and 55% odds as confirming their position, not as a departure from it. A 25-basis-point hike September 15 moves the rate to 3.75-4.00%. Two FOMC meetings remain before year-end: September 15-16 and November.</span></div>
+          <div class="line"><span class="lb">10-year Treasury (Friday September 4 close, cash market):</span> <span class="num">approximately 4.79%</span> <span class="d flat">cash closed Monday</span><span class="why">The cash bond market is closed Monday for Labor Day. At 55% hike odds and Brent at $97, two conflicting forces meet Tuesday: yield upward pressure from rate expectations versus safe-haven demand from Hormuz escalation. Tuesday's 10-year direction is the first clean signal on which force has the edge. At 4.79%, the 10-year is inside the range that the September 3 Freddie Mac PMMS captured - meaning Thursday's mortgage rate survey may not move as sharply as Friday's 70% reading implied.</span></div>
+          <div class="line"><span class="lb">September 15 probability path (Monday morning):</span> <span class="num">approximately 55%</span> <span class="d flat">down from 70% weekend high</span><span class="why">The three-day round trip: 52.6% Friday pre-jobs open, up to approximately 70% weekend futures peak, back to approximately 55% as the full market reopened Monday. The September 11 CPI is still the number that resolves the range. Above 3.5%: hike probability converges toward 80%+ and September 15 returns to near-certainty. Below 3.2%: the pause case revives. Between 3.2% and 3.5%: 55% holds and September 15 remains the slight majority call.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>55% hike odds entering Tuesday - above Friday's pre-jobs close but well below the 70% weekend high. The round trip is the rate market's read on the conflict between a jobs beat and an oil shock. September 11 CPI decides.</p></div>
+        <div class="src"><b>Curated from</b> CME FedWatch &middot; Federal Reserve &middot; BLS &middot; CNBC</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <div class="strip">
+          <div><div class="k">Top 1-yr CD</div><div class="v">4.25&ndash;4.40%</div><div class="d flat">Unchanged</div></div>
+          <div><div class="k">Top HYSA</div><div class="v">4.21%</div><div class="d flat">Unchanged</div></div>
+          <div><div class="k">Nat'l avg 1-yr CD</div><div class="v">1.68%</div><div class="d flat">Unchanged</div></div>
+        </div>
+        <p class="setup">At 55% hike odds - down from Sunday's 70% and back near Friday's pre-jobs 52.6% - the lock-vs-wait calculation has recalibrated. Sunday's 70% made waiting the clear call: post-September-15 rates at 4.55-4.75% were the probability-weighted winner by a wide margin. At 55%, the margin has narrowed to a genuine close call for the first time since Friday's print. September 11 CPI is the tiebreaker.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">National avg 1-yr CD (FDIC):</span> <span class="num">1.68% APY</span> <span class="d flat">unchanged</span><span class="why">The 265-basis-point gap to top online rates is constant across all hike-probability scenarios. The national average is not a viable rate for savers regardless of what September 15 brings. The only rate that matters is the top online offering.</span></div>
+          <div class="line"><span class="lb">Best online 1-yr CD:</span> <span class="num">4.25&ndash;4.40% APY</span> <span class="d flat">unchanged</span><span class="why">At 55% odds, the expected value of waiting for post-September-15 rates (likely 4.55-4.75%) remains positive but narrower than Sunday's 70% implied. September 11 CPI above 3.5%: rebuilds the waiting edge toward near-certainty and the post-hike window stays the call. Below 3.2%: tips the balance toward locking 4.40% now before banks reprice downward. Between 3.2% and 3.5%: 55% holds and waiting retains a slight edge - but the gap is close enough that a reader's time horizon matters.</span></div>
+          <div class="line"><span class="lb">Best high-yield savings account:</span> <span class="num">approximately 4.21% APY</span> <span class="d flat">unchanged</span><span class="why">Axos Bank and select online banks. The HYSA holder has a 55% probability of an automatic rate lift September 15 - down from Sunday's 70%. The asymmetry remains: the HYSA floats with the rate path and gains automatically if the hike lands; the 1-yr CD locks now and misses the lift. At 55%, this advantage holds but is narrower than it was 24 hours ago.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>The hike-odds pullback from 70% to 55% reopened the CD decision for the first time since Friday. September 11 CPI is now the definitive tiebreaker: above 3.5%, wait; below 3.2%, lock 4.40% before banks move. At 55%, both options have a defensible case.</p></div>
+        <div class="src"><b>Curated from</b> FDIC &middot; CME FedWatch &middot; NerdWallet &middot; CDValet</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <div class="strip">
+          <div><div class="k">Brent</div><div class="v">$96.80&ndash;$97.40</div><div class="d up">&#9650; tanker premium in</div></div>
+          <div><div class="k">WTI</div><div class="v">$92.14</div><div class="d up">&#9650; from $91.20 Fri</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.15</div><div class="d flat">Flat over Labor Day</div></div>
+        </div>
+        <p class="setup">Brent moved from $95.23 Friday to $96.80-$97.40 Monday morning - the Saturday tanker-strike premium finally landing in crude. The three-tanker strike (M/T Kylo sank, M/T Downy and M/T Stark 1 disabled) had not fully priced by Friday's close; Monday's $1.57-2.17 move from Friday is that premium. Iran's Parliament Speaker hardened the weekend's tone Sunday without new action: <b>"faster, heavier and more painful"</b> is the stated response posture if further US strikes occur.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Brent crude (Monday morning):</span> <span class="num">$96.80&ndash;$97.40/barrel</span> <span class="d up">&#9650; from $95.23 Friday close</span><span class="why">The M/T Kylo sinking Saturday - the largest US retaliation since the crisis began - is the premium. Analyst range for a second US retaliatory wave was $97-100 on Brent before the strikes; Monday's move is at the low end of that range. No Bessent secondary-sanctions deployment over the Labor Day weekend - that lever remains undeployed. Oman's facilitation between the US and Iran continues. US CENTCOM has redirected 92 commercial vessels total since the crisis began.</span></div>
+          <div class="line"><span class="lb">WTI crude (Monday morning):</span> <span class="num">$92.14/barrel</span> <span class="d up">&#9650; from $91.20 Friday</span><span class="why">Above the $89 level that maintains refiner margins and keeps the national gas average above $4. Bypass pipelines now carry approximately two-thirds of pre-conflict Hormuz volume - an improvement from the first week of closure, but below the level that would meaningfully relieve the crude floor. The Hormuz structural premium remains.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, Monday September 7):</span> <span class="num">$4.1473/gallon</span> <span class="d flat">essentially flat from Friday</span><span class="why">Gas prices reflect crude from 14-21 days prior. Monday's $4.15 reading reflects crude from late August. The September 16-24 pump window will reflect current $97 Brent levels. For a household driving 1,100 miles a month, each 10-cent increase adds approximately $4.50 per month. If the $97+ Brent level holds through this week, the next pump-window reading is likely above $4.20.</span></div>
+          <div class="line"><span class="lb">Iran rhetoric (Sunday September 6):</span> <span class="d flat">no new strikes &middot; rhetoric hardened</span><span class="why">Iran Parliament Speaker Mohammad Baqer Qalibaf Sunday: "any attack against Iran's interests and security will receive a faster, heavier and more painful response." No new IRGC kinetic action through Monday morning - two full days since Saturday's US strikes. UK Maritime Trade Operations threat level: severe. The rhetoric-to-action gap is the market's working assumption for Tuesday; if that gap closes, the $97-100 Brent analyst range is revisited immediately.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Brent at $96.80-$97.40 is the Saturday tanker-strike premium landing in crude. Gas at $4.15 holds through Labor Day; the September 16-24 pump window carries current crude levels to retail. Iran's Sunday rhetoric is the weekend's new watchpoint - no action yet, but the stated response posture is "faster, heavier and more painful."</p></div>
+        <div class="src"><b>Curated from</b> CENTCOM &middot; AAA &middot; Fox News &middot; NPR &middot; Euronews</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <div class="strip">
+          <div><div class="k">Gold</div><div class="v">$4,446</div><div class="d down">&#9660; &minus;$129 from Fri</div></div>
+          <div><div class="k">Silver</div><div class="v">$66.21</div><div class="d up">&#9650; +0.33%</div></div>
+          <div><div class="k">Copper</div><div class="v">$6.57</div><div class="d flat">Steady</div></div>
+        </div>
+        <p class="setup">Gold fell $129 Monday - from approximately $4,575 Friday to <b>$4,446</b>. The pattern is identical to September 2: gold sold off on the day an escalation landed, when traditional safe-haven logic said it should have risen. Institutions are not fleeing to gold; they are moving to energy assets and cash. This is the week's clearest capital-flow signal - and the second consecutive war-day confirmation of it.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Gold / oz (Monday September 7):</span> <span class="num">$4,446.10</span> <span class="d down">&#9660; approximately &minus;$129 from Friday's ~$4,575</span><span class="why">The two-week pattern is now a trend: gold fell September 2 when the first tanker strikes landed, and fell again Monday with the follow-on action Saturday. The Hormuz safe-haven bid that appeared to floor gold near $4,500 last week is no longer functioning as a floor. Capital is rotating into energy. Above $4,500 needs either a yield reversal below 4.65% or a de-escalation signal; below $4,350 needs full CPI-plus-hike confirmation landing simultaneously.</span></div>
+          <div class="line"><span class="lb">Silver / oz (Monday September 7):</span> <span class="num">$66.21</span> <span class="d up">&#9650; +0.33% from Sunday</span><span class="why">Slightly positive Monday - diverging from gold. Silver's industrial component is being lifted by the same 162,000-job growth signal that underpins copper; its rate-sensitivity is partially offset by the manufacturing and AI-demand bid. Silver tracked gold's decline less closely than prior weeks - the industrial floor is providing some separation.</span></div>
+          <div class="line"><span class="lb">Copper (Monday September 7):</span> <span class="num">$6.57/lb</span> <span class="d flat">steady from $6.60 Friday</span><span class="why">Essentially unchanged. Grid investment and AI data-center construction hold the structural demand floor above $6.40. The Monday reading carries no major supply or demand news from the Labor Day weekend. The longer-run supply constraint that has underpinned copper's floor since July is intact.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Gold's $129 Monday fall is the week's clearest commodity signal - capital rotating into energy, not to safe havens, on an escalation day. The September 2 pattern repeated exactly. Silver and copper steady. September 11 CPI is the catalyst that could shift gold's trajectory in either direction.</p></div>
+        <div class="src"><b>Curated from</b> The Respondents &middot; TradingEconomics &middot; LME &middot; CNBC</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <div class="strip">
+          <div><div class="k">Corn G/E</div><div class="v">57%</div><div class="d flat">Aug 31 &middot; 2nd week</div></div>
+          <div><div class="k">Soybeans G/E</div><div class="v">58%</div><div class="d flat">Aug 31</div></div>
+          <div><div class="k">WASDE</div><div class="v">Sept 11</div><div class="d flat">12:00 PM ET</div></div>
+        </div>
+        <p class="setup">No new USDA crop data over the Labor Day weekend. The weekly Crop Progress report - normally released Monday evenings - is delayed to <b>Tuesday September 8</b> for the holiday. The most recent readings (August 31): corn at 57% good-to-excellent for a second straight week, soybeans at 58%. Two consecutive weeks at 57% for corn is the central number heading into Friday's WASDE.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">USDA Crop Progress (August 31, most recent):</span> <span class="num">corn 57% good-to-excellent &middot; soybeans 58%</span> <span class="d flat">2nd consecutive week at 57% for corn</span><span class="why">Four-week corn trend: 65, 61, 57, 57. Stabilization at 57% for two consecutive weeks removes the catastrophic-revision case and points toward 175-177 bpa rather than Pro Farmer's 173.2 floor. Corn 92% in dough stage, 62% dented, 13% mature - on pace for an early harvest. Soybeans 95% setting pods, 13% dropping leaves.</span></div>
+          <div class="line"><span class="lb">Iowa corn (August 31):</span> <span class="num">77% good-to-excellent</span> <span class="d up">&#9650; 19 points above national</span><span class="why">Iowa at 77% is the widest state-to-national gap this season. Iowa represents approximately 13% of US corn acreage; its growers are the primary sellers into the $5.11 December contract. The gap explains selling pressure that has capped December corn's upside despite the national drought picture.</span></div>
+          <div class="line"><span class="lb">Tuesday's delayed Crop Progress (September 8):</span> <span class="d flat">release Tuesday evening</span><span class="why">This is the final crop input before Friday's WASDE at noon. A third consecutive week at 57% G/E confirms the 175-177 bpa revision range. A drop below 55% would revise the WASDE revision lower toward 173 bpa, closer to Pro Farmer's 173.2 floor. The Tuesday evening release is the last crop-condition read before September 11.</span></div>
+          <div class="line"><span class="lb">Corn futures (December contract):</span> <span class="num">approximately $5.11/bushel</span> <span class="d flat">unchanged</span><span class="why">The 7.5-bpa gap between USDA's 180.7 bpa and Pro Farmer's 173.2 stays live until the WASDE noon release Friday. Tuesday's delayed Crop Progress is the final input that narrows or holds that gap before the formal revision.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Crop data paused for Labor Day. Tuesday's Crop Progress - delayed from Monday - is the final input before Friday's WASDE. Two weeks at 57% corn G/E points toward a 175-177 bpa revision from USDA's current 180.7 bpa estimate.</p></div>
+        <div class="src"><b>Curated from</b> USDA &middot; DTN/Progressive Farmer &middot; US Drought Monitor &middot; Pro Farmer</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <div class="strip">
+          <div><div class="k">30-yr (Freddie Mac)</div><div class="v">6.71%</div><div class="d up">&#9650; higher next Thurs</div></div>
+          <div><div class="k">10-year</div><div class="v">~4.79%</div><div class="d flat">Cash closed Mon</div></div>
+          <div><div class="k">Canada lumber tariff</div><div class="v">Day 15</div><div class="d up">&#9650; 50% in effect</div></div>
+        </div>
+        <p class="setup">Freddie Mac confirmed <b>6.71%</b> Thursday September 3 - capturing the 10-year at 4.72-4.81%. Monday's 10-year stands at approximately 4.79%, inside that survey window. At 55% hike odds versus Sunday's 70%, the implied 10-year path has softened. Thursday's September 10 PMMS range narrows to approximately 6.73-6.79% from the 6.77-6.82% range that the 70% weekend scenario implied - still the highest reading since early 2025.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Freddie Mac PMMS (September 3):</span> <span class="num">6.71%</span> <span class="d up">&#9650; from 6.66% prior week</span><span class="why">First above 6.70% since early 2025. The 15-year averaged 6.04%, up from 5.98%. Survey captured the 10-year at 4.72-4.81%. Monday's 10-year at approximately 4.79% is inside that range - meaning Thursday's new survey may show only modest movement rather than the sharp upward revision the 70% weekend scenario implied.</span></div>
+          <div class="line"><span class="lb">10-year Treasury (Friday September 4 close, cash market):</span> <span class="num">approximately 4.79%</span> <span class="d flat">cash closed Monday Labor Day</span><span class="why">At 55% hike odds, the 10-year's path toward 4.90% has softened relative to Sunday's 70% scenario. Brent at $97 adds a modest safe-haven bid that partially caps yield upside. The September 10 PMMS survey window captures this week's trading. Expected pass-through to the 30-year: 6.73-6.79% at current inputs - the third consecutive weekly increase.</span></div>
+          <div class="line"><span class="lb">Canada lumber tariff (Day 15):</span> <span class="d up">&#9650; 50% in effect &middot; accumulating</span><span class="why">Adds an estimated $7,000-12,000 per median new single-family home. August housing starts, due mid-September, will be the first full-month reading under simultaneous 50% tariff conditions and above-6.70% mortgage rates - the largest combined new-supply headwind in the current cycle.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Thursday's Freddie Mac PMMS lands with the 10-year at approximately 4.79% and hike odds at 55% - a narrower headwind than Sunday's 70% implied. Expected range: 6.73-6.79%. Still the highest since early 2025 and the third consecutive weekly increase.</p></div>
+        <div class="src"><b>Curated from</b> Freddie Mac &middot; CME FedWatch &middot; The Mortgage Reports</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <div class="strip">
+          <div><div class="k">Wages (August)</div><div class="v">+0.3% MoM</div><div class="d flat">Released Sept 4</div></div>
+          <div><div class="k">Card delinquency 90+</div><div class="v">13.1%</div><div class="d up">&#9650; 15-year high</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.15</div><div class="d flat">Flat Labor Day</div></div>
+        </div>
+        <p class="setup">The household picture is unchanged from Friday. August's 162,000-job print is the headline strength; 13.1% card delinquencies at a 15-year high and <b>$4.15 gas</b> are the structural strain. At 55% hike odds, the probability of a September 15 APR increase on the 22.18% national card rate is still a slight majority - narrower than Sunday's 70% implied but still the most probable single outcome for minimum payment schedules.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">August jobs and wages (released September 4):</span> <span class="num">+162,000 payrolls &middot; 4.1% unemployment &middot; +0.3% wages MoM</span> <span class="d up">&#9650; vs. 53K consensus</span><span class="why">Private sector led. Three-month average: approximately 95,000 per month - above the 50,000-70,000 range the July FOMC framework flagged as consistent with a soft labor market. Regional divergences persist: Iowa corn at 77% G/E versus the 57% national average is a proxy for the income divergence that makes the national jobs headline a partial household read.</span></div>
+          <div class="line"><span class="lb">Credit card delinquencies (90+ days):</span> <span class="num">13.1%</span> <span class="d up">&#9650; 15-year high</span><span class="why">Unchanged. At 55% hike odds, the majority probability of an additional 25 basis points on the 22.18% average card APR persists. A September 15 hike raises minimum payments for the 13.1% of balances 90 days past due and for the broader revolving-balance holder. A skip holds APRs flat. September 11 CPI is the last input before September 15 decides.</span></div>
+          <div class="line"><span class="lb">Gas prices (AAA, Monday September 7):</span> <span class="num">$4.1473/gallon</span> <span class="d flat">flat from Friday</span><span class="why">Held through the Labor Day weekend. At 1,100 miles per month, the $4.15 level adds approximately $37 per month versus the spring $3.55 baseline. Brent at $97 puts the September 16-24 pump window above $4.20 if current crude levels hold.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Household strain unchanged through Labor Day. 162K jobs is the headline; 13.1% card delinquency at a 15-year high, $4.15 gas with the next pump window pointing higher, and 55% APR-hike probability are the context. September 11 CPI and September 15 are the two events that determine whether the squeeze tightens.</p></div>
+        <div class="src"><b>Curated from</b> BLS &middot; AAA &middot; Federal Reserve</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <div class="strip">
+          <div><div class="k">Bitcoin</div><div class="v">$79,300</div><div class="d down">&#9660; from $79,902 Sun</div></div>
+          <div><div class="k">Ethereum</div><div class="v">$2,506</div><div class="d flat">Roughly flat</div></div>
+          <div><div class="k">XRP</div><div class="v">$1.43</div><div class="d flat">Steady</div></div>
+        </div>
+        <p class="setup">Bitcoin pulled back to approximately <b>$79,300</b> Monday morning from Sunday's $79,902 - a modest retreat on the hike-odds normalization from 70% to 55%. The $79,000 floor held. Institutional ETF support remains the floor: IBIT cumulative inflows have surpassed $60 billion since launch, with $454 million flowing in on September 3 alone (the largest single-day Bitcoin ETF total since January 14). Tuesday opens the CLARITY Act's last Senate working window: three days before September 15 cloture at 2:15 PM ET.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Bitcoin (BTC, Monday morning):</span> <span class="num">approximately $79,300</span> <span class="d down">&#9660; from $79,902 Sunday</span><span class="why">24-hour range: $79,000-$79,917. The CoinDesk live blog Monday September 7: "Bitcoin holds $79,000 as hike odds climb." The $79,000 floor held through the hike-odds normalization from 70% to 55% - consistent with the institutional-bid pattern. Hike odds weigh on crypto (higher rates reduce the present value of risk assets); the Hormuz escalation is directionally neutral for Bitcoin specifically. Tuesday's first US session will test whether both inputs combined push below $79K or the institutional bid holds.</span></div>
+          <div class="line"><span class="lb">Bitcoin spot ETF flows (week of August 31 - September 5):</span> <span class="num">September 3: $731M total &middot; IBIT $454M</span> <span class="d up">&#9650; largest single day since Jan 14</span><span class="why">The $731 million September 3 total was the largest spot Bitcoin ETF inflow day since January 14. IBIT led with $454 million. September 4 added $174.6 million total (IBIT $117.4 million, Fidelity FBTC $57.2 million). Cumulative IBIT inflows since launch now exceed $60 billion. Continued institutional inflows through a down day (September 4) is the floor-signal pattern.</span></div>
+          <div class="line"><span class="lb">Ethereum (ETH, Monday morning):</span> <span class="num">approximately $2,506</span> <span class="d flat">roughly flat from Friday</span><span class="why">No material Monday move. Fidelity's FETH staking amendment remains pending before the SEC - the independent ETH catalyst that could reprice it outside Bitcoin's shadow. No new regulatory movement over the Labor Day weekend. ETH's path is still rate-sensitive at 55% hike odds but the independent staking-revenue thesis provides partial insulation.</span></div>
+          <div class="line"><span class="lb">XRP (Monday morning):</span> <span class="num">approximately $1.43</span> <span class="d flat">steady from Friday-Sunday range</span><span class="why">Daily active addresses and network growth stable (Santiment). Escrow unlocks on schedule. CLARITY Act Senate window opens Tuesday September 8 - three working days (September 8-10) before the September 14 return session and September 15 cloture at 2:15 PM ET. No divestiture clause compromise surfaced over the Labor Day weekend. Tuesday's Senate floor activity - or silence - is the first signal of whether the three-day window moves the legislation.</span></div>
+          <div class="line"><span class="lb">CLARITY Act (entering September 8):</span> <span class="num">approximately 20%</span> <span class="d flat">Polymarket passage odds &middot; unchanged</span><span class="why">Cloture vote September 15 at 2:15 PM ET. Republicans hold 53 seats; the bill needs 60 votes. Ethics divestiture clause - barring officials from issuing digital assets, requiring existing holdings in blind trusts - is the unresolved block. Galaxy Research cut passage odds from 50% to 30% in August; Polymarket traders are near 20% entering Tuesday. Three Senate working days (September 8-10) remain before the September 14 return session.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Bitcoin at $79,300 with the $79,000 floor intact through the hike-odds normalization. IBIT's $60 billion cumulative inflow total is the institutional floor. Tuesday opens CLARITY's last three-day Senate window - XRP's primary near-term catalyst. September 15 at 2:15 PM ET is the cloture vote.</p></div>
+        <div class="src"><b>Curated from</b> Farside Investors &middot; CoinDesk &middot; Santiment &middot; Polymarket &middot; Galaxy Research</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="world">Around the World</h2>
+        <div class="strip">
+          <div><div class="k">Nikkei 225</div><div class="v">66,399.84</div><div class="d up">&#9650; +2.02% Mon</div></div>
+          <div><div class="k">Hang Seng</div><div class="v">~25,428</div><div class="d down">&#9660; &minus;0.9% Mon</div></div>
+          <div><div class="k">Yen</div><div class="v">156.245</div><div class="d down">&#9660; slightly weaker</div></div>
+        </div>
+        <p class="setup">Asian markets split Monday. The Nikkei surged <b>2.02% to 66,399.84</b> - tech and AI-linked names leading across the board - absorbing $97 Brent, 55% hike odds, and three tankers struck without a selloff. The Hang Seng fell 0.9% to approximately 25,428 on US rate-hike fears and financial-sector selling. The two readings describe different weightings of the same inputs: the Nikkei voted for the AI-growth trade; Hong Kong voted for the rate-path headwind.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Japan (Nikkei Monday close, September 7):</span> <span class="num">66,399.84</span> <span class="d up">&#9650; +2.02%</span><span class="why">Best Nikkei session since July. Kioxia Holdings +7.2%, SoftBank Group +6.1%, Fujikura +5.9%, Tokyo Electron +5.3%, Advantest +2.6%. The Monday session absorbed all three weekend inputs - $97 Brent, 55% hike odds, and three Iranian tankers struck - and weighed the AI-infrastructure trade over the energy-cost and rate-path inputs. The 66,399 close is 1,379 points above Friday's reading and the Nikkei's highest level since the pre-summer pullback. Tuesday's New York session is the test of whether that confidence crosses the Pacific.</span></div>
+          <div class="line"><span class="lb">Hang Seng (Monday September 7):</span> <span class="num">approximately 25,428</span> <span class="d down">&#9660; &minus;226 points &middot; &minus;0.9%</span><span class="why">Xiaomi slid nearly 4%. Financial stocks and tech lagged on US rate-hike fears; energy names also fell despite oil gains - a divergence from the Nikkei's AI-trade read. At $95+ Brent, China's per-barrel import cost remains elevated. No major Chinese policy announcements over Labor Day. Hong Kong's Monday read is the more rate-sensitive of the two Asian signals entering Tuesday's US open.</span></div>
+          <div class="line"><span class="lb">Yen / dollar (Monday September 7):</span> <span class="num">156.245</span> <span class="d down">&#9660; slightly weaker than Friday's 156.037</span><span class="why">Week's range: 155.36 low (September 3) to 160.38 high (September 2). BOJ rate-hike expectations build independently of the Fed path; the yen-carry trade's attractiveness continues to decline with the US-Japan rate spread narrowing. The yen's path is not a direct September 15 bet - it tracks BOJ expectations on its own timeline.</span></div>
+          <div class="line"><span class="lb">Iran/Hormuz (Monday morning):</span> <span class="d flat">no new strikes &middot; rhetoric hardened &middot; bypass at ~two-thirds volume</span><span class="why">US CENTCOM has redirected 92 commercial vessels since the crisis began. Bypass pipelines carry approximately two-thirds of pre-conflict Hormuz volume - improved from the initial closure week but below full relief. Iran Parliament Speaker Sunday: "faster, heavier and more painful" response threatened. No new IRGC kinetic action through Monday morning. UK Maritime Trade Operations threat level: severe.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Nikkei +2% is the week's most constructive equity signal entering Tuesday's US open. Hang Seng -0.9% shows the rate-hike fear is real for Asia's financial sector. Tuesday's New York open is the tiebreaker between the two regional reads. The AI-trade weight or the rate-path weight - one of them was wrong Monday.</p></div>
+        <div class="src"><b>Curated from</b> Investing.com &middot; Sunday Guardian Live &middot; Wise &middot; Fox News &middot; NPR</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="events">The Week Ahead</h2>
+        <div class="strip">
+          <div><div class="k">First trading day</div><div class="v">Sept 8</div><div class="d flat">Tues &middot; 9:30 AM ET</div></div>
+          <div><div class="k">CPI &amp; WASDE</div><div class="v">Sept 11</div><div class="d flat">8:30 AM &amp; noon ET</div></div>
+          <div><div class="k">FOMC &amp; CLARITY</div><div class="v">Sept 15</div><div class="d flat">8 days out</div></div>
+        </div>
+        <p class="setup">Four catalysts in eight days. Tuesday September 8 is the first US session - three CLARITY Senate working days begin, the delayed Crop Progress releases Tuesday evening. Freddie Mac PMMS Thursday September 10. August CPI at <b>8:30 AM ET</b> and September WASDE at <b>12:00 PM ET</b> Friday September 11. FOMC decision and CLARITY cloture vote September 15. Hike odds at 55%, Brent at $97, and divergent Asian markets are the inputs Tuesday inherits.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Tuesday September 8:</span> <span class="d flat">first US session &middot; CLARITY window opens &middot; Crop Progress delayed</span><span class="why">9:30 AM ET cash open is the first US equity session to price Brent at $97, hike odds at 55%, gold at $4,446, and Nikkei +2% simultaneously. Three CLARITY Act Senate working days begin - three days for the ethics divestiture clause to find a compromise before the September 14 return session. Crop Progress released Tuesday evening - the final crop read before WASDE.</span></div>
+          <div class="line"><span class="lb">Thursday September 10:</span> <span class="d flat">Freddie Mac PMMS</span><span class="why">Expected 30-year range: 6.73-6.79% at current inputs (55% hike odds, 10-year ~4.79%). Still the highest since early 2025 and the third consecutive weekly increase. A sharp move in the 10-year this week would shift that range; the September 11 CPI landing two days later is the next major yield input.</span></div>
+          <div class="line"><span class="lb">Friday September 11:</span> <span class="d flat">CPI at 8:30 AM ET &middot; WASDE at 12:00 PM ET</span><span class="why">August CPI covers a full month of $4+ gas and $91+ WTI crude, plus the first two weeks of Canada lumber tariff pass-through. Consensus approximately 3.3-3.5%. Above 3.5%: September hike near-certain, 10-year likely crosses 4.90%, CD waiting confirmed as the call. Below 3.2%: pause case revives, CD lock-now at 4.40% becomes defensible. WASDE: first formal corn yield revision, expected 175-177 bpa from USDA's 180.7 bpa current estimate.</span></div>
+          <div class="line"><span class="lb">Monday September 14 - Tuesday September 15:</span> <span class="d flat">Senate return &middot; FOMC decision &middot; CLARITY cloture</span><span class="why">September 14: Senate returns. Final CLARITY divestiture window. September 15: FOMC decision at approximately 2:00 PM ET, CLARITY cloture at 2:15 PM ET. September 16: Fed Chair press conference 2:30 PM ET and updated dot plot. September 11 sets the final rate number; September 8-10 sets the CLARITY path. At 55% hike odds and 20% CLARITY odds, both votes remain genuinely uncertain entering the week.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Eight days to the double vote. Hike odds at 55%, CLARITY at 20%. Tuesday's first session prices Labor Day's accumulated inputs. September 11 is the pivot day for both the rate path and the crop-yield debate.</p></div>
+        <div class="src"><b>Curated from</b> CME FedWatch &middot; USDA &middot; Polymarket &middot; Federal Reserve</div>
+        </div>
+
+        <div class="disclaimer">
+          <p>This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.</p>
+          <p class="asof">Figures reflect the latest readings available as of Monday, September 7, 2026, before the US market open. Sources are listed at the end of each section.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#week-opens"><span class="dot"></span>How Tuesday Opens</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_september6_2026.html">September 6, 2026</a></li>
+          <li><a href="market_pulse_september5_2026.html">September 5, 2026</a></li>
+          <li><a href="market_pulse_september4_2026.html">September 4, 2026</a></li>
+          <li><a href="market_pulse_september3_2026.html">September 3, 2026</a></li>
+          <li><a href="market_pulse_september2_2026.html">September 2, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We're looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+    document.querySelectorAll('h2.section-title[id]').forEach(function(el){
+      var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var dot=document.querySelector('.toc a[href="#'+el.id+'"] .dot');if(dot){dot.style.opacity='0';dot.style.transform='scale(0)';}}});},{rootMargin:'-20% 0px -60% 0px'});
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
