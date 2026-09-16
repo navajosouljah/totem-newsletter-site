@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - September 16, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:28px 0 0;text-align:center;}
+  .body{padding-top:0;}
+  .body > .sec-v2:first-child h2.section-title{margin-top:0;}
+  h1.headline{text-wrap:balance;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:clamp(34px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;color:var(--ink);margin:56px 0 0;}
+  .dek{font-family:'Spectral',serif;font-weight:400;font-size:18px;line-height:1.5;color:#3b4048;margin-bottom:0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  h2.section-title{font-family:'Spectral',serif;font-weight:700;font-size:22px;line-height:1.2;letter-spacing:-0.01em;color:var(--ink);margin:26px 0 6px;padding-top:20px;border-top:1px solid var(--line);}
+  .section-intro{font-family:'Spectral',serif;font-style:italic;font-size:15px;line-height:1.5;color:var(--muted);margin-bottom:12px;}
+  .data-line{margin-bottom:6px;font-size:16px;line-height:1.5;font-family:'Spectral',serif;}
+  .data-label{font-weight:700;color:var(--ink);}
+  .up-green{color:#2d6a4f;font-weight:600;}
+  .down-green{color:#2d6a4f;font-weight:600;}
+  .up-red{color:#9b2c2c;font-weight:600;}
+  .down-red{color:#9b2c2c;font-weight:600;}
+  .flat{color:var(--muted);font-weight:600;}
+  .bottom-line-label{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-top:14px;margin-bottom:6px;}
+  .bottom-line-list{list-style:none;padding:0;margin:0 0 8px;}
+  .bottom-line-list li{padding-left:18px;position:relative;margin-bottom:7px;font-size:16px;line-height:1.55;color:var(--body);}
+  .bottom-line-list li::before{content:"\2022";position:absolute;left:0;color:var(--gold);font-weight:700;}
+  .bullet-list{list-style:none;padding:0;margin:0;}
+  .bullet-list li{padding-left:18px;position:relative;margin-bottom:8px;font-size:16px;line-height:1.55;}
+  .bullet-list li::before{content:"\2022";position:absolute;left:0;color:var(--navy);font-weight:700;}
+  /* ---- v2 section treatment ---- */
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .strip + p.setup{font-style:italic;}
+  .sec-v2 .strip + p.setup b{font-style:italic;}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);position:relative;padding-left:22px;}
+  .sec-v2 .line::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:18px;}
+  .sec-v2 .opens li{padding-left:22px;position:relative;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens li::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .opens li b{font-weight:700;color:var(--ink);}
+  .sec-v2 .opens li:target{background:var(--wash);box-shadow:0 0 0 10px var(--wash);border-radius:2px;}
+  .sec-v2 .opens a.more{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;margin-left:6px;}
+  .sec-v2 .opens a.more:hover{border-bottom:2px solid var(--gold);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p.asof{color:var(--muted);margin-bottom:0;}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}h2.section-title{font-size:20px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_september16_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_11.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Wednesday, September 16, 2026</span></div>
+        <h1 class="headline">CD Rates Rise on Tuesday's Hike. Today's Dot Plot Signals November.</h1>
+      </div>
+
+      <div class="body">
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="setup lead-first">The CLARITY Act failed 49-50 at 2:15 PM ET Tuesday - 11 votes short of the 60 needed for cloture. Collins, Hawley, Moran, and Tillis voted no alongside all Democrats, closing the 2026 legislative window. Bitcoin fell 2.66% to $75,815; XRP fell 9.54% to $1.29. The Federal Reserve delivered a 25-basis-point hike at approximately 2:00 PM ET Tuesday, moving the fed funds target to 3.75-4.00% as CME FedWatch had priced at 92-93%. The mechanism: the hike pushes HYSA rates from 4.21% toward 4.35-4.45% within days, and 1-year CDs from 4.30% toward 4.45-4.60% APY as banks reprice.</p>
+        <p class="setup">What today decides is not the hike - that happened yesterday. What today decides is the dot plot at 2:30 PM ET alongside Fed Chair Warsh's first press conference since September 5. The median FOMC projection for year-end rates is the real signal: one hike and a pause through December puts the 10-year on a path toward 4.85%, which Thursday's Freddie Mac PMMS translates to approximately 6.88%. Two hikes - today's plus November or December - push the 10-year above 5.10%, pointing Thursday's PMMS closer to 7.10%.</p>
+        <p class="setup">Brent reached $109.21 on Goldman Sachs' estimate of three to five weeks for Saudi pipeline repair - the September 22-30 AAA reading is tracking toward $4.55-4.75 per gallon. Corn G/E held at 57% entering harvest with 8% of the crop in - the first stable reading after five consecutive weeks of decline from 65%.</p>
+        <div class="src"><b>Curated from</b> CME FedWatch &middot; Polymarket &middot; CNBC &middot; Bloomberg &middot; Goldman Sachs &middot; AAA</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="week-opens">How Wednesday Opens</h2>
+        <ul class="opens">
+          <li id="open-1"><b>Why locking a CD today but not before 2:30 PM ET is the right sequence.</b> The hike happened Tuesday at 2:00 PM ET. Banks are repricing now - top 1-year CDs moving from 4.30% toward 4.45-4.60% APY within 3-7 days. But if today's dot plot at 2:30 PM ET signals a November hike, waiting 6 weeks could add another 15-25 basis points to the ceiling. The dot plot narrows the decision window this afternoon. <a class="more" href="#savings">Savings &amp; CD &rarr;</a></li>
+          <li id="open-2"><b>What the dot plot at 2:30 PM ET decides that yesterday's hike did not.</b> The 25-bps hike was 92-93% priced and moved markets only slightly. The dot plot's November signal is unpriced. A dovish dot (pause) puts the 10-year toward 4.85% and Thursday's PMMS near 6.88%. A hawkish dot (November hike) pushes the 10-year above 5.10% and Thursday's PMMS near 7.10%. <a class="more" href="#rates">Interest Rates &rarr;</a></li>
+          <li id="open-3"><b>What the CLARITY Act's 49-50 failure means for XRP's 2027 window.</b> CLARITY closed the 2026 legislative path. XRP fell 9.54% on the news - the largest single-session loss of the three tracked assets. Executive-branch rulemaking and the 2027 Congress are now the regulatory timelines. The 11-vote gap and what would close it in 2027 is the question the article examines. <a class="more" href="#crypto">Crypto &rarr;</a></li>
+          <li id="open-4"><b>What Goldman's 3-5 week pipeline repair estimate means for September's gas ceiling.</b> Goldman Sachs put a timeline on the Saudi East-West pipeline outage Tuesday afternoon - three to five weeks. That timeline extended Brent's rally to $109.21 and locks in elevated crude through late September. Gas at $4.37 is the floor of September costs, not the ceiling. <a class="more" href="#energy">Energy &amp; Gas &rarr;</a></li>
+          <li id="open-5"><b>Why corn G/E holding at 57% with 8% harvested is the crop's best signal in five weeks.</b> Corn G/E stabilized at 57% for a second consecutive week after the five-week decline from 65%. With 8% of the crop already harvested - ahead of the five-year average pace - early bin reports are replacing G/E estimates as the price signal. The WASDE's 178.5 bpa is being tested against actual yield data now. <a class="more" href="#crops">Crop Weather &rarr;</a></li>
+        </ul>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">7,585.73</div><div class="d down">&#9660; &minus;0.45% Tue close</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">25,981.57</div><div class="d down">&#9660; &minus;0.78% Tue close</div></div>
+          <div><div class="k">Dow</div><div class="v">52,093.11</div><div class="d down">&#9660; &minus;0.63% Tue close</div></div>
+        </div>
+        <p class="setup">Tuesday delivered a second consecutive session of losses, with the CLARITY Act failure at 2:15 PM ET adding a crypto-sector selloff on top of the AI safety overhang that began Monday. The Nasdaq's <b>0.78% decline</b> led the three indexes after Coinbase and blockchain-adjacent tech names fell sharply post-CLARITY. The Dow's 0.63% decline was steeper than Monday's 0.29% - the rate hike at 2:00 PM ET hit the Dow's rate-sensitive financial and industrial names directly. Wednesday pre-market extends the week's cautious tone ahead of today's dot plot at 2:30 PM ET.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (Tuesday September 15 close):</span> <span class="num">7,585.73</span> <span class="d down">&#9660; &minus;0.45% (&minus;34.25 pts)</span><span class="why">Tuesday opened down, extended losses after both the Fed hike at 2:00 PM ET and the CLARITY failure at 2:15 PM ET, and closed near session lows. The S&P is now down two consecutive sessions and sits 132 points below the September 4 peak near 7,718. Wednesday pre-market: S&P futures are flat to -0.3%, with energy names providing partial offset to continued tech-crypto pressure ahead of today's 2:30 PM ET press conference.</span></div>
+          <div class="line"><span class="lb">Nasdaq Composite (Tuesday September 15 close):</span> <span class="num">25,981.57</span> <span class="d down">&#9660; &minus;0.78%</span><span class="why">The Nasdaq's underperformance reflects the double weight of AI safety essay selling (still unwinding from Monday) and the CLARITY failure dragging crypto-adjacent tech names. Coinbase fell sharply post-CLARITY; blockchain-infrastructure names followed. Wednesday pre-market extends the Nasdaq's weakness as the market absorbs the CLARITY failure and awaits the dot plot's November signal.</span></div>
+          <div class="line"><span class="lb">Dow Jones (Tuesday September 15 close):</span> <span class="num">52,093.11</span> <span class="d down">&#9660; &minus;0.63% (&minus;328 pts)</span><span class="why">The Dow's sharper decline Tuesday versus Monday reverses the prior session pattern. The rate hike at 2:00 PM ET hit the Dow's financial component - bank stocks face immediate mark-to-market pressure on bond portfolios as yields rose. Energy names partially offset (Brent at $109 supports oil-sector earnings). Wednesday pre-market: Dow futures are mixed, with energy-industrial names outperforming financial and tech components ahead of the dot plot.</span></div>
+          <div class="line"><span class="lb">Wednesday September 16 pre-market:</span> <span class="d down">&#9660; S&amp;P futures flat to &minus;0.3% &middot; Nasdaq &minus;0.3 to &minus;0.5% &middot; Dow mixed</span><span class="why">Pre-market reflects digestion of Tuesday's double catalyst (hike + CLARITY failure) and positioning ahead of today's 2:30 PM ET dot plot. Energy-industrial names are positive on Brent at $109.21. Tech and crypto-adjacent names carry the Tuesday losses into Wednesday. The dot plot is the only remaining scheduled catalyst with the potential to reverse the week's trend. A dovish pause signal would be the catalyst; a hawkish November signal extends current pressure.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Tuesday closed lower on all three indexes after both the rate hike and the CLARITY failure. The Nasdaq's 0.78% decline was the week's worst one-day performance and reflects the crypto-sector direct hit from the CLARITY vote. Wednesday pre-market is fractionally weaker with energy-industrial divergence. The dot plot at 2:30 PM ET today is the only direction-changing catalyst remaining this week.</p></div>
+        <div class="src"><b>Curated from</b> Yahoo Finance &middot; CNBC &middot; Bloomberg &middot; TheStreet &middot; Benzinga</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <div class="strip">
+          <div><div class="k">Fed funds</div><div class="v">3.75&ndash;4.00%</div><div class="d up">&#9650; Hiked 25 bps Tue 2:00 PM ET</div></div>
+          <div><div class="k">2-year</div><div class="v">4.658%</div><div class="d down">&#9660; Slight pullback post-hike</div></div>
+          <div><div class="k">10-year</div><div class="v">4.987%</div><div class="d down">&#9660; Off 5.041% peak &middot; dot plot today</div></div>
+        </div>
+        <p class="setup">The Fed hiked 25 basis points Tuesday at approximately 2:00 PM ET, moving the fed funds target to <b>3.75-4.00%</b> - the highest since early 2019 and the first hike since July 2023. The 10-year pulled back from its 5.041% Tuesday morning peak to 4.987% after the hike was delivered without a hawkish shock to forward guidance. What did not get answered Tuesday is what matters today: the dot plot at 2:30 PM ET will show where FOMC members see rates at year-end - one more hike or a pause through December.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Fed funds rate (after Tuesday September 15 decision):</span> <span class="num">3.75&ndash;4.00%</span> <span class="d up">&#9650; hiked 25 bps from 3.50&ndash;3.75%</span><span class="why">The statement retained "data-dependent" language without explicitly signaling a November hike. The FOMC vote was 9-3, with three dissenters favoring a pause (the same three as July). The statement avoided explicit guidance on the November 4-5 meeting, leaving the dot plot as the only forward signal. The statement's cautious language initially sent the 10-year lower before the CLARITY failure at 2:15 PM ET reversed part of the move.</span></div>
+          <div class="line"><span class="lb">10-year Treasury (Wednesday September 16 morning):</span> <span class="num">4.987%</span> <span class="d down">&#9660; pulled back from 5.041% Tuesday morning peak</span><span class="why">The 10-year's pullback after hike delivery reflects the "sell the rumor, buy the news" dynamic - 92-93% hike probability meant delivery without a hawkish surprise allowed bond buying. At 4.987%, the 10-year remains near the 5% psychological threshold. Today's dot plot is the 10-year's next directional catalyst: a dovish pause signal brings the 10-year toward 4.85%; a hawkish November signal pushes it back above 5.10%. Thursday's Freddie Mac PMMS reads off whichever level settles after 2:30 PM ET.</span></div>
+          <div class="line"><span class="lb">2-year Treasury (Wednesday September 16 morning):</span> <span class="num">4.658%</span> <span class="d down">&#9660; slight pullback from Tuesday's 4.686%</span><span class="why">The 2-year remains well above 4.5%, pricing at least one more hike in the 12-month horizon beyond today's. The yield curve spread: 10-year at 4.987% versus 2-year at 4.658% = 32.9 bps mildly upward-sloping. The dot plot's November signal determines the spread direction: a pause widens the spread (steeper curve); a November hike compresses it (flatter). The curve shape is the bond market's live voting mechanism on the dot plot before the press conference opens.</span></div>
+          <div class="line"><span class="lb">30-year Treasury (Wednesday September 16 morning):</span> <span class="num">approximately 5.35%</span> <span class="d down">&#9660; slightly lower after hike delivery</span><span class="why">The long bond tracks the 10-year's directional signal. At 5.35%, the 30-year remains at its highest since post-GFC normalization and signals that long-term inflation expectations have shifted durably above the 2% target. Today's dot plot is the 30-year's directional input as well: more hikes priced pushes it higher; a pause brings it toward 5.20-5.25%. Pension and insurance portfolios holding 30-year duration face continued mark-to-market pressure at current levels.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>The hike happened. Fed funds at 3.75-4.00% is the new base. The 10-year at 4.987% is Tuesday's delivery; today's dot plot at 2:30 PM ET is the forward signal that matters. One more hike priced pushes the 10-year back above 5% and Thursday's mortgage rate closer to 7.10%. A pause signal brings the 10-year toward 4.85% and Thursday's mortgage rate closer to 6.88%.</p></div>
+        <div class="src"><b>Curated from</b> CNBC &middot; CME FedWatch &middot; Federal Reserve &middot; Bloomberg &middot; StreetStats</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <div class="strip">
+          <div><div class="k">Top 1-yr CD</div><div class="v">4.30%</div><div class="d up">&#9650; Repricing to 4.45&ndash;4.60% this week</div></div>
+          <div><div class="k">Top HYSA</div><div class="v">4.21%</div><div class="d up">&#9650; Auto-lift to ~4.35&ndash;4.45% beginning</div></div>
+          <div><div class="k">Nat'l avg 1-yr CD</div><div class="v">2.05%</div><div class="d flat">FDIC, week of Sept 7</div></div>
+        </div>
+        <p class="setup">The hike landed Tuesday at 2:00 PM ET. Banks are repricing now - top 1-year CDs moving from 4.30% toward <b>4.45-4.60% APY</b> within 3-7 days at early-mover online institutions. The HYSA at 4.21% lifts automatically. Today adds one decision variable: if the dot plot at 2:30 PM ET signals a November hike, waiting 6 weeks could add another 15-25 basis points to the ceiling. The window to act is open. The question is whether today's press conference expands it.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Best online 1-yr CD (September 16, post-hike, early reprice):</span> <span class="num">4.30% APY</span> <span class="d up">&#9650; repricing toward 4.45&ndash;4.60% this week</span><span class="why">The hike happened at 2:00 PM ET Tuesday. Early-mover online banks typically reprice within 24-72 hours; traditional banks within 5-7 days. By Friday September 18-Monday September 21, the top 1-year CD rate is expected to reach 4.45-4.60% APY. A saver who locked Tuesday before 2:00 PM ET forfeited those basis points. The dot plot adds a variable: a November hike signal means the ceiling could move again in 6 weeks to 4.60-4.75% APY - making a wait-and-see strategy viable for savers with flexibility.</span></div>
+          <div class="line"><span class="lb">Best HYSA (September 16):</span> <span class="num">4.21% APY</span> <span class="d up">&#9650; auto-lift to ~4.35&ndash;4.45% beginning this week</span><span class="why">The HYSA adjusts automatically - no action required to capture the hike. Axos Bank and select online institutions will move toward 4.35-4.45% APY within 3-5 days. For a saver not yet in a CD, the HYSA captures the Tuesday hike and preserves full flexibility through today's 2:30 PM ET press conference. A November hike signal extends that flexibility: the HYSA would capture a second hike automatically in 6 weeks without a lock-in penalty.</span></div>
+          <div class="line"><span class="lb">National average 1-yr CD (FDIC, week of September 7):</span> <span class="num">2.05% APY</span> <span class="d flat">unchanged &middot; 225 bps below top online rates</span><span class="why">The FDIC national average will not reflect the Tuesday hike until the week of September 21 data, likely moving to 2.10-2.15%. Post-hike reprice at top online banks widens this gap to 235-255 bps. Traditional banks reprice slowly; online banks reprice within days. A saver at a traditional institution who takes no action after the Tuesday hike will see this gap widen further over the next two weeks. The relevant rate is the best available online rate, not the FDIC average.</span></div>
+          <div class="line"><span class="lb">Card APR impact of Tuesday's hike:</span> <span class="num">approximately 22.40% avg APR</span> <span class="d up">&#9650; up from 22.15% pre-hike</span><span class="why">A 25-bps hike on the 22.15% average card APR moves minimum payment obligations for the 13.12% of balances already 90 days past due. Each 25 bps translates to approximately $2.08 per month per $10,000 of revolving balance. The saver's rate lift and the borrower's cost increase landed simultaneously Tuesday at 2:00 PM ET - the hike is a simultaneous positive for one half of the household balance sheet and a cost for the other.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Today is a valid lock window for CDs - the hike happened, banks are repricing toward 4.45-4.60% APY this week, and the HYSA captures the hike automatically. One caveat: if the dot plot at 2:30 PM ET signals a November hike, waiting 6 weeks could add another 15-25 basis points. Monitor the press conference, then act within 7 days as banks complete their reprice.</p></div>
+        <div class="src"><b>Curated from</b> FDIC &middot; NerdWallet &middot; Raisin &middot; Bankrate &middot; CardRates &middot; CME FedWatch</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <div class="strip">
+          <div><div class="k">Brent</div><div class="v">$109.21</div><div class="d up">&#9650; Goldman: 3&ndash;5 wks to repair</div></div>
+          <div><div class="k">WTI</div><div class="v">$104.68</div><div class="d down">&#9660; &minus;1.09% from prior session</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.3672</div><div class="d up">&#9650; Pump window Day 2</div></div>
+        </div>
+        <p class="setup">Goldman Sachs put a timeline on the Saudi East-West pipeline outage Tuesday afternoon: <b>three to five weeks</b> for repair after drone strikes. That estimate extended Brent's rally to $109.21 - the compound disruption now has a duration, and it is priced into forward oil curves through late October. Gas at $4.3672 is the second day of the September 15-24 pump window that carries current crude prices to retail. The September 22-30 AAA reading is tracking toward $4.55-4.75 per gallon.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Brent crude (Wednesday September 16 morning):</span> <span class="num">$109.21/barrel</span> <span class="d up">&#9650; Goldman 3&ndash;5 week pipeline repair timeline</span><span class="why">Goldman Sachs' 3-5 week repair estimate - released Tuesday afternoon - extended Brent's rally above $109. The pipeline handles 7 million barrels per day and is Saudi Arabia's primary route bypassing the Strait of Hormuz. Its offline status for 3-5 weeks removes the physical bypass for the duration. No CENTCOM update or diplomatic channel progress as of Wednesday morning. The next Brent threshold analysts track: $110-113. A faster-than-expected repair or a diplomatic Hormuz resolution would be the primary downside catalyst.</span></div>
+          <div class="line"><span class="lb">WTI crude (Wednesday September 16 morning):</span> <span class="num">$104.68/barrel</span> <span class="d down">&#9660; &minus;1.09% from prior session</span><span class="why">WTI remains above $100 for a second consecutive session - the first sustained $100+ period since 2022. The slight pullback from Tuesday's close reflects US domestic inventory data and the Brent-WTI spread stabilizing near $4.50. Each $10 increase in WTI at the refinery translates to approximately 25-30 cents per gallon at the pump within 3-4 weeks. The current crude level is the input for the October retail fuel window now being priced.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, September 16):</span> <span class="num">$4.3672/gallon</span> <span class="d up">&#9650; pump window Day 2 of Sept 15&ndash;24 cycle</span><span class="why">Day two of the September 15-24 pump window, which will carry current crude prices to retail for the September 22-30 reading. At $109 Brent and $104 WTI, the September 22-30 AAA reading is on track for $4.55-4.75 per gallon - an 18-43 cent increase from today's level. At 1,100 miles per month and 30 MPG, that translates to an additional $6.60-$15.91 per month in fuel costs. The $4.3672 current reading is the September floor, not the ceiling.</span></div>
+          <div class="line"><span class="lb">Goldman Sachs pipeline assessment (released Tuesday September 15):</span> <span class="d up">&#9650; 3&ndash;5 weeks to repair Saudi East-West pipeline</span><span class="why">The 3-5 week range keeps Brent in the $105-115 range through approximately mid-to-late October based on current supply-disruption pricing models. A repair faster than 3 weeks - or a Hormuz diplomatic resolution - would be the primary downside catalyst for Brent. The least favorable scenario: repair takes longer than 5 weeks, in which case the October supply outlook tightens further. Saudi Aramco has not provided an independent timeline update beyond Goldman's external estimate.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Goldman's 3-5 week pipeline repair timeline is now priced into Brent at $109.21. Gas at $4.37 is the September pump-window floor; $4.55-4.75 is the September 22-30 ceiling. The compound disruption - Hormuz premium plus pipeline offline - has a duration for the first time. No diplomatic or military resolution signal as of Wednesday morning.</p></div>
+        <div class="src"><b>Curated from</b> CNBC &middot; OilPrice.com &middot; Goldman Sachs &middot; AAA &middot; Al Jazeera &middot; Gulf News</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <div class="strip">
+          <div><div class="k">Gold</div><div class="v">$4,352</div><div class="d up">&#9650; +$89 post-hike bounce</div></div>
+          <div><div class="k">Silver</div><div class="v">$64.70</div><div class="d up">&#9650; +1.65% following gold</div></div>
+          <div><div class="k">Copper</div><div class="v">$6.31/lb</div><div class="d flat">Flat &middot; off Sept record near $6.65</div></div>
+        </div>
+        <p class="setup">Gold bounced $89 to $4,352 after the Fed hike was delivered without a hawkish surprise - the classic "buy the news" reversal after the pre-hike selloff from $4,575 to $4,263. Silver followed with a 1.65% gain. Copper held flat near $6.31, where the three demand drivers - <b>grid investment, AI data-center construction, tariff front-running</b> - remain partially intact despite the AI slowdown question. Today's dot plot at 2:30 PM ET is the next directional catalyst for all three: a hawkish November signal compresses gold via dollar strength; a pause signal extends the bounce.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Gold / oz (Wednesday September 16 morning):</span> <span class="num">$4,352</span> <span class="d up">&#9650; +$89 from Tuesday's $4,263 &middot; still $223 below Sept 4 peak</span><span class="why">The $89 bounce reflects the "sell the rumor, buy the news" pattern: gold sold as the dollar strengthened and yields rose on pre-hike pricing, then recovered after delivery without a forward-guidance surprise. At $4,352, gold is $223 below its September 4 peak of $4,575. Today's dot plot is the next catalyst: a dovish pause signal extends the bounce toward $4,400+; a hawkish November signal recompresses gold via dollar strength and the higher-for-longer yield mechanism.</span></div>
+          <div class="line"><span class="lb">Silver / oz (Wednesday September 16 morning):</span> <span class="num">$64.70</span> <span class="d up">&#9650; +1.65% following gold's post-hike bounce</span><span class="why">Silver followed gold's post-hike move. The AI slowdown essay introduced a question mark over silver's data-center demand component, but at $64.70 silver has not broken below $63 - the physical demand and grid-infrastructure story remains partially intact. A dot plot pause signal today would support both gold and silver by reducing the dollar-strength mechanism that has been the primary compression force during the pre-hike pricing cycle.</span></div>
+          <div class="line"><span class="lb">Copper (Wednesday September 16 morning):</span> <span class="num">$6.31/lb</span> <span class="d flat">Unchanged from Tuesday &middot; approximately 5% below September record</span><span class="why">Copper has held near $6.31 through the AI slowdown questioning because the three demand drivers split differently: grid investment and tariff-driven industrial front-running are unaffected by a voluntary AI development slowdown; only the data-center component is the variable. At $6.31, copper is approximately 5% below its September record near $6.65 but well above the $5.50-5.80 range that held through most of 2026. The AI slowdown essay has introduced a partial question mark; the infrastructure demand story has not been fully repriced.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Gold bounced $89 on the hike-delivery "buy the news" dynamic. Silver followed. Copper held. Today's dot plot at 2:30 PM ET is the next directional catalyst for all three: a hawkish November signal recompresses gold and silver via dollar strength; a pause signal extends the bounce. Copper's grid and tariff-demand floor holds regardless of the dot plot outcome.</p></div>
+        <div class="src"><b>Curated from</b> Kitco &middot; LME &middot; CNBC &middot; TradingKey &middot; The Respondents</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <div class="strip">
+          <div><div class="k">Corn G/E</div><div class="v">57%</div><div class="d flat">Second week stable &middot; harvest beginning</div></div>
+          <div><div class="k">Soybeans G/E</div><div class="v">58%</div><div class="d flat">Stable &middot; 6% harvested</div></div>
+          <div><div class="k">Corn futures (Dec)</div><div class="v">~$5.30/bu</div><div class="d flat">Post-WASDE baseline</div></div>
+        </div>
+        <p class="setup">The most recent USDA Crop Progress (week ending September 14) remains the operative reading. Corn G/E held at <b>57%</b> for a second consecutive week - the first stable pair of readings after five weeks of decline from 65% in mid-August. Eight percent of the corn crop is harvested, ahead of the five-year average pace. Early yield reports from Illinois, Indiana, and Iowa are the price-discovery mechanism now; formal USDA data waits for the October 9 WASDE. The two-week stability at 57% is the most constructive crop signal since mid-August.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Corn G/E (week ending September 14, most recent):</span> <span class="num">57% good-to-excellent</span> <span class="d flat">second consecutive week at 57%</span><span class="why">The trend sequence: 65, 61, 57, 57, 56, 57, 57. Two weeks of stability at 57% following the rebound from 56% ends the consecutive-decline sequence. Corn at 86% in dough stage, 42% at maturity, 8% harvested - harvest pace is ahead of the five-year average. Early yield reports from Illinois, Indiana, and Iowa are running 175-182 bpa, a range consistent with USDA's 178.5 bpa WASDE estimate. The field is performing at harvest-entry better than the mid-August G/E decline had implied.</span></div>
+          <div class="line"><span class="lb">September 11 WASDE corn yield (operative estimate):</span> <span class="num">178.5 bpa</span> <span class="d down">&#9660; &minus;2.2 bpa from August &middot; smaller cut than 5&ndash;8 bpa expected</span><span class="why">USDA's smaller-than-expected cut (versus 5-8 bpa trade consensus) and the subsequent two-week G/E stability at 57% both point to a less-damaged crop entering harvest than the four-week G/E decline implied. The next formal update is October 9. Between now and October, weekly crop progress and early bin reports are the primary price signals. The WASDE's 178.5 bpa is being tested in the field right now.</span></div>
+          <div class="line"><span class="lb">Soybeans G/E (week ending September 14):</span> <span class="num">58% good-to-excellent</span> <span class="d flat">flat for second week &middot; 6% harvested</span><span class="why">Soybeans at 44% dropping leaves and 6% harvested - both ahead of the five-year average. Stable G/E at 58% entering harvest is neutral-to-positive: no deterioration, and early harvest pace suggests the WASDE's 52.8 bpa estimate will be tested against actual results within three weeks. The loosening soybean balance sheet from the WASDE - production up 16 million bushels from August - means soybean prices carry supply-side headwind beyond what crop condition data alone reflects.</span></div>
+          <div class="line"><span class="lb">December corn futures (post-WASDE baseline):</span> <span class="num">approximately $5.30/bushel</span> <span class="d flat">flat from prior session &middot; post-WASDE repricing baseline</span><span class="why">December corn has held near $5.30 since the WASDE's smaller-than-expected cut. The two-week G/E stability adds a mild positive at the margin. A sustained early harvest yield above 178.5 bpa would push December corn toward $5.10-5.20; a shortfall below 176 bpa would support $5.40-5.50. The October 9 WASDE is the next formal directional input; weekly crop progress and bin reports are the interim signal.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Corn G/E has held at 57% for two consecutive weeks - the first stable pair after five consecutive weeks of decline from 65%. Eight percent of the crop is harvested ahead of the five-year average pace. Early yield reports at 175-182 bpa align with USDA's 178.5 bpa WASDE estimate. December corn at $5.30 holds the post-WASDE baseline. The October 9 WASDE is the next formal update.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; RFD-TV &middot; Brownfield Ag News &middot; AgWeb &middot; High Plains Journal</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <div class="strip">
+          <div><div class="k">30-yr (Freddie Mac)</div><div class="v">6.76%</div><div class="d up">&#9650; Sept 10 &middot; next Thu Sept 17</div></div>
+          <div><div class="k">10-year</div><div class="v">4.987%</div><div class="d down">&#9660; Off 5.041% peak &middot; dot plot today</div></div>
+          <div><div class="k">Canada tariff</div><div class="v">Day 23</div><div class="d up">&#9650; Counter-tariffs Day 9</div></div>
+        </div>
+        <p class="setup">Thursday's Freddie Mac PMMS is the housing market's first post-hike mortgage rate reading in two years - and its range depends entirely on what the dot plot says at 2:30 PM ET today. The 10-year at <b>4.987%</b> points the September 17 PMMS toward 6.85-7.00%. A dovish dot (pause) eases the 10-year toward 4.85% and Thursday's PMMS toward 6.88%. A hawkish dot (November hike) pushes the 10-year back above 5.10% and Thursday's PMMS toward 7.10% - potentially the highest since October 2023.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Freddie Mac PMMS 30-year (September 10, most recent):</span> <span class="num">6.76%</span> <span class="d up">&#9650; third consecutive weekly increase &middot; from 6.71% prior week</span><span class="why">The September 10 PMMS captured trading through September 9 - before this week's 10-year moves. Thursday's PMMS captures trading through September 17, including today's 4.987% and the post-dot-plot level that settles after 2:30 PM ET. At 4.987% with a mortgage spread of 175-200 bps, the central September 17 PMMS range before the dot plot is 6.85-7.04%. Above 7.00% would mark the first 7% reading since October 2023, when purchase applications fell to their lowest level since 1995.</span></div>
+          <div class="line"><span class="lb">10-year Treasury (Wednesday September 16 morning):</span> <span class="num">4.987%</span> <span class="d down">&#9660; pulled back from 5.041% Tuesday morning peak</span><span class="why">The 10-year's slight pullback after hike delivery provides a narrow window: Thursday's PMMS at 4.987% is approximately 6.85-7.00%. Each 10-bps move in the 10-year after today's dot plot changes Thursday's PMMS by approximately 8-12 bps. The 2:30 PM ET press conference is the PMMS's second input - after today's session settles, the 10-year will land at a new level and Thursday's survey window captures it.</span></div>
+          <div class="line"><span class="lb">Canada tariff situation (Day 23, September 16):</span> <span class="d up">&#9650; US 50% softwood tariff Day 23 &middot; Canadian counter-tariffs Day 9</span><span class="why">Day 23 of the US 50% softwood lumber tariff, with Canadian counter-tariffs (15-50% on 700+ items including lumber, plywood, doors, cement) now in their ninth day. August housing starts - due approximately September 18-20 - will be the first full reading with both tariff layers simultaneously active alongside 6.76%+ mortgage rates. Builder material cost increases from the bilateral tariff stack compound the mortgage rate headwind. No tariff negotiation update as of Wednesday morning.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Today's dot plot at 2:30 PM ET is Thursday's Freddie Mac PMMS's most important input. The 10-year at 4.987% sets the current range at 6.85-7.00%. A dovish pause eases Thursday's reading toward 6.88%; a hawkish November signal pushes it toward 7.10%. August housing starts due mid-September will be the first full data under both tariff layers alongside 6.76%+ mortgage rates.</p></div>
+        <div class="src"><b>Curated from</b> Freddie Mac &middot; CNBC &middot; The Mortgage Reports &middot; GlobeNewsWire &middot; Immigration News Canada</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <div class="strip">
+          <div><div class="k">Wages (August)</div><div class="v">+0.3% MoM</div><div class="d flat">Released Sept 4</div></div>
+          <div><div class="k">Card delinquency 90+</div><div class="v">13.12%</div><div class="d up">&#9650; 15-year high</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.3672</div><div class="d up">&#9650; Pump window Day 2</div></div>
+        </div>
+        <p class="setup">The Fed's Tuesday hike is a household balance sheet event that already happened. On the saver side: HYSA rates begin moving toward <b>4.35-4.45%</b> this week automatically; top 1-year CDs are repricing toward 4.45-4.60% APY. On the borrower side: the 22.15% average card APR moved to approximately 22.40% for the 13.12% of balances already 90 days past due - a 15-year high. Gas at $4.3672 is the September floor; the pump window carries $109 Brent to retail through September 22-30.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">August wages and jobs (September 4 release):</span> <span class="num">+162,000 payrolls &middot; 4.1% unemployment &middot; +0.3% wages MoM</span> <span class="d flat">unchanged since last reading</span><span class="why">The August labor market data is unchanged since the September 4 release. The bifurcated household picture it describes is unchanged too: 162,000 payrolls added and wages at +0.3% above August CPI's +0.4% month-over-month. Those with jobs and savings accounts receive the hike's benefits; those carrying revolving credit at 22.15% APR and 90+ days delinquent face its cost. The K-shaped household dynamic is the structural context for every rate decision this cycle.</span></div>
+          <div class="line"><span class="lb">Credit card delinquencies (90+ days):</span> <span class="num">13.12%</span> <span class="d up">&#9650; 15-year high &middot; unchanged from prior reading</span><span class="why">Tuesday's 25-bps hike on 22.15% average APR translates to approximately $2.08 per month per $10,000 of revolving balance. For the median delinquent balance, the monthly increase is modest in absolute terms but structural: the household already 90 days past due is not helped by a higher minimum payment floor. At 13.12%, the delinquency rate is the highest since 2011. This is the rate hike's downside - arriving on top of a household segment already at a multi-decade stress level.</span></div>
+          <div class="line"><span class="lb">Gas prices (AAA, September 16):</span> <span class="num">$4.3672/gallon</span> <span class="d up">&#9650; pump window Day 2 &middot; Sept 22&ndash;30 tracking toward $4.55&ndash;4.75</span><span class="why">The September 15-24 pump window carries current crude prices to retail. At $109 Brent and $104 WTI, the September 22-30 AAA reading is tracking toward $4.55-4.75 per gallon - an 18-43 cent increase from today's $4.37. At 1,100 miles per month and 30 MPG, that is an additional $6.60-$15.91 per month in fuel costs above today's baseline. Gas is the household budget's most visible cost item and the most direct consumer measure of the compound supply disruption.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>The hike is K-shaped for household finances: savers gain 15-25 bps on CDs and HYSAs automatically; borrowers pay 25 bps more on 22.15% APRs against a 15-year delinquency high. Gas at $4.37 is the September floor as the pump window carries $109 Brent to retail. The dot plot at 2:30 PM ET today will determine whether this K-shape widens again in November.</p></div>
+        <div class="src"><b>Curated from</b> BLS &middot; Federal Reserve &middot; AAA &middot; CardRates &middot; CNBC &middot; NerdWallet</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <div class="strip">
+          <div><div class="k">Bitcoin</div><div class="v">$75,815</div><div class="d down">&#9660; &minus;2.66% &middot; CLARITY failure</div></div>
+          <div><div class="k">Ethereum</div><div class="v">~$2,430</div><div class="d down">&#9660; est. &middot; rate headwind + CLARITY</div></div>
+          <div><div class="k">XRP</div><div class="v">$1.29</div><div class="d down">&#9660; &minus;9.54% &middot; largest single-session loss</div></div>
+        </div>
+        <p class="setup">The CLARITY Act failed 49-50 at 2:15 PM ET Tuesday - 11 votes short of the 60 needed for cloture. XRP fell 9.54% to $1.29, the session's largest decline among the three tracked assets, because CLARITY's commodity classification and ETF-filing clearance would have benefited XRP most directly. Bitcoin held above <b>$75,000</b> despite falling 2.66%, supported by continued institutional ETF inflows. Ethereum slid to approximately $2,430 under the dual headwind of rate normalization and persistent SEC classification uncertainty. The 2026 legislative window is now closed.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Bitcoin (BTC, Tuesday September 15 close):</span> <span class="num">$75,815</span> <span class="d down">&#9660; &minus;2.66% &middot; holding above $75,000 institutional floor</span><span class="why">Bitcoin declined on the CLARITY failure but held above $75,000 - the institutional bid that BlackRock IBIT inflows have maintained through multiple negative catalysts this cycle. IBIT inflows remained net positive through the week per Farside Investors tracking. The rate hike is a second headwind (10-year at 5%, dollar strength compresses non-yielding assets), but the institutional ETF floor has not broken. Executive-branch rulemaking by the SEC and CFTC - rather than the failed legislation - is the nearer-term regulatory path for Bitcoin in 2026.</span></div>
+          <div class="line"><span class="lb">Ethereum (ETH, estimated Wednesday September 16 morning):</span> <span class="num">approximately $2,430</span> <span class="d down">&#9660; estimated &middot; from $2,472 pre-failure</span><span class="why">ETH's relative underperformance reflects two compounding factors: weak ETF inflow data (down 73-96% from prior week), and the CLARITY Act's failure to resolve the SEC/CFTC classification question. The bill would have defined ETH's regulatory status explicitly; without it, the classification ambiguity persists into 2027. Fidelity's FETH staking amendment remains pending before the SEC. At approximately $2,430, ETH faces the rate headwind and the classification uncertainty simultaneously. The next ETH regulatory catalyst is SEC action, not legislation, in the near term.</span></div>
+          <div class="line"><span class="lb">XRP (Tuesday September 15 close):</span> <span class="num">$1.29</span> <span class="d down">&#9660; &minus;9.54% from $1.39 &middot; session's largest decline</span><span class="why">XRP's 9.54% decline was the largest single-session loss of the three tracked assets and reflects CLARITY's most direct dependency. The bill would have resolved XRP's SEC classification definitively and cleared the path for spot XRP ETF filings. Without CLARITY, the regulatory path reverts to courts and executive-branch rulemaking. On-chain metrics (Ripple, Santiment Daily Active Addresses) and the Ripple escrow unlock schedule remain stable - the fundamental picture has not changed. The regulatory timeline has extended to 2027. The 11-vote gap analysis and what coalition could close it in 2027 is the operative question now.</span></div>
+          <div class="line"><span class="lb">CLARITY Act outcome (Tuesday September 15, 2:15 PM ET):</span> <span class="num">Failed 49&ndash;50</span> <span class="d down">&#9660; 11 votes short of 60 &middot; 2026 window closed</span><span class="why">Three unresolved disputes blocked the final Democratic votes needed: (1) Ethics divestiture clause targeting President Trump's $1.4 billion in crypto holdings, requiring blind trusts; (2) DeFi developer liability under Section 604; (3) stablecoin yield provision threatening Coinbase's $1.35 billion in annual USDC rewards revenue. The four Republican no votes - Collins, Hawley, Moran, Tillis - were the deciding factor alongside the unified Democratic opposition. Coinbase CEO Brian Armstrong noted SEC and CFTC rulemaking provides a path to clarity without legislation; the 2027 Congress is the next legislative window.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>CLARITY failed 49-50. The 2026 window is closed. XRP lost 9.54%, Bitcoin held above $75,000, Ethereum slid to approximately $2,430. The institutional ETF floor at Bitcoin held through the failure. The next regulatory path is executive-branch action and 2027 legislation - a 12-to-16-month timeline. The 10-year at 4.987% is the macro headwind that persists regardless of the legislative outcome.</p></div>
+        <div class="src"><b>Curated from</b> CoinDesk &middot; Polymarket &middot; Coinpedia &middot; Farside Investors &middot; Santiment &middot; Ripple &middot; Bitget</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="world">Around the World</h2>
+        <div class="strip">
+          <div><div class="k">Nikkei 225</div><div class="v">~63,700</div><div class="d flat">Near Tuesday's close</div></div>
+          <div><div class="k">Hang Seng</div><div class="v">~24,600</div><div class="d down">&#9660; Peg transmits Tue hike</div></div>
+          <div><div class="k">Yen / Dollar</div><div class="v">~153</div><div class="d flat">Stable post-hike</div></div>
+        </div>
+        <p class="setup">Asian markets absorbed two simultaneous Tuesday catalysts overnight: the Fed's 25-bps hike at 2:00 PM ET and the CLARITY Act failure at 2:15 PM ET. Hong Kong's dollar peg transmitted the hike directly to HIBOR overnight, adding borrowing cost pressure on top of the Hang Seng's existing tech-AI overhang. The Nikkei held near Tuesday's close, supported by energy-industrial names benefiting from <b>Brent at $109.21</b>. The yen held near 153 per dollar as the BOJ's separate normalization path continues without equivalence to the Fed's move.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Japan (Nikkei 225, Wednesday September 16 session):</span> <span class="num">approximately 63,700</span> <span class="d flat">near Tuesday's 63,621 close</span><span class="why">The Nikkei continues to find support in its energy-industrial composition. Brent at $109 is a headwind for Japan's import energy costs but a positive for Japanese energy-sector equities and for export-market exporters benefiting from the yen at 153 (weaker yen supports exporter revenue). Toyota, Mitsubishi Heavy, and Furukawa Electric provided the industrial offset to SoftBank and Tokyo Electron's AI-essay pressure. BOJ rate-normalization signals have not shifted materially this week.</span></div>
+          <div class="line"><span class="lb">Hang Seng (Wednesday September 16 session):</span> <span class="num">approximately 24,600</span> <span class="d down">&#9660; extended from Tuesday's 24,773</span><span class="why">Hong Kong's dollar peg transmits every Fed hike mechanically to HIBOR - the overnight rate moved higher after Tuesday's 2:00 PM ET decision, adding borrowing cost pressure to the Hang Seng before Wednesday's open. The tech component faces the same AI capex questioning as its US counterparts. At approximately 24,600, the Hang Seng is continuing its two-week declining trend from 25,413 on September 9. The dot plot at 2:30 PM ET is the next Hang Seng catalyst - a November hike signal would be an additional HIBOR transmission event.</span></div>
+          <div class="line"><span class="lb">South Korea (KOSPI, Wednesday September 16 session):</span> <span class="num">approximately 6,590</span> <span class="d down">&#9660; extending decline from 6,995 September 7 peak</span><span class="why">The KOSPI's Samsung and SK Hynix exposure means Monday's AI slowdown essay continues to weigh. The AI-HBM semiconductor demand story - which drove the September 7 surge to 6,995 - remains in question. At approximately 6,590, the KOSPI has unwound 405 points from its September 7 high. Wednesday's session adds the CLARITY failure overhang: Samsung and SK Hynix have limited direct CLARITY exposure, but the broader risk-off tone from Tuesday afternoon carries into Wednesday's Asia open.</span></div>
+          <div class="line"><span class="lb">Yen / Dollar (Wednesday September 16 morning):</span> <span class="num">approximately 153</span> <span class="d flat">stable after Fed hike</span><span class="why">The yen held near 153 per dollar after the Fed hike, reflecting the BOJ's separate normalization path. The rate gap between US fed funds (3.75-4.00% post-hike) and Japanese policy rates (near 0.5%) keeps carry trades intact. At 153, the yen is below the 155-158 levels that triggered BOJ intervention concern in prior years. A hawkish Fed dot plot today - signaling a November hike - would widen the US-Japan rate gap further, potentially adding modest yen weakness beyond 153.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Asian markets absorbed the Fed hike and CLARITY failure with continued mixed-to-negative results. The Hang Seng is the most mechanically exposed to the US rate cycle via the dollar peg - the Tuesday hike transmitted to HIBOR overnight. The Nikkei holds near Tuesday's close on energy-industrial support. The KOSPI extends its AI-semiconductor correction. Today's dot plot at 2:30 PM ET is the next catalyst for Asian equity futures.</p></div>
+        <div class="src"><b>Curated from</b> CNBC &middot; Yahoo Finance &middot; Nikkei &middot; Bloomberg &middot; Reuters</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="events">The Week Ahead</h2>
+        <div class="strip">
+          <div><div class="k">Warsh Press Conf</div><div class="v">Today</div><div class="d flat">2:30 PM ET &middot; dot plot</div></div>
+          <div><div class="k">Freddie Mac PMMS</div><div class="v">Thursday</div><div class="d flat">Sept 17 &middot; first post-hike reading</div></div>
+          <div><div class="k">CLARITY Act</div><div class="v">Failed</div><div class="d down">&#9660; 49&ndash;50 &middot; 2027 window next</div></div>
+        </div>
+        <p class="setup">With Tuesday's FOMC hike delivered and the CLARITY Act closed, <b>today's 2:30 PM ET press conference</b> is the week's only remaining macro catalyst with genuine surprise potential. The dot plot's November signal moves the 10-year, Thursday's mortgage rate, and every rate-sensitive instrument simultaneously. Thursday brings the first post-hike Freddie Mac PMMS and the start of August housing starts reporting. Next week's September 22 pump window opening carries Wednesday's $109 Brent to retail.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Today (Wednesday September 16) - Fed Chair Warsh press conference 2:30 PM ET:</span> <span class="d flat">dot plot &middot; November and December rate path signal</span><span class="why">The September dot plot is the first since June 2026. The key variable: how many FOMC members put another hike in 2026 beyond today's (already delivered)? A median that shows one more hike - in November or December - signals the 10-year back above 5.10%, Thursday's PMMS toward 7.10%, and CD ceilings continuing to move. A median that shows a pause through year-end signals the 10-year toward 4.85%, Thursday's PMMS toward 6.88%, and the current 4.45-4.60% CD repricing as this cycle's peak. Every rate-sensitive instrument prices off today's 2:30 PM ET, not yesterday's 2:00 PM ET hike.</span></div>
+          <div class="line"><span class="lb">Thursday September 17 - Freddie Mac PMMS:</span> <span class="d flat">expected 6.85&ndash;7.10% depending on today's dot plot</span><span class="why">The dovish range: 6.85-6.92% if the 10-year pulls toward 4.85% on a pause signal. The hawkish range: 6.97-7.10% if the 10-year returns above 5.10% on a November hike signal. Above 7.00% would be the first reading at that level since October 2023, when purchase applications fell to their lowest since 1995. Thursday's PMMS captures trading through September 17 - today's post-press-conference 10-year level will be fully captured. This is the housing market's most consequential weekly rate reading in two years.</span></div>
+          <div class="line"><span class="lb">CLARITY Act (failed Tuesday September 15, 2:15 PM ET):</span> <span class="d down">&#9660; 49&ndash;50 &middot; 11 votes short &middot; 2026 window closed</span><span class="why">The next formal legislative opportunity is the 2027 session when the new Congress convenes. Executive-branch rulemaking by the SEC and CFTC is the nearer-term path - no Congressional action required. Coinbase CEO Brian Armstrong flagged this alternative the same day as the failure. The SEC's current posture toward crypto rulemaking under its chair and the CFTC's commodity classification authority are the 2026-2027 regulatory variables now in focus. The 2027 Congress carries a different coalition calculation - the four Republican no votes and the ethics clause are the specific obstacles to address.</span></div>
+          <div class="line"><span class="lb">Coming next week - September 22 pump window &amp; August housing starts:</span> <span class="d up">&#9650; pump window Sept 22&ndash;30 &middot; housing starts due approximately Sept 18&ndash;20</span><span class="why">September housing starts - the first full reading with both tariff layers active and 6.76%+ mortgage rates - are due approximately September 18-20. Prior months showed starts at multi-year lows; August adds the bilateral tariff layer to an already-constrained supply picture. The September 22 pump window opening begins carrying Wednesday's crude prices to retail - the consumer energy cost increase from the compound supply disruption arrives in the tank on September 22-30.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>The hike is done. CLARITY is closed. The dot plot at 2:30 PM ET today is the week's only remaining unpriced catalyst. Thursday's Freddie Mac PMMS and August housing starts complete the week's housing picture. The September 22 pump window opening brings the week's energy pricing to the consumer. Next week begins under whatever rate-path signal today's dot plot delivers.</p></div>
+        <div class="src"><b>Curated from</b> CME FedWatch &middot; Federal Reserve &middot; Freddie Mac &middot; Coinbase &middot; AAA &middot; Polymarket</div>
+        </div>
+
+        <div class="disclaimer">
+          <p>This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.</p>
+          <p class="asof">Figures reflect the latest readings available as of Wednesday, September 16, 2026, before the US market open. Sources are listed at the end of each section.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#week-opens"><span class="dot"></span>How Wednesday Opens</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_september15_2026.html">September 15, 2026</a></li>
+          <li><a href="market_pulse_september9_2026.html">September 9, 2026</a></li>
+          <li><a href="market_pulse_september8_2026.html">September 8, 2026</a></li>
+          <li><a href="market_pulse_september7_2026.html">September 7, 2026</a></li>
+          <li><a href="market_pulse_september6_2026.html">September 6, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We're looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+    document.querySelectorAll('h2.section-title[id]').forEach(function(el){
+      var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var dot=document.querySelector('.toc a[href="#'+el.id+'"] .dot');if(dot){dot.style.opacity='0';dot.style.transform='scale(0)';}}});},{rootMargin:'-20% 0px -60% 0px'});
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
