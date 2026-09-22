@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - September 22, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:28px 0 0;text-align:center;}
+  .body{padding-top:0;}
+  .body > .sec-v2:first-child h2.section-title{margin-top:0;}
+  h1.headline{text-wrap:balance;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:clamp(34px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;color:var(--ink);margin:56px 0 0;}
+  .dek{font-family:'Spectral',serif;font-weight:400;font-size:18px;line-height:1.5;color:#3b4048;margin-bottom:0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  h2.section-title{font-family:'Spectral',serif;font-weight:700;font-size:22px;line-height:1.2;letter-spacing:-0.01em;color:var(--ink);margin:26px 0 6px;padding-top:20px;border-top:1px solid var(--line);}
+  .section-intro{font-family:'Spectral',serif;font-style:italic;font-size:15px;line-height:1.5;color:var(--muted);margin-bottom:12px;}
+  .data-line{margin-bottom:6px;font-size:16px;line-height:1.5;font-family:'Spectral',serif;}
+  .data-label{font-weight:700;color:var(--ink);}
+  .up-green{color:#2d6a4f;font-weight:600;}
+  .down-green{color:#2d6a4f;font-weight:600;}
+  .up-red{color:#9b2c2c;font-weight:600;}
+  .down-red{color:#9b2c2c;font-weight:600;}
+  .flat{color:var(--muted);font-weight:600;}
+  .bottom-line-label{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-top:14px;margin-bottom:6px;}
+  .bottom-line-list{list-style:none;padding:0;margin:0 0 8px;}
+  .bottom-line-list li{padding-left:18px;position:relative;margin-bottom:7px;font-size:16px;line-height:1.55;color:var(--body);}
+  .bottom-line-list li::before{content:"\2022";position:absolute;left:0;color:var(--gold);font-weight:700;}
+  .bullet-list{list-style:none;padding:0;margin:0;}
+  .bullet-list li{padding-left:18px;position:relative;margin-bottom:8px;font-size:16px;line-height:1.55;}
+  .bullet-list li::before{content:"\2022";position:absolute;left:0;color:var(--navy);font-weight:700;}
+  /* ---- v2 section treatment ---- */
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .strip + p.setup{font-style:italic;}
+  .sec-v2 .strip + p.setup b{font-style:italic;}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);position:relative;padding-left:22px;}
+  .sec-v2 .line::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:18px;}
+  .sec-v2 .opens li{padding-left:22px;position:relative;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens li::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .opens li b{font-weight:700;color:var(--ink);}
+  .sec-v2 .opens li:target{background:var(--wash);box-shadow:0 0 0 10px var(--wash);border-radius:2px;}
+  .sec-v2 .opens a.more{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;margin-left:6px;}
+  .sec-v2 .opens a.more:hover{border-bottom:2px solid var(--gold);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p.asof{color:var(--muted);margin-bottom:0;}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}h2.section-title{font-size:20px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_september22_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_11.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Tuesday, September 22, 2026</span></div>
+        <h1 class="headline">Nasdaq Closes at a Record. Bitcoin Near $85K on Biggest ETF Inflow in 11 Months.</h1>
+      </div>
+
+      <div class="body">
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="setup lead-first">The S&amp;P 500 posted its best session since early August on Monday - up 1.5% to 7,764.70 - while the Nasdaq climbed 2.3% to a record 27,122.09, carried by chip stocks and the same three signals driving markets since September 16: WTI extending its slide below $95, the 10-year Treasury retreating from 5.01% to approximately 4.95%, and diplomatic engagement on Iran holding. Bitcoin amplified the move, hitting $87,000 Monday on $999 million in ETF inflows - the largest single-day total in 11 months - as institutions treated the CLARITY Act failure as a buying window, not a verdict. That is the mechanism: risk appetite returns when the geopolitical premium reprices and the rate ceiling softens, and all three assets moved on the same signal.</p>
+        <p class="setup">The week's pivotal events are the Trump-Xi bilateral summit Thursday September 24 - Xi arrives Washington Wednesday September 23 - and PCE inflation on Friday September 25, the Federal Reserve's preferred measure. PCE consensus expects core at approximately +0.21% month-over-month, which holds November hike odds near 60-65% without raising them further. A core reading at or above +0.3% MoM near-locks November; below +0.2% starts softening the path. The Trump-Xi summit carries the week's highest uncertainty: a tariff-truce signal is directly positive for technology, semiconductors, and copper; a breakdown reverses the current optimism trade. The Freddie Mac PMMS also releases Thursday - its first survey window with the 10-year back below 5%.</p>
+        <p class="setup">Two slow pressures continue. The CD reprice window enters Day 6 at 4.50% APY - the best 1-year rate available, closing approximately September 26-28 as traditional banks finish matching. And oil's slide persists: WTI at $93.18 this morning is down approximately $10-12 from the September 11 disruption peak near $105, tracking to an October pump window near $4.25-4.35 per gallon if the diplomatic hold sustains.</p>
+        <div class="src"><b>Curated from</b> Federal Reserve &middot; CME FedWatch &middot; Bloomberg &middot; USDA NASS &middot; BEA &middot; AAA</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="how-opens">How Tuesday Opens</h2>
+        <ul class="opens">
+          <li id="open-1"><b>The S&amp;P 500 enters Tuesday at 7,764.70 after its best Monday since early August - futures flat as the rally digests before the Trump-Xi summit Thursday and PCE Friday.</b> S&amp;P up 1.5%, Nasdaq +2.3% (record), Dow +0.7% Monday. Tuesday premarket futures essentially flat. 10-year retreated to ~4.95%, WTI at $93.18, both supportive conditions. Week catalysts: Trump-Xi bilateral Thursday September 24; PCE Friday September 25. <a class="more" href="#stocks">Stock Market &rarr;</a></li>
+          <li id="open-2"><b>The 1-year CD window at 4.50% APY enters Day 6 today - traditional banks are actively matching now, and Friday's PCE lands before the window closes approximately September 26-28.</b> Online banks: 4.45-4.50% APY. HYSA at 4.21%, auto-lifting toward 4.35-4.45% this week without action. A $50K CD at 4.50% earns $2,250 over 12 months. PCE Friday could shift the November second-ceiling argument - a soft print softens it; a hot print reinforces it. <a class="more" href="#savings">Savings &amp; CD &rarr;</a></li>
+          <li id="open-3"><b>WTI eased to $93.18 Tuesday morning - continuing its slide from the September 11 disruption peak near $105 - and the October pump window is now tracking approximately $4.25-4.35 per gallon.</b> Brent ~$101.51. Gas nationally ~$4.48 today - flat, with the 2-3 week crude lag still working. WTI range $91-94 in recent sessions. The diplomatic track on Iran is the variable that holds or reverses this. <a class="more" href="#energy">Energy &rarr;</a></li>
+          <li id="open-4"><b>Bitcoin topped $87,000 Monday on $999 million in ETF inflows - the largest in 11 months - as institutions returned after the CLARITY Act failure; Bitcoin consolidated near $85,000 Tuesday morning.</b> ETH ~$2,715. XRP ~$1.49 (+16% from $1.28 post-CLARITY low). IBIT led Monday inflows with $381M; cumulative IBIT net inflows exceed $61B. ETF signal: institutions priced CLARITY failure as a delay, not a verdict. <a class="more" href="#crypto">Crypto &rarr;</a></li>
+          <li id="open-5"><b>S&amp;P Global flash PMIs release at 9:45 AM ET today - the first September business-activity read - then Xi arrives Wednesday, Trump-Xi meets Thursday, and PCE lands Friday September 25.</b> Flash Manufacturing and Services PMIs (September preliminary) at 9:45 AM ET. Xi arrives Washington Wednesday September 23. Trump-Xi bilateral Thursday September 24 at the White House - tech CEOs at the state dinner. PCE (August) Friday September 25 is the week's Fed-path input. <a class="more" href="#events">The Week Ahead &rarr;</a></li>
+        </ul>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">7,764.70</div><div class="d up">&#9650; +1.5% Mon &middot; best since early Aug</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">27,122.09</div><div class="d up">&#9650; +2.3% Mon &middot; record close</div></div>
+          <div><div class="k">Dow</div><div class="v">52,048.83</div><div class="d up">&#9650; +0.7% Mon &middot; Tue futures flat</div></div>
+        </div>
+        <p class="setup"><b>The S&amp;P 500 rose 1.5% to 7,764.70 Monday - its best session since early August - while the Nasdaq climbed 2.3% to a record 27,122.09</b> on chip and AI stock leadership, with Bitcoin's surge to $87,000 lifting crypto-adjacent names (Strategy, Coinbase, Robinhood). WTI extending below $95 and the 10-year retreating from 5.01% to approximately 4.95% were the two macro drivers; the Trump-Xi summit on Thursday provided the optimism bid. Tuesday premarket futures are essentially flat as the market consolidates ahead of the week's two pivotal events.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (Monday September 21 close):</span> <span class="num">7,764.70</span> <span class="d up">&#9650; +1.5% &middot; +114.20 pts &middot; best session since early August</span><span class="why">The S&amp;P at 7,764 cleared the September 4 peak of 7,718 and is 114 points above Monday's open. The move was broad - energy components benefited from WTI falling below $95, financials benefited from the 10-year retreating from 5.01%, and technology led as chip stocks extended their rally. Tuesday futures are flat; the week's next directional catalyst is PCE on Friday September 25. A core PCE print above +0.3% MoM reintroduces the rate-headwind bid; below +0.2% adds to Monday's gains.</span></div>
+          <div class="line"><span class="lb">Nasdaq Composite (Monday September 21 close):</span> <span class="num">27,122.09</span> <span class="d up">&#9650; +2.3% &middot; +599.55 pts &middot; record close &middot; cleared pre-CLARITY level</span><span class="why">The Nasdaq's record close at 27,122 cleared the September 10 pre-CLARITY level near 26,700 and set a new high. Philadelphia Semiconductor Index gains, AI-related names, and crypto-adjacent stocks (Strategy, Coinbase) each contributed. Bitcoin's $87,000 Monday peak and $999 million in ETF inflows amplified the technology bid through crypto-adjacent equity exposure. The Nasdaq is now 600 points above its post-CLARITY-failure low near 26,522. Tuesday futures are approximately flat; Trump-Xi Thursday carries direct implications for semiconductor export-control risk.</span></div>
+          <div class="line"><span class="lb">Dow Jones Industrial Average (Monday September 21 close):</span> <span class="num">52,048.83</span> <span class="d up">&#9650; +0.7% &middot; +366.19 pts &middot; narrowest gain of the three</span><span class="why">The Dow's 0.7% gain - the smallest of the three indices Monday - reflects the 10-year still near 4.95%, which constrains financial-sector upside even after Monday's retreat from 5.01%. Goldman Sachs, JPMorgan, and Caterpillar contributed positively but less than semiconductor names moved the Nasdaq. The Dow is 366 points above its prior close and above 52,000 for the first time since September 4. Tuesday futures are essentially flat; New Home Sales on Thursday and PCE Friday are the Dow's direct data catalysts this week.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>S&amp;P 7,764.70 (best session since early August), Nasdaq 27,122.09 (record), Dow 52,048.83 at Monday's close. Tuesday futures flat. Chip stocks led Monday's move; Bitcoin's $87K surge amplified via crypto-adjacent equities. Trump-Xi Thursday and PCE Friday are the week's catalysts.</p></div>
+        <div class="src"><b>Curated from</b> Yahoo Finance &middot; CNBC &middot; Bloomberg &middot; Motley Fool &middot; AP Markets</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <div class="strip">
+          <div><div class="k">Fed funds</div><div class="v">3.75&ndash;4.00%</div><div class="d up">&#9650; Hiked Sept 16 &middot; unanimous</div></div>
+          <div><div class="k">2-year</div><div class="v">~4.74%</div><div class="d up">&#9650; Pricing next hike &middot; two-year high</div></div>
+          <div><div class="k">10-year</div><div class="v">~4.95%</div><div class="d down">&#9660; Below 5% &middot; off 5.01% Friday close</div></div>
+        </div>
+        <p class="setup">The 10-year Treasury retreated to approximately 4.95% Monday - back below the 5% threshold that historically pushes the Freddie Mac PMMS above 7%. <b>The September 24 PMMS survey window opened Tuesday with the 10-year below 5%, changing the above-7% probability from near-certain to a close call</b>: at 4.95% through Wednesday, the Thursday PMMS tracks approximately 6.95-7.05% rather than the 7.10%+ that a sustained 5.01%+ implied. CME FedWatch holds November hike odds at approximately 60-65%. PCE on Friday September 25 is the first post-hike print that moves that number.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">10-year Treasury (Monday September 21 close, most recent):</span> <span class="num">~4.95%</span> <span class="d down">&#9660; Off 5.01% Friday close &middot; below 5% threshold &middot; PMMS survey now a close call on 7%</span><span class="why">The 10-year's move from 5.01% Friday to approximately 4.95% Monday reflects the same diplomatic-signal repricing that moved WTI below $95 - reduced geopolitical risk premium, mild risk-on rotation. The Freddie Mac PMMS survey window for Thursday September 24 opened Monday with the 10-year below 5%; the survey captures quotes through Wednesday September 23. The historical relationship: each 10 bps above 4.80% adds approximately 8-10 bps to the PMMS reading. At 4.95% sustained through Wednesday, the Thursday PMMS tracks 6.95-7.05% - a close call. The BOJ structural headwind (carry margin ~2.5-2.75%) remains as a 10-year floor mechanism distinct from the domestic inflation path.</span></div>
+          <div class="line"><span class="lb">2-year Treasury (most recent):</span> <span class="num">~4.74%</span> <span class="d up">&#9650; Two-year high &middot; fully pricing next hike &middot; 21 bp spread over 10-year</span><span class="why">At 4.74%, the 2-year trades 21 basis points below the 10-year at ~4.95% - a mildly upward-sloping curve consistent with "growth holds, more hikes ahead." The spread narrowed slightly as the 10-year fell Monday. A core PCE print at or above +0.3% MoM Friday pushes the 2-year toward 4.85-4.90% and widens the spread. A soft PCE below +0.2% softens the 2-year first, flattening the curve.</span></div>
+          <div class="line"><span class="lb">Fed funds rate (post-September 16 hike):</span> <span class="num">3.75&ndash;4.00%</span> <span class="d up">&#9650; Unanimous 25-bps hike &middot; 12-of-18 dot plot signals one more in 2026</span><span class="why">The September 16 unanimous hike is fully priced. The dot plot's 12-of-18 signal for a year-end target of 4.00-4.25% sets the base case for November. CME FedWatch holds November 4-5 odds at approximately 60-65%. The primary remaining 2026 input is Friday September 25 PCE - the first post-hike inflation print that changes the November probability.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>10-year at ~4.95% - back below 5% after Monday's retreat, reducing the certainty of a Thursday PMMS above 7%. Fed funds at 3.75-4.00%. CME FedWatch at ~60-65% for November. PCE Friday September 25 is the next rate-path input.</p></div>
+        <div class="src"><b>Curated from</b> Federal Reserve &middot; CME FedWatch &middot; CNBC &middot; Bloomberg &middot; Treasury.gov &middot; FRED St. Louis Fed</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <div class="strip">
+          <div><div class="k">Top 1-yr CD</div><div class="v">4.45&ndash;4.50%</div><div class="d up">&#9650; Day 6 &middot; window open</div></div>
+          <div><div class="k">Top HYSA</div><div class="v">4.21%</div><div class="d up">&#9650; Auto-lifting to ~4.35&ndash;4.45% this week</div></div>
+          <div><div class="k">Nat'l avg 1-yr CD</div><div class="v">~2.10%</div><div class="d up">&#9650; FDIC update &middot; tracking higher</div></div>
+        </div>
+        <p class="setup">Day 6 of the post-hike CD reprice window. <b>Top online banks hold at 4.45-4.50% APY on 1-year CDs today; traditional banks and credit unions are actively matching through September 24-26</b>. The window typically closes 7-10 days from the September 18 hike - approximately September 26-28. PCE on Friday September 25 lands before the window closes and is the key input to the November second-ceiling argument: a hot print (core PCE above +0.3%) reinforces the case for waiting for a November second ceiling of 4.60-4.75%; a soft print softens it.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Best online 1-yr CD (Day 6, September 22):</span> <span class="num">4.45&ndash;4.50% APY</span> <span class="d up">&#9650; From 4.30% pre-hike &middot; window closes approximately September 26&ndash;28</span><span class="why">The reprice window opened September 18 and runs 7-10 days, with traditional banks matching Tuesday September 22 through Friday September 26. A $50K CD at 4.50% APY earns $2,250 over 12 months versus $2,150 at the pre-hike 4.30% - approximately $100 more per $50K. Friday PCE lands before the window closes: a core PCE at or above +0.3% MoM raises the probability that November delivers a second hike toward 4.60-4.75%, favoring the HYSA wait; below +0.2% removes some of that second-ceiling argument, favoring locking now.</span></div>
+          <div class="line"><span class="lb">Best HYSA (September 22):</span> <span class="num">4.21% APY</span> <span class="d up">&#9650; Auto-lifting toward ~4.35&ndash;4.45% this week &middot; no action required</span><span class="why">HYSA rates are auto-lifting toward 4.35-4.45% APY this week - banks adjust rates in response to the September 16 hike without customer action required. If November delivers a second 25-bps hike, the HYSA auto-lifts again to approximately 4.55-4.65%, capturing the two-hike benefit without lock-in cost. For savers with 3+ months of flexibility who believe November delivers, the HYSA path outperforms a CD locked this week by approximately $375 per $50K over 12 months (assuming November hike and 4.60% second ceiling).</span></div>
+          <div class="line"><span class="lb">National average 1-yr CD (FDIC, most recent):</span> <span class="num">~2.10% APY</span> <span class="d up">&#9650; Tracking higher as post-hike reprice works through the system</span><span class="why">The FDIC national average is tracking toward 2.10-2.15% as the post-September 16 reprice works through the banking system. The gap between the national average and the online best is approximately 235-240 basis points - roughly $2,350-$2,400 in annual foregone interest per $100,000. This gap widens by another 15-25 bps if November delivers a second hike and online banks reprice to 4.60-4.75%.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Top 1-year CDs at 4.45-4.50% APY - Day 6 of the reprice window. HYSA auto-lifting toward 4.35-4.45% this week without action. Window closes approximately September 26-28. PCE Friday lands before the window closes: a hot print reinforces the November second-ceiling case; a soft print softens it.</p></div>
+        <div class="src"><b>Curated from</b> FDIC &middot; Bankrate &middot; NerdWallet &middot; Motley Fool &middot; CME FedWatch &middot; Federal Reserve</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <div class="strip">
+          <div><div class="k">Brent</div><div class="v">~$101.51</div><div class="d down">&#9660; Off $109.21 peak &middot; geopolitical residual</div></div>
+          <div><div class="k">WTI</div><div class="v">$93.18</div><div class="d down">&#9660; Range $91&ndash;94 &middot; off ~$12 from peak</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">~$4.48</div><div class="d flat">Flat &middot; crude lag 2&ndash;3 weeks</div></div>
+        </div>
+        <p class="setup">WTI crude eased to $93.18 Tuesday morning - continuing the slide that began when US-Iran diplomacy opened at UNGA last week. <b>WTI is now approximately $10-12 below the September 11 disruption peak near $103-105</b>, with the supply-risk premium almost fully repriced. Brent at approximately $101.51 carries the residual geopolitical premium - the Houthi attacks on Saudi Arabia over the weekend did not reverse the crude direction at Monday's or Tuesday's open. Gas at approximately $4.48 today is essentially flat; the pump window adjusts to WTI's current level in the October 5-20 window.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">WTI crude (Tuesday September 22, morning):</span> <span class="num">$93.18/barrel</span> <span class="d down">&#9660; Range $91.30&ndash;$93.82 &middot; off ~$12 from September 11 peak &middot; diplomatic track holding</span><span class="why">WTI's $93.18 represents a near-complete repricing of the supply-disruption premium added after September 11 - from approximately $89 pre-disruption toward $103-105 at the peak, and back toward the $91-95 pre-disruption range. The driver remains the US-Iran diplomatic signal, not an actual supply change. Each $2 decline in crude translates to approximately 5 cents per gallon at retail with a 2-3 week lag. At $93, the October 5-20 pump window tracks approximately $4.25-4.35 per gallon, down from the $4.45-4.65 range assumed at the disruption peak.</span></div>
+          <div class="line"><span class="lb">Brent crude (Tuesday September 22):</span> <span class="num">~$101.51/barrel</span> <span class="d down">&#9660; Off $109.21 post-disruption peak &middot; Brent-WTI spread at ~$8.33 &middot; geopolitical residual</span><span class="why">Brent at $101.51 is down approximately $7.70 from its $109.21 post-disruption peak. The Brent-WTI spread at approximately $8.33 - versus a typical $2-4 - reflects active international supply uncertainty: Houthi attacks and Saudi pipeline corridor uncertainty maintain the international premium even as the domestic WTI price reprices toward pre-disruption levels. A confirmed Trump-Iran meeting at UNGA would compress the Brent-WTI spread toward a more normal $3-4.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, September 22):</span> <span class="num">~$4.48/gallon</span> <span class="d flat">Flat &middot; WTI at $93 tracks to October pump window ~$4.25&ndash;4.35</span><span class="why">Gas at approximately $4.48 on Tuesday is essentially unchanged from the September 21-22 range - the 2-3 week retail lag means WTI's current $93 level shows up at the pump in the October 5-20 window. If WTI holds below $95 through this week, the October pump window tracks approximately $4.25-4.35 per gallon. At 1,100 miles per month and 30 MPG, that is approximately $8-$15 per month less than the peak-oil-premium forecast for October. The diplomatic track is the variable.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>WTI at $93.18 - approximately $10-12 below the September 11 disruption peak - on sustained US-Iran diplomatic signals. Brent ~$101.51. Gas ~$4.48 today; October pump window tracks $4.25-4.35 if WTI holds below $95. The diplomatic signal is the key variable: it can reverse.</p></div>
+        <div class="src"><b>Curated from</b> Bloomberg &middot; CNBC &middot; AAA &middot; TradingEconomics &middot; OneValor &middot; OilPrice.com</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <div class="strip">
+          <div><div class="k">Gold</div><div class="v">$4,307.63</div><div class="d down">&#9660; &minus;0.81% &middot; risk-on rotation</div></div>
+          <div><div class="k">Silver</div><div class="v">$65.27</div><div class="d down">&#9660; &minus;1.11% &middot; risk-on rotation</div></div>
+          <div><div class="k">Copper</div><div class="v">$6.75/lb</div><div class="d up">&#9650; +0.92% &middot; September record &middot; pre-summit buying</div></div>
+        </div>
+        <p class="setup">Gold pulled back 0.81% to $4,307.63 and silver fell 1.11% to $65.27 Monday as the risk-on rotation into equities and crypto drew capital away from safe-haven metals. <b>Copper rose to $6.75 per pound - a September record and a 0.92% gain - as Chinese accumulation and pre-summit front-running continued ahead of the Trump-Xi bilateral Thursday.</b> The gold pullback is a risk-on rotation, not a structural shift; the inflation-premium floor near $4,250-$4,300 remains intact ahead of PCE Friday.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Gold / oz (Monday September 21 close, most recent):</span> <span class="num">$4,307.63</span> <span class="d down">&#9660; &minus;0.81% &middot; risk-on rotation &middot; inflation floor at $4,250&ndash;$4,300 intact</span><span class="why">Gold's $35 decline Monday reflects the same risk-on shift that sent the Nasdaq to a record and Bitcoin to $87,000 - investors rotated toward higher-beta assets when the diplomatic and rate signals aligned constructively. The inflation-premium floor near $4,250-$4,300 - set by the dot plot's persistent-hike narrative and the BOJ's structural role - remains intact. PCE Friday is the next direct input: a core PCE at or above +0.3% MoM is bullish for gold; a soft print softens the immediate inflation premium but not the base case.</span></div>
+          <div class="line"><span class="lb">Silver / oz (Monday close):</span> <span class="num">$65.27</span> <span class="d down">&#9660; &minus;1.11% &middot; risk-on rotation &middot; industrial demand channels intact</span><span class="why">Silver's 1.11% decline mirrors gold's risk-on rotation. Industrial demand channels (solar, EV, grid infrastructure) remain unaffected. The gold-silver ratio near 66 holds near the top of its September range. Chinese official manufacturing PMI on Wednesday September 23 is the next direct industrial-demand signal for silver - a beat above 50 is positive; a miss below 50 softens the industrial bid going into Thursday's summit.</span></div>
+          <div class="line"><span class="lb">Copper (Monday close, most recent):</span> <span class="num">$6.75/lb</span> <span class="d up">&#9650; +0.92% &middot; September record &middot; Chinese accumulation and pre-summit front-running</span><span class="why">Copper's 0.92% gain to $6.75 is a September record, driven by continued Chinese buyer accumulation (elevated Yangshan premium) and pre-summit front-running ahead of the Trump-Xi bilateral Thursday. A tariff-truce signal Thursday reduces the urgency of front-running; a breakdown accelerates it. The data-center construction and grid-investment demand pillars remain active independently of summit outcome. Chinese PMI Wednesday is the concurrent demand signal.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Copper at $6.75 - September record - on Chinese buying and pre-summit demand. Gold at $4,307.63 and silver at $65.27, both down slightly on Monday's risk-on rotation. Inflation floor intact for gold ahead of PCE Friday. Chinese PMI Wednesday and Trump-Xi Thursday are the next copper catalysts.</p></div>
+        <div class="src"><b>Curated from</b> TradingEconomics &middot; Kitco &middot; CME Group &middot; CNBC &middot; JM Bullion &middot; LME</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <div class="strip">
+          <div><div class="k">Corn G/E</div><div class="v">57%</div><div class="d flat">Third week stable &middot; confirmed</div></div>
+          <div><div class="k">Soybeans G/E</div><div class="v">58%</div><div class="d flat">Stable &middot; 12% harvested</div></div>
+          <div><div class="k">Corn harvested</div><div class="v">13%</div><div class="d up">&#9650; Up from 8% &middot; ahead of 5-yr avg</div></div>
+        </div>
+        <p class="setup">Monday's USDA crop progress report confirmed corn condition stable for a third consecutive week at 57% good-to-excellent (44% good, 13% excellent), with 13% harvested - ahead of the 11% five-year average. <b>Soybeans moved to 12% harvested, double the five-year average of approximately 8% for this period, with condition steady at 58% good-to-excellent.</b> The data stabilizes December corn near $5.28-5.32 and removes the bearish-condition tail risk that was present entering the week.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Corn G/E (USDA crop progress, week ending September 21):</span> <span class="num">57% good-to-excellent</span> <span class="d flat">Third consecutive week stable &middot; five-week decline from 65% arrested</span><span class="why">Three straight readings at 57% confirm the five-week G/E decline from 65% has arrested. Corn harvested at 13% is ahead of the 11% five-year average and in line with the expected 13-15% range. Early yield reports from Illinois, Indiana, and Iowa range 175-182 bushels per acre, consistent with USDA's 178.5 bpa September WASDE estimate. The next G/E read comes September 28; the October 9 WASDE is the season's most consequential crop estimate.</span></div>
+          <div class="line"><span class="lb">Soybeans G/E (USDA, week ending September 21):</span> <span class="num">58% good-to-excellent</span> <span class="d flat">Stable &middot; 12% harvested &middot; double the five-year average pace</span><span class="why">Soybeans at 58% G/E (46% good, 12% excellent) and 12% harvested - the latter at double the five-year average of approximately 8% - confirm an accelerated harvest pace. The USDA September WASDE loosened the soybean balance sheet by 16 million bushels from August; an early harvest above trend pace reinforces that supply loosening. Actual yield data from the Corn Belt over the next 10 days is the more decisive price signal than the G/E percentage.</span></div>
+          <div class="line"><span class="lb">December corn futures (most recent):</span> <span class="num">~$5.28&ndash;5.32/bushel</span> <span class="d flat">Third stable G/E read removes downside tail &middot; higher rates add farm credit cost</span><span class="why">December corn's stability near $5.28-5.32 reflects the third stable G/E reading removing the downside case. A sustained early harvest yield above 180 bpa pushes December toward $5.10-5.20; below 176 bpa supports $5.40-5.50. The higher-rate environment (fed funds 3.75-4.00%) directly raises farm operating credit costs. October 9 WASDE is the next major catalyst.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Corn G/E stable at 57% for a third week; 13% harvested, ahead of five-year average. Soybeans 58% G/E; 12% harvested, double the five-year pace. December corn steady near $5.28-5.32. Corn Belt yield data over the next 10 days and the October 9 WASDE are the next crop-price catalysts.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; DTN Progressive Farmer &middot; AgWeb &middot; Brownfield Ag News &middot; Farm Progress</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <div class="strip">
+          <div><div class="k">30-yr (Freddie Mac)</div><div class="v">6.95%</div><div class="d up">&#9650; Sept 17 PMMS &middot; next Thu Sept 24</div></div>
+          <div><div class="k">10-year</div><div class="v">~4.95%</div><div class="d down">&#9660; Back below 5% &middot; Thu PMMS a close call</div></div>
+          <div><div class="k">Canada tariff</div><div class="v">Day 29</div><div class="d up">&#9650; Counter-tariffs Day 15</div></div>
+        </div>
+        <p class="setup">The 10-year retreated to approximately 4.95% Monday - below the 5.01% close that made the September 24 PMMS above 7% appear near-certain. <b>The September 24 PMMS survey window opened Tuesday with the 10-year below 5%, changing the 7% threshold from near-certain to a close call</b>: the Thursday PMMS tracks approximately 6.95-7.05% if the 10-year holds near 4.95% through Wednesday. New Home Sales (August) on Thursday September 24 is the first full bilateral-tariff-month read of signed sales contracts.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Freddie Mac PMMS (September 17 release; next release September 24):</span> <span class="num">6.95% (30-yr) &middot; 6.26% (15-yr)</span> <span class="d flat">September 24 survey window open with 10-year at ~4.95% &middot; 7% threshold a close call</span><span class="why">The September 24 PMMS survey window (September 18-24) opened with a mixed rate path: Friday September 18 the 10-year was 5.01%; Monday September 21 it retreated to approximately 4.95%. The historical relationship: each 10 bps of 10-year above 4.80% adds approximately 8-10 bps to the PMMS. At 4.95% sustained through Wednesday September 23, the September 24 PMMS tracks approximately 6.95-7.05% - holding just below the 7% threshold that marked the October 2023 peak. If the 10-year drifts back above 5.00% Tuesday-Wednesday, the outcome shifts above 7%.</span></div>
+          <div class="line"><span class="lb">10-year and housing channel (Tuesday September 22):</span> <span class="num">~4.95%</span> <span class="d down">&#9660; Below 5% &middot; BOJ structural headwind intact &middot; still historically elevated</span><span class="why">At 4.95%, the 10-year is still historically elevated for housing affordability - the 4.90-5.00% range compresses purchase affordability meaningfully compared to the 4.50% range from spring 2026. The BOJ structural mechanism (carry margin ~2.5-2.75%) remains a floor for the 10-year independent of the domestic inflation path. August housing starts at 1,275,000 SAAR (single-family +7.6%) provided a constructive prior-month baseline; Thursday's New Home Sales will show the compound tariff-plus-rate effect on signed contracts.</span></div>
+          <div class="line"><span class="lb">Canada tariff (Day 29 US tariff, Day 15 Canadian counter-tariffs):</span> <span class="d up">&#9650; Bilateral stack in full effect &middot; no negotiation update</span><span class="why">No Canada tariff negotiation update as of Tuesday morning. Builder material costs remain 12-18% above pre-tariff levels, adding approximately $18,000-$27,000 to average new single-family construction costs. The Canada tariff situation is structurally distinct from the Trump-Xi discussion: Thursday's bilateral covers US-China trade and AI, not Canada lumber. New Home Sales (August) on Thursday is the first full bilateral-tariff-month signed-contract read.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>30-yr PMMS at 6.95% (September 17); the September 24 Thursday release is now a close call on the 7% threshold as the 10-year sits at ~4.95%. New Home Sales (August) also Thursday. Canada tariff bilateral stack at Day 29, no negotiations update.</p></div>
+        <div class="src"><b>Curated from</b> Freddie Mac &middot; Census Bureau &middot; CNBC &middot; BOJ &middot; The Mortgage Reports &middot; Street Stats Finance</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <div class="strip">
+          <div><div class="k">Wages (August)</div><div class="v">+0.3% MoM</div><div class="d flat">Released Sept 4 &middot; unchanged</div></div>
+          <div><div class="k">Card delinquency 90+</div><div class="v">13.12%</div><div class="d up">&#9650; 15-year high &middot; APR ~22.40%</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">~$4.48</div><div class="d flat">Flat &middot; sub-$95 crude lags 2&ndash;3 wks</div></div>
+        </div>
+        <p class="setup">The K-shape persists: savers enter Day 6 of the 4.50% APY CD window while borrowers carry an approximately 22.40% card APR at a 13.12% 90-day delinquency rate - a 15-year high. <b>S&amp;P Global flash PMIs at 9:45 AM ET today are the week's first forward-looking September read</b> - the first data covering the month that included all four September catalysts. Conference Board consumer confidence publishes September 29, not this week.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">August wages and jobs (September 4 release, unchanged):</span> <span class="num">+162,000 payrolls &middot; 4.1% unemployment &middot; +0.3% wages MoM</span> <span class="d flat">Labor market stable &middot; real wages slightly negative in August</span><span class="why">Real wages in August: +0.3% MoM wages versus +0.4% MoM CPI = slightly negative real wage growth. The squeeze on non-asset-holding households continued. The October 3 payrolls report (September data) is the first labor-market reading capturing all four September catalysts - rate hike, CLARITY failure, BOJ hike, and oil spike. S&amp;P Global flash PMIs at 9:45 AM ET today bridge the gap with the first September business and employment-conditions read.</span></div>
+          <div class="line"><span class="lb">Credit card delinquencies (90+, most recent):</span> <span class="num">13.12%</span> <span class="d up">&#9650; 15-year high &middot; APR approximately 22.40% post-September 16 hike</span><span class="why">The September 16 hike moved the average card APR from approximately 22.15% to 22.40%. At 13.12% delinquency - the 15-year high - a meaningful segment of cardholders is not making marginal carry decisions; it is not servicing existing missed obligations. Each additional 25-bps hike adds cost to already-missed obligations that cannot be addressed by budget adjustments alone. The October 3 payrolls report is the next labor input; September 29 Conference Board consumer confidence is the next forward-looking household sentiment read.</span></div>
+          <div class="line"><span class="lb">Gas prices (AAA, September 22):</span> <span class="num">~$4.48/gallon</span> <span class="d flat">Flat &middot; sub-$95 WTI tracks to October pump window ~$4.25&ndash;4.35</span><span class="why">Gas at approximately $4.48 Tuesday is essentially unchanged from Monday - the 2-3 week crude lag means WTI's $93 this morning tracks to the October 5-20 pump window. For households carrying delinquent card balances, the gas relief in October arrives simultaneously with a higher card APR - two moves in opposite directions with the gas relief delayed by three weeks.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Savers lock 4.50% APY this week; borrowers carry 22.40% card APRs at a 13.12% delinquency level. Gas ~$4.48 today - flat - with sub-$95 WTI tracking to the October pump window. S&amp;P Global flash PMIs at 9:45 AM ET today are the first September forward-looking read. Conference Board consumer confidence September 29.</p></div>
+        <div class="src"><b>Curated from</b> BLS &middot; Federal Reserve &middot; AAA &middot; CardRates &middot; CNBC &middot; NerdWallet</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <div class="strip">
+          <div><div class="k">Bitcoin</div><div class="v">~$85,000</div><div class="d up">&#9650; Hit $87K Mon &middot; $999M ETF inflows</div></div>
+          <div><div class="k">Ethereum</div><div class="v">~$2,715</div><div class="d up">&#9650; +5.9% Mon &middot; $270M ETF inflows</div></div>
+          <div><div class="k">XRP</div><div class="v">~$1.49</div><div class="d up">&#9650; +16% from $1.28 post-CLARITY low</div></div>
+        </div>
+        <p class="setup">Bitcoin hit $87,000 Monday on $999 million in ETF inflows - the largest single-day total in 11 months - as institutions returned to crypto in the week following the CLARITY Act failure and the Fed hike. <b>BlackRock's IBIT led with $381 million; ARK added $289 million and Fidelity contributed $239 million.</b> Bitcoin consolidated near $85,000 in overnight trading Tuesday. The signal in the inflow data: institutions priced the CLARITY failure as a legislative delay, not a verdict.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Bitcoin (Tuesday September 22, morning; Monday high $87,000):</span> <span class="num">~$85,000</span> <span class="d up">&#9650; Hit $87K Monday &middot; $999M ETF inflows Mon (largest in 11 months) &middot; IBIT at $61B+ cumulative</span><span class="why">Monday's $999 million in Bitcoin ETF inflows - the largest since October 6, 2025, when flows reached $1.2 billion - reflect institutional re-entry after the CLARITY Act failure. IBIT's $381 million Monday brought cumulative net inflows above $61 billion; total Bitcoin ETF AUM at approximately $153 billion with Monday's price action. Bitcoin's move from the $77,000-78,000 Friday range through $87,000 Monday and consolidation near $85,000 Tuesday follows the standard institutional-re-entry pattern after a sentiment dislocation. PCE Friday September 25 is the rate-headwind input for Bitcoin as a non-yielding rate-sensitive asset.</span></div>
+          <div class="line"><span class="lb">Ethereum (Monday close, most recent):</span> <span class="num">~$2,715</span> <span class="d up">&#9650; +5.9% Monday &middot; $270M Ether ETF inflows &middot; above $2,500 floor</span><span class="why">ETH's 5.9% Monday gain and $270 million in Ether ETF inflows confirm the same institutional re-entry pattern as Bitcoin. The $2,500 technical floor held through the compound September catalyst week; ETH is now above $2,700 for the first time since before the CLARITY vote. Fidelity's pending staking amendment before the SEC remains the nearer-term ETH catalyst; no hearing date set. The $2,800-$3,000 range that prevailed before September's compound catalysts is the next resistance.</span></div>
+          <div class="line"><span class="lb">XRP (Tuesday September 22):</span> <span class="num">~$1.49</span> <span class="d up">&#9650; +16.4% from $1.28 post-CLARITY low &middot; cumulative ETF inflows $1.71B</span><span class="why">XRP's move from $1.28 to $1.49 represents the market re-pricing the legislative delay rather than a fundamental failure. The four Republican holdouts (Collins, Hawley, Moran, Tillis) remain the specific obstacle; no new CLARITY Act development since the September 15 procedural vote. Cumulative XRP ETF inflows at $1.71 billion; weekly inflows in the week of September 7-11 were $18.98 million, with $11.26 million added September 14. On-chain fundamentals (Santiment Daily Active Addresses, network growth) remain stable - the underlying network did not deteriorate with the price dislocation.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Bitcoin at approximately $85,000 Tuesday morning after hitting $87,000 Monday on $999 million in ETF inflows - the largest in 11 months, signaling institutional re-entry after CLARITY. ETH at approximately $2,715. XRP at approximately $1.49, up 16.4% from the $1.28 post-CLARITY low. PCE Friday September 25 is the rate-headwind input for all three.</p></div>
+        <div class="src"><b>Curated from</b> KuCoin &middot; The Block &middot; Farside Investors &middot; CoinDesk &middot; Santiment &middot; Ripple &middot; CME FedWatch</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="world">Around the World</h2>
+        <div class="strip">
+          <div><div class="k">Nikkei 225</div><div class="v">Closed</div><div class="d flat">Autumnal Equinox &middot; reopens Thu</div></div>
+          <div><div class="k">Hang Seng</div><div class="v">~24,854</div><div class="d up">&#9650; +0.4% Mon &middot; oil and summit context</div></div>
+          <div><div class="k">KOSPI</div><div class="v">~6,996</div><div class="d up">&#9650; +1.5% Mon &middot; chip strength</div></div>
+        </div>
+        <p class="setup">Tokyo is closed again Tuesday for Autumnal Equinox Day - Japan's second consecutive national holiday (Respect for the Aged Day Monday, Autumnal Equinox Tuesday). <b>The Nikkei 225 last closed at 65,018.95 on Friday September 18 and reopens Thursday September 24 - the same day as the Trump-Xi bilateral.</b> Hang Seng and KOSPI gains from Monday continue as the regional baseline; the dominant event this week is Xi's arrival Wednesday and the bilateral Thursday.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Nikkei 225 (closed through September 23; last close Friday September 18):</span> <span class="num">65,018.95</span> <span class="d flat">Closed Mon&ndash;Tue for Japanese national holidays &middot; reopens Thursday September 24</span><span class="why">The Nikkei closed September 21 (Respect for the Aged Day) and September 22 (Autumnal Equinox Day). Last close Friday September 18: 65,018.95, up 882.70 points (+1.38%). The Nikkei reopens Thursday September 24 - the same session as the Trump-Xi bilateral, New Home Sales, and the Freddie Mac PMMS. Toyota, Sony, and exporters benefit from USD/JPY holding near 157 - BOJ at 1.25%, carry margin approximately 2.5-2.75% still overwhelmingly favoring dollar carry.</span></div>
+          <div class="line"><span class="lb">Hang Seng (Monday September 21 close, most recent):</span> <span class="num">~24,854</span> <span class="d up">&#9650; +0.4% &middot; energy cost relief and Trump-Xi summit context</span><span class="why">The Hang Seng's 0.4% Monday gain reflected WTI declining below $95 (direct manufacturing-margin positive for Chinese firms) and Trump-Xi summit optimism. Chinese official manufacturing PMI Wednesday September 23 is the next direct regional catalyst before the Xi arrival. A tariff-truce signal Thursday is directly positive for Hang Seng export-oriented components; a breakdown reverses the current optimism premium.</span></div>
+          <div class="line"><span class="lb">KOSPI (Monday September 21 close, most recent):</span> <span class="num">~6,996</span> <span class="d up">&#9650; +1.5% &middot; semiconductor strength &middot; strongest Asian market Monday</span><span class="why">The KOSPI's 1.5% Monday gain was the strongest in Asia, driven by Samsung and SK Hynix on semiconductor momentum following the Philadelphia Semiconductor Index's Friday gains. The Trump-Xi summit context reduces binary risk around Korean semiconductor export controls to China - the KOSPI's largest sector weight. Chinese PMI and the summit outcome are the two week-defining catalysts for South Korea. The KOSPI at ~6,996 is near the top of its September range.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Nikkei closed through Wednesday for Japanese national holidays; reopens Thursday September 24. Hang Seng ~24,854 (+0.4%) and KOSPI ~6,996 (+1.5%) from Monday. USD/JPY near 157 - carry trade intact. Chinese PMI Wednesday and Trump-Xi bilateral Thursday are the week's regional catalysts.</p></div>
+        <div class="src"><b>Curated from</b> CNBC &middot; Bloomberg &middot; BOJ &middot; Yahoo Finance &middot; BBN Times &middot; BNN Bloomberg</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="events">The Week Ahead</h2>
+        <div class="strip">
+          <div><div class="k">Flash PMIs</div><div class="v">Today</div><div class="d flat">Sept 22 &middot; 9:45 AM ET</div></div>
+          <div><div class="k">Trump-Xi Summit</div><div class="v">Thursday</div><div class="d flat">Sept 24 &middot; White House</div></div>
+          <div><div class="k">PCE Inflation</div><div class="v">Friday</div><div class="d flat">Sept 25 &middot; 8:30 AM ET</div></div>
+        </div>
+        <p class="setup">The week of September 22-26 runs two high-impact events: the Trump-Xi bilateral summit Thursday September 24 - the first time a Chinese leader has visited Washington since 2015 - and PCE inflation on Friday September 25. <b>PCE is the week's pivotal scheduled release</b>: the first post-hike inflation print that changes November hike odds from the current 60-65%. S&amp;P Global flash PMIs at 9:45 AM ET today open the data calendar as the first September business-activity read.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Today, September 22 - S&amp;P Global flash Manufacturing and Services PMIs at 9:45 AM ET:</span> <span class="d flat">First preliminary September business-activity read &middot; August Manufacturing held at 51.2</span><span class="why">The flash PMIs are the first data covering September as a full month - including the September 16 Fed hike, the CLARITY failure, the BOJ hike, and the oil disruption. August Manufacturing PMI held at 51.2; a September dip below 50 (contraction) alongside a Services miss changes the growth narrative ahead of PCE. A beat above 52 removes the growth-concern bid and supports the risk-on tone from Monday.</span></div>
+          <div class="line"><span class="lb">Wednesday, September 23 - Xi Jinping arrives Washington; China official Manufacturing PMI; MBA Mortgage Applications:</span> <span class="d flat">Summit pre-arrival &middot; China PMI direct input to copper and KOSPI</span><span class="why">Xi Jinping arrives Washington Wednesday ahead of Thursday's bilateral meeting. The formal state visit framework: arrival ceremony, military review, bilateral Thursday, state dinner Thursday evening with tech executives (Bezos, Pichai, Altman, Cook, Musk, Jensen Huang). Chinese official manufacturing PMI Wednesday is a direct input to copper demand and the KOSPI semiconductor read. MBA Mortgage Applications provide the concurrent lending-demand read against the 10-year's current level near 4.95%.</span></div>
+          <div class="line"><span class="lb">Thursday, September 24 - Trump-Xi bilateral at White House; Freddie Mac PMMS; New Home Sales (August); Jobless Claims; Durable Goods:</span> <span class="d up">&#9650; Highest-uncertainty event of the week &middot; tariff-truce clock running &middot; 90-day window</span><span class="why">Trump and Xi meet Thursday September 24 at the White House - covering trade, Taiwan, and AI. A tariff-progress signal is positive for equities, semiconductors, and copper. A breakdown reverses the current optimism trade. Freddie Mac PMMS (same day) is the first survey with the 10-year below 5% - the close call on whether the 7% threshold is crossed. New Home Sales (August) is the first full bilateral-tariff-month signed-contract read. Nikkei reopens Thursday after two days closed. Jobless Claims and Durable Goods Orders complete the day's data slate.</span></div>
+          <div class="line"><span class="lb">Friday, September 25 - PCE inflation (BEA, August data) at 8:30 AM ET; University of Michigan final consumer sentiment:</span> <span class="d up">&#9650; Fed's preferred measure &middot; most consequential scheduled release of the week</span><span class="why">Core PCE consensus: approximately +0.21% MoM / +3.0% annual. At or above +0.3% MoM near-locks November at 4.00-4.25%; below +0.2% MoM starts softening the November probability from 60-65%. August CPI came in at +0.4% MoM on September 10; Morningstar forecasts PCE showing some cooling, with tariff impacts persisting. University of Michigan final consumer sentiment (also Friday September 25) provides the month-end household expectations bookend.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Flash PMIs at 9:45 AM ET today - first September read. Xi arrives Wednesday; Trump-Xi bilateral Thursday September 24 at the White House with tech CEOs at the state dinner. PCE Friday September 25 at 8:30 AM ET - consensus core +0.21% MoM. A print at or above +0.3% near-locks November; below +0.2% softens it.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; S&amp;P Global &middot; BEA &middot; CME FedWatch &middot; Federal Reserve &middot; The National News &middot; CSIS &middot; Morningstar</div>
+        </div>
+
+        <div class="disclaimer">
+          <p>This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.</p>
+          <p class="asof">Figures reflect the latest readings available as of Tuesday, September 22, 2026, before the US market open. Sources are listed at the end of each section.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#how-opens"><span class="dot"></span>How Tuesday Opens</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_september21_2026.html">September 21, 2026</a></li>
+          <li><a href="market_pulse_september20_2026.html">September 20, 2026</a></li>
+          <li><a href="market_pulse_september19_2026.html">September 19, 2026</a></li>
+          <li><a href="market_pulse_september18_2026.html">September 18, 2026</a></li>
+          <li><a href="market_pulse_september17_2026.html">September 17, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We're looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+    document.querySelectorAll('h2.section-title[id]').forEach(function(el){
+      var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var dot=document.querySelector('.toc a[href="#'+el.id+'"] .dot');if(dot){dot.style.opacity='0';dot.style.transform='scale(0)';}}});},{rootMargin:'-20% 0px -60% 0px'});
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>
