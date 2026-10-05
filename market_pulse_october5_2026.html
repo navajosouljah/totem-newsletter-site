@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - October 5, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:28px 0 0;text-align:center;}
+  .body{padding-top:0;}
+  h1.headline{text-wrap:balance;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:clamp(34px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;color:var(--ink);margin:56px 0 0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  /* ---- v2 section treatment ---- */
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .strip + p.setup{font-style:italic;}
+  .sec-v2 .strip + p.setup b{font-style:italic;}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);position:relative;padding-left:22px;}
+  .sec-v2 .line::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:18px;}
+  .sec-v2 .opens li{padding-left:22px;position:relative;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens li::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .opens li b{font-weight:700;color:var(--ink);}
+  .sec-v2 .opens li:target{background:var(--wash);box-shadow:0 0 0 10px var(--wash);border-radius:2px;}
+  .sec-v2 .opens a.more{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;margin-left:6px;}
+  .sec-v2 .opens a.more:hover{border-bottom:2px solid var(--gold);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p.asof{color:var(--muted);margin-bottom:0;}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_october5_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_11.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Monday, October 5, 2026</span></div>
+        <h1 class="headline">Savers Enter a December Decision Window. October Hike Fell to 17%.</h1>
+      </div>
+
+      <div class="body">
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="setup lead-first">September nonfarm payrolls came in at 29,000 - a two-year low and 55,000 below the 84,000 consensus - completing the first dual-softening signal of this rate cycle. August PCE core printed 3.0% on September 30, below the 3.4% forecast; Friday&rsquo;s payrolls miss sealed the combination. October 28 FOMC hike probability collapsed from 73% Wednesday to 17% by Friday, the largest single-session swing in October hike odds this cycle. Stocks responded with a relief rally: S&amp;P 500 +0.7% to 7,722.72 Friday, Nasdaq led at +1.2% to 27,190.86. The mechanism is the dual-softening pivot - when both the Fed&rsquo;s preferred inflation gauge (PCE core 3.0%) and the labor gauge (29K jobs) miss simultaneously, the case for near-term tightening narrows sharply. December at 75% is now the market&rsquo;s replacement hike date.</p>
+        <p class="setup">ISM Services for September arrives at 10:00 AM ET this morning - the first read on whether service-sector activity softened alongside the labor market in September. Prior was 55.4; consensus is 55.1. A print below 53.0 would extend the dual-softening thesis into a third data point and begin testing December&rsquo;s 75% probability. Wednesday at 2:00 PM ET, the FOMC September 16 meeting minutes reveal the committee&rsquo;s internal conditions for October - and whether any member named labor-market data as a precondition that Friday&rsquo;s 29K print now satisfies. Also today at 3:00 PM ET: the USDA Crop Progress report for the week ending October 4 - the first harvest pace reading of October&rsquo;s primary acceleration window.</p>
+        <p class="setup">Below the week&rsquo;s data headlines, two structural reversals are building. Oil crossed back above $100 over the weekend as the US reportedly deployed a third aircraft carrier to the Middle East, restoring the Hormuz geopolitical risk premium that the supply-recovery narrative had been compressing since September 29. Brent at $101.31 Monday morning reverses the November pump-relief window that had been forming at $97 Brent - that window is now less certain. Mortgage rates confirmed a second consecutive above-7% week (PMMS 7.28% October 1) - the first such streak since 2007 - while the top 1-year CD has begun repricing from 4.95% toward approximately 4.40% as banks absorb the October rate-path shift.</p>
+        <div class="src"><b>Curated from</b> BLS &middot; CME FedWatch &middot; BEA &middot; Bloomberg &middot; CNBC &middot; AAA &middot; Freddie Mac</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="week-opens">How Monday Opens</h2>
+        <ul class="opens">
+          <li id="open-1"><b>The new CD calculus now that October is off the table at 17%.</b> With October essentially cancelled, the post-October-28 hike ceiling of 5.00-5.15% is no longer the default expected outcome. Top 1-yr CDs have begun repricing from 4.95% toward approximately 4.40%. The new question: lock now at 4.40%, or wait 70 days for December&rsquo;s possible 4.60-4.65% ceiling? <a class="more" href="#savings">Savings &amp; CD &rarr;</a></li>
+          <li id="open-2"><b>What Brent&rsquo;s $4 weekend reversal means for November gas prices.</b> Brent recovered from $97 (September 30) to $101.31 Monday as a reported US third aircraft carrier deployment restored the Hormuz geopolitical risk premium. The $97 crude pricing had been forming a $0.20-$0.35 November pump relief window - the reversal to $101 substantially reduces that relief window before it reaches the pump in late October. <a class="more" href="#energy">Energy &rarr;</a></li>
+          <li id="open-3"><b>What the FOMC minutes Wednesday won&rsquo;t tell you about December.</b> The September 16 minutes (2:00 PM ET Wednesday) name the committee&rsquo;s conditions for October - but Friday&rsquo;s 29K print already answered the data threshold. The real read is whether the minutes suggest a conditional pause versus a rate path revision: these are very different signals for December&rsquo;s 75% probability. <a class="more" href="#rates">Interest Rates &rarr;</a></li>
+          <li id="open-4"><b>Why Tokyo rallied 2.1% on Monday despite Brent crossing back above $100.</b> Japan&rsquo;s energy-import cost in yen at $101 Monday is still below the $105-106 Brent from last Monday September 28 - a 4-5% yen-denominated cost reduction that persists even after Brent&rsquo;s weekend recovery. The Nikkei opened 2.1% higher - an index whose energy-import sensitivity makes it one of the clearest reads on crude direction globally. <a class="more" href="#world">Around the World &rarr;</a></li>
+          <li id="open-5"><b>What gold&rsquo;s Monday decline says about December&rsquo;s rate path.</b> Gold fell to $4,138.78 despite October odds collapsing to 17% - counter-intuitive, because lower near-term hike odds normally lift gold. The market&rsquo;s read: December at 75% carries as much real-yield weight as October&rsquo;s 73% did. ISM Services at 10:00 AM ET is the next directional test. <a class="more" href="#commodities">Commodities &rarr;</a></li>
+        </ul>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">7,722.72</div><div class="d up">&#9650; +0.7% Fri close</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">27,190.86</div><div class="d up">&#9650; +1.2% Fri close</div></div>
+          <div><div class="k">Dow</div><div class="v">51,176.96</div><div class="d up">&#9650; +0.5% Fri close</div></div>
+        </div>
+        <p class="setup">US indices rallied Friday after September payrolls came in at 29,000 - sharply below the 84,000 consensus - sending October FOMC hike odds from 73% to 17% in a single session. <b>The Nasdaq led at +1.2%</b> to 27,190.86 as rate-sensitive growth equities repriced fastest on the soft labor data. The S&amp;P 500 closed at 7,722.72 (+0.7%); the Dow gained 0.5% to 51,176.96. All three indices enter Monday with Friday&rsquo;s rate-path relief intact; ISM Services at 10:00 AM ET is the first directional catalyst of the week.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (Friday October 2 close):</span> <span class="num">7,722.72</span> <span class="d up">&#9650; +0.7% Fri &middot; +56.27 pts &middot; September jobs miss (29K vs. 84K) sent October hike to 17%</span><span class="why">The S&amp;P&rsquo;s +0.7% Friday rally reflects the direct repricing: October hike probability falling from 73% to 17% reduces near-term rate-path risk that had been compressing equity valuations since the September 16 hike. Consumer-discretionary and financial names that had underperformed on September 29&rsquo;s consumer confidence miss (81.9) recovered partially. At 7,722.72, the S&amp;P enters Monday up 51.88 points from the September 30 close of 7,670.84 - a net weekly gain despite Wednesday&rsquo;s PCE-day and Thursday&rsquo;s caution. ISM Services at 10:00 AM ET is Monday&rsquo;s first catalyst; FOMC minutes Wednesday at 2:00 PM ET is the week&rsquo;s primary directional input.</span></div>
+          <div class="line"><span class="lb">Nasdaq (Friday October 2 close):</span> <span class="num">27,190.86</span> <span class="d up">&#9650; +1.2% Fri &middot; session&rsquo;s largest index gain &middot; rate-sensitive growth names led</span><span class="why">The Nasdaq&rsquo;s +1.2% Friday gain confirms technology&rsquo;s highest sensitivity to rate-path expectations among major indices - the mirror of September&rsquo;s selloff, when each upward tick in October hike odds hit growth equities hardest. At 27,190.86, the Nasdaq enters Monday up 393.32 points from the September 30 close of 26,797.54. AI semiconductor and data-center capital expenditure cycles are committed on multi-year investment decisions; Friday&rsquo;s soft labor data provides the near-term rate relief that benefits the Nasdaq&rsquo;s rate-sensitive growth structure without reducing the structural AI demand floor. ISM Services and FOMC minutes Wednesday are the week&rsquo;s primary catalysts.</span></div>
+          <div class="line"><span class="lb">Dow Jones (Friday October 2 close):</span> <span class="num">51,176.96</span> <span class="d up">&#9650; +0.5% Fri &middot; +250.40 pts from Thursday close &middot; consumer-sector names recovered on rate relief</span><span class="why">The Dow&rsquo;s +0.5% Friday gain is the smallest of the three major indices - consistent with its higher weighting toward consumer-sector names that benefit less than technology from rate-path relief. At 51,176.96, the Dow enters Monday slightly below the September 30 close of 51,349.92, reflecting Tuesday September 29&rsquo;s consumer confidence selloff (-0.26%) partially holding through the week. Net weekly result from Wednesday September 30 through Friday October 2: the S&amp;P and Nasdaq are up on the week; the Dow is marginally lower, reflecting consumer-sector exposure. The ISM Services print at 10:00 AM ET will be the first consumer-demand signal this week.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>S&amp;P 7,722.72 (+0.7%), Nasdaq 27,190.86 (+1.2%), Dow 51,176.96 (+0.5%). September jobs miss (29K vs. 84K expected) sent October hike odds to 17% - Friday&rsquo;s rally reflects rate-path relief. ISM Services at 10:00 AM ET today is the first Monday catalyst; FOMC minutes Wednesday at 2:00 PM ET is the week&rsquo;s primary directional input.</p></div>
+        <div class="src"><b>Curated from</b> Yahoo Finance &middot; 247 Wall St. &middot; Bloomberg &middot; CNBC &middot; Trading Economics</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <div class="strip">
+          <div><div class="k">Fed funds</div><div class="v">3.75&ndash;4.00%</div><div class="d flat">Hiked Sept 16 &middot; unchanged</div></div>
+          <div><div class="k">2-year</div><div class="v">~4.45%</div><div class="d down">&#9660; Significant drop &middot; Oct at 17%</div></div>
+          <div><div class="k">10-year</div><div class="v">~5.26%</div><div class="d flat">Eased &middot; Mon morning</div></div>
+        </div>
+        <p class="setup">October 28 FOMC hike probability collapsed from <b>73% Wednesday to 17% by Monday</b> - the largest single-session swing in October hike odds this cycle - after September payrolls at 29,000 combined with August PCE core at 3.0% to deliver the first dual-softening signal. The 2-year Treasury fell sharply, directly repricing from a majority-case October hike to a majority-case October hold. December hike probability holds near 75%. The 10-year eased to approximately 5.26% Monday morning - only modestly below September 30&rsquo;s 5.23%, as oil&rsquo;s recovery to $101 and December&rsquo;s 75% pricing partially offset the rate relief. FOMC September meeting minutes Wednesday at 2:00 PM ET are the week&rsquo;s primary rate-path input.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">October 28 FOMC hike probability (Monday October 5, CME FedWatch):</span> <span class="num">approximately 17%</span> <span class="d down">&#9660; from 73% Wednesday &middot; largest single-session swing in hike odds &middot; first dual-softening signal</span><span class="why">The collapse from 73% to 17% in three sessions reflects two back-to-back misses: August PCE core at 3.0% (September 30, below the 3.4% consensus) and September payrolls at 29,000 (October 2, below the 84,000 consensus). These constitute the first data combination this cycle in which both the Fed&rsquo;s inflation mandate and its employment mandate moved toward accommodation simultaneously. December holds at 75% - suggesting the market expects the pause to be temporary, not the start of a cutting cycle. FOMC September minutes Wednesday at 2:00 PM ET are the next data input that could shift December pricing; September CPI (October 14) is the next scheduled inflation read.</span></div>
+          <div class="line"><span class="lb">2-year Treasury (October 3-5):</span> <span class="num">approximately 4.45%</span> <span class="d down">&#9660; significant drop from 4.83% September 30 &middot; repricing from October-hike to December-hike probability</span><span class="why">The 2-year&rsquo;s move from approximately 4.83% (September 30) toward 4.45% entering Monday directly prices the hike-probability shift: from 73% October to 17% October. The 2-10 spread (approximately 4.45% vs. 5.26%) has narrowed from September 30&rsquo;s 40 basis-point inversion as the 2-year fell faster than the 10-year. The December 75% consensus is now the dominant rate-path signal for the 2-year. FOMC minutes Wednesday and September CPI (October 14) are the next catalysts that could move December pricing and, with it, the 2-year.</span></div>
+          <div class="line"><span class="lb">10-year Treasury (Monday October 5 morning):</span> <span class="num">approximately 5.26%</span> <span class="d flat">eased &middot; slightly above September 30&rsquo;s 5.23% &middot; December 75% and Brent $101 offsetting rate relief</span><span class="why">The 10-year&rsquo;s persistence near 5.26% - slightly above September 30&rsquo;s 5.23% - despite October odds falling to 17% reflects two offsetting forces: rate-path relief from the dual-softening signal (pushing yields lower) against Brent&rsquo;s recovery above $100 over the weekend (adding a modest inflation-risk premium) and December&rsquo;s 75% hike still carrying rate-path weight. The net result: the 10-year has moved less than the 2-year, meaning the inversion (2-10 spread) is compressing. ISM Services today and FOMC minutes Wednesday are the week&rsquo;s primary 10-year catalysts.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>October hike probability 17% (from 73% Wednesday) - first dual-softening signal (PCE core 3.0% + 29K jobs). December hike at 75%. 10-year approximately 5.26% (eased but elevated; Brent and December pricing offset rate relief). 2-year approximately 4.45% (significant repricing). FOMC September minutes Wednesday at 2:00 PM ET are the week&rsquo;s primary rate-path input.</p></div>
+        <div class="src"><b>Curated from</b> CME FedWatch &middot; CNBC &middot; FXStreet &middot; Trading Economics &middot; Federal Reserve</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <div class="strip">
+          <div><div class="k">Top 1-yr CD</div><div class="v">~4.40%</div><div class="d down">&#9660; Repricing from 4.95%</div></div>
+          <div><div class="k">Top HYSA</div><div class="v">4.50%</div><div class="d flat">Temporarily above top CD</div></div>
+          <div><div class="k">Nat&rsquo;l avg 1-yr CD</div><div class="v">1.71%</div><div class="d flat">FDIC, Sept 2026</div></div>
+        </div>
+        <p class="setup">Top 1-year CDs have begun repricing from the post-September-16 level of <b>4.95% APY toward approximately 4.40%</b> as October hike odds fell from 73% to 17% over the week. The calculus for savers who had been holding out for a post-October-28 ceiling of 5.00-5.15% has changed: with October essentially cancelled, December 16 is the next potential hike date. Locking 4.40% now versus waiting 70 days for a possible December hike that could push the ceiling to 4.60-4.65%: the math is tighter than it was last week. An unusual inversion has emerged - today&rsquo;s best HYSA at 4.50% is temporarily above the best 1-yr CD at approximately 4.40%, the opposite of the normal CD premium for locking term.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Best online 1-yr CD (week of October 5):</span> <span class="num">approximately 4.40% APY</span> <span class="d down">&#9660; repricing from 4.95% &middot; October odds collapsed to 17% &middot; banks adjusting posted rates this week</span><span class="why">Three scenarios entering October 5: (1) Lock 4.40% now - captures a still-elevated rate, sacrifices a potential December upside of approximately 20-25 basis points. Defensible if you believe December could slip to 50% or below on further soft data (October CPI on the 14th, next jobs report November 6). (2) Wait for December - if December hike happens (75% probability), post-hike ceiling could reach 4.60-4.65%. Cost of waiting: 70 days of forgone interest on the difference, and banks may not post the higher rate until after December 16. (3) HYSA bridge: at 4.50%, today&rsquo;s best HYSA yields above the best 1-yr CD - unusual, and it auto-adjusts upward on any December hike. The bridge is the most flexible vehicle in a 75%-December environment.</span></div>
+          <div class="line"><span class="lb">High-yield savings account (current best rate):</span> <span class="num">4.50% APY</span> <span class="d flat">temporarily above best 1-yr CD &middot; floats with rate path &middot; auto-adjusts on December hike</span><span class="why">The HYSA at 4.50% exceeding the best 1-yr CD at approximately 4.40% is a product of the CD repricing lag: banks adjust CD rates in response to rate-path expectations, and some are still absorbing Friday&rsquo;s jobs miss. The HYSA auto-adjusts on any December hike without requiring today&rsquo;s lock-in decision. For savers currently in lower-yield vehicles, the liquidity premium is positive right now - an unusual condition that makes the HYSA bridge compelling. Savers at the 1.71% national average continue leaving 279 basis points on the table.</span></div>
+          <div class="line"><span class="lb">FDIC national average 1-yr CD (September 2026):</span> <span class="num">1.71%</span> <span class="d flat">unchanged &middot; gap to best available: 269 basis points</span><span class="why">At 1.71%, the gap between the national average and the best available approximately 4.40% CD is 269 basis points - narrowed from 324 basis points when the top CD was 4.95%, but still equivalent to $269 per year per $10,000 in a standard CD. The FDIC national average reflects the rate the typical bank account holder is receiving; online banks and credit unions are the vehicles offering the best available rates. No new FDIC data until the October survey release.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Top 1-yr CD approximately 4.40% (repricing from 4.95% as October odds fell to 17%). HYSA 4.50% - temporarily above the best CD, an unusual inversion. FDIC national average 1.71% (269 bps gap to best available). December at 75% is the next potential hike date (December 16). HYSA bridge is the most flexible vehicle in a 75%-December environment.</p></div>
+        <div class="src"><b>Curated from</b> NerdWallet &middot; Bankrate &middot; Motley Fool &middot; CME FedWatch &middot; FDIC</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <div class="strip">
+          <div><div class="k">Brent</div><div class="v">$101.31</div><div class="d down">&#9660; -0.92% Mon &middot; back above $100</div></div>
+          <div><div class="k">WTI</div><div class="v">~$90</div><div class="d down">&#9660; -1.22% Mon &middot; supply recovery</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.37</div><div class="d down">&#9660; Oct 4 &middot; first $97 benefit</div></div>
+        </div>
+        <p class="setup">Brent reversed above <b>$100 over the weekend</b> as reports emerged of a US third aircraft carrier deployment to the Middle East, restoring the geopolitical risk premium that the supply-recovery narrative had been compressing since September 29. Brent at $101.31 Monday morning reverses from September 30&rsquo;s $97 low - a $4 recovery in five days that reinstates the Hormuz premium. The pump headline: gas eased to $4.37 on October 4 - the first 12-cent benefit of September&rsquo;s $97 Brent pricing flowing through the 14-21 day refinery lag - but the November relief window that had been forming from $97 crude is now less certain with Brent back at $101.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Brent crude (Monday October 5 morning):</span> <span class="num">$101.31/barrel</span> <span class="d down">&#9660; -0.92% Mon &middot; recovered from $97 September 30 low &middot; third aircraft carrier deployment restored Hormuz premium</span><span class="why">Brent&rsquo;s recovery from $97 (September 30) to approximately $102.25 (October 4 Sunday) and then $101.31 (Monday morning) reflects the geopolitical risk premium returning: a third aircraft carrier deployment signals an escalation posture that markets interpret as increasing the probability of a supply disruption even as Middle East exports remain at approximately 98% of pre-war levels. The supply narrative (exports recovering) and the geopolitical narrative (carrier deployments escalating) are now moving in opposite directions. The November pump-relief window that had been forming at $97 Brent is being repriced: with October crude now at $101, late-October and November pricing may not deliver the $0.20-$0.35 relief that $97 Brent had been promising.</span></div>
+          <div class="line"><span class="lb">WTI crude (Monday October 5 morning):</span> <span class="num">approximately $90/barrel</span> <span class="d down">&#9660; -1.22% Mon &middot; supply recovery partially intact &middot; Brent-WTI spread approximately $11</span><span class="why">WTI at approximately $90 reflects the same geopolitical recovery at the domestic pricing level, but Brent&rsquo;s Middle East export-route premium is larger. The Brent-WTI spread at approximately $11 is wider than the historical $5-7 range, consistent with the Hormuz premium affecting Brent more directly than WTI. For domestic fuel cost projections, WTI at $90 is the input that flows through domestic refineries; the approximately $4.37 pump price reflects crude from approximately two weeks ago, when WTI was near $84-86. The October pump cost will be set by the current $90 WTI through the 14-21 day lag.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, October 4):</span> <span class="num">$4.37/gallon</span> <span class="d down">&#9660; eased from $4.49 September 30 &middot; first pump benefit of $97 Brent &middot; mid-October window revised to $4.80&ndash;$4.95</span><span class="why">Gas at $4.37 reflects crude priced approximately two weeks ago: the $97 Brent of September 30 is now flowing through the refinery pipeline. From September 30&rsquo;s $4.49, the $0.12 easing is the first benefit of September&rsquo;s supply recovery at the pump. The previously estimated mid-October window of $4.95-$5.10 (built on $100+ crude from September 14-28) is now revised to approximately $4.80-$4.95 as more September 30 crude enters the pipeline. Brent&rsquo;s recovery to $101 means late-October and November pump pricing will be set by current crude - reducing the previously anticipated pump relief.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Brent $101.31 (reversed above $100 on third aircraft carrier deployment; from September 30&rsquo;s $97 low). WTI approximately $90. Gas $4.37 (first pump benefit of $97 Brent; mid-October window revised to $4.80-$4.95). November pump relief window reduced - Brent back at $101 will price late-October pump costs.</p></div>
+        <div class="src"><b>Curated from</b> CNBC &middot; Trading Economics &middot; Barchart &middot; AAA &middot; Bloomberg &middot; Reuters</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <div class="strip">
+          <div><div class="k">Gold</div><div class="v">$4,138.78</div><div class="d down">&#9660; -0.03% Mon &middot; December offsets relief</div></div>
+          <div><div class="k">Silver</div><div class="v">$61.39</div><div class="d up">&#9650; +1.70% Mon &middot; industrial floor</div></div>
+          <div><div class="k">Copper</div><div class="v">$6.51/lb</div><div class="d up">&#9650; +0.33% Mon &middot; AI demand steady</div></div>
+        </div>
+        <p class="setup">Gold slipped to <b>$4,138.78 Monday</b> despite October odds collapsing from 73% to 17% - a counter-intuitive move that reflects December&rsquo;s 75% probability carrying as much real-yield weight as October&rsquo;s 73% did. The mechanism: lower October odds reduce near-term rate pressure, but December at 75% keeps the rate-path burden on gold&rsquo;s opportunity cost. Silver outperformed at +1.70% on its dual industrial floor; copper edged higher on AI infrastructure demand despite Brent&rsquo;s recovery adding back modest smelting cost pressure.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Gold / oz (Monday October 5 morning):</span> <span class="num">$4,138.78</span> <span class="d down">&#9660; -0.03% &middot; below last Monday&rsquo;s $4,148.69 &middot; December 75% offsets October relief</span><span class="why">Gold&rsquo;s modest decline despite October odds falling to 17% is the week&rsquo;s tell on December pricing: the market is replacing October&rsquo;s cancelled hike with December&rsquo;s 75% probability rather than pricing net easing. At $4,138.78, gold is below the September 28 close of approximately $4,148 and far below the September 26 high near $4,298. For gold to rally materially from here, December&rsquo;s 75% would need to fall - which requires October&rsquo;s ISM Services miss to extend into services-sector data, or September CPI (October 14) to come in soft. ISM Services at 10:00 AM ET today is the first directional test.</span></div>
+          <div class="line"><span class="lb">Silver / oz (Monday October 5):</span> <span class="num">$61.39</span> <span class="d up">&#9650; +1.70% &middot; strongest of the three &middot; industrial demand floor providing support</span><span class="why">Silver&rsquo;s +1.70% Monday outperformance over gold&rsquo;s -0.03% is consistent with silver&rsquo;s dual structure: the monetary component (softened rate expectations) provided partial support, while the industrial component (solar, grid infrastructure, AI data-center electrical systems) provided the floor that gold&rsquo;s purely monetary structure lacks. At $61.39, silver is above the September 28-30 range and is the strongest performer of the three tracked metals entering October. ISM Services and FOMC minutes are this week&rsquo;s primary macro catalysts for silver direction.</span></div>
+          <div class="line"><span class="lb">Copper (Monday October 5):</span> <span class="num">$6.51/lb</span> <span class="d up">&#9650; +0.33% &middot; AI infrastructure demand steady &middot; Brent recovery adds modest smelting cost pressure</span><span class="why">Copper at $6.51 edged higher Monday despite Brent&rsquo;s recovery above $100, which typically increases copper smelting and industrial production energy costs. The AI data-center demand signal - data centers, EV charging infrastructure, grid modernization requiring copper wiring and connectors - remains the dominant structural driver, outweighing the marginal cost increase from $101 Brent versus $97 Brent. The copper-gold ratio has been widening over the past five sessions as copper&rsquo;s industrial demand floor holds while gold faces December rate-path pressure.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Gold $4,138.78 (-0.03%); December&rsquo;s 75% hike replaces October as the rate-path weight on gold. Silver $61.39 (+1.70%, industrial floor outperforming). Copper $6.51 (+0.33%, AI demand steady despite Brent&rsquo;s $101 recovery). ISM Services at 10:00 AM ET today is the first macro catalyst of the week for commodities direction.</p></div>
+        <div class="src"><b>Curated from</b> Trading Economics &middot; Kitco &middot; CME Group &middot; FXStreet &middot; Bloomberg</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <div class="strip">
+          <div><div class="k">Corn G/E</div><div class="v">57%</div><div class="d flat">Wk Sept 27 &middot; last available</div></div>
+          <div><div class="k">Soybeans G/E</div><div class="v">58%</div><div class="d flat">Wk Sept 27 &middot; last available</div></div>
+          <div><div class="k">Wk Oct 4</div><div class="v">Due 3 PM ET</div><div class="d flat">Today &middot; first Oct reading</div></div>
+        </div>
+        <p class="setup">The USDA Crop Progress report for the <b>week ending October 4</b> releases today at 3:00 PM ET - the first October harvest pace reading and the first update since September 27. The prior report (week ending September 27) showed corn at 18% harvested (matching the five-year average) with 57% good-to-excellent; soybeans at 17% harvested with 58% G/E. The week of September 28-October 4 is the primary harvest acceleration window for both crops; weather in the Corn Belt was generally cooperative through early October. Harvest percentages for both crops are expected to approximately double in today&rsquo;s report.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Corn G/E and harvest (week ending September 27, USDA, last available):</span> <span class="num">57% good-to-excellent</span> <span class="d flat">18% harvested &middot; matches five-year average &middot; 80% mature &middot; next update today at 3:00 PM ET</span><span class="why">Corn at 18% harvested and 80% mature entering the week of September 28-October 4 set up for significant harvest acceleration. The 57% G/E rating holding stable confirms quality conditions entering the bin. The five-year average for corn harvest at week ending October 4 is approximately 34-36% - today&rsquo;s report is expected to show harvest advancing sharply from 18% toward that range if the cooperative weather window through early October held. No new data until today at 3:00 PM ET; the December corn futures market will respond to today&rsquo;s harvest pace and quality readings.</span></div>
+          <div class="line"><span class="lb">Soybeans G/E and harvest (week ending September 27, USDA, last available):</span> <span class="num">58% good-to-excellent</span> <span class="d flat">17% harvested &middot; matches five-year average &middot; leaf-drop complete in majority of states &middot; next update today at 3:00 PM ET</span><span class="why">Soybeans at 17% harvested with leaf-drop complete in most major producing states entering September 28-October 4 set up for an aggressive harvest acceleration. The five-year average for soybeans at week ending October 4 is approximately 38-42%. Today&rsquo;s USDA Crop Progress report (3:00 PM ET) is the first October reading and will update both the harvest percentage and the G/E condition rating for the week ending October 4. A dry-harvest window through early October - if confirmed - would extend the positive supply picture the September 27 report established.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Last available (week ending September 27): corn 57% G/E, 18% harvested; soybeans 58% G/E, 17% harvested. Both at five-year average pace entering October&rsquo;s primary acceleration window. Week ending October 4 data releases today at 3:00 PM ET - the first October harvest progress reading.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; DTN/Progressive Farmer &middot; Brownfield Ag News &middot; CNBC</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <div class="strip">
+          <div><div class="k">30-yr (Freddie Mac)</div><div class="v">7.28%</div><div class="d up">&#9650; Oct 1 &middot; 2nd consec above-7%</div></div>
+          <div><div class="k">10-year</div><div class="v">~5.26%</div><div class="d flat">Mon morning &middot; Oct 8 survey wk day 1</div></div>
+          <div><div class="k">Tariff Day</div><div class="v">Day 57</div><div class="d up">&#9650; Softwood tariff &middot; counter-tariffs active</div></div>
+        </div>
+        <p class="setup">The October 1 Freddie Mac PMMS confirmed <b>7.28%</b> - the second consecutive above-7% week and the first such streak since 2007 - calculated at a survey-week average of approximately 5.25% on the 10-year (including Wednesday&rsquo;s PCE-day easing). The October 8 survey week opens today at approximately 5.26%; ISM Services at 10:00 AM ET and FOMC minutes Wednesday at 2:00 PM ET will determine this week&rsquo;s survey-week average and Thursday&rsquo;s PMMS release. US softwood lumber tariff Day 57; Canadian counter-tariffs active since September 8.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Freddie Mac PMMS (released October 1):</span> <span class="num">7.28%</span> <span class="d up">&#9650; second consecutive above-7% &middot; first such streak since 2007 &middot; October 8 survey week opens today</span><span class="why">October 1&rsquo;s 7.28% PMMS was calculated with the survey week averaging approximately 5.25% on the 10-year. The previous PMMS (September 24: 7.03%) was calculated at approximately 5.05-5.11%. The 25-basis-point jump in the PMMS in one week reflects the September 29-30 PCE-week 10-year levels. For the October 8 PMMS, today&rsquo;s 5.26% opening means the survey window starts above last week&rsquo;s average. If ISM Services and FOMC minutes produce no significant easing, Thursday&rsquo;s estimate is approximately 7.29-7.35%. A consecutive above-7% PMMS streak at 16-year highs is the affordability backdrop entering October&rsquo;s home-sales reporting cycle.</span></div>
+          <div class="line"><span class="lb">October 8 PMMS survey week (opens today):</span> <span class="num">~5.26% 10-year</span> <span class="d flat">survey day 1 of 3 &middot; ISM Services 10:00 AM ET + FOMC minutes Wed are rate catalysts &middot; Thursday release</span><span class="why">Monday at 5.26% is the first day of the October 8 survey window. For rate-lock decisions, this week&rsquo;s 10-year movement - driven by ISM Services today and FOMC minutes Wednesday - will determine Thursday&rsquo;s PMMS. The October 8 PMMS will be the first mortgage-rate reading calculated in the post-dual-softening-signal, post-October-17%-odds environment. A significant rally in Treasuries this week could pull the survey-week average below 5.15% and produce a PMMS closer to 7.05-7.10% - but that would require 10-12 basis points of 10-year movement from current levels on this week&rsquo;s data.</span></div>
+          <div class="line"><span class="lb">Softwood lumber tariff (October 5):</span> <span class="d up">&#9650; US 50% softwood tariff Day 57 &middot; Canadian counter-tariffs Day 28 &middot; AR7 final determination expected late 2026</span><span class="why">Day 57 coincides with a 7.28% mortgage rate for the second consecutive week. The Department of Commerce&rsquo;s AR7 administrative review posted a preliminary result in June 2026 (reducing combined duties from 35% to approximately 24.83%), but the final determination is expected in late 2026 - and the separate 10% Section 232 tariff remains on top of any antidumping duty regardless. Combined affordability compression: 7.28% mortgage plus approximately $8,000-$14,000 elevated lumber cost per new home is the most restrictive new-home affordability environment since 2007. No diplomatic contact reported in the past two weeks.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>PMMS 7.28% (October 1, second consecutive above-7%; first streak since 2007). October 8 survey week opens at 5.26% 10-year; Thursday estimate 7.29-7.35% at current yields. ISM Services and FOMC minutes are this week&rsquo;s rate catalysts. Tariff Day 57 - combined affordability compression at 16-year highs.</p></div>
+        <div class="src"><b>Curated from</b> Freddie Mac &middot; GlobeNewswire &middot; CME FedWatch &middot; Trading Economics &middot; CNBC</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <div class="strip">
+          <div><div class="k">Sept Payrolls</div><div class="v">29K</div><div class="d down">&#9660; vs. 84K expected &middot; 2-yr low</div></div>
+          <div><div class="k">Card delinquency 90+</div><div class="v">~13%</div><div class="d up">&#9650; Near 15-year high</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.37</div><div class="d down">&#9660; Oct 4 &middot; $97 Brent arriving</div></div>
+        </div>
+        <p class="setup">September nonfarm payrolls came in at <b>29,000 - a two-year low</b> and the weakest monthly print since mid-2024. Unemployment edged up to 4.2%. Prior-month revisions removed 60,000 jobs: July revised to -10,000 (from +21,000) and August to 133,000 (from 162,000). Average hourly earnings rose only 0.1% month-over-month to $37.81 - the softest monthly wage gain in seven months. Healthcare added 17,000; construction 11,000; manufacturing 9,000. Government employment fell 17,000 and temporary help declined 11,000. This is the first payrolls report since the September 16 hike that suggests rate transmission to business hiring is underway.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">September nonfarm payrolls (released October 2, BLS):</span> <span class="num">29,000</span> <span class="d down">&#9660; vs. 84,000 consensus &middot; two-year low &middot; unemployment 4.2% &middot; avg hourly earnings +0.1% to $37.81</span><span class="why">September&rsquo;s 29,000 is the headline that reframes Q4. Prior months revised down by 60,000 (July to -10,000, August to 133,000), indicating the labor market was already softer through Q3 than initial prints showed. The industry breakdown: healthcare, construction, and manufacturing added; government, temporary help, and information services declined. Average hourly earnings at +0.1% monthly - the softest print in seven months - represents the first simultaneous softening in both payroll quantity (29K vs. 84K) and wage growth pace since Q2 2024. Combined with August PCE core at 3.0%, this is the first dual-softening signal. October hike probability: 17%. December at 75%.</span></div>
+          <div class="line"><span class="lb">Gas price path (AAA, October 4):</span> <span class="num">$4.37/gallon</span> <span class="d down">&#9660; eased from $4.49 September 30 &middot; first pump benefit of $97 Brent &middot; mid-October estimate revised to $4.80&ndash;$4.95</span><span class="why">Gas at $4.37 is the first pump benefit of September&rsquo;s supply recovery: the $97 Brent of September 30 is flowing through the 14-21 day refinery lag. For households that cited gas prices as their top financial burden in the September consumer confidence survey (81.9, 12-year low), this is the first relief signal at the pump in nearly three months. The mid-October window has been revised from $4.95-$5.10 to approximately $4.80-$4.95 as lower September crude enters the pipeline. Brent&rsquo;s recovery to $101 reduces the late-October and November relief windows that had been forming at $97.</span></div>
+          <div class="line"><span class="lb">Credit card delinquencies (90+ days past due, NY Fed Q2 2026):</span> <span class="num">approximately 13%</span> <span class="d up">&#9650; near 15-year high &middot; 22.40% average APR &middot; Q3 read due November &middot; weekly claims next Thursday</span><span class="why">No new consumer credit data this week. The Q2 2026 figure at approximately 13% at 22.40% APR is the baseline entering Q3. The first full-quarter read incorporating the September 16 hike&rsquo;s effect on card balances (Q3, July-September) will arrive in November - and will be the first data set that captures post-hike borrowing costs for the approximately 13% of cardholders already 90-plus days delinquent. August consumer credit may release Thursday at 3:00 PM ET this week; the revolving credit sub-component will be the first signal of post-hike card balance behavior. Weekly jobless claims (week ending October 3) releases Thursday at 8:30 AM ET; prior (week ending September 27): 197,000.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>September payrolls 29K (two-year low; unemployment 4.2%; avg hourly earnings +0.1%). Gas $4.37 (easing; revised mid-October estimate $4.80-$4.95). Card delinquency near 15-year high at ~13% at 22.40% APR. October hike: 17%; December: 75%. Thursday brings claims and consumer credit - first post-hike borrowing signal.</p></div>
+        <div class="src"><b>Curated from</b> BLS &middot; BEA &middot; NY Fed &middot; AAA &middot; Conference Board &middot; Reuters</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <div class="strip">
+          <div><div class="k">Bitcoin</div><div class="v">$85,887</div><div class="d up">&#9650; +0.70% Mon morning</div></div>
+          <div><div class="k">Ethereum</div><div class="v">$2,712.15</div><div class="d up">&#9650; +0.50% Mon morning</div></div>
+          <div><div class="k">XRP</div><div class="v">$1.51</div><div class="d down">&#9660; -0.42% Mon &middot; Oct escrow</div></div>
+        </div>
+        <p class="setup">Bitcoin reached <b>$85,887 Monday morning</b> (+0.70%) as the dual-softening signal (PCE 3.0% + 29K jobs) and the Friday rate-path relief rally carried into the weekend. Ethereum +0.5% to $2,712.15; XRP edged down 0.42% to $1.51 despite a broadly positive macro tone - the October 1 Ripple escrow release (1 billion XRP across four tranches: 400M, 300M, 200M, 100M) added supply-side pressure. XRP ETF cumulative net assets approximately $1.79 billion. CLARITY Act 2026: Senate Banking Committee approval in May 2026; full Senate vote not yet scheduled.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Bitcoin (Monday October 5 morning):</span> <span class="num">$85,887</span> <span class="d up">&#9650; +0.70% &middot; rate-path relief from dual-softening signal &middot; institutional floor from September ETF inflows intact</span><span class="why">Bitcoin&rsquo;s move from approximately $83,323 (September 30) to $85,887 Monday - a 3.1% gain over five sessions - reflects the net positive from the week&rsquo;s data: PCE core at 3.0% and September payrolls at 29K together provided the rate-path relief that crypto has historically responded to positively. The approximately $2 billion in September ETF net inflows continue providing the institutional demand base. With October at 17% and December at 75%, the near-term rate-path clarity - one more hike likely, then a pause - is the most constructive crypto backdrop since the September 16 hike. ISM Services at 10:00 AM ET today and FOMC minutes Wednesday are the week&rsquo;s primary macro catalysts.</span></div>
+          <div class="line"><span class="lb">Ethereum (Monday October 5 morning):</span> <span class="num">$2,712.15</span> <span class="d up">&#9650; +0.50% &middot; in-line with BTC direction &middot; CLARITY Act Senate status unchanged</span><span class="why">Ethereum&rsquo;s +0.50% Monday move is in-line with Bitcoin&rsquo;s +0.70% - consistent with ETH&rsquo;s beta to BTC in soft-rate-path environments. CLARITY Act 2026: Senate Banking Committee approved a revised form in May 2026; the Senate&rsquo;s September 15 cloture vote failed 50-49, and no full Senate vote has been scheduled. The CLARITY Act is the regulatory catalyst that would most significantly affect Ethereum - specifically its securities classification and the DeFi protocol question. No new legislative development this week. ISM Services and FOMC minutes are the macro drivers for the crypto complex.</span></div>
+          <div class="line"><span class="lb">XRP (Monday October 5 morning):</span> <span class="num">$1.51</span> <span class="d down">&#9660; -0.42% &middot; October 1 escrow release of 1B XRP (400M+300M+200M+100M tranches) adding supply pressure</span><span class="why">XRP&rsquo;s -0.42% Monday move against Bitcoin&rsquo;s +0.70% is consistent with the October 1 escrow release of 1 billion XRP adding supply-side pressure. Ripple&rsquo;s monthly escrow releases typically net 200-400 million XRP into circulation after most tokens are re-locked. XRP ETF cumulative net assets at approximately $1.79 billion (Bitwise and Franklin Templeton leading) provide the demand base. CLARITY Act 2026 remains the primary regulatory catalyst; its passage would affect XRP&rsquo;s securities classification and potentially unlock additional institutional demand beyond the ETF vehicles currently available. No legislative update this week.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>BTC $85,887 (+0.70%), ETH $2,712.15 (+0.50%), XRP $1.51 (-0.42%). Dual-softening rate relief carried the positive backdrop into Monday; October escrow release pressured XRP. CLARITY Act unchanged. ISM Services at 10:00 AM ET today is the week&rsquo;s first macro catalyst for crypto direction.</p></div>
+        <div class="src"><b>Curated from</b> CoinDesk &middot; CaptainAltcoin &middot; Farside Investors &middot; Investing.com &middot; Benzinga</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="world">Around the World</h2>
+        <div class="strip">
+          <div><div class="k">Nikkei 225</div><div class="v">~69,700</div><div class="d up">&#9650; +2.1% Mon intraday</div></div>
+          <div><div class="k">Hang Seng</div><div class="v">~23,850</div><div class="d down">&#9660; -0.5% Mon intraday</div></div>
+          <div><div class="k">Yen / Dollar</div><div class="v">~158</div><div class="d flat">Rate differential unchanged</div></div>
+        </div>
+        <p class="setup">Japan&rsquo;s Nikkei opened approximately <b>2.1% higher Monday</b> near 69,700 as the dual-softening rate-path relief from Friday&rsquo;s 29K jobs print translated into a broad risk-on tone in Tokyo - compounded by Brent&rsquo;s Monday level at $101 still representing a net 4-5% yen-denominated energy cost reduction versus last Monday September 28&rsquo;s $105-106 Brent. The Hang Seng fell 0.5% to approximately 23,850, as Hong Kong&rsquo;s technology and financial weighting responded less to energy-import relief than Tokyo&rsquo;s energy-sensitive composition.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Nikkei 225 (Monday October 5 intraday):</span> <span class="num">approximately 69,700</span> <span class="d up">&#9650; +2.1% intraday &middot; rate-path relief + net energy-import reduction versus last week &middot; largest single-session advance in recent weeks</span><span class="why">The Nikkei&rsquo;s +2.1% intraday advance is driven by two simultaneous signals. Friday&rsquo;s US rate-path relief (October at 17%) supports Japanese equities&rsquo; rate-sensitive composition directly. At yen 158, $101 Brent costs approximately 15,958 yen per barrel - versus 16,590-16,748 yen at $105-106 Brent on Monday September 28, a 3.8-4.7% yen-denominated cost reduction that persists even after Brent&rsquo;s weekend recovery from $97. Japan&rsquo;s status as the world&rsquo;s second-largest crude importer (after China) means Brent&rsquo;s net trajectory matters as much as the week-over-week movement. FOMC minutes Wednesday at 2:00 PM ET drive the US session that Tokyo prices in Thursday&rsquo;s opening.</span></div>
+          <div class="line"><span class="lb">Hang Seng (Monday October 5 intraday):</span> <span class="num">approximately 23,850</span> <span class="d down">&#9660; -0.5% intraday &middot; less direct energy-import uplift than Tokyo &middot; technology and financial weighting</span><span class="why">The Hang Seng&rsquo;s -0.5% Monday move against Tokyo&rsquo;s +2.1% confirms the energy-import exposure differential and the different equity composition. Hong Kong&rsquo;s index weights toward technology, financials, and property names - sectors more directly priced on US rate-path outcomes than on crude prices. The October at 17% signal is a positive for HK financials and property in theory, but the Brent recovery from $97 to $101 partially offset the energy-import cost relief. Chinese domestic PMI data and Q3 economic indicators remain the primary domestic catalysts for Hang Seng direction in October.</span></div>
+          <div class="line"><span class="lb">Yen / Dollar (October 5):</span> <span class="num">approximately 158</span> <span class="d flat">unchanged &middot; US-Japan rate differential &middot; October at 17% narrows gap modestly &middot; 2-year fell more than 10-year</span><span class="why">The yen at approximately 158 is flat despite the US 2-year falling from approximately 4.83% to 4.45% entering Monday. The Bank of Japan remains near-zero, so the absolute US-Japan rate differential is still large; the 2-year&rsquo;s fall of approximately 38 basis points on Friday is a modest narrowing but not a structural shift. At 158, $101 Brent costs Japan approximately 15,958 yen/barrel - down from 16,590 yen at $105 Brent on September 28. FOMC minutes Wednesday could affect yen direction through their implications for December pricing and the longer-run US-Japan rate gap.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Nikkei approximately 69,700 (+2.1% intraday), rate-path relief + Brent still below last week&rsquo;s peak in yen terms. Hang Seng approximately 23,850 (-0.5%). Yen approximately 158, flat. FOMC minutes Wednesday at 2:00 PM ET are the next US-Japan rate differential catalyst.</p></div>
+        <div class="src"><b>Curated from</b> InvestingLive &middot; NordFX &middot; Trading Economics &middot; Yahoo Finance &middot; Reuters</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="events">The Week Ahead</h2>
+        <div class="strip">
+          <div><div class="k">Today Oct 5</div><div class="v">ISM Services</div><div class="d flat">10:00 AM ET &middot; 55.1 expected</div></div>
+          <div><div class="k">Wednesday Oct 7</div><div class="v">FOMC Minutes</div><div class="d flat">2:00 PM ET &middot; Sept 16 meeting</div></div>
+          <div><div class="k">Thursday Oct 8</div><div class="v">Claims + Credit</div><div class="d flat">8:30 + 3:00 PM ET</div></div>
+        </div>
+        <p class="setup">Three catalysts this week determine whether the dual-softening signal (PCE core 3.0% + 29K jobs) represents a new phase or a Q3-end anomaly. <b>ISM Services at 10:00 AM ET today</b> tests whether the service sector - which held above 55.0 through September - softened alongside the labor market. Wednesday&rsquo;s FOMC September minutes (2:00 PM ET) reveal the committee&rsquo;s internal conditions for October - and whether they were named in a way that Friday&rsquo;s 29K print clearly satisfies. Thursday carries weekly claims and consumer credit. October 14 next week brings September CPI - the first inflation read since the dual-softening pivot.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Monday October 5:</span> <span class="d flat">ISM Services PMI for September at 10:00 AM ET &middot; expected 55.1 vs. prior 55.4 &middot; USDA Crop Progress at 3:00 PM ET</span><span class="why">ISM Services at 55.1 expected - a modest decline from 55.4 - is the first read on whether September&rsquo;s labor market softening extended to service-sector activity. A print below 53.0 would represent a significant downside miss and extend the dual-softening thesis into a third data point; combined with ISM Manufacturing&rsquo;s below-50 reading from last week, it would constitute the broadest softening signal of this rate cycle. A print above 56.0 would suggest labor market softening was isolated from services and would support December&rsquo;s 75% hike probability. The USDA Crop Progress (3:00 PM ET) provides the first October harvest-pace reading for corn and soybeans.</span></div>
+          <div class="line"><span class="lb">Wednesday October 7:</span> <span class="d flat">FOMC September 16 meeting minutes at 2:00 PM ET &middot; threshold language for October &middot; December path signals</span><span class="why">The minutes will detail the conditions committee members named for October tightening and whether any member identified labor-market data as a precondition - which Friday&rsquo;s 29K print may have already answered. The distinction between a &ldquo;conditional pause&rdquo; (waiting on data before October) and a &ldquo;rate path revision&rdquo; (actively recalibrating the path) is the key read for December&rsquo;s 75% probability. A conditional pause that Friday&rsquo;s data satisfies is more December-supportive; a rate path revision that names December as newly uncertain would test December&rsquo;s 75%. The minutes arrive as the Fed enters its quiet period (Saturday October 17) before October 28.</span></div>
+          <div class="line"><span class="lb">Thursday October 8:</span> <span class="d flat">Weekly jobless claims (week ending Oct 3) at 8:30 AM ET &middot; prior 197K &middot; August consumer credit at 3:00 PM ET</span><span class="why">Claims for the week ending October 3 are the first labor read incorporating the post-September-jobs-report business cycle. Prior (week ending September 27): 197,000 - near a multi-year low, suggesting businesses have not yet begun layoffs. An increase above 210,000 would be the first claims signal that hiring contraction is translating to separations - a second labor-market data point alongside the payrolls miss. August consumer credit (3:00 PM ET) carries the first full month of post-September-16-hike borrowing costs; the revolving credit sub-component (credit cards) is the primary watch for signals of debt-service pressure at 22.40% APR.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>ISM Services today at 10:00 AM ET tests whether dual-softening extends to service-sector activity. FOMC minutes Wednesday at 2:00 PM ET reveal the October conditions language that Friday&rsquo;s 29K print may have satisfied. Thursday: claims (first post-payrolls labor signal) + consumer credit. Next week: September CPI Wednesday October 14 - the first inflation read since the dual-softening pivot.</p></div>
+        <div class="src"><b>Curated from</b> CME FedWatch &middot; ISM &middot; BLS &middot; Federal Reserve &middot; Kiplinger &middot; Trading Economics</div>
+        </div>
+
+        <div class="disclaimer">
+          <p>This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.</p>
+          <p class="asof">Figures reflect the latest readings available as of Monday, October 5, 2026, before the US market open. Sources are listed at the end of each section.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#week-opens"><span class="dot"></span>How Monday Opens</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_september30_2026.html">September 30, 2026</a></li>
+          <li><a href="market_pulse_september29_2026.html">September 29, 2026</a></li>
+          <li><a href="market_pulse_september28_2026.html">September 28, 2026</a></li>
+          <li><a href="market_pulse_september27_2026.html">September 27, 2026</a></li>
+          <li><a href="market_pulse_september26_2026.html">September 26, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We&rsquo;re looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+  </script>
+</body>
+</html>
