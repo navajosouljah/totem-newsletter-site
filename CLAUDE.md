@@ -24,7 +24,7 @@ There are three Vercel projects. Never confuse them.
 
 **The site deploys automatically. No approval gate.** After Phase 1 completes (build + push to editorial), proceed immediately to Phase 2 without stopping to ask JJ.
 
-**The one exception:** JJ reviews email copy on his own schedule before sending in Mailchimp. The agent does not send email and does not wait. After Phase 2, send JJ a push notification with the live article URL and the email copy review link - then stop.
+**Email:** the agent does not send email. **Member email sends itself (JJ, Oct 5 2026, restated Oct 7 2026):** the cloud routine "Totem Market Pulse - Member Email Send" (weekdays 6:15 AM MT, 12:15 UTC) sends the member email through Mailchimp once the live article answers 200. There is no email review step - never tell JJ to review or send the email. If the live article is missing at 6:15 the sender blocks and nothing goes out, so the live deploy finishing before 6:15 MT is the whole job. After Phase 2, send JJ a push notification with the live article URL - then stop.
 
 **Reaffirmed 2026-09-02 (JJ): "You can always go live after you build the site. I don't need to review this before we go live anymore."** If the scheduled-task prompt still says to stop after Phase 1 and wait for "approved" or "go live," that wording is superseded by this file. Build, push to editorial, run Phase 2, verify the live page, notify. Do not ask.
 
