@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - October 7, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:28px 0 0;text-align:center;}
+  .body{padding-top:0;}
+  h1.headline{text-wrap:balance;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:clamp(34px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;color:var(--ink);margin:56px 0 0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  /* ---- v2 section treatment ---- */
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .strip + p.setup{font-style:italic;}
+  .sec-v2 .strip + p.setup b{font-style:italic;}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);position:relative;padding-left:22px;}
+  .sec-v2 .line::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:18px;}
+  .sec-v2 .opens li{padding-left:22px;position:relative;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens li::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .opens li b{font-weight:700;color:var(--ink);}
+  .sec-v2 .opens li:target{background:var(--wash);box-shadow:0 0 0 10px var(--wash);border-radius:2px;}
+  .sec-v2 .opens a.more{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;margin-left:6px;}
+  .sec-v2 .opens a.more:hover{border-bottom:2px solid var(--gold);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p.asof{color:var(--muted);margin-bottom:0;}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_october7_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_12.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Wednesday, October 7, 2026</span></div>
+        <h1 class="headline">S&amp;P, Nasdaq at Records on Ceasefire Relief. FOMC Minutes at 2:00 PM ET.</h1>
+      </div>
+
+      <div class="body">
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="setup lead-first">Tuesday&rsquo;s US-Iran two-week ceasefire announcement drove both the S&amp;P 500 and Nasdaq to fresh all-time records &ndash; the S&amp;P closed at 7,818.93 (+0.58%) and the Nasdaq at 27,599.79 (+0.45%) &ndash; as oil fell from its Hormuz-premium high and yields pulled back from Monday&rsquo;s ISM-driven spike. The mechanism: a supervised Hormuz reopening (vessels must coordinate with Iranian armed forces, but transit is permitted) removes the geopolitical supply-risk premium that had pushed Brent above $100, which compresses the near-term inflation pipeline from energy and lets the market price a modestly less aggressive Fed path into December. That is the whole mechanism: ceasefire relief + yield pullback = equity re-rating at record levels.</p>
+        <p class="setup">Wednesday&rsquo;s FOMC minutes at 2:00 PM ET are now the session&rsquo;s defining event, releasing the verbatim record of the September 15-16 committee discussion that voted 12-0 to hike to 3.75-4.00%. The key question the minutes settle: did the committee frame the 4.10% terminal rate as a ceiling or a floor? The ISM Services Prices Index at 74.0 percent &ndash; its highest reading since July 2022, a data point released after the September vote &ndash; is the context the minutes do not carry but the market will use to read them. Consumer Credit (August) follows at 3:00 PM ET as the week&rsquo;s first household-finance read after the jobs miss. Thursday&rsquo;s Freddie Mac PMMS closes the housing rate story, now carrying a lower 10-year baseline than last week&rsquo;s survey.</p>
+        <p class="setup">Bitcoin ETFs recorded $1.2 billion in net inflows on Tuesday &ndash; the second-largest single-day haul since launch &ndash; as BlackRock&rsquo;s IBIT led institutional capital into the ceasefire rally. Asian markets extended gains on Wednesday with the Nikkei adding to Tuesday&rsquo;s advance. The Corn Belt is entering its most critical dry-weather window of the season; USDA Crop Progress for the week ending October 11 releases next Monday. <b>Curated from</b> BLS &middot; CME FedWatch &middot; ISM &middot; USDA &middot; Bloomberg &middot; CoinMarketCap &middot; AAA</p>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="week-opens">How Wednesday Opens</h2>
+        <ul class="opens">
+          <li id="open-1"><b>Whether the 4.50% CD lock still makes sense after Tuesday&rsquo;s yield easing and ahead of today&rsquo;s FOMC minutes.</b> The ceasefire sent yields lower, compressing the forward-rate premium the 4.50% Popular Direct CD was priced against. The CD still leads the market and carries a 25-basis-point advantage over the top HYSA at 4.25%. The question is whether today&rsquo;s FOMC minutes at 2:00 PM ET reprice yields higher (hawkish framing) or sustain the easing (cautious framing) before Thursday&rsquo;s PMMS closes. <a class="more" href="#savings">Savings &amp; CD &rarr;</a></li>
+          <li id="open-2"><b>What the dual S&amp;P and Nasdaq records say about whether markets are reading the ceasefire as permanent.</b> Both indexes hit records on Tuesday as oil fell and yields pulled back. Wednesday&rsquo;s pre-market holds the gains, with S&amp;P futures near 7,825. The market&rsquo;s implicit bet: the supervised Hormuz pause is durable enough to be priced as relief, not just a one-day spike. FOMC minutes at 2:00 PM ET are the test &ndash; a hawkish framing could reprice both the rate path and the ceasefire&rsquo;s equity premium simultaneously. <a class="more" href="#stocks">Stock Market &rarr;</a></li>
+          <li id="open-3"><b>Whether the Hormuz supervised pause changes the mid-October pump price timeline for drivers.</b> Brent at $101.24 on Wednesday morning is $0.40 above Monday&rsquo;s pre-ceasefire level after Tuesday&rsquo;s session saw a sharp dip and partial recovery. The supply-risk premium has compressed but not cleared: vessels still require coordination with Iranian forces, and no full Hormuz reopening has been declared. The mid-October pump window at $4.65-$4.85 per gallon reflects a modest improvement from the $4.75-$4.95 forecast before Tuesday. <a class="more" href="#energy">Energy &amp; Gas &rarr;</a></li>
+          <li id="open-4"><b>What the FOMC minutes at 2:00 PM ET reveal about how the September committee framed services inflation.</b> The Prices Index at 74.0 percent was not available when the committee voted September 16. The minutes carry the September framing of the terminal rate and the committee&rsquo;s view on whether December is a ceiling or a continuation. October hike odds near 35 percent reflect the ISM Prices signal still alive in the rate path even after Tuesday&rsquo;s ceasefire yield relief. <a class="more" href="#rates">Interest Rates &rarr;</a></li>
+          <li id="open-5"><b>Why $1.2 billion flowed into Bitcoin ETFs on Tuesday while the Nasdaq set a record in the same session.</b> Bitcoin ETFs drew their second-largest single-day haul since launch on October 6, with IBIT leading. The dual flow &ndash; record Nasdaq, record BTC ETF day &ndash; confirms the ceasefire release was broad-based across risk assets. BTC at $89,000 Wednesday morning reflects the overnight carry from the institutional ETF session. <a class="more" href="#crypto">Crypto &rarr;</a></li>
+        </ul>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">7,818.93</div><div class="d up">&#9650; +0.58% Tue close &middot; all-time record</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">27,599.79</div><div class="d up">&#9650; +0.45% Tue &middot; second consecutive record</div></div>
+          <div><div class="k">Dow</div><div class="v">51,521.28</div><div class="d up">&#9650; +0.49% Tue &middot; +253 pts &middot; broad advance</div></div>
+        </div>
+        <p class="setup">Both the S&amp;P 500 and Nasdaq closed at all-time records on Tuesday as the US-Iran ceasefire announcement sent oil lower and pulled Treasury yields back from Monday&rsquo;s ISM-driven highs. <b>Mega-cap tech led</b>, supported by the AI power infrastructure story &ndash; Microsoft&rsquo;s nuclear deal with Constellation Energy for a 20-year clean power agreement received renewed attention as the energy-cost narrative for data centers shifted. Wednesday pre-market holds the record levels, with S&amp;P futures near 7,825, as the market waits for FOMC minutes at 2:00 PM ET.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (Tuesday October 6 close):</span> <span class="num">7,818.93</span> <span class="d up">&#9650; +0.58% &middot; all-time record &middot; ceasefire sent oil lower &middot; yields eased &middot; tech led</span><span class="why">The S&amp;P&rsquo;s record close at 7,818.93 built on Monday&rsquo;s 7,773.99 advance, with the ceasefire announcement arriving during Tuesday&rsquo;s session as the session&rsquo;s decisive catalyst. The easing oil price removed the inflation-acceleration fear that had pushed yields higher on ISM Prices 74.0 &ndash; the market read the ceasefire as a near-term reduction in the services-inflation pipeline. All 11 S&amp;P sectors advanced on Tuesday. Wednesday pre-market near 7,825 confirms the record is holding. FOMC minutes at 2:00 PM ET are the first catalyst that could materially re-price the index since Tuesday&rsquo;s close.</span></div>
+          <div class="line"><span class="lb">Nasdaq (Tuesday October 6 close):</span> <span class="num">27,599.79</span> <span class="d up">&#9650; +0.45% &middot; second consecutive record &middot; AI infrastructure names led &middot; Microsoft-Constellation deal in focus</span><span class="why">The Nasdaq&rsquo;s second consecutive record close confirms that AI and technology names are leading this leg of the equity rally independent of the rate-path changes from Tuesday. The Microsoft-Constellation Energy 20-year nuclear power agreement for AI data centers was the technology story reinforcing the structural investment cycle thesis: AI infrastructure demand is a multi-year capital commitment, not a rate-path trade. The Nasdaq&rsquo;s +0.45% Tuesday session came as yields eased, but the underlying AI-power narrative would have supported tech even at Monday&rsquo;s higher yield levels. The second consecutive record is the market&rsquo;s answer to last week&rsquo;s ISM Prices 74.0 concern.</span></div>
+          <div class="line"><span class="lb">Dow (Tuesday October 6 close):</span> <span class="num">51,521.28</span> <span class="d up">&#9650; +0.49% &middot; +253.38 pts &middot; broad advance &middot; energy and defense rebalanced lower on ceasefire</span><span class="why">The Dow&rsquo;s +0.49% advance was broad but included rotation away from the energy and defense names that had benefited from the Hormuz supply-risk premium. The ceasefire announcement took the premium off oil and shifted capital toward consumer-facing and rate-sensitive names that benefit from lower energy costs. The Dow&rsquo;s advance was therefore not as concentrated in AI and mega-cap tech as the Nasdaq&rsquo;s, reflecting the index&rsquo;s wider sector mix. Wednesday pre-market Dow futures reflect the same holding pattern as the S&amp;P and Nasdaq ahead of FOMC minutes.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>S&amp;P 7,818.93 (+0.58%, all-time record). Nasdaq 27,599.79 (+0.45%, second consecutive record). Dow 51,521.28 (+0.49%, broad advance). Ceasefire + yield easing drove Tuesday&rsquo;s session. Wednesday pre-market near 7,825 holds the record. FOMC minutes at 2:00 PM ET today are the next material catalyst.</p></div>
+        <div class="src"><b>Curated from</b> Bloomberg &middot; CNBC &middot; TheStreet &middot; Yahoo Finance &middot; Trading Economics</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <div class="strip">
+          <div><div class="k">Fed funds</div><div class="v">3.75&ndash;4.00%</div><div class="d flat">Hiked Sept 16 &middot; unchanged</div></div>
+          <div><div class="k">2-year</div><div class="v">4.77%</div><div class="d down">&#9660; Eased on ceasefire &middot; front-end led</div></div>
+          <div><div class="k">10-year</div><div class="v">5.18%</div><div class="d down">&#9660; Pulled back from 5.278% &middot; ceasefire relief</div></div>
+        </div>
+        <p class="setup">Tuesday&rsquo;s ceasefire announcement pulled Treasury yields lower from Monday&rsquo;s ISM-driven highs, with the front end leading: the 2-year fell from 4.823% toward 4.77% as the near-term inflation pipeline from energy compressed. The 10-year eased from 5.278% toward 5.18%. <b>October 28 hike odds stand near 35 percent</b> &ndash; elevated from the pre-ISM ~20% but below the 38% peak the Prices Index 74.0 generated, as the ceasefire partially offset the inflation signal. Wednesday&rsquo;s FOMC minutes at 2:00 PM ET are now the single input that can materially re-price the October and December rate path in either direction.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">10-year Treasury (Wednesday October 7):</span> <span class="num">5.18%</span> <span class="d down">&#9660; eased ~10 bps from Monday high of 5.278% &middot; ceasefire oil drop is the cause &middot; FOMC minutes 2:00 PM ET the next mover</span><span class="why">The 10-year&rsquo;s pullback from 5.278% to 5.18% reflects the market repricing the energy-inflation pipeline. Brent above $100 had been the primary argument that services inflation would remain elevated through Q4; the ceasefire&rsquo;s supervised Hormuz pause removes the immediate supply-shock scenario, though it does not clear the energy risk premium entirely. At 5.18%, the October 8 PMMS survey is tracking lower than Monday&rsquo;s above-7.28% trajectory. Wednesday&rsquo;s FOMC minutes carry a hawkish scenario (committee saw terminal at 4.10% as a floor) or a cautious scenario (4.10% is the ceiling) &ndash; the 10-year&rsquo;s direction after 2:00 PM ET today will set the Friday rates picture.</span></div>
+          <div class="line"><span class="lb">2-year Treasury (Wednesday October 7):</span> <span class="num">4.77%</span> <span class="d down">&#9660; front-end led the yield pullback &middot; October hike ~35% &middot; December consensus next action &middot; minutes today decide framing</span><span class="why">The 2-year&rsquo;s move from 4.823% to 4.77% reflects the market adjusting October hike odds downward from the ISM-driven 38% peak toward 35%, incorporating the ceasefire&rsquo;s reduction of the near-term energy-inflation signal. The front end led (2-year moved more than 10-year) because October hike pricing is the most directly affected by the energy-pipeline repricing &ndash; a near-term reduction in oil costs reduces the argument for an October action. The 2-year at 4.77% still prices December as the consensus next action with terminal near 4.10%. Wednesday&rsquo;s minutes settle whether that terminal is a ceiling or a floor: a hawkish read pushes the 2-year back above 4.82%; a cautious read could pull it toward 4.68%.</span></div>
+          <div class="line"><span class="lb">October 28 FOMC hike probability (CME FedWatch, Wednesday morning):</span> <span class="num">~35%</span> <span class="d flat">elevated from pre-ISM 20% &middot; pulled back from 38% peak on ceasefire &middot; December majority holds</span><span class="why">October hike odds near 35 percent represent a significant repricing from the ~20% level of Monday morning before the ISM Prices 74.0 print. The ISM Services Prices reading &ndash; the highest since July 2022 &ndash; was the single data point that moved October back into play. The ceasefire partially unwound that move, pulling odds from the 38% peak back to 35%. At 35%, the October scenario is a live risk but not the consensus: the December majority hold. Wednesday&rsquo;s FOMC minutes at 2:00 PM ET are the most important input remaining before October 28 &ndash; they will either confirm the September committee was already pricing services re-acceleration, or signal the committee saw it as a one-month outlier that does not alter the December-terminal-4.10% framing.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>10-year 5.18% (eased ~10 bps from Monday&rsquo;s 5.278% on ceasefire). 2-year 4.77% (front-end led). October hike ~35% (elevated from 20%, pulled back from 38% peak). December consensus next action at ~4.10% terminal. FOMC minutes 2:00 PM ET today are the week&rsquo;s rate decision.</p></div>
+        <div class="src"><b>Curated from</b> CME FedWatch &middot; Federal Reserve H.15 &middot; FRED &middot; Bloomberg &middot; Trading Economics &middot; Admiral Markets</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <div class="strip">
+          <div><div class="k">Top 1-yr CD</div><div class="v">4.50%</div><div class="d flat">Popular Direct leads Bankrate &middot; unchanged</div></div>
+          <div><div class="k">Top HYSA</div><div class="v">4.25%</div><div class="d flat">Bankrate Oct survey &middot; 25-bp gap to CD</div></div>
+          <div><div class="k">Nat&rsquo;l avg 1-yr CD</div><div class="v">2.12%</div><div class="d flat">FDIC survey &middot; 238-bp gap to best</div></div>
+        </div>
+        <p class="setup">Tuesday&rsquo;s yield easing on the ceasefire adds a new variable to the CD rate-lock decision: the 10-year at 5.18% (down from 5.278%) reduces the forward-rate premium embedded in the 4.50% Popular Direct CD &ndash; but it does not change the offered rate today. The 4.50% lock still carries a <b>25-basis-point annual advantage over the 4.25% top HYSA</b>. Wednesday&rsquo;s FOMC minutes at 2:00 PM ET and Thursday&rsquo;s PMMS together close the week&rsquo;s rate-path picture: a hawkish minutes read would restore the rate-path case for locking, while a cautious read sustains the yield-easing trend.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Best available 1-yr CD (Wednesday October 7):</span> <span class="num">4.50% APY</span> <span class="d flat">Popular Direct leads Bankrate &middot; BTG Pactual 4.45% second &middot; E*TRADE 4.40% &middot; rate unchanged</span><span class="why">The 4.50% offered rate from Popular Direct is unchanged from Tuesday. Online bank deposit rates do not move intraday with yields &ndash; the move from 5.278% to 5.18% on the 10-year will take several days to flow through to bank deposit rate adjustments. The practical CD decision for Wednesday: the 4.50% lock is available today, FOMC minutes at 2:00 PM ET today are the last major rate-path signal before the October 8 PMMS closes Thursday, and the PMMS result will set the narrative for whether rates are moving up or down into November. A saver who was waiting for the FOMC minutes to confirm the direction has today as the informational close.</span></div>
+          <div class="line"><span class="lb">High-yield savings (Bankrate October 2026 top rate):</span> <span class="num">4.25% APY</span> <span class="d flat">25-bp gap to 4.50% CD &middot; floating rate risk on both sides &middot; ceasefire yield easing modestly improves HYSA outlook</span><span class="why">The 4.25% HYSA rate (CIT Bank leads, per Bankrate) is a floating rate that will track the Fed path. Tuesday&rsquo;s ceasefire-driven yield easing reduces the probability that October 28 delivers another 25-bp hike, which would have been the primary catalyst for a HYSA rate increase. At 35% October hike probability and December as the consensus next action, the HYSA outlook is: hold near 4.25% through year-end if the Fed pauses, or move toward 4.50% if December delivers. The CD captures 4.50% locked regardless of which scenario plays out. For savers who have not yet locked, the FOMC minutes today are the last major information event before the October 8 survey closes the week&rsquo;s rate picture.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Popular Direct 4.50% APY leads (Bankrate, unchanged). Top HYSA 4.25% &ndash; 25-bp CD advantage intact. National average 2.12% (FDIC, 238-bp gap). Tuesday&rsquo;s yield easing does not change today&rsquo;s offered rates. FOMC minutes today 2:00 PM ET + Thursday&rsquo;s PMMS together close the week&rsquo;s rate-path picture.</p></div>
+        <div class="src"><b>Curated from</b> Bankrate &middot; NerdWallet &middot; Forbes Advisor &middot; FDIC &middot; CNBC Select</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <div class="strip">
+          <div><div class="k">Brent</div><div class="v">$101.24</div><div class="d up">&#9650; +0.65% Wed &middot; partial recovery after ceasefire dip</div></div>
+          <div><div class="k">WTI</div><div class="v">$90.52</div><div class="d up">&#9650; Wed &middot; ~$11 Brent-WTI spread intact</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.37</div><div class="d flat">Oct 4 reading &middot; mid-Oct window $4.65&ndash;$4.85</div></div>
+        </div>
+        <p class="setup">Tuesday&rsquo;s US-Iran ceasefire announcement sent Brent sharply lower during the session &ndash; the first Hormuz-relief move since the conflict began &ndash; before a partial recovery overnight brought it back to $101.24 on Wednesday morning. The supervised pause (vessels may transit with Iranian forces coordination, but no full reopening) is <b>not a full resolution</b>: the supply-risk premium has compressed but not cleared. The mid-October pump price window improves modestly to $4.65-$4.85 from the pre-ceasefire $4.75-$4.95 estimate, reflecting the lower Brent trajectory entering the pipeline.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Brent crude (Wednesday October 7):</span> <span class="num">$101.24/barrel</span> <span class="d up">&#9650; +0.65% &middot; partial recovery from Tuesday ceasefire dip &middot; Hormuz supervised pause &middot; supply premium compressed not cleared</span><span class="why">Brent&rsquo;s Wednesday morning level reflects a session in which the ceasefire announcement drove a sharp intraday sell-off followed by a partial overnight recovery. The supervised pause preserves the logistics supply risk &ndash; vessels needing coordination with Iranian forces creates friction and uncertainty that the market is not willing to price as full Hormuz reopening. At $101.24, Brent is above Monday&rsquo;s pre-ceasefire $100.84, reflecting the market&rsquo;s skepticism about the permanence of the supervised arrangement. A formal diplomatic announcement of full reopening would send Brent significantly lower; absence of one is holding the floor above $100.</span></div>
+          <div class="line"><span class="lb">WTI crude (Wednesday October 7):</span> <span class="num">$90.52/barrel</span> <span class="d up">&#9650; slight Wed &middot; ~$11 Brent-WTI spread &middot; domestic demand picture unchanged</span><span class="why">WTI at $90.52 maintains the approximately $11 spread over Brent that has characterized the geopolitical risk premium throughout the Hormuz disruption. WTI&rsquo;s domestic demand picture &ndash; shaped by 29,000 September payrolls, real wages negative for six months, and services sector expansion at a decelerating pace &ndash; provides limited upward pressure independent of the geopolitical story. The $11 Brent-WTI spread continues to confirm the premium is supply-geopolitical, not demand-driven from the US side. For US refiners: the Wednesday spread preserves the domestic refining margin advantage that has kept US pump prices somewhat insulated from Brent&rsquo;s full move.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, October 4 reading):</span> <span class="num">$4.37/gallon</span> <span class="d flat">reflects mid-Sept crude &middot; mid-Oct window $4.65&ndash;$4.85 &middot; improvement from ceasefire dip entering pipeline</span><span class="why">Gas at $4.37 reflects crude priced approximately September 16-22 &ndash; the post-hike, pre-Hormuz surge period. The mid-October pump window improvement from $4.75-$4.95 to $4.65-$4.85 reflects the ceasefire-driven Brent dip that occurred during Tuesday&rsquo;s session entering the 3-4 week crude-to-pump pipeline. The improvement is modest and conditional: if the supervised pause collapses and Brent re-tests $105+, the pump window estimate reverts. For households planning their October fuel budget, the $4.65-$4.85 range is the improved baseline, with the resolution of the Hormuz supervised arrangement as the determining variable.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Brent $101.24 (+0.65%, partial recovery after ceasefire dip &ndash; supervised Hormuz pause not a full reopening). WTI $90.52 (~$11 spread, geopolitical not demand premium). Gas $4.37 (AAA, Oct 4). Mid-October window improved to $4.65-$4.85 on Tuesday&rsquo;s Brent dip entering the pipeline. Full Hormuz reopening announcement is the single variable that materially changes the November window.</p></div>
+        <div class="src"><b>Curated from</b> AAA &middot; EIA &middot; Trading Economics &middot; Reuters &middot; Bloomberg &middot; Benzinga</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <div class="strip">
+          <div><div class="k">Gold</div><div class="v">$4,085.40</div><div class="d down">&#9660; -0.87% Wed &middot; ceasefire reduced safe-haven demand</div></div>
+          <div><div class="k">Silver</div><div class="v">$59.92</div><div class="d down">&#9660; -1.32% Wed &middot; Hormuz premium unwinding</div></div>
+          <div><div class="k">Copper</div><div class="v">$6.55/lb</div><div class="d down">&#9660; -0.46% Wed &middot; AI floor at $6.50 holding</div></div>
+        </div>
+        <p class="setup">All three metals fell Wednesday as the ceasefire announcement unwound the geopolitical safe-haven and supply-disruption premiums that had accumulated since the Hormuz closure. <b>Gold fell below $4,100</b> for the first time since the Hormuz escalation as the ceasefire removed the primary geopolitical case for holding non-yielding safe-haven assets. Silver&rsquo;s sharper decline reflects the dual loss of the safe-haven premium and a modest reduction in the energy-transition demand outlook as oil prices pulled back. Copper held above $6.50 on the AI data-center demand floor.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Gold / oz (Wednesday October 7):</span> <span class="num">$4,085.40</span> <span class="d down">&#9660; -0.87% &middot; ceasefire reduced geopolitical premium &middot; FOMC minutes today could restore hawkish floor</span><span class="why">Gold&rsquo;s move below $4,100 on Wednesday marks the first time since the Hormuz closure began that the geopolitical premium has been meaningfully reduced. The mechanism is direct: the ceasefire removes the immediate conflict-escalation scenario that had elevated gold above $4,100 even as equity markets rallied. With the 10-year also easing from 5.278% to 5.18%, the opportunity cost of holding non-yielding gold is slightly lower &ndash; but the ceasefire&rsquo;s safe-haven reduction is dominating. Wednesday&rsquo;s FOMC minutes at 2:00 PM ET introduce a new variable: a hawkish terminal-rate framing that pushes the 10-year higher would add additional headwinds for gold; a cautious framing that further eases yields could partially restore the rate-repricing premium.</span></div>
+          <div class="line"><span class="lb">Silver / oz (Wednesday October 7):</span> <span class="num">$59.92</span> <span class="d down">&#9660; -1.32% &middot; dual premium loss: safe-haven and energy-transition &middot; holding $59+ support</span><span class="why">Silver&rsquo;s sharper decline than gold reflects the metal&rsquo;s dual sensitivity: it carries both the safe-haven premium gold holds and a distinct energy-transition demand premium (solar, grid, EV batteries) that is modestly less urgent when oil prices pull back on ceasefire. The -1.32% session pulls silver from $60.72 (Tuesday morning) toward $59.92, consolidating back near the $59-60 support range. The industrial demand thesis for silver is long-term and intact; the Tuesday-to-Wednesday move is a premium-unwinding, not a structural shift. Silver&rsquo;s ability to hold above $59 through the FOMC minutes will indicate whether the industrial demand floor is holding under the near-term safe-haven selling.</span></div>
+          <div class="line"><span class="lb">Copper (Wednesday October 7):</span> <span class="num">$6.55/lb</span> <span class="d down">&#9660; -0.46% &middot; AI data-center floor holding above $6.50 &middot; ISM Services 54.9 supports industrial demand case</span><span class="why">Copper&rsquo;s modest -0.46% decline to $6.55 holds comfortably above the $6.50 AI data-center demand floor. The ceasefire reduced the conflict-premium in copper&rsquo;s price (supply-chain disruption risk) without materially affecting the structural AI and grid infrastructure demand that has supported copper since the Hormuz closure began. Chile&rsquo;s production at a 15-year low continues to provide supply-side support. Copper at $6.55 reflects the industrial economy&rsquo;s health: ISM Services at 54.9 (expansion) is constructive, while the ceasefire reduces but does not eliminate the geopolitical supply concern. The $6.50 floor is the AI-infrastructure demand floor; it has not been broken since September&rsquo;s payrolls miss.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Gold $4,085.40 (-0.87%, ceasefire removed geopolitical premium, below $4,100 first time since Hormuz closure). Silver $59.92 (-1.32%, dual safe-haven and energy-transition premium unwinding). Copper $6.55 (-0.46%, AI floor at $6.50 intact). FOMC minutes at 2:00 PM ET today are the next metals catalyst.</p></div>
+        <div class="src"><b>Curated from</b> Kitco &middot; Trading Economics &middot; Bloomberg &middot; Yahoo Finance &middot; Investing.com</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <div class="strip">
+          <div><div class="k">Corn G/E</div><div class="v">54%</div><div class="d down">&#9660; Down 3 pts from 57% &middot; Oct 4 week</div></div>
+          <div><div class="k">Soybeans G/E</div><div class="v">57%</div><div class="d flat">Stable &middot; Oct 4 week &middot; pace improving</div></div>
+          <div><div class="k">Corn harvested</div><div class="v">23%</div><div class="d down">&#9660; Behind 27% five-year avg &middot; dry week ahead</div></div>
+        </div>
+        <p class="setup">The most recent USDA Crop Progress data (week ending October 4, released October 6) showed corn 23 percent harvested &ndash; 4 points behind the five-year average of 27 percent &ndash; and soybeans at 25 percent. Corn good-to-excellent ratings fell 3 points to 54 percent on wet September field conditions. <b>Wednesday marks the start of the week&rsquo;s critical dry-weather window:</b> forecast models show dry, warm conditions across the Plains, Midwest, and Southeast through October 11, the exact conditions needed to close the harvest-pace gap before the November frost window. The next Crop Progress report releases Monday October 12.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Corn harvest and G/E (USDA Crop Progress, week ending October 4):</span> <span class="num">23% harvested &middot; 54% G/E</span> <span class="d down">&#9660; 4 pts behind 5-yr avg (27%) &middot; G/E down 3 pts &middot; dry weather this week the key variable</span><span class="why">Corn&rsquo;s 23 percent harvest pace entering October 7 is four points behind the five-year average. The record WASDE yield of 183.8 bu/acre confirmed Monday continues to set the supply ceiling, but the harvest-pace gap means the bulk of the crop is still in the field. Dry weather forecast for October 7-11 is the most important single input for this week&rsquo;s pace. Iowa and Nebraska, the most behind-pace states per Monday&rsquo;s USDA report, are expected to see the most progress this week. The Corn Belt&rsquo;s soil-drying window is narrow: a second wet system before October 20 would push harvest toward the November frost risk with elevated in-field volumes.</span></div>
+          <div class="line"><span class="lb">Soybean harvest and G/E (USDA Crop Progress, week ending October 4):</span> <span class="num">25% harvested &middot; 57% G/E</span> <span class="d flat">G/E stable &middot; dry week ahead accelerates pace &middot; record WASDE yield 53.1 bpa confirmed</span><span class="why">Soybeans at 25 percent harvested are also below historical norms, though G/E stability at 57 percent signals that wet conditions affected pace more than crop quality. Monday&rsquo;s WASDE confirmed the record soybean yield estimate at 53.1 bu/acre (-0.1 from September). The practical question for October 7-11: can the dry-weather window accelerate soybean harvest pace from 25% toward the five-year average? Given the relatively shallow harvest gap compared to corn, soybeans are positioned to close their pace deficit more quickly if Wednesday-through-Sunday deliver the forecast dry conditions. Next Monday&rsquo;s Crop Progress will show whether the dry window delivered.</span></div>
+          <div class="line"><span class="lb">Crop weather outlook (October 7-12):</span> <span class="d flat">dry, warm Corn Belt forecast &middot; soil drying critical &middot; next Crop Progress Monday October 12</span><span class="why">The National Weather Service forecast through October 12 shows dry conditions across the Central Plains, Midwest, and parts of the Southeast &ndash; the same areas where Monday&rsquo;s Crop Progress showed the most significant harvest delays. Soil moisture levels entering this week are elevated from September&rsquo;s wet pattern, meaning the first several days of dry weather go toward soil drying rather than harvest operations. By October 9-10, conditions should support active harvest in Iowa, Nebraska, and Illinois. October 12&rsquo;s Crop Progress report will be the first data confirmation of whether the dry window delivered the pace acceleration the record WASDE yields require to reach market on schedule.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Corn 23% harvested (behind 27% five-year avg), G/E 54% (down 3 pts). Soybeans 25% harvested, G/E 57% (stable). Record WASDE yields confirmed (corn 183.8 bpa, soybeans 53.1 bpa). Dry weather October 7-12 is the critical variable for Q4 supply timing. Next Crop Progress Monday October 12.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; DTN/Progressive Farmer &middot; AgWeb &middot; National Weather Service &middot; CropWatch Nebraska</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <div class="strip">
+          <div><div class="k">30-yr (Freddie Mac)</div><div class="v">7.28%</div><div class="d flat">Oct 1 PMMS &middot; survey closes Oct 8</div></div>
+          <div><div class="k">10-year</div><div class="v">5.18%</div><div class="d down">&#9660; Eased on ceasefire &middot; lower than Mon entry</div></div>
+          <div><div class="k">Tariff Day</div><div class="v">Day 57</div><div class="d flat">US 50% softwood &middot; no relief</div></div>
+        </div>
+        <p class="setup">Tuesday&rsquo;s ceasefire-driven yield easing is the most significant change to the October 8 PMMS estimate since Monday&rsquo;s survey opened. The 10-year at 5.18% entering Wednesday is approximately 10 basis points below Monday&rsquo;s level, moving the survey estimate from 7.20-7.28% toward <b>7.10-7.18%</b>. Wednesday&rsquo;s FOMC minutes at 2:00 PM ET are the last major input before Thursday&rsquo;s PMMS publication: a hawkish framing reverting the 10-year to 5.25%+ restores a third consecutive above-7.20% week; a cautious framing could push the estimate toward 7.05-7.10%.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Freddie Mac PMMS (released Thursday October 1 &ndash; most recent):</span> <span class="num">7.28%</span> <span class="d flat">cycle high &middot; survey closes Oct 8 &middot; 10-year at 5.18% entering Wednesday &mdash; est. now 7.10&ndash;7.18%</span><span class="why">The October 8 PMMS survey week opened Monday at approximately 5.26% on the 10-year, rose to 5.278% Monday afternoon on ISM Prices 74.0, then fell with Tuesday&rsquo;s ceasefire-driven yield easing toward 5.18%. The survey&rsquo;s weighted average of rates during October 2-7 now reflects more of the lower trajectory than the previous estimate. At 5.18%, the October 8 PMMS estimate tracks toward 7.10-7.18% &ndash; still above 7% and still the third consecutive above-7% week, but at the lower end of the range. Wednesday&rsquo;s FOMC minutes close at 2:00 PM ET before the survey officially closes: a hawkish read reverting the 10-year to 5.25% would raise the estimate back toward 7.20%; a cautious read could bring the third week below 7.15%.</span></div>
+          <div class="line"><span class="lb">October 8 PMMS survey (covers October 2-7 &middot; revised estimate):</span> <span class="num">est. 7.10&ndash;7.18%</span> <span class="d down">&#9660; improved from 7.20&ndash;7.28% &middot; ceasefire yield easing entered the survey window &middot; FOMC minutes today close the week</span><span class="why">The revised estimate of 7.10-7.18% reflects the yield trajectory change: Monday&rsquo;s ISM-driven 5.278% 10-year raised the estimate from last week&rsquo;s 7.28%; Tuesday&rsquo;s ceasefire-driven pullback to 5.18% partially offset that move. For borrowers: the improved estimate means the third consecutive above-7% week is still the baseline, but Thursday&rsquo;s PMMS could come in near 7.10% rather than 7.28%. A rate near 7.10% versus 7.28% represents approximately $63 per month on a $400,000 mortgage, meaningful for buyers who had been watching the above-7.28% baseline. The FOMC minutes this afternoon are the swing variable.</span></div>
+          <div class="line"><span class="lb">Tariff context (October 7):</span> <span class="d flat">Day 57 US 50% softwood &middot; Canadian counter-tariffs active &middot; affordability near 19-year restrictive &middot; no diplomatic contacts</span><span class="why">Day 57 of the softwood lumber tariff overlaps with the lowest mortgage rate estimate since the above-7% streak began. The $8,000-$14,000 per new-home build lumber cost addition from the tariff is unchanged; the modest rate improvement from ceasefire yield easing is the only positive input for new-home affordability this week. Combined with even a 7.10% mortgage, the US new-home affordability environment remains near its most restrictive in approximately 19 years. No diplomatic contacts on the lumber tariff dispute were reported through Wednesday morning. The ceasefire&rsquo;s yield-easing effect on PMMS is temporary and subject to reversal by today&rsquo;s FOMC minutes.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>PMMS 7.28% (October 1, cycle high). October 8 estimate revised down to 7.10-7.18% as ceasefire yield easing entered the survey window. Third consecutive above-7% week still the baseline. FOMC minutes 2:00 PM ET today are the final swing variable before Thursday&rsquo;s release. Tariff Day 57, affordability near 19-year restrictive.</p></div>
+        <div class="src"><b>Curated from</b> Freddie Mac &middot; Bloomberg &middot; Trading Economics &middot; CNBC &middot; CME FedWatch</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <div class="strip">
+          <div><div class="k">ISM Prices Index</div><div class="v">74.0%</div><div class="d up">&#9650; Highest since July 2022</div></div>
+          <div><div class="k">Hourly earnings YoY</div><div class="v">+3.0%</div><div class="d down">&#9660; Slowest since 2021</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.37</div><div class="d flat">Oct 4 &middot; mid-Oct improved to $4.65&ndash;$4.85</div></div>
+        </div>
+        <p class="setup">Tuesday&rsquo;s ceasefire improved the mid-October gas window modestly, but the household finance picture entering Wednesday is defined by the pre-existing data: ISM Services Prices at 74.0 percent (highest since July 2022) running against wage growth at only +3.0% year-over-year (slowest since 2021). <b>Services inflation re-accelerating faster than wages grow</b> is the real household cost squeeze of Q4 2026, and the ceasefire&rsquo;s oil relief does not directly touch that gap. Wednesday&rsquo;s Consumer Credit (August) at 3:00 PM ET is the week&rsquo;s first look at whether household debt-stress is beginning to show in the delinquency data.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">ISM Services Prices Index (September 2026, released October 5):</span> <span class="num">74.0%</span> <span class="d up">&#9650; highest since July 2022 &middot; up 1.4 pts from August &middot; pipeline to consumer prices in 60-90 days</span><span class="why">The Prices Index at 74.0 percent remains the week&rsquo;s most consequential household finance data point. Services inflation at this level &ndash; healthcare, dining, transportation, personal care &ndash; flows through to consumer prices within 60-90 days. The ceasefire&rsquo;s oil-price relief does not offset services-sector input cost inflation, which is driven by labor costs and supply-chain dynamics largely independent of the energy market. For households, the FOMC minutes this afternoon are the most important reading for their own outlook: a committee that already saw services inflation as the primary December-decision driver would signal that the December hike scenario is intact regardless of the ceasefire oil relief.</span></div>
+          <div class="line"><span class="lb">Average hourly earnings (September 2026):</span> <span class="num">+3.0% YoY &middot; +0.1% MoM</span> <span class="d down">&#9660; slowest since 2021 &middot; ISM Prices 74.0 widens the real-wage gap &middot; sixth consecutive negative real-wage month</span><span class="why">Wage growth at +3.0% year-over-year is not keeping pace with services-sector input cost inflation at 74.0 percent. The practical household effect: for service-sector workers, the purchasing power of each paycheck has fallen for six consecutive months in real terms. For households with investment accounts or savings at 4.50% APY, the gap is partially offset &ndash; but for the majority of the US workforce whose primary income is wages, Q4 2026 is a period of intensifying cost pressure. The Consumer Credit data at 3:00 PM ET today will show August&rsquo;s 90-plus-day delinquency rate &ndash; the data point that indicates whether households are absorbing the gap through savings drawdown or credit stress.</span></div>
+          <div class="line"><span class="lb">Gas (AAA, October 4 reading):</span> <span class="num">$4.37/gallon</span> <span class="d flat">mid-Oct window improved to $4.65&ndash;$4.85 &middot; still $0.28&ndash;$0.48 increase from today &middot; Nov direction depends on Hormuz resolution</span><span class="why">The mid-October pump window improvement to $4.65-$4.85 (from $4.75-$4.95) reflects Brent&rsquo;s Tuesday ceasefire dip entering the 3-4 week pipeline. For households managing weekly fuel budgets, the $0.28-$0.48 per gallon increase from current $4.37 to the mid-October estimate represents approximately $4-$7 per fill-up on a standard 15-gallon tank. The November window is still determined by whether Brent settles below $100 on a formal Hormuz reopening or returns above $105 on ceasefire collapse. Wednesday&rsquo;s supervised pause at $101.24 Brent sets the November pipeline at the current trajectory: roughly flat to slightly improved from mid-October.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>ISM Services Prices 74.0% (highest since July 2022 &ndash; pipeline to consumer prices in 60-90 days). Hourly earnings +3.0% YoY (slowest since 2021, real wages negative sixth month). Gas $4.37 (Oct 4), mid-Oct $4.65-$4.85 (improved on ceasefire). Consumer Credit (August) at 3:00 PM ET today is the week&rsquo;s first delinquency read.</p></div>
+        <div class="src"><b>Curated from</b> ISM &middot; BLS &middot; DOL &middot; AAA &middot; Bloomberg &middot; Federal Reserve</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <div class="strip">
+          <div><div class="k">Bitcoin</div><div class="v">$89,000</div><div class="d up">&#9650; Wed morning &middot; Uptober &middot; $1.2B ETF inflow day</div></div>
+          <div><div class="k">Ethereum</div><div class="v">$2,740</div><div class="d up">&#9650; Wed &middot; rate-path easing a tailwind</div></div>
+          <div><div class="k">XRP</div><div class="v">$1.52</div><div class="d up">&#9650; Wed &middot; ceasefire risk-on &middot; CLARITY Act unchanged</div></div>
+        </div>
+        <p class="setup">Bitcoin ETFs recorded $1.2 billion in net inflows on October 6 &ndash; the second-largest single-day haul since the first US spot Bitcoin ETFs launched in January 2024 &ndash; with BlackRock&rsquo;s IBIT leading the institutional flow. <b>The ceasefire-driven risk-on environment channeled capital broadly</b> into equities (S&amp;P, Nasdaq records) and crypto simultaneously, the first session this cycle where both asset classes hit record or near-record levels on the same day. Bitcoin at $89,000 on Wednesday morning reflects the overnight carry from Tuesday&rsquo;s institutional ETF session combined with the Uptober seasonal momentum that has characterized the early weeks of October 2026.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Bitcoin (Wednesday morning October 7):</span> <span class="num">$89,000</span> <span class="d up">&#9650; up from $85,500 Tue morning &middot; $1.2B ETF inflows Oct 6 &middot; IBIT led &middot; FOMC minutes 2:00 PM ET next catalyst</span><span class="why">Bitcoin&rsquo;s move from $85,500 (Tuesday morning) to $89,000 (Wednesday morning) reflects the combination of Tuesday&rsquo;s massive ETF inflow day, the ceasefire-driven risk-on capital rotation, and the Uptober seasonal pattern that has held since early October. The $1.2 billion single-day ETF inflow &ndash; second only to the post-approval inflow days of early 2024 &ndash; is primarily an institutional buying event: IBIT absorbed the largest single-issuer share with approximately $400 million. Wednesday&rsquo;s FOMC minutes at 2:00 PM ET are the nearest Bitcoin-relevant macro catalyst. A hawkish framing (higher-for-longer framing) would pressure Bitcoin as the rate-repricing premium tightens; a cautious framing extends the rate-easing narrative that has supported the Uptober rally.</span></div>
+          <div class="line"><span class="lb">Ethereum (Wednesday morning October 7):</span> <span class="num">$2,740</span> <span class="d up">&#9650; up from $2,706 Tue morning &middot; 10-year at 5.18% eased rate headwind &middot; CLARITY Act Senate status unchanged</span><span class="why">Ethereum&rsquo;s move from $2,706 to $2,740 reflects the 10-year yield easing from 5.278% to 5.18% on the ceasefire, reducing the discount-rate headwind that had pressed Ethereum lower Monday. Ethereum&rsquo;s rate sensitivity &ndash; which drove +2.39% outperformance on the October payrolls repricing session &ndash; works in its favor when yields fall. The CLARITY Act Senate status remains unchanged: the bill passed the House in July 2025 and the Senate Banking Committee in May 2026, but no full Senate floor vote has been scheduled. Wednesday&rsquo;s FOMC minutes are the near-term Ethereum catalyst via the rate-path channel; any CLARITY Act Senate floor scheduling announcement would be the structural Ethereum catalyst for Q4.</span></div>
+          <div class="line"><span class="lb">XRP (Wednesday morning October 7):</span> <span class="num">$1.52</span> <span class="d up">&#9650; up from $1.49 Tue morning &middot; ceasefire risk-on &middot; Oct escrow release upcoming &middot; ETF cumulative ~$1.51B &middot; CLARITY Act unchanged</span><span class="why">XRP at $1.52 reflects the broad ceasefire-driven risk-on environment carrying the asset from Tuesday&rsquo;s $1.49. October&rsquo;s Ripple escrow release of approximately 1 billion XRP remains the nearest XRP-specific supply-side input this month. XRP ETF cumulative net inflows stand at approximately $1.51 billion since launch across seven US spot ETFs. The CLARITY Act&rsquo;s full Senate vote remains the structural catalyst for Standard Chartered&rsquo;s $8.00 XRP target &ndash; neither the CLARITY Act vote nor the $10 billion ETF inflow threshold is imminent. On-chain metrics (daily active addresses, network growth from Santiment) remain steady per available readings.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>BTC $89,000 (up from $85,500, $1.2B ETF inflows Oct 6 &ndash; second largest single-day haul since launch &ndash; IBIT led). ETH $2,740 (up from $2,706, 10-year easing a tailwind). XRP $1.52 (up from $1.49, ceasefire risk-on, Oct escrow ahead). FOMC minutes 2:00 PM ET today are the week&rsquo;s primary macro catalyst for all three. CLARITY Act Senate unchanged.</p></div>
+        <div class="src"><b>Curated from</b> CoinTelegraph &middot; Farside Investors &middot; FinanceFeeds &middot; SEC EDGAR &middot; Santiment &middot; CoinDesk &middot; Investing.com</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="world">Around the World</h2>
+        <div class="strip">
+          <div><div class="k">Nikkei 225</div><div class="v">71,220</div><div class="d up">&#9650; +0.91% Wed &middot; ceasefire carry extended</div></div>
+          <div><div class="k">Hang Seng</div><div class="v">24,381</div><div class="d up">&#9650; +0.71% Wed &middot; extending Tue recovery</div></div>
+          <div><div class="k">Yen / Dollar</div><div class="v">157.44</div><div class="d up">&#9650; Yen weakening &middot; risk-on reduces safe-haven bid</div></div>
+        </div>
+        <p class="setup">Asian markets extended gains on Wednesday as the US-Iran ceasefire announcement provided a second day of positive carry from US equities. <b>The Nikkei added +0.91% to 71,220</b>, building on Tuesday&rsquo;s session that followed the Nasdaq&rsquo;s all-time record. The Hang Seng gained +0.71%, continuing its recovery from last Friday&rsquo;s compression session. The yen weakened to 157.44 &ndash; a counterintuitive move after a risk-on day, but consistent with the structural Fed-BoJ rate differential that has dominated the yen throughout 2026.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Nikkei 225 (Wednesday October 7 session):</span> <span class="num">71,220</span> <span class="d up">&#9650; +0.91% &middot; Nasdaq record + ceasefire overnight carry &middot; tech and export names led</span><span class="why">The Nikkei&rsquo;s +0.91% Wednesday session builds on Tuesday&rsquo;s advance from 70,576, producing a three-day gain since Friday&rsquo;s pre-payrolls positioning. The ceasefire announcement provided direct positive carry for Japan&rsquo;s technology-heavy index &ndash; the Nasdaq&rsquo;s all-time record and the oil-price reduction both benefit Japan&rsquo;s equity market, which is sensitive to both AI-tech sentiment and energy import costs. Japan as one of the world&rsquo;s largest crude importers benefits directly from lower Brent prices, reducing the import-cost headwind that had pressured earnings of industrial and transportation names.</span></div>
+          <div class="line"><span class="lb">Hang Seng (Wednesday October 7 session):</span> <span class="num">24,381</span> <span class="d up">&#9650; +0.71% &middot; extending two-day ceasefire recovery &middot; Brent above $101 still a cost headwind</span><span class="why">The Hang Seng&rsquo;s +0.71% Wednesday session continues the recovery from last Friday&rsquo;s -2.6% compression. Brent at $101.24 &ndash; still above $100 despite Tuesday&rsquo;s ceasefire dip &ndash; remains a specific cost headwind for Hong Kong&rsquo;s industrial and transportation names that import energy. The Hang Seng&rsquo;s three-day recovery from Friday is approximately +1.45% &ndash; not yet fully recouping Friday&rsquo;s loss, reflecting the market&rsquo;s incomplete confidence in the ceasefire&rsquo;s permanence. A formal Hormuz reopening announcement that sends Brent below $95 would close the recovery gap quickly.</span></div>
+          <div class="line"><span class="lb">Yen / Dollar (Wednesday October 7):</span> <span class="num">157.44</span> <span class="d up">&#9650; yen weakening on risk-on &middot; safe-haven bid reduced by ceasefire &middot; Fed-BoJ differential dominant</span><span class="why">The yen&rsquo;s weakening to 157.44 from Tuesday&rsquo;s 158.16 area (a slight yen strengthening followed by a give-back) reflects the dominant structural force: the Fed-BoJ rate differential (3.75-4.00% versus near-zero BoJ) outweighs both the safe-haven reduction from the ceasefire and the positive energy-cost news for Japan. In the risk-on environment Tuesday created, carry-trade investors borrowed yen to fund risk asset positions &ndash; yen weakness is the mechanical outcome of a ceasefire rally, not a signal about Japan&rsquo;s economic health. For Japanese exporters, the weaker yen continues to provide revenue support on overseas sales.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Nikkei 71,220 (+0.91%, ceasefire carry + Nasdaq record extended; tech and export leadership). Hang Seng 24,381 (+0.71%, recovery ongoing, Brent above $101 still a partial headwind). Yen 157.44 (weakening on risk-on &ndash; carry trade mechanics). Asian markets confirming the ceasefire-driven re-rating into Wednesday&rsquo;s FOMC minutes.</p></div>
+        <div class="src"><b>Curated from</b> Bloomberg &middot; Yahoo Finance &middot; Investing.com &middot; Trading Economics &middot; HL Markets</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="events">The Week Ahead</h2>
+        <div class="strip">
+          <div><div class="k">Today Oct 7</div><div class="v">FOMC Minutes</div><div class="d flat">2:00 PM ET &middot; terminal rate framing</div></div>
+          <div><div class="k">Today Oct 7</div><div class="v">Consumer Credit</div><div class="d flat">3:00 PM ET &middot; August delinquency data</div></div>
+          <div><div class="k">Thursday Oct 8</div><div class="v">PMMS + Claims</div><div class="d flat">Third above-7% week likely</div></div>
+        </div>
+        <p class="setup">Wednesday carries two afternoon data releases: FOMC minutes at 2:00 PM ET and Consumer Credit (August) at 3:00 PM ET. The minutes are the week&rsquo;s rate-defining event. Consumer Credit follows immediately after, carrying the August 90-plus-day delinquency data that the market will read against Tuesday&rsquo;s stock market records. <b>Thursday&rsquo;s Freddie Mac PMMS</b> closes the week for mortgage borrowers. Weekly initial claims at 8:30 AM ET Thursday are the first post-payrolls jobs data to test whether September&rsquo;s 29,000 figure is the start of a trend.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Wednesday October 7 &ndash; FOMC minutes (2:00 PM ET):</span> <span class="d flat">September 15-16 meeting &middot; terminal rate framing &middot; services inflation weight &middot; December scenario</span><span class="why">The FOMC minutes release is the most significant scheduled event of the week. Key questions the text will settle: (1) Did the committee frame the 4.10% terminal rate as a ceiling or a floor for this cycle? (2) How robustly did the 16-of-18 dot plot members support one more 2026 hike &ndash; was it a strong consensus or a narrow one? (3) Did any member specifically cite services inflation as a risk factor, even before the ISM Prices 74.0 reading confirmed it? The ceasefire has slightly eased the energy-inflation pressure since September 16; the minutes will show whether the committee already foresaw services acceleration as the dominant December variable regardless of energy prices. A hawkish-reading minutes (terminal as a floor, strong December consensus) would push the 10-year from 5.18% back toward 5.25-5.28% and re-price October hike odds above 35%.</span></div>
+          <div class="line"><span class="lb">Wednesday October 7 &ndash; Consumer Credit (August, 3:00 PM ET):</span> <span class="d flat">August data &middot; 90+ day delinquency focus &middot; follows FOMC minutes by 60 min</span><span class="why">Consumer Credit arrives 60 minutes after the FOMC minutes, making Wednesday afternoon a two-data-point sequence. The August delinquency read is the week&rsquo;s first direct signal on household financial stress: Q3 2026 marked the fourth consecutive quarter of rising 90-plus-day card delinquency per the New York Fed data, and August Consumer Credit will show whether that trend accelerated through the summer. In the context of Tuesday&rsquo;s equity records, a rising delinquency number would signal that the K-shaped divergence between asset-holders and wage-earners is widening even as the market price levels suggest aggregate prosperity. The data releases sequentially with the FOMC minutes &ndash; the rate-path read from minutes sets the framework, then the household-stress read completes Wednesday&rsquo;s picture.</span></div>
+          <div class="line"><span class="lb">Thursday October 8:</span> <span class="d flat">Freddie Mac PMMS at 12:00 PM ET &middot; est. 7.10&ndash;7.18% &middot; Weekly claims 8:30 AM ET &middot; third above-7% week probable</span><span class="why">Thursday&rsquo;s PMMS closes the week&rsquo;s rate story. At Wednesday morning&rsquo;s 5.18% 10-year, the estimate tracks toward 7.10-7.18%, with Wednesday afternoon&rsquo;s FOMC minutes as the final swing input. A third consecutive above-7% PMMS would be the first such streak since 2007. Weekly initial jobless claims at 8:30 AM ET are the first claims data following September&rsquo;s 29,000 payrolls miss &ndash; two consecutive weeks below 200,000 preceded the miss, so Thursday&rsquo;s claims figure is the leading indicator of whether the labor market deceleration is deepening or stabilizing. Claims above 220,000 would signal a broadening softening; below 200,000 would suggest September was a weather-or-timing anomaly.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>FOMC minutes today 2:00 PM ET &ndash; the week&rsquo;s rate decision. Consumer Credit (August) today 3:00 PM ET &ndash; household delinquency read. Thursday: PMMS (est. 7.10-7.18%, third above-7% week probable) + Weekly claims 8:30 AM ET. Wednesday&rsquo;s two afternoon releases together define the week&rsquo;s rate-path and household-stress picture.</p></div>
+        <div class="src"><b>Curated from</b> Federal Reserve &middot; BEA &middot; Freddie Mac &middot; DOL &middot; CME FedWatch &middot; Bloomberg &middot; Kiplinger</div>
+        </div>
+
+        <div class="disclaimer">
+          <p>This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.</p>
+          <p class="asof">Figures reflect the latest readings available as of Wednesday, October 7, 2026, before the US market open. Market prices reflect Tuesday October 6 closes and Wednesday morning pre-market readings; crypto prices reflect early Wednesday morning trading. Sources are listed at the end of each section.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#week-opens"><span class="dot"></span>How Wednesday Opens</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_october6_2026.html">October 6, 2026</a></li>
+          <li><a href="market_pulse_october5_2026.html">October 5, 2026</a></li>
+          <li><a href="market_pulse_october4_2026.html">October 4, 2026</a></li>
+          <li><a href="market_pulse_october3_2026.html">October 3, 2026</a></li>
+          <li><a href="market_pulse_october2_2026.html">October 2, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We&rsquo;re looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+  </script>
+</body>
+</html>
