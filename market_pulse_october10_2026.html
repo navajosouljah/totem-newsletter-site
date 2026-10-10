@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - October 10, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:28px 0 0;text-align:center;}
+  .body{padding-top:0;}
+  h1.headline{text-wrap:balance;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:clamp(34px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;color:var(--ink);margin:56px 0 0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  /* ---- v2 section treatment ---- */
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .strip + p.setup{font-style:italic;}
+  .sec-v2 .strip + p.setup b{font-style:italic;}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);position:relative;padding-left:22px;}
+  .sec-v2 .line::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:18px;}
+  .sec-v2 .opens li{padding-left:22px;position:relative;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens li::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .opens li b{font-weight:700;color:var(--ink);}
+  .sec-v2 .opens li:target{background:var(--wash);box-shadow:0 0 0 10px var(--wash);border-radius:2px;}
+  .sec-v2 .opens a.more{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;margin-left:6px;}
+  .sec-v2 .opens a.more:hover{border-bottom:2px solid var(--gold);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p.asof{color:var(--muted);margin-bottom:0;}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_october10_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_13.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Saturday, October 10, 2026</span></div>
+        <h1 class="headline">Stocks Closed the Week in the Black. The Corn Harvest Just Got Bigger.</h1>
+      </div>
+
+      <div class="body">
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="setup lead-first">The week ended where it started: higher. Friday's broad rally - Dow up 0.83%, S&P up 0.59%, Nasdaq up 0.64% - recovered most of Thursday's chip-driven loss and lifted all three indexes into positive territory for the week. <b>The mechanism</b>: President Trump said the US would not strike Iran before the November 3 midterms, oil eased from Thursday's spike, Treasury yields held below their 24-year highs, and buyers returned to AI names they had sold on the OpenAI revenue revision.</p>
+        <p class="setup">Friday delivered two data releases in opposite directions. The University of Michigan's preliminary October sentiment fell to <b>46.3</b>, missing the 47.6 consensus and its worst reading since May, as one-year inflation expectations ticked up to 4.7%. At noon ET, USDA's WASDE raised the US corn yield forecast to <b>181.2 bushels per acre</b> - sharply above the 177.7 traders had expected - sending December corn futures briefly limit-down before they recovered to close down 20.5 cents at $4.79&frac34;. Meanwhile, Hurricane Isaias made landfall near Destin, Florida as a Category 2 storm at 9:39 PM ET, leaving more than 860,000 customers without power across the Southeast.</p>
+        <p class="setup">The week ahead opens Monday with bond markets closed for Columbus Day and stock markets open. Tuesday brings the first real test of third-quarter results: JPMorgan, Goldman Sachs, Wells Fargo and Citigroup all report before the open. September CPI follows Wednesday at 8:30 AM ET - the data point that will settle December hike odds, currently near <b>78%</b>. <b>Curated from</b> Reuters &middot; CNBC &middot; Bloomberg &middot; University of Michigan &middot; USDA &middot; CME FedWatch &middot; AAA &middot; NHC</p>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="week-opens">How the Week Closed</h2>
+        <ul class="opens">
+          <li id="open-1"><b>Where savers can still lock 4.75% ahead of a likely December hike.</b> E*TRADE's 1-year CD at 4.75% APY with no minimum deposit still leads Bankrate's list, 262 basis points above the 2.13% national average. With futures pricing about a 78% chance of another hike by December, locking now or waiting to ladder is the timing question this week. <a class="more" href="#savings">Savings &amp; CD &rarr;</a></li>
+          <li id="open-2"><b>What Tuesday's big-bank earnings reveal about credit at 7.40% mortgages.</b> JPMorgan, Goldman Sachs, Wells Fargo and Citigroup all report Tuesday before the open. Their loan quality numbers answer whether the 12.9% credit card delinquency rate - the highest in a year - is broadening into prime borrowers or staying contained at the lower-income end. <a class="more" href="#stocks">Stock Market &rarr;</a></li>
+          <li id="open-3"><b>Why the corn crop just got bigger - and what it means for grocery bills over winter.</b> USDA raised its corn yield forecast to 181.2 bushels per acre, 3.5 above what the market expected and above September's estimate, sending December futures briefly limit-down. A larger corn surplus puts downward pressure on feed costs, which flow through to meat and processed food prices over the coming months. <a class="more" href="#crops">Crop Weather &rarr;</a></li>
+          <li id="open-4"><b>How fast Gulf oil output restarts after Isaias sets this week's pump price direction.</b> Hurricane Isaias made landfall near Destin, Florida as Category 2 at 9:39 PM ET Friday, keeping about 63% of Gulf of Mexico oil production offline. Brent settled at $102.91 on Friday, down 1.3%, before the storm hit. The restart pace over the weekend sets Monday futures. <a class="more" href="#energy">Energy &amp; Gas &rarr;</a></li>
+          <li id="open-5"><b>What the weakest consumer confidence since May says about holiday spending ahead.</b> The University of Michigan's preliminary October index fell to 46.3, below the 47.6 consensus, in its third straight monthly decline, as one-year inflation expectations rose to 4.7%. Low layoffs provide a floor, but rising price expectations and 7.40% mortgage costs compress discretionary spending power heading into Q4. <a class="more" href="#household">Household Finance &rarr;</a></li>
+        </ul>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">7,811.54</div><div class="d up">&#9650; +0.59% Fri close &middot; weekly gain +1.15%</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">27,366.17</div><div class="d up">&#9650; +0.64% Fri &middot; AI names recovered</div></div>
+          <div><div class="k">Dow</div><div class="v">51,654.95</div><div class="d up">&#9650; +0.83% Fri &middot; best day of the week</div></div>
+        </div>
+        <p class="setup">Friday's rally was broad and enough to close all three indexes higher for the week. <b>The S&amp;P gained 1.15% over five days</b>, recovering from Thursday's chip-driven dip; the Dow added 0.93% and the Nasdaq 0.64%. AI hardware names recovered about half of Thursday's loss, and energy led as Brent eased rather than spiked after the Iran pledge.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (Friday October 9 close):</span> <span class="num">7,811.54</span> <span class="d up">&#9650; +0.59% &middot; +46.18 pts &middot; weekly gain +1.15%</span><span class="why">The index snapped a two-day losing streak. Broad participation on Friday reflected oil easing and steadier yields, giving sectors outside technology-hardware a lift. The S&amp;P remains within 0.4% of its intraweek record high of 7,844.52.</span></div>
+          <div class="line"><span class="lb">Nasdaq (Friday October 9 close):</span> <span class="num">27,366.17</span> <span class="d up">&#9650; +0.64% &middot; +172.83 pts &middot; weekly gain +0.64%</span><span class="why">Chipmakers recovered roughly half of Thursday's 3.4% drop as investors treated the OpenAI revenue revision as a refinement, not a breakdown. The Nasdaq is still up more than 80% in 2026, which is why a single earnings revision moved it so sharply in the first place.</span></div>
+          <div class="line"><span class="lb">Dow (Friday October 9 close):</span> <span class="num">51,654.95</span> <span class="d up">&#9650; +0.83% &middot; +423.31 pts &middot; weekly gain +0.93%</span><span class="why">Energy and financial names led the Dow's best day of the week. Bank stocks moved higher ahead of Tuesday's earnings. The Dow's heavier exposure to financials means JPMorgan and Goldman Sachs results directly influence this index's near-term direction.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>A winning week despite midweek turbulence. The test is Tuesday's bank earnings: loan quality numbers with mortgages at 7.40% and card delinquency at 12.9% will tell the market whether the consumer is resilient or cracking at the edges.</p></div>
+        <div class="src"><b>Curated from</b> Reuters &middot; CNBC &middot; TheStreet &middot; Dow Jones Market Data</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <div class="strip">
+          <div><div class="k">Fed funds</div><div class="v">3.75&ndash;4.00%</div><div class="d flat">Hiked Sept 16 &middot; unchanged</div></div>
+          <div><div class="k">2-year</div><div class="v">4.80%</div><div class="d up">&#9650; +5 bps Fri close &middot; Oct 9</div></div>
+          <div><div class="k">10-year</div><div class="v">5.24%</div><div class="d up">&#9650; +2 bps Fri close &middot; off 24-year high</div></div>
+        </div>
+        <p class="setup">The 10-year yield edged up 2 basis points Friday to close at 5.24%, still well below Wednesday's intraday high above 5.36%. <b>The yield curve is positively sloped</b> for the first time since 2022, with the 10-year running 44 basis points above the 2-year, a sign markets expect cuts eventually even as near-term hike odds stay elevated.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">10-year Treasury (Friday October 9 close):</span> <span class="num">5.24%</span> <span class="d up">&#9650; from 5.22% on Oct 8 &middot; spread of 44 bps above the 2-year</span><span class="why">The 10-year has held below Wednesday's spike for two straight sessions, a sign auction demand was real. At 5.24%, long-term borrowing costs remain at the highest sustained level since 2002, keeping mortgage and business rates elevated. Bond markets close Monday for Columbus Day.</span></div>
+          <div class="line"><span class="lb">2-year Treasury (Friday October 9 close):</span> <span class="num">4.80%</span> <span class="d up">&#9650; from 4.75% on Oct 8</span><span class="why">The 2-year tracks Fed policy most closely. Its rise Friday reflects traders keeping December hike risk in the price even as October 28 hike odds stand near 18%. Fed Governor Waller said more hikes are needed but not necessarily at back-to-back meetings.</span></div>
+          <div class="line"><span class="lb">Fed path (CME FedWatch, October 9):</span> <span class="num">~78%</span> <span class="d flat">chance of at least one more hike by December 9 &middot; October 28 hold odds ~82%</span><span class="why">September CPI on Wednesday, October 14 at 8:30 AM ET is the next major input. A reading above consensus strengthens the December hike case and would push yields higher. The core PCE was 3.4% in August.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Rates are high but finding buyers at these levels. The curve's return to a positive slope is a small structural improvement. The next Fed catalyst is Wednesday's CPI - the print most likely to move December hike odds off 78%.</p></div>
+        <div class="src"><b>Curated from</b> US Treasury &middot; ETFdb &middot; Seeking Alpha &middot; CME FedWatch &middot; Federal Reserve</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <div class="strip">
+          <div><div class="k">Top 1-yr CD</div><div class="v">4.75%</div><div class="d up">&#9650; E*TRADE &middot; no minimum &middot; Bankrate leader</div></div>
+          <div><div class="k">Top HYSA</div><div class="v">4.25%</div><div class="d flat">CIT Platinum &middot; six-month promo rate</div></div>
+          <div><div class="k">Nat'l avg 1-yr CD</div><div class="v">2.13%</div><div class="d flat">Bankrate &middot; 262-bp gap to best</div></div>
+        </div>
+        <p class="setup">The best 1-year CD on Bankrate's list remains at <b>4.75% at E*TRADE</b> with no minimum deposit, unchanged from Thursday. With the 10-year above 5% and the Fed leaning toward another hike, online CD rates have held while the typical bank still pays about a third of that. The UMich inflation expectation reading Friday - 4.7% for one year - adds context: savers who lock now are pricing in roughly what the bond market expects.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Best 1-year CD (Bankrate, October 2026):</span> <span class="num">4.75% APY</span> <span class="d up">&#9650; E*TRADE &middot; $0 minimum &middot; Barclays 4.50% &middot; Popular Direct 4.50% ($10,000 minimum)</span><span class="why">On $25,000, the 4.75% rate earns about $1,187 a year, against the $532 the 2.13% national average returns - a $655 annual gap. The CD locks that rate for twelve months regardless of what the Fed does in October, December or beyond.</span></div>
+          <div class="line"><span class="lb">Top high-yield savings (Bankrate, October 2026):</span> <span class="num">4.25% APY</span> <span class="d flat">CIT Bank Platinum Savings &middot; $100 minimum &middot; promotional</span><span class="why">The 4.25% is a six-month promotional boost. After it ends, balances of $5,000 or more earn CIT's standard rate. Savings keeps funds accessible; the CD locks the rate for the full year but charges a penalty for early withdrawal.</span></div>
+          <div class="line"><span class="lb">National average 1-year CD (Bankrate, October 2026):</span> <span class="num">2.13% APY</span> <span class="d flat">262 bps below the best 1-year offer</span><span class="why">Large banks move slowly on deposit rates even when the Fed raises. The gap has persisted for more than a year. Moving cash online is the simplest improvement available this weekend for savers at branch banks.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Savers have a clear choice: lock 4.75% for a year with no minimum, or stay liquid at 4.25% with a promotional rate. With December hike odds at 78%, the locked CD rate is the one to compare against what comes next from the Fed.</p></div>
+        <div class="src"><b>Curated from</b> Bankrate &middot; Forbes Advisor &middot; Wall Street Journal</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <div class="strip">
+          <div><div class="k">Brent</div><div class="v">$102.91</div><div class="d down">&#9660; -1.3% Fri settle &middot; Iran pledge eased premium</div></div>
+          <div><div class="k">WTI</div><div class="v">$90.40</div><div class="d down">&#9660; -1.2% Fri settle &middot; Gulf shut-ins continue</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.36</div><div class="d flat">Oct 8 reading &middot; pre-landfall</div></div>
+        </div>
+        <p class="setup">Oil eased Friday as President Trump's midterm pledge reduced the Iran risk premium, even as Hurricane Isaias made Category 2 landfall near Destin, Florida late Friday night, leaving more than 860,000 customers without power. <b>The near-term variable</b>: how quickly operators restart the roughly 63% of Gulf of Mexico oil output that remains offline determines Monday's crude futures direction.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Brent crude (October 9 settlement):</span> <span class="num">$102.91/barrel</span> <span class="d down">&#9660; -1.3% &middot; from $104.28 Thursday &middot; Iran pledge the driver</span><span class="why">Friday's dip reflects the Strait of Hormuz risk premium easing after Trump's statement. Brent is still elevated relative to early September's mid-$90s, and the hurricane's impact on Gulf supply adds a counter-pressure that could slow the pullback in crude next week.</span></div>
+          <div class="line"><span class="lb">WTI crude (October 9 settlement):</span> <span class="num">$90.40/barrel</span> <span class="d down">&#9660; -1.2% &middot; from $91.49 Thursday &middot; ~1.28 million barrels per day offline</span><span class="why">Operators evacuated 129 of 371 production platforms and eight of 11 rigs as Isaias approached. Post-storm surveys typically take 24-48 hours, so the earliest platform restarts would come Monday or Tuesday. Faster-than-expected restarts could push WTI toward $88; slower ones keep the $90 floor intact.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, October 8):</span> <span class="num">$4.36/gallon</span> <span class="d flat">last reading before Isaias landfall &middot; autumn record pace</span><span class="why">Gas prices typically lag crude moves by one to two weeks. The October 8 reading predates the hurricane. AAA will update Saturday; the direction depends on both crude easing and refinery status along the Gulf Coast. Diesel tracks crude more directly and matters for freight and farm costs.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Friday's crude easing is constructive, but Hurricane Isaias leaves a supply uncertainty that could keep prices from falling this week. The restart timeline and any refinery damage from the storm are the numbers to watch Monday morning.</p></div>
+        <div class="src"><b>Curated from</b> Dow Jones Market Data &middot; Reuters &middot; AAA &middot; Bureau of Safety and Environmental Enforcement &middot; CNN &middot; AccuWeather</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <div class="strip">
+          <div><div class="k">Gold</div><div class="v">~$4,199</div><div class="d up">&#9650; ~+1.6% Fri &middot; softer dollar</div></div>
+          <div><div class="k">Silver</div><div class="v">~$60.87</div><div class="d up">&#9650; ~+2.0% Fri &middot; precious and industrial bid</div></div>
+          <div><div class="k">Copper</div><div class="v">$6.62</div><div class="d up">&#9650; +2.5% Fri rebound &middot; COMEX</div></div>
+        </div>
+        <p class="setup">Metals rose Friday as oil eased and the dollar softened. <b>Gold traded near $4,199</b> in late Friday session, up about 1.6% from Thursday; silver added about 2% to near $60.87. Copper rebounded sharply, recovering most of Thursday's rate-driven loss. The week ends with precious metals and base metals moving in the same direction for the first time since Monday.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Gold (Friday October 9 late session):</span> <span class="num">~$4,199/oz</span> <span class="d up">&#9650; ~+1.6% &middot; Goldprice.org NY close ~$4,144 &middot; Kitco late ~$4,199</span><span class="why">Friday's gain reflects a softer dollar rather than a fear trade - oil fell at the same time, which would be unusual for a pure flight-to-safety move. Gold is up roughly 35% year-to-date, reflecting the high-rate environment that keeps real yields positive and attracts institutional buyers.</span></div>
+          <div class="line"><span class="lb">Silver (Friday October 9 late session):</span> <span class="num">~$60.87/oz</span> <span class="d up">&#9650; ~+2.0% &middot; Kitco &middot; industrial and precious demand</span><span class="why">Silver outpaced gold on a percentage basis Friday, reflecting its dual role as a precious metal and an industrial input for solar panels and data center hardware. The move held near the $60 level, a level that has provided support through October.</span></div>
+          <div class="line"><span class="lb">Copper (COMEX, Friday October 9 afternoon):</span> <span class="num">$6.62/lb</span> <span class="d up">&#9650; +2.5% &middot; from $6.519 on Thursday</span><span class="why">Copper's rebound is a reversal of Thursday's profit-taking on the higher-rate outlook. The structural demand case - grid upgrades, data center construction, EV manufacturing - is intact, and Friday's move suggests buyers treat dips as entry points rather than warning signs.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Friday's metals gain was a dollar and rates story, not a fear trade. Copper's sharp rebound confirms the structural demand case is holding. Gold near $4,200 reflects buying that prefers hard assets at a 5.24% 10-year - a relationship that has held all year.</p></div>
+        <div class="src"><b>Curated from</b> Goldprice.org &middot; Kitco &middot; Stockmarketwatch &middot; Dow Jones</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <div class="strip">
+          <div><div class="k">Corn G/E</div><div class="v">54%</div><div class="d flat">Week ending Oct 4 &middot; USDA</div></div>
+          <div><div class="k">Soybeans G/E</div><div class="v">57%</div><div class="d flat">Week ending Oct 4 &middot; USDA</div></div>
+          <div><div class="k">WASDE corn yield</div><div class="v">181.2 bpa</div><div class="d up">&#9650; Shock: +3.5 vs expected 177.7</div></div>
+        </div>
+        <p class="setup">Friday's WASDE report delivered the grain market's biggest surprise of the year. <b>USDA raised the corn yield forecast to 181.2 bushels per acre</b>, up 2.7 from September's 178.5 and 3.5 above the pre-report consensus of 177.7. December corn futures briefly traded limit-down before recovering to close at $4.79&frac34;, down 20.5 cents. Soybeans were also revised upward to a projected record yield.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">WASDE corn yield (USDA October 9, noon ET):</span> <span class="num">181.2 bpa</span> <span class="d up">&#9650; +2.7 from September &middot; vs expected 177.7 &middot; production 16.03 billion bushels &middot; ending stocks 1.849 billion bu</span><span class="why">A 3.5-bpa upside surprise implies substantially larger supply than the market had priced. Larger ending stocks pressure grain prices at the farm level and flow - through feed chains - to meat, dairy and processed food costs over the coming months. The limit-down move reflects how aggressively the trade had leaned toward a smaller crop.</span></div>
+          <div class="line"><span class="lb">WASDE soybean yield (USDA October 9):</span> <span class="num">53.1 bpa</span> <span class="d up">&#9650; record projected yield &middot; production 4.562 billion bushels &middot; domestic carryout raised 23 million bu</span><span class="why">Record soybean yield adds to the supply-side picture for oilseeds and animal feed. The WASDE cut export projections by 25 million bushels to partially offset the production gain, keeping the net carryout increase modest.</span></div>
+          <div class="line"><span class="lb">Corn harvest progress (USDA Crop Progress, week ending October 4):</span> <span class="num">23% harvested &middot; 54% G/E</span> <span class="d down">&#9660; behind 27% five-year average &middot; wet September delayed pace</span><span class="why">Harvest is running late after a wet second half of September across Iowa and Nebraska. Hurricane Isaias's moisture track moves northeast after landfall, away from the main corn belt. The next weekly Crop Progress report is Monday, October 12.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>The corn market learned Friday that there is more supply than expected. Futures fell sharply and may stay under pressure until the harvest confirms the yield estimate. For consumers, a larger crop is one pressure that works in their favor over the winter - the translation to store shelves takes months but the signal is clear.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; DTN &middot; AgWeb &middot; HAAWKS &middot; McKeany-Flavell</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <div class="strip">
+          <div><div class="k">30-yr mortgage (Freddie Mac)</div><div class="v">7.40%</div><div class="d up">&#9650; +0.12 &middot; Oct 8 PMMS &middot; highest 2026</div></div>
+          <div><div class="k">10-year</div><div class="v">5.24%</div><div class="d up">&#9650; +2 bps Fri</div></div>
+          <div><div class="k">Tariff Day</div><div class="v">Day 60</div><div class="d flat">US 50% softwood &middot; no relief</div></div>
+        </div>
+        <p class="setup">Mortgage rates held at 7.40% in the latest Freddie Mac weekly survey (October 8), for a seventh straight weekly rise, up from 6.30% a year ago. The 10-year yield's slight uptick Friday to 5.24% suggests the next Freddie Mac reading, published Thursday October 15, could rise further unless yields reverse. <b>Hurricane Isaias</b> adds a near-term insurance and reconstruction factor for the Gulf Coast housing market.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">30-year fixed (Freddie Mac PMMS, October 8):</span> <span class="num">7.40%</span> <span class="d up">&#9650; from 7.28% &middot; 15-year 6.73% &middot; year-ago 6.30%</span><span class="why">At 7.40%, the monthly payment on a $400,000 loan is about $2,770, roughly $290 more than at last year's 6.30%. Buyers absorb that cost alongside high prices in most markets. Existing home sales data has reflected the impact: inventory is thin as sellers refuse to trade their locked-in lower rates.</span></div>
+          <div class="line"><span class="lb">10-year Treasury (Friday October 9 close):</span> <span class="num">5.24%</span> <span class="d up">&#9650; from 5.22% on Oct 8 &middot; the benchmark mortgages follow</span><span class="why">The 10-year edged up 2 basis points Friday. If it stays near 5.24% through Wednesday's CPI, next week's Freddie Mac survey would likely rise. Mortgage spreads over Treasuries have widened this year - the 10-year rising alone does not fully explain the mortgage rate increase.</span></div>
+          <div class="line"><span class="lb">Canada softwood lumber tariff (Day 60):</span> <span class="num">50%</span> <span class="d flat">US duty on Canadian softwood &middot; no relief announced</span><span class="why">The 50% duty raises framing costs for new construction. Builders have absorbed some of this through incentives and price adjustments, but it adds structural pressure to new-home affordability at a time when borrowing costs are already at 2026 highs.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Housing remains under its tightest financial conditions of 2026: borrowing at 7.40% and building with lumber tariffs in place. The Friday CPI print on Wednesday is the most likely near-term catalyst for any rate relief.</p></div>
+        <div class="src"><b>Curated from</b> Freddie Mac &middot; US Treasury &middot; Mortgage Daily &middot; Wall Street Journal</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <div class="strip">
+          <div><div class="k">UMich Sentiment</div><div class="v">46.3</div><div class="d down">&#9660; Miss: expected 47.6 &middot; five-month low</div></div>
+          <div><div class="k">Card delinq 90+</div><div class="v">12.9%</div><div class="d up">&#9650; NY Fed Q2 &middot; vs 12.2% a year ago</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.36</div><div class="d flat">Oct 8 reading &middot; autumn record pace</div></div>
+        </div>
+        <p class="setup">Consumer confidence fell for a third straight month in Friday's preliminary October reading. <b>The University of Michigan index landed at 46.3</b>, missing the 47.6 consensus and its lowest level since May's near-record reading of 44.8. One-year inflation expectations rose to 4.7% - higher than September's 4.6% - adding a signal the Fed tracks closely for any signs of entrenchment.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">University of Michigan consumer sentiment (preliminary October, released October 9):</span> <span class="num">46.3</span> <span class="d down">&#9660; from 48.1 in September &middot; consensus 47.6 &middot; five-month low</span><span class="why">Current conditions fell 12.2% from September while consumer expectations edged up 2.2%. The disconnect suggests households feel squeezed now by gas prices and mortgage costs but expect some improvement - a pattern that often holds in the month before a Fed hold. The final October reading comes October 23.</span></div>
+          <div class="line"><span class="lb">One-year inflation expectations (UMich, October preliminary):</span> <span class="num">4.7%</span> <span class="d up">&#9650; from 4.6% in September &middot; five-year expectations 3.5% from 3.4%</span><span class="why">The tick up in near-term inflation expectations matters to the Fed as a signal of psychology. Both the one-year and five-year readings are above the Fed's 2% target, and a sustained rise above 4.5% typically draws comment from policymakers. Bank earnings Tuesday will add another layer to this picture.</span></div>
+          <div class="line"><span class="lb">Credit card balances 90+ days delinquent (New York Fed, Q2 2026):</span> <span class="num">12.9%</span> <span class="d up">&#9650; from 12.2% in Q2 2025 &middot; Q3 2026 report due in November</span><span class="why">Bank earnings Tuesday will give the first Q3 credit card data. The New York Fed's Q2 reading was highest in four years, concentrated in lower-income households. Bank CEOs' guidance on charge-off trends will be the most-watched line on Tuesday's earnings calls.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Three straight months of falling sentiment, with inflation expectations rising, is a yellow flag for holiday spending. Layoffs remain low - initial claims held at 197,000 - which provides a floor. But cost pressure is real for households without financial cushion, and bank earnings Tuesday will show whether that stress is spreading.</p></div>
+        <div class="src"><b>Curated from</b> University of Michigan &middot; Bloomberg &middot; New York Fed &middot; Reuters &middot; US Department of Labor &middot; AAA</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <div class="strip">
+          <div><div class="k">Bitcoin</div><div class="v">~$82,550</div><div class="d up">&#9650; ~+0.7% Saturday morning</div></div>
+          <div><div class="k">Ethereum</div><div class="v">~$2,492</div><div class="d up">&#9650; ~+0.2% Saturday morning</div></div>
+          <div><div class="k">XRP</div><div class="v">~$1.41</div><div class="d flat">Saturday morning &middot; near flat</div></div>
+        </div>
+        <p class="setup">Crypto steadied into Saturday morning after a volatile week that closely tracked Treasury yields and the dollar. <b>Bitcoin held near $82,550</b>, up about 0.7% over the prior 24 hours, as Friday's oil easing and dollar softening gave the asset class a mild tailwind. The total crypto market cap was approximately $2.88 trillion on Saturday morning.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Bitcoin (Saturday morning October 10):</span> <span class="num">~$82,550</span> <span class="d up">&#9650; ~+0.7% over 24 hours &middot; CoinMarketCap</span><span class="why">Bitcoin tracked the rate-sensitive pattern all week: falling on the Fed-hawkish minutes Wednesday, stabilizing as yields eased Thursday, and gaining Friday alongside the softer dollar. The asset class remains one of the most interest-rate-sensitive in the market at current valuations.</span></div>
+          <div class="line"><span class="lb">Ethereum (Saturday morning October 10):</span> <span class="num">~$2,492</span> <span class="d up">&#9650; ~+0.2% &middot; near the $2,500 level</span><span class="why">Ethereum held near $2,500 through the week's volatility, moving with Bitcoin rather than on network-specific news. The SEC's proposed Regulation Crypto Assets is in public comment until October 20, providing a near-term regulatory backdrop.</span></div>
+          <div class="line"><span class="lb">XRP (Saturday morning October 10):</span> <span class="num">~$1.41</span> <span class="d flat">near flat &middot; CoinDesk &middot; CLARITY Act timing shifted</span><span class="why">XRP moved with the broader market rather than its own news. Congress's October recess and the November 3 midterm calendar make a Senate floor vote on the CLARITY Act this month effectively unavailable. Seven spot XRP ETFs hold about $1 billion in combined assets, but weekly inflows have fallen from $200 million to roughly $2 million as the legislative timeline extended.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Crypto is a rate proxy this week more than a narrative market. The Saturday stability is welcome, but the December hike outlook at 78% remains the primary headwind. Watch Wednesday's CPI - the same print the crypto market will trade on as a rate signal.</p></div>
+        <div class="src"><b>Curated from</b> CoinMarketCap &middot; CoinDesk &middot; Yahoo Finance &middot; SEC.gov</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="world">Around the World</h2>
+        <div class="strip">
+          <div><div class="k">Nikkei 225</div><div class="v">69,030.92</div><div class="d flat">Fri close &middot; -0.02% &middot; near flat</div></div>
+          <div><div class="k">Hang Seng</div><div class="v">24,211.35</div><div class="d up">&#9650; +1.79% Fri close</div></div>
+          <div><div class="k">Yen / Dollar</div><div class="v">~158.3</div><div class="d down">&#9660; yen weaker &middot; Oct 9</div></div>
+        </div>
+        <p class="setup">Asian markets closed Friday before Hurricane Isaias made landfall and before the WASDE corn surprise at noon ET. <b>Hong Kong gained 1.79%</b> and the Nikkei finished nearly flat. Asian exchanges are closed Saturday and will price in both the corn data and the hurricane news when they open Sunday night ET. Bond markets in the US close Monday for Columbus Day.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Nikkei 225 (Friday October 9 close):</span> <span class="num">69,030.92</span> <span class="d flat">-0.02% &middot; -11.19 pts &middot; near flat</span><span class="why">Japanese exporters held on the persistently weak yen, which boosts overseas revenue when translated back. The Nikkei is less exposed to the AI narrative than the Nasdaq and stayed resilient through Thursday's chip selloff. The BOJ meets in late October with the yen trading at historically weak levels.</span></div>
+          <div class="line"><span class="lb">Hang Seng (Friday October 9 close):</span> <span class="num">24,211.35</span> <span class="d up">&#9650; +1.79% &middot; +425.56 pts</span><span class="why">Hong Kong's weekly gain was the strongest in Asia, driven by materials and financials. The index has lagged the S&P 500's 2026 gains substantially, and Friday's move still leaves it well below its early-year levels. Chinese property and financial policy remain the key variables for the Hang Seng into year-end.</span></div>
+          <div class="line"><span class="lb">Yen per dollar (Bank of Japan, Friday October 9):</span> <span class="num">~158.3</span> <span class="d down">&#9660; yen weaker &middot; US-Japan rate gap the driver</span><span class="why">The 158 level reflects the gap between the Fed at 3.75-4.00% and the Bank of Japan near zero. A weak yen helps Japanese exporters but raises import costs for energy - a significant item for Japan with Brent above $100. The BOJ's intervention threshold is being tested.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Asian markets took Thursday's AI repricing in stride. When they reopen Sunday night ET, the WASDE corn shock and Hurricane Isaias will be their first major inputs. Bond markets close Monday - thin trading can amplify moves on either news item.</p></div>
+        <div class="src"><b>Curated from</b> Nikkei &middot; Bank of Japan &middot; Reuters &middot; Jiji Press &middot; Dow Jones</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="events">The Week Ahead</h2>
+        <div class="strip">
+          <div><div class="k">Monday Oct 12</div><div class="v">Columbus Day</div><div class="d flat">Bond markets closed &middot; stocks open</div></div>
+          <div><div class="k">Tuesday Oct 13</div><div class="v">Bank earnings</div><div class="d flat">JPM &middot; GS &middot; WFC &middot; C &middot; premarket</div></div>
+          <div><div class="k">Wednesday Oct 14</div><div class="v">September CPI</div><div class="d flat">8:30 AM ET &middot; December rate input</div></div>
+        </div>
+        <p class="setup">Bond markets close Monday for Columbus Day and stock markets remain open - thin trading can amplify moves as Asian markets price in the WASDE corn data and Isaias for the first time. <b>Tuesday's bank earnings</b> from JPMorgan, Goldman Sachs, Wells Fargo and Citigroup are the first major read on consumer and commercial credit quality at current rates. Wednesday's September CPI is the week's defining release for the Fed outlook.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Monday October 12 - Columbus Day:</span> <span class="d flat">Bond markets closed &middot; stock markets open &middot; Asian markets price WASDE and hurricane news</span><span class="why">Thin bond volume can amplify equity moves. Corn and soybean futures reopen Monday morning; the WASDE's 3.5-bpa corn surprise and the hurricane restart news both arrive at the same time for grain markets.</span></div>
+          <div class="line"><span class="lb">Tuesday October 13 - Bank earnings (premarket):</span> <span class="d flat">JPMorgan &middot; Goldman Sachs &middot; Wells Fargo &middot; Citigroup &middot; Morgan Stanley Wednesday</span><span class="why">The first read on Q3 credit quality arrives with mortgages at 7.40%, card delinquency at 12.9% and layoffs near multi-year lows. Bank stock valuations are near their 2026 highs; a softer-than-expected credit picture could reset them. Morgan Stanley and PNC report Wednesday.</span></div>
+          <div class="line"><span class="lb">Wednesday October 14 - September CPI (8:30 AM ET):</span> <span class="d flat">key input for the October 28 and December 9 Fed meetings &middot; December hike odds near 78%</span><span class="why">CPI is the data point most likely to move December hike odds off 78%. A reading above consensus strengthens the December case and would push yields higher; a cool print reinforces the hold case and could ease mortgage rates. Core PCE was 3.4% in August.</span></div>
+          <div class="line"><span class="lb">Thursday October 15 - Retail sales and PPI (8:30 AM ET):</span> <span class="d flat">spending and producer prices</span><span class="why">Retail sales with gas above $4 tests whether consumers are redirecting spending away from discretionary categories. PPI leads CPI by several months and is an early read on whether pipeline inflation is reaccelerating.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Tuesday's bank earnings and Wednesday's CPI arrive in the same week by design - together they tell the Q4 story on credit and inflation. Both are market-moving; a bad combination of results would put December hike odds above 85% and push the 10-year back toward its 24-year high.</p></div>
+        <div class="src"><b>Curated from</b> BLS &middot; CME FedWatch &middot; JPMorgan IR &middot; Goldman Sachs IR &middot; Dow Jones</div>
+        </div>
+
+        <div class="disclaimer">
+          <p>This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.</p>
+          <p class="asof">Figures reflect the latest readings available as of Saturday, October 10, 2026. Stock market prices reflect Friday October 9 closes; Treasury yields reflect Friday October 9 closes; crude oil reflects Friday October 9 settlements; commodity prices reflect Friday October 9 closing and late-session quotes; crypto prices reflect Saturday morning trading; crop data reflects the USDA WASDE released October 9 and Crop Progress through October 4; hurricane information reflects NHC reports through late Friday October 9. Sources are listed at the end of each section.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#week-opens"><span class="dot"></span>How the Week Closed</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_october9_2026.html">October 9, 2026</a></li>
+          <li><a href="market_pulse_october8_2026.html">October 8, 2026</a></li>
+          <li><a href="market_pulse_october7_2026.html">October 7, 2026</a></li>
+          <li><a href="market_pulse_october6_2026.html">October 6, 2026</a></li>
+          <li><a href="market_pulse_october5_2026.html">October 5, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We&rsquo;re looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+  </script>
+</body>
+</html>
