@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - October 14, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:28px 0 0;text-align:center;}
+  .body{padding-top:0;}
+  h1.headline{text-wrap:balance;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:clamp(34px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;color:var(--ink);margin:56px 0 0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  /* ---- v2 section treatment ---- */
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .strip + p.setup{font-style:italic;}
+  .sec-v2 .strip + p.setup b{font-style:italic;}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);position:relative;padding-left:22px;}
+  .sec-v2 .line::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:18px;}
+  .sec-v2 .opens li{padding-left:22px;position:relative;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens li::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .opens li b{font-weight:700;color:var(--ink);}
+  .sec-v2 .opens li:target{background:var(--wash);box-shadow:0 0 0 10px var(--wash);border-radius:2px;}
+  .sec-v2 .opens a.more{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;margin-left:6px;}
+  .sec-v2 .opens a.more:hover{border-bottom:2px solid var(--gold);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p.asof{color:var(--muted);margin-bottom:0;}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_october14_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_13.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Wednesday, October 14, 2026</span></div>
+        <h1 class="headline">Savers Now Have 95% Odds of a Raise. Gold Got 2% Cheaper.</h1>
+      </div>
+
+      <div class="body">
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="setup lead-first">September CPI landed hot at 8:30 AM ET: <b>3.7% headline</b> against a 3.6% consensus, with core at 2.6% against 2.5%. Gasoline rose 9.1% in the month and delivered half the increase, but core also ran 0.3% for a second straight month, so the Fed cannot file this as a fuel story. Rate markets repriced within minutes: the 2-year jumped 12 basis points to 4.92% and the 10-year climbed to 5.29%. Higher yields raise the discount rate on every growth stock and every mortgage quote at the same time. That is the whole mechanism.</p>
+        <p class="setup">The print turned October 28 from a settled hold into a live meeting. <b>CME FedWatch puts the odds of a quarter-point hike this month at 43.7%</b>, up from 22.1% on Tuesday, and the chance of at least one hike by year-end above 95%. Thursday's PPI and retail sales at 8:30 AM ET are the last prints that can cool that number before the Fed's blackout begins Saturday.</p>
+        <p class="setup">Top 1-year CDs still pay 4.75% APY this afternoon, and the odds now favor that rate moving higher, not lower. Bank of America missed on a $1.2 billion regulatory settlement while Morgan Stanley beat. The USDA's Monday report put corn at 33% harvested, ahead of the five-year average for the first time this season. <b>Curated from</b> BLS &middot; CME FedWatch &middot; US Treasury &middot; Bankrate &middot; USDA NASS &middot; CNBC &middot; Reuters</p>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="week-opens">How Wednesday Is Trading</h2>
+        <ul class="opens">
+          <li id="open-1"><b>What a 95% hike probability means for the CD rate you lock this week.</b> Top 1-year CDs pay 4.75% APY this afternoon, unchanged from the morning. With the odds of at least one more hike above 95%, online banks have room to lift that figure into November. Waiting carries less risk than it did yesterday. Locking still buys certainty. <a class="more" href="#savings">Savings &amp; CD &rarr;</a></li>
+          <li id="open-2"><b>The one line in the CPI report that is not about gasoline.</b> Core CPI rose 0.3% for a second straight month and 2.6% year over year, both above consensus. Gasoline explains half the headline, but core is what the Fed targets. That line is why October 28 went from an 82% hold to a 43.7% hike chance. <a class="more" href="#rates">Interest Rates &rarr;</a></li>
+          <li id="open-3"><b>Why Bank of America fell 6% on a quarter Morgan Stanley aced.</b> BofA earned $0.91 a share against $1.10 expected after a $1.2 billion regulatory settlement, and revenue of $30 billion missed. Morgan Stanley beat on wealth management. The split says fee-based banking is holding up better than the consumer-deposit model this quarter. <a class="more" href="#household">Household Finance &rarr;</a></li>
+          <li id="open-4"><b>Gold got cheaper on a hot inflation day. What that opens up.</b> Gold fell about 1.8% to roughly $4,084 at midday as the dollar rose with yields. An inflation hedge that sells off on an inflation beat means the rate channel is winning. For buyers who wanted an entry below $4,100, the print delivered one. <a class="more" href="#commodities">Commodities &rarr;</a></li>
+          <li id="open-5"><b>Bitcoin lost $1,000 in five minutes. The level it is defending now.</b> Bitcoin fell from about $83,800 to $82,800 in the first five minutes after the print and traded near $82,000 by midday. Ethereum slipped below $2,500 and XRP eased to about $1.36. The $80,000 area is the support the market is watching next. <a class="more" href="#crypto">Crypto &rarr;</a></li>
+        </ul>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">7,805.45</div><div class="d down">&#9660; Tue Oct 13 close &middot; -0.02% &middot; within 0.7% of all-time high</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">27,204.38</div><div class="d down">&#9660; Tue Oct 13 close &middot; -0.15% &middot; fourth session lower</div></div>
+          <div><div class="k">Dow</div><div class="v">51,670.10</div><div class="d down">&#9660; Tue Oct 13 close &middot; -0.35% &middot; banks weighed</div></div>
+        </div>
+        <p class="setup">All three indexes opened lower after the CPI print and stayed there into the afternoon. By midday the S&amp;P 500 was down about 0.9% near 7,734, the Nasdaq down about 1.3% near 26,840, and the Dow nearly flat near 51,620. <b>Chips led the selling for a fifth session</b>: the Philadelphia Semiconductor index has now fallen more than 10% in five days, and CoreWeave dropped 15% after its bond yield reached 15%.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (Tuesday October 13 close):</span> <span class="num">7,805.45</span> <span class="d down">&#9660; -1.79 pts &middot; -0.02% &middot; near 7,734 at midday Wednesday, down about 0.9%</span><span class="why">Tuesday's near-flat close hid a divided session: bank stocks fell after JPMorgan and Wells Fargo reports landed near consensus, while energy and defense held. Wednesday's CPI print removed the complacency. At roughly 7,734 the index sits about 110 points below its all-time high, and the 7,700 area is the level to watch into Thursday's data.</span></div>
+          <div class="line"><span class="lb">Nasdaq (Tuesday October 13 close):</span> <span class="num">27,204.38</span> <span class="d down">&#9660; -41.52 pts &middot; -0.15% &middot; near 26,840 at midday Wednesday, down about 1.3%</span><span class="why">The Nasdaq's slide since last Thursday's OpenAI revenue revision is now in its fifth session. Wednesday's move is the rate channel at work: a 10-year above 5.25% raises the discount rate on high-multiple growth names, and the chip stocks that drove the index's year-to-date gain are the most exposed. CoreWeave's 15% drop and Nebius's 9% drop added AI-financing worries to the mix.</span></div>
+          <div class="line"><span class="lb">Dow Jones (Tuesday October 13 close):</span> <span class="num">51,670.10</span> <span class="d down">&#9660; -180.45 pts &middot; -0.35% &middot; nearly flat near 51,620 at midday Wednesday</span><span class="why">The Dow held up best Wednesday because its energy, defense, and industrial names are less rate-sensitive than the Nasdaq's growth leaders. Bank of America's drop of more than 6% after its $1.2 billion regulatory settlement was the index's biggest drag. Morgan Stanley beat on profit but still slipped, a sign the market had priced in bank beats before the week began.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Stocks are lower across the board Wednesday, with the Nasdaq taking the heaviest hit and the Dow nearly flat. The bank-earnings narrative is closed. The hot CPI print is the single variable moving rates, mortgage costs, and risk-asset pricing at once, and Thursday's PPI and retail sales decide whether Wednesday's selling extends or fades.</p></div>
+        <div class="src"><b>Curated from</b> Reuters &middot; CNBC &middot; BNN Bloomberg &middot; Yahoo Finance</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <div class="strip">
+          <div><div class="k">Fed funds</div><div class="v">3.75&ndash;4.00%</div><div class="d flat">Hiked Sept 16 &middot; Oct 28 next &middot; 43.7% hike odds</div></div>
+          <div><div class="k">2-year</div><div class="v">4.92%</div><div class="d up">&#9650; +12 bps midmorning &middot; highest since Sept 29</div></div>
+          <div><div class="k">10-year</div><div class="v">5.29%</div><div class="d up">&#9650; +7 bps midmorning &middot; back toward 5.349% Oct 6 peak</div></div>
+        </div>
+        <p class="setup">The 10-year Treasury yield jumped to <b>5.29%</b> by midmorning Wednesday, up 7 basis points, erasing half of the 13-basis-point retreat from its October 6 cycle high in a single session. The 2-year rose 12 basis points to 4.92%, its highest since September 29. The move was the September CPI print: 3.7% headline and 2.6% core, both above consensus. <b>October 28 is now a live meeting</b>, with CME FedWatch showing a 43.7% chance of a quarter-point hike, up from 22.1% on Tuesday.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">10-year Treasury (Wednesday October 14 midmorning):</span> <span class="num">5.29%</span> <span class="d up">&#9650; +7 bps from Tuesday's 5.22% close &middot; 5.349% Oct 6 cycle high back in range</span><span class="why">Tuesday's 5.22% close had reflected two solid auctions and a quiet post-holiday reopening. The CPI print reversed that relief in minutes. A 10-year near 5.30% is the input Freddie Mac's Thursday survey will capture, and it is the reason growth stocks sold off harder than the Dow. The next test is whether Thursday's PPI confirms or softens the inflation read.</span></div>
+          <div class="line"><span class="lb">2-year Treasury (Wednesday October 14 midmorning):</span> <span class="num">4.92%</span> <span class="d up">&#9650; +12 bps &middot; highest since September 29 &middot; prices hikes into early 2027</span><span class="why">The 2-year is the rate market's purest proxy for near-term Fed expectations, and a 12-basis-point jump in one morning is a repricing of the whole path. CME FedWatch now shows a 43.7% chance of a hike on October 28 and better than 95% odds of at least one hike by year-end. The December question has effectively been answered; the open question is whether the Fed moves this month or waits.</span></div>
+          <div class="line"><span class="lb">Fed funds rate (Federal Reserve, effective October 2026):</span> <span class="num">3.75&ndash;4.00%</span> <span class="d flat">EFFR 3.88% &middot; hiked 25 bps September 16 &middot; October 28 FOMC next</span><span class="why">The September 16 hike was the first since March and moved the range to 3.75-4.00%. Before Wednesday's print, markets had treated October 28 as too close to the data to move. The hot core reading changed that: a 43.7% hike probability means the meeting is a coin flip the Fed will enter without further inflation data. The blackout for Fed speakers begins Saturday October 18, so Thursday's PPI and retail sales are the last prints before official silence.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>The 10-year is back near 5.30% and the 2-year at 4.92% after a CPI print that was hot on both headline and core. October 28 moved from an 82% hold to a 43.7% hike chance in one morning, and year-end odds of at least one hike exceed 95%. The Fed has one more morning of data, Thursday, before it goes quiet.</p></div>
+        <div class="src"><b>Curated from</b> US Treasury (H.15) &middot; CME FedWatch &middot; Federal Reserve &middot; BLS &middot; CNBC &middot; Trading Economics</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <div class="strip">
+          <div><div class="k">Top 1-yr CD</div><div class="v">4.75%</div><div class="d flat">Bankrate/CNBC Oct &middot; E*TRADE no minimum</div></div>
+          <div><div class="k">Top HYSA</div><div class="v">4.25%</div><div class="d flat">Yahoo Finance Oct 13 &middot; standard no-condition rate</div></div>
+          <div><div class="k">Nat'l avg 1-yr CD</div><div class="v">2.13%</div><div class="d flat">Bankrate &middot; 262-bp gap to best</div></div>
+        </div>
+        <p class="setup">Top 1-year CDs still pay <b>4.75% APY this afternoon</b> (Bankrate and CNBC, E*TRADE no minimum). The CPI print answered the question savers were holding: with the odds of at least one more hike above 95%, the rate environment stays elevated through December at minimum. Online banks typically reprice CDs within a few weeks of a shift in the policy outlook, which means the 4.75% figure has more room to rise than to fall over the next 90 days.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Best 1-year CD (Bankrate/CNBC, October 2026 - E*TRADE, no minimum):</span> <span class="num">4.75% APY</span> <span class="d flat">available today &middot; online banks passing through the Fed's 3.75-4.00% range</span><span class="why">The 4.75% rate on top 1-year CDs reflects online institutions fully passing through the current fed funds range. The national average at 2.13% reflects the majority of deposits sitting at large legacy banks with no competitive pressure to move. On $25,000, the gap between 4.75% and 2.13% is approximately $655 per year - not a direction call, a switching decision.</span></div>
+          <div class="line"><span class="lb">Top high-yield savings (Yahoo Finance, October 13, 2026):</span> <span class="num">4.25% APY</span> <span class="d flat">standard non-promotional rate &middot; liquid, no lock-in</span><span class="why">The 50-basis-point premium a top 1-year CD pays over the top standard HYSA rate is the price of the 12-month commitment. After Wednesday's print, the HYSA side of that trade looks stronger: if the Fed hikes on October 28 or in December, liquid savings rates rise automatically, while a CD locked today stays at 4.75%. The CD still wins if the Fed holds through year-end, which markets now put at under 5%.</span></div>
+          <div class="line"><span class="lb">National average 1-year CD (Bankrate, October 2026):</span> <span class="num">2.13% APY</span> <span class="d flat">262 basis points below Bankrate best &middot; institutional inertia at work</span><span class="why">The spread between the best available CD and the national average sits at 262 basis points. The gap is not rate-cycle direction; it is institutional inertia. Today's CPI does not narrow that spread, regardless of what the number is. The switching decision does.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Top CDs pay 4.75% APY this afternoon, 262 basis points above the national average. The CPI print tilted the odds toward higher rates ahead, which favors staying liquid at 4.25% or laddering rather than locking the full balance today. Either choice beats the 2.13% national average by a wide margin.</p></div>
+        <div class="src"><b>Curated from</b> Bankrate &middot; Yahoo Finance &middot; Motley Fool &middot; NerdWallet</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <div class="strip">
+          <div><div class="k">Brent</div><div class="v">$105.6</div><div class="d flat">Oct 13-14 &middot; Saudi supply risk holding floor</div></div>
+          <div><div class="k">WTI</div><div class="v">$93.7</div><div class="d flat">Oct 13 &middot; Gulf domestic supply intact</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.35</div><div class="d flat">Oct 13 &middot; -$0.01 week-over-week</div></div>
+        </div>
+        <p class="setup">Brent crude held near <b>$105.6</b> Wednesday morning as traders weighed supply risk from Houthi escalation targeting Saudi infrastructure - a new driver that is distinct from the Gulf of Mexico hurricane supply shock that resolved last week. WTI held near $93.7, with the Brent-WTI spread near $11.90 as Gulf production normalization contained the domestic premium. National gasoline held near $4.35, roughly flat week-over-week, as the 10-14 day pump-price lag means last week's crude volatility arrives at the nozzle later this week.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Brent crude (October 13-14, oilpriceapi.com/Reuters):</span> <span class="num">~$105.6/barrel</span> <span class="d flat">Houthi-Saudi supply risk replacing hurricane premium as the active floor</span><span class="why">The hurricane supply-shock risk premium resolved last week as Gulf platforms restarted. The bid that replaced it - Houthi attacks on Saudi export infrastructure and Red Sea shipping lanes - is geopolitically driven and has no weather-calendar equivalent. Some counter-pressure came from Russian diesel supply news Tuesday. Brent's year-to-date gain is now primarily an OPEC discipline and Middle East risk story. A specific de-escalation event is required to remove this premium, and none is currently indicated.</span></div>
+          <div class="line"><span class="lb">WTI crude (October 13, FXStreet/Reuters):</span> <span class="num">~$93.7/barrel</span> <span class="d flat">Brent-WTI spread ~$11.90 &middot; domestic supply normalized post-Gulf restart</span><span class="why">The Brent-WTI spread near $11.90 reflects Gulf of Mexico production normalization removing some US-specific supply tightness. WTI remains the domestic benchmark: the rebuild of Gulf production keeps the US supply picture stable even as Brent absorbs the Middle East premium. Thursday's EIA weekly inventory report provides the first post-restart read on US crude stocks.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, October 13):</span> <span class="num">$4.35/gallon</span> <span class="d flat">-$0.01 from prior week &middot; 10-14 day crude-to-pump lag still absorbing last week's spike</span><span class="why">Pump prices held near $4.35 this week despite last week's Brent spike to $107+. The 10-14 day lag between wholesale crude and retail pump prices means crude's recent move arrives at the nozzle through this weekend. Gulf production normalization is a partial offset - keeping domestic crude supply stable limits how much of the Brent premium passes through to US pump prices. A flat-to-slightly-rising week at the pump is the likely outcome barring a new incident.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Oil's new floor is Middle East risk premium, not hurricane risk - a categorically different kind of floor because it has no weather timeline. Brent near $105.6 and WTI near $93.7 reflect the transition from storm supply shock to geopolitical supply risk. Gas at $4.35 is likely to hold or edge higher this week as last week's crude move passes through the pump-price lag.</p></div>
+        <div class="src"><b>Curated from</b> oilpriceapi.com &middot; FXStreet &middot; Reuters &middot; AAA &middot; Trading Economics</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <div class="strip">
+          <div><div class="k">Gold</div><div class="v">~$4,084</div><div class="d down">&#9660; -1.8% midday &middot; dollar up with yields after CPI</div></div>
+          <div><div class="k">Silver</div><div class="v">~$60.43</div><div class="d flat">Oct 13 &middot; within last week's range</div></div>
+          <div><div class="k">Copper</div><div class="v">~$6.70</div><div class="d flat">Oct 13 &middot; held $6.60 support</div></div>
+        </div>
+        <p class="setup">Gold fell about <b>1.8% to roughly $4,084</b> by midday Wednesday as the hot CPI print pushed Treasury yields and the dollar higher together. The move settles the morning's open question: when an inflation beat raises the odds of a rate hike, the rate channel beats the inflation-hedge channel. Silver and copper were little changed, with their industrial demand stories not sensitive to a single print.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Gold (Wednesday October 14 midday, Motley Fool/Kitco):</span> <span class="num">~$4,084/oz</span> <span class="d down">&#9660; about -1.8% on the day &middot; from ~$4,187 Tuesday &middot; dollar at an 18-month high</span><span class="why">Gold spent the week in a $4,150 to $4,200 range before the print. A hot CPI should help an inflation hedge, but it raised hike odds and the dollar faster than it raised inflation worry, and gold sold off. The structural bid from geopolitical risk is intact. For buyers who wanted an entry below $4,100, Wednesday delivered one; the next support is the early-October low near $4,050.</span></div>
+          <div class="line"><span class="lb">Silver (October 13, FXStreet/Fortune):</span> <span class="num">~$60.43/oz</span> <span class="d flat">within range &middot; industrial demand from solar and data infrastructure intact</span><span class="why">Silver's dual role as monetary metal and industrial input keeps it supported even as gold's monetary bid eases. The industrial component, solar wiring, data-center infrastructure, and EV connections, is driven by a multi-year buildout that is not sensitive to one CPI print. The monetary component moved lower with gold Wednesday. Both inputs remain constructive for silver on a 12-month view.</span></div>
+          <div class="line"><span class="lb">Copper (October 13, Trading Economics/COMEX):</span> <span class="num">~$6.70/lb</span> <span class="d flat">held $6.60 support through last week &middot; grid and infrastructure demand intact</span><span class="why">Copper held $6.60 support throughout October's rate-spike volatility. Structural demand from grid buildout and data-center construction has maintained a floor that would have broken in prior rate cycles. A hotter CPI that pushes financing costs up is a headwind for construction activity; the infrastructure bill's grid spending is a multi-year offset. Friday's industrial production report provides the near-term manufacturing read.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Gold is about 1.8% cheaper than it was Tuesday because the CPI print lifted yields and the dollar faster than it lifted inflation fear. Silver and copper barely moved. The clearest metals-positive outcome from here is a soft PPI on Thursday that pulls the dollar back; until then the rate channel is in charge.</p></div>
+        <div class="src"><b>Curated from</b> Kitco &middot; Fortune &middot; FXStreet &middot; Trading Economics &middot; Goodreturns</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <div class="strip">
+          <div><div class="k">Corn G/E</div><div class="v">56%</div><div class="d flat">Week ending Oct 11 &middot; USDA</div></div>
+          <div><div class="k">Soybeans G/E</div><div class="v">57%</div><div class="d flat">Week ending Oct 11 &middot; USDA</div></div>
+          <div><div class="k">Corn harvest</div><div class="v">33%</div><div class="d up">&#9650; Week ending Oct 11 &middot; ahead of 5-yr avg 23%</div></div>
+        </div>
+        <p class="setup">Harvest pace accelerated sharply in the week ending October 11 as dry Midwest weather replaced September's rains. Corn reached <b>33% harvested</b> - up 10 percentage points in a single week from 23% the prior week, and now running ahead of the five-year average of 23%. Soybeans reached 46% harvested, per DTN, with conditions rated 57% good-to-excellent. The WASDE's record-large crop estimate from October 9 is being confirmed at the field level: harvest pace and quality ratings are both supportive.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Corn harvest pace (USDA Crop Progress, week ending October 11):</span> <span class="num">33% harvested</span> <span class="d up">&#9650; from 23% prior week &middot; five-year average 23% &middot; ahead of pace for first time this season</span><span class="why">The 10-point harvest jump in one week reflects dry conditions across Iowa, Illinois, and Indiana after a historically wet September. Iowa, the top corn-producing state, remained slower than the national figure - DTN noted only 14% of Iowa corn harvested as of October 11 - but the pace is accelerating. October's forecast remains drier than September, suggesting further catch-up in the week ending October 18.</span></div>
+          <div class="line"><span class="lb">Soybean harvest (USDA Crop Progress, week ending October 11):</span> <span class="num">46% harvested</span> <span class="d up">&#9650; from 25% three weeks ago &middot; 57% good-to-excellent condition &middot; record crop confirmed</span><span class="why">The WASDE's October 9 record soybean production estimate of 4.562 billion bushels is materializing in the field. Harvest pace of 46% - compared with a five-year average of 47% for this week - represents a near-full catch-up from September's rain-delayed start. Ending stocks of 315 million bushels cap feed-cost pressure through Q4 for poultry and pork producers, even with diesel elevated on Brent at $106.</span></div>
+          <div class="line"><span class="lb">WASDE corn yield (USDA October 9, 2026):</span> <span class="num">181.2 bpa</span> <span class="d up">&#9650; production 16.03B bushels &middot; ending stocks 1.849B &middot; record-season pace</span><span class="why">The October 9 WASDE confirmed a 181.2 bushel-per-acre corn yield, 3.5 bpa above the pre-report consensus and 2.7 bpa above September's estimate. The size of the crop keeps feed costs contained for livestock producers through Q4 and limits food-price inflation from the domestic agriculture channel. The next WASDE is November 9; harvest progress through late October is the bridge data between the two reports.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Harvest recovered sharply in the week ending October 11 as dry weather returned. Corn is now running ahead of its five-year average pace for the first time this season; soybeans are near-even with average. The WASDE's record-large crop estimates are being confirmed at the field level - the supply picture for Q4 food costs is the most supportive it has been all season.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; DTN Progressive Farmer &middot; Farm Progress &middot; IndexBox</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <div class="strip">
+          <div><div class="k">30-yr mortgage (Freddie Mac)</div><div class="v">7.40%</div><div class="d up">&#9650; Oct 8 PMMS &middot; next reading Thu Oct 15</div></div>
+          <div><div class="k">10-year</div><div class="v">5.22%</div><div class="d down">&#9660; Tue close &middot; off 5.349% Oct 6 high</div></div>
+          <div><div class="k">Tariff Day</div><div class="v">Day 64</div><div class="d flat">US 50% softwood tariff &middot; Canada &middot; no relief announced</div></div>
+        </div>
+        <p class="setup">Mortgage rates rose for a seventh consecutive week to <b>7.40%</b> in the October 8 Freddie Mac survey, and the Mortgage Bankers Association's contract rate for the week ending October 9 reached 7.50%, its highest since November 2023. Freddie Mac publishes its next survey Thursday, and the 10-year at 5.29% after Wednesday's CPI print is the benchmark it will capture. <b>The window for a lower reading this week closed at 8:30 AM ET.</b></p>
+        <div class="lines">
+          <div class="line"><span class="lb">30-year fixed (Freddie Mac PMMS, October 8, 2026):</span> <span class="num">7.40%</span> <span class="d up">&#9650; from 7.28% Oct 1 &middot; 15-year at 6.73% &middot; year-ago 6.34%</span><span class="why">At 7.40%, the monthly payment on a $400,000 mortgage is approximately $2,770 - about $270 more than at the year-ago 6.34% rate. Seven consecutive weeks of increases have moved the market into territory where both buyer demand and refinance activity are suppressed simultaneously. New listings are thin because existing homeowners locked in at 3-4% are not willing to trade into a 7.40% environment on a comparable property.</span></div>
+          <div class="line"><span class="lb">10-year Treasury (Wednesday October 14 midmorning, primary mortgage benchmark):</span> <span class="num">5.29%</span> <span class="d up">&#9650; +7 bps on the CPI print &middot; Freddie Mac survey window: Mon-Wed &middot; Thu publish</span><span class="why">Tuesday's 5.22% close had offered the first structural opening for a lower Freddie Mac reading in seven weeks. Wednesday's jump to 5.29% erased most of it inside the survey window. A reading near or above 7.40% on Thursday is now the base case, and the MBA's 7.50% contract rate suggests the next move is up rather than down. Purchase applications fell 4.0% last week, the demand side of the same story.</span></div>
+          <div class="line"><span class="lb">Canada softwood lumber tariff (Day 64):</span> <span class="num">50%</span> <span class="d flat">US duty on Canadian softwood &middot; no relief or negotiation reported</span><span class="why">The 50% tariff on Canadian softwood lumber adds approximately $3,000-$6,000 per single-family home in framing cost. Builders in a demand-constrained market absorb it through incentives and lot discounts rather than price increases. September housing starts data is due later this month; July's 12.4% decline largely reflected mortgage affordability rather than lumber costs alone. The tariff's construction impact will show more clearly in the spring building season data than in fall.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Seven consecutive weeks of mortgage-rate increases have pushed 30-year rates to 7.40%, and the CPI print removed the chance of relief in Thursday's survey. The MBA's 7.50% reading and a 4.0% drop in purchase applications say buyers are already stepping back. The next real opening for lower rates is a soft PPI Thursday morning.</p></div>
+        <div class="src"><b>Curated from</b> Freddie Mac &middot; US Treasury &middot; Realty Times &middot; Mortgage News Daily</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <div class="strip">
+          <div><div class="k">MS &amp; BAC earnings</div><div class="v">Split</div><div class="d down">&#9660; BAC $0.91 EPS vs $1.10 est &middot; MS beat</div></div>
+          <div><div class="k">Card delinq 90+</div><div class="v">12.9%</div><div class="d up">&#9650; NY Fed Q2 &middot; +0.7 pts yr-over-yr</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.35</div><div class="d flat">Oct 13 &middot; flat week-over-week</div></div>
+        </div>
+        <p class="setup">Morgan Stanley and Bank of America reported Q3 earnings before the bell Wednesday and split the verdict. <b>Bank of America missed</b>, earning $0.91 a share against $1.10 expected on revenue of $30.0 billion against $30.58 billion, with a $1.2 billion regulatory settlement with the Treasury Department taking the blame; shares fell more than 6%. Morgan Stanley beat on profit behind wealth management, though its shares also slipped. The consumer-deposit model carried the week's weakest result.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Morgan Stanley Q3 earnings (reported Wednesday morning, October 14):</span> <span class="num">Profit beat estimates</span> <span class="d flat">wealth management led &middot; shares slipped after the report</span><span class="why">Morgan Stanley's quarter was a capital-markets and wealth management read rather than a consumer-credit read. Wealth management, which oversees roughly $5 trillion in client assets, carried the beat, a signal that upper-end household portfolios stayed active through the rate spike. The stock's dip after a beat matches Tuesday's pattern at JPMorgan and Wells Fargo: the market had priced in good bank quarters before the week began.</span></div>
+          <div class="line"><span class="lb">Bank of America Q3 earnings (reported Wednesday morning, October 14):</span> <span class="num">$0.91 EPS &bull; $30.0B revenue</span> <span class="d down">&#9660; vs $1.10 EPS and $30.58B expected &middot; $1.2B regulatory settlement &middot; shares down more than 6%</span><span class="why">BofA's miss was the week's clearest consumer-bank disappointment, though the $1.2 billion settlement explains most of the gap to consensus. Net interest income on $3.5 trillion in deposits remains the profitability engine at a 3.75-4.00% fed funds rate. The provision for credit losses, read alongside Tuesday's JPMorgan number, is what frames the consumer-credit picture through year-end against a 12.9% card delinquency rate.</span></div>
+          <div class="line"><span class="lb">Credit card balances 90+ days delinquent (NY Fed, Q2 2026):</span> <span class="num">12.9%</span> <span class="d up">&#9650; from 12.2% Q2 2025 &middot; Q3 NY Fed report due November &middot; bank provisions are the bridge</span><span class="why">The Q3 NY Fed Consumer Credit report is not due until November. This morning's BAC and MS provisions are the best available bridge data until then. The pattern to watch: if Tuesday's four banks and today's two all show elevated and rising credit-loss provisions, the 12.9% delinquency trend is accelerating into Q4. If provisions stabilize across the board, the consumer's Q3 credit-stress level may be near its plateau.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Bank earnings week closed Wednesday with a split: Morgan Stanley beat on wealth management, Bank of America missed on a $1.2 billion settlement. Six major institutions' provisions, taken together, give the clearest pre-November read on whether 12.9% card delinquency is a trend or a plateau, and none of them signaled acceleration.</p></div>
+        <div class="src"><b>Curated from</b> Alphastreet &middot; Hudson Labs &middot; New York Fed &middot; CNBC &middot; AAA</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <div class="strip">
+          <div><div class="k">Bitcoin</div><div class="v">~$84,000</div><div class="d flat">Wed morning &middot; capped at $84K supply zone</div></div>
+          <div><div class="k">Ethereum</div><div class="v">~$2,515</div><div class="d flat">Wed morning &middot; held $2,500 support</div></div>
+          <div><div class="k">XRP</div><div class="v">~$1.38</div><div class="d flat">Wed morning &middot; partial recovery post-CLARITY Act failure</div></div>
+        </div>
+        <p class="setup">Bitcoin lost about <b>$1,000 in the five minutes</b> after the CPI print, falling from roughly $83,800 to $82,800, and traded near $82,000 by midday after a rebound toward $83,000 failed. The broader crypto market shed roughly $40 billion in market value within 45 minutes. The CLARITY Act's Senate procedural failure on September 15, a 49-50 vote that needed 60, still has no new vote date, so the macro rate catalyst is doing all the work for crypto this week.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Bitcoin (Wednesday October 14 midday, Benzinga/CoinMarketCap):</span> <span class="num">~$82,000</span> <span class="d down">&#9660; from ~$83,800 before the print &middot; $84,000 supply zone held as a ceiling</span><span class="why">Bitcoin has moved inversely with 10-year Treasury yields throughout this rate cycle, and Wednesday was a clean example: the 10-year jumped 7 basis points and Bitcoin gave up about 2% within the hour. The $84,000 supply zone that capped the market all week held. The $80,000 area is the support traders are watching next; a soft PPI on Thursday is the nearest catalyst that could put the supply zone back in play.</span></div>
+          <div class="line"><span class="lb">Ethereum (Wednesday October 14 midday, OKX/Benzinga):</span> <span class="num">below $2,500</span> <span class="d down">&#9660; from ~$2,515 Wednesday morning &middot; $2,500 support gave way on the print</span><span class="why">Ethereum had held $2,500 through the entire October 6 rate-spike week. Wednesday's CPI print pushed it below that level for the first time since then, with reports placing it between $2,430 and $2,500 by midday. The structural floor from the CLARITY Act's commodity-classification pathway for ETH, set by the Senate Banking Committee in May, is intact; the macro rate risk is the active variable.</span></div>
+          <div class="line"><span class="lb">XRP (Wednesday October 14 midday, Benzinga/OKX):</span> <span class="num">~$1.36</span> <span class="d down">&#9660; from $1.38 before the print &middot; intraday low $1.357 &middot; CLARITY Act stalled, no new vote date</span><span class="why">XRP fell 1.6% in under 15 minutes after the print, from $1.38 to an intraday low of $1.357. It remains above its $1.298 September 15 low, set when the CLARITY Act failed its procedural vote. Senator Thom Tillis has said he will keep working on the bill; no markup or floor vote has been scheduled. ETF inflows into XRP products remain below $5 million per week, a fraction of early 2026's pace.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Crypto took the CPI print the way it has taken every rate shock this cycle: lower, fast, and together. Bitcoin is near $82,000, Ethereum is below $2,500, and XRP is near $1.36. The $80,000 level on Bitcoin is the line to watch, and Thursday's PPI is the next number with the power to move all three at once.</p></div>
+        <div class="src"><b>Curated from</b> FXStreet &middot; OKX &middot; CoinMarketCap &middot; CoinDesk &middot; 99Bitcoins &middot; Yahoo Finance</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="world">Around the World</h2>
+        <div class="strip">
+          <div><div class="k">Nikkei 225</div><div class="v">67,777</div><div class="d down">&#9660; Oct 13 close &middot; -1.82% &middot; chip/AI selloff</div></div>
+          <div><div class="k">Hang Seng</div><div class="v">~24,074</div><div class="d down">&#9660; Oct 13 close &middot; following Wall Street</div></div>
+          <div><div class="k">Yen / Dollar</div><div class="v">158.8</div><div class="d up">&#9650; USD/JPY &middot; dollar bid after hot US CPI</div></div>
+        </div>
+        <p class="setup">Asia closed before the US print, and the reaction now flows into Thursday's open. The Nikkei fell 1.82% Tuesday to 67,777, its fourth consecutive losing session, dragged by semiconductor and AI names after SoftBank's OpenAI revenue revision. The yen weakened to <b>158.8</b> per dollar by midmorning US time as the hot CPI print widened the US-Japan rate gap, pushing the pair toward the levels where Tokyo has intervened before.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Nikkei 225 (Tuesday October 13 close, BBN Times/Trading Economics):</span> <span class="num">67,777</span> <span class="d down">&#9660; -1.82% &middot; fourth consecutive losing session &middot; SoftBank/OpenAI revenue revision drove AI-chip selloff</span><span class="why">The 1.82% Nikkei decline Tuesday was driven by AI-sector concentration and the SoftBank slide on OpenAI revenue concerns. The Topix, more diversified, fell only 0.56%, confirming the losses were concentrated in semiconductor and AI names rather than broad Japanese weakness. With the Philadelphia Semiconductor index down more than 10% in five days and US yields higher after CPI, Thursday's Tokyo open faces the same two headwinds.</span></div>
+          <div class="line"><span class="lb">Hang Seng (Tuesday October 13 close, Yahoo Finance):</span> <span class="num">~24,074</span> <span class="d flat">cautious ahead of US CPI &middot; technology names reflecting Wall Street</span><span class="why">Hong Kong's Hang Seng tracked Wall Street's mixed tone Tuesday. The index's technology weighting makes it sensitive to Nasdaq direction, and the Nasdaq's 1.3% midday drop Wednesday is the input for Thursday's session. A hot US print that pushes yields higher tends to strengthen the dollar and add pressure to Asian equity markets through the currency and rate channels at the same time.</span></div>
+          <div class="line"><span class="lb">Yen per dollar (Wednesday October 14 midmorning US time):</span> <span class="num">~158.8</span> <span class="d up">&#9650; +0.55 on the day &middot; weakest in a year &middot; Bank of Japan near-zero policy unchanged &middot; intervention risk flagged</span><span class="why">The yen near 158.8 reflects the widening gap between US rates at 3.75-4.00%, with a hike now possible on October 28, and the Bank of Japan's near-zero policy rate. Currency analysts are flagging intervention risk at this level. The CPI print widened the differential rather than narrowing it; the first data that could give the yen more than a brief reprieve is now Thursday's PPI.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>The Nikkei took its fourth consecutive loss Tuesday, driven by AI-chip concentration, and Wednesday's US chip selloff hands it a fifth headwind for Thursday. The yen is at its weakest in a year with intervention risk flagged. The hot US CPI print reaches Asian equities, currencies, and commodity pricing through the rate differential at once.</p></div>
+        <div class="src"><b>Curated from</b> BBN Times &middot; Trading Economics &middot; FXStreet &middot; Reuters &middot; Asian Market Sense</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="events">The Week Ahead</h2>
+        <div class="strip">
+          <div><div class="k">Wed Oct 14</div><div class="v">September CPI: 3.7%</div><div class="d up">&#9650; released 8:30 AM ET &middot; core 2.6% &middot; both above consensus</div></div>
+          <div><div class="k">Thu Oct 15</div><div class="v">PPI + Retail Sales + Freddie Mac</div><div class="d flat">8:30 AM ET &middot; spending + prices + rates</div></div>
+          <div><div class="k">Fri Oct 16</div><div class="v">Import Prices + Industrial Production</div><div class="d flat">8:30 AM &amp; 9:15 AM ET</div></div>
+        </div>
+        <p class="setup">Wednesday was the data hinge of the week, and it swung toward higher rates. September CPI printed <b>3.7% headline and 2.6% core</b>, both above consensus, and Morgan Stanley and Bank of America closed out the major-bank earnings cycle with a split result. Thursday brings PPI, retail sales, jobless claims, and the Freddie Mac PMMS, the last releases that can change the October 28 picture. The FOMC blackout period begins Saturday October 18.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Wednesday October 14 - September CPI (released 8:30 AM ET) + Morgan Stanley &amp; Bank of America earnings:</span> <span class="d up">&#9650; headline 3.7% vs 3.6% consensus &middot; core 2.6% vs 2.5% &middot; gasoline +9.1% in the month &middot; October 28 hike odds 43.7%</span><span class="why">The print came in hot on both lines. Gasoline supplied half of the headline increase, but core ran 0.3% for a second straight month, which is why the market moved October 28 from an 82% hold to a 43.7% hike chance and pushed year-end hike odds above 95%. The bank results completed the institutional read on Q3 consumer health: Morgan Stanley beat, Bank of America missed on a $1.2 billion settlement.</span></div>
+          <div class="line"><span class="lb">Thursday October 15 - PPI, Retail Sales, Jobless Claims (8:30 AM ET) + Freddie Mac PMMS:</span> <span class="d flat">producer price index &middot; advance September retail sales &middot; weekly jobless claims &middot; mortgage rate survey</span><span class="why">Thursday's four releases complete the week's data picture in a single morning. PPI is a leading indicator for future CPI - a hot PPI after a hot CPI is the doubly-bad scenario for December hike expectations. Retail sales confirm or contradict whether the intact labor market is still translating into consumer spending against $4.35 gas and 12.9% card delinquency. Freddie Mac PMMS captures this week's 10-year yield movement, including today's CPI reaction, in Thursday's mortgage-rate reading.</span></div>
+          <div class="line"><span class="lb">Friday October 16 - Import/Export Prices (8:30 AM ET) + Industrial Production (9:15 AM ET):</span> <span class="d flat">trade price data with Brent at $106 &middot; September manufacturing output</span><span class="why">Import prices with Brent above $106 will reflect the September energy surge. Industrial production captures whether manufacturing held up under higher energy and financing costs - a read on Q4 capacity utilization entering the final quarter. Both complete the pre-FOMC-blackout data sequence. After Friday, no additional economic data lands before October 18's blackout period; the full picture for October 28 is assembled by end of this week.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Wednesday's CPI answered the December question and reopened October. Thursday's four data points are the last that can move the October 28 meeting before the FOMC blackout begins Saturday October 18. A hot PPI on top of a hot CPI makes an October hike the base case; a soft one keeps it a coin flip.</p></div>
+        <div class="src"><b>Curated from</b> BLS &middot; CME FedWatch &middot; Federal Reserve &middot; Freddie Mac &middot; CNBC &middot; Reuters</div>
+        </div>
+
+        <div class="disclaimer">
+          <p>This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.</p>
+          <p class="asof">Figures reflect the latest readings available as of Wednesday, October 14, 2026, at 1:30 PM ET, after the September CPI release. Sources are listed at the end of each section.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#week-opens"><span class="dot"></span>How Wednesday Is Trading</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_october13_2026.html">October 13, 2026</a></li>
+          <li><a href="market_pulse_october12_2026.html">October 12, 2026</a></li>
+          <li><a href="market_pulse_october11_2026.html">October 11, 2026</a></li>
+          <li><a href="market_pulse_october9_2026.html">October 9, 2026</a></li>
+          <li><a href="market_pulse_october8_2026.html">October 8, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We&rsquo;re looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+  </script>
+</body>
+</html>
