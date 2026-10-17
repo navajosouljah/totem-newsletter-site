@@ -15,7 +15,12 @@ today is detected and skipped, and a draft left by an earlier run is reused.
 The caller sets PULSE_MODE before exec():
   "check"  (default) read-only, no Mailchimp writes
   "test"   build a draft marked TEST, email it to PULSE_TEST_EMAIL only, never send
-  "send"   the real weekday send
+  "send"   the real Monday-to-Thursday send
+
+Friday guard (JJ, Oct 17 2026): Claude sends the Market Pulse Monday to Thursday only.
+On Fridays the Grok bot's combined Totem Challenge email carries the Market Pulse, so a
+"send" on a Friday (America/New_York) exits before any Mailchimp call, whatever the
+schedule that fired it says.
 """
 import re, json, time, datetime, html as htmllib, urllib.request, urllib.error
 from zoneinfo import ZoneInfo
@@ -149,8 +154,33 @@ def already_out(today, subject, ignore_id=None):
     return hits
 
 
+SEND_DAYS = (0, 1, 2, 3)  # Monday to Thursday, America/New_York
+DAY_NAMES = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+
+def send_day_guard(today):
+    """Return a skip reason when a real send must not happen today, else None.
+
+    Runs before anything else in send mode: no email copy read, no live-page
+    fetch, no Mailchimp call. Friday is blocked because the Grok bot's combined
+    Totem Challenge email carries the Market Pulse (JJ, Oct 17 2026).
+    """
+    if today.weekday() in SEND_DAYS:
+        return None
+    if today.weekday() == 4:
+        return ("Friday - Claude does not send the Market Pulse on Fridays; "
+                "the Totem Challenge email (Grok bot) carries it. Nothing was sent.")
+    return "weekend - Market Pulse emails go out Monday to Thursday. Nothing was sent."
+
+
 def run():
     today = datetime.datetime.now(ET).date()
+
+    if MODE == "send":
+        reason = send_day_guard(today)
+        if reason:
+            OUT.update(outcome="skipped", reason=reason, day=DAY_NAMES[today.weekday()])
+            return
 
     # --- the email copy page -------------------------------------------------
     status, page = http_get(COPY_URL)
@@ -163,9 +193,6 @@ def run():
     edition = datetime.datetime.strptime(copy["date_label"], "%B %d, %Y").date()
 
     if MODE == "send":
-        if today.weekday() > 4:
-            OUT.update(outcome="skipped", reason="weekend - Market Pulse emails go out Monday to Friday")
-            return
         if edition != today:
             raise Blocked("the email copy page is dated %s, not today (%s) - today's Market Pulse has not landed"
                           % (copy["date_label"], date_label(today)))
