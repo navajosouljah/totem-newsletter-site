@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - October 22, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:28px 0 0;text-align:center;}
+  .body{padding-top:0;}
+  h1.headline{text-wrap:balance;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:clamp(34px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;color:var(--ink);margin:56px 0 0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .strip + p.setup{font-style:italic;}
+  .sec-v2 .strip + p.setup b{font-style:italic;}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);position:relative;padding-left:22px;}
+  .sec-v2 .line::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:18px;}
+  .sec-v2 .opens li{padding-left:22px;position:relative;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens li::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .opens li b{font-weight:700;color:var(--ink);}
+  .sec-v2 .opens li:target{background:var(--wash);box-shadow:0 0 0 10px var(--wash);border-radius:2px;}
+  .sec-v2 .opens a.more{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;margin-left:6px;}
+  .sec-v2 .opens a.more:hover{border-bottom:2px solid var(--gold);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p.asof{color:var(--muted);margin-bottom:0;}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_october22_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_14.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Thursday, October 22, 2026</span></div>
+        <h1 class="headline">4.75% CDs Hold as Yields Ease. Meta Raises AI Budget to $145B.</h1>
+      </div>
+
+      <div class="body">
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="setup lead-first">Meta posted $64.6 billion in Q3 revenue - up 26% - and raised its AI capital expenditure guidance to $145 billion for 2026, the largest single-company AI spending commitment on record. Tesla beat EPS at $0.48 (consensus $0.43) but cut its own capital expenditure forecast to $20 billion from more than $25 billion, with automotive revenue down 3% year over year and free cash flow plunging 62% to $1.53 billion. The split is the mechanism: the market is separating companies that are accelerating AI investment from those trimming it - and it is pricing that gap tonight. Meta rose 2.5% after hours. Tesla fell 3%. Nasdaq futures are down 0.7% pre-market Thursday on the capex-cut signal.</p>
+        <p class="setup">Thursday carries the last pre-FOMC data: jobless claims for the week ending October 18 arrive at <b>8:30 AM ET</b> (prior 199,000, consensus ~200,000) and Freddie Mac's PMMS publishes at noon ET. The 10-year Treasury fell 6 basis points overnight to approximately 5.08% as risk appetite pulled back on Tesla's earnings - the largest single-week yield retreat in three weeks. A 5.08% close through Wednesday would give Thursday's PMMS a genuine shot at the first improvement below 7.40% since September.</p>
+        <p class="setup">The slower-building story: Brent crude rose 2.6% to $111.64 early Thursday on fresh Houthi attacks on Saudi facilities - the fourth supply-disruption event in two weeks. Asian markets reacted to the Tesla capex cut with their sharpest session since March: Nikkei down 2.65%, Hang Seng down 3.2%. The USD/JPY holds near 158.1, 1.9 points from the Ministry of Finance's prior 160 intervention threshold. USDA crop progress for the critical October 19-25 harvest window arrives Monday, October 26. <b>Curated from</b> CNBC &middot; Reuters &middot; AP &middot; CME FedWatch &middot; AAA &middot; Bloomberg &middot; Freddie Mac</p>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="week-opens">How Thursday Opens</h2>
+        <ul class="opens">
+          <li id="open-1"><b>What Meta's raised AI budget and Tesla's capex cut mean for the Nasdaq's October selloff thesis.</b> Meta beat revenue at $64.6 billion (+26%) and raised AI capex to $145 billion. Tesla beat EPS at $0.48 but cut capex to $20 billion from $25 billion+ and saw automotive revenue fall 3% year over year. Meta up 2.5% after hours, Tesla down 3%. Nasdaq futures are down 0.7% pre-market as the market prices the capex-cut signal. <a class="more" href="#stocks">Stock Market &rarr;</a></li>
+          <li id="open-2"><b>Why 4.75% CDs still pay 48 basis points more than the best HYSA - even as yields ease this morning.</b> The 10-year fell 6 basis points to ~5.08% overnight. That retreat does not reduce the top 1-year CD rate at 4.75% APY - confirmed available this morning - while the floating HYSA at 4.27% will fall if the Fed holds in October (84-85% odds). The yield decline actually strengthens the lock case. <a class="more" href="#savings">Savings &amp; CD Rates &rarr;</a></li>
+          <li id="open-3"><b>Why today's Freddie Mac reading at noon ET may show the first mortgage improvement since September.</b> The PMMS survey week ran while the 10-year dropped from 5.12% to 5.08% - a 4-basis-point average retreat below last week's survey level. Thursday's noon release is the first Freddie Mac print since the housing starts 25-month low confirmed builder stress. <a class="more" href="#realestate">Real Estate &rarr;</a></li>
+          <li id="open-4"><b>What jobless claims at 8:30 AM ET decide for the October 28 FOMC with hike odds at 15-16%.</b> Claims for the week ending October 18 are the last pre-FOMC labor read. Prior was 199,000. Consensus is approximately 200,000. A reading above 225,000 would begin to shift the blackout-period narrative; a reading below 190,000 would keep October hike odds from falling further. <a class="more" href="#household">Household Finance &rarr;</a></li>
+          <li id="open-5"><b>What oil's rise to $112 on new Saudi attacks means for pump prices arriving next week.</b> Brent rose 2.6% to $111.64 early Thursday on fresh Houthi attacks on Saudi facilities. The October 16-17 spike already has a pump transmission date of approximately October 26-31. A second surge layering on today adds a second lag wave arriving approximately November 1-5 - straddling the FOMC decision. <a class="more" href="#energy">Energy &amp; Gas &rarr;</a></li>
+        </ul>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">7,757</div><div class="d up">&#9650; Wed Oct 21 close &middot; +0.6% &middot; pre-market -0.4% Thu on Tesla capex cut</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">26,703</div><div class="d up">&#9650; Wed Oct 21 close &middot; +1.1% &middot; pre-market -0.7% Thu</div></div>
+          <div><div class="k">Dow</div><div class="v">52,856</div><div class="d up">&#9650; Wed Oct 21 close &middot; +0.7% &middot; SpaceX, Capital One led</div></div>
+        </div>
+        <p class="setup">Wednesday's session closed at new October highs - S&amp;P 7,757.17, Nasdaq 26,702.86, Dow 52,856.09 - as SpaceX beat earnings and Capital One Financial reported strong results, lifting AI-adjacent stocks broadly. After the close, the earnings picture split: <b>Meta delivered</b> $64.6 billion in revenue (+26%) and raised AI capex to $145 billion; <b>Tesla cut</b> capex to $20 billion from more than $25 billion with automotive revenue down 3% year over year. Nasdaq futures are down 0.7% pre-market Thursday.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (Wednesday October 21 close, AP / CNBC):</span> <span class="num">7,757.17</span> <span class="d up">&#9650; +44.60 pts &middot; +0.6% &middot; pre-market Thu -0.4% &middot; Tesla capex cut weighing on AI-adjacent names</span><span class="why">Wednesday's 0.6% gain reflected the SpaceX and Capital One beats - a session that came before Tesla's and Meta's after-hours results changed the picture. Pre-market Thursday the S&amp;P is down 0.4% as the market processes Tesla's capex cut to $20 billion. The cut is not a quarterly miss - it is a strategic signal that Tesla is trimming AI and infrastructure spending, which raises questions for every company in the AI supply chain. The S&amp;P's implied Thursday open near 7,726 is back toward Wednesday's session midpoint.</span></div>
+          <div class="line"><span class="lb">Nasdaq Composite (Wednesday October 21 close / Thursday pre-market, Bloomberg / Reuters):</span> <span class="num">26,702.86</span> <span class="d up">&#9650; +278.04 pts &middot; +1.1% Wed close &middot; pre-market -0.7% Thu &middot; AI-capex divergence the driver</span><span class="why">The Nasdaq's 1.1% Wednesday gain - its best session in two weeks - came largely on SpaceX and Super Micro Computer. After the close, the earnings split landed: Meta raised capex to $145 billion and beat Q4 guidance at $73-76 billion, sending its shares up 2.5%. Tesla cut capex to $20 billion, saw free cash flow fall 62% to $1.53 billion, and announced a SpaceX merger committee - sending TSLA down 3%. Thursday pre-market shows the Nasdaq -0.7% as the capex-cut signal from Tesla weighs on data-center and infrastructure names more than Meta's positive guidance lifts them.</span></div>
+          <div class="line"><span class="lb">Dow Jones Industrial Average (Wednesday October 21 close, AP):</span> <span class="num">52,856.09</span> <span class="d up">&#9650; +360.21 pts &middot; +0.7% Wed &middot; Capital One Financial + SpaceX beat &middot; Tesla and Meta are smaller Dow weightings</span><span class="why">The Dow's 0.7% gain was paced by financial and industrial strength rather than AI names. Capital One Financial's Q3 beat and SpaceX's strong revenue added points; neither Tesla nor Meta carries significant Dow weighting, so Thursday pre-market shows the Dow more resilient than the Nasdaq. The Dow's exposure to the Tesla-Meta divergence is indirect - through the consumer spending signal Tesla's automotive revenue decline carries and through financial sector exposure to the AI-infrastructure capex pipelines Meta is sustaining.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Wednesday closed at record October levels - S&amp;P 7,757, Nasdaq 26,703, Dow 52,856. After hours, the earnings split defined Thursday's open: Meta up 2.5% on raised AI capex and Q4 guidance; Tesla down 3% on a capex cut to $20 billion and a 3% automotive revenue decline. Nasdaq futures -0.7% pre-market Thursday as the market prices the divergence. The AI investment story is not one story - it is two.</p></div>
+        <div class="src"><b>Curated from</b> AP &middot; Reuters &middot; Bloomberg &middot; CNBC &middot; SEC (Tesla 8-K) &middot; Yahoo Finance</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <div class="strip">
+          <div><div class="k">Fed funds</div><div class="v">3.75&ndash;4.00%</div><div class="d flat">Oct 28 next &middot; ~15-16% hike odds &middot; blackout Day 6</div></div>
+          <div><div class="k">2-year</div><div class="v">4.78%</div><div class="d down">&#9660; Thu Oct 22 AM &middot; -5 bps from 4.81% Wed &middot; risk-off bid</div></div>
+          <div><div class="k">10-year</div><div class="v">5.08%</div><div class="d down">&#9660; Thu Oct 22 AM &middot; -6 bps from 5.12% Wed &middot; largest single-session retreat in 3 weeks</div></div>
+        </div>
+        <p class="setup">Treasury yields fell overnight as the market processed Tesla's capex cut and the Nasdaq's 0.7% pre-market decline. The 10-year dropped approximately <b>6 basis points to 5.08%</b> - the largest single-session retreat in three weeks - and the 2-year fell 5 basis points to 4.78%. October 28 hike odds eased from approximately 17% to 15-16% on the risk-off move. The FOMC blackout is in its sixth day; no Fed speaker will comment before October 28.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">CME FedWatch October 28 hike probability (FOMC blackout Day 6):</span> <span class="num">~15-16%</span> <span class="d down">&#9660; from ~17% Wed &middot; ~84-85% hold &middot; Tesla capex cut added mild dovish signal &middot; December hike near 100%</span><span class="why">October 28 hike odds eased slightly overnight as the risk-off move from Tesla's earnings reduced the market's confidence in continued corporate spending momentum. At 15-16%, hike odds remain above where they sat before the September CPI report - the rate environment has not reverted to an easy posture. The more significant signal from one source: December hike odds near 100%, suggesting the market sees October as a hold and December as the terminal hike. Today's 8:30 AM ET jobless claims are the last labor data before the October 28 decision.</span></div>
+          <div class="line"><span class="lb">10-year Treasury (Thursday October 22 AM, CNBC / Trading Economics):</span> <span class="num">~5.08%</span> <span class="d down">&#9660; -6 bps from 5.12% Wed &middot; PMMS survey week closed with 10-yr at avg below 5.12% &middot; yields pulling back on risk-off</span><span class="why">The 6-basis-point overnight decline to approximately 5.08% is the direct result of the Tesla capex cut: lower corporate investment expectations reduce the crowding-out effect on Treasuries, and risk-off money seeks safety in bonds. For the Freddie Mac PMMS today at noon ET, the survey week ran with the 10-year declining from approximately 5.12% to 5.08% - a weighted-average week that may clear the threshold for the first mortgage rate improvement since September. The 10-year fell from a 24-year peak of 5.365% hit earlier this month.</span></div>
+          <div class="line"><span class="lb">2-year Treasury (Thursday October 22 AM, CNBC / Forbes):</span> <span class="num">~4.78%</span> <span class="d down">&#9660; -5 bps from ~4.81% Wed &middot; consistent with 15-16% hike odds &middot; 2/10 spread ~30 bps</span><span class="why">The 2-year at 4.78% fell more steeply in relative terms than the 10-year - a slight bull-steepening that typically accompanies risk-off sessions where the market revises short-term rate expectations lower. The 2/10 spread at approximately 30 basis points is narrower than last week's 35-38 basis points, continuing the partial recovery from extended inversion. At 15-16% hike odds, the 2-year is pricing roughly a 1-in-6 chance of 4.00-4.25% after October 28 - unchanged from the pre-Tesla close in directional terms.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>The 10-year is at approximately 5.08% Thursday morning - its lowest reading in three weeks - after Tesla's capex cut sent a mild risk-off signal overnight. October 28 hike odds eased to 15-16%. Today's 8:30 AM ET jobless claims are the last pre-FOMC labor read in the blackout. Freddie Mac's PMMS at noon ET may show the first improvement since September.</p></div>
+        <div class="src"><b>Curated from</b> CME FedWatch &middot; CNBC &middot; US Treasury (H.15) &middot; Trading Economics &middot; Forbes Advisor</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <div class="strip">
+          <div><div class="k">Top 1-yr CD</div><div class="v">4.75%</div><div class="d flat">CNBC Select Oct 2026 &middot; E*TRADE Bank &middot; available this morning</div></div>
+          <div><div class="k">Top HYSA</div><div class="v">4.27%</div><div class="d flat">Bankrate Oct &middot; non-promotional &middot; liquid &middot; floating</div></div>
+          <div><div class="k">Nat'l avg 1-yr CD</div><div class="v">2.13%</div><div class="d flat">Bankrate &middot; 262-bp gap to best &middot; unchanged</div></div>
+        </div>
+        <p class="setup">Top 1-year CDs remain at <b>4.75% APY</b> Thursday morning - confirmed via CNBC Select (E*TRADE Bank). The 10-year's 6-basis-point overnight retreat to 5.08% does not reduce this rate; the locked CD holds 4.75% regardless of where yields move. The HYSA's 4.27% floating rate will fall if the Fed holds at October 28 - now an 84-85% probability. The yield decline makes the lock case <b>stronger</b>, not weaker.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Best 1-year CD (CNBC Select, October 2026):</span> <span class="num">4.75% APY</span> <span class="d flat">E*TRADE Bank &middot; no minimum deposit &middot; available this morning &middot; 48 bps above top HYSA</span><span class="why">The 4.75% rate is confirmed available Thursday morning. Tesla's capex cut, the risk-off overnight session, and the 6-basis-point yield decline all point the same direction: an environment where the Fed is more likely to hold than hike in October. At 84-85% hold odds, locking 4.75% captures 48 basis points of advantage over the best HYSA for 12 months. The only scenario where waiting beats locking is a hike on October 28 - now a 15-16% probability.</span></div>
+          <div class="line"><span class="lb">Top high-yield savings (Bankrate, October 2026):</span> <span class="num">4.27% APY</span> <span class="d flat">standard non-promotional &middot; liquid &middot; adjustable with Fed moves &middot; 48 bps below best CD</span><span class="why">The 4.27% HYSA is 48 basis points below the top CD. The risk-off signal from Thursday pre-market - Nasdaq futures -0.7%, yields falling - is the environment where HYSA rates trail CDs most acutely: the Fed is being priced to hold, which means the floating rate will sit at or near 4.27% through year-end rather than rising above it. The CD locks 4.75% through next October regardless of what October 28, November, or December brings.</span></div>
+          <div class="line"><span class="lb">National average 1-year CD (Bankrate, October 2026):</span> <span class="num">2.13% APY</span> <span class="d flat">262 basis points below best available &middot; ~$655/yr gap on $25,000 &middot; no rate event this week changes it</span><span class="why">The $655/year gap on $25,000 between the best available rate and the national average closes only when depositors move to higher-rate institutions. Thursday's earnings split, jobless claims, and PMMS data have no effect on the national average; it is a switching decision available this morning at the same spread it has been all week.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Top CDs pay 4.75% APY Thursday morning - confirmed available. The overnight yield decline to 5.08% and Tesla's capex cut, read together, increase the probability that the Fed holds in October and the HYSA's floating rate stays at or below 4.27%. The lock advantage is 48 basis points for 12 months. The $655/year gap on $25,000 between the best available and the national average is unchanged.</p></div>
+        <div class="src"><b>Curated from</b> CNBC Select &middot; Bankrate &middot; NerdWallet &middot; Yahoo Finance</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <div class="strip">
+          <div><div class="k">Brent</div><div class="v">~$111.64</div><div class="d up">&#9650; Thu Oct 22 AM &middot; +2.6% &middot; new Houthi attacks on Saudi facilities</div></div>
+          <div><div class="k">WTI</div><div class="v">~$99.39</div><div class="d up">&#9650; Thu Oct 22 AM &middot; +2% &middot; approaching $100 resistance again</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.2701</div><div class="d flat">AAA Thu Oct 22 &middot; Oct 16-17 spike transmission arriving Oct 26-31</div></div>
+        </div>
+        <p class="setup">Oil surged Thursday morning on fresh Houthi attacks on Saudi oil facilities - the fourth supply-disruption event in two weeks. Brent rose 2.6% to approximately <b>$111.64</b> by 6:26 AM GMT, Reuters reported. WTI climbed 2% to approximately <b>$99.39</b>, its fourth approach to $100 resistance in two weeks. The AAA national average at $4.2701 is essentially unchanged from Wednesday and still reflects crude prices from October 13-16. The October 16-17 Brent spike's pump transmission arrives approximately <b>October 26-31</b>. Today's fresh surge adds a second lag wave arriving approximately November 1-5.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Brent crude (Thursday October 22 AM, Reuters / Voice of Emirates):</span> <span class="num">~$111.64/barrel</span> <span class="d up">&#9650; +$2.82 &middot; +2.6% &middot; Houthi attacks on Saudi facilities &middot; 4th supply disruption in 2 weeks &middot; geopolitical premium intact</span><span class="why">The 2.6% Brent surge reverses Tuesday's Iran-deal-signal dip and carries oil above Wednesday's $110.40 close. Reuters cited new Houthi attacks on Saudi oil facilities as the immediate catalyst, marking the fourth supply-disruption event in two weeks. At $111.64, Brent is at a five-month high and entering the range that will flow into November pump prices through the standard 10-14 day transmission lag. No supply-restoration announcement has emerged from the Iran channel. Thursday's Brent spike is independent of Tesla's earnings - it is a pure supply-side event.</span></div>
+          <div class="line"><span class="lb">WTI crude (Thursday October 22 AM, Mitrade / Reuters):</span> <span class="num">~$99.39/barrel</span> <span class="d up">&#9650; +2% &middot; fourth approach to $100 resistance &middot; highest sustained level since August if close above $100</span><span class="why">WTI at $99.39 is making its fourth test of $100 resistance in two weeks, and each test has come on a different catalyst. A close above $100 Thursday would represent the highest sustained WTI level since August. The $100 level matters as a psychological threshold - it resets consumer and business expectations about energy costs and increases the probability that the Fed's October 28 calculus includes energy-driven inflation pressure. The Houthi attacks on Saudi facilities are the catalyst; the persistence of $100 WTI through multiple supply events is the structural signal.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, Thursday October 22, 2026):</span> <span class="num">$4.2701/gallon</span> <span class="d flat">reflects Oct 13-16 crude &middot; Oct 16-17 spike transmits Oct 26-31 &middot; today's Brent surge transmits Nov 1-5</span><span class="why">Thursday's $4.2701 reflects crude prices from approximately October 13-16 - more than a week before either the October 16-17 Brent spike or today's fresh surge. The standard 10-14 day crude-to-pump transmission lag means: the October 16-17 event arrives at the pump approximately October 26-31 (same week as the FOMC), and today's October 22 event arrives approximately November 1-5. A household paying $4.27 today will face meaningfully higher pump prices late next week and into the first week of November.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Brent surged 2.6% to $111.64 on new Houthi attacks on Saudi facilities - the fourth supply event in two weeks. WTI at $99.39 is making its fourth approach to $100 resistance. Today's pump price at $4.27 (AAA) still reflects two-week-old crude costs. Two lag waves are building: October 26-31 from the October 16-17 spike, and November 1-5 from today's surge - both surrounding the October 28 FOMC window.</p></div>
+        <div class="src"><b>Curated from</b> Reuters &middot; Voice of Emirates &middot; Mitrade &middot; AAA &middot; Bloomberg &middot; Trading Economics</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <div class="strip">
+          <div><div class="k">Gold</div><div class="v">~$4,085</div><div class="d down">&#9660; Thu Oct 22 AM &middot; -$64 &middot; -1.3% &middot; risk appetite led early, now risk-off bid emerging</div></div>
+          <div><div class="k">Silver</div><div class="v">~$55.84</div><div class="d down">&#9660; Thu Oct 22 AM &middot; from $57.69 Wed &middot; -3.2% &middot; industrial demand bid weaker</div></div>
+          <div><div class="k">Copper</div><div class="v">~$6.51</div><div class="d down">&#9660; Thu Oct 22 AM &middot; from $6.58 Wed &middot; -0.8% &middot; Tesla capex cut a mild copper signal</div></div>
+        </div>
+        <p class="setup">Gold fell approximately 1.3% to <b>$4,085</b> Thursday morning in an unusual pattern: oil rising 2.6% simultaneously typically supports gold through the geopolitical premium channel, but the Tesla capex cut and risk-off equity pressure appear to have triggered profit-taking in gold as equity hedges were partially unwound. Silver declined more sharply to approximately <b>$55.84</b> (-3.2%) as the industrial demand signal weakened with Tesla's capex cut. Copper fell 0.8% to <b>$6.51</b>.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Gold (Thursday October 22 AM, Kitco):</span> <span class="num">~$4,085/oz</span> <span class="d down">&#9660; -$64 &middot; -1.3% &middot; unusual: oil +2.6% and gold -1.3% same session &middot; $4,100 floor now $15 above</span><span class="why">Gold falling 1.3% while oil rises 2.6% is an atypical pattern that signals equity-driven profit-taking rather than macroeconomic gold selling. When equity accounts are forced to reduce exposure - as they are Thursday with Nasdaq futures -0.7% - liquid assets including gold are sold to meet margin or rebalancing requirements. The $4,100 support level that held through last week is now only $15 above the current level at $4,085. If the risk-off session deepens, the $4,100 floor becomes the test; if it holds, gold recovers through the safe-haven bid that typically accompanies Brent above $110 and equity weakness simultaneously.</span></div>
+          <div class="line"><span class="lb">Silver (Thursday October 22 AM, Kitco / Trading Economics):</span> <span class="num">~$55.84/oz</span> <span class="d down">&#9660; from $57.69 Wed &middot; -3.2% &middot; Tesla capex cut a direct industrial-demand signal for data centers and EV infrastructure</span><span class="why">Silver's sharper 3.2% decline relative to gold's 1.3% fall reflects the industrial demand channel: Tesla cutting capex to $20 billion from $25 billion+ is a direct reduction in the EV-manufacturing and infrastructure-spending pipeline that consumes silver for connections, solar panels, and data-center buildout. Meta's raised $145 billion AI capex partially offsets this, but Meta's infrastructure spending is weighted toward compute rather than physical silver-consuming connections. Silver's industrial floor is not gone - it is revised slightly lower for the capex-cut quarter.</span></div>
+          <div class="line"><span class="lb">Copper (Thursday October 22 AM, Trading Economics / COMEX):</span> <span class="num">~$6.51/lb</span> <span class="d down">&#9660; from $6.58 Wed &middot; -0.8% &middot; Tesla capex cut reduces EV-production copper demand signal &middot; grid-buildout demand unchanged</span><span class="why">Copper's 0.8% decline is a moderate response to Tesla's capex cut. Tesla's EV production pipeline is the most direct corporate copper demand signal in the market - any reduction in capex guidance revises down the copper-procurement forecast for EV manufacturing broadly. Grid-expansion and transmission copper demand is multi-year and driven by regulatory build rates rather than quarterly guidance, so it is unchanged. The 0.8% move is calibrated: Tesla's cut is for one year, not a multi-year withdrawal.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Gold fell 1.3% to $4,085 in an atypical session where equity-driven profit-taking outweighed the geopolitical bid from oil rising 2.6%. Silver fell 3.2% as Tesla's capex cut reduced the near-term industrial demand signal. Copper fell 0.8%. The $4,100 gold support level is now only $15 above the current price - today's session is the first real test of that floor since last week.</p></div>
+        <div class="src"><b>Curated from</b> Kitco &middot; Trading Economics &middot; COMEX &middot; Reuters &middot; FXStreet</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <div class="strip">
+          <div><div class="k">Corn G/E</div><div class="v">56%</div><div class="d flat">Week ending Oct 18 &middot; USDA &middot; next report Mon Oct 26</div></div>
+          <div><div class="k">Soybeans G/E</div><div class="v">64% harvested</div><div class="d flat">Week ending Oct 18 &middot; on pace with 5-yr avg</div></div>
+          <div><div class="k">Corn harvest</div><div class="v">44%</div><div class="d flat">Week ending Oct 18 &middot; 8 pts behind 52% 5-yr avg &middot; critical Oct 19-25 window</div></div>
+        </div>
+        <p class="setup">No new USDA Crop Progress data is available Thursday - the next release covers the week ending October 25 and arrives Monday, October 26. The October 18 baseline stands: corn harvest at 44% nationally is 8 points behind the five-year average of 52%, with the crop progress 56% good-to-excellent. Soybeans at 64% harvested are on pace with the five-year average. The <b>October 19-25 harvest window</b> - captured in Monday's report - is the decisive period for corn's catch-up before freeze risk increases in early November.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Corn harvest pace (USDA Crop Progress, week ending October 18, released October 19):</span> <span class="num">44% harvested</span> <span class="d flat">5-yr avg ~52% &middot; 8 pts behind &middot; October 19-25 window decisive &middot; Iowa tracking behind pace &middot; no update until Mon Oct 26</span><span class="why">The 44% national pace marked a significant 11-point jump from the prior week's 23% - confirming that late-season conditions allowed rapid harvest acceleration. Iowa, the largest corn-producing state, is tracking below its own five-year average by a wider margin than the national figure. Monday's report will show whether the October 19-25 window continued that acceleration or whether weather disruptions slowed it. Corn futures at or near $4.80 per bushel reflect improving supply expectations; a strong Iowa catch-up in Monday's data would further ease supply concerns.</span></div>
+          <div class="line"><span class="lb">Soybean harvest (USDA Crop Progress, week ending October 18):</span> <span class="num">64% harvested</span> <span class="d flat">5-yr avg ~65% &middot; essentially on pace &middot; record WASDE crop 4.562B bushels &middot; supply risk resolved</span><span class="why">Soybeans at 64% are matched to the five-year average of approximately 65% for this date, confirming the record 4.562 billion bushel WASDE crop is progressing without harvest pace risk. Soybean ending stocks at 315 million bushels remain a quiet disinflationary input in Q4 feed costs - a supply floor that contains food-price pressure while energy and rates dominate the October inflation narrative. Thursday's session carries no new soybean catalyst.</span></div>
+          <div class="line"><span class="lb">Corn good-to-excellent (USDA Crop Progress, week ending October 18):</span> <span class="num">56%</span> <span class="d flat">WASDE yield locked at 181.2 bpa &middot; harvest pace now the primary variable &middot; no update until Mon Oct 26</span><span class="why">At this point in the season the G/E rating is secondary to harvest pace. The WASDE has locked the 181.2 bushels-per-acre yield estimate; quality is no longer the variable moving corn prices. Monday's October 26 report captures the October 19-25 window - the most important harvest week of the season for Iowa's deficit closure. A strong reading would remove the last remaining supply confirmation risk in the corn market before freeze risk begins rising in earnest.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>No new crop data until Monday October 26. The October 18 baseline stands: corn at 44% nationally, 8 points behind the five-year average. Soybeans at 64% are on pace. Monday's report captures the October 19-25 window - the decisive acceleration period for Iowa's corn harvest before early-November freeze risk. The market is waiting on this one number.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; IndexBox &middot; Brownfield Ag News &middot; DTN Progressive Farmer</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <div class="strip">
+          <div><div class="k">30-yr mortgage (Freddie Mac)</div><div class="v">7.40%</div><div class="d flat">Oct 15 last &middot; today's PMMS noon ET &middot; 10-yr eased to 5.08%</div></div>
+          <div><div class="k">10-year</div><div class="v">5.08%</div><div class="d down">&#9660; Thu Oct 22 AM &middot; -6 bps overnight &middot; PMMS survey week below 5.12%</div></div>
+          <div><div class="k">Tariff Day</div><div class="v">Day 72</div><div class="d flat">~45% combined rate &middot; Canada softwood &middot; no relief timeline</div></div>
+        </div>
+        <p class="setup">Today's Freddie Mac PMMS, published at noon ET, is the most anticipated data point in the real estate calendar this week. The survey ran from Saturday October 18 through Wednesday October 21, during which the 10-year eased from approximately 5.12% to 5.08% - a 4-basis-point weighted average improvement below last week's survey level. For the reading to improve below <b>7.40%</b> for the first time since September, the weighted-average 10-year through the week needs to average near 5.06-5.08%. This week's average may meet that threshold.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">30-year fixed (Freddie Mac PMMS, last reading October 15 / today's reading noon ET October 22):</span> <span class="num">7.40%</span> <span class="d flat">flat for 2 straight weeks &middot; today's result noon ET &middot; 10-yr survey week avg ~5.08-5.10% &middot; possible first improvement since September</span><span class="why">The PMMS survey window that opened Saturday October 18 ran with the 10-year at 5.09-5.12% in the first three days and at 5.08% by Thursday morning. A weighted-average 10-year near 5.08-5.10% for the full week is consistent with a first improvement in the 30-year mortgage rate since September. The daily lender-quote rate on October 21 was 7.367%, per one mortgage news source - a separate measure from the PMMS but directionally consistent. The noon ET reading will be the first signal since September's housing data confirmed the builder stress the rate environment was causing.</span></div>
+          <div class="line"><span class="lb">Canada softwood lumber tariff (Day 72 as of Thursday October 22):</span> <span class="num">~45% combined</span> <span class="d flat">antidumping, countervailing, Section 232 duties &middot; $3,000-$6,000 per home &middot; no relief timeline</span><span class="why">Day 72 of the softwood tariff maintains the fixed construction cost that no mortgage rate improvement fully offsets. Even if today's PMMS shows improvement to 7.37-7.38%, the $3,000-6,000 per-home framing cost premium above the pre-tariff baseline is unchanged. September housing starts confirmed this math: 1.221 million SAAR, the second-lowest in 25 months. No legislative relief timeline has been announced. The tariff and the mortgage rate are two simultaneous headwinds; reducing one by a few basis points through a PMMS improvement helps at the margin but does not clear the affordability gap.</span></div>
+          <div class="line"><span class="lb">Builder sentiment context (NAHB October reading):</span> <span class="num">29</span> <span class="d down">&#9660; 14-year low &middot; confirmed by September starts at 1.221M SAAR &middot; tracking actual construction pullback</span><span class="why">NAHB's 14-year low of 29 tracked to an actual starts decline: September's 1.221 million SAAR is the second-lowest rate in 25 months, confirming the index was leading, not lagging, actual construction behavior. Building permits at 1.4 million held higher than starts - builders are preserving optionality through permits while not committing capital - a pattern consistent with waiting for the rate relief today's noon PMMS may begin to provide.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Today's Freddie Mac PMMS at noon ET is the week's most meaningful real estate data point. The 10-year ended the survey week at 5.08% - 4-6 basis points below last week's level - giving Thursday's reading a genuine path to the first improvement since September. Day 72 of the softwood tariff adds a fixed cost that any rate improvement partially - but not fully - offsets. The housing sector is watching noon ET.</p></div>
+        <div class="src"><b>Curated from</b> Freddie Mac &middot; Mortgage News Daily &middot; Census Bureau &middot; NAHB &middot; US Treasury &middot; Trading Economics</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <div class="strip">
+          <div><div class="k">Jobless claims</div><div class="v">Due 8:30 AM ET</div><div class="d flat">Week ending Oct 18 &middot; prior 199K &middot; consensus ~200K &middot; last pre-FOMC labor read</div></div>
+          <div><div class="k">Card delinq 90+</div><div class="v">12.9%</div><div class="d up">&#9650; NY Fed Q2 &middot; Q3 report due November &middot; +0.7 pts yr-over-yr</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.27</div><div class="d flat">AAA Thu Oct 22 &middot; Oct 16-17 + Oct 22 spikes both in transmission lag</div></div>
+        </div>
+        <p class="setup">Thursday carries the most consequential consumer data remaining before the October 28 FOMC: <b>initial jobless claims at 8:30 AM ET</b> for the week ending October 18. The prior reading was 199,000. Consensus is approximately 200,000. The four-week average near 198,500 is at cycle lows - a level consistent with a labor market that has not materially weakened under seven weeks of 7.40% mortgage rates, 12.9% credit card delinquency, and Brent above $100.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Initial jobless claims (DOL, due Thursday October 22 at 8:30 AM ET, week ending October 18):</span> <span class="num">due at 8:30 AM ET</span> <span class="d flat">prior 199K &middot; consensus ~200K &middot; 4-week avg ~198,500 &middot; last pre-FOMC labor read &middot; blackout seals Fed response</span><span class="why">Claims at the consensus 200,000 level would extend the 4-week average near cycle lows and leave October 28 hike odds unchanged at 15-16%. A reading above 225,000 would begin to shift the narrative in a direction that makes October hike even less likely; a reading below 190,000 would reinforce the labor strength that kept hike odds from falling to zero. The FOMC blackout means no Fed official can respond to this morning's number before October 28 - the data lands directly into the market, with no Fed guidance to interpret it against. Thursday at 8:30 AM ET is the last time the market gets a pre-FOMC labor signal.</span></div>
+          <div class="line"><span class="lb">Credit card balances 90+ days delinquent (NY Fed, Q2 2026 - Q3 report due November):</span> <span class="num">12.9%</span> <span class="d up">&#9650; from 12.2% Q2 2025 &middot; Q3 covers July-September &middot; first full quarter after September hike</span><span class="why">The Q3 NY Fed consumer credit report - covering July through September, the first full quarter after the September 16 hike - arrives in November. Major bank earnings last week did not flag accelerating Q3 credit losses, which is a tentative floor signal. With gas prices set to rise toward the October 26-31 pump-transmission window and a second oil surge now layered on for November 1-5, the 12.9% Q2 delinquency baseline will be the comparator when November's Q3 report lands.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, Thursday October 22, 2026):</span> <span class="num">$4.2701/gallon</span> <span class="d flat">reflects Oct 13-16 crude &middot; Oct 16-17 spike arrival Oct 26-31 &middot; Oct 22 Brent surge arrival Nov 1-5</span><span class="why">Thursday's $4.2701 still reflects crude from approximately October 13-16. Two lag waves are now layered: the October 16-17 Brent event arrives at the pump approximately October 26-31, and today's October 22 Brent surge at $111.64 arrives approximately November 1-5. A household at $4.27 today faces a two-step pump price increase - one straddling the FOMC decision and one arriving in the week after it. That sequence will feed directly into November CPI expectations.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Initial jobless claims at 8:30 AM ET Thursday are the last pre-FOMC labor read. Prior was 199,000; consensus is ~200,000. Credit card delinquency at 12.9% (Q2 NY Fed) is the consumer credit baseline as the Q3 report approaches in November. Gas at $4.27 will rise on two separate lag waves: October 26-31 and November 1-5. The household cost picture is tightening heading into the October 28 FOMC decision.</p></div>
+        <div class="src"><b>Curated from</b> DOL &middot; New York Fed &middot; AAA &middot; CNBC &middot; Reuters</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <div class="strip">
+          <div><div class="k">Bitcoin</div><div class="v">~$82,800</div><div class="d down">&#9660; Thu Oct 22 AM &middot; from $82,700 Wed &middot; -1.5% vs Wed high &middot; risk-off pressure</div></div>
+          <div><div class="k">Ethereum</div><div class="v">~$2,442</div><div class="d down">&#9660; Thu Oct 22 AM &middot; from $2,443 Wed &middot; -0.3% &middot; ETF outflows continuing</div></div>
+          <div><div class="k">XRP</div><div class="v">~$1.34</div><div class="d flat">Thu Oct 22 AM &middot; from $1.33 Wed &middot; mixed &middot; ETF flows $0.00 eighth straight session</div></div>
+        </div>
+        <p class="setup">Crypto held near Wednesday's levels in early Thursday trading despite the Nasdaq's 0.7% pre-market decline. Bitcoin at approximately <b>$82,800</b> shows resilience relative to equities - the $80,000 institutional floor is holding 2,800 points below. Ethereum at <b>$2,442</b> is marginally lower. XRP at <b>$1.34</b> is essentially flat. The structural picture is unchanged: Ethereum ETFs are in their sixth consecutive outflow day and XRP ETF products have posted <b>$0.00 daily flow for the eighth consecutive session</b> - the CLARITY Act stall continues.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Bitcoin (Thursday October 22 AM, CryptoTimes / CoinGabbar):</span> <span class="num">~$82,800</span> <span class="d down">&#9660; from $82,700 Wed &middot; -1.5% vs Wednesday high &middot; 24-hr range $82,567-$84,808 &middot; $80,000 floor 2,800 pts below</span><span class="why">Bitcoin's relative resilience Thursday morning - holding near $82,800 while the Nasdaq falls 0.7% pre-market - reflects the asset's partial decoupling from the tech-capex narrative that is driving equity weakness. The Tesla capex cut is a corporate spending signal; Bitcoin's institutional floor at $80,000 is a monetary policy and reserve-asset story. The $82,800 level is 2,800 points above the institutional floor that has held through the past three weeks of volatility. Meta's raised $145 billion AI capex is a mild positive for Bitcoin's institutional adoption thesis - large-scale AI investment and crypto adoption have historically moved together.</span></div>
+          <div class="line"><span class="lb">Ethereum (Thursday October 22 AM, CryptoTimes / Fortune):</span> <span class="num">~$2,442</span> <span class="d down">&#9660; from $2,443 Wed &middot; -0.3% &middot; ETF outflows sixth consecutive day &middot; CLARITY Act stall unchanged</span><span class="why">Ethereum's flat-to-slight-down Thursday morning reflects the structural stall that has been in place since the CLARITY Act's Senate setback on September 15. The commodity-classification provision that would have cleared the path for a broader Ethereum ETF market failed to advance; each passing day without a new Senate vote date extends the institutional accumulation pause. ETF outflows are in their sixth consecutive session - a structural, not technical, signal. Ethereum's recovery above $2,400 Wednesday was a pre-earnings risk-on move; Thursday's consolidation is the post-earnings reality check.</span></div>
+          <div class="line"><span class="lb">XRP (Thursday October 22 AM, CoinGecko / CoinMarketCap):</span> <span class="num">~$1.34</span> <span class="d flat">from $1.33 Wed &middot; +0.8% &middot; ETF flows $0.00 eighth consecutive session &middot; cumulative ETF ~$1.80B &middot; no new CLARITY Act date</span><span class="why">XRP's marginal 0.8% gain to $1.34 is a retail-sentiment move in a session where broader crypto is flat-to-down - XRP's price sensitivity to speculative positioning is higher than BTC or ETH, so it tends to outperform slightly in quiet sessions. The institutional picture remains: eight consecutive sessions with $0.00 daily ETF flow. Cumulative XRP ETF assets remain at approximately $1.80 billion - the 13-week inflow streak that built that total broke when the CLARITY Act stalled on September 15, and it has not resumed. No new Senate vote date or committee hearing has been reported as of Thursday morning.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Crypto held near Wednesday's levels Thursday morning despite the Nasdaq's pre-market decline: BTC ~$82,800, ETH ~$2,442, XRP ~$1.34. The $80,000 Bitcoin floor is intact 2,800 points below the current price. Ethereum ETFs are in their sixth outflow day; XRP ETFs are at zero for the eighth session. The CLARITY Act stall is the unchanged structural signal for both Ethereum and XRP - no new Senate date has emerged.</p></div>
+        <div class="src"><b>Curated from</b> CoinDesk &middot; CoinMarketCap &middot; CoinGecko &middot; CryptoTimes &middot; Benzinga &middot; Cointelegraph</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="world">Around the World</h2>
+        <div class="strip">
+          <div><div class="k">Nikkei 225</div><div class="v">~62,908</div><div class="d down">&#9660; Thu Oct 22 session &middot; -2.65% &middot; sharpest decline since March &middot; Tesla capex cut hit chip names</div></div>
+          <div><div class="k">Hang Seng</div><div class="v">~22,897</div><div class="d down">&#9660; Thu Oct 22 session &middot; -3.2% &middot; 7-month steepest drop &middot; tech weighting amplified the move</div></div>
+          <div><div class="k">Yen / Dollar</div><div class="v">~158.1</div><div class="d down">&#9660; USD/JPY &middot; from ~158.2 Wed &middot; 1.9 pts from MoF 160 threshold</div></div>
+        </div>
+        <p class="setup">Asian markets reacted to Tesla's capex cut with their sharpest session in months. Japan's Nikkei fell approximately <b>2.65% to 62,908</b> - its steepest single-session decline since March - as chip and AI-infrastructure names led the selloff on the Tesla signal. Hong Kong's Hang Seng fell approximately <b>3.2% to 22,897</b> - its steepest drop in seven months - led by technology shares. The yen held near <b>158.1 per dollar</b>, 1.9 points from the Ministry of Finance's prior 160 intervention threshold.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Nikkei 225 (Thursday October 22 Tokyo session, Investing.com / Groww):</span> <span class="num">~62,908</span> <span class="d down">&#9660; -2.65% &middot; from 64,621 Wed &middot; -1,713 pts &middot; sharpest decline since March &middot; chip and AI names led the drop</span><span class="why">The Nikkei's 2.65% decline - approximately 1,713 points - is the largest single-session drop since March 2026. Tesla's capex cut to $20 billion was received in Tokyo as a broad AI-infrastructure spending reduction signal: Japanese semiconductor names, data-center suppliers, and AI-adjacent manufacturers sold off on the news before US earnings calls had even closed. The Nikkei's composition means it is more exposed to the capex-cut signal than the Dow - it carries significant semiconductor and tech weighting that amplifies the move. Meta's raised capex did not offset the Tesla signal in Asian trading because Meta's spending is more concentrated in US cloud infrastructure than in Asian supply chains.</span></div>
+          <div class="line"><span class="lb">Hang Seng (Thursday October 22 Hong Kong session, Trading Economics / Groww):</span> <span class="num">~22,897</span> <span class="d down">&#9660; -3.2% &middot; from ~23,652 Wed &middot; -755 pts &middot; 7-month steepest drop &middot; tech weighting amplified capex-cut signal</span><span class="why">The Hang Seng's 3.2% decline - approximately 755 points - is its steepest single-session drop in seven months. Hong Kong's index is heavily weighted in technology and communication names, which amplified the Tesla capex-cut signal beyond what the Nikkei's broader industrial composition produced. Dollar strength at 158.1 yen simultaneously raised the cost of dollar-denominated debt for Hang Seng-listed companies - a second headwind operating in parallel with the capex-cut earnings signal.</span></div>
+          <div class="line"><span class="lb">Yen per dollar (Thursday October 22 AM, Exchange Rates UK / Trading Economics):</span> <span class="num">~158.1 USD/JPY</span> <span class="d flat">from ~158.2 Wed &middot; 1.9 pts from 160 MoF threshold &middot; risk-off move marginally yen-positive</span><span class="why">The yen's marginal strengthening from 158.2 to 158.1 reflects the mild risk-off bid from Tesla's capex cut overnight - yen tends to strengthen fractionally in risk-off sessions as carry-trade positions are partially unwound. At 158.1, the yen is 1.9 points from the Ministry of Finance's prior 160 intervention threshold. Brent rising to $111.64 simultaneously raises Japan's crude import cost in yen terms - a stagflationary input that limits how much the yen can benefit from risk-off flows while energy import costs are rising.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Asian markets posted their sharpest sessions in months on Tesla's capex cut: Nikkei -2.65% to 62,908, Hang Seng -3.2% to 22,897. The sell-off led chip and AI-infrastructure names - not financials or industrials - confirming the capex cut was read as an AI-spending signal rather than a company-specific event. The yen at 158.1 is 1.9 points from the MoF threshold as Brent surges to $111.64.</p></div>
+        <div class="src"><b>Curated from</b> Bloomberg &middot; Reuters &middot; Investing.com &middot; Trading Economics &middot; Groww &middot; Exchange Rates UK</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="events">The Week Ahead</h2>
+        <div class="strip">
+          <div><div class="k">Thu Oct 22 (today)</div><div class="v">Claims + PMMS</div><div class="d flat">Claims 8:30 AM ET &middot; Freddie Mac PMMS noon ET &middot; last pre-FOMC labor read</div></div>
+          <div><div class="k">Mon Oct 26</div><div class="v">USDA Crop Progress</div><div class="d flat">Oct 19-25 window &middot; Iowa corn catch-up decision &middot; critical harvest data</div></div>
+          <div><div class="k">Oct 27-28 + Oct 29</div><div class="v">FOMC + GDP + PCE</div><div class="d flat">15-16% hike odds &middot; Q3 GDP advance &middot; September PCE &middot; all in 48 hours</div></div>
+        </div>
+        <p class="setup">The rest of the calendar is dense. Today carries the last pre-FOMC labor read (jobless claims, 8:30 AM ET) and the first potential mortgage rate improvement since September (Freddie Mac PMMS, noon ET). Monday delivers the critical crop harvest update. Then October 27-29 compresses three of the year's most significant data releases into 48 hours: FOMC decision, Q3 GDP advance estimate, and September PCE inflation.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Thursday October 22 - Jobless claims (8:30 AM ET) + Freddie Mac PMMS (noon ET):</span> <span class="d flat">prior claims 199K &middot; consensus ~200K &middot; PMMS survey week 10-yr ~5.08-5.12% &middot; first possible improvement since September</span><span class="why">Today's claims reading is the last pre-FOMC labor data. The PMMS survey closed Wednesday with the 10-year declining through the week - the weighted average is consistent with a possible first improvement below 7.40%. Both releases are complete before the equity market opens Thursday, meaning the morning's full data set - Tesla capex cut, Meta beat, claims, PMMS - arrives simultaneously as the market opens.</span></div>
+          <div class="line"><span class="lb">Monday October 26 - USDA Crop Progress (week ending October 25):</span> <span class="d flat">captures Oct 19-25 harvest window &middot; Iowa corn catch-up decisive &middot; corn futures sensitive to the reading</span><span class="why">Monday's Crop Progress report is the corn market's most important release of the season. It captures the October 19-25 window - the last full week of optimal harvest conditions before freeze risk rises in early November. Iowa's deficit against its five-year average is the key figure; a strong acceleration closes the gap and confirms the WASDE supply estimate; a slow week leaves harvest completion as a price risk into November. Corn futures near $4.80 will move on Monday's reading.</span></div>
+          <div class="line"><span class="lb">October 27-28 FOMC + October 29 Q3 GDP + September PCE:</span> <span class="d flat">15-16% hike odds &middot; Q3 GDP advance estimate Bureau of Economic Analysis 8:30 AM ET Oct 29 &middot; September PCE 8:30 AM ET Oct 29</span><span class="why">The October 27-28 FOMC decision (October 28 announcement at 2:00 PM ET) lands at 15-16% hike odds following Tesla's overnight capex cut - the Fed's blackout prevents any response to today's data until after the October 28 statement. One day later, on October 29, the Q3 GDP advance estimate and September PCE arrive together at 8:30 AM ET from the Bureau of Economic Analysis. That 48-hour window - FOMC decision Wednesday afternoon, GDP and inflation Thursday morning - is the most consequential economic calendar sequence since the September hike. The Bank of Canada and ECB also decide in this window.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Today's calendar - jobless claims at 8:30 AM ET and Freddie Mac PMMS at noon ET - delivers the last pre-FOMC data. Monday's Crop Progress captures the decisive harvest window. October 27-29 compresses the FOMC decision, Q3 GDP advance, and September PCE into 48 hours. The rest of October is the most data-dense stretch of the year.</p></div>
+        <div class="src"><b>Curated from</b> CME FedWatch &middot; Federal Reserve &middot; Bureau of Economic Analysis &middot; USDA NASS &middot; Freddie Mac &middot; DOL &middot; Investing.com</div>
+        </div>
+
+        <div class="disclaimer">
+          <p>This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.</p>
+          <p class="asof">Figures reflect the latest readings available as of Thursday, October 22, 2026, before the US market open. Sources are listed at the end of each section.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#week-opens"><span class="dot"></span>How Thursday Opens</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_october21_2026.html">October 21, 2026</a></li>
+          <li><a href="market_pulse_october20_2026.html">October 20, 2026</a></li>
+          <li><a href="market_pulse_october19_2026.html">October 19, 2026</a></li>
+          <li><a href="market_pulse_october18_2026.html">October 18, 2026</a></li>
+          <li><a href="market_pulse_october17_2026.html">October 17, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We&rsquo;re looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+  </script>
+</body>
+</html>
