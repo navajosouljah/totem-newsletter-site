@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - October 29, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:28px 0 0;text-align:center;}
+  .body{padding-top:0;}
+  h1.headline{text-wrap:balance;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:clamp(34px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;color:var(--ink);margin:56px 0 0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .strip + p.setup{font-style:italic;}
+  .sec-v2 .strip + p.setup b{font-style:italic;}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);position:relative;padding-left:22px;}
+  .sec-v2 .line::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:18px;}
+  .sec-v2 .opens li{padding-left:22px;position:relative;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens li::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .opens li b{font-weight:700;color:var(--ink);}
+  .sec-v2 .opens li:target{background:var(--wash);box-shadow:0 0 0 10px var(--wash);border-radius:2px;}
+  .sec-v2 .opens a.more{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;margin-left:6px;}
+  .sec-v2 .opens a.more:hover{border-bottom:2px solid var(--gold);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p.asof{color:var(--muted);margin-bottom:0;}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_october29_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_15.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Thursday, October 29, 2026</span></div>
+        <h1 class="headline">Microsoft Azure Beats 48% Growth. Fed Holds as GDP and PCE Print at 8:30 AM ET.</h1>
+      </div>
+
+      <div class="body">
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="setup lead-first">The Fed held at <b>3.75&ndash;4.00%</b> Wednesday with a 10-2 vote - Governors Cook and Hammack both dissented for a 25-basis-point hike - and Chair Warsh declined forward guidance: &ldquo;I don&rsquo;t believe in it, absent exigent circumstances.&rdquo; Alphabet then missed Q3 earnings for the first time in four years, with negative free cash flow of <b>$9.07 billion</b> and soft search advertising, falling over <b>10%</b> in after-hours trading. Microsoft beat on every line - revenue <b>$92.28 billion</b>, Azure up <b>48%</b> - rising <b>3%</b> after hours. The split confirms what SK Hynix&rsquo;s record set up Wednesday morning: AI capital spending is intact at hyperscalers executing it; the risk is in overbuilding at those that are not. That is the mechanism Thursday opens pricing.</p>
+        <p class="setup">Q3 GDP advance, September PCE, and weekly jobless claims land simultaneously at <b>8:30 AM ET</b> this morning - six hours from now at time of writing. Q3 is the first full quarter under elevated rates; PCE is the Fed&rsquo;s preferred inflation gauge; claims are the first labor read post-FOMC. Consensus puts Q3 GDP at <b>3.2%</b> (Atlanta Fed GDPNow 3.3%), September PCE headline at <b>3.7%</b>, and claims at approximately <b>198&ndash;199K</b>. A GDP beat above 3.2% with hot PCE would push December&rsquo;s <b>83&ndash;85%</b> hike odds higher and reprice the 2-year immediately. The ECB also decides today.</p>
+        <p class="setup">Iowa corn stands at <b>47%</b> harvested - 20 points behind the five-year average of 67% - with one week before northern corn belt freeze risk rises materially. The yen holds near <b>157.80</b> per dollar, 2.2 points from the Ministry of Finance&rsquo;s 160 intervention threshold, with the BoJ deciding Friday. Friday also brings the Q3 Employment Cost Index at <b>8:30 AM ET</b> - the wage-inflation input that feeds directly into PCE forecasts. Canada&rsquo;s softwood lumber tariff enters Day 79. <b>Curated from</b> CME FedWatch &middot; BEA &middot; BLS &middot; USDA NASS &middot; AAA &middot; CoinGecko &middot; Federal Reserve</p>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="week-opens">How Thursday Opens</h2>
+        <ul class="opens">
+          <li id="open-1"><b>Why the FOMC hold is better for savers than a hike would have been - and what December&rsquo;s 83&ndash;85% odds mean for the next CD rate adjustment.</b> The Fed held at 3.75&ndash;4.00% Wednesday with December&rsquo;s hike odds ticking up to 83&ndash;85% from 82% pre-meeting. Top 1-year CDs hold near 4.60% APY (Popular Direct, Bankrate) entering Thursday. A December hike landing confirms CD rates hold at elevated levels through spring 2027 - the window to lock stays open. <a class="more" href="#savings">Savings &amp; CD Rates &rarr;</a></li>
+          <li id="open-2"><b>Why Microsoft&rsquo;s Azure 48% beat and Alphabet&rsquo;s first miss in four years are reading two different AI spending stories.</b> Microsoft&rsquo;s revenue of $92.28 billion beat estimates with Azure cloud up 48%, rising 3% after hours. Alphabet missed Q3 for the first time in four years, with negative free cash flow of $9.07 billion and soft search ads, falling over 10% after hours. Both companies are AI-heavy - but their execution is diverging sharply. <a class="more" href="#stocks">Stock Market &rarr;</a></li>
+          <li id="open-3"><b>Why pump wave #2 arriving November 1&ndash;5 adds to household costs the same week GDP and PCE print.</b> AAA&rsquo;s $4.27 national gas average still reflects pre-wave crude. Pump wave #2 from October 23&rsquo;s WTI surge through $100 arrives approximately November 1&ndash;5. Brent closed Wednesday at $115.32 and WTI at $102.78 on US-Iran reports - setting wave #3. Three sequential waves of gas price increases are now locked in. <a class="more" href="#energy">Energy &amp; Gas &rarr;</a></li>
+          <li id="open-4"><b>Why Bitcoin climbed back above $80K after the FOMC hold - and what the $137 million in ETF inflows the day before confirmed.</b> Bitcoin recovered to approximately $81,000 Thursday morning after Wednesday&rsquo;s FOMC hold confirmed the rate-ceiling signal institutional buyers needed. October 28&rsquo;s $137.33 million in ETF inflows - the strongest single-day inflow in weeks - reinforced the institutional support floor before the decision. XRP holds near $1.30; Ethereum near $2,350. <a class="more" href="#crypto">Crypto &rarr;</a></li>
+          <li id="open-5"><b>What today&rsquo;s 8:30 AM ET GDP and PCE prints mean for next Thursday&rsquo;s Freddie Mac mortgage rate.</b> The Freddie Mac PMMS publishes at noon ET today - the first survey window to capture last Thursday&rsquo;s yield drop. The 10-year holds near 5.00%, level with last week&rsquo;s survey inputs, tracking a second consecutive improvement toward 7.20&ndash;7.25%. If GDP and PCE push the 10-year above 5.10% by noon, that improvement disappears before the survey closes. <a class="more" href="#realestate">Real Estate &rarr;</a></li>
+        </ul>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">7,743.98</div><div class="d down">&#9660; Oct 28 close &middot; -0.28% AH pressure &middot; Thu AM futures -0.3% &middot; Alphabet drag</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">26,549.85</div><div class="d down">&#9660; Oct 28 close &middot; Nasdaq-100 futures -1% Thu AM &middot; GOOGL -10% AH</div></div>
+          <div><div class="k">Dow</div><div class="v">52,475.10</div><div class="d up">&#9650; Oct 28 close &middot; Dow futures +0.38% Thu AM &middot; less Alphabet exposure</div></div>
+        </div>
+        <p class="setup">Wednesday&rsquo;s session closed mixed but slightly positive - <b>S&amp;P 500 7,743.98</b> (+0.28%), <b>Nasdaq 26,549.85</b> (+0.27%), <b>Dow 52,475.10</b> (+0.19%) - before after-hours earnings reversed the technology tone completely. Alphabet fell over <b>10%</b> in after-hours trading on a Q3 miss; Microsoft rose <b>3%</b> on a Q3 beat with Azure up 48%. Thursday pre-market prices the divergence: <b>Nasdaq-100 futures down approximately 1%</b> (Alphabet drag), S&amp;P futures down approximately <b>0.3%</b>, Dow futures up <b>0.38%</b> on lighter Alphabet exposure in its composition. The FOMC hold at 92% odds was no surprise; the split earnings verdict is the new variable.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (Wednesday October 28 close / Thursday October 29 AM pre-market, CNBC / Seeking Alpha):</span> <span class="num">7,743.98</span> <span class="d down">&#9660; Thu futures ~-0.3% &middot; Alphabet -10.38% premarket &middot; Microsoft +3% AH &middot; FOMC hold priced in</span><span class="why">Wednesday&rsquo;s +0.28% session reflected the expected FOMC hold; the press conference&rsquo;s no-forward-guidance stance was received as neutral-to-hawkish. The after-hours divergence - Alphabet&rsquo;s first miss in four years versus Microsoft&rsquo;s beat on Azure - creates asymmetric Thursday pre-market pressure. S&amp;P futures are down approximately 0.3%, limiting the damage to what Alphabet&rsquo;s weight in the index (roughly 4.1%) drives. Microsoft&rsquo;s 3% after-hours gain offsets roughly 0.2 index points against Alphabet&rsquo;s 10% drop. Q3 GDP, PCE, and claims at 8:30 AM ET are the next session catalysts.</span></div>
+          <div class="line"><span class="lb">Nasdaq Composite (Wednesday October 28 close / Thursday October 29 AM pre-market, CNBC / Investing.com):</span> <span class="num">26,549.85</span> <span class="d down">&#9660; Nasdaq-100 futures -1% Thu AM &middot; GOOGL -10.38% premarket &middot; largest Nasdaq weight driving index lower &middot; MSFT +3% partial offset</span><span class="why">Alphabet&rsquo;s approximately 6.5% weight in the Nasdaq-100 makes Thursday&rsquo;s 10.38% premarket decline a roughly 0.68% direct index drag. Microsoft&rsquo;s 3% gain provides a partial offset at its approximately 8.2% index weight - about +0.25%. The net Nasdaq-100 pre-market impact is approximately -0.43% attributable to the two prints alone, with the broader market adding to the -1% futures reading. SK Hynix&rsquo;s AI chip record Wednesday morning confirmed demand; Alphabet&rsquo;s soft search advertising and negative free cash flow of $9.07 billion introduces an execution question that Microsoft&rsquo;s Azure beat partially answers - but does not close.</span></div>
+          <div class="line"><span class="lb">Dow Jones Industrial Average (Wednesday October 28 close / Thursday October 29 AM pre-market, CNBC):</span> <span class="num">52,475.10</span> <span class="d up">&#9650; Dow futures +0.38% Thu AM &middot; Alphabet not in Dow index &middot; FOMC hold supports industrials &middot; WTI $102.78 cost headwind</span><span class="why">The Dow&rsquo;s 0.38% futures gain Thursday reflects its structurally different composition: Alphabet is not a Dow component, so the morning&rsquo;s largest single-stock headwind is absent. The FOMC hold - the expected outcome - provides a neutral-to-supportive rate background for industrials and financials that dominate the Dow. WTI closing at $102.78 Wednesday adds a modest cost input. The Dow&rsquo;s Thursday direction will depend more on GDP and PCE at 8:30 AM ET than on the Alphabet earnings aftermath affecting the Nasdaq.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Wednesday close: S&amp;P 7,743.98, Nasdaq 26,549.85, Dow 52,475.10. After-hours: Alphabet -10% (first Q3 miss in four years, negative free cash flow $9.07B), Microsoft +3% (Azure +48%, revenue $92.28B). Thursday pre-market: Nasdaq-100 -1% on Alphabet drag, S&amp;P -0.3%, Dow +0.38%. GDP and PCE at 8:30 AM ET are the next session catalysts.</p></div>
+        <div class="src"><b>Curated from</b> CNBC &middot; Seeking Alpha &middot; Investing.com &middot; Alphabet Q3 earnings &middot; Microsoft Q3 earnings &middot; Benzinga</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <div class="strip">
+          <div><div class="k">Fed funds</div><div class="v">3.75&ndash;4.00%</div><div class="d flat">Held Oct 28 &middot; 10-2 vote &middot; Cook &amp; Hammack dissented for hike &middot; Dec ~83&ndash;85%</div></div>
+          <div><div class="k">2-year</div><div class="v">~4.74%</div><div class="d up">&#9650; post-FOMC Oct 28 close &middot; Dec hike repricing &middot; Warsh no forward guidance</div></div>
+          <div><div class="k">10-year</div><div class="v">~5.00%</div><div class="d flat">Oct 28-29 AM &middot; PMMS survey window active &middot; GDP/PCE today 8:30 AM ET</div></div>
+        </div>
+        <p class="setup">The FOMC held at <b>3.75&ndash;4.00%</b> Wednesday with a <b>10-2 vote</b> - the first dissent of Chair Warsh&rsquo;s tenure - and the chair declined to offer forward guidance. Governors Cook and Hammack both voted for an immediate 25 basis-point hike, a signal the market read as confirming December&rsquo;s hike is the base case. CME FedWatch put December hike odds at <b>83&ndash;85%</b> immediately after the decision - up from approximately 82% pre-meeting. The 2-year Treasury moved to approximately <b>4.74%</b> and the 10-year held near <b>5.00%</b> as the post-FOMC repricing absorbed the hawkish dissent without Warsh himself confirming a December path.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">CME FedWatch December hike probability (post-FOMC October 28, CoinCentral / Reuters):</span> <span class="num">83&ndash;85%</span> <span class="d up">&#9650; from ~82% pre-meeting &middot; two dissents confirmed December as base case &middot; Warsh refused forward guidance &middot; Reuters: 100 of 100 economists expect December hike</span><span class="why">The 10-2 vote - with both dissenters wanting an immediate hike rather than waiting for December - effectively confirmed for the market that December is where the FOMC converges, even without Warsh&rsquo;s explicit signal. His statement that he does not believe in forward guidance &ldquo;absent exigent circumstances&rdquo; prevented a direct calendar peg but did nothing to reduce December odds. The post-meeting Reuters poll found all 100 surveyed economists now expect a December hike - a unanimous reading that had been 94 of 100 pre-meeting. Today&rsquo;s GDP and PCE at 8:30 AM ET are the data inputs that confirm or trim that calibration.</span></div>
+          <div class="line"><span class="lb">10-year Treasury (October 28-29 AM, CNBC / Investing.com):</span> <span class="num">~5.00%</span> <span class="d flat">from 4.990% Tue &middot; near flat post-FOMC &middot; Oct 27-30 PMMS survey window closes Thu noon &middot; GDP/PCE at 8:30 AM ET are next directional catalyst</span><span class="why">The 10-year&rsquo;s hold near 5.00% post-FOMC is consistent with market pricing that treated the hold as expected and the press conference as neutral. The October 27-30 Freddie Mac PMMS survey window closes at noon ET today - whatever the 10-year averages from Monday through Thursday noon becomes next week&rsquo;s mortgage input. At 5.00%, the 10-year is approximately 10 basis points below last week&rsquo;s survey average (approximately 5.10%), tracking a second consecutive PMMS improvement. A hot GDP or PCE print at 8:30 AM ET that pushes the 10-year above 5.10% would erase that improvement before noon.</span></div>
+          <div class="line"><span class="lb">2-year Treasury (post-FOMC October 28 close, CNBC / Investing.com):</span> <span class="num">~4.74%</span> <span class="d up">&#9650; from 4.737% Tue &middot; December hike dissent signal embedded &middot; 2/10 spread ~26 bps &middot; GDP/PCE today further repricing trigger</span><span class="why">The 2-year&rsquo;s move to approximately 4.74% post-FOMC reflects the market embedding the hawkish dissent signal - Cook and Hammack wanted a hike now, not December, which is the forward signal the 2-year prices. Warsh&rsquo;s no-forward-guidance stance left the December calibration to the data: GDP above 3.2% and PCE above 3.7% at 8:30 AM ET would push the 2-year higher; a miss on either would provide modest relief. The 2/10 spread near 26 basis points is the tightest since late September.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Fed held 3.75&ndash;4.00% Wednesday, 10-2, with Governors Cook and Hammack dissenting for an immediate hike. December hike odds rose to 83&ndash;85%. The 10-year holds near 5.00% and 2-year near 4.74%. Warsh declined forward guidance; the data speaks at 8:30 AM ET today with GDP and PCE. All 100 economists in the Reuters post-FOMC survey expect a December hike.</p></div>
+        <div class="src"><b>Curated from</b> CME FedWatch &middot; Federal Reserve &middot; CoinCentral &middot; CNBC &middot; Investing.com &middot; Reuters</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <div class="strip">
+          <div><div class="k">Top 1-yr CD</div><div class="v">4.60%</div><div class="d flat">Bankrate Oct 27-28 &middot; Popular Direct &middot; $10K min &middot; post-FOMC hold &middot; Dec 83&ndash;85% hike embedded</div></div>
+          <div><div class="k">Top HYSA</div><div class="v">4.35%</div><div class="d flat">Bankrate Oct 2026 &middot; liquid &middot; floating &middot; tracks FOMC decisions with lag</div></div>
+          <div><div class="k">Nat'l avg 1-yr CD</div><div class="v">2.17%</div><div class="d flat">Bankrate Oct 28 &middot; 243-bp gap to best &middot; unchanged</div></div>
+        </div>
+        <p class="setup">The top 1-year CD holds near <b>4.60% APY</b> (Popular Direct, Bankrate, $10,000 minimum) as Thursday opens - the FOMC hold Wednesday was the expected outcome and did not trigger a downward adjustment. The key shift is in the forward signal: December hike odds rose to <b>83&ndash;85%</b> from 82% on the hawkish dissent, which supports CD rates holding at 4.60% or moving slightly higher before December. A saver who locked at 4.60% Wednesday before 2:00 PM ET captured the rate through Thursday&rsquo;s GDP and PCE. The window remains open Thursday; the next directional event is December&rsquo;s FOMC decision.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Best 1-year CD (Bankrate, October 27-28, 2026 - Popular Direct):</span> <span class="num">4.60% APY</span> <span class="d flat">$10,000 minimum &middot; held post-FOMC &middot; Dec hike at 83&ndash;85% supports rate stability &middot; NerdWallet: CFG Bank at 4.65% as of Oct 2026</span><span class="why">The FOMC hold at 3.75&ndash;4.00% - the widely expected outcome - did not force a CD rate reduction because the hold was not a dovish signal. Two dissents for an immediate hike and December hike odds rising to 83&ndash;85% kept the forward rate environment supportive of 4.60%+ CDs. NerdWallet shows CFG Bank at 4.65% as of October 2026 - the best available rate is holding in the 4.60&ndash;4.65% range rather than declining. A December hike landing would add approximately 25 basis points to the fed funds rate, which banks typically pass through to 1-year CDs within 4&ndash;6 weeks - supporting rates near or above 4.60% through early 2027.</span></div>
+          <div class="line"><span class="lb">Top high-yield savings (Bankrate, October 2026):</span> <span class="num">4.35% APY</span> <span class="d flat">liquid &middot; adjustable &middot; Dec hike at 83&ndash;85% adds ~25 bps if confirmed &middot; current gap to best CD: 25&ndash;30 bps</span><span class="why">The top HYSA at 4.35% remains liquid and adjustable, tracking Fed decisions with a 2&ndash;4 week lag. A December hike - at 83&ndash;85% odds the base case for all 100 economists surveyed by Reuters post-FOMC - would add approximately 25 basis points to the HYSA within four to six weeks of the decision. That would close the gap to the best CD substantially. The trade-off for a saver is locking 4.60% today against waiting for a December HYSA adjustment that requires both the hike to land and the institution to pass it through. On a 12-month horizon, the CD wins unless December&rsquo;s hike is followed by additional increases.</span></div>
+          <div class="line"><span class="lb">National average 1-year CD (Bankrate, October 28, 2026):</span> <span class="num">2.17% APY</span> <span class="d flat">243 bps below best available &middot; ~$608/yr gap on $25,000 &middot; unchanged post-FOMC</span><span class="why">The 243 basis-point gap between the best available 1-year CD (4.60%) and the national average (2.17%) represents approximately $608 per year on a $25,000 deposit. The gap did not narrow post-FOMC: the national average did not move in response to the hold, and the best available rate held at 4.60%. Savers at institutions paying the national average are capturing 2.17% while competing institutions offer 4.60% - a differential that now persists through December&rsquo;s expected hike regardless of today&rsquo;s GDP and PCE prints.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Top 1-year CDs hold near 4.60% APY (Popular Direct, Bankrate; CFG Bank at 4.65% per NerdWallet) as Thursday opens - the FOMC hold was expected and did not drive a rate cut. December hike odds at 83&ndash;85% support CD rate stability into December. Top HYSA holds at 4.35%. The window to lock 4.60% remains open Thursday.</p></div>
+        <div class="src"><b>Curated from</b> Bankrate &middot; NerdWallet &middot; CNBC Select &middot; Forbes Advisor &middot; CME FedWatch</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <div class="strip">
+          <div><div class="k">Brent</div><div class="v">$115.32</div><div class="d up">&#9650; Oct 28 close &middot; +1.3% &middot; US-Iran reports &middot; sets pump wave #3 Nov 8&ndash;12</div></div>
+          <div><div class="k">WTI</div><div class="v">$102.78</div><div class="d up">&#9650; Oct 28 close &middot; +2.9% &middot; wave #2 from Oct 23 arrives Nov 1&ndash;5</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.27</div><div class="d flat">AAA Oct 28-29 &middot; still pre-wave &middot; wave #1 arriving through Oct 31</div></div>
+        </div>
+        <p class="setup">Brent closed Wednesday at <b>$115.32</b> (+1.3%) and WTI at <b>$102.78</b> (+2.9%) - the largest single-day WTI gain since October 23 - on reports that the US is preparing to renew airstrikes on Iranian proxy assets after the November 3 midterms. AAA&rsquo;s national average holds at <b>$4.27</b>, still reflecting crude from approximately October 14&ndash;17 before either pump-transmission event. Pump wave #1 from the October 16&ndash;17 Brent spike continues arriving at retail stations through <b>October 31</b>. Wave #2 from October 23&rsquo;s WTI surge arrives approximately <b>November 1&ndash;5</b>. Wednesday&rsquo;s $115.32 Brent sets wave #3, arriving approximately <b>November 8&ndash;12</b>.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Brent crude (Wednesday October 28 close, CNBC / Reuters):</span> <span class="num">$115.32/barrel</span> <span class="d up">&#9650; +1.3% from ~$113.84 Mon &middot; US-Iran midterm posture reports &middot; $120 bull target / $108 bear floor &middot; sets pump wave #3 Nov 8&ndash;12</span><span class="why">Brent&rsquo;s 1.3% close at $115.32 - driven by reports that the US administration is positioning for renewed airstrikes on Iranian proxy assets after the November 3 midterms - adds supply-risk premium on top of the Saudi refinery attack signal from Wednesday morning. Wednesday&rsquo;s close does not affect this week&rsquo;s pump prices (locked in from October 23); it sets pump wave #3, arriving approximately November 8&ndash;12. At $115.32, Brent is 7 points above the $108 bear floor and 4.7 points below the $120 bull target identified by FinanceFeeds. The midterm posture reports are the new variable: if strikes resume November 4&ndash;5, the crude market faces a fresh supply-risk event before wave #3 even arrives.</span></div>
+          <div class="line"><span class="lb">WTI crude (Wednesday October 28 close, CNBC / OilPriceAPI):</span> <span class="num">$102.78/barrel</span> <span class="d up">&#9650; +2.9% &middot; largest single-day gain since Oct 23 &middot; pump wave #2 from Oct 23 arrives Nov 1&ndash;5 &middot; $100 floor reinforced</span><span class="why">WTI&rsquo;s 2.9% gain to $102.78 Wednesday - the largest single-day advance since October 23&rsquo;s $103+ surge - confirms that the $100 floor held through last week&rsquo;s diplomatic pressure and the FOMC week de-risking. The US-Iran midterm posture reports add a second layer of geopolitical premium on top of the Saudi refinery attack from Wednesday morning. Pump wave #2 from October 23&rsquo;s crude level ($103+) is already in the refinery pipeline - households will see wave #2 arrive at stations approximately November 1&ndash;5 regardless of today&rsquo;s crude price.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, October 28-29, 2026):</span> <span class="num">$4.27/gallon</span> <span class="d flat">reflects Oct 14&ndash;17 crude &middot; wave #1 arriving through Oct 31 &middot; wave #2 from Oct 23 arrives Nov 1&ndash;5 &middot; wave #3 from Oct 28 arrives Nov 8&ndash;12</span><span class="why">AAA&rsquo;s $4.27 as of October 28&ndash;29 still reflects crude from approximately October 14&ndash;17 - before the $108-to-$113 Brent spike (wave #1), the October 23 WTI surge through $100 (wave #2), or Wednesday&rsquo;s $115.32 close (wave #3). All three increases are locked in at the refinery level and arrive sequentially over the next three weeks. Households filling up today at $4.27 will face an escalating pump price through mid-November regardless of any diplomatic development between now and then.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Brent closed at $115.32 and WTI at $102.78 Wednesday on US-Iran midterm posture reports. AAA holds at $4.27 - three sequential pump waves are locked in: wave #1 through October 31, wave #2 November 1&ndash;5, wave #3 November 8&ndash;12. Wednesday&rsquo;s $115.32 Brent sets wave #3 regardless of today&rsquo;s crude price.</p></div>
+        <div class="src"><b>Curated from</b> CNBC &middot; Reuters &middot; OilPriceAPI &middot; FinanceFeeds &middot; AAA &middot; World Oil Monitor</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <div class="strip">
+          <div><div class="k">Gold</div><div class="v">~$4,048</div><div class="d up">&#9650; Thu Oct 29 AM &middot; up from ~$4,020 Wed &middot; FOMC hold reduced Treasury safe-haven advantage</div></div>
+          <div><div class="k">Silver</div><div class="v">~$52.69</div><div class="d down">&#9660; Thu Oct 29 AM &middot; -2.4% from ~$53.98 Wed &middot; post-FOMC industrial demand concern</div></div>
+          <div><div class="k">Copper</div><div class="v">~$6.61</div><div class="d flat">Thu Oct 29 AM &middot; near Tue&rsquo;s $6.63 &middot; grid demand thesis intact</div></div>
+        </div>
+        <p class="setup">Gold rose to approximately <b>$4,048</b> Thursday morning - up from Wednesday&rsquo;s approximately $4,020 - as the FOMC hold provided a modest reduction in Treasury&rsquo;s competing safe-haven yield advantage. The <b>$4,000</b> floor remains intact and the post-FOMC move is the first meaningful gold bid since last Wednesday&rsquo;s $4,097 high. Silver fell approximately <b>2.4%</b> to $52.69 from Wednesday&rsquo;s approximately $53.98 - the divergence from gold is the notable morning print. Copper holds near <b>$6.61</b>, approximately flat from Tuesday&rsquo;s $6.63 gain, with the structural grid-demand thesis unchanged.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Gold (Thursday October 29 AM, Kitco / FXStreet):</span> <span class="num">~$4,048/oz</span> <span class="d up">&#9650; from ~$4,020 Wed &middot; FOMC hold reduced Treasury competing yield &middot; $4,000 floor intact &middot; five-session pullback from $4,097 stabilizing</span><span class="why">Gold&rsquo;s rise to approximately $4,048 Thursday - up roughly $28 from Wednesday&rsquo;s approximately $4,020 - is the first session where the Treasury safe-haven competition dynamic reversed, however modestly. The FOMC hold at 92% odds was priced in; the no-forward-guidance press conference removes some certainty from the December hike path, which reduces the yield certainty that made Treasuries a competing safe-haven store. Warsh&rsquo;s refusal to peg December explicitly is the mechanism that opened a gold bid Thursday morning. If GDP at 8:30 AM ET comes in hot - reinforcing December hike certainty from the data side - the gold bid would reverse as Treasury competition resumes.</span></div>
+          <div class="line"><span class="lb">Silver (Thursday October 29 AM, Kitco / FXStreet):</span> <span class="num">~$52.69/oz</span> <span class="d down">&#9660; -2.4% from ~$53.98 Wed &middot; industrial demand concern post-Alphabet &middot; below $53 support &middot; Tesla capex driver unchanged</span><span class="why">Silver&rsquo;s 2.4% decline to $52.69 - diverging from gold&rsquo;s modest gain - reflects the industrial metal dimension of silver pricing absorbing Alphabet&rsquo;s miss. Alphabet&rsquo;s negative free cash flow of $9.07 billion and soft search advertising raise a question about AI-adjacent capital spending that the Tesla capex cut had already introduced: if hyperscalers pull back on data center expansion, silver&rsquo;s industrial demand from AI infrastructure buildout comes under pressure. The Tesla capex driver is unchanged; the Alphabet result adds a second data-center demand signal pointing in the same direction. Gold rose because its safe-haven dynamic improved; silver fell because its industrial signal deteriorated. The divergence is pricing two different concerns simultaneously.</span></div>
+          <div class="line"><span class="lb">Copper (Thursday October 29 AM, Trading Economics / COMEX):</span> <span class="num">~$6.61/lb</span> <span class="d flat">from $6.63 Tue &middot; ~25% above year-ago &middot; grid demand thesis unaffected by Alphabet miss &middot; utility capital plans 5&ndash;10 year horizon</span><span class="why">Copper&rsquo;s hold near $6.61 - approximately flat from Tuesday&rsquo;s $6.63 gain - reflects the structural nature of the grid-expansion demand driving it. Alphabet&rsquo;s data-center spending signal does not touch utility-scale grid build-out: the capital plans driving copper demand have 5&ndash;10 year procurement horizons that are not revised quarter-to-quarter on one hyperscaler&rsquo;s earnings. At 25% above its year-ago level, copper is pricing the infrastructure cycle that neither FOMC rate decisions nor Tuesday-night earnings reports affect in a single session.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Gold rose to approximately $4,048 Thursday as the FOMC hold reduced Treasury&rsquo;s safe-haven yield competition. Silver fell 2.4% to $52.69 on Alphabet&rsquo;s miss raising AI data-center demand concerns - the gold/silver divergence is pricing two different signals simultaneously. Copper holds near $6.61 with the structural grid-demand thesis unchanged.</p></div>
+        <div class="src"><b>Curated from</b> Kitco &middot; FXStreet &middot; Trading Economics &middot; COMEX &middot; Reuters &middot; GoodReturns</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <div class="strip">
+          <div><div class="k">Corn G/E</div><div class="v">56%</div><div class="d flat">Week ending Oct 25 &middot; WASDE yield 181.2 bpa locked &middot; pace is the remaining variable</div></div>
+          <div><div class="k">Soybeans harvested</div><div class="v">79%</div><div class="d up">&#9650; Week ending Oct 25 &middot; 2 pts ahead of 5-yr avg &middot; supply resolved</div></div>
+          <div><div class="k">Corn harvested</div><div class="v">60%</div><div class="d up">&#9650; Week ending Oct 25 &middot; Iowa 47% &middot; 20 pts behind 5-yr avg 67% &middot; next: Nov 2</div></div>
+        </div>
+        <p class="setup">The USDA Crop Progress report from Monday October 26 (week ending October 25) remains the latest data - the next report arrives Monday November 2. National corn harvest stands at <b>60%</b> harvested, Iowa at <b>47%</b> - still 20 points behind Iowa&rsquo;s 67% five-year average. Soybeans at <b>79%</b> nationally are 2 points ahead of the five-year average and on track for the record 4.562 billion bushel WASDE crop. The window between now and November freeze risk rising materially in the northern corn belt is the sole remaining supply variable in the 2026 crop picture. No new data arrives until Monday.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Corn harvest (USDA Crop Progress, week ending October 25, released October 26, DTNPF / IndexBox):</span> <span class="num">60% harvested</span> <span class="d up">&#9650; from 44% prior week &middot; Iowa 47% (from 26%) &middot; Iowa 5-yr avg ~67% &middot; 20-pt deficit &middot; next report Nov 2</span><span class="why">Iowa&rsquo;s 21-point surge from 26% to 47% in a single week - driven by 6.4 field-suitable days - was the season&rsquo;s largest single-week state advance. The pace needed to close Iowa&rsquo;s 20-point deficit before freeze risk rises is approximately 15 additional points, requiring one more week comparable to the October 19&ndash;25 week. Weather conditions through October 29&ndash;November 1 will determine whether that window is available. The Monday November 2 report will be the first read on whether October 25&rsquo;s momentum carried forward. A second strong week would effectively confirm the 2026 corn harvest before November conditions make pace irrelevant.</span></div>
+          <div class="line"><span class="lb">Soybean harvest (USDA Crop Progress, week ending October 25, DTNPF / IndexBox):</span> <span class="num">79% harvested</span> <span class="d up">&#9650; 2 pts ahead of 5-yr avg ~77% &middot; record 4.562B bushel WASDE crop on track &middot; supply risk resolved</span><span class="why">Soybeans at 79% - 2 points ahead of the five-year average - confirm the record WASDE crop is completing harvest on schedule. The soybean supply picture for 2026 is resolved. Iowa soybeans moved from 31% to 78% in the same week that drove corn&rsquo;s surge, both benefiting from the same field conditions. Iowa corn&rsquo;s 20-point deficit is the only remaining 2026 crop supply risk entering the final harvest window before November.</span></div>
+          <div class="line"><span class="lb">Corn good-to-excellent (USDA Crop Progress, week ending October 25):</span> <span class="num">56%</span> <span class="d flat">steady &middot; WASDE 181.2 bpa locked &middot; quality secondary at harvest stage &middot; Iowa pace is the remaining variable</span><span class="why">The 56% good-to-excellent rating is secondary to pace at this stage - the WASDE has locked the national yield at 181.2 bushels per acre. Iowa at 47% still has approximately 20 percentage points to close before freeze risk materially rises. The Monday November 2 Crop Progress report will be the critical test: if Iowa closes another 15+ points toward its 67% five-year average, the 2026 corn supply picture is effectively confirmed before conditions deteriorate.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>USDA Crop Progress through October 25 (latest data): corn 60% harvested nationally, Iowa 47% (20 points behind its 67% five-year average). Soybeans 79% - 2 points ahead of average and on track for the record WASDE crop. Corn G/E 56%. Iowa corn&rsquo;s 20-point deficit is the only remaining 2026 crop supply risk. Next report: Monday November 2.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; DTNPF &middot; IndexBox &middot; Iowa Capital Dispatch &middot; Farm Progress</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <div class="strip">
+          <div><div class="k">30-yr mortgage (Freddie Mac)</div><div class="v">Due noon ET</div><div class="d flat">Thu Oct 29 PMMS release &middot; survey window Oct 27&ndash;30 &middot; tracking toward 7.20&ndash;7.25%</div></div>
+          <div><div class="k">10-year</div><div class="v">~5.00%</div><div class="d flat">Oct 28-29 AM &middot; ~10 bps below last survey avg &middot; GDP/PCE 8:30 AM ET key</div></div>
+          <div><div class="k">Tariff Day</div><div class="v">Day 79</div><div class="d flat">~45% combined &middot; Canada softwood &middot; $3,000&ndash;$6,000 per new home</div></div>
+        </div>
+        <p class="setup">The Freddie Mac PMMS for Thursday October 29 releases at <b>noon ET today</b> - the first reading to capture last Thursday&rsquo;s historic 17&ndash;19 basis-point yield plunge in its survey window. The October 27&ndash;30 survey window has averaged a 10-year near <b>5.00%</b> - approximately 10 basis points below last week&rsquo;s October 18&ndash;21 average (approximately 5.10%), which produced the <b>7.32%</b> reading on October 22. If the 10-year holds near 5.00% through noon, today&rsquo;s PMMS should show a second consecutive improvement toward <b>7.20&ndash;7.25%</b>. GDP and PCE at 8:30 AM ET are the risk: a hot print that pushes the 10-year above 5.10% before noon would offset the expected improvement. Day <b>79</b> of the Canada softwood tariff at approximately 45% combined keeps the $3,000&ndash;6,000 construction cost per new home unchanged.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">30-year fixed (Freddie Mac PMMS, due Thursday October 29 at noon ET):</span> <span class="num">Due noon ET</span> <span class="d flat">Oct 27&ndash;30 survey window &middot; last reading 7.32% (Oct 22) &middot; 10-year at ~5.00% tracking 7.20&ndash;7.25% &middot; GDP/PCE at 8:30 AM ET are the risk before noon</span><span class="why">Today&rsquo;s PMMS release covers the first survey window fully capturing the October 23 yield plunge. Last Thursday&rsquo;s 17&ndash;19 basis-point plunge fell entirely outside the October 18&ndash;21 window that produced 7.32%. If the 10-year averages near 5.00% through noon today - consistent with Wednesday&rsquo;s close and Thursday morning - a second consecutive PMMS improvement is likely toward 7.20&ndash;7.25%. Two consecutive improvements would represent the strongest affordability signal in the mortgage market since spring 2026. The risk is GDP printing above 3.2% and PCE above 3.7% at 8:30 AM ET: that combination would push the 10-year higher before the survey window closes at noon.</span></div>
+          <div class="line"><span class="lb">Canada softwood lumber tariff (Day 79 as of Thursday October 29):</span> <span class="num">~45% combined</span> <span class="d flat">antidumping, countervailing, Section 232 duties &middot; $3,000&ndash;$6,000 per new home &middot; no relief timeline announced</span><span class="why">Day 79 adds the same $3,000&ndash;6,000 construction cost premium to every new home that Day 1 did. No legislative relief timeline has been announced. Today&rsquo;s expected mortgage rate improvement from 7.32% toward 7.20&ndash;7.25% reduces a $400,000 mortgage payment by approximately $13&ndash;26 per month relative to the 7.40% high - meaningful at the margin but not offsetting the tariff-driven purchase-price premium. NAHB builder sentiment at 29 (a 14-year low) and the 179,000 permit-to-start gap continue reflecting dual-headwind suppression from rates and tariff costs simultaneously.</span></div>
+          <div class="line"><span class="lb">Builder sentiment (NAHB October, 14-year low at 29):</span> <span class="num">29</span> <span class="d flat">14-year low &middot; Sept starts 1.221M SAAR &middot; 179K permit-to-start gap &middot; PMMS improvement tracking &middot; tariff unchanged</span><span class="why">The 179,000 permit-to-start gap reflects builders holding optionality at a 14-year low in sentiment: permits are inexpensive, starts require committed capital against a buyer pool still constrained by 7.32% rates and a tariff premium on new construction. Two consecutive PMMS improvements - if today&rsquo;s noon reading confirms the second - would be the first tangible affordability signal since spring 2026. For the gap to close, both rate relief (PMMS improving) and tariff relief (not yet announced) would need to materialize simultaneously. Today&rsquo;s noon PMMS reading is the first half of that test.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>The Freddie Mac PMMS releases at noon ET today - tracking a second consecutive improvement toward 7.20&ndash;7.25% based on the 10-year near 5.00%. GDP and PCE at 8:30 AM ET are the risk: a hot print before noon could push the 10-year above 5.10% and erase the expected improvement. Day 79 of the Canada softwood tariff keeps the $3,000&ndash;6,000 construction cost unchanged.</p></div>
+        <div class="src"><b>Curated from</b> Freddie Mac &middot; Census Bureau &middot; NAHB &middot; Trading Economics &middot; GlobeNewswire &middot; Morningstar</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <div class="strip">
+          <div><div class="k">Jobless claims</div><div class="v">Due 8:30 AM ET</div><div class="d flat">Week ending Oct 25 &middot; consensus ~198&ndash;199K &middot; prior: 194K &middot; first post-FOMC read</div></div>
+          <div><div class="k">Card delinq 90+</div><div class="v">12.9%</div><div class="d up">&#9650; NY Fed Q2 2026 &middot; Q3 report due Nov &middot; first full hike quarter</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.27</div><div class="d up">&#9650; AAA Oct 28-29 &middot; pump wave #1 arriving through Oct 31 &middot; wave #2 Nov 1&ndash;5</div></div>
+        </div>
+        <p class="setup">Initial jobless claims for the week ending October 25 are due at <b>8:30 AM ET</b> today alongside Q3 GDP advance and September PCE - the first labor market read in the post-FOMC environment. Consensus expects approximately <b>198&ndash;199K</b> claims (prior week: 194K), the four-week average at 197,750. Q3 GDP consensus is <b>3.2%</b> (Atlanta Fed GDPNow 3.3%) and September PCE headline at <b>3.7%</b>. A claims print above 210K would signal the first labor softening since the September rate hike; a GDP beat and hot PCE would reinforce December&rsquo;s 83&ndash;85% hike odds immediately. Gas holds at <b>$4.27</b> as pump wave #1 from the October 16&ndash;17 spike continues arriving through <b>October 31</b>, with wave #2 arriving approximately <b>November 1&ndash;5</b>.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Initial jobless claims (BLS/DOL, due Thursday October 29 at 8:30 AM ET, week ending October 25):</span> <span class="num">Due 8:30 AM ET</span> <span class="d flat">consensus ~198&ndash;199K &middot; prior: 194K &middot; 4-wk avg 197,750 (lowest since Dec 1969) &middot; first post-FOMC labor read</span><span class="why">The week ending October 25 covers the period immediately after the FOMC&rsquo;s October 28&ndash;29 meeting - so this week&rsquo;s claims are actually pre-FOMC from the worker&rsquo;s perspective. The true post-FOMC labor signal comes November 5. Still, the consensus of 198&ndash;199K against the prior 194K represents a modest expected uptick from the near-record-low four-week average. A print above 210K would signal deterioration and would reduce December hike odds; a print below 194K would extend the streak and reinforce them. Together with GDP and PCE, the 8:30 AM ET triple print is this week&rsquo;s most consequential data moment for rate and CD-rate pricing going forward.</span></div>
+          <div class="line"><span class="lb">Credit card balances 90+ days delinquent (NY Fed, Q2 2026 - Q3 report due November):</span> <span class="num">12.9%</span> <span class="d up">&#9650; from 12.2% Q2 2025 &middot; +0.7 pts yr-over-yr &middot; Q3 covers July&ndash;September &middot; first full quarter after September hike</span><span class="why">The Q3 NY Fed consumer credit report - covering July through September, the first full quarter after the September 16 rate hike - arrives in November and will be the first systematic read on whether elevated rates are creating household credit strain beyond the consumer confidence signals. The Q2 12.9% baseline is the comparator. Gas arriving in two sequential waves this week and next, combined with pump wave #3 arriving November 8&ndash;12, adds a compounding energy cost pressure entering Q4. The Q3 report will show whether the rate hike cycle created a household credit inflection point in the precise quarter that energy costs were also escalating.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, October 28-29, 2026):</span> <span class="num">$4.27/gallon</span> <span class="d flat">reflects Oct 14&ndash;17 crude &middot; wave #1 arriving through Oct 31 &middot; wave #2 arrives Nov 1&ndash;5 &middot; wave #3 from Oct 28 close arrives Nov 8&ndash;12</span><span class="why">The $4.27 national average today precedes all three pump-wave completions. Wave #1 (from the October 16&ndash;17 Brent spike) is actively arriving at retail stations through October 31. Wave #2 (from October 23&rsquo;s WTI surge through $100) arrives approximately November 1&ndash;5. Wave #3 (from Wednesday&rsquo;s $115.32 Brent close) arrives approximately November 8&ndash;12. For households, energy costs increase in three sequential steps over the next three weeks while Q3 GDP, PCE, and ECI (Friday) are simultaneously adding to the rate-path picture that will determine whether December&rsquo;s hike pushes borrowing costs higher still.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Jobless claims (week ending Oct 25), Q3 GDP advance, and September PCE all release at 8:30 AM ET today - consensus 198&ndash;199K, 3.2%, and 3.7%. The triple print is the week&rsquo;s most consequential data moment for December&rsquo;s 83&ndash;85% hike calibration. Gas at $4.27 is inside pump wave #1; waves #2 and #3 follow through mid-November.</p></div>
+        <div class="src"><b>Curated from</b> DOL &middot; BEA &middot; BLS &middot; New York Fed &middot; AAA &middot; Atlanta Fed GDPNow &middot; Reuters</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <div class="strip">
+          <div><div class="k">Bitcoin</div><div class="v">~$81,000</div><div class="d up">&#9650; Thu Oct 29 AM &middot; above $80K floor &middot; $137M ETF inflows Oct 28 &middot; FOMC hold signal</div></div>
+          <div><div class="k">Ethereum</div><div class="v">~$2,350</div><div class="d flat">Thu Oct 29 AM &middot; ETF net outflows -$21M Oct 28 &middot; CLARITY Act 44+ days stalled</div></div>
+          <div><div class="k">XRP</div><div class="v">~$1.30</div><div class="d flat">Thu Oct 29 AM &middot; ETF net assets ~$1.48&ndash;$1.50B &middot; CLARITY Act stalled &middot; Nov 3 midterms key</div></div>
+        </div>
+        <p class="setup">Bitcoin recovered to approximately <b>$81,000</b> Thursday morning - above the <b>$80,000</b> institutional floor that Monday&rsquo;s $79,332 low tested - after Wednesday&rsquo;s FOMC hold confirmed the rate-ceiling signal that institutional buyers needed. October 28&rsquo;s <b>$137.33 million</b> in ETF inflows - the strongest single-day inflow in weeks - reinforced the floor before the decision landed. Ethereum holds near <b>$2,350</b> with ETFs recording net outflows of $21.41 million Wednesday; XRP near <b>$1.30</b> with cumulative ETF net assets at approximately $1.48&ndash;$1.50 billion. The CLARITY Act remains stalled at 44+ days without a Senate floor date, with November 3 midterms as the next legislative checkpoint for both Ethereum and XRP.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Bitcoin (Thursday October 29 AM, Fortune / FXStreet / CoinGape):</span> <span class="num">~$81,000</span> <span class="d up">&#9650; above $80K floor &middot; FOMC hold signal &middot; $137.33M ETF inflows Oct 28 &middot; Mon low $79,332 defended</span><span class="why">Bitcoin&rsquo;s recovery above $80,000 after Wednesday&rsquo;s FOMC hold is the institutional signal the $80K floor level needed: the hold confirms the rate-ceiling narrative that has supported BTC as an inflation hedge during elevated-rate periods. The $137.33 million in Wednesday&rsquo;s ETF inflows - arriving the day of the FOMC decision - is the strongest evidence that institutional buyers were positioned for exactly this outcome. Monday&rsquo;s $79,332 low is the floor to watch: if Thursday&rsquo;s GDP and PCE come in hot and push December hike odds materially above 85%, the institutional floor could be retested before Friday&rsquo;s BoJ and ECI.</span></div>
+          <div class="line"><span class="lb">Ethereum (Thursday October 29 AM, Fortune / FXStreet / CoinDesk):</span> <span class="num">~$2,350</span> <span class="d flat">from ~$2,300 Wed AM &middot; modest post-FOMC recovery &middot; ETF net outflows -$21.41M Oct 28 &middot; CLARITY Act 44+ days stalled &middot; Fidelity FETH +$18.78M</span><span class="why">Ethereum&rsquo;s modest recovery to approximately $2,350 post-FOMC - from the $2,300 demand area Wednesday morning - reflects a FOMC-hold bounce without the institutional inflow confirmation that Bitcoin received. Wednesday&rsquo;s net ETF outflows of $21.41 million (with Fidelity&rsquo;s FETH as the sole notable inflow at $18.78 million) confirm the flow divergence: BTC ETFs see structural institutional demand; ETH ETFs see regulatory-clarity-dependent demand that remains absent while the CLARITY Act is stalled. The November 3 midterms are the next checkpoint - a change in Senate composition could shift CLARITY Act prospects for the lame-duck session.</span></div>
+          <div class="line"><span class="lb">XRP (Thursday October 29 AM, CoinMarketCap / FXStreet / CoinGape):</span> <span class="num">~$1.30</span> <span class="d flat">from ~$1.29 Wed &middot; ETF net assets ~$1.48&ndash;$1.50B &middot; CLARITY Act 44+ days stalled &middot; Nov 3 midterms &middot; passage odds ~7&ndash;9%</span><span class="why">XRP&rsquo;s hold near $1.30 post-FOMC reflects the same FOMC-hold bounce as Ethereum without the legislative catalyst needed to resume the institutional inflow streak that built cumulative ETF net assets to approximately $1.77 billion peak. Assets have declined to approximately $1.48&ndash;$1.50 billion since the CLARITY Act stall in mid-October. DeFiRate puts passage odds at 7&ndash;9% with the next checkpoint being November 3 midterms and a potential lame-duck session. No Senate scheduling announcement has emerged. For XRP, the path to resumed institutional inflows requires either a legislative catalyst or a sustained crypto-market risk-on signal.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Bitcoin recovered to approximately $81,000 Thursday on the FOMC hold and $137.33 million in Wednesday ETF inflows - the $80K floor has held through two tests. Ethereum near $2,350 with net ETF outflows Wednesday; XRP near $1.30 with ETF assets at approximately $1.48&ndash;$1.50B. CLARITY Act stalled 44+ days; November 3 midterms are the next legislative checkpoint.</p></div>
+        <div class="src"><b>Curated from</b> Fortune &middot; FXStreet &middot; CoinGape &middot; CoinMarketCap &middot; CoinDesk &middot; DeFiRate &middot; Bitwise SEC filings</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="world">Around the World</h2>
+        <div class="strip">
+          <div><div class="k">Nikkei 225</div><div class="v">~64,400</div><div class="d up">&#9650; Thu Oct 29 AM session &middot; +~1.1% &middot; Microsoft Azure beat &middot; FOMC hold</div></div>
+          <div><div class="k">Hang Seng</div><div class="v">~23,040</div><div class="d down">&#9660; Thu Oct 29 &middot; -~0.4% &middot; Samsung weak profit &middot; Alphabet drag</div></div>
+          <div><div class="k">Yen / Dollar</div><div class="v">~157.80</div><div class="d flat">USD/JPY &middot; 2.2 pts from MoF 160 threshold &middot; FOMC hold &middot; BoJ Fri Oct 30</div></div>
+        </div>
+        <p class="setup">Japan&rsquo;s Nikkei 225 extended its rally to approximately <b>64,400</b> Thursday - up about <b>1.1%</b> - as Microsoft&rsquo;s Azure beat and the FOMC hold provided a positive AI-infrastructure signal that partially offset Alphabet&rsquo;s miss. The Hang Seng fell approximately <b>0.4%</b> to near <b>23,040</b> as Samsung&rsquo;s weak quarterly profit dragged chipmakers and Alphabet&rsquo;s miss added to technology headwinds in Hong Kong&rsquo;s sector composition. The yen holds near <b>157.80</b> per dollar - 2.2 points from the Ministry of Finance&rsquo;s 160 intervention threshold - slightly strengthened from Wednesday&rsquo;s approximately 158.0 as the FOMC hold reduced the immediate USD-strengthening pressure. The BoJ decides Friday. The ECB decides today.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Nikkei 225 (Thursday October 29 AM session, Reuters / Trading Economics):</span> <span class="num">~64,400</span> <span class="d up">&#9650; +~1.1% &middot; Microsoft Azure +48% beat &middot; FOMC hold confirmed &middot; Samsung weak profit tempering AI gains vs. SK Hynix driver yesterday</span><span class="why">The Nikkei&rsquo;s third consecutive session of gains - extending Wednesday&rsquo;s SK Hynix-driven 1.08% to a cumulative three-session advance of nearly 4% - absorbs the Alphabet miss and rises on the Microsoft Azure beat as the net AI-capex signal. The Nikkei&rsquo;s AI-infrastructure-heavy composition (Advantest, semiconductor equipment, AI component suppliers) weights the Microsoft beat more heavily than the Alphabet miss, since Azure&rsquo;s cloud infrastructure growth directly supports chip demand in ways that Alphabet&rsquo;s search advertising softness does not diminish. Samsung&rsquo;s weak quarterly profit provides the limiting factor, preventing the Nikkei from fully extending its AI-driven momentum.</span></div>
+          <div class="line"><span class="lb">Hang Seng (Thursday October 29 AM session, Reuters / Newsonair):</span> <span class="num">~23,040</span> <span class="d down">&#9660; -~0.4% &middot; Samsung weak profit &middot; Alphabet miss adds technology headwind &middot; China macro unchanged &middot; Nikkei divergence persists</span><span class="why">The Hang Seng&rsquo;s continued divergence from the Nikkei - falling 0.4% while Japan rises 1.1% - extends to seven sessions the AI-infrastructure exposure gap between the two markets. Samsung&rsquo;s weak profit provides a direct headwind to the Hang Seng&rsquo;s chipmaker exposure in ways that the SK Hynix record had not provided for the Nikkei yesterday. Alphabet&rsquo;s miss adds a secondary technology headwind for Hong Kong&rsquo;s index, which carries more advertising and consumer-technology exposure than Japan&rsquo;s manufacturing-oriented composition. China macro conditions remain the structural backdrop without a positive catalyst this week.</span></div>
+          <div class="line"><span class="lb">Yen per dollar (Thursday October 29 AM, Reuters / Trading Economics):</span> <span class="num">~157.80 USD/JPY</span> <span class="d flat">from ~158.0 Wed &middot; slight yen strengthening post-FOMC &middot; 2.2 pts from MoF 160 threshold &middot; BoJ Fri Oct 30 &middot; ECB today</span><span class="why">The yen&rsquo;s modest strengthening to approximately 157.80 from Wednesday&rsquo;s 158.0 - a 0.2 yen improvement - reflects the FOMC hold&rsquo;s modest reduction in USD strengthening pressure: a hold without forward guidance is less USD-supportive than a hike would have been. At 157.80, the yen remains 2.2 points from the Ministry of Finance&rsquo;s 160 intervention threshold with two central bank decisions still pending this week: the ECB today and the BoJ Friday. The BoJ is the critical variable - a BoJ tightening signal Friday would narrow the US-Japan rate differential from Japan&rsquo;s side and provide a sustainable yen bid that the FOMC hold alone cannot supply.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Nikkei rose to approximately 64,400 (+1.1%) as the Microsoft Azure beat and FOMC hold offset Alphabet&rsquo;s miss in Japan&rsquo;s AI-infrastructure-weighted composition. Hang Seng fell approximately 0.4% to near 23,040 as Samsung&rsquo;s weak profit and Alphabet&rsquo;s miss added combined headwinds. Yen holds near 157.80 per dollar - 2.2 points from MoF threshold - with ECB today and BoJ Friday as the week&rsquo;s remaining central bank catalysts.</p></div>
+        <div class="src"><b>Curated from</b> Reuters &middot; Trading Economics &middot; Newsonair &middot; Brecorder &middot; TradingView &middot; IL Sole 24 ORE</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="events">The Week Ahead</h2>
+        <div class="strip">
+          <div><div class="k">Thu Oct 29</div><div class="v">GDP + PCE + ECB</div><div class="d flat">8:30 AM ET &middot; Q3 GDP advance &middot; Sept PCE &middot; claims &middot; ECB same day &middot; PMMS noon ET</div></div>
+          <div><div class="k">Fri Oct 30</div><div class="v">ECI + BoJ</div><div class="d flat">8:30 AM ET &middot; Q3 Employment Cost Index &middot; BoJ decision &middot; yen at ~157.80</div></div>
+          <div><div class="k">Mon Nov 2</div><div class="v">USDA Crop Progress</div><div class="d flat">Iowa corn harvest pace &middot; freeze risk window &middot; 20-pt deficit vs 5-yr avg</div></div>
+        </div>
+        <p class="setup">Today brings the year&rsquo;s most data-dense morning: Q3 GDP advance, September PCE, and weekly jobless claims simultaneously at <b>8:30 AM ET</b> - 18 hours after Warsh&rsquo;s press conference and six hours from now at writing. The ECB also decides today, with analysts expecting a hold at 2.5% and 22 basis points of tightening priced in by December. The Freddie Mac PMMS releases at <b>noon ET today</b>, closing the October 27&ndash;30 survey window. Friday October 30 at <b>8:30 AM ET</b> brings the Q3 Employment Cost Index and the BoJ decision. December&rsquo;s 83&ndash;85% hike odds are a forecast until GDP, PCE, ECI, and both central banks speak.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Thursday October 29 - Q3 GDP advance + September PCE + jobless claims (8:30 AM ET, BEA / BLS / DOL) + ECB decision + PMMS (noon ET):</span> <span class="d flat">Q3 GDP consensus 3.2% (GDPNow 3.3%) &middot; Sept PCE headline 3.7% &middot; claims ~198&ndash;199K &middot; ECB hold expected at 2.5% &middot; PMMS tracking 7.20&ndash;7.25%</span><span class="why">October 29 is the year&rsquo;s most consequential single morning for rate-path repricing. Q3 GDP advance is the first read on the economy under elevated rates since the September hike; PCE is the Fed&rsquo;s preferred inflation gauge and the direct input to December hike calibration. A GDP beat above 3.2% with PCE above 3.7% would push December hike odds above 85% and reprice the 2-year higher within minutes of the 8:30 AM ET release. A GDP miss or soft PCE would trim December odds toward 80% and provide the first rate-relief signal since the FOMC decision. The ECB&rsquo;s hold - widely expected - adds context for the yen and dollar-cross dynamics that feed into the BoJ&rsquo;s Friday calibration. The PMMS window closes at noon ET: whatever the 10-year does between 8:30 AM ET and noon directly shapes Thursday&rsquo;s mortgage rate reading.</span></div>
+          <div class="line"><span class="lb">Friday October 30 - Q3 Employment Cost Index (8:30 AM ET, BLS) + BoJ decision:</span> <span class="d flat">ECI: Q3 wage inflation &middot; feeds PCE forecasts &middot; BoJ: rate decision &middot; yen ~157.80 &middot; 2.2 pts from MoF 160 threshold</span><span class="why">Friday&rsquo;s Q3 ECI is the wage-inflation input that feeds directly into PCE forecasts: a hot ECI would reinforce any Thursday PCE surprise and push December hike odds higher into the weekend; a soft ECI would provide the disinflationary signal that validates an 82&ndash;83% calibration. The BoJ decision closes the week with the yen at 157.80 per dollar - 2.2 points from the MoF intervention threshold. A BoJ tightening signal - after Wednesday&rsquo;s FOMC hold and today&rsquo;s ECB expected hold - would narrow the US-Japan rate differential from Japan&rsquo;s side and provide a sustainable yen bid. By Friday evening, the FOMC, ECB, and BoJ will all have spoken, and GDP, PCE, claims, and ECI will all have printed - completing the most data-dense week of the fourth quarter.</span></div>
+          <div class="line"><span class="lb">Monday November 2 - USDA Crop Progress (week ending November 1):</span> <span class="d flat">Iowa corn &middot; 47% harvested last week &middot; 20-pt deficit vs 67% five-year average &middot; one week before northern freeze risk rises materially</span><span class="why">Monday&rsquo;s Crop Progress report will show whether Iowa&rsquo;s 21-point single-week surge from October 19&ndash;25 carried forward. At 47%, Iowa needs approximately 15 more points before the November freeze risk window closes in the northern corn belt. Weather conditions Thursday through Sunday are the determining factor. A second strong week - closing Iowa to 62% or above against its 67% average - would effectively confirm the 2026 corn harvest supply picture before November. A weak week would leave the crop at meaningful harvest risk entering the season&rsquo;s final window.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Q3 GDP advance, September PCE, and jobless claims all release at 8:30 AM ET today alongside the ECB decision - December&rsquo;s 83&ndash;85% hike odds are the variable the data confirms or revises. PMMS closes at noon ET. Q3 ECI and BoJ close Friday. Monday&rsquo;s Crop Progress shows whether Iowa corn&rsquo;s 20-point harvest deficit is closing before freeze risk rises.</p></div>
+        <div class="src"><b>Curated from</b> BEA &middot; BLS &middot; DOL &middot; ECB &middot; Bank of Japan &middot; CME FedWatch &middot; Freddie Mac &middot; USDA NASS</div>
+        </div>
+
+        <div class="disclaimer">
+          <p>This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.</p>
+          <p class="asof">Figures reflect the latest readings available as of Thursday, October 29, 2026, before the US market open. Sources are listed at the end of each section.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#week-opens"><span class="dot"></span>How Thursday Opens</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_october28_2026.html">October 28, 2026</a></li>
+          <li><a href="market_pulse_october27_2026.html">October 27, 2026</a></li>
+          <li><a href="market_pulse_october26_2026.html">October 26, 2026</a></li>
+          <li><a href="market_pulse_october25_2026.html">October 25, 2026</a></li>
+          <li><a href="market_pulse_october24_2026.html">October 24, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We&rsquo;re looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+  </script>
+</body>
+</html>
