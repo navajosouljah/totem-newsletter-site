@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - October 31, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:28px 0 0;text-align:center;}
+  .body{padding-top:0;}
+  h1.headline{text-wrap:balance;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:clamp(34px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;color:var(--ink);margin:56px 0 0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .strip + p.setup{font-style:italic;}
+  .sec-v2 .strip + p.setup b{font-style:italic;}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);position:relative;padding-left:22px;}
+  .sec-v2 .line::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:18px;}
+  .sec-v2 .opens li{padding-left:22px;position:relative;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens li::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .opens li b{font-weight:700;color:var(--ink);}
+  .sec-v2 .opens li:target{background:var(--wash);box-shadow:0 0 0 10px var(--wash);border-radius:2px;}
+  .sec-v2 .opens a.more{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;margin-left:6px;}
+  .sec-v2 .opens a.more:hover{border-bottom:2px solid var(--gold);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p.asof{color:var(--muted);margin-bottom:0;}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_october31_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_15.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Saturday, October 31, 2026</span></div>
+        <h1 class="headline">Savers Keep Their 4.65% Window. December Hike Odds Ease to 80%.</h1>
+      </div>
+
+      <div class="body">
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="setup lead-first">Intel fell <b>30%</b> Friday &ndash; its worst single session since 1974 &ndash; on Q4 revenue guidance of $15&ndash;16 billion against the $17.1 billion estimate. With Alphabet down 12% Wednesday and Amazon down 7% after Thursday&rsquo;s close, three consecutive AI-era earnings misses in two sessions repriced the question from who is winning AI to when AI spending produces returns. The S&amp;P 500 closed at <b>7,580.07</b> (-1.82%), the Nasdaq at <b>25,437</b> (-2.86%), the Dow at <b>51,770</b> (-1.09%). The AI hardware selloff compressed gold (-3%), silver (-6.22%), and copper (-2.03%) simultaneously: reduced near-term data-center demand projections hit industrial metals while flight-to-safety money bid Treasuries and sent the 10-year to approximately <b>4.93%</b>. That is the whole mechanism.</p>
+        <p class="setup">Q3 ECI landed at <b>0.8% Q/Q</b> &ndash; matching consensus exactly &ndash; but the composition is the story: wages rose only <b>0.7% Q/Q</b> (3.1% year-over-year, the slowest in five years), while benefits held at 0.9%/3.9%. Real wages are running at <b>-0.6% year-over-year</b>. The soft wage print trimmed December hike odds from 87% to approximately <b>80%</b> &ndash; the first disinflationary wage signal since August. Top 1-year CDs at <b>4.65% APY</b> are the direct beneficiary: the window stays open at four-to-one odds, with the Fed no longer near-certain to hike in December.</p>
+        <p class="setup">Iowa corn stands at <b>47%</b> harvested, 20 percentage points behind its 67% five-year average, with northern freeze risk rising within 7&ndash;10 days. Monday&rsquo;s USDA Crop Progress (week ending November 1) is the last read before that window may close. Tuesday&rsquo;s midterms set the Senate&rsquo;s composition for three lame-duck items: the CLARITY Act (failed cloture 49&ndash;50, September 15), the Canada softwood lumber tariff (Day 81), and energy deregulation. <b>Curated from</b> BLS &middot; CME FedWatch &middot; CNBC &middot; TheStreet &middot; USDA NASS</p>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="week-opens">How Friday Closed</h2>
+        <ul class="opens">
+          <li id="open-1"><b>What the in-line ECI means for December hike odds and the 4.65% CD window.</b> ECI came in at 0.8% Q/Q (matching consensus), but wages rose just 0.7% Q/Q &ndash; 3.1% year-over-year, the slowest in five years. December hike odds fell from 87% to approximately 80%. Top 1-year CDs hold at 4.65% APY; the softer wage print expanded the window rather than closing it. <a class="more" href="#savings">Savings &amp; CD Rates &rarr;</a></li>
+          <li id="open-2"><b>What Intel&rsquo;s 30% drop &ndash; its worst day since 1974 &ndash; and two prior AI-week misses mean for tech stocks.</b> Q4 guidance of $15&ndash;16B missed the $17.1B estimate. With Alphabet down 12% Wednesday and Amazon down 7% after Thursday&rsquo;s close, three consecutive AI-era earnings misses repriced when AI spending produces returns. S&amp;P 500 closed 7,580.07 (-1.82%), Nasdaq 25,437 (-2.86%). <a class="more" href="#stocks">Stock Market &rarr;</a></li>
+          <li id="open-3"><b>Why gold fell 3% to $3,897 on the same day ECI matched and December odds softened.</b> ECI confirming December at 80% revived the 10-year Treasury&rsquo;s yield advantage over zero-yield gold. The flight-to-safety money that moved into Treasuries also compressed gold, silver (-6.22%), and copper (-2.03%) as near-term AI hardware demand projections fell. <a class="more" href="#commodities">Commodities &rarr;</a></li>
+          <li id="open-4"><b>What the $1.5 billion Binance liquidation reveals about Bitcoin&rsquo;s actual support floor.</b> A Binance liquidation event triggered cascading liquidations of approximately $1.5&ndash;2 billion, pushing Bitcoin from approximately $80K to approximately $76,800. The 200-day moving average near $76,000 is the first structural support. Ethereum fell to approximately $2,233 and XRP to approximately $1.24. <a class="more" href="#crypto">Crypto &rarr;</a></li>
+          <li id="open-5"><b>What Monday&rsquo;s USDA crop report and Tuesday&rsquo;s midterms decide for three reader-finance items.</b> Iowa corn at 47% (20 points behind its 67% average) faces freeze risk; Monday&rsquo;s Crop Progress is the last read before the window may close. Tuesday&rsquo;s midterms set the Senate composition for the CLARITY Act, the Canada softwood lumber tariff (Day 81), and energy deregulation. <a class="more" href="#events">The Week Ahead &rarr;</a></li>
+        </ul>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">7,580.07</div><div class="d down">&#9660; Oct 30 close &middot; -1.82% &middot; INTC -30% + AI-week earnings sweep</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">25,437.00</div><div class="d down">&#9660; Oct 30 close &middot; -2.86% &middot; GOOGL -12% + AMZN -7% AH + INTC -30%</div></div>
+          <div><div class="k">Dow</div><div class="v">51,770.31</div><div class="d down">&#9660; Oct 30 close &middot; -1.09% &middot; Intel Dow component &middot; AMZN not in Dow</div></div>
+        </div>
+        <p class="setup">Friday&rsquo;s session closed with the largest single-day decline of the AI-earnings week: <b>S&amp;P 500 7,580.07</b> (-1.82%), <b>Nasdaq 25,437</b> (-2.86%), <b>Dow 51,770.31</b> (-1.09%). Intel&rsquo;s <b>30% collapse</b> &ndash; its worst single session since 1974 &ndash; completed a three-day AI earnings sweep: Alphabet down 12% Wednesday, Amazon down approximately 7% Thursday after-hours, Intel down 30% Friday. The cumulative market question is no longer whether AI infrastructure spending continues; it is when the returns arrive.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (Friday October 30 close, Yahoo Finance / CNBC):</span> <span class="num">7,580.07</span> <span class="d down">&#9660; -1.82% &middot; Intel Dow component INTC -30% &middot; GOOGL -12% Wed + AMZN -7% Thu AH + INTC -30% Fri = AI earnings sweep &middot; tech sector led decline</span><span class="why">The S&amp;P&rsquo;s 1.82% Friday close is the week&rsquo;s largest single-day index drop, driven by Intel&rsquo;s 30% collapse after Q4 guidance of $15&ndash;16 billion came in more than $1 billion below the $17.1 billion consensus estimate. Amazon&rsquo;s approximately 7% after-hours decline from Thursday entered the Friday open as an additional technology sector headwind. The three-session AI earnings sweep &ndash; Alphabet, Amazon, Intel &ndash; repriced risk across the technology sector: capital spending continues but the market is now pricing a longer timeline to returns. Flight-to-safety buying of Treasuries reduced equity risk appetite broadly across all three indexes.</span></div>
+          <div class="line"><span class="lb">Nasdaq Composite (Friday October 30 close, Yahoo Finance / Investing.com):</span> <span class="num">25,437.00</span> <span class="d down">&#9660; -2.86% &middot; heaviest index loss of the week &middot; GOOGL ~6.5% weight -12% + AMZN ~3.5% weight -7% + INTC -30% &middot; Samsung -5% + SK Hynix -5% Asian session carried forward</span><span class="why">The Nasdaq&rsquo;s 2.86% decline is its steepest single-day loss of the AI-earnings week and reflects the index&rsquo;s concentrated exposure to the three companies at the center of the earnings concern: Alphabet (approximately 6.5% Nasdaq weight), Amazon (approximately 3.5%), and Intel. Samsung Electronics and SK Hynix each fell approximately 5% in Friday&rsquo;s Asian session, extending the AI hardware supply-chain concern from US earnings to Asian chip makers. The cumulative repricing across Alphabet, Amazon, and Intel amounts to the market accepting that AI infrastructure spending is real but its revenue timeline is longer than the 2026 consensus had priced.</span></div>
+          <div class="line"><span class="lb">Dow Jones Industrial Average (Friday October 30 close, AP / Yahoo Finance):</span> <span class="num">51,770.31</span> <span class="d down">&#9660; -1.09% &middot; Intel Dow component -30% &middot; Amazon not in Dow &middot; lighter than Nasdaq but Intel adds direct drag &middot; ECI at 8:30 AM ET did not offset selling</span><span class="why">The Dow&rsquo;s lighter 1.09% decline reflects its Amazon-free composition, which removed the second-largest AI-earnings headwind from the index. Intel, however, is a Dow component: at approximately $41 pre-report and a 30% decline, Intel&rsquo;s move represents the session&rsquo;s largest direct Dow-point drag from a single component. The ECI at 8:30 AM ET, which came in at 0.8% matching consensus, did not provide a catalyst to offset the technology sector selling. The session closed with all three indexes at weekly lows.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Friday close: S&amp;P 7,580.07 (-1.82%), Nasdaq 25,437 (-2.86%), Dow 51,770.31 (-1.09%). Intel fell 30% &ndash; worst day since 1974 &ndash; completing the AI-week earnings sweep: Alphabet -12% Wednesday, Amazon -7% Thursday AH, Intel -30% Friday. The market is now pricing a longer timeline to AI returns, not a reversal of AI spending.</p></div>
+        <div class="src"><b>Curated from</b> Yahoo Finance &middot; CNBC &middot; AP &middot; TheStreet &middot; Investing.com &middot; Intel Q3 earnings &middot; Reuters</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <div class="strip">
+          <div><div class="k">Fed funds</div><div class="v">3.75&ndash;4.00%</div><div class="d flat">Held Oct 28 &middot; 10-2 vote &middot; Dec ~80% &middot; ECI wages 3.1% YoY (5-yr low) eased odds from 87%</div></div>
+          <div><div class="k">2-year</div><div class="v">~4.57%</div><div class="d down">&#9660; Oct 30 close &middot; ECI soft + AI flight to safety &middot; pricing softer near-term rate path</div></div>
+          <div><div class="k">10-year</div><div class="v">~4.93%</div><div class="d down">&#9660; Oct 30 close &middot; AI selloff flight to safety &middot; below Oct 27&ndash;30 survey avg &middot; next PMMS window Nov 1&ndash;5</div></div>
+        </div>
+        <p class="setup">Q3 ECI landed at <b>0.8% Q/Q</b> as expected, but the wage component &ndash; <b>0.7% Q/Q</b> (3.1% year-over-year, the slowest in five years) &ndash; was the first disinflationary wage signal since August. December hike odds fell from approximately 87% to approximately <b>80%</b>. The AI selloff&rsquo;s flight-to-safety Treasury bid simultaneously sent the 10-year to approximately <b>4.93%</b> on Friday&rsquo;s close, extending the seven-week yield decline that began Wednesday. Two forces &ndash; the soft wage read and the equity flight-to-safety bid &ndash; are both pressing yields lower into the weekend.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Q3 ECI / CME FedWatch December probability (Friday October 30, BLS / CME FedWatch / Seeking Alpha):</span> <span class="num">~80%</span> <span class="d down">&#9660; from ~87% pre-ECI &middot; wages 0.7% Q/Q &middot; 3.1% YoY (5-yr low) &middot; benefits 0.9% Q/Q &middot; real wages -0.6% YoY &middot; first disinflationary wage signal since August</span><span class="why">The ECI headline matched consensus at 0.8% Q/Q, but the composition is what trimmed December odds: wages rose only 0.7% Q/Q (3.1% year-over-year), the slowest annual pace in five years, while benefits held at 0.9% Q/Q (3.9% year-over-year). Real wages ran at -0.6% year-over-year. That wage deceleration was the disinflationary signal the market had not seen since August and gave the Fed more optionality on December. CME FedWatch moved December odds from approximately 87% to approximately 80% &ndash; still a hike base case but no longer near-certain. The four-in-five December probability keeps the rate environment elevated; the one-in-five optionality is what expanded the CD window.</span></div>
+          <div class="line"><span class="lb">10-year Treasury (Friday October 30 close, Trading Economics / CNBC):</span> <span class="num">~4.93%</span> <span class="d down">&#9660; AI selloff flight to safety &middot; below Oct 27&ndash;30 survey avg of ~5.00% &middot; PMMS next survey window Nov 1&ndash;5 &middot; soft ECI reinforced the bid</span><span class="why">The 10-year&rsquo;s close near 4.93% reflects two reinforcing forces: the AI earnings selloff&rsquo;s flight-to-safety Treasury bid (same as Wednesday and Thursday) and the ECI&rsquo;s soft wage component providing a data-driven reason to expect a softer rate path. The Thursday Freddie Mac PMMS (7.24%) captured the October 27&ndash;30 survey window when the 10-year averaged approximately 5.00%. At 4.93% on Friday&rsquo;s close, the 10-year is running 7 basis points below that average, providing the conditions for next Thursday&rsquo;s PMMS to show a continued improvement if the level holds through the November 1&ndash;5 survey window.</span></div>
+          <div class="line"><span class="lb">2-year Treasury (Friday October 30 close, Trading Economics / Forbes):</span> <span class="num">~4.57%</span> <span class="d down">&#9660; from ~4.65% Thu &middot; ECI wages 3.1% YoY &middot; AI flight to safety &middot; 2/10 spread ~36 bps &middot; pricing softer near-term path</span><span class="why">The 2-year&rsquo;s decline to approximately 4.57% &ndash; from approximately 4.65% Thursday &ndash; captures both the ECI&rsquo;s disinflationary wage signal and the AI-selloff flight-to-safety bid. The 2/10 spread has widened to approximately 36 basis points as the long end&rsquo;s flight-to-safety rally outpaces the front end&rsquo;s ECI-driven move. At 4.57%, the 2-year is pricing a rate path that accounts for the possibility that today&rsquo;s ECI wage deceleration extends: if December&rsquo;s ECI (for Q4) shows a second consecutive quarter of 3.1% or below wage growth, December hike odds could fall further before the FOMC meets.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>December hike odds fell from approximately 87% to approximately 80% on ECI wages at 3.1% year-over-year &ndash; the first disinflationary wage signal since August. The 10-year closed near 4.93% &ndash; below the October PMMS survey average &ndash; providing conditions for continued mortgage rate improvement next week. Two forces (soft wages + equity flight to safety) are both pressing yields lower into the weekend.</p></div>
+        <div class="src"><b>Curated from</b> BLS &middot; CME FedWatch &middot; Trading Economics &middot; Forbes &middot; CNBC &middot; Seeking Alpha &middot; Reuters</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <div class="strip">
+          <div><div class="k">Top 1-yr CD</div><div class="v">4.65%</div><div class="d flat">CFG Bank / NerdWallet &middot; Dec ~80% hike &middot; ECI wages 3.1% YoY expanded window</div></div>
+          <div><div class="k">Top HYSA</div><div class="v">4.35%</div><div class="d flat">Openbank / Bankrate &middot; liquid &middot; adjustable &middot; Dec hike adds ~25 bps with lag</div></div>
+          <div><div class="k">Nat&rsquo;l avg 1-yr CD</div><div class="v">2.13%</div><div class="d flat">Bankrate Oct 2026 &middot; 252-bp gap to best &middot; unchanged</div></div>
+        </div>
+        <p class="setup">Top 1-year CDs hold at <b>4.65% APY</b> (CFG Bank per NerdWallet; Popular Direct at 4.60% per Bankrate) after Friday&rsquo;s ECI result. The wage deceleration &ndash; 3.1% year-over-year, the slowest in five years &ndash; trimmed December hike odds from 87% to approximately <b>80%</b>. That one-in-five optionality is the meaningful change: the 4.65% window stays open, and savers who were facing a near-certain December hike now have a scenario where the Fed holds. The choice between locking the CD now or waiting through November depends on whether the next macro reads sustain the wage deceleration signal.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Best 1-year CD (NerdWallet, October 2026 &ndash; CFG Bank; Bankrate &ndash; Popular Direct 4.60%):</span> <span class="num">4.65% APY</span> <span class="d flat">CFG Bank per NerdWallet &middot; Dec ~80% &middot; ECI wages 3.1% YoY 5-yr low &middot; window stays open &middot; one-in-five Fed-holds scenario now in play</span><span class="why">The top 1-year CD remains at 4.65% APY after Friday&rsquo;s ECI result, with no institution repricing downward on the same day as the wage data. The meaningful change is the December probability: from 87% to approximately 80%. For a saver considering the 4.65% lock, the ECI result improved the odds against locking now and waiting &ndash; from roughly 13% (the probability the Fed holds) to roughly 20%. A December hold, if it materialized, would likely leave 1-year CDs at or above 4.65% through year-end, making the current window less urgent. A December hike at 80% odds would add approximately 25 basis points to the fed funds rate, reaching institutions&rsquo; CD pricing within 4&ndash;6 weeks.</span></div>
+          <div class="line"><span class="lb">Top high-yield savings account (Openbank / Bankrate, October 2026):</span> <span class="num">4.35% APY</span> <span class="d flat">liquid &middot; adjustable &middot; 30-bp gap to best 1-yr CD &middot; Dec hike at ~80% adds ~25 bps within 4&ndash;6 wks &middot; ECI softer wages expand hold scenario</span><span class="why">The HYSA at 4.35% adjusts with Fed decisions after a 2&ndash;4 week lag. A December hike at 80% odds would bring the HYSA toward approximately 4.60% within four to six weeks. The 30-basis-point gap to the best CD is the cost of the HYSA&rsquo;s liquidity advantage. Friday&rsquo;s ECI result expanded the hold scenario from 13% to approximately 20%, which modestly improves the HYSA&rsquo;s relative case for a saver who places high value on retaining optionality. The 12-month comparison still favors the CD if the December hike materializes at 80% odds, but the margin is narrower today than it was Thursday morning.</span></div>
+          <div class="line"><span class="lb">National average 1-year CD (Bankrate, October 2026):</span> <span class="num">2.13% APY</span> <span class="d flat">252 bps below best available &middot; ~$630/yr gap on $25,000 &middot; no repricing from ECI data at weekly level</span><span class="why">The national average at 2.13% did not move on Friday&rsquo;s ECI result, as expected: institutions paying the national average do not reprice at the weekly level in response to macroeconomic data. The 252-basis-point gap to CFG Bank&rsquo;s 4.65% represents approximately $630 per year on a $25,000 deposit. That gap is unchanged whether December lands as a hike or a hold &ndash; the 2.13% institutions trail the market regardless of the Fed&rsquo;s decision. The CD decision at issue today is between 4.65% now and the possibility of 4.65% or higher later; the 2.13% institutions are not part of that choice.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Top 1-year CDs at 4.65% APY (CFG Bank per NerdWallet; Popular Direct 4.60% per Bankrate). Top HYSA at 4.35% (Openbank). National average at 2.13% &ndash; a $630/year gap on $25,000. ECI wages at 3.1% year-over-year (5-year low) trimmed December hike odds from 87% to ~80%, expanding the one-in-five scenario where the CD window stays open at these rates beyond December.</p></div>
+        <div class="src"><b>Curated from</b> NerdWallet &middot; Bankrate &middot; CNBC Select &middot; Forbes Advisor &middot; CME FedWatch &middot; BLS</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <div class="strip">
+          <div><div class="k">Brent</div><div class="v">~$112.33</div><div class="d down">&#9660; Oct 30 close &middot; from ~$116 Thu &middot; AI selloff risk-off &middot; wave #3 from Oct 28 close still arrives Nov 8&ndash;12</div></div>
+          <div><div class="k">WTI</div><div class="v">~$102.95</div><div class="d flat">Oct 30 &middot; ~-0.93% &middot; $100 floor intact &middot; wave #2 from Oct 23 arrives Nov 1&ndash;5</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">~$4.24</div><div class="d flat">AAA Oct 30 &middot; wave #1 completing &middot; wave #2 Nov 1&ndash;5 &middot; wave #3 Nov 8&ndash;12</div></div>
+        </div>
+        <p class="setup">Brent fell from approximately <b>$116</b> to approximately <b>$112.33</b> on Friday as the AI earnings selloff reduced broad risk appetite without a fresh geopolitical crude catalyst. WTI eased to approximately <b>$102.95</b> (-0.93%), holding the $100 floor intact. AAA&rsquo;s national average holds near <b>$4.24</b> as pump wave #1 (from October 16&ndash;17 crude) completes its retail transmission. Brent&rsquo;s Friday close is now the input for the refinery pipeline: wave #2 from October 23&rsquo;s WTI surge still arrives approximately <b>November 1&ndash;5</b>, and wave #3 from Thursday&rsquo;s $115.32 Brent close arrives approximately <b>November 8&ndash;12</b>. The Friday price drop does not affect those locked waves.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Brent crude (Friday October 30 close, Trading Economics / Reuters):</span> <span class="num">~$112.33/barrel</span> <span class="d down">&#9660; from ~$116 Thu AM &middot; AI selloff risk-off &middot; no fresh crude supply catalyst &middot; wave #3 from Thu Oct 28 $115.32 close already locked for Nov 8&ndash;12 &middot; $108 bear floor intact</span><span class="why">Brent&rsquo;s fall to approximately $112.33 &ndash; from approximately $116 Thursday &ndash; reflects the AI earnings selloff reducing broad risk appetite without a new geopolitical crude supply catalyst. The same risk-off move that bid Treasuries and compressed gold also pulled crude lower as growth concerns trimmed near-term demand projections. The critical point for gas prices is that Thursday&rsquo;s $115.32 Brent close &ndash; the October 28 data point &ndash; is already locked in as the refinery input for pump wave #3, arriving approximately November 8&ndash;12 regardless of Friday&rsquo;s crude price. The $4-per-gallon decline in Brent from Thursday to Friday reduces wave #4&rsquo;s eventual magnitude but does not affect the three waves already in the pipeline.</span></div>
+          <div class="line"><span class="lb">WTI crude (Friday October 30, Trading Economics / OilPriceAPI):</span> <span class="num">~$102.95/barrel</span> <span class="d flat">-0.93% &middot; $100 floor reinforced &middot; pump wave #2 from Oct 23 in refinery pipeline &middot; arrives retail Nov 1&ndash;5 &middot; AI risk-off without supply impact</span><span class="why">WTI&rsquo;s near-flat session at $102.95 &ndash; essentially holding the $100 floor for a fourth consecutive session &ndash; confirms that the AI risk-off is reducing equity prices more than crude prices. WTI&rsquo;s $100 support reflects supply fundamentals that the AI earnings wave does not change. Pump wave #2 from October 23&rsquo;s WTI surge is already in the refinery pipeline and arrives at retail stations approximately November 1&ndash;5 regardless of today&rsquo;s crude level. Households filling up through this weekend at approximately $4.24 are ahead of wave #2; those filling November 1&ndash;5 will see the second step-up.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, October 30, 2026):</span> <span class="num">~$4.24/gallon</span> <span class="d flat">wave #1 completing &middot; wave #2 from Oct 23 WTI arrives Nov 1&ndash;5 &middot; wave #3 from Oct 28 $115.32 Brent arrives Nov 8&ndash;12 &middot; Friday&rsquo;s $112 Brent reduces wave #4 only</span><span class="why">The $4.24 national average today is ahead of both remaining locked pump waves. Wave #2 (from October 23&rsquo;s WTI surge through $100) arrives approximately November 1&ndash;5. Wave #3 (from Thursday&rsquo;s $115.32 Brent close) arrives approximately November 8&ndash;12. Friday&rsquo;s decline to $112.33 reduces the magnitude of a potential wave #4 but does not relieve the two waves already locked. Households face three sequential gas price increases through mid-November regardless of Friday&rsquo;s crude move. Midterm elections November 3 are the next potential legislative catalyst for energy policy.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Brent fell to approximately $112.33 (from ~$116) and WTI to approximately $102.95 on AI risk-off selling, without a new supply catalyst. Gas at approximately $4.24 as wave #1 completes. Wave #2 (from Oct 23) arrives November 1&ndash;5; wave #3 (from the Oct 28 $115.32 Brent close) arrives November 8&ndash;12. Friday&rsquo;s lower crude price reduces only a potential future wave, not the two already locked.</p></div>
+        <div class="src"><b>Curated from</b> Trading Economics &middot; OilPriceAPI &middot; Reuters &middot; AAA &middot; CNBC</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <div class="strip">
+          <div><div class="k">Gold</div><div class="v">$3,897</div><div class="d down">&#9660; Oct 30 &middot; -3% from ~$4,030 Thu AM &middot; ECI revived Treasury yield advantage &middot; safe-haven bid went to Treasuries</div></div>
+          <div><div class="k">Silver</div><div class="v">$48.90</div><div class="d down">&#9660; Oct 30 &middot; -6.22% from ~$52.17 Thu &middot; AI hardware miss hit industrial demand view</div></div>
+          <div><div class="k">Copper</div><div class="v">$6.45</div><div class="d down">&#9660; Oct 30 &middot; -2.03% from ~$6.59 Thu AM &middot; AI capex return concern &middot; structural grid thesis intact</div></div>
+        </div>
+        <p class="setup">Gold fell <b>3%</b> to <b>$3,897</b> &ndash; a counterintuitive move on a day when ECI matched expectations and December odds softened. The explanation: ECI confirming December at 80% odds (still a hike base case) revived the 10-year Treasury&rsquo;s yield advantage over zero-yield gold, and the flight-to-safety money that moved out of equities chose yield-bearing Treasuries rather than gold. Silver fell <b>6.22%</b> to <b>$48.90</b> as the AI hardware miss hit the industrial demand view for data-center metals. Copper fell <b>2.03%</b> to <b>$6.45</b> on the same AI capex return concern, while the structural grid-demand thesis driving copper&rsquo;s long-term advance remains unchanged.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Gold (Friday October 30, USAGold daily / Trading Economics):</span> <span class="num">$3,897/oz</span> <span class="d down">&#9660; -3% from ~$4,030 Thu AM &middot; ECI confirmed Dec at ~80% &middot; Treasury yield advantage revived &middot; flight-to-safety money chose yield over gold &middot; $3,900 support tested</span><span class="why">Gold&rsquo;s 3% decline to $3,897 inverts the expected pattern: on a day when ECI wages decelerated and the market was in risk-off mode, gold would ordinarily bid higher. What changed is the rate calculus: ECI confirming December at 80% odds (still a hike at four-to-one probability) kept the 10-year Treasury&rsquo;s yield advantage intact. The flight-to-safety money that moved from equities into Treasuries sent yields lower but simultaneously chose yield-bearing safe-haven assets over zero-yield gold. The result: both Treasuries and gold were sold in comparison &ndash; Treasuries rallied because institutional buyers needed them, but gold saw net selling as the higher-yield alternative absorbed the safe-haven bid. The $3,900 level, which had been support through the AI-week selloff, was tested and briefly broken on Friday.</span></div>
+          <div class="line"><span class="lb">Silver (Friday October 30, Trading Economics / Kitco):</span> <span class="num">$48.90/oz</span> <span class="d down">&#9660; -6.22% from ~$52.17 Thu &middot; AI hardware miss reduced data-center industrial demand view &middot; diverges sharply from gold &middot; below $50 support &middot; Tesla capex driver unchanged</span><span class="why">Silver&rsquo;s 6.22% decline to $48.90 &ndash; breaking below the $50 level that had held through the AI-week volatility &ndash; reflects the dual-nature of silver pricing: it combines safe-haven appeal with industrial metal demand from electronics and data-center construction. Intel&rsquo;s 30% guidance miss and Amazon&rsquo;s 7% after-hours decline hit the industrial demand thesis directly: if AI hardware spending timelines are longer than expected, the data-center construction pipeline that had been an incremental silver demand driver absorbs a near-term revision. The Tesla capex driver is unchanged. Silver&rsquo;s deeper decline versus gold (6.22% vs 3%) reflects the industrial component taking the larger hit.</span></div>
+          <div class="line"><span class="lb">Copper (Friday October 30, Trading Economics / Investing.com):</span> <span class="num">$6.45/lb</span> <span class="d down">&#9660; -2.03% from ~$6.59 Thu AM &middot; AI capex return concern &middot; ~22% above year-ago &middot; utility grid demand 5&ndash;10 year horizon &middot; structural thesis unchanged</span><span class="why">Copper&rsquo;s 2.03% decline to $6.45 is the most contained of the three metals on Friday &ndash; smaller than gold&rsquo;s 3% drop and well below silver&rsquo;s 6.22% decline &ndash; because the utility-scale grid build-out that drives copper&rsquo;s structural demand operates on 5&ndash;10 year capital procurement horizons that a single quarter&rsquo;s AI hardware guidance miss does not reprice. At approximately 22% above its year-ago level, copper continues pricing the infrastructure cycle. The AI earnings concern provides a near-term dip; it does not change the underlying grid-demand thesis. For a reader holding copper exposure, the structural case is the same on Friday evening as it was Thursday.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Gold fell 3% to $3,897 as ECI&rsquo;s 80% December hike base case revived the Treasury yield advantage, directing flight-to-safety money into yield-bearing assets rather than gold. Silver fell 6.22% to $48.90 as the AI hardware miss hit the industrial demand thesis. Copper fell 2.03% to $6.45 &ndash; the structural grid-demand thesis is unchanged by one quarter&rsquo;s AI guidance miss.</p></div>
+        <div class="src"><b>Curated from</b> USAGold &middot; Trading Economics &middot; Kitco &middot; Investing.com &middot; Reuters</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <div class="strip">
+          <div><div class="k">Corn G/E</div><div class="v">56%</div><div class="d flat">Week ending Oct 25 &middot; WASDE 181.2 bpa &middot; harvest pace is the variable &middot; next: Mon Nov 2</div></div>
+          <div><div class="k">Soybeans G/E</div><div class="v">79%</div><div class="d flat">Week ending Oct 25 &middot; 2 pts ahead of 5-yr avg &middot; record 4.562B-bushel crop on track</div></div>
+          <div><div class="k">Iowa corn harvested</div><div class="v">47%</div><div class="d up">&#9650; from 26% prior week &middot; 20 pts behind 67% 5-yr avg &middot; freeze risk rising within 7&ndash;10 days</div></div>
+        </div>
+        <p class="setup">No new USDA Crop Progress data arrives until Monday November 2 (week ending November 1). The last reading &ndash; week ending October 25, released October 26 &ndash; showed national corn harvest at <b>60%</b>, Iowa at <b>47%</b> (still 20 points behind Iowa&rsquo;s 67% five-year average), and soybeans at <b>79%</b> nationally (2 points ahead of average). Weather through Friday October 30 will determine whether Iowa can close another 15 or more points before northern freeze risk rises materially. Monday&rsquo;s report is the last read before that window may close.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Corn harvest (USDA Crop Progress, week ending October 25, released October 26, DTNPF / IndexBox):</span> <span class="num">60% harvested nationally &middot; Iowa 47%</span> <span class="d up">&#9650; Iowa from 26% prior week &middot; 21-pt surge &middot; 67% 5-yr avg &middot; 20-pt Iowa deficit &middot; freeze risk rising within 7&ndash;10 days &middot; next report Mon Nov 2</span><span class="why">Iowa&rsquo;s 21-point surge from 26% to 47% in the week ending October 25 &ndash; driven by 6.4 field-suitable days &ndash; was the season&rsquo;s largest single-week state advance. However, at 47%, Iowa still sits 20 points behind its 67% five-year average. To close that gap before northern freeze risk rises materially (estimated within 7&ndash;10 days of Friday October 30), Iowa needs approximately 15 more percentage points in the week ending November 1. Monday&rsquo;s Crop Progress report will show whether October 25&ndash;31 weather conditions supported a second strong week. A reading of 62% or above would effectively confirm the 2026 Iowa corn harvest before conditions deteriorate; a reading below 55% would leave meaningful supply uncertainty.</span></div>
+          <div class="line"><span class="lb">Soybean harvest (USDA Crop Progress, week ending October 25):</span> <span class="num">79% harvested nationally</span> <span class="d up">&#9650; 2 pts ahead of 5-yr avg ~77% &middot; record 4.562B-bushel WASDE crop on track &middot; Iowa 78% week ending Oct 25 &middot; supply risk resolved</span><span class="why">Soybeans at 79% nationally &ndash; 2 points ahead of the five-year average &ndash; confirm the record WASDE crop is completing on schedule. Iowa soybeans moved from 31% to 78% in the same week that drove corn&rsquo;s surge, benefiting from the same field conditions. The soybean supply picture for 2026 is resolved. Iowa corn&rsquo;s 20-point deficit is the only remaining 2026 crop supply risk entering the final harvest window before November freeze conditions.</span></div>
+          <div class="line"><span class="lb">Corn good-to-excellent rating (USDA Crop Progress, week ending October 25):</span> <span class="num">56%</span> <span class="d flat">steady &middot; WASDE locked at 181.2 bpa &middot; quality secondary at harvest stage &middot; pace is the only remaining variable &middot; Mon Nov 2 report closes the season&rsquo;s last window</span><span class="why">The 56% good-to-excellent rating is secondary to pace at this stage of the harvest cycle &ndash; the WASDE national yield is locked at 181.2 bushels per acre and does not change based on late-season quality ratings. Iowa&rsquo;s pace at 47% is the only meaningful variable remaining. Monday&rsquo;s Crop Progress report will show whether the final pre-freeze harvest window held for a second strong week. If Iowa closes to 62% or above, the 2026 corn supply picture is effectively confirmed before November conditions make pace irrelevant.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>USDA Crop Progress through October 25 (latest data; no new report until Monday November 2): corn 60% harvested nationally, Iowa 47% (20 points behind the 67% five-year average). Soybeans 79% nationally &ndash; 2 points ahead of average and on track for the record WASDE crop. Iowa corn&rsquo;s 20-point deficit is the only remaining 2026 crop supply risk. Monday&rsquo;s report is the last before freeze risk rises materially.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; DTNPF &middot; IndexBox &middot; Farm Progress &middot; Iowa Capital Dispatch</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <div class="strip">
+          <div><div class="k">30-yr mortgage (Freddie Mac)</div><div class="v">7.24%</div><div class="d flat">PMMS Oct 29 &middot; down from 7.32% &middot; 2nd consecutive improvement &middot; next survey window Nov 1&ndash;5</div></div>
+          <div><div class="k">10-year</div><div class="v">~4.93%</div><div class="d down">&#9660; Oct 30 close &middot; below Oct 27&ndash;30 survey avg ~5.00% &middot; supports Nov 5 PMMS improvement</div></div>
+          <div><div class="k">Tariff Day</div><div class="v">Day 81</div><div class="d flat">~45% combined &middot; Canada softwood &middot; $3,000&ndash;$6,000 per new home &middot; midterms Nov 3</div></div>
+        </div>
+        <p class="setup">The Freddie Mac PMMS for October 29 landed at <b>7.24%</b>, down from 7.32% &ndash; two consecutive weekly improvements for the first time since spring 2026. The 10-year closed Friday at approximately <b>4.93%</b>, running 7 basis points below the October 27&ndash;30 survey average of approximately 5.00% that produced the 7.24% PMMS. If the 10-year holds near 4.93% through the November 1&ndash;5 survey window, next Thursday&rsquo;s PMMS could show a third consecutive improvement &ndash; the longest downtrend in this rate cycle. Day <b>81</b> of the Canada softwood lumber tariff at approximately 45% combined maintains the $3,000&ndash;6,000 construction cost per new home unchanged. Midterms November 3 are the next legislative checkpoint.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">30-year fixed (Freddie Mac PMMS, released Thursday October 29):</span> <span class="num">7.24%</span> <span class="d down">&#9660; from 7.32% Oct 22 &middot; Oct 27&ndash;30 survey window &middot; 10-year at ~5.00% survey avg &middot; 2nd consecutive improvement &middot; next survey Nov 1&ndash;5 &middot; Nov 5 release</span><span class="why">The 7.24% PMMS is the second consecutive weekly improvement, the longest downtrend in the current rate cycle. The October 27&ndash;30 survey window averaged the 10-year near 5.00%. The 10-year closed Friday at approximately 4.93% &ndash; driven by the ECI soft wage print and the AI earnings selloff&rsquo;s flight-to-safety Treasury bid &ndash; running 7 basis points below that average. If the 4.93% level or lower persists through the November 1&ndash;5 survey window, next Thursday&rsquo;s PMMS release (November 5) could show a third consecutive improvement and potentially approach 7.10&ndash;7.15% &ndash; the strongest affordability reading since spring 2026. For a buyer with a rate lock expiring this week, the decision to wait has near-term support from the current trajectory.</span></div>
+          <div class="line"><span class="lb">Canada softwood lumber tariff (Day 81 as of Saturday October 31):</span> <span class="num">~45% combined</span> <span class="d flat">antidumping, countervailing, Section 232 duties &middot; $3,000&ndash;$6,000 per new home &middot; no relief timeline &middot; midterms Nov 3 are the next legislative checkpoint</span><span class="why">Day 81 carries the same construction cost headwind as Day 1: approximately 45% combined duties on Canadian softwood add $3,000&ndash;6,000 to the cost of every new home regardless of the session&rsquo;s mortgage rate movement. Tuesday&rsquo;s midterm elections are the next checkpoint: a change in Senate composition could accelerate legislative action on a tariff relief framework or extend the current posture indefinitely through the lame-duck session and into the new Congress. The 7.24% PMMS improvement reduces a $400,000 mortgage payment by approximately $22 per month from the 7.40% high two weeks ago &ndash; meaningful at the margin but insufficient to offset the tariff-driven purchase-price premium.</span></div>
+          <div class="line"><span class="lb">Builder sentiment (NAHB October, 14-year low at 29):</span> <span class="num">29</span> <span class="d flat">14-year low &middot; Sept starts 1.221M SAAR &middot; 179K permit-to-start gap &middot; PMMS improving 2 consecutive weeks &middot; tariff unchanged</span><span class="why">The 179,000 permit-to-start gap &ndash; builders holding permits without converting to starts at a 14-year sentiment low &ndash; reflects the dual-headwind suppression from 7.24% rates and the tariff-driven construction cost premium. Two consecutive PMMS improvements provide the conditions for the permit-to-start gap to narrow, but the tariff side of the equation requires legislative action that midterms November 3 could catalyze or defer. A third consecutive PMMS improvement would be the most direct signal since spring that the rate environment is shifting in builders&rsquo; favor.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Freddie Mac PMMS: 7.24% as of October 29 &ndash; two consecutive improvements for the first time since spring. The 10-year closed Friday near 4.93%, running 7 basis points below the survey average that produced 7.24%, providing conditions for a third consecutive improvement next Thursday. Day 81 of the Canada softwood tariff keeps the construction cost headwind unchanged; midterms November 3 are the next legislative checkpoint.</p></div>
+        <div class="src"><b>Curated from</b> Freddie Mac &middot; Census Bureau &middot; NAHB &middot; Trading Economics &middot; Reuters</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <div class="strip">
+          <div><div class="k">Real wages</div><div class="v">-0.6% YoY</div><div class="d down">&#9660; ECI Q3 2026 &middot; wages 3.1% YoY &ndash; CPI ~3.x% = negative real &middot; first disinflationary wage signal since Aug</div></div>
+          <div><div class="k">Card delinq 90+</div><div class="v">12.9%</div><div class="d up">&#9650; NY Fed Q2 2026 &middot; Q3 report due Nov &middot; first full post-hike quarter</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">~$4.24</div><div class="d flat">AAA Oct 30 &middot; wave #1 completing &middot; wave #2 Nov 1&ndash;5 &middot; wave #3 Nov 8&ndash;12</div></div>
+        </div>
+        <p class="setup">Q3 ECI wages rose <b>3.1% year-over-year</b> &ndash; the slowest annual pace in five years &ndash; while CPI runs near <b>3.6%</b>, leaving real wages at approximately <b>-0.6% year-over-year</b>. Wages are growing more slowly than prices for the third consecutive quarter. The Q3 NY Fed consumer credit report &ndash; covering July through September, the first full quarter after the September 16 rate hike &ndash; arrives in November and will be the systematic read on whether elevated rates are creating household credit strain beyond the 12.9% card delinquency baseline. Gas at approximately <b>$4.24</b> sits ahead of two more sequential pump waves.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Real wages (BLS ECI Q3 2026, released Friday October 30):</span> <span class="num">-0.6% YoY</span> <span class="d down">&#9660; wages 0.7% Q/Q &middot; 3.1% YoY (5-yr low) &middot; benefits 0.9% Q/Q &middot; 3.9% YoY &middot; CPI ~3.6% headline &middot; real wages negative for third consecutive quarter</span><span class="why">Wages rising at 3.1% year-over-year while prices (CPI headline ~3.6%) rise faster means household purchasing power is declining at approximately 0.6% annually for a third consecutive quarter. The ECI&rsquo;s soft wage component &ndash; 0.7% Q/Q, the slowest quarterly rate in five years &ndash; is the first disinflationary wage signal since August, which trimmed December hike odds. But for households, real wages negative means the purchasing-power trend has not reversed: slower wage growth at 3.1% is better than 3.5%+ for the Fed&rsquo;s inflation read, but it is still below the price level workers face at the grocery store and the gas pump. Benefits at 3.9% year-over-year continue to grow above CPI, partially offsetting the wage gap for workers with employer-provided health and retirement benefits.</span></div>
+          <div class="line"><span class="lb">Credit card balances 90+ days delinquent (NY Fed, Q2 2026 &ndash; Q3 report due November):</span> <span class="num">12.9%</span> <span class="d up">&#9650; from 12.2% Q2 2025 &middot; +0.7 pts yr-over-yr &middot; Q3 covers July&ndash;September &middot; first full quarter after September hike</span><span class="why">The Q3 NY Fed consumer credit report covering July through September will be the first systematic read on whether the September 16 rate hike contributed to household credit strain. The Q2 12.9% delinquency baseline &ndash; up 0.7 percentage points year-over-year &ndash; entered a quarter when both rates and gas prices were elevated simultaneously. A further increase in the Q3 reading would signal that the household finance stress is accelerating under the combined pressure of negative real wages, a 25-basis-point September hike, and three sequential gas price waves through mid-November. The report&rsquo;s November release date means the data will be available before the December FOMC decision.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, October 30, 2026):</span> <span class="num">~$4.24/gallon</span> <span class="d flat">wave #1 completing through Oct 31 &middot; wave #2 Nov 1&ndash;5 &middot; wave #3 from Oct 28 $115.32 Brent close arrives Nov 8&ndash;12 &middot; three waves locked regardless of Friday&rsquo;s crude drop</span><span class="why">For household budgets, the $4.24 national average today is the low point before two more locked pump waves arrive. Wave #2 (from October 23&rsquo;s WTI surge through $100) arrives approximately November 1&ndash;5. Wave #3 (from Thursday&rsquo;s $115.32 Brent close) arrives approximately November 8&ndash;12. Friday&rsquo;s Brent decline to $112.33 reduces the magnitude of a potential future wave but does not relieve either locked wave. For a household already managing negative real wages and three sequential gas increases, the November energy picture adds to the consumer credit stress the NY Fed Q3 report will measure.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Real wages at -0.6% year-over-year (ECI wages 3.1% YoY, 5-year low, below CPI ~3.6%) &ndash; third consecutive negative quarter. Card delinquency 90+ at 12.9% (NY Fed Q2); Q3 report due November covers the first full quarter after the September hike. Gas at $4.24 with two more pump waves locked: wave #2 arrives November 1&ndash;5, wave #3 November 8&ndash;12.</p></div>
+        <div class="src"><b>Curated from</b> BLS &middot; NY Fed &middot; BEA &middot; AAA &middot; CME FedWatch</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <div class="strip">
+          <div><div class="k">Bitcoin</div><div class="v">~$76,800</div><div class="d down">&#9660; Oct 30 &middot; from ~$80K &middot; Binance liquidation ~$1.5&ndash;2B &middot; 200-day MA ~$76K first support</div></div>
+          <div><div class="k">Ethereum</div><div class="v">~$2,233</div><div class="d down">&#9660; Oct 30 &middot; from ~$2,307 Thu AM &middot; ETF outflows continuing &middot; CLARITY Act failed Sept 15</div></div>
+          <div><div class="k">XRP</div><div class="v">~$1.24</div><div class="d down">&#9660; Oct 30 &middot; from ~$1.29 Thu &middot; CLARITY Act cloture failed 49&ndash;50 &middot; midterms Nov 3 checkpoint</div></div>
+        </div>
+        <p class="setup">A Binance liquidation event triggered cascading liquidations of approximately <b>$1.5&ndash;2 billion</b> on Friday, pushing Bitcoin from approximately <b>$80,000</b> to approximately <b>$76,800</b>. The 200-day moving average near <b>$76,000</b> is the first structural support. Ethereum fell to approximately <b>$2,233</b> from approximately $2,307 Thursday, with ETF outflows continuing since the CLARITY Act failed Senate cloture <b>49&ndash;50</b> on September 15. XRP fell to approximately <b>$1.24</b>. ETF inflow data for October 30 was not yet available at publication; prior sessions showed $137.33 million (October 28) and $17.2 million (October 29) in positive flows before Friday&rsquo;s liquidation event.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Bitcoin (Friday October 30, Benzinga / Fortune / CoinGecko):</span> <span class="num">~$76,800</span> <span class="d down">&#9660; from ~$80K &middot; Binance liquidation ~$1.5&ndash;2B &middot; 200-day MA ~$76K first structural support &middot; Oct 28: $137.33M ETF inflows &middot; Oct 29: $17.2M ETF inflows &middot; Oct 30 ETF data not yet available</span><span class="why">The Binance liquidation event &ndash; approximately $1.5&ndash;2 billion in cascading liquidations across leveraged positions &ndash; triggered Bitcoin&rsquo;s fall from approximately $80,000 to approximately $76,800, breaking the $80,000 floor that had held since the FOMC hold established the rate-ceiling signal. The 200-day moving average near $76,000 is the first structural support that was not triggered on Friday; if spot price closes below the 200-day MA in a subsequent session, the next support level would be in the low $70,000s. The prior four consecutive sessions of positive ETF inflows &ndash; including the $137.33 million on October 28 (IBIT: $136.01 million) &ndash; had anchored the $80,000 floor against the AI selloff&rsquo;s broader risk-off pressure. The Binance-driven liquidation is a distinct catalyst from the fundamental AI risk-off move, but both arrived on the same session.</span></div>
+          <div class="line"><span class="lb">Ethereum (Friday October 30, Fortune / FXStreet / CoinDesk):</span> <span class="num">~$2,233</span> <span class="d down">&#9660; from ~$2,307 Thu AM &middot; ETF outflows continuing &middot; CLARITY Act failed cloture 49&ndash;50 Sept 15 &middot; Nov 3 midterms &middot; lame-duck session Senate composition</span><span class="why">Ethereum&rsquo;s decline to approximately $2,233 &ndash; from approximately $2,307 Thursday &ndash; continued with ETF outflows that have persisted since the CLARITY Act&rsquo;s September 15 Senate cloture failure (49&ndash;50). The flow divergence between BTC (structural institutional demand via IBIT ETF) and ETH (regulatory-clarity-dependent demand) remains intact. For Ethereum, the legislative path matters: the CLARITY Act would provide the regulatory framework that institutional Ethereum ETF allocators need to justify larger position sizes. Tuesday&rsquo;s midterms determine whether the lame-duck session&rsquo;s Senate composition supports a CLARITY Act floor vote or defers the legislation to the new Congress.</span></div>
+          <div class="line"><span class="lb">XRP (Friday October 30, CoinGecko / CoinMarketCap):</span> <span class="num">~$1.24</span> <span class="d down">&#9660; from ~$1.29 Thu &middot; CLARITY Act cloture failed 49&ndash;50 Sept 15 &middot; ETF assets declining from $1.77B peak &middot; Nov 3 midterms &middot; lame-duck session CLARITY pivot</span><span class="why">XRP&rsquo;s decline to approximately $1.24 &ndash; from approximately $1.29 Thursday &ndash; reflects the ongoing post-cloture-failure stabilization combined with Friday&rsquo;s broad crypto risk-off. Cumulative XRP ETF net assets have declined from the approximately $1.77 billion peak since the September 15 cloture vote. Tuesday&rsquo;s midterms are the next pivot point: a change in Senate composition favorable to the CLARITY Act could provide the legislative catalyst that Ripple and XRP ETF inflows need. Ripple has maintained that XRP&rsquo;s established legal clarity from the 2023 court ruling is independent of the CLARITY Act&rsquo;s legislative status.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Bitcoin fell from approximately $80,000 to approximately $76,800 on a Binance liquidation event of approximately $1.5&ndash;2 billion; the 200-day MA near $76,000 is the first structural support. Ethereum near $2,233 with ETF outflows continuing. XRP near $1.24 with ETF assets declining from the $1.77B peak since the CLARITY Act failed cloture 49&ndash;50 September 15. Midterms November 3 are the next legislative checkpoint.</p></div>
+        <div class="src"><b>Curated from</b> Benzinga &middot; Fortune &middot; CoinGecko &middot; CoinMarketCap &middot; FXStreet &middot; CoinDesk &middot; SoSoValue &middot; Ripple</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="world">Around the World</h2>
+        <div class="strip">
+          <div><div class="k">Nikkei 225</div><div class="v">63,290.11</div><div class="d down">&#9660; Oct 30 close &middot; -2.12% &middot; AI hardware selloff + Samsung/SK Hynix -5% each</div></div>
+          <div><div class="k">Hang Seng</div><div class="v">23,294.42</div><div class="d up">&#9650; Oct 30 close &middot; +1.46% &middot; bucked AI selloff &middot; China stimulus positioning</div></div>
+          <div><div class="k">Yen / Dollar</div><div class="v">~157.58</div><div class="d flat">USD/JPY &middot; BoJ held 1.25% &middot; first 2% inflation statement &middot; 1.6 pts from MoF 160 threshold</div></div>
+        </div>
+        <p class="setup">Japan&rsquo;s Nikkei 225 fell <b>2.12%</b> to close at <b>63,290.11</b> as the AI earnings sweep extended to Asian chip stocks: Samsung Electronics and SK Hynix each fell approximately 5%, dragging Japan&rsquo;s semiconductor-supply-chain exposure. The Hang Seng closed up <b>1.46%</b> at <b>23,294.42</b>, bucking the trend on China stimulus positioning. The BoJ held overnight at <b>1.25%</b> (8&ndash;1 vote) and for the first time explicitly stated that underlying inflation has reached its 2% target &ndash; the trigger condition for the next hike. The yen firmed to approximately <b>157.58</b> per dollar, narrowing the gap to the Ministry of Finance&rsquo;s 160 intervention threshold from 2.2 to 1.6 points.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Nikkei 225 (Friday October 30 close, Yahoo Finance / Bloomberg):</span> <span class="num">63,290.11</span> <span class="d down">&#9660; -2.12% &middot; from ~64,660 Thu close &middot; AI hardware selloff &middot; Samsung -5% + SK Hynix -5% premarket &middot; Intel -30% extended AI-week concern to Asian chip ecosystem</span><span class="why">The Nikkei&rsquo;s 2.12% decline to 63,290.11 &ndash; the week&rsquo;s sharpest single-day loss for the index &ndash; reflects the AI hardware selloff flowing directly to Japan&rsquo;s semiconductor supply-chain composition. Samsung Electronics and SK Hynix, which had each gained on Wednesday&rsquo;s SK Hynix record earnings, both fell approximately 5% on Friday as Intel&rsquo;s 30% collapse reversed the AI hardware investment thesis. The Nikkei&rsquo;s AI-infrastructure-heavy composition &ndash; Advantest, semiconductor equipment suppliers, AI component makers &ndash; amplified the US earnings concern into the Asian session. The BoJ&rsquo;s first inflation-at-target statement adds a longer-term yen-strengthening signal that marginally reduces Japan exporters&rsquo; currency tailwind as the week closes.</span></div>
+          <div class="line"><span class="lb">Hang Seng (Friday October 30 close, Yahoo Finance / Investing.com):</span> <span class="num">23,294.42</span> <span class="d up">&#9650; +1.46% &middot; bucked AI tech selloff &middot; China stimulus positioning &middot; different sector composition from Nikkei</span><span class="why">The Hang Seng&rsquo;s 1.46% gain to 23,294.42 &ndash; bucking the Nikkei&rsquo;s 2.12% decline and the global tech selloff &ndash; reflects China stimulus positioning providing a positive catalyst that is absent from Japan&rsquo;s AI-infrastructure-weighted index. Hong Kong&rsquo;s index carries more financial sector, consumer, and real estate exposure that responds to China stimulus signals and less pure-play AI hardware exposure than Japan. The Nikkei-Hang Seng divergence that characterized much of October &ndash; Japan leading on AI infrastructure, Hong Kong lagging on China macro concerns &ndash; partially reversed Friday as AI headwinds hit Japan and China stimulus hopes supported Hong Kong.</span></div>
+          <div class="line"><span class="lb">Yen per dollar (Friday October 30 post-BoJ, Bloomberg / Investing.com):</span> <span class="num">~157.58 USD/JPY</span> <span class="d flat">from ~157.80 pre-BoJ &middot; BoJ held 1.25% 8-1 &middot; first explicit 2% inflation statement &middot; 1.6 pts from MoF 160 threshold &middot; December BoJ is the live hike date</span><span class="why">The yen&rsquo;s firming to approximately 157.58 &ndash; from approximately 157.80 before the BoJ decision &ndash; reflects the BoJ&rsquo;s first explicit statement that underlying inflation has reached its 2% target: the trigger condition cited for the next rate hike. The BoJ held at 1.25% today (8&ndash;1 vote), but the 2% inflation acknowledgment signals that December is the live hike date. The gap to the Ministry of Finance&rsquo;s 160 intervention threshold has narrowed from 2.2 to approximately 1.6 points. A December BoJ hike &ndash; narrowing the US-Japan rate differential from Japan&rsquo;s side &ndash; would provide a sustainable yen bid that the FOMC hold alone cannot supply, and would affect the carry trade unwind dynamics that have periodically amplified US volatility in 2026.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Nikkei closed at 63,290.11 (-2.12%) as the AI hardware selloff extended to Asian chip stocks (Samsung and SK Hynix each -5%). Hang Seng closed at 23,294.42 (+1.46%) on China stimulus positioning, bucking the trend. BoJ held at 1.25% and for the first time declared inflation at its 2% target &ndash; December BoJ is the live event. Yen at approximately 157.58, 1.6 points from the MoF 160 threshold.</p></div>
+        <div class="src"><b>Curated from</b> Yahoo Finance &middot; Bloomberg &middot; Investing.com &middot; FXStreet &middot; Reuters &middot; Trading Economics</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="events">The Week Ahead</h2>
+        <div class="strip">
+          <div><div class="k">Mon Nov 2</div><div class="v">USDA Crop Progress</div><div class="d flat">Iowa corn &middot; 47% harvested &middot; 20-pt deficit &middot; last read before freeze risk rises</div></div>
+          <div><div class="k">Tue Nov 3</div><div class="v">Midterm Elections</div><div class="d flat">Senate composition &middot; CLARITY Act &middot; lumber tariff &middot; energy deregulation &middot; lame-duck agenda</div></div>
+          <div><div class="k">Thu Nov 5</div><div class="v">Freddie Mac PMMS</div><div class="d flat">Nov 1&ndash;5 survey window &middot; 10-year at 4.93% &middot; 3rd consecutive improvement possible</div></div>
+        </div>
+        <p class="setup">Three catalysts arrive over the next five days. Monday&rsquo;s USDA Crop Progress (week ending November 1) shows whether Iowa corn&rsquo;s harvest pace held for a second strong week at <b>47%</b> against its 67% five-year average. Tuesday&rsquo;s midterm elections set the Senate&rsquo;s composition for the lame-duck session governing three reader-finance items. Thursday&rsquo;s Freddie Mac PMMS reflects the November 1&ndash;5 survey window when the 10-year enters at approximately <b>4.93%</b> &ndash; below the October survey average that produced the 7.24% reading &ndash; making a third consecutive improvement possible.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Monday November 2 &ndash; USDA Crop Progress (week ending November 1):</span> <span class="d flat">Iowa corn 47% harvested &middot; 20-pt deficit vs 67% five-year average &middot; freeze risk rising within 7&ndash;10 days of Oct 30 &middot; last pre-freeze read</span><span class="why">Monday&rsquo;s Crop Progress report will show whether Iowa&rsquo;s 21-point single-week surge from October 19&ndash;25 carried forward into the week ending November 1. At 47%, Iowa needs approximately 15 more percentage points before freeze risk materially closes the harvest window. A reading of 62% or above would effectively confirm the 2026 corn harvest supply picture before November. A reading below 55% would leave meaningful harvest risk as the northern corn belt enters its freeze-risk window. This is the last Crop Progress report before the midterm news cycle dominates the agricultural policy calendar.</span></div>
+          <div class="line"><span class="lb">Tuesday November 3 &ndash; Midterm Elections:</span> <span class="d flat">Senate composition &middot; CLARITY Act lame-duck prospects &middot; Canada softwood tariff &middot; energy deregulation &middot; 13 contested seats</span><span class="why">The Senate&rsquo;s composition after November 3 determines three items with direct reader-finance implications in the lame-duck session. The CLARITY Act (digital asset market structure) failed cloture 49&ndash;50 on September 15; a shift of two or more Senate votes could provide a path for a lame-duck floor vote, which would be the legislative catalyst that Ethereum and XRP ETF flows need. The Canada softwood lumber tariff (Day 81, $3,000&ndash;6,000 per new home) lacks a relief timeline; new Senate leadership would inherit the policy posture. Energy deregulation measures would similarly depend on the new chamber composition. By Wednesday morning, the rate, crypto, real estate, and energy policy landscapes each have a new legislative backdrop.</span></div>
+          <div class="line"><span class="lb">Thursday November 5 &ndash; Freddie Mac PMMS (reflecting Nov 1&ndash;5 survey window):</span> <span class="d flat">10-year entered window at ~4.93% &middot; below Oct 27&ndash;30 survey avg ~5.00% &middot; 3rd consecutive improvement possible &middot; would be longest downtrend in current rate cycle</span><span class="why">Thursday&rsquo;s PMMS release reflects the lender survey conducted November 1&ndash;5. The 10-year entered that window at approximately 4.93% on Friday&rsquo;s close &ndash; 7 basis points below the October 27&ndash;30 survey average of approximately 5.00% that produced the 7.24% reading. If the 10-year holds near or below 4.93% through the survey window, the November 5 PMMS could show a third consecutive weekly improvement and potentially approach 7.10&ndash;7.15% &ndash; the strongest affordability reading since spring 2026 and the longest downtrend in the current rate cycle. A PMMS below 7.15% would be the most direct signal to date that the permit-to-start gap could begin to close.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Monday&rsquo;s Crop Progress closes the corn harvest&rsquo;s last pre-freeze window (Iowa at 47%, 20 points behind). Tuesday&rsquo;s midterms set the Senate composition for three lame-duck items: the CLARITY Act, the lumber tariff, and energy deregulation. Thursday&rsquo;s PMMS reflects a survey window where the 10-year enters at 4.93% &ndash; below last week&rsquo;s average &ndash; making a third consecutive mortgage rate improvement possible.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; CME FedWatch &middot; Congress.gov &middot; Ripple &middot; NAHB &middot; Freddie Mac &middot; Reuters</div>
+        </div>
+
+        <div class="disclaimer">
+          <p>This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.</p>
+          <p class="asof">Figures reflect the latest readings available as of Saturday, October 31, 2026, before the US market open. Sources are listed at the end of each section.</p>
+        </div>
+
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#week-opens"><span class="dot"></span>How Friday Closed</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_october30_2026.html">October 30, 2026</a></li>
+          <li><a href="market_pulse_october29_2026.html">October 29, 2026</a></li>
+          <li><a href="market_pulse_october28_2026.html">October 28, 2026</a></li>
+          <li><a href="market_pulse_october27_2026.html">October 27, 2026</a></li>
+          <li><a href="market_pulse_october26_2026.html">October 26, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We&rsquo;re looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+  </script>
+</body>
+</html>
