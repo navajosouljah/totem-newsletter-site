@@ -1,0 +1,18 @@
+[
+  {
+    "interview_id": "your-interview-01",
+    "clip_id": "hook-01-v1",
+    "post_id": "1234567890123456789",
+    "post_url": "https://www.tiktok.com/@yourhandle/video/1234567890123456789",
+    "published_at": "2026-10-30T12:00:00-05:00",
+    "export_file": "exports/hook-01-v1.mp4",
+    "time_map": [
+      {"clip_start":0,"clip_end":3,"source_start":90,"source_end":93},
+      {"clip_start":3,"clip_end":10,"source_start":80,"source_end":87}
+    ],
+    "transcript": [
+      {"start":0,"end":3,"text":"Replace with the exact opening words."},
+      {"start":3,"end":10,"text":"Replace with the exact words in the exported clip."}
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+node_modules/
+.profile/
+results/
+clips.json
+.run.lock
+*.har
+.env

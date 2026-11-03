@@ -1,0 +1,15 @@
+{
+  "name": "interview-clip-retention",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Read your own posted interview clips in TikTok Studio and keep dated retention observations locally.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "login": "node collector.js login",
+    "collect": "node collector.js collect",
+    "check": "node collector.js check",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": { "playwright": "1.61.1" }
+}

@@ -1,0 +1,60 @@
+{
+  "agent": "The School of Hard Knocks Closer",
+  "schema_version": 1,
+  "updated": "2026-11-03",
+  "business": {
+    "name": null,
+    "type": null,
+    "sells": null,
+    "useful_client": null,
+    "candidates": [
+      "Totem LC Group",
+      "ASAAR Medical",
+      "LA Peptides",
+      "Green House Gallery and Foundation",
+      "The Trainer",
+      "MyHoneyCo",
+      "Upterra"
+    ]
+  },
+  "audience": null,
+  "timezone": {
+    "value": "America/Denver",
+    "basis": "inferred from the Market Pulse routine's Mountain Time schedule; confirm"
+  },
+  "tool_bindings": {
+    "local_ai": { "tool": "Claude Code", "state": "reachable" },
+    "recording": { "tool": null, "candidates": ["Microsoft Teams", "Google Meet", "phone or camera"], "state": "unbound" },
+    "transcription": { "tool": null, "candidates": ["Otter", "Read.ai", "Granola", "Spinach"], "state": "unbound", "requirement": "timestamped transcript of the actual recording file" },
+    "editor": { "tool": null, "candidates": ["Adobe Premiere Pro + MCP", "FFmpeg", "Descript"], "state": "unbound" },
+    "test_platform": { "tool": "TikTok", "state": "account unknown" },
+    "distribution": { "tool": "Instagram", "state": "account unknown" },
+    "analytics": { "tool": null, "candidates": ["Interview Clip Kit", "Claude in Chrome reading TikTok Studio"], "state": "kit verified offline only" }
+  },
+  "project_paths": {
+    "root": "~/school-of-hard-knocks-closer",
+    "source": "source/",
+    "exports": "exports/",
+    "results": "results/",
+    "retention_kit": "tiktok-retention-kit/",
+    "clip_list": "tiktok-retention-kit/clips.json"
+  },
+  "allowed_actions": {
+    "edit_locally": true,
+    "draft_messages": true,
+    "post_publicly": false,
+    "send_messages": false,
+    "write_to_vault": false,
+    "note": "posting and guest outreach only after each item is reviewed"
+  },
+  "evidence": [
+    { "check": "retention kit file hashes", "where": "cloud Claude Code container", "date": "2026-11-03", "result": "Verified 11 supplied files" },
+    { "check": "retention kit dependencies", "where": "cloud Claude Code container", "date": "2026-11-03", "result": "npm ci added 2 packages (playwright 1.61.1); browser download skipped" },
+    { "check": "retention kit offline tests", "where": "cloud Claude Code container", "date": "2026-11-03", "result": "9 passed, 0 failed" },
+    { "check": "ffmpeg", "where": "cloud Claude Code container", "date": "2026-11-03", "result": "6.1.1 present; not checked on the member's computer" },
+    { "check": "node", "where": "cloud Claude Code container", "date": "2026-11-03", "result": "v22.23.4; not checked on the member's computer" },
+    { "check": "Premiere Pro MCP bridge", "where": "n/a", "date": "2026-11-03", "result": "not attempted: no desktop app in a cloud container" },
+    { "check": "Descript connector", "where": "n/a", "date": "2026-11-03", "result": "not attempted: not in the member's stack" },
+    { "check": "TikTok Studio sign-in", "where": "n/a", "date": "2026-11-03", "result": "not attempted: needs the member's own browser on their computer" }
+  ]
+}
