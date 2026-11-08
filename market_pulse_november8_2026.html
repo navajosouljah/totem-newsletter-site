@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - November 8, 2026 - Totem LC Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:28px 0 0;text-align:center;}
+  .body{padding-top:0;}
+  h1.headline{text-wrap:balance;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:clamp(34px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;color:var(--ink);margin:56px 0 0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .strip + p.setup{font-style:italic;}
+  .sec-v2 .strip + p.setup b{font-style:italic;}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);position:relative;padding-left:22px;}
+  .sec-v2 .line::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:18px;}
+  .sec-v2 .opens li{padding-left:22px;position:relative;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens li::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .opens li b{font-weight:700;color:var(--ink);}
+  .sec-v2 .opens li:target{background:var(--wash);box-shadow:0 0 0 10px var(--wash);border-radius:2px;}
+  .sec-v2 .opens a.more{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;margin-left:6px;}
+  .sec-v2 .opens a.more:hover{border-bottom:2px solid var(--gold);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p.asof{color:var(--muted);margin-bottom:0;}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_november8_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_17.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Sunday, November 8, 2026</span></div>
+        <h1 class="headline">December Hike Odds Surged to 81%. CPI Tuesday Locks the December Call.</h1>
+      </div>
+
+      <div class="body">
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="setup lead-first">Over the weekend, December FOMC hike odds climbed from Friday&rsquo;s ~75% to approximately <b>81%</b> (CME FedWatch via Motley Fool, November 8) as Treasury futures absorbed October&rsquo;s 165,000 NFP without a competing signal to blunt it. The 10-year ended Friday near ~4.84&ndash;4.87%; Sunday&rsquo;s pricing holds that level. CD savers entered the weekend with three-in-four odds of a December raise; they now face four-in-five &ndash; the strongest reading since September&rsquo;s hike itself. That repricing, with no new data until Tuesday, is the full mechanism entering Monday&rsquo;s open.</p>
+        <p class="setup">Tuesday&rsquo;s October CPI at <b>8:30 AM ET</b> is the last inflation read before the December 9 FOMC. At ~81% hike odds, a benign reading near recent core levels confirms the path; a re-acceleration above 3.0% core pushes odds above 90% and closes the hold debate entirely. Monday&rsquo;s November 9 USDA Crop Progress is the week&rsquo;s first decision point &ndash; Iowa stood at <b>66% harvested</b> as of November 1, 13 points behind the five-year average, with freeze risk arriving this weekend. A reading below 70% with freeze confirmed would reprice December corn futures upward at Monday&rsquo;s open.</p>
+        <p class="setup">Gas wave #3 &ndash; locked from October 28&rsquo;s <b>$115.32 Brent</b> &ndash; is arriving at retail stations November 8&ndash;12 even as the AAA national average edged to <b>$4.04</b> (November 7) in the quiet before the wave lands. Wave #4 (from this week&rsquo;s $87&ndash;$98 Brent range) arrives lower. The NY Fed Q3 consumer credit report (card delinquency 90+ at 12.9% last quarter) is due this month &ndash; the first full post-September-hike quarter read arriving against a 165,000 NFP backdrop. <b>Curated from</b> CME FedWatch &middot; Motley Fool &middot; AAA &middot; USDA &middot; BLS</p>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="week-opens">How Sunday Stands</h2>
+        <ul class="opens">
+          <li id="open-1"><b>What Iowa corn&rsquo;s freeze weekend tells Monday&rsquo;s futures market.</b> Iowa stood at 66% harvested as of November 1 &ndash; 13 points behind the five-year average. Freeze risk arrived this weekend; Monday&rsquo;s November 9 Crop Progress will show harvest progress through November 8. If Iowa stalls below 70% with freeze confirmed, December corn futures reprice upward at Monday&rsquo;s open. <a class="more" href="#crops">Crop Weather &rarr;</a></li>
+          <li id="open-2"><b>Why Bitcoin drifted to $75,750 this weekend without crossing the key line.</b> Bitcoin held near $75,750 on Sunday as the weekend jump in hike odds to ~81% added dollar-strength pressure. Without the equity market open to provide a risk-on signal, Bitcoin&rsquo;s uptick above Friday&rsquo;s ~$75,500 was modest. Bitcoin remains below the 200-day EMA at ~$76,543 entering Monday. <a class="more" href="#crypto">Crypto &rarr;</a></li>
+          <li id="open-3"><b>What savers need to know before Tuesday&rsquo;s 8:30 AM ET CPI.</b> December hike odds reached approximately 81% by Sunday, up from ~75% Friday. The hold scenario is now one-in-five. At 4.65% today vs. a likely 4.90% January CD after a hike, four-in-five odds favor waiting through December 9. CPI Tuesday is the last inflation read before the FOMC locks in. <a class="more" href="#savings">Savings &amp; CD Rates &rarr;</a></li>
+          <li id="open-4"><b>What the NY Fed Q3 credit report will tell us about the September hike&rsquo;s impact.</b> Q3 covers July&ndash;September 2026 &ndash; the first full quarter after September&rsquo;s rate hike. Card delinquency 90+ was 12.9% last quarter; the Q3 report arrives this month against a 165,000 NFP backdrop. A reading above 13.5% signals accelerating household strain even amid strong employment. <a class="more" href="#household">Household Finance &rarr;</a></li>
+          <li id="open-5"><b>What Iran&rsquo;s anti-aircraft weekend development means for oil&rsquo;s Monday open.</b> Reports emerged Saturday that US forces destroyed an Iranian anti-aircraft device &ndash; a new development after Wednesday&rsquo;s Democratic sweep had temporarily deflated the Iran risk premium. Brent settled Friday at $98.32; this development could reassert the premium at Monday&rsquo;s futures open. <a class="more" href="#energy">Energy &amp; Gas Prices &rarr;</a></li>
+        </ul>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">7,376.86</div><div class="d flat">Fri Nov 6 close &middot; markets closed Sat&ndash;Sun &middot; 81% hike odds entering Mon = headwind for rate-sensitive names</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">24,579.42</div><div class="d flat">Fri Nov 6 close &middot; AI moratorium at campaign-promise stage &middot; 200-day EMA resistance holds Mon open</div></div>
+          <div><div class="k">Dow</div><div class="v">51,285.73</div><div class="d flat">Fri Nov 6 close &middot; energy &amp; financials face 81% hike odds entering Mon &middot; weekly loss ~3.9%</div></div>
+        </div>
+        <p class="setup">Equities carried Friday&rsquo;s closes through the weekend without revision &ndash; markets are closed Saturday and Sunday. The split from Friday&rsquo;s session enters Monday: the Nasdaq&rsquo;s <b>+1.09%</b> partial AI-sector recovery versus the Dow&rsquo;s <b>-0.46%</b> reflects the two forces now carrying into the week. Weekend hike odds moving to <b>~81%</b> add a new headwind for rate-sensitive Dow components (energy, financials) without a data signal to push back against them until Tuesday&rsquo;s CPI.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (Friday November 6 close, carried to Sunday &ndash; CNBC / Yahoo Finance):</span> <span class="num">7,376.86</span> <span class="d flat">Unchanged weekend &middot; 81% Dec hike odds = headwind for rate-sensitive names Mon &middot; two-day net from Wed close: &minus;4.05% &middot; 311 pts below pre-sell-off level &middot; CPI Tue is first repricing event</span><span class="why">The S&amp;P 500&rsquo;s Friday close of 7,376.86 carries into Sunday&rsquo;s positioning unchanged. The weekend development is not a new data point for equities but a rate-environment shift: hike odds moving from 75% to 81% raises the cost of capital assumption for rate-sensitive sectors and reduces the probability weight on a December hold (now ~19%). Monday&rsquo;s open will reflect this weekend&rsquo;s rate repricing before Tuesday&rsquo;s CPI provides the next concrete data input.</span></div>
+          <div class="line"><span class="lb">Nasdaq Composite (Friday November 6 close, carried to Sunday &ndash; CNBC / Yahoo Finance):</span> <span class="num">24,579.42</span> <span class="d flat">Unchanged weekend &middot; Texas data-center moratorium at campaign-promise stage &middot; partial AI-infrastructure recovery from Thu incomplete &middot; 200-day EMA resistance above &middot; weekly loss ~4.5%</span><span class="why">The Nasdaq&rsquo;s 24,579.42 close carries forward with the Texas data-center moratorium still at campaign-promise stage &ndash; no legislative or regulatory action over the weekend. The partial recovery from Thursday&rsquo;s 5.52% sell-off remains partial: the Nasdaq needs Tuesday&rsquo;s CPI to be benign and the Texas governor&rsquo;s office to remain quiet to sustain Monday&rsquo;s open near Friday&rsquo;s levels. The 200-day EMA at approximately $25,500 is the next meaningful resistance level above Friday&rsquo;s close.</span></div>
+          <div class="line"><span class="lb">Dow Jones Industrial Average (Friday November 6 close, carried to Sunday &ndash; CNBC / TheStreet):</span> <span class="num">51,285.73</span> <span class="d flat">Unchanged weekend &middot; energy &amp; financial components face 81% hike odds entering Mon &middot; Iran anti-aircraft development could lift energy names &middot; weekly loss ~3.9%</span><span class="why">The Dow&rsquo;s 51,285.73 close carries forward with two weekend developments relevant to its composition: hike odds at 81% (a headwind for financial components that benefit from a hold scenario) and the Iran anti-aircraft development (a possible tailwind for energy components Chevron and Exxon if the Iran risk premium reasserts at oil&rsquo;s Monday open). The net effect on Dow components is directionally uncertain entering Monday; the two forces pull in opposite directions for the index&rsquo;s largest sectors.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Equities carry Friday&rsquo;s closes unchanged: S&amp;P 500 7,376.86, Nasdaq 24,579.42, Dow 51,285.73. Weekend hike odds at ~81% add a rate headwind for Monday&rsquo;s open; the Iran anti-aircraft development adds an offsetting energy tailwind for Dow components. CPI at 8:30 AM ET Tuesday is the first repricing event of the week.</p></div>
+        <div class="src"><b>Curated from</b> CNBC &middot; Yahoo Finance &middot; TheStreet &middot; Motley Fool</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <div class="strip">
+          <div><div class="k">Fed funds</div><div class="v">3.75&ndash;4.00%</div><div class="d flat">Held Oct 28 &middot; Dec ~81% hike &middot; up from ~75% Fri &middot; hold scenario ~19% &middot; next FOMC Dec 9</div></div>
+          <div><div class="k">2-year</div><div class="v">~4.46%</div><div class="d flat">Fri Nov 6 close &middot; front end priced ~75% Fri; repricing to ~81% possible Mon</div></div>
+          <div><div class="k">10-year</div><div class="v">~4.84&ndash;4.87%</div><div class="d up">&#9650; from ~4.65% Thu close &middot; held through weekend &middot; above Oct PMMS survey avg &middot; CPI Tue is next move</div></div>
+        </div>
+        <p class="setup">December hike odds moved from approximately <b>75%</b> at Friday&rsquo;s close to approximately <b>81%</b> over the weekend (CME FedWatch via Motley Fool, November 8), driven by continued absorption of October&rsquo;s 165,000 NFP in Treasury futures markets without a competing signal. The <b>10-year</b> at approximately <b>4.84&ndash;4.87%</b> (Friday&rsquo;s close) holds into Sunday&rsquo;s positioning; the 2-year at approximately <b>4.46%</b> may reprice modestly at Monday&rsquo;s open to reflect the full 81% hike probability. CPI on Tuesday, November 10 at <b>8:30 AM ET</b> is the next market-moving input before the December 9 FOMC.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">CME FedWatch December hike probability (Sunday November 8 PM, CME FedWatch via Motley Fool / 247WallSt / BigGo Finance):</span> <span class="num">~81%</span> <span class="d up">&#9650; from ~75% Fri &middot; from ~67% Thu AM &middot; 165,000 NFP fully absorbed &middot; hold scenario ~19% &middot; Nov 10 CPI decisive &middot; re-accel above 3.0% core pushes odds above 90%</span><span class="why">December hike odds reaching approximately 81% over the weekend &ndash; from 75% Friday and 67% Thursday morning &ndash; reflects the full two-day absorption of October&rsquo;s labor market data. The move from 75% to 81% over the weekend is unusual: typically hike odds are repriced on trading days when new data arrives. The weekend move reflects continued Treasury futures positioning without a competing signal. At 81%, the hold scenario carries only ~19% probability &ndash; comparable to odds before the September hike decision itself.</span></div>
+          <div class="line"><span class="lb">10-year Treasury (Friday November 6 close, carried to Sunday &ndash; Bloomberg / CNBC / 247WallSt):</span> <span class="num">~4.84&ndash;4.87%</span> <span class="d up">&#9650; from ~4.65% Thu close &middot; full reversal of Thu flight-to-quality rally &middot; above Oct PMMS survey avg &middot; Nov 9&ndash;13 survey week opens here &middot; next PMMS Nov 12</span><span class="why">The 10-year holding at approximately 4.84&ndash;4.87% entering the November 9&ndash;13 PMMS survey week is the key rate-environment fact for mortgage rates. The October PMMS survey average produced the 7.24% reading; the November 2&ndash;6 survey week ended Friday at 4.84&ndash;4.87%. If the survey captures lenders repricing Friday&rsquo;s yield spike, Thursday&rsquo;s November 12 PMMS release could show a partial reversal of the improvement streak. The November 9&ndash;13 survey week now opens with yields near or above the October level that produced 7.24%.</span></div>
+          <div class="line"><span class="lb">2-year Treasury (Friday November 6 PM, carried to Sunday &ndash; CNBC / 247WallSt):</span> <span class="num">~4.46%</span> <span class="d flat">held near Thu &middot; front end had priced ~75% Fri &middot; partial weekend repricing to ~81% possible Mon open &middot; 2/10 spread ~38&ndash;41 bps &middot; Dec 9 FOMC is repricing event</span><span class="why">The 2-year at approximately 4.46% reflects the front end having priced approximately 75% hike probability at Friday&rsquo;s close. With weekend futures markets repricing to ~81%, Monday&rsquo;s open may show a modest 2-year move higher &ndash; though the magnitude is limited because the front end had already moved significantly from Thursday&rsquo;s ~4.46% low. The 2/10 spread widening from 19 basis points Thursday to 38&ndash;41 basis points Friday reflects the market treating the December hike as a contained, one-step move.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>December hike odds at approximately 81% (hold scenario ~19%) entering Monday &ndash; up from ~75% Friday and ~67% Thursday morning. 10-year at ~4.84&ndash;4.87%, carried from Friday&rsquo;s close into the November 9&ndash;13 PMMS survey week. CPI at 8:30 AM ET Tuesday is the first data input before the December 9 FOMC decision.</p></div>
+        <div class="src"><b>Curated from</b> CME FedWatch &middot; Motley Fool &middot; 247WallSt &middot; BigGo Finance &middot; Bloomberg &middot; CNBC</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <div class="strip">
+          <div><div class="k">Top 1-yr CD</div><div class="v">4.65%</div><div class="d flat">CFG Bank / NerdWallet &middot; BTG Pactual / Bankrate &middot; Dec ~81% hike &middot; 4.90% Jan rate if Dec hike lands</div></div>
+          <div><div class="k">Top HYSA</div><div class="v">4.35%</div><div class="d flat">Openbank / Bankrate &middot; liquid &middot; adjustable &middot; Dec hike adds ~25 bps with 4&ndash;6 wk lag</div></div>
+          <div><div class="k">Nat&rsquo;l avg 1-yr CD</div><div class="v">2.11%</div><div class="d flat">Bankrate November 2026 &middot; 254-bp gap to best &middot; unchanged</div></div>
+        </div>
+        <p class="setup">Top 1-year CDs remain at <b>4.65% APY</b> (CFG Bank, BTG Pactual) entering Sunday. Weekend hike odds moving from <b>~75% to ~81%</b> strengthen the case for waiting through December 9: the hold scenario is now one-in-five. On a $25,000 deposit, the difference between 4.65% now and a likely <b>4.90% January</b> rate after a December hike is approximately <b>$62.50 per year</b>. Tuesday&rsquo;s October CPI at <b>8:30 AM ET</b> is the last inflation read before the FOMC locks in &ndash; a re-acceleration would push odds above 90% and effectively settle the December question before the December 9 meeting.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Best 1-year CD (NerdWallet &ndash; CFG Bank; Bankrate &ndash; BTG Pactual, November 2026):</span> <span class="num">4.65% APY</span> <span class="d flat">CFG Bank + BTG Pactual tied &middot; $500 min &middot; Dec ~81% hike &middot; 4.90% Jan rate &middot; $62.50/yr gap on $25K &middot; Nov 10 CPI at 8:30 AM ET is next major input &middot; hold scenario ~19%</span><span class="why">The 4.65% rate is unchanged entering Sunday. Weekend hike odds at approximately 81% represent the strongest case for waiting through December 9 since before September&rsquo;s hike: four-in-five probability of a 4.90% January rate outweighs the one-in-five probability of locking in at 4.65% before a hold. The calculus shifts again Tuesday if CPI re-accelerates (hike more certain, locking in 4.65% before the hike becomes riskier) or if CPI is benign (odds hold near 81%, December 9 remains the decision point). Tuesday&rsquo;s CPI at 8:30 AM ET is the input that most directly closes or keeps open the CD decision.</span></div>
+          <div class="line"><span class="lb">Top high-yield savings account (Openbank / Bankrate, November 2026):</span> <span class="num">4.35% APY</span> <span class="d flat">liquid &middot; 30-bp gap to best CD &middot; Dec hike adds ~25 bps with lag &middot; hold scenario at ~19% makes locking more attractive than Thu&rsquo;s 33% &middot; Dec 9 is the decision point</span><span class="why">The HYSA at 4.35% retains its liquidity value at a 30-basis-point annual cost relative to the CD. With the hold scenario now at approximately 19% &ndash; down from 33% Thursday &ndash; the case for staying liquid to capture potential January 4.90% rates carries more weight than it did entering the week. The HYSA adjusts with rate hikes with a 4&ndash;6 week lag; a saver in an HYSA will benefit from a December hike either way, but on a 1-year view the CD locks in a known rate while the HYSA remains adjustable in both directions.</span></div>
+          <div class="line"><span class="lb">National average 1-year CD (Bankrate, November 2026):</span> <span class="num">2.11% APY</span> <span class="d flat">254 bps below best available &middot; ~$635/yr gap on $25,000 &middot; hike odds do not change this gap &middot; gap is closed by switching institutions, not by waiting for FOMC</span><span class="why">The 254-basis-point gap between the national average at 2.11% and the best available 1-year CD at 4.65% costs approximately $635 per year on a $25,000 deposit. This gap exists in both the hike and hold scenario and is closed by switching institutions today, not by waiting for December 9. Weekend hike odds moving to 81% did not change what CFG Bank or BTG Pactual offer &ndash; the opportunity to close this gap is available regardless of the FOMC path.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Top 1-year CDs at 4.65% APY (CFG Bank, BTG Pactual). Top HYSA at 4.35% (Openbank). National average at 2.11% &ndash; a $635/year gap on $25,000. December hike odds at approximately 81% (hold scenario ~19%) entering Sunday; a December hike delivers ~4.90% January CDs. CPI at 8:30 AM ET Tuesday is the last major input before December 9.</p></div>
+        <div class="src"><b>Curated from</b> NerdWallet &middot; Bankrate &middot; CME FedWatch &middot; Motley Fool &middot; CNBC Select</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <div class="strip">
+          <div><div class="k">Brent</div><div class="v">$98.32</div><div class="d flat">Fri Nov 6 settlement &middot; Iran anti-aircraft development Sat &middot; risk premium may reassert Mon open</div></div>
+          <div><div class="k">WTI</div><div class="v">$90.83</div><div class="d flat">Fri Nov 6 settlement &middot; wave #3 from Oct 28 $115.32 Brent now arriving retail &middot; wave #4 Nov 15&ndash;19</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.04</div><div class="d down">&#9660; AAA Nov 7 &middot; down from $4.10 &middot; wave #3 Nov 8&ndash;12 arriving this weekend &ndash; this reading predates wave</div></div>
+        </div>
+        <p class="setup">The AAA national average edged to <b>$4.04</b> (November 7) &ndash; the last reading before gas wave #3 arrives. Wave #3, locked from October 28&rsquo;s <b>$115.32 Brent</b>, is arriving at retail stations <b>November 8&ndash;12 this weekend</b>, independent of crude&rsquo;s current $98 level. A new geopolitical development emerged Saturday: reports of US forces destroying an Iranian anti-aircraft device &ndash; a signal that the Iran risk premium, which had partially deflated after Wednesday&rsquo;s Democratic sweep, may reassert at Monday&rsquo;s futures open. Wave #4, priced from this week&rsquo;s $87&ndash;$98 Brent, arrives approximately <b>November 15&ndash;19</b> and will be lower than wave #3.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Brent crude (Friday November 6 settlement, carried to Sunday &ndash; CNBC / oilprice.com; Iran development: Fox News November 7):</span> <span class="num">$98.32/barrel</span> <span class="d flat">Fri settlement &middot; Iran risk premium partially deflated post-election &middot; Sat report of US forces destroying Iranian anti-aircraft device &middot; risk premium may partially reassert Mon &middot; wave #3 locked from Oct 28&rsquo;s $115.32</span><span class="why">Brent&rsquo;s $98.32 Friday settlement carries into Sunday against a new geopolitical data point: Saturday reports of US forces destroying an Iranian anti-aircraft device. This development is directionally opposite to Wednesday&rsquo;s Democratic sweep &ndash; which had deflated the Iran risk premium from the pre-election $105 peak &ndash; and may partially reassert the premium at Monday&rsquo;s futures open. At $98.32, Brent remains approximately $7 below the pre-election peak; the full risk premium has not returned. This week&rsquo;s $87&ndash;$98 Brent range (wave #4 pricing window) will produce a lower-than-wave-#3 increase at Thanksgiving-week stations.</span></div>
+          <div class="line"><span class="lb">WTI crude (Friday November 6 settlement, carried to Sunday &ndash; CNBC / ADVFN):</span> <span class="num">$90.83/barrel</span> <span class="d flat">Fri settlement &middot; wave #2 (Oct 23) arriving this week at leading stations &middot; wave #3 (Oct 28) arriving retail Nov 8&ndash;12 &middot; two sequential increases arriving simultaneously</span><span class="why">WTI&rsquo;s $90.83 Friday settlement carries forward. The wave mechanics are independent of WTI&rsquo;s current level: wave #2 (from October 23&rsquo;s WTI) is arriving at leading stations this week, and wave #3 (locked from October 28&rsquo;s $115.32 Brent) arrives retail stations November 8&ndash;12. The wave that this weekend&rsquo;s $87&ndash;$91 WTI range determines is wave #4, arriving approximately November 15&ndash;19. Iran&rsquo;s Monday repricing (if the risk premium reasserts) would affect wave #5 and beyond, not the waves already in transit.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, November 7, 2026 &ndash; wave #3 arrives Nov 8&ndash;12 this weekend):</span> <span class="num">$4.04/gallon</span> <span class="d down">&#9660; from $4.12 Nov 4 &middot; from $4.10 Nov 5 &middot; wave #3 from Oct 28 $115.32 Brent arriving this weekend &middot; this reading predates wave &middot; wave #4 (Nov 15&ndash;19) priced from $87&ndash;$98 Brent &middot; Thanksgiving-week gas lower than this wave</span><span class="why">The $4.04 national average is effectively the last pre-wave-#3 reading. Wave #3 &ndash; locked from October 28&rsquo;s $115.32 Brent, well above the current $98 level &ndash; is arriving at retail stations this weekend (November 8&ndash;12) and will reverse the recent modest decline over the next several days. The $4.04 reading reflects last week&rsquo;s $87&ndash;$98 Brent supply already priced through stations; the October 28 $115.32 wave was not yet reflected. For a household filling a 15-gallon tank weekly, each $0.10 wave increase adds approximately $1.50 per week.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Brent $98.32 and WTI $90.83 (Friday settlements). AAA national average $4.04 (November 7) &ndash; the last reading before wave #3 arrives. Wave #3 (from October 28&rsquo;s $115.32 Brent) is arriving at retail stations November 8&ndash;12 this weekend. Iran anti-aircraft development Saturday may reassert the risk premium at Monday&rsquo;s futures open. Wave #4 (arriving November 15&ndash;19) will be lower than wave #3.</p></div>
+        <div class="src"><b>Curated from</b> CNBC &middot; oilprice.com &middot; ADVFN &middot; AAA &middot; Fox News &middot; EIA</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <div class="strip">
+          <div><div class="k">Gold</div><div class="v">~$4,045</div><div class="d flat">Fri Nov 6 &middot; jobs-driven dollar rally offset safe-haven bid &middot; central bank buying at 2026 high &middot; structural support below $4,000</div></div>
+          <div><div class="k">Silver</div><div class="v">~$52.00</div><div class="d flat">Fri Nov 6 &middot; above $50 structural support &middot; AI-hardware demand thesis stabilized &middot; Iran development could lift Mon</div></div>
+          <div><div class="k">Copper</div><div class="v">~$6.23</div><div class="d flat">Fri Nov 6 &middot; Texas moratorium at campaign-promise stage &middot; grid-demand thesis unchanged &middot; ~20% above year-ago</div></div>
+        </div>
+        <p class="setup">Gold at approximately <b>$4,045</b> (Friday close) carries into Sunday against a new geopolitical data point &ndash; the Iran anti-aircraft development &ndash; that could partially restore Thursday&rsquo;s safe-haven bid at Monday&rsquo;s open. The two forces that pulled in opposite directions on Friday (dollar strength gold-negative, safe-haven demand gold-positive) now have a fresh geopolitical catalyst on the positive side. Central bank buying remains at a <b>2026 high</b> per USAGold, providing structural support below $4,000. Silver at approximately <b>$52.00</b> and copper at approximately <b>$6.23</b> carry forward with the Texas data-center moratorium still at campaign-promise stage.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Gold (Friday November 6, carried to Sunday &ndash; Trading Economics / USAGold / Rio Times):</span> <span class="num">~$4,045/oz</span> <span class="d flat">from ~$4,119 Thu &middot; Friday jobs-driven dollar rally &middot; Iran anti-aircraft development Sat = new safe-haven catalyst &middot; central bank buying at 2026 high per USAGold &middot; two forces may partially re-align Mon</span><span class="why">Gold at $4,045 enters Sunday with an asymmetric setup: Friday&rsquo;s $74 decline reflected the dollar-strength channel (jobs-driven) overpowering the safe-haven channel. Saturday&rsquo;s Iran anti-aircraft development is a direct safe-haven catalyst, the same type that drove Thursday&rsquo;s $4,119 spike. If Monday&rsquo;s futures open reflects this geopolitical development, gold could partially recover toward Thursday&rsquo;s levels before Tuesday&rsquo;s CPI reprices the dollar-strength channel again. Central bank buying at a 2026 high per USAGold provides structural support below $4,000 regardless of near-term channel direction.</span></div>
+          <div class="line"><span class="lb">Silver (Friday November 6, carried to Sunday &ndash; Kitco / Trading Economics):</span> <span class="num">~$52.00/oz</span> <span class="d flat">partial recovery from ~$51.65 Thu &middot; above $50 structural support &middot; AI-hardware demand thesis stabilized after Nvidia/AMD bounce &middot; Iran development may add safe-haven support Mon</span><span class="why">Silver at approximately $52.00 carries forward with the AI-hardware industrial-demand thesis stabilized after Friday&rsquo;s Nvidia and AMD partial recovery. Silver&rsquo;s dual precious-metal and industrial-metal nature means the Iran development (safe-haven positive) and the Texas moratorium uncertainty (AI copper demand negative, indirect silver negative) will both be in play at Monday&rsquo;s open. The $50 structural support level provides a floor for the industrial-metal downside scenario.</span></div>
+          <div class="line"><span class="lb">Copper (Friday November 6, carried to Sunday &ndash; Trading Economics / Bloomberg):</span> <span class="num">~$6.23/lb</span> <span class="d flat">near ~$6.21 Thu &middot; Texas moratorium at campaign-promise stage &middot; near-term AI demand uncertainty unchanged &middot; five-to-ten-year grid thesis intact &middot; ~20% above year-ago</span><span class="why">Copper at $6.23 carries forward with no new developments on the Texas data-center moratorium over the weekend. The near-term AI-infrastructure copper demand question remains unresolved; the five-to-ten-year transmission infrastructure thesis is unaffected by campaign promises. Copper at $6.23 remains approximately 20% above year-ago levels on that structural thesis.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Gold approximately $4,045 (Friday), carrying into Sunday with the Iran anti-aircraft development as a new safe-haven catalyst that may partially restore Thursday&rsquo;s alignment at Monday&rsquo;s open. Silver approximately $52.00, copper approximately $6.23, both unchanged. Central bank gold buying at a 2026 high provides structural support below $4,000.</p></div>
+        <div class="src"><b>Curated from</b> Trading Economics &middot; USAGold &middot; Kitco &middot; Rio Times &middot; Bloomberg</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <div class="strip">
+          <div><div class="k">Corn G/E</div><div class="v">56%</div><div class="d flat">Week ending Nov 1 &middot; most recent &middot; next report Mon Nov 9 &middot; freeze arrived this weekend</div></div>
+          <div><div class="k">Soybeans G/E</div><div class="v">57%</div><div class="d flat">Week ending Nov 1 &middot; 88% harvested &middot; record 4.562B-bushel crop confirmed &middot; supply resolved</div></div>
+          <div><div class="k">Corn Dec futures</div><div class="v">$4.44&frac14;</div><div class="d flat">CBOT last &middot; Iowa 66% harvested Nov 1 &middot; freeze arrived &middot; Nov 9 Crop Progress TOMORROW is decisive</div></div>
+        </div>
+        <p class="setup">No new USDA crop data since Monday&rsquo;s Crop Progress release (week ending <b>November 1</b>). Iowa corn stood at <b>66% harvested</b> as of November 1 &ndash; a 19-point surge from the prior week but still 13 points behind the 79% five-year average. <b>Freeze risk arrived this weekend</b> for parts of Iowa and the Corn Belt. Monday&rsquo;s November 9 Crop Progress &ndash; <b>tomorrow</b> &ndash; will show harvest progress through November 8 and is the decisive read on whether the pace cleared the supply-confirmation threshold before the season closes. Soybeans at 88% are confirmed as a record 4.562 billion-bushel crop.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Iowa corn harvest (USDA Crop Progress, week ending November 1, released November 2 &ndash; most recent available; TOMORROW&rsquo;s November 9 report is the decisive read):</span> <span class="num">66% harvested</span> <span class="d flat">19-pt surge from 47% prior week &middot; 13 pts behind 79% 5-yr avg &middot; freeze arrived this weekend &middot; Nov 9 report shows Nov 8 pace &middot; below 70% with freeze = Dec corn futures reprice upward Mon open</span><span class="why">Iowa&rsquo;s 66% harvest as of November 1 had recovered strongly, closing a 32-point deficit in a single week. The question entering this weekend&rsquo;s freeze is whether harvest continued at that pace through November 2&ndash;8. Tomorrow&rsquo;s November 9 Crop Progress will show the answer. At the November 1 rate, Iowa would add approximately 15&ndash;20 points per week if conditions allow &ndash; enough to reach 80%+ by November 9. If freeze materially impacted harvest this weekend, Monday&rsquo;s report will show a slowdown; December corn futures would reprice upward at Monday&rsquo;s open if Iowa falls short of 70% with freeze confirmed. The report is due after Monday&rsquo;s market open, so futures could gap before the report confirms.</span></div>
+          <div class="line"><span class="lb">Corn futures (December CBOT contract, last &ndash; DTN / Ukragroconsult):</span> <span class="num">$4.44&frac14;/bushel</span> <span class="d flat">CBOT &middot; national harvest 74% complete (Nov 1) &middot; Iowa 66% (Nov 1) &middot; freeze this weekend &middot; Nov 9 Crop Progress tomorrow &middot; Nov 10 WASDE final 2026 supply assessment</span><span class="why">December corn at $4.44&frac14; reflects the market pricing Iowa&rsquo;s 66% pace as likely to reach the supply-confirmation threshold before the season closes &ndash; but only if this weekend&rsquo;s freeze did not materially disrupt harvest. Monday&rsquo;s open will be the first repricing opportunity before tomorrow&rsquo;s Crop Progress report. If Iowa reaches 75%+ by November 9, December corn closes out the 2026 supply uncertainty at approximately current levels; below 70% with freeze confirmed, the futures market reprices upward to reflect a potential quality loss in the unharvested portion.</span></div>
+          <div class="line"><span class="lb">Soybean harvest (USDA Crop Progress, week ending November 1):</span> <span class="num">88% harvested nationally</span> <span class="d flat">4 pts ahead of 5-yr avg ~84% &middot; record 4.562B-bushel WASDE crop confirmed &middot; soybean supply resolved &middot; corn pace is the only remaining 2026 crop uncertainty &middot; Nov 10 WASDE closes final accounting</span><span class="why">The soybean harvest at 88% nationally &ndash; 4 points ahead of the five-year average &ndash; has resolved the 2026 soybean supply picture. The record WASDE 4.562 billion-bushel crop is confirmed with sufficient harvest progress to preclude a freeze-driven quality loss. Iowa corn pace is the only remaining 2026 crop supply question. Tomorrow&rsquo;s November 9 Crop Progress and Tuesday&rsquo;s November 10 WASDE will close the season&rsquo;s full supply accounting.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>No new USDA data since November 2&rsquo;s Crop Progress release (week ending November 1): Iowa corn 66% harvested (13 points behind five-year average), national corn 74%, soybeans 88% (record crop confirmed). Freeze arrived this weekend. Tomorrow&rsquo;s November 9 Crop Progress is the decisive read; below 70% with freeze confirmed would reprice December corn futures upward at Monday&rsquo;s open. Tuesday&rsquo;s November 10 WASDE closes the full 2026 season.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; DTN &middot; Brownfield Ag News &middot; Ukragroconsult</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <div class="strip">
+          <div><div class="k">30-yr mortgage (Freddie Mac)</div><div class="v">7.18%</div><div class="d flat">PMMS Nov 5 &middot; 3rd consecutive improvement &middot; Nov 2&ndash;6 survey week ended Fri &middot; 10-yr at ~4.87% enters Nov 9&ndash;13</div></div>
+          <div><div class="k">10-year</div><div class="v">~4.84&ndash;4.87%</div><div class="d up">&#9650; Fri Nov 6 PM &middot; jobs beat reversed Thu flight-to-quality rally &middot; near or above Oct PMMS survey avg</div></div>
+          <div><div class="k">Tariff Day</div><div class="v">Day 89</div><div class="d flat">~45% combined &middot; Canada softwood &middot; $3,000&ndash;$6,000 per new home &middot; no near-term relief path</div></div>
+        </div>
+        <p class="setup">Freddie Mac&rsquo;s PMMS at <b>7.18%</b> (released November 5) is the most recent reading; the November 2&ndash;6 survey week ended Friday and Thursday&rsquo;s November 12 PMMS release will reflect lender rates from that week. The 10-year entering the November 9&ndash;13 survey window at approximately <b>4.84&ndash;4.87%</b> &ndash; near or above the October level that produced 7.24% &ndash; creates a risk that the fourth consecutive improvement breaks. The <b>15-year</b> was at <b>6.57%</b> in the November 5 PMMS. Day <b>89</b> of Canada softwood tariff: no near-term relief path established.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">30-year fixed (Freddie Mac PMMS, released Thursday November 5 &ndash; most recent):</span> <span class="num">7.18%</span> <span class="d flat">from 7.24% Oct 29 &middot; 3rd consecutive improvement &middot; from 7.40% Oct peak &middot; 15-yr at 6.57% &middot; Nov 2&ndash;6 survey week ended Fri &middot; next PMMS Thu Nov 12 &middot; 10-yr at ~4.87% enters Nov 9&ndash;13 survey week</span><span class="why">Thursday&rsquo;s PMMS at 7.18% &ndash; the third consecutive improvement from October&rsquo;s 7.40% peak &ndash; confirms the mortgage rate trend was downward from the October high through the survey week. The complication is Friday&rsquo;s jobs-driven yield reversal: the 10-year ended the November 2&ndash;6 survey week at approximately 4.84&ndash;4.87%, above the October survey average that produced 7.24%. Thursday&rsquo;s November 12 PMMS release will show whether lenders repriced before the week ended or whether the improvement streak extends to four consecutive readings.</span></div>
+          <div class="line"><span class="lb">Canada softwood lumber tariff (Day 89 as of Sunday November 8):</span> <span class="num">~45% combined</span> <span class="d flat">antidumping, countervailing, Section 232 &middot; $3,000&ndash;$6,000 per new home &middot; Democratic Congress inherits posture &middot; no near-term relief path &middot; 2027 legislative calendar reset</span><span class="why">Day 89 carries the same $3,000&ndash;$6,000 construction cost per new home as Day 1. The mortgage rate improvement streak (three consecutive improvements from 7.40% to 7.18%) addresses the monthly-payment side of affordability; the tariff-driven construction-cost side requires a legislative or administrative action that neither party has prioritized. The improvement streak is now at risk of reversal from the jobs-driven yield rise that Friday introduced to the November 9&ndash;13 survey week.</span></div>
+          <div class="line"><span class="lb">Builder sentiment context (NAHB October, 14-year low at 29):</span> <span class="num">29</span> <span class="d flat">14-year low &middot; 179K permit-to-start gap &middot; 3 consecutive PMMS improvements &middot; now at risk from jobs-driven yield rise &middot; next NAHB November 17</span><span class="why">The 179,000 permit-to-start gap reflects suppression from both sides of affordability: elevated rates and tariff-driven construction costs. Three consecutive PMMS improvements had provided the rate-side progress beginning to close the gap; Friday&rsquo;s yield reversal introduces a risk to the fourth improvement. Thursday&rsquo;s November 12 PMMS will confirm whether the improvement streak holds or breaks. The next NAHB builder sentiment reading is November 17 and will reflect the full post-election and post-jobs-report period.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Freddie Mac PMMS at 7.18% (released November 5), the third consecutive improvement from October&rsquo;s 7.40% peak. The November 2&ndash;6 survey week ended Friday; Thursday&rsquo;s November 12 PMMS may show a fourth improvement or a partial reversal depending on whether lenders repriced before the week ended. The 10-year at ~4.84&ndash;4.87% entering next week is near or above the October level that produced 7.24%. Lumber tariff Day 89.</p></div>
+        <div class="src"><b>Curated from</b> Freddie Mac &middot; Census Bureau &middot; NAHB &middot; Trading Economics &middot; Reuters</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <div class="strip">
+          <div><div class="k">October NFP</div><div class="v">165,000</div><div class="d up">&#9650; Released Fri Nov 6 &middot; vs. ~65K consensus &middot; unemployment 4.1% &middot; prior revised up</div></div>
+          <div><div class="k">Card delinq 90+</div><div class="v">12.9%</div><div class="d up">&#9650; NY Fed Q2 2026 &middot; Q3 report due this month &middot; first full post-September-hike quarter</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$4.04</div><div class="d down">&#9660; AAA Nov 7 &middot; wave #3 Nov 8&ndash;12 arriving &middot; wave #4 (Nov 15&ndash;19) priced lower</div></div>
+        </div>
+        <p class="setup">October&rsquo;s NFP at <b>165,000</b> (released Friday, November 6) remains the month&rsquo;s decisive household read: payrolls more than doubled the 65,000 consensus, unemployment fell to <b>4.1%</b>, and <b>84,000</b> upward revisions to August and September confirmed the labor market was running hotter than the prior prints suggested. The NY Fed Q3 consumer credit report &ndash; covering July&ndash;September 2026, the first full quarter after September&rsquo;s hike &ndash; is due this month. Card delinquency 90+ at <b>12.9%</b> (Q2) is the last confirmed reading; a Q3 reading above <b>13.5%</b> would signal accelerating household strain even as employment runs strong.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">October nonfarm payrolls (BLS, released Friday November 6 at 8:30 AM ET; prior month: 29,000 revised):</span> <span class="num">165,000</span> <span class="d up">&#9650; vs. ~65K consensus &middot; vs. ADP 86K &middot; prior revised up with +84K across Aug/Sept &middot; unemployment 4.1% vs. 4.2% expected &middot; participation 61.9% &middot; Dec hike odds to ~81% by Sun</span><span class="why">October&rsquo;s 165,000 NFP &ndash; more than double the 65,000 consensus &ndash; combined with 84,000 upward revisions to August and September confirms the labor market was running materially stronger than recent prints suggested. The continued repricing of December hike odds from 75% Friday to 81% Sunday reflects this data carrying weight through the weekend without a competing signal. Tuesday&rsquo;s CPI is the first data point that could change the household finance picture from the jobs-strong / rates-higher combination the week opened on.</span></div>
+          <div class="line"><span class="lb">Credit card balances 90+ days delinquent (NY Fed, Q2 2026 &ndash; Q3 report due November):</span> <span class="num">12.9%</span> <span class="d up">&#9650; from 12.2% Q2 2025 &middot; Q3 covers July&ndash;September 2026 &middot; first full post-September-hike quarter &middot; Q3 report expected this month &middot; threshold: 13.5%+ = accelerating strain</span><span class="why">The Q3 NY Fed consumer credit report &ndash; covering July&ndash;September 2026, the first full quarter after September&rsquo;s rate hike &ndash; is due this month and will be a key read for the December FOMC. With real wages running negative for three consecutive quarters and gas prices surging through October&rsquo;s wave arrivals, a Q3 reading above 13.5% would signal accelerating household finance strain even as the headline employment picture is strong. The FOMC receives this data before the December 9 decision; a sharp Q3 deterioration alongside the strong NFP and 81% hike odds would create a split signal.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, November 7, 2026 &ndash; wave #3 arrives Nov 8&ndash;12 this weekend):</span> <span class="num">$4.04/gallon</span> <span class="d down">&#9660; from $4.12 Nov 4 &middot; wave #3 from Oct 28 $115.32 Brent arriving this weekend &middot; this reading predates wave &middot; wave #4 (Nov 15&ndash;19) priced from $87&ndash;$98 range &middot; Thanksgiving-week gas lower than this wave</span><span class="why">The $4.04 reading marks the last confirmed gas price before this weekend&rsquo;s wave #3 arrival. Wave #3 &ndash; locked from October 28&rsquo;s $115.32 Brent &ndash; will reverse part of the recent modest decline over the next several days. For a household filling a 15-gallon tank weekly, each $0.10 wave increase adds approximately $1.50 per week. This week&rsquo;s $87&ndash;$98 Brent range (wave #4 pricing window) will produce a lower increase than wave #3; Thanksgiving-week gas prices should be moderately lower than the November 8&ndash;12 wave peak.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>October NFP 165,000 (vs. 65,000 consensus; prior months revised up 84,000); unemployment 4.1%; participation 61.9%. December hike odds repriced to ~81% by Sunday. Card delinquency 90+ at 12.9% (NY Fed Q2); Q3 report covers the first full post-hike quarter and is due this month. Gas $4.04 (AAA, November 7), with wave #3 from October 28&rsquo;s $115.32 Brent arriving November 8&ndash;12.</p></div>
+        <div class="src"><b>Curated from</b> BLS &middot; DOL &middot; NY Fed &middot; AAA &middot; CME FedWatch &middot; Motley Fool &middot; InvestmentNews</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <div class="strip">
+          <div><div class="k">Bitcoin</div><div class="v">~$75,750</div><div class="d up">&#9650; Sun Nov 8 &middot; slight uptick from ~$75,500 Fri &middot; below $76K &middot; below 200-day EMA ~$76,543 &middot; 81% hike odds headwind</div></div>
+          <div><div class="k">Ethereum</div><div class="v">~$2,210</div><div class="d flat">Sun Nov 8 est. &middot; near Fri ~$2,230 &middot; CLARITY Act dead; Dem Congress path Jan 3, 2027 &middot; ETF structure independent</div></div>
+          <div><div class="k">XRP</div><div class="v">~$1.17</div><div class="d flat">Sun Nov 8 est. &middot; near Fri ~$1.20 est. &middot; 2023 court ruling floor holds &middot; Democratic Congress 2027 path</div></div>
+        </div>
+        <p class="setup">Crypto markets traded through the weekend. Bitcoin drifted slightly higher to approximately <b>$75,750</b> (OKX / CoinMarketCap, November 8) from Friday&rsquo;s ~$75,500 &ndash; a modest uptick reflecting weekend crypto liquidity dynamics without the equity market&rsquo;s risk-on signal. Bitcoin remains below the <b>200-day EMA at ~$76,543</b>, which remains the next key resistance level entering Monday. Ethereum near approximately <b>$2,210</b>; XRP near approximately <b>$1.17</b>. Weekend hike odds moving to ~<b>81%</b> add continued dollar-strength headwind for all three. The CLARITY Act remains dead for the current Congress; Democratic control from January 3 creates the first realistic path to a revised bill in 2027.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Bitcoin (Sunday November 8, OKX / CoinMarketCap / Bitget):</span> <span class="num">~$75,750</span> <span class="d up">&#9650; from ~$75,500 Fri &middot; +~$250 weekend drift &middot; below $76K &middot; below 200-day EMA ~$76,543 &middot; 81% hike odds = dollar-strength headwind &middot; weekend crypto liquidity dynamics</span><span class="why">Bitcoin&rsquo;s slight drift to approximately $75,750 from Friday&rsquo;s ~$75,500 reflects weekend trading dynamics in an asset class that never closes &ndash; no dominant directional catalyst, some organic buying. The more significant development is the rate environment: weekend hike odds moving to 81% represent a continued dollar-strength headwind that the equity market&rsquo;s Monday open will either amplify (if rate-sensitive names sell off) or offset (if AI-infrastructure names recover further). Bitcoin at $75,750 remains below the 200-day EMA at approximately $76,543, the technical level flagged as the key resistance for a sustained recovery.</span></div>
+          <div class="line"><span class="lb">Ethereum (Sunday November 8, estimated &ndash; CoinGecko / DinarDetectives):</span> <span class="num">~$2,210</span> <span class="d flat">near Fri&rsquo;s ~$2,230 &middot; slight weekend drift lower &middot; CLARITY Act dead for current Congress &middot; Democratic Congress January 3 reopens legislative path &middot; SEC-approved ETF structure independent of CLARITY Act &middot; weekly loss from pre-sell-off: ~7%</span><span class="why">Ethereum near $2,210 carries the same two-way dynamic as Bitcoin: weekend hike-odds repricing to 81% adds dollar-strength pressure (negative), while the equity partial recovery theme from Friday remains the risk-on catalyst to watch at Monday&rsquo;s open (positive). The CLARITY Act&rsquo;s September 15 failure (49&ndash;50 cloture) removed the near-term legislative catalyst; Democratic control from January 3 creates the 2027 path. The existing SEC-approved Ethereum ETF structure continues operating independently of any legislation.</span></div>
+          <div class="line"><span class="lb">XRP (Sunday November 8, estimated &ndash; CoinMarketCap / CoinGecko):</span> <span class="num">~$1.17 (est.)</span> <span class="d flat">near Fri est. ~$1.20 &middot; slight weekend drift lower &middot; 2023 federal court ruling maintains legal floor &middot; Democratic Congress 2027 path &middot; on-chain DAA and network growth data not confirmed Sunday &middot; ETF assets recovering from $1.77B peak</span><span class="why">XRP near $1.17 reflects the same risk-asset headwinds as Bitcoin and Ethereum &ndash; with 81% hike odds providing continued dollar-strength pressure. XRP&rsquo;s structural position entering the week is unchanged: the 2023 federal court ruling that XRP retail sales did not constitute securities transactions provides regulatory legal clarity, and Democratic control of the new Congress creates a path to a revised CLARITY Act in 2027. The declining ETF assets from the $1.77 billion peak remain the near-term technical headwind.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Bitcoin approximately $75,750 (Sunday, OKX / CoinMarketCap), Ethereum approximately $2,210, XRP approximately $1.17 (both estimated). Bitcoin drifted slightly above Friday&rsquo;s ~$75,500 on weekend trading but remains below the 200-day EMA at ~$76,543. Weekend hike odds at ~81% maintain the dollar-strength headwind. CLARITY Act dead for current Congress; Democratic control from January 3 opens the first realistic path to a revised bill in 2027.</p></div>
+        <div class="src"><b>Curated from</b> OKX &middot; CoinMarketCap &middot; Bitget &middot; CoinGecko &middot; CoinGape &middot; DinarDetectives &middot; Ripple</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="world">Around the World</h2>
+        <div class="strip">
+          <div><div class="k">Nikkei 225</div><div class="v">57,434</div><div class="d flat">Fri Nov 6 close &middot; Sat closed &middot; Iran anti-aircraft development &middot; 81% hike odds entering Mon Asia open</div></div>
+          <div><div class="k">Hang Seng</div><div class="v">~24,481</div><div class="d flat">Fri Nov 6 close &middot; China CPI/PPI due Mon morning &middot; trade-policy optimism from Democratic sweep intact</div></div>
+          <div><div class="k">Yen / Dollar</div><div class="v">~157.90</div><div class="d flat">USD/JPY Fri &middot; weekend hike odds to 81% adds dollar strength &middot; BoJ Dec hike signal intact &middot; MoF 160 threshold above</div></div>
+        </div>
+        <p class="setup">Asian markets will open Monday to two new weekend developments: US hike odds reaching approximately <b>81%</b> and the Iran anti-aircraft device report. Japan&rsquo;s Nikkei 225, which absorbed Thursday&rsquo;s 5.52% Nasdaq decline with its own <b>5.96% fall</b> to <b>57,434</b> on Friday, faces a mixed signal at Monday&rsquo;s Asia open &ndash; the 81% hike odds add dollar strength (yen-weakening, Japan export-positive) while the Iran development adds geopolitical uncertainty. China releases October CPI and PPI Monday morning; the Hang Seng at approximately <b>24,481</b> (Friday close) will be the first liquid China-sensitive market to react.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Nikkei 225 (Friday November 6 close, carried to Sunday &ndash; Asia Financial / BBNTimes / Reuters):</span> <span class="num">57,434</span> <span class="d flat">Fri close &middot; Sat closed &middot; 81% hike odds adds USD/JPY pressure (yen weakens = exporters benefit) &middot; Iran development adds geopolitical uncertainty &middot; AI sector partially recovered Fri; Tokyo opens to both signals Mon</span><span class="why">The Nikkei at 57,434 &ndash; a three-month low &ndash; enters Monday&rsquo;s Asia open with two new weekend inputs. Higher US hike odds (81%) add dollar strength, which weakens the yen and benefits Japanese exporters including Toyota, Sony, and Panasonic &ndash; a Nikkei positive from that channel. The Iran anti-aircraft development is a geopolitical uncertainty negative for a market already digesting Thursday&rsquo;s AI sell-off. Tokyo&rsquo;s semiconductor sector (Tokyo Electron, Advantest) will also look for cues from Friday&rsquo;s US partial AI recovery at Monday&rsquo;s Asia open.</span></div>
+          <div class="line"><span class="lb">Hang Seng (Friday November 6 close, carried to Sunday &ndash; BBNTimes / Asia Financial; China CPI/PPI due Monday):</span> <span class="num">~24,481</span> <span class="d flat">Fri close &middot; China CPI/PPI due Mon morning &middot; trade-policy optimism from Democratic sweep intact &middot; AI sell-off less direct for Hang Seng composition</span><span class="why">The Hang Seng&rsquo;s 24,481 Friday close carries into Sunday with China&rsquo;s October CPI and PPI due Monday morning &ndash; a domestic data release that will be the Hang Seng&rsquo;s first repricing catalyst of the week. China-trade-policy optimism from Wednesday&rsquo;s Democratic sweep remains intact over the weekend; no new trade-policy signals emerged Saturday or Sunday. The Hang Seng&rsquo;s financial, consumer, and real estate concentration is less directly exposed to the Iran geopolitical development than Japan&rsquo;s export-sensitive composition.</span></div>
+          <div class="line"><span class="lb">Yen per dollar (Friday November 6, carried to Sunday &ndash; LiveWorldMarket / Reuters):</span> <span class="num">~157.90 USD/JPY</span> <span class="d flat">slightly weakened Fri from Thu level &middot; 81% hike odds adds further dollar-strength pressure &middot; BoJ Dec hike signal intact provides yen support &middot; MoF 160 intervention threshold above</span><span class="why">The yen at approximately 157.90 USD/JPY carries into Sunday with the weekend hike-odds move to 81% adding further dollar-strength pressure. The competing force is the Bank of Japan&rsquo;s December hike signal, which provides yen support through the yield-differential channel narrowing. The MoF&rsquo;s 160 USD/JPY intervention threshold remains above current levels. Tuesday&rsquo;s November 10 CPI and its impact on December hike odds will be the next major input for USD/JPY direction.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Nikkei 225 at 57,434 (Friday close, three-month low) faces Monday&rsquo;s Asia open with 81% US hike odds (dollar-strength yen-weakening, exporter-positive) and the Iran anti-aircraft development. Hang Seng at approximately 24,481 awaits China CPI/PPI Monday morning. Yen at approximately 157.90 USD/JPY; weekend hike odds add dollar-strength pressure while BoJ&rsquo;s December hike signal provides yen support below 160.</p></div>
+        <div class="src"><b>Curated from</b> Asia Financial &middot; BBNTimes &middot; Reuters &middot; LiveWorldMarket &middot; CNBC &middot; Xinhua</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="events">The Week Ahead</h2>
+        <div class="strip">
+          <div><div class="k">Mon Nov 9</div><div class="v">USDA Crop Progress &amp; China CPI/PPI</div><div class="d flat">Iowa corn harvest pace through Nov 8 &middot; freeze risk &middot; below 70% = Dec corn reprice &middot; China CPI Mon AM</div></div>
+          <div><div class="k">Tue Nov 10</div><div class="v">CPI 8:30 AM ET &amp; USDA WASDE 12 PM ET</div><div class="d flat">CPI: decisive for Dec FOMC at ~81% hike odds &middot; WASDE: final 2026 corn supply &middot; 29 days before Dec 9</div></div>
+          <div><div class="k">Thu Nov 12</div><div class="v">Jobless claims 8:30 AM ET</div><div class="d flat">Claims: labor pulse after 165K NFP &middot; prior: 189K (57-year low) &middot; Veterans Day Wed: bond mkt closed &middot; PPI Fri Nov 13</div></div>
+        </div>
+        <p class="setup">Monday&rsquo;s November 9 USDA Crop Progress closes the Iowa corn harvest question after this weekend&rsquo;s freeze risk &ndash; the first market-moving release of the week. Tuesday&rsquo;s double header &ndash; October CPI at <b>8:30 AM ET</b> and USDA WASDE at <b>12:00 PM ET</b> &ndash; delivers the inflation and crop-supply reads the December 9 FOMC carries to its decision. <b>Wednesday, November 11</b> is Veterans Day: bond market closed, equities open. Thursday&rsquo;s November 12 jobless claims at <b>8:30 AM ET</b> and Friday&rsquo;s November 13 PPI at <b>8:30 AM ET</b> plus retail sales complete the data-dense week.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Monday November 9 &ndash; USDA Crop Progress + China October CPI/PPI:</span> <span class="d flat">Iowa corn harvest pace through Nov 8 &middot; freeze risk arrived &middot; below 70% with freeze = Dec corn futures reprice upward &middot; China CPI/PPI: domestic demand read &middot; Hang Seng first to react</span><span class="why">Monday&rsquo;s November 9 Crop Progress closes the Iowa corn harvest uncertainty: at 66% harvested with freeze risk arriving this weekend, the market needs to see the pace approaching 75% by November 9 to confirm supply without quality-loss risk. If Iowa stalls below 70% with freeze confirmed, December corn futures would likely gap higher at Monday&rsquo;s open before the report releases. China&rsquo;s October CPI and PPI (released Monday morning China time) provide the domestic demand context for the Hang Seng&rsquo;s first repricing of the week.</span></div>
+          <div class="line"><span class="lb">Tuesday November 10 &ndash; October CPI (8:30 AM ET) + USDA WASDE (12:00 PM ET):</span> <span class="d flat">CPI: inflation read for Dec FOMC &middot; at ~81% odds, benign reading confirms path; re-accel above 3.0% core pushes odds above 90% &middot; WASDE: final 2026 corn supply accounting &middot; 29 days before Dec 9</span><span class="why">Tuesday&rsquo;s October CPI at 8:30 AM ET is the inflation read the December FOMC will carry alongside Friday&rsquo;s NFP; it is the final CPI before the December 9 rate decision. With December hike odds at approximately 81% entering Tuesday, a CPI re-acceleration would push odds above 90% and effectively settle the December question. A benign CPI reading would hold odds near 81%. The WASDE at 12:00 PM ET closes the season&rsquo;s full corn supply accounting alongside Monday&rsquo;s Crop Progress. CD savers should treat Tuesday 8:30 AM ET as the last major input before their December window decision.</span></div>
+          <div class="line"><span class="lb">Thursday November 12 &ndash; Initial jobless claims (8:30 AM ET); note: Veterans Day Wednesday closes bond market; Friday November 13 &ndash; October PPI (8:30 AM ET) + Retail Sales:</span> <span class="d flat">Claims: labor pulse after 165K NFP &middot; prior: 189K (57-year low) &middot; Veterans Day Wed: bond mkt closed, equities open &middot; PPI Fri: producer inflation &middot; Retail Sales Fri: consumer spending</span><span class="why">Thursday&rsquo;s claims (prior: 189,000, a 57-year low) will confirm whether the labor market remains as tight entering November as Friday&rsquo;s NFP showed for October. Wednesday is Veterans Day: the bond market is closed, equities trade normally, and the shortened fixed-income week amplifies any yield moves in the remaining sessions. Friday&rsquo;s November 13 PPI and Retail Sales provide the producer-price and consumer-spending reads completing the week&rsquo;s data picture before the November 20 NAHB builder sentiment and the December 9 FOMC.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Monday November 9: USDA Crop Progress (Iowa harvest pace before freeze; decisive for corn futures) + China CPI/PPI. Tuesday November 10: CPI at 8:30 AM ET (decisive for December FOMC at ~81% hike odds) + USDA WASDE at 12:00 PM ET. Veterans Day Wednesday closes the bond market. Thursday November 12: Jobless claims at 8:30 AM ET. Friday November 13: PPI and Retail Sales, both at 8:30 AM ET.</p></div>
+        <div class="src"><b>Curated from</b> BLS &middot; USDA NASS &middot; CME FedWatch &middot; Reuters &middot; Federal Reserve &middot; NBS China</div>
+        </div>
+
+        <div class="disclaimer">
+          <p>This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.</p>
+          <p class="asof">Figures reflect the latest readings available as of Sunday, November 8, 2026, before the US market open. Sources are listed at the end of each section.</p>
+        </div>
+
+      </div>
+
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#week-opens"><span class="dot"></span>How Sunday Stands</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_november7_2026.html">November 7, 2026</a></li>
+          <li><a href="market_pulse_november6_2026.html">November 6, 2026</a></li>
+          <li><a href="market_pulse_november5_2026.html">November 5, 2026</a></li>
+          <li><a href="market_pulse_november4_2026.html">November 4, 2026</a></li>
+          <li><a href="market_pulse_november3_2026.html">November 3, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We&rsquo;re looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+  </script>
+</body>
+</html>
