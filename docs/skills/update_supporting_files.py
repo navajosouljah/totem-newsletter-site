@@ -36,22 +36,25 @@ What it patches:
     email_copy.html
       - Nav Market Pulse link
       - Subject lines date header
-      - Both email templates: <title>, hero kicker, all article href occurrences
+      - Both email templates: <title>, hero kicker, hero headline, all article href occurrences
 
-What it does NOT patch (agent writes these fresh each day):
-    - Subject line text (A/B/C)
-    - Email lead paragraph
-    - Email data snapshot
+Before patching, it checks --headline against the article's <h1> and stops if they differ.
+
+What it clears to ${STEP_4_NOT_WRITTEN} (agent writes these fresh each day):
+    - Subject line text (A/B/C) and their notes
+    - Email preheader, lead paragraph, data snapshot
     - Email bullet text (open-1 through open-5)
 """
 
 import argparse
+import html
 import re
 import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 LIVE_BASE = "https://totem-challenge-preview.vercel.app"
+STEP4_PLACEHOLDER = "${STEP_4_NOT_WRITTEN}"
 
 
 def read(path: Path) -> str:
@@ -269,7 +272,35 @@ def patch_email(args: argparse.Namespace) -> None:
         "email_copy.html non-member kicker",
     )
 
-    # 7. All article href occurrences in both templates
+    # 7. Hero headline in both templates must equal the article headline word for word
+    hero_re = re.compile(
+        r'(font-weight: 700; font-size: 18px; line-height: 1\.4; color: #ffffff;">)(.*?)(</p>)',
+        re.DOTALL,
+    )
+    hero_count = len(hero_re.findall(text))
+    if hero_count != 2:
+        sys.exit(f"ERROR: expected 2 email hero headlines in email_copy.html, found {hero_count}")
+    text = hero_re.sub(lambda m: m.group(1) + args.headline + m.group(3), text)
+
+    # 8. Clear yesterday's agent-written copy. The sender blocks any email that still
+    #    holds a ${...} placeholder, so an unwritten Step 4 field stops the send instead
+    #    of mailing yesterday's words under today's date and links.
+    step4_fields = [
+        ("subject lines A/B/C", r'(font-size:17px;font-weight:700;color:#16181d;line-height:1\.3;">)(.*?)(</p>)', 3),
+        ("subject line notes", r'(<p style="margin:4px 0 0;font-family:\'Work Sans\',sans-serif;font-size:11px;color:#9aa0a8;">)(.*?)(</p>)', 3),
+        ("preheader", r'(mso-hide: all; font-size: 1px; line-height: 1px; color: #f7f8fa;">\s*)(.*?)(\s*</div>)', 2),
+        ("lead paragraph", r'(font-size: 21px; font-weight: 700; line-height: 1\.35; color: #16181d;">)(.*?)(</p>)', 2),
+        ("data snapshot", r'(font-size: 14px; line-height: 1\.65; color: #26292f;">)(.*?)(</p>)', 2),
+        ("five bullets", r'(#open-[1-5]" style="color: #16181d; text-decoration: none; font-weight: 700;">)(.*?)(</a>)', 10),
+    ]
+    for label, pattern, expected in step4_fields:
+        rx = re.compile(pattern, re.DOTALL)
+        found = len(rx.findall(text))
+        if found != expected:
+            sys.exit(f"ERROR: expected {expected} {label} in email_copy.html, found {found}")
+        text = rx.sub(lambda m: m.group(1) + STEP4_PLACEHOLDER + m.group(3), text)
+
+    # 9. All article href occurrences in both templates
     #    Covers: hero links, open-1 through open-5, bottom CTA
     old_article_url = f"{LIVE_BASE}/{args.old_file}"
     new_article_url = f"{LIVE_BASE}/{args.new_file}"
@@ -279,6 +310,25 @@ def patch_email(args: argparse.Namespace) -> None:
 
     write(path, text)
     print("email_copy.html  ✓")
+
+
+def normalize(s: str) -> str:
+    s = html.unescape(s).replace("’", "'").replace("‘", "'")
+    return " ".join(s.split())
+
+
+def check_headline_matches_article(args: argparse.Namespace) -> None:
+    article = REPO_ROOT / args.new_file
+    if not article.exists():
+        sys.exit(f"ERROR: article {args.new_file} not found; write it before running this script")
+    m = re.search(r'<h1 class="headline">(.*?)</h1>', read(article), re.DOTALL)
+    if not m:
+        sys.exit(f"ERROR: no <h1 class=\"headline\"> in {args.new_file}")
+    if normalize(re.sub(r"<[^>]+>", "", m.group(1))) != normalize(args.headline):
+        sys.exit(
+            "ERROR: --headline does not match the article headline word for word\n"
+            f"  article:  {normalize(m.group(1))!r}\n  argument: {normalize(args.headline)!r}"
+        )
 
 
 # ---------------------------------------------------------------------------
@@ -319,6 +369,7 @@ def main() -> None:
                 sys.exit("ERROR: could not auto-derive --old-headline from index.html cap-title")
             args.old_headline = m.group(1).strip()
 
+    check_headline_matches_article(args)
     patch_index(args)
     patch_archive(args)
     patch_email(args)
