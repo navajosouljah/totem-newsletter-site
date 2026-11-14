@@ -1,0 +1,62 @@
+{
+  "package": "interview-clip-retention",
+  "version": "1.0.0",
+  "source_zip_sha256": "944c3bdcfec6b6012352b99cf9ae5182262ef69216a7f02e38e898448cabca3f",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 9176,
+      "sha256": "23307c74e658b7a59c474c15b885ccc114b168d3dafed7bdb275ac93611ccd5e"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 3859,
+      "sha256": "f04af5886d1aeaa3353f4e0c42a2bf865d876d0875f4940ac1538e430b4d6f82"
+    },
+    {
+      "path": "package.json",
+      "bytes": 487,
+      "sha256": "31828459d558f37b10df17c591ae2bdfda283aea8b2c9d975d4c81ffeecb4c22"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 1748,
+      "sha256": "58cc67e81c557b9b920c02b2d38840e885cfc711b6ed552a6a1e6c7be14d1c95"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 65,
+      "sha256": "a198c327432357242cca77b808c6cc425b46c4ee17b5551c5c4ed049c9c8736e"
+    },
+    {
+      "path": "collector.js",
+      "bytes": 6456,
+      "sha256": "cd1b0559c33d8868422a2e241a3c0f18e5edb4b440edf14e2f35d1d85f2f7352"
+    },
+    {
+      "path": "pull.js",
+      "bytes": 4706,
+      "sha256": "554ea2b71b70034f9d16854684881e24d31ae3962ce9fbb96df6263528236fa4"
+    },
+    {
+      "path": "manifest.js",
+      "bytes": 3259,
+      "sha256": "74250deb0fbb333c1aa581243a3e9e8d0470e7655cb88eb50e200341e1ac1530"
+    },
+    {
+      "path": "verify.js",
+      "bytes": 699,
+      "sha256": "9175ed41cc8e9b53c8bd0af1769fb7389cd07201c835e2e61726c64072c6a8dd"
+    },
+    {
+      "path": "clips.example.json",
+      "bytes": 648,
+      "sha256": "f79ec4d121dc37351b38fb2d2121286f7dba328966daab6d890f9853e5659754"
+    },
+    {
+      "path": "test/collector.test.js",
+      "bytes": 5258,
+      "sha256": "1a6aa1c5c0cad35bdebf78f17872b13f7a1d514f0126a4a84ac1982e2a2a1993"
+    }
+  ]
+}
