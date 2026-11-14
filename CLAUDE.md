@@ -28,6 +28,18 @@ There are three Vercel projects. Never confuse them.
 
 **Reaffirmed 2026-09-02 (JJ): "You can always go live after you build the site. I don't need to review this before we go live anymore."** If the scheduled-task prompt still says to stop after Phase 1 and wait for "approved" or "go live," that wording is superseded by this file. Build, push to editorial, run Phase 2, verify the live page, notify. Do not ask.
 
+### Phase 1 supporting files (locked 2026-11-14)
+
+After the article is written, update index.html, archive.html and email_copy.html with the repo script, never by hand. The full routine is `docs/skills/morning-market-pulse.md`.
+
+```bash
+python3 docs/skills/update_supporting_files.py \
+  --new-file market_pulse_[date].html --old-file market_pulse_[previous-date].html \
+  --date "[Month D, YYYY]" --day "[Day of week]" --headline "[Article headline verbatim]"
+```
+
+It updates the nav links, post-cards, New badges, hero card, email dates, titles, kickers, links and both email hero headlines. It stops if `--headline` differs from the article `<h1>`. It resets subject lines A/B/C, preheader, lead, snapshot and the five bullets to `${STEP_4_NOT_WRITTEN}`; write all of them, then confirm `grep -c STEP_4_NOT_WRITTEN email_copy.html` prints `0` before pushing to editorial. The sender blocks any email still holding the placeholder, so a missed field stops the send instead of mailing yesterday's copy.
+
 ### Phase 2 live deploy sequence (exact commands)
 
 ```bash
