@@ -150,9 +150,11 @@ The script patches:
 |---|---|
 | index.html | Nav Market Pulse link; inserts new post-card with badge-new; removes badge-new from previous; updates hero `href`, `cap-kicker`, `cap-title`, `cap-date` |
 | archive.html | Nav Market Pulse link; inserts new post-card with badge-new; removes badge-new from previous |
-| email_copy.html | Nav Market Pulse link; subject lines date header; both email templates: `<title>`, hero kicker, all article `href` occurrences (hero link, open-1 through open-5, bottom CTA) |
+| email_copy.html | Nav Market Pulse link; subject lines date header; both email templates: `<title>`, hero kicker, hero headline, all article `href` occurrences (hero link, open-1 through open-5, bottom CTA) |
 
-The script does NOT touch subject line text (A/B/C), lead paragraph, data snapshot, or bullet text — those are written fresh each day (Step 4 below).
+Before writing anything, the script checks `--headline` against the article's `<h1>` and stops if they differ, so the email hero always matches the article word for word.
+
+The script clears subject lines A/B/C and their notes, the preheader, the lead paragraph, the data snapshot, and the five bullet texts to `${STEP_4_NOT_WRITTEN}`. Step 4 writes them. The sender blocks any email that still holds that placeholder, so a skipped or half-finished Step 4 stops the send instead of mailing yesterday's copy.
 
 **Friday rule:** The script only touches the Market Pulse column. It never touches Challenge cards. Friday builds are safe.
 
@@ -164,9 +166,12 @@ Confirm the script printed `✓` for all three files before continuing.
 
 After the script runs, write the agent-authored content in `email_copy.html`:
 
-- Subject lines (A/B/C) for today's date following the Click Rule and Opportunity Frame.
+Replace every `${STEP_4_NOT_WRITTEN}` the script left. Before pushing, `grep -c STEP_4_NOT_WRITTEN email_copy.html` must print `0`.
+
+- Subject lines (A/B/C) for today's date following the Click Rule and Opportunity Frame, each with its note line.
 - In the `memberEmailHTML` JS variable:
-  - Hero headline: word-for-word identical to the article headline (already linked by the script).
+  - Hero headline: already set by the script to the article headline. Do not edit it.
+  - Preheader: 12 words max.
   - Lead paragraph: the day's hinge (tension frame), 25 words max, opens a second subject to the hero.
   - Data snapshot: 5 items max, rounded figures, gold left border.
   - 5 bullets: each ONE bold sentence, 15 words max, linked to `#open-1` through `#open-5` (links already patched by the script).
