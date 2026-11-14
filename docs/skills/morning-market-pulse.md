@@ -131,44 +131,49 @@ Never append a data recitation to the disclaimer.
 
 ---
 
-### Step 3 · Update index.html
+### Step 3 · Update index.html, archive.html, and email_copy.html — mechanical fields
 
-- Update the nav Market Pulse link to today's article.
-- Add a new post-card at the top of the grid with `badge-new`.
-- Remove `badge-new` from the previous article's post-card.
-- Update the hero card: `href`, `cap-kicker`, `cap-title`, `cap-date`.
-- **Friday rule:** Never touch Challenge cards on index.html on Friday builds.
-- Post-card headlines: 2–3 sentences max. Pick the 2–3 most important data points.
+Run the script **before writing any email content**. It patches all deterministic fields in one command and exits non-zero if any pattern is missing:
+
+```bash
+python3 docs/skills/update_supporting_files.py \
+  --new-file market_pulse_[date].html \
+  --old-file market_pulse_[previous-date].html \
+  --date "[Month D, YYYY]" \
+  --day "[Day of week]" \
+  --headline "[Article headline verbatim]"
+```
+
+The script patches:
+
+| File | What it changes |
+|---|---|
+| index.html | Nav Market Pulse link; inserts new post-card with badge-new; removes badge-new from previous; updates hero `href`, `cap-kicker`, `cap-title`, `cap-date` |
+| archive.html | Nav Market Pulse link; inserts new post-card with badge-new; removes badge-new from previous |
+| email_copy.html | Nav Market Pulse link; subject lines date header; both email templates: `<title>`, hero kicker, all article `href` occurrences (hero link, open-1 through open-5, bottom CTA) |
+
+The script does NOT touch subject line text (A/B/C), lead paragraph, data snapshot, or bullet text — those are written fresh each day (Step 4 below).
+
+**Friday rule:** The script only touches the Market Pulse column. It never touches Challenge cards. Friday builds are safe.
+
+Confirm the script printed `✓` for all three files before continuing.
 
 ---
 
-### Step 4 · Update archive.html
+### Step 4 · Write email content in email_copy.html
 
-- Update the nav Market Pulse link to today's article.
-- Add a new post-card at the top of the Market Pulse section with `badge-new`.
-- Remove `badge-new` from the previous post-card.
-- **Friday rule:** Never touch Challenge entries on archive.html on Friday builds.
+After the script runs, write the agent-authored content in `email_copy.html`:
 
----
+- Subject lines (A/B/C) for today's date following the Click Rule and Opportunity Frame.
+- In the `memberEmailHTML` JS variable:
+  - Hero headline: word-for-word identical to the article headline (already linked by the script).
+  - Lead paragraph: the day's hinge (tension frame), 25 words max, opens a second subject to the hero.
+  - Data snapshot: 5 items max, rounded figures, gold left border.
+  - 5 bullets: each ONE bold sentence, 15 words max, linked to `#open-1` through `#open-5` (links already patched by the script).
+  - Footer: "You are receiving this email as a member of Totem LC Group." + General Disclaimer verbatim.
+- In the `nonMemberEmailHTML` JS variable — same as member except footer: "A free weekly snapshot for the Totem community." + General Disclaimer verbatim.
 
-### Step 5 · Update email_copy.html
-
-- Update the nav Market Pulse link.
-- Update subject lines to today's date with three A/B/C options following the Click Rule and Opportunity Frame.
-- Update the `memberEmailHTML` JS variable:
-  - `<title>`: `Market Pulse - [Month D, YYYY] - Member Edition`
-  - Hero kicker: `[Day], [Date] · Member Edition`
-  - Hero link: `totem-challenge-preview.vercel.app/[article-filename].html`
-  - Hero headline: word-for-word identical to the article headline
-  - Lead paragraph: the day's hinge (tension frame), 25 words max, opens a second subject to the hero
-  - Data snapshot: 5 items max, rounded figures, gold left border
-  - 5 bullets: each ONE bold sentence, 15 words max, linked to `#open-1` through `#open-5` on today's article
-  - Bottom CTA: links to today's article
-  - Footer: "You are receiving this email as a member of Totem LC Group." + General Disclaimer verbatim
-- Update the `nonMemberEmailHTML` JS variable — same as member except:
-  - `<title>`: `Market Pulse - [Month D, YYYY]`
-  - Hero kicker: `[Day], [Date] · [Day] Briefing`
-  - Footer: "A free weekly snapshot for the Totem community." + General Disclaimer verbatim
+**Step 4 was formerly Step 5.**
 
 **Email word caps (not targets — count before pushing):**
 
@@ -189,7 +194,7 @@ Never append a data recitation to the disclaimer.
 
 ---
 
-### Step 6 · Push to editorial (Phase 1 complete)
+### Step 5 · Push to editorial (Phase 1 complete)
 
 ```bash
 git add market_pulse_[date].html index.html archive.html email_copy.html
@@ -205,7 +210,7 @@ The `totem-editorial-review` project auto-deploys on every push to main. After t
 
 No approval gate. Proceed immediately after Phase 1.
 
-### Step 7 · Strip editorial nav links
+### Step 6 · Strip editorial nav links
 
 ```bash
 python3 scripts/nav_links.py strip
@@ -215,7 +220,7 @@ This removes the Email Copy and Emergency PO `<li>` items from ALL public HTML f
 
 ---
 
-### Step 8 · Link CLI to live project and deploy
+### Step 7 · Link CLI to live project and deploy
 
 ```bash
 npx vercel link --yes --project totem-challenge-preview --token "$VERCEL_TOKEN"
@@ -234,7 +239,7 @@ Vercel project table (never confuse these):
 
 ---
 
-### Step 9 · Restore editorial nav links
+### Step 8 · Restore editorial nav links
 
 ```bash
 python3 scripts/nav_links.py restore
@@ -250,7 +255,7 @@ Do not replace the repo script with a one-off. The lesson from 2026-09-02: 58 ol
 
 ---
 
-### Step 10 · Relink CLI back to editorial project
+### Step 9 · Relink CLI back to editorial project
 
 ```bash
 npx vercel link --yes --project totem-newsletter-site --token "$VERCEL_TOKEN"
@@ -260,7 +265,7 @@ Keeps `.vercel/project.json` tidy for the next editorial push.
 
 ---
 
-### Step 11 · Commit and push restored files
+### Step 10 · Commit and push restored files
 
 ```bash
 git add -A && git commit -m "Restore editorial nav links" && git push origin main
@@ -270,7 +275,7 @@ If the restore brought files back to exactly their committed state (working tree
 
 ---
 
-### Step 12 · Verify the live article
+### Step 11 · Verify the live article
 
 ```bash
 curl -sI https://totem-challenge-preview.vercel.app/market_pulse_[date].html | head -5
@@ -284,7 +289,7 @@ Confirm all of:
 
 ---
 
-### Step 13 · Notify JJ
+### Step 12 · Notify JJ
 
 Send a push notification with the live article URL. Then stop. Do not ask JJ to review or send the email — the member email sends itself via the cloud routine at 6:15 AM MT (12:15 UTC).
 
