@@ -38,9 +38,27 @@ python3 docs/skills/update_supporting_files.py \
   --date "[Month D, YYYY]" --day "[Day of week]" --headline "[Article headline verbatim]"
 ```
 
-It updates the nav links, post-cards, New badges, hero card, email dates, titles, kickers, links and both email hero headlines. It stops if `--headline` differs from the article `<h1>`. It resets subject lines A/B/C, preheader, lead, snapshot and the five bullets to `${STEP_4_NOT_WRITTEN}`; write all of them, then confirm `grep -c STEP_4_NOT_WRITTEN email_copy.html` prints `0` before pushing to editorial. The sender blocks any email still holding the placeholder, so a missed field stops the send instead of mailing yesterday's copy.
+It updates the nav links, post-cards, New badges, hero card, email dates, titles, kickers, links and both email hero headlines. It stops if `--headline` differs from the article `<h1>` or runs over 12 words. It resets subject lines A/B/C, preheader, lead, snapshot and the five bullets to `${STEP_4_NOT_WRITTEN}`; write all of them. The sender blocks any email still holding the placeholder, so a missed field stops the send instead of mailing yesterday's copy.
 
-### Phase 2 live deploy sequence (exact commands)
+### Preflight before the editorial push (locked 2026-11-15)
+
+```bash
+python3 docs/skills/preflight.py market_pulse_[date].html
+```
+
+It checks the build against the locked rules in this file: no placeholders left, the 6:15 AM MT sender would accept the email, email heroes and the five bullets match the article word for word, word caps, ban-list words, disclaimers, AM/PM times, post-cards, New badges and the homepage hero. Fix every FAIL and run it again. Push to editorial only when it passes. In the last 14 editions before it existed, 11 broke at least one of these rules.
+
+**The deadline wins.** If preflight still fails at 5:45 AM MT, push and deploy anyway, because a missing live article blocks the whole email. Put the remaining FAIL lines in JJ's notification. Never skip the live deploy over a preflight failure.
+
+### Phase 2 live deploy (locked 2026-11-15)
+
+One command, after the editorial push:
+
+```bash
+bash docs/skills/deploy_live.sh market_pulse_[date].html
+```
+
+It runs the six steps below in order, restores the editorial links even if the deploy fails, checks the alias reads `totem-challenge-preview.vercel.app`, pushes the restore, and verifies the live page (HTTP 200, headline, no `email_copy.html` link, anchors `open-1` to `open-5`, homepage hero links to today). Phase 2 is complete only when it prints `LIVE OK`. Tested with a real production deploy on 2026-11-15. Run the steps by hand only if the script itself is broken:
 
 ```bash
 # 1. Strip editorial nav links from ALL public HTML files (Email Copy + Emergency PO <li> items).

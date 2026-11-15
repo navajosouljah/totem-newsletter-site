@@ -50,6 +50,9 @@ Article ends with exactly two paragraphs: the General Disclaimer word for word, 
 ### 9. Phase 1 supporting files come from a script (2026-11-14)
 `docs/skills/update_supporting_files.py` updates index, archive and email_copy after the article is written: about 30 ms, no agent edits. It copies the article headline into both email heroes and stops on a mismatch. It resets the agent-written email fields to `${STEP_4_NOT_WRITTEN}`, which the sender blocks on, so yesterday's copy can never go out under today's date. A dry run of the Nov 13 publish came out pixel-identical to what shipped.
 
+### 10. Preflight and one-command live deploy (2026-11-15)
+`docs/skills/preflight.py` checks every build against the locked rules before the editorial push; 11 of the 14 editions before it broke at least one (email bullets not matching the article's How [Day] Opens leads was the most common). If it still fails at 5:45 AM MT, deploy anyway and list the fails in the notification. `docs/skills/deploy_live.sh` runs all of Phase 2, restores the editorial links even on failure, and verifies the live page; Phase 2 is done only on `LIVE OK`. Tested with a real production deploy on Nov 15; live pages were byte-identical before and after.
+
 ## Open items
 - **Mailchimp fragment links.** The five bullets link to `#open-1..5` on one URL. Confirm on the first send whether Mailchimp counts them as five tracked links or one, so the 2.0% click baseline stays comparable.
 - **Subject-line A/B.** Run the opportunity subject against the second option on each send for two weeks; ten sends decide it with data.
@@ -64,6 +67,8 @@ Article ends with exactly two paragraphs: the General Disclaimer word for word, 
 | Rules the agent enforces | `CLAUDE.md` |
 | Deploy script | `scripts/nav_links.py` |
 | Supporting-files script | `docs/skills/update_supporting_files.py` |
+| Pre-push check | `docs/skills/preflight.py` |
+| Live deploy | `docs/skills/deploy_live.sh` |
 | Morning routine steps | `docs/skills/morning-market-pulse.md` |
 | Email copy for Mailchimp | `email_copy.html` on editorial |
 

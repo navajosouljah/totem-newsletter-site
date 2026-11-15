@@ -344,6 +344,9 @@ def check_headline_matches_article(args: argparse.Namespace) -> None:
     m = re.search(r'<h1 class="headline">(.*?)</h1>', read(article), re.DOTALL)
     if not m:
         sys.exit(f"ERROR: no <h1 class=\"headline\"> in {args.new_file}")
+    if len(normalize(args.headline).split()) > 12:
+        sys.exit(f"ERROR: headline is {len(normalize(args.headline).split())} words; the cap is 12. "
+                 "Shorten it in the article first.")
     if normalize(re.sub(r"<[^>]+>", "", m.group(1))) != normalize(args.headline):
         sys.exit(
             "ERROR: --headline does not match the article headline word for word\n"
