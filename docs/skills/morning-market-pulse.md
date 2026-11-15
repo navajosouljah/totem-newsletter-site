@@ -149,8 +149,8 @@ The script patches:
 | File | What it changes |
 |---|---|
 | index.html | Nav Market Pulse link; inserts new post-card with badge-new; removes badge-new from previous; updates hero `href`, `cap-kicker`, `cap-title`, `cap-date` |
-| archive.html | Nav Market Pulse link; inserts new post-card with badge-new; removes badge-new from previous |
-| email_copy.html | Nav Market Pulse link; subject lines date header; both email templates: `<title>`, hero kicker, hero headline, all article `href` occurrences (hero link, open-1 through open-5, bottom CTA) |
+| archive.html | Nav Market Pulse link; Challenge nav link copied from index.html; inserts new post-card with badge-new; removes badge-new from previous |
+| email_copy.html | Nav Market Pulse link; Challenge nav link copied from index.html; subject lines date header; both email templates: `<title>`, hero kicker, hero headline, all article `href` occurrences (hero link, open-1 through open-5, bottom CTA) |
 
 Before writing anything, the script checks `--headline` against the article's `<h1>` and stops if they differ, so the email hero always matches the article word for word.
 

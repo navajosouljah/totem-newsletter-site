@@ -33,6 +33,9 @@ What it patches:
       - Inserts new post-card at top of Market Pulse column
       - Removes badge-new from previously-newest post-card
 
+    archive.html and email_copy.html
+      - Challenge nav link copied from index.html
+
     email_copy.html
       - Nav Market Pulse link
       - Subject lines date header
@@ -187,6 +190,8 @@ def patch_archive(args: argparse.Namespace) -> None:
         "archive.html nav",
     )
 
+    text = sync_challenge_nav(text, "archive.html")
+
     # 2. Remove badge-new from previously-newest post-card
     text = re.sub(
         r'(<a class="post-card" href="' + re.escape(args.old_file) + r'">\s*'
@@ -231,6 +236,9 @@ def patch_email(args: argparse.Namespace) -> None:
         f'<a href="{args.new_file}">Market Pulse</a>',
         "email_copy.html nav",
     )
+
+    # 1b. Challenge nav link follows index.html; Challenge publishes don't touch this page
+    text = sync_challenge_nav(text, "email_copy.html")
 
     # 2. Subject lines date header
     text = replace_once(
@@ -310,6 +318,18 @@ def patch_email(args: argparse.Namespace) -> None:
 
     write(path, text)
     print("email_copy.html  ✓")
+
+
+CHALLENGE_NAV = re.compile(r'<a href="(totem_challenge_issue_\d+\.html)">The Challenge</a>')
+
+
+def sync_challenge_nav(text: str, label: str) -> str:
+    m = CHALLENGE_NAV.search(read(REPO_ROOT / "index.html"))
+    if not m:
+        sys.exit("ERROR: no Challenge nav link in index.html")
+    if len(CHALLENGE_NAV.findall(text)) != 1:
+        sys.exit(f"ERROR: expected 1 Challenge nav link in {label}")
+    return CHALLENGE_NAV.sub(f'<a href="{m.group(1)}">The Challenge</a>', text)
 
 
 def normalize(s: str) -> str:
