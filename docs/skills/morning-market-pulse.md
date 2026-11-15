@@ -174,7 +174,7 @@ Replace every `${STEP_4_NOT_WRITTEN}` the script left. Before pushing, `grep -c 
   - Preheader: 12 words max.
   - Lead paragraph: the day's hinge (tension frame), 25 words max, opens a second subject to the hero.
   - Data snapshot: 5 items max, rounded figures, gold left border.
-  - 5 bullets: each ONE bold sentence, 15 words max, linked to `#open-1` through `#open-5` (links already patched by the script).
+  - 5 bullets: each ONE bold sentence, 15 words max, linked to `#open-1` through `#open-5` (links already patched by the script). Each bullet is word-for-word the bold lead of the article's matching `open-N` item.
   - Footer: "You are receiving this email as a member of Totem LC Group." + General Disclaimer verbatim.
 - In the `nonMemberEmailHTML` JS variable — same as member except footer: "A free weekly snapshot for the Totem community." + General Disclaimer verbatim.
 
@@ -199,7 +199,13 @@ Replace every `${STEP_4_NOT_WRITTEN}` the script left. Before pushing, `grep -c 
 
 ---
 
-### Step 5 · Push to editorial (Phase 1 complete)
+### Step 5 · Preflight, then push to editorial (Phase 1 complete)
+
+```bash
+python3 docs/skills/preflight.py market_pulse_[date].html
+```
+
+Fix every FAIL and run it again until it passes. If it still fails at 5:45 AM MT, push anyway and list the FAIL lines in the Step 7 notification; never skip the live deploy.
 
 ```bash
 git add market_pulse_[date].html index.html archive.html email_copy.html
@@ -215,24 +221,15 @@ The `totem-editorial-review` project auto-deploys on every push to main. After t
 
 No approval gate. Proceed immediately after Phase 1.
 
-### Step 6 · Strip editorial nav links
+### Step 6 · Deploy live with one command
 
 ```bash
-python3 scripts/nav_links.py strip
+bash docs/skills/deploy_live.sh market_pulse_[date].html
 ```
 
-This removes the Email Copy and Emergency PO `<li>` items from ALL public HTML files. It exits non-zero if any file still carries a link. Never use `sed` (sed has corrupted files before). Never strip only the new article — every page on the site shares the same nav.
+It strips the editorial nav links from every public page (`scripts/nav_links.py strip`), links the CLI to `totem-challenge-preview`, deploys to production, restores the links (from git if `nav_links.py restore` fails), relinks the CLI to `totem-newsletter-site`, pushes any restore commit to main, and verifies the live page: HTTP 200, today's headline, no `email_copy.html` link, anchors `open-1` to `open-5`, homepage hero links to today. It fails unless the deploy output shows the alias `totem-challenge-preview.vercel.app`.
 
----
-
-### Step 7 · Link CLI to live project and deploy
-
-```bash
-npx vercel link --yes --project totem-challenge-preview --token "$VERCEL_TOKEN"
-npx vercel --prod --yes --token "$VERCEL_TOKEN"
-```
-
-**Always verify** the aliased URL in the deploy output reads `totem-challenge-preview.vercel.app` before proceeding. If it reads anything else, do not declare Phase 2 complete.
+Phase 2 is complete only when it prints `LIVE OK <url>`. On any `FAILED:` line, read it, fix the cause, and run the script again. The CLAUDE.md Phase 2 section lists the manual commands for the case where the script itself is broken.
 
 Vercel project table (never confuse these):
 
@@ -244,59 +241,9 @@ Vercel project table (never confuse these):
 
 ---
 
-### Step 8 · Restore editorial nav links
+### Step 7 · Notify JJ
 
-```bash
-python3 scripts/nav_links.py restore
-```
-
-Exits non-zero unless every public file carries both links again. If it fails, restore from git:
-
-```bash
-git checkout <pre-strip commit> -- *.html
-```
-
-Do not replace the repo script with a one-off. The lesson from 2026-09-02: 58 older files have the Archive `<li>` on the same line as The Challenge link; the repo script handles this correctly.
-
----
-
-### Step 9 · Relink CLI back to editorial project
-
-```bash
-npx vercel link --yes --project totem-newsletter-site --token "$VERCEL_TOKEN"
-```
-
-Keeps `.vercel/project.json` tidy for the next editorial push.
-
----
-
-### Step 10 · Commit and push restored files
-
-```bash
-git add -A && git commit -m "Restore editorial nav links" && git push origin main
-```
-
-If the restore brought files back to exactly their committed state (working tree clean), no commit is needed — that is correct behavior, not an error.
-
----
-
-### Step 11 · Verify the live article
-
-```bash
-curl -sI https://totem-challenge-preview.vercel.app/market_pulse_[date].html | head -5
-```
-
-Confirm all of:
-- HTTP 200
-- Today's headline is present in the page body
-- No `email_copy.html` link visible (editorial nav stripped)
-- Anchors `open-1` through `open-5` present
-
----
-
-### Step 12 · Notify JJ
-
-Send a push notification with the live article URL. Then stop. Do not ask JJ to review or send the email — the member email sends itself via the cloud routine at 6:15 AM MT (12:15 UTC).
+Send one push notification with the live article URL, plus any preflight FAIL lines left at the deadline. Then stop. Do not ask JJ to review or send the email — the member email sends itself via the cloud routine at 6:15 AM MT (12:15 UTC).
 
 ---
 
