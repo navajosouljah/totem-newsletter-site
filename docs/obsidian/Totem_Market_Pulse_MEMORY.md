@@ -47,6 +47,9 @@ Article ends with exactly two paragraphs: the General Disclaimer word for word, 
 ### 8. Phase 2 deploy script lives in the repo
 `scripts/nav_links.py strip | restore | check`. On 2026-09-02 a scratchpad restore script put the editorial links back on only 18 of 76 pages because 58 older files have the Archive link sharing a line with The Challenge link. The repo script inserts before the nav's `</ul>` and refuses to exit clean unless every page is restored. Do not replace it with a one-off.
 
+### 9. Phase 1 supporting files come from a script (2026-11-14)
+`docs/skills/update_supporting_files.py` updates index, archive and email_copy after the article is written: about 30 ms, no agent edits. It copies the article headline into both email heroes and stops on a mismatch. It resets the agent-written email fields to `${STEP_4_NOT_WRITTEN}`, which the sender blocks on, so yesterday's copy can never go out under today's date. A dry run of the Nov 13 publish came out pixel-identical to what shipped.
+
 ## Open items
 - **Mailchimp fragment links.** The five bullets link to `#open-1..5` on one URL. Confirm on the first send whether Mailchimp counts them as five tracked links or one, so the 2.0% click baseline stays comparable.
 - **Subject-line A/B.** Run the opportunity subject against the second option on each send for two weeks; ten sends decide it with data.
@@ -60,6 +63,8 @@ Article ends with exactly two paragraphs: the General Disclaimer word for word, 
 | Do not deploy live here | totem-newsletter-site.vercel.app |
 | Rules the agent enforces | `CLAUDE.md` |
 | Deploy script | `scripts/nav_links.py` |
+| Supporting-files script | `docs/skills/update_supporting_files.py` |
+| Morning routine steps | `docs/skills/morning-market-pulse.md` |
 | Email copy for Mailchimp | `email_copy.html` on editorial |
 
 ## Related
