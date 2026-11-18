@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - Wednesday, November 18, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:28px 0 0;text-align:center;}
+  .body{padding-top:0;}
+  h1.headline{text-wrap:balance;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:clamp(34px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;color:var(--ink);margin:56px 0 0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .strip + p.setup{font-style:italic;}
+  .sec-v2 .strip + p.setup b{font-style:italic;}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);position:relative;padding-left:22px;}
+  .sec-v2 .line::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:18px;}
+  .sec-v2 .opens li{padding-left:22px;position:relative;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens li::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .opens li b{font-weight:700;color:var(--ink);}
+  .sec-v2 .opens li:target{background:var(--wash);box-shadow:0 0 0 10px var(--wash);border-radius:2px;}
+  .sec-v2 .opens a.more{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;margin-left:6px;}
+  .sec-v2 .opens a.more:hover{border-bottom:2px solid var(--gold);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p.asof{color:var(--muted);margin-bottom:0;}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_november18_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_18.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Wednesday, November 18, 2026</span></div>
+        <h1 class="headline">Nvidia Beats by $7 Billion. Gold at a 14-Month Low.</h1>
+      </div>
+
+      <div class="body">
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="setup lead-first">Nvidia reported <b>$115.8 billion</b> in fiscal Q3 revenue - beating the $108.85 billion estimate by nearly $7 billion - with EPS of <b>$2.68</b> against $2.47 consensus, Q4 guidance of $130 billion, and a $150 billion buyback addition. That settles the morning&rsquo;s central question: AI capital spending did not retreat after Jensen Huang&rsquo;s departure. The mechanism: Nvidia&rsquo;s <b>$107.6 billion</b> data center beat validates every major cloud buyer&rsquo;s capex plan - Microsoft, Google, Amazon, Meta - removing the AI-spending-pullback fear that drove the Nasdaq 11% below its October 6 record. The selloff priced in a doubt yesterday&rsquo;s earnings just answered. Futures are higher Wednesday morning.</p>
+        <p class="setup">Two events finish the week&rsquo;s rate picture today. FOMC minutes land at <b>2:00 PM ET</b> - the last major rate input before the November 25 media blackout, now 7 days away. CME FedWatch already prices 25bp at approximately <b>97%</b> and 50bp at approximately 3%. Yesterday&rsquo;s October Retail Sales came in at exactly <b>+0.2% month over month</b>, in line with consensus; September was revised up to +0.8%. With the data settled, the minutes are what determines whether December is fully locked before the blackout.</p>
+        <p class="setup">Anthropic prices its IPO tonight at $70&ndash;$78 per share - 6x oversubscribed and likely above range per CNBC sources - for a Thursday Nasdaq debut as <b>ANT</b>. That test of institutional AI appetite arrives against two pressures: gold fell to approximately <b>$3,787/oz</b>, a 14-month low, as the stronger December-certainty dollar pressed metals; and spot Bitcoin ETFs shed $240 million on Tuesday alone, pushing November&rsquo;s total outflows to approximately $1.52 billion. <b>Curated from</b> CNBC &middot; CME FedWatch &middot; Bloomberg &middot; MarketBeat &middot; CoinGecko &middot; Farside Investors &middot; Kitco</p>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="week-opens">How Wednesday Opens</h2>
+        <ul class="opens">
+          <li id="open-1"><b>What Nvidia&rsquo;s beat by $7 billion means for every other AI name today.</b> Nvidia reported $115.8 billion in Q3 revenue - $6.95 billion above the $108.85 billion estimate - with EPS of $2.68, Q4 guidance of $130 billion, and a $150 billion buyback addition. The beat removes the AI-spending-pullback fear that drove the Nasdaq 11% below its October record and lifts every AI hardware name Wednesday morning. <a class="more" href="#stocks">Stock Market &rarr;</a></li>
+          <li id="open-2"><b>What gold at a 14-month low opens up for buyers right now.</b> Gold fell to approximately $3,787/oz - a 14-month low - as the stronger dollar from December&rsquo;s near-certain 25bp hike pressed metals. Silver fell approximately 3% to approximately $46. With 50bp nearly priced out at 3%, the most aggressive dollar-strengthening scenario is behind us; the floor for metals sets up after December 9. <a class="more" href="#commodities">Commodities &rarr;</a></li>
+          <li id="open-3"><b>What the 2:00 PM ET FOMC minutes could change about December.</b> The October 27&ndash;28 FOMC minutes land at 2:00 PM ET - the last major rate input before the November 25 media blackout. CME FedWatch prices 25bp at approximately 97%. If the minutes show any real 50bp support, yields spike and December is unsettled; if they confirm consensus, the rate path is locked through December 9. <a class="more" href="#rates">Interest Rates &rarr;</a></li>
+          <li id="open-4"><b>What Anthropic&rsquo;s IPO pricing tonight says about AI valuations after the selloff.</b> Anthropic prices at $70&ndash;$78 per share tonight - 6x oversubscribed with CNBC sources saying it will likely price above the range, valuing the company at up to $1.4 trillion. That demand test comes as the Nasdaq has shed 11% from its October record; institutional buyers paying above-range for ANT are explicitly pricing AI growth through the selloff. <a class="more" href="#events">The Week Ahead &rarr;</a></li>
+          <li id="open-5"><b>What CD savers should do now that December is 21 days out.</b> Best 1-year CDs hold near 5.00% APY today. With 25bp at approximately 97% certainty, December 9 delivers approximately 5.25% January CDs. The hold scenario is near 0%. Today&rsquo;s FOMC minutes at 2:00 PM ET are the last major rate input before the November 25 blackout - after which no Fed communication reaches markets until December 9. <a class="more" href="#savings">Savings &amp; CD Rates &rarr;</a></li>
+        </ul>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">7,340.53</div><div class="d down">&#9660; &minus;1.03% Tue close</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">24,328.38</div><div class="d down">&#9660; &minus;0.74% Tue</div></div>
+          <div><div class="k">Dow</div><div class="v">50,759.42</div><div class="d down">&#9660; &minus;1.64% Tue</div></div>
+        </div>
+        <p class="setup">Tuesday&rsquo;s session closed broadly lower before Nvidia reported after the bell. The S&amp;P fell <b>1.03%</b>, the Nasdaq shed <b>0.74%</b>, and the Dow dropped <b>1.64%</b> (&minus;955 pts), with financials and industrials leading losses as October Retail Sales came in exactly at consensus. Then Nvidia beat by $6.95 billion after the close, sending futures higher into Wednesday morning. The Nasdaq needs the AI hardware bid to hold for the index to stabilize around 11% off its October record.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (Tuesday November 17 close &ndash; AP / Reuters):</span> <span class="num">7,340.53</span> <span class="d down">&#9660; &minus;1.03%</span><span class="why">The S&amp;P&rsquo;s fourth consecutive losing session brings its decline from the October 6 record to approximately 5%. Tuesday&rsquo;s selling was broad - financials and industrials led - rather than tech-specific, suggesting the selloff has spread beyond AI governance risk into broader macro caution ahead of the FOMC minutes.</span></div>
+          <div class="line"><span class="lb">Nasdaq Composite (Tuesday November 17 close &ndash; AP / Reuters):</span> <span class="num">24,328.38</span> <span class="d down">&#9660; &minus;0.74%</span><span class="why">The Nasdaq&rsquo;s smaller decline compared to the Dow on Tuesday reflects some AI-name stability ahead of Nvidia&rsquo;s report. With Nvidia&rsquo;s beat in hand, the Nasdaq enters Wednesday with a clear positive catalyst: the question is whether the broader macro (FOMC minutes at 2:00 PM ET) offsets the AI relief bid.</span></div>
+          <div class="line"><span class="lb">Dow Jones Industrial Average (Tuesday November 17 close &ndash; AP / Reuters):</span> <span class="num">50,759.42</span> <span class="d down">&#9660; &minus;1.64% (&minus;955 pts)</span><span class="why">The Dow&rsquo;s 955-point drop was its worst since late October, led by financials reacting to the yield curve and industrials reacting to Retail Sales. At 50,759, the Dow has given back approximately 3.5 months of gains from its July close.</span></div>
+          <div class="line"><span class="lb">Nvidia Q3 FY2027 (reported Tuesday November 17 after close &ndash; CNBC / GlobeNewsWire):</span> <span class="num">$115.8B revenue &middot; EPS $2.68 &middot; Q4 guide $130B</span> <span class="d up">&#9650; beat on all metrics</span><span class="why">Nvidia beat the $108.85 billion revenue consensus by $6.95 billion - approximately 6.4% above estimates. EPS of $2.68 beat the $2.47 consensus. Q4 guidance of $130 billion exceeded the $125.25 billion estimate by $4.75 billion. Data center revenue hit $107.6 billion. The board added $150 billion to the buyback authorization. The board confirmed it will not reinstate Jensen Huang as CEO; Colette Kress remains interim CEO.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Tuesday closed broadly lower before the Nvidia beat changed the picture entirely. Wednesday opens with a confirmed AI-spending story and futures higher. The FOMC minutes at 2:00 PM ET are the day&rsquo;s remaining risk: a hawkish surprise is the only thing that could offset the Nvidia relief bid.</p></div>
+        <div class="src"><b>Curated from</b> AP &middot; Reuters &middot; CNBC &middot; Yahoo Finance &middot; MarketBeat &middot; GlobeNewsWire &middot; LSEG</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <div class="strip">
+          <div><div class="k">Fed funds</div><div class="v">3.75&ndash;4.00%</div><div class="d flat">Held Oct 28</div></div>
+          <div><div class="k">2-year</div><div class="v">~4.79%</div><div class="d down">&#9660; &minus;2bps Wed AM</div></div>
+          <div><div class="k">10-year</div><div class="v">~5.09%</div><div class="d down">&#9660; &minus;3bps Wed AM</div></div>
+        </div>
+        <p class="setup">Treasury yields eased slightly Wednesday morning as markets absorbed October Retail Sales - exactly <b>+0.2%</b>, in line with consensus - and await the <b>FOMC minutes at 2:00 PM ET</b>. The 10-year holds near <b>5.09%</b>, down approximately 3 basis points from Tuesday; the 2-year eased to approximately <b>4.79%</b>. CME FedWatch has tightened further: <b>25bp at approximately 97%</b> and 50bp at approximately 3%. The November 25 media blackout is 7 days away - today&rsquo;s minutes are the last scheduled Fed communication before December 9.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">10-year Treasury yield (Wednesday November 18 morning &ndash; CNBC):</span> <span class="num">~5.09%</span> <span class="d down">&#9660; &minus;3bps from Tue&rsquo;s ~5.12%</span><span class="why">The 10-year&rsquo;s mild easing reflects the settled Retail Sales print and no fresh hawkish catalyst before the 2:00 PM ET FOMC minutes. The 10-year at 5.09% is slightly below the survey-week average that generated Freddie Mac&rsquo;s 7.11% mortgage reading, leaving open the possibility of a fifth consecutive PMMS decline Thursday.</span></div>
+          <div class="line"><span class="lb">2-year Treasury yield (Wednesday November 18 morning &ndash; CNBC):</span> <span class="num">~4.79%</span> <span class="d down">&#9660; &minus;2bps from Tue</span><span class="why">The 2-year at 4.79% with a Fed funds ceiling at 4.00% prices one December hike and roughly one additional quarter-point move in 2027. The 50bp probability collapsing from 13% last week to approximately 3% Wednesday is the month&rsquo;s largest single rate-path shift and occurred on data alone - PPI below consensus, Retail Sales in line - without any new Fed communication.</span></div>
+          <div class="line"><span class="lb">October Retail Sales (Census Bureau, released Tuesday November 17 at 8:30 AM ET):</span> <span class="num">+0.2% MoM &middot; ex-gas +0.1%</span> <span class="d flat">in line with consensus</span><span class="why">Retail Sales matched the +0.2% consensus. Gas stations drove a +1.5% gain while auto dealers fell 1.6% and furniture fell 2.3%. Online retail rose 1.2%. September was revised up to +0.8%. The in-line print settled December - no surprise to reopen the 50bp debate - and left the FOMC minutes as the week&rsquo;s remaining rate catalyst.</span></div>
+          <div class="line"><span class="lb">FOMC October 27&ndash;28 meeting minutes (Federal Reserve, due Wednesday November 18 at 2:00 PM ET &ndash; not yet released):</span> <span class="num">due 2:00 PM ET today</span> <span class="d flat">last Fed input before Nov 25 blackout</span><span class="why">The minutes will show how close the October committee came to signaling a larger hike. With 50bp now at approximately 3%, the market needs to see broad 25bp support in the minutes to keep December settled. A hawkish read - &ldquo;several preferred 50bp&rdquo; or similar - would push the 2-year and dollar higher into the blackout window.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>The December hike is effectively settled at 25bp after Retail Sales came in at consensus. The FOMC minutes at 2:00 PM ET confirm or complicate that read - but with 50bp at 3%, it would take an unusually hawkish set of minutes to shift the needle before the November 25 blackout.</p></div>
+        <div class="src"><b>Curated from</b> CNBC &middot; CME FedWatch &middot; Federal Reserve &middot; Census Bureau &middot; BLS &middot; FXStreet</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <div class="strip">
+          <div><div class="k">Top 1-yr CD</div><div class="v">~5.00%</div><div class="d flat">Bankrate</div></div>
+          <div><div class="k">Top HYSA</div><div class="v">~4.40%</div><div class="d flat">Bankrate</div></div>
+          <div><div class="k">Nat&rsquo;l avg 1-yr CD</div><div class="v">2.11%</div><div class="d flat">Bankrate</div></div>
+        </div>
+        <p class="setup">Best 1-year CDs hold near <b>5.00% APY</b> (Bankrate). With 25bp at approximately <b>97%</b> certainty and 50bp near 3%, December 9&rsquo;s hike delivers approximately <b>5.25%</b> January CDs. The hold scenario is near 0%. Waiting 21 days through December 9 to lock a 1-year CD costs approximately $62 in foregone 2026 interest on $25,000 and gains approximately $62 per year from locking at 5.25% instead of 5.00% - a break-even in the first month and a net gain every month after.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Best 1-year CD (Bankrate, November 2026 &ndash; Quorum Federal Credit Union and similar):</span> <span class="num">~5.00% APY</span> <span class="d flat">stable</span><span class="why">The 5.00% best-available rate has held for two weeks. With the FOMC minutes at 2:00 PM ET today as the last major rate input before the blackout, there is no near-term catalyst to push the best-available rate meaningfully above 5.00% before December 9 - confirming the case for waiting.</span></div>
+          <div class="line"><span class="lb">Top high-yield savings account (Bankrate / NerdWallet, November 2026):</span> <span class="num">~4.40% APY</span> <span class="d flat">liquid holding vehicle</span><span class="why">The HYSA at approximately 4.40% remains the optimal holding vehicle for the 21-day wait through December 9. The 60-basis-point spread between 4.40% HYSA and 5.00% CD costs approximately $150 per year on $25,000 - a reasonable price for 21 days of liquidity before locking a likely-higher rate.</span></div>
+          <div class="line"><span class="lb">National average 1-year CD (Bankrate, November 2026):</span> <span class="num">2.11% APY</span> <span class="d flat">289bps below best available</span><span class="why">The 289-basis-point gap between the 2.11% national average and 5.00% best available costs approximately $722 per year on $25,000. That gap grows to approximately $785 after December 9 at a 5.25% best-available rate. A saver in a national-average account who moves to a 5.00% CD today still picks up $722 a year, and the extra 21 days of waiting adds another $62.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Twenty-one days to December 9. With 25bp at 97% and hold near 0%, the December CD math is the clearest it has been all month. The FOMC minutes at 2:00 PM ET today are the last scheduled input that could shift the rate path before the November 25 blackout.</p></div>
+        <div class="src"><b>Curated from</b> Bankrate &middot; NerdWallet &middot; Motley Fool &middot; CME FedWatch &middot; Federal Reserve</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <div class="strip">
+          <div><div class="k">Brent</div><div class="v">~$92.14</div><div class="d down">&#9660; &minus;1.1% Wed AM</div></div>
+          <div><div class="k">WTI</div><div class="v">~$84.48</div><div class="d down">&#9660; &minus;1.8% Wed AM</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$3.78</div><div class="d down">&#9660; Mon Nov 17</div></div>
+        </div>
+        <p class="setup">Oil continues to ease Wednesday morning after the American Petroleum Institute reported a <b>5.28 million barrel</b> US crude build - the largest weekly inventory gain in six weeks. Brent fell approximately <b>1.1%</b> to approximately <b>$92.14/barrel</b> and WTI fell approximately <b>1.8%</b> to approximately <b>$84.48</b>, erasing most of Tuesday&rsquo;s modest recovery. National gas now stands at <b>$3.78/gallon</b> (AAA, November 17) - down from $3.81 Monday, nearly 20 cents below a week ago. The IEA&rsquo;s surplus signal from earlier this week is reinforced by the inventory build.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Brent crude (Wednesday November 18 morning &ndash; FXEmpire / Oilprice.com):</span> <span class="num">~$92.14/barrel</span> <span class="d down">&#9660; &minus;1.1% from ~$93.17 Tue</span><span class="why">Brent&rsquo;s second consecutive morning decline reflects the API&rsquo;s 5.28-million-barrel inventory build overriding lingering Middle East risk premium. The IEA&rsquo;s surplus signal from Monday combined with strong US non-OPEC production growth is shifting the market&rsquo;s structural read from supply disruption to supply adequacy.</span></div>
+          <div class="line"><span class="lb">WTI crude (Wednesday November 18 morning &ndash; FXStreet / FXEmpire):</span> <span class="num">~$84.48/barrel</span> <span class="d down">&#9660; &minus;1.8% from ~$86.00 Tue</span><span class="why">WTI&rsquo;s 1.8% decline to $84.48 brings it toward the lower end of its November range. The EIA&rsquo;s official inventory data, due Wednesday afternoon, will confirm or refute the API&rsquo;s 5.28-million-barrel build. Stations currently sell fuel purchased when Brent sat above $92; the crude at $92.14 on Wednesday reaches retail prices in early December.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, Tuesday November 17 &ndash; most recent):</span> <span class="num">$3.7818/gallon</span> <span class="d down">&#9660; from $3.81 Mon</span><span class="why">The national average has declined every day since first falling below $4 on November 12. At $3.78, a 15-gallon fill costs approximately $7.80 less than a month ago and roughly $10 less than a year ago. The decline should continue through Thanksgiving as stations sell through the last of the higher-priced crude purchased when Brent sat above $94.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>The API&rsquo;s 5.28-million-barrel inventory build reinforces the IEA&rsquo;s supply adequacy read and pushed both crude benchmarks lower Wednesday morning. Gas at $3.78 should keep easing through Thanksgiving. Watch the EIA&rsquo;s official inventory report Wednesday afternoon for confirmation of the API number.</p></div>
+        <div class="src"><b>Curated from</b> AAA &middot; FXEmpire &middot; FXStreet &middot; IEA &middot; Oilprice.com &middot; API &middot; EIA</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <div class="strip">
+          <div><div class="k">Gold</div><div class="v">~$3,787</div><div class="d down">&#9660; 14-month low</div></div>
+          <div><div class="k">Silver</div><div class="v">~$46.00</div><div class="d down">&#9660; &minus;3% Wed AM</div></div>
+          <div><div class="k">Copper</div><div class="v">~$5.91</div><div class="d down">&#9660; &minus;1.5% 5-mo low</div></div>
+        </div>
+        <p class="setup">Metals sold off sharply into Wednesday morning. Gold fell to approximately <b>$3,787/oz</b> - a <b>14-month low</b> - as the stronger dollar from December hike certainty and rising real yields pressed precious metals lower. Silver fell approximately <b>3%</b> to approximately <b>$46.00</b>. Copper fell approximately <b>1.5%</b> to approximately <b>$5.91/lb</b>, a five-month low, on weak Chinese economic data and dollar strength. The selloff is a function of the same mechanism driving crypto lower: a near-certain 25bp December hike keeps the dollar elevated through year-end.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Gold (Wednesday November 18 morning &ndash; Kitco / Metal Charts):</span> <span class="num">~$3,787/oz</span> <span class="d down">&#9660; &minus;2% from ~$3,864 Tue AM &middot; 14-month low</span><span class="why">Gold&rsquo;s 14-month low reflects the confluence of dollar strength - from 25bp certainty at approximately 97% - and falling demand for safe-haven assets as Nvidia&rsquo;s beat reduces the acute AI-sector risk. The 14-month low is from September 2025, when the previous rate cycle pressed metals to similar levels. With 50bp priced out at 3%, the most aggressive dollar-strengthening scenario is behind us; the floor for gold sets up after December 9.</span></div>
+          <div class="line"><span class="lb">Silver (Wednesday November 18 morning &ndash; FXStreet / Kitco):</span> <span class="num">~$46.00/oz</span> <span class="d down">&#9660; &minus;3% from ~$47.38 Tue AM</span><span class="why">Silver&rsquo;s 3% decline outpaces gold&rsquo;s 2% drop, reflecting silver&rsquo;s higher beta to both the dollar and risk sentiment. Silver&rsquo;s industrial component - solar, electronics - remains demand-supported, which provides a floor the monetary-only precious metals case lacks. At $46, silver is approximately 10% above its six-month average.</span></div>
+          <div class="line"><span class="lb">Copper (Wednesday November 18 morning &ndash; Trading Economics / Investing.com):</span> <span class="num">~$5.91/lb</span> <span class="d down">&#9660; &minus;1.5% from ~$6.00 &middot; 5-month low</span><span class="why">Copper&rsquo;s five-month low combines dollar pressure from December hike certainty and weak Chinese demand signals. Copper&rsquo;s trajectory into year-end remains caught between two opposing forces: the US December hike (dollar, bearish copper) and China stimulus signals (demand recovery, bullish copper). No new China stimulus signal has emerged this week.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Gold at a 14-month low, silver down 3%, copper at a five-month low - the December hike certainty is doing what rate certainty always does to metals: pressing them lower through the final weeks before the decision. With 50bp nearly priced out, the most aggressive dollar-strengthening scenario is behind us; the metals floor arrives December 9.</p></div>
+        <div class="src"><b>Curated from</b> Kitco &middot; Metal Charts &middot; FXStreet &middot; Trading Economics &middot; Investing.com &middot; Daily Metal Price</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <div class="strip">
+          <div><div class="k">Iowa corn</div><div class="v">84%</div><div class="d up">&#9650; from 72% week ending Nov 15</div></div>
+          <div><div class="k">Nat&rsquo;l corn</div><div class="v">88%</div><div class="d up">&#9650; from 81% week ending Nov 15</div></div>
+          <div><div class="k">Nat&rsquo;l soybeans</div><div class="v">96%</div><div class="d flat">week ending Nov 15</div></div>
+        </div>
+        <p class="setup">No new crop progress report Wednesday - the most recent is the <b>November 16 USDA Crop Progress</b> covering the week ending November 15. Iowa corn jumped <b>12 points</b> to <b>84% harvested</b>, still <b>11 points behind</b> the 95% five-year average, after 5.9 suitable fieldwork days. National corn reached <b>88%</b> (up from 81%), four points behind the 92% average. Soybeans are effectively complete at <b>96%</b> nationally. December corn futures hold near approximately $4.47/bu. The <b>next USDA Crop Progress</b> report lands Monday, November 23. The final 2026 crop number comes from the <b>December 10 WASDE</b>.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Iowa corn harvest (USDA Crop Progress, week ending November 15, released November 16 &ndash; USDA NASS / Iowa Dept. of Agriculture):</span> <span class="num">84% harvested</span> <span class="d up">&#9650; from 72% prior week</span><span class="why">Iowa&rsquo;s 12-point weekly gain was the season&rsquo;s fastest harvest progress, enabled by 5.9 suitable fieldwork days. At 84%, Iowa remains 11 points behind the 95% five-year average with the November weather window narrowing. Cold and rain returns in the extended forecast; the next fieldwork window likely comes in late November.</span></div>
+          <div class="line"><span class="lb">National corn and soybean harvest (USDA Crop Progress, week ending November 15, released November 16):</span> <span class="num">Corn 88% &middot; soybeans 96%</span> <span class="d up">&#9650; corn up 7 pts from 81%</span><span class="why">National corn at 88% has narrowed the gap with the 92% five-year average to 4 points. Soybeans at 96% are effectively complete; the record 4.562-billion-bushel soybean crop is fully confirmed in the harvest data. Iowa alone carries the late-harvest risk - most other states are tracking at or ahead of their seasonal norms.</span></div>
+          <div class="line"><span class="lb">December corn futures (most recent &ndash; DTN Progressive Farmer / CME):</span> <span class="num">~$4.47/bu</span> <span class="d flat">unchanged</span><span class="why">December corn futures at approximately $4.47 are absorbing two opposing forces: harvest progress (reduces supply uncertainty, bearish) against dollar strength from December hike certainty (dollar-denominated exports, bearish). Both forces have kept price largely flat ahead of December 10&rsquo;s WASDE, which will set the final 2026 crop supply figure.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>No new data Wednesday; the November 16 crop progress remains the latest read. Iowa&rsquo;s 12-point surge brought the state to 84%, still 11 points behind average with weather narrowing. The next crop progress report lands Monday November 23. December 10&rsquo;s WASDE sets the final number.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; Iowa Dept. of Agriculture &middot; DTN Progressive Farmer &middot; CME &middot; IndexBox</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <div class="strip">
+          <div><div class="k">30-yr mortgage (Freddie Mac)</div><div class="v">7.11%</div><div class="d down">&#9660; Thu Nov 12 &middot; 4th consecutive decline</div></div>
+          <div><div class="k">10-year</div><div class="v">~5.09%</div><div class="d down">&#9660; &minus;3bps Wed AM</div></div>
+          <div><div class="k">Tariff Day</div><div class="v">Day 99</div><div class="d flat">~45% combined</div></div>
+        </div>
+        <p class="setup">No new mortgage data today; the next <b>Freddie Mac PMMS lands Thursday, November 19</b>. Last week&rsquo;s reading of <b>7.11%</b> marked the fourth consecutive weekly decline from the 7.40% October peak - the lowest in approximately seven weeks. The 10-year at approximately 5.09% Wednesday morning is slightly below the survey-week average that generated the 7.11% result, which supports the possibility of a <b>fifth consecutive decline Thursday</b>. Canada lumber tariff is now Day 99 at approximately <b>45% combined</b>. NAHB builder sentiment hit a 14-year low of 29 in October.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">30-year fixed (Freddie Mac PMMS, Thursday November 12 &ndash; most recent &ndash; Freddie Mac / GlobeNewsWire):</span> <span class="num">7.11%</span> <span class="d down">&#9660; from 7.18% Nov 5 &middot; 15-yr 6.45%</span><span class="why">The fourth consecutive PMMS decline to 7.11% reflects lender spread compression as refinancing volume remains depressed. With the 10-year at approximately 5.09% on Wednesday - slightly below the survey-week average that produced 7.11% - the spread compression argument supports a potential fifth straight decline when Thursday&rsquo;s PMMS publishes. Each 10-basis-point decline in the 30-year reduces a $400,000 mortgage&rsquo;s monthly payment by approximately $27.</span></div>
+          <div class="line"><span class="lb">Canada softwood lumber tariff (Day 99 as of Wednesday November 18):</span> <span class="num">~45% combined</span> <span class="d flat">antidumping, countervailing, Section 232</span><span class="why">Day 99 carries the same construction-cost burden as Day 1. The five-week PMMS improvement streak has addressed the monthly-payment side of affordability; the tariff-driven construction-cost side requires 2027 legislative action from the incoming Congress. No timeline for relief is in sight before the new Congress convenes January 3.</span></div>
+          <div class="line"><span class="lb">Builder sentiment (NAHB October reading):</span> <span class="num">29</span> <span class="d flat">14-year low</span><span class="why">NAHB&rsquo;s 14-year low combined the October rate peak at 7.40% and lumber tariff costs. Five consecutive PMMS improvements to 7.11% address the mortgage rate side; the lumber tariff side is unchanged. Thursday&rsquo;s PMMS is the week&rsquo;s most direct read on whether the improvement streak extends to five weeks.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>At 7.11%, mortgage rates are at a seven-week low and the streak could extend to five consecutive weeks Thursday. With the 10-year at 5.09% - slightly below the survey period average that produced 7.11% - Thursday&rsquo;s PMMS is the week&rsquo;s best housing data catalyst. The lumber tariff cost is unchanged at Day 99 with no near-term legislative path.</p></div>
+        <div class="src"><b>Curated from</b> Freddie Mac &middot; GlobeNewsWire &middot; Mortgage News Daily &middot; NAHB &middot; Census Bureau &middot; Federal Reserve</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <div class="strip">
+          <div><div class="k">NY Fed Q3 Delinquency</div><div class="v">5.0%</div><div class="d up">&#9650; from 4.7% Q2</div></div>
+          <div><div class="k">Card balances</div><div class="v">$1.285T</div><div class="d up">&#9650; +$22B Q3</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$3.78</div><div class="d down">&#9660; Nov 17</div></div>
+        </div>
+        <p class="setup">October Retail Sales came in at exactly <b>+0.2%</b> Tuesday - in line with consensus - with online retail up 1.2% and gas stations up 1.5%. The print shows the consumer spending at a steady pace against the headwinds the NY Fed&rsquo;s Q3 data exposed: delinquency at <b>5.0%</b> (up from 4.7% in Q2), credit card balances at <b>$1.285 trillion</b> (+$22B), and 62,000 new foreclosures. Gas at <b>$3.78/gallon</b> (AAA, November 17) is the one household budget line actively improving - down nearly 20 cents from a week ago.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">October Retail Sales (Census Bureau, released Tuesday November 17 at 8:30 AM ET):</span> <span class="num">+0.2% MoM &middot; +0.1% ex-gas</span> <span class="d flat">in line with consensus</span><span class="why">The in-line print shows the consumer holding steady rather than accelerating or contracting. Auto dealers fell 1.6% and furniture fell 2.3%, suggesting big-ticket caution. Online rose 1.2% - consistent with the digital-first spending shift Home Depot also confirmed Tuesday. The +0.8% September revision shows Q3 consumer spending was stronger than initially reported.</span></div>
+          <div class="line"><span class="lb">NY Fed Q3 2026 household debt delinquency (released November 10 &ndash; NY Fed):</span> <span class="num">5.0% delinquency rate</span> <span class="d up">&#9650; from 4.7% Q2</span><span class="why">The 0.3-percentage-point Q3 rise covers the first full post-September-hike quarter and represents the initial transmission of higher rates to household balance sheets. Delinquency tends to accelerate three to six months after a rate-cycle peak. The December hike adds another layer; the Q4 2026 NY Fed data, due in February, will show the full transmission.</span></div>
+          <div class="line"><span class="lb">Credit card balances (NY Fed Q3 2026, released November 10):</span> <span class="num">$1.285T &middot; 62K foreclosures Q3</span> <span class="d up">&#9650; card balances +$22B</span><span class="why">The $22 billion quarterly rise in credit card balances reflects households leaning on revolving credit as October CPI&rsquo;s +0.4% headline compresses real wages. The in-line Retail Sales print shows consumers still spending; the rising card balances show how they&rsquo;re funding it. These two data sets together define the soft-landing tension: spending is there, but the balance sheet cost is rising.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, Tuesday November 17 &ndash; most recent):</span> <span class="num">$3.7818/gallon</span> <span class="d down">&#9660; from $3.81 Mon</span><span class="why">Gas below $3.82 is the one household budget line moving in consumers&rsquo; favor while card balances and delinquencies rise. A weekly 15-gallon fill costs about $7.80 less than a month ago - roughly $31 per month for a one-car household. The easing should continue through Thanksgiving as the crude declines work through the supply chain.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>October Retail Sales at +0.2% confirmed a consumer holding at a moderate pace - not accelerating, not contracting. The NY Fed&rsquo;s Q3 data underneath that pace shows the balance sheet stress building. Gas at $3.78 is the monthly offset. The December hike adds another round of transmission starting in January.</p></div>
+        <div class="src"><b>Curated from</b> NY Fed &middot; Census Bureau &middot; BLS &middot; AAA &middot; CNBC &middot; CME FedWatch &middot; Federal Reserve</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <div class="strip">
+          <div><div class="k">Bitcoin</div><div class="v">~$64,400</div><div class="d down">&#9660; &minus;21% from Nov 4 high</div></div>
+          <div><div class="k">Ethereum</div><div class="v">~$1,796</div><div class="d down">&#9660; below $1,800</div></div>
+          <div><div class="k">XRP</div><div class="v">~$0.95</div><div class="d down">&#9660; below $1</div></div>
+        </div>
+        <p class="setup">Bitcoin holds near <b>$64,400</b> early Wednesday, slightly up from Tuesday&rsquo;s close but still approximately <b>21% below</b> the November 4 high near $81,000. Spot Bitcoin ETFs shed <b>$240 million on Tuesday alone</b> - pushing November&rsquo;s total outflows to approximately <b>$1.52 billion</b>. Ethereum holds near <b>$1,796</b> and XRP near <b>$0.95</b>. The crypto fear index remains in &ldquo;Extreme Fear.&rdquo; Crypto is trading as a rates-and-AI-confidence story: today&rsquo;s FOMC minutes at 2:00 PM ET are more relevant to Bitcoin this week than any crypto-specific catalyst.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Bitcoin (Wednesday November 18 morning &ndash; CoinGecko / Fortune):</span> <span class="num">~$64,400</span> <span class="d down">&#9660; from ~$64,900 Tue &middot; &minus;21% from Nov 4 near $81K</span><span class="why">IBIT led eight consecutive days of spot Bitcoin ETF outflows totaling approximately $1.52 billion in November. The outflow streak reflects institutional repositioning toward higher-yielding cash equivalents as 25bp certainty rises toward 97%. Nvidia&rsquo;s beat adds a mild positive catalyst - removing the AI-spending-pullback fear that was compounding crypto&rsquo;s rate-driven selloff - but the structural outflow pressure from December hike certainty remains.</span></div>
+          <div class="line"><span class="lb">Ethereum (Wednesday November 18 morning &ndash; Fortune / FXStreet):</span> <span class="num">~$1,796</span> <span class="d down">&#9660; below $1,800 &middot; &minus;14% on the week</span><span class="why">Ethereum ETFs shed $29 million on Tuesday, adding to the November total. Ethereum remains below $2,000, lost last week. The CLARITY Act - which failed in September - is the next legislative path for crypto regulatory clarity; the Congress seated January 3, 2027 would be the earliest vehicle. Existing ETFs operate regardless of that timeline.</span></div>
+          <div class="line"><span class="lb">XRP (Wednesday November 18 morning &ndash; CoinMarketCap / CoinGecko):</span> <span class="num">~$0.9515</span> <span class="d down">&#9660; below $1 &middot; two-year low range</span><span class="why">XRP ETFs shed $6 million on Tuesday, with US spot XRP ETF outflows last week among the largest in eight months. XRP held near $0.95 after falling below $1 to a two-year low range over the weekend. The 2023 court ruling on XRP&rsquo;s status stands; no new regulatory trigger is in play. CLARITY Act status: stalled ahead of the new Congress seating January 3.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Crypto is trading as a rates and AI confidence story. Bitcoin at $64,400 needs two inputs to stabilize: a clean set of FOMC minutes at 2:00 PM ET keeping December settled, and sustained institutional demand for Nvidia&rsquo;s AI-confirmed capex story. Both arrive today. The November outflow total at $1.52 billion is the structural overhang.</p></div>
+        <div class="src"><b>Curated from</b> CoinGecko &middot; CoinMarketCap &middot; Farside Investors &middot; Fortune &middot; FXStreet &middot; TradingNews &middot; Benzinga</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="world">Around the World</h2>
+        <div class="strip">
+          <div><div class="k">Nikkei 225</div><div class="v">~59,200</div><div class="d up">&#9650; +0.7% Wed session</div></div>
+          <div><div class="k">Hang Seng</div><div class="v">~23,230</div><div class="d down">&#9660; &minus;1.2% Wed session</div></div>
+          <div><div class="k">Yen / Dollar</div><div class="v">~159.30</div><div class="d flat">Below 160 zone</div></div>
+        </div>
+        <p class="setup">Asia&rsquo;s Wednesday session split along Nvidia lines. The Nikkei rose approximately <b>0.7%</b> to approximately <b>59,200</b> - recovering from two consecutive declines - as AI-linked hardware names including Advantest and SoftBank bounced on Nvidia&rsquo;s beat. The Hang Seng fell approximately <b>1.2%</b> to approximately <b>23,230</b>, pressured by new US chip export curbs targeting advanced semiconductor equipment sold into China. USD/JPY holds near <b>159.30</b> - still below the 160 intervention zone that Japanese Finance Ministry officials have repeatedly flagged.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Nikkei 225 (Wednesday November 18 Japan session &ndash; FXStreet / Business Upturn):</span> <span class="num">~59,200</span> <span class="d up">&#9650; +0.7% from Tue close of ~58,793</span><span class="why">The Nikkei&rsquo;s recovery reflects Nvidia&rsquo;s direct read-through to Japan&rsquo;s AI-hardware supply chain. Advantest, which manufactures semiconductor test equipment for Nvidia&rsquo;s supply chain, led the advance. The 0.7% gain reverses roughly half of Tuesday&rsquo;s 1.18% decline. Japan&rsquo;s Q3 GDP miss last week remains the domestic demand headwind; Nvidia removes the sector-specific AI overhang.</span></div>
+          <div class="line"><span class="lb">Hang Seng (Wednesday November 18 session &ndash; FXStreet / Reuters):</span> <span class="num">~23,230</span> <span class="d down">&#9660; &minus;1.2% from Tue&rsquo;s ~23,510</span><span class="why">The Hang Seng&rsquo;s decline despite Nvidia&rsquo;s beat reflects new US chip export curbs aimed at advanced semiconductor equipment sold into China - a direct headwind to Hong Kong&rsquo;s tech-adjacent names. Mainland Chinese stabilization signals provided partial support; the net result was a 1.2% decline that widened the Nikkei-Hang Seng spread to its largest in three weeks.</span></div>
+          <div class="line"><span class="lb">USD/JPY (Wednesday November 18 morning &ndash; FXStreet / Trading Economics):</span> <span class="num">~159.30</span> <span class="d flat">below 160 intervention zone</span><span class="why">USD/JPY sits 70 basis points below the 160.00 level that Japanese finance officials have signaled as a potential intervention trigger. The yen benefits from safe-haven demand as AI-sector and China-chip uncertainty persists; that demand is capping the dollar&rsquo;s rise and keeping intervention risk elevated for anyone who pushes the pair toward 160.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Asia split on Wednesday: Nikkei up 0.7% on Nvidia&rsquo;s beat, Hang Seng down 1.2% on US chip export curbs. The divergence shows Nvidia&rsquo;s beat is not a uniform AI tailwind - it lifts supply-chain participants while US-China chip restrictions widen the trade restriction discount on Hong Kong tech. USD/JPY at 159.30 is 70 pips from an intervention trigger.</p></div>
+        <div class="src"><b>Curated from</b> FXStreet &middot; Business Upturn &middot; Reuters &middot; Trading Economics &middot; Japan Ministry of Finance &middot; Investing.com</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="events">The Week Ahead</h2>
+        <div class="strip">
+          <div><div class="k">Today Nov 18</div><div class="v">FOMC Minutes &middot; Anthropic</div><div class="d flat">2:00 PM ET minutes</div></div>
+          <div><div class="k">Thu Nov 19</div><div class="v">Jobless Claims &middot; Walmart</div><div class="d flat">ANT Nasdaq debut</div></div>
+          <div><div class="k">Fri Nov 21</div><div class="v">Existing Home Sales</div><div class="d flat">10:00 AM ET</div></div>
+        </div>
+        <p class="setup">Today carries the week&rsquo;s remaining rate risk and its IPO event. <b>FOMC minutes at 2:00 PM ET</b> are the last Fed communication before the November 25 media blackout - 7 days away. <b>Anthropic prices its IPO tonight</b> at $70&ndash;$78 per share, 6x oversubscribed. Thursday is <b>Anthropic&rsquo;s Nasdaq debut</b> (ticker: ANT), <b>Walmart earnings</b>, <b>jobless claims at 8:30 AM ET</b>, and the <b>Freddie Mac PMMS</b> (potential fifth consecutive decline). Friday brings <b>existing home sales at 10:00 AM ET</b>.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Today &ndash; FOMC October minutes (2:00 PM ET), Anthropic IPO pricing (after close):</span> <span class="d flat">Anthropic at $70&ndash;$78/share, ticker ANT</span><span class="why">The October 27&ndash;28 minutes show how close the committee came to signaling a larger hike. With 50bp at 3%, it would take &ldquo;several preferred 50bp&rdquo; language to move the needle. Anthropic&rsquo;s IPO pricing tonight at $70&ndash;$78 per share - 6x oversubscribed and likely above range per CNBC sources - sets Thursday&rsquo;s opening reference at a valuation between $917 billion and $1.4 trillion.</span></div>
+          <div class="line"><span class="lb">Thursday, November 19 &ndash; Jobless claims 8:30 AM ET, Walmart earnings (pre-market), Anthropic Nasdaq debut (ANT), Freddie Mac PMMS:</span> <span class="d flat">Anthropic valuation $917B&ndash;$1.4T</span><span class="why">Anthropic&rsquo;s first trade tests institutional appetite for AI growth after the Nasdaq&rsquo;s 11% decline from its October record. Walmart is the week&rsquo;s broadest read on the holiday consumer - its guidance is as important as its earnings print. Thursday&rsquo;s PMMS is the fifth potential consecutive decline in the 30-year mortgage rate; the 10-year at 5.09% supports that outcome.</span></div>
+          <div class="line"><span class="lb">Friday, November 21 &ndash; Existing home sales 10:00 AM ET:</span> <span class="d flat">first post-7.11% rate housing activity data</span><span class="why">Friday&rsquo;s existing home sales are the first housing activity data since the four-week mortgage rate decline from 7.40% to 7.11%. Contract signings in October (the survey period for this report) would have been signed when rates were still above 7.18%, limiting the signal. Watch for any early directional shift - even a small beat would confirm that buyers are responding to the rate improvement.</span></div>
+          <div class="line"><span class="lb">November 25 &ndash; Fed media blackout begins:</span> <span class="d flat">7 days from today</span><span class="why">The blackout means no Fed speeches, no policy guidance, and no official communication reaches markets between November 25 and December 9&rsquo;s rate decision. Today&rsquo;s FOMC minutes are the last opportunity for the market to recalibrate before entering a 14-day information freeze. With 25bp at 97%, the freeze starts with December settled - unless today&rsquo;s minutes change that read.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>The week&rsquo;s remaining catalysts arrive in order: FOMC minutes and Anthropic pricing today, Walmart and ANT&rsquo;s debut Thursday, existing home sales Friday. The November 25 blackout is 7 days away - today&rsquo;s minutes set the last Fed signal the market carries into December 9.</p></div>
+        <div class="src"><b>Curated from</b> Federal Reserve &middot; CNBC &middot; MarketBeat &middot; Census Bureau &middot; Freddie Mac &middot; CME FedWatch &middot; Bloomberg</div>
+        </div>
+
+        <div class="disclaimer">
+          <p>This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.</p>
+          <p class="asof">Figures reflect the latest readings available as of Wednesday, November 18, 2026, before the US market open. Sources are listed at the end of each section.</p>
+        </div>
+
+      </div>
+
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#week-opens"><span class="dot"></span>How Wednesday Opens</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_november17_2026.html">November 17, 2026</a></li>
+          <li><a href="market_pulse_november16_2026.html">November 16, 2026</a></li>
+          <li><a href="market_pulse_november15_2026.html">November 15, 2026</a></li>
+          <li><a href="market_pulse_november14_2026.html">November 14, 2026</a></li>
+          <li><a href="market_pulse_november13_2026.html">November 13, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We&rsquo;re looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+  </script>
+</body>
+</html>
