@@ -1,3 +1,4 @@
 .vercel
 .env*
 scripts/email_data.json
+__pycache__/
