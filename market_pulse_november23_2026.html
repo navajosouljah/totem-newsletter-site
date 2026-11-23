@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Pulse - Monday, November 23, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#032165; --blue:#1a3a8f; --gold:#b8860b; --gold-bright:#fcb900;
+    --ink:#16181d; --body:#26292f; --muted:#6b7280; --faint:#9aa0a8;
+    --line:#e4e6ea; --paper:#ffffff; --wash:#f7f8fa;
+    --read:700px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px;}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:'Spectral',Georgia,'Times New Roman',serif;
+    font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  }
+  .sans{font-family:'Work Sans',Arial,Helvetica,sans-serif;}
+  .top{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nameplate{max-width:1100px;margin:0 auto;padding:14px 24px 10px;text-align:center;height:94px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .nameplate .wordmark{font-family:'Spectral',serif;font-weight:800;font-size:38px;letter-spacing:-0.01em;color:var(--ink);line-height:1;}
+  .nameplate .wordmark b{color:var(--navy);}
+  .nameplate .tagline{font-family:'Work Sans',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.34em;text-transform:uppercase;color:var(--muted);margin-top:7px;}
+  .nav{border-top:1px solid var(--line);}
+  .nav ul{max-width:1100px;margin:0 auto;padding:0 24px;list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:26px;}
+  .nav li a{display:block;padding:10px 0;font-family:'Work Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent;}
+  .nav li a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+  .nav li a.live{color:var(--navy);border-bottom-color:var(--navy);}
+  .page-layout{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:var(--read) 1fr;gap:40px;align-items:start;}
+  .article-head{padding:28px 0 0;text-align:center;}
+  .body{padding-top:0;}
+  h1.headline{text-wrap:balance;}
+  .kicker{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--navy);margin-bottom:14px;}
+  .kicker .dot{color:var(--gold);margin:0 6px;}
+  .kicker .date{color:var(--muted);font-weight:600;}
+  h1.headline{font-family:'Spectral',serif;font-weight:800;font-size:clamp(34px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;color:var(--ink);margin:56px 0 0;}
+  .sidebar{position:sticky;top:120px;padding-top:32px;}
+  .toc-title{font-family:'Work Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .toc{list-style:none;padding:0;margin:0;}
+  .toc li{margin-bottom:6px;}
+  .toc li a{font-family:'Work Sans',sans-serif;font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;line-height:1.4;display:block;padding:3px 0;border-left:2px solid transparent;padding-left:10px;transition:color 0.15s, border-color 0.15s;}
+  .toc li a:hover{color:var(--navy);border-left-color:var(--gold);}
+  .toc li a .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3478F6;margin-right:6px;vertical-align:middle;transition:opacity 0.3s,transform 0.3s;}
+  .body{padding:24px 0 8px;}
+  .body p{margin:0 0 18px;color:var(--body);font-size:18px;line-height:1.6;}
+  .body p.lead-first::first-letter{float:left;font-family:'Spectral',serif;font-weight:800;color:var(--navy);font-size:60px;line-height:0.74;padding:8px 10px 0 0;}
+  .sec-v2 h2.section-title{font-family:'Work Sans',sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.015em;line-height:1.15;margin-bottom:14px;}
+  .sec-v2 .strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px;}
+  .sec-v2 .strip>div{padding:12px 14px 12px 0;font-family:'Work Sans',sans-serif;}
+  .sec-v2 .strip>div+div{padding-left:14px;border-left:1px solid var(--line);}
+  .sec-v2 .strip .k{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+  .sec-v2 .strip .v{font-size:20px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .sec-v2 .strip .d{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .sec-v2 .d.down{color:#9b2c2c;} .sec-v2 .d.up{color:#2d6a4f;} .sec-v2 .d.flat{color:var(--muted);}
+  .sec-v2 p.setup{font-size:18px;line-height:1.7;color:var(--body);margin-bottom:18px;}
+  .sec-v2 p.setup b{font-weight:700;color:var(--ink);}
+  .sec-v2 .strip + p.setup{font-style:italic;}
+  .sec-v2 .strip + p.setup b{font-style:italic;}
+  .sec-v2 .lines{display:flex;flex-direction:column;gap:14px;margin:0 0 20px;}
+  .sec-v2 .line{font-size:17px;line-height:1.6;color:var(--body);position:relative;padding-left:22px;}
+  .sec-v2 .line::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .line .lb{font-weight:700;color:var(--ink);}
+  .sec-v2 .line .num{font-family:'Work Sans',sans-serif;font-weight:700;font-size:17px;color:var(--ink);font-variant-numeric:tabular-nums;}
+  .sec-v2 .line .d{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-left:2px;}
+  .sec-v2 .line .why{display:block;font-weight:400;color:var(--body);}
+  .sec-v2 .bottom{display:flex;gap:12px;align-items:baseline;border-left:3px solid var(--gold);padding-left:14px;margin:6px 0 16px;}
+  .sec-v2 .bottom .lbl{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;}
+  .sec-v2 .bottom p{margin:0;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:18px;}
+  .sec-v2 .opens li{padding-left:22px;position:relative;font-size:17px;line-height:1.6;color:var(--body);}
+  .sec-v2 .opens li::before{content:"";position:absolute;left:6.5px;top:calc(0.8em - 2.5px);width:5px;height:5px;border-radius:50%;background:var(--gold-bright);}
+  .sec-v2 .opens li b{font-weight:700;color:var(--ink);}
+  .sec-v2 .opens li:target{background:var(--wash);box-shadow:0 0 0 10px var(--wash);border-radius:2px;}
+  .sec-v2 .opens a.more{font-family:'Work Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap;margin-left:6px;}
+  .sec-v2 .opens a.more:hover{border-bottom:2px solid var(--gold);}
+  .sec-v2 .src{font-family:'Work Sans',sans-serif;font-size:12px;color:var(--muted);letter-spacing:0.02em;margin-bottom:4px;}
+  .sec-v2 .src b{font-weight:600;color:var(--muted);}
+  @media (max-width:520px){.sec-v2 .strip{grid-template-columns:1fr;} .sec-v2 .strip>div+div{padding-left:0;border-left:none;border-top:1px solid var(--line);}}
+  .disclaimer{border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-family:'Work Sans',sans-serif;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.65;color:var(--body);}
+  .disclaimer p.asof{color:var(--muted);margin-bottom:0;}
+  footer.site{border-top:1px solid var(--line);margin-top:40px;background:var(--wash);}
+  footer.site .inner{max-width:1100px;margin:0 auto;padding:24px 24px;text-align:center;font-family:'Work Sans',sans-serif;}
+  footer.site .fm{font-family:'Spectral',serif;font-weight:800;font-size:18px;color:var(--ink);}
+  footer.site .fm b{color:var(--navy);}
+  footer.site .legal{font-size:11px;color:var(--faint);line-height:1.6;max-width:600px;margin:4px auto 0;}
+  .subscribe{text-align:center;padding:44px 0 36px;border-top:1px solid var(--line);margin-top:24px;}
+  .subscribe h2{font-family:'Spectral',serif;font-size:26px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .subscribe p{font-family:'Work Sans',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto;}
+  .subscribe-form{display:flex;gap:0;justify-content:center;max-width:400px;margin:0 auto;}
+  .subscribe-form input{flex:1;padding:12px 16px;border:1px solid var(--line);border-right:none;border-radius:2px 0 0 2px;font-family:'Work Sans',sans-serif;font-size:14px;outline:none;color:var(--ink);}
+  .subscribe-form input:focus{border-color:var(--navy);}
+  .subscribe-form button{padding:12px 24px;background:var(--navy);color:#fff;border:none;border-radius:0 2px 2px 0;font-family:'Work Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;}
+  .subscribe-form button:hover{background:#04204f;}
+  .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:999;align-items:center;justify-content:center;}
+  .modal-overlay.active{display:flex;}
+  .modal{background:var(--paper);border-radius:4px;padding:48px 40px;max-width:440px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.18);position:relative;}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer;font-family:'Work Sans',sans-serif;}
+  .modal-close:hover{color:var(--ink);}
+  .modal-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Spectral',serif;font-weight:800;font-size:26px;color:var(--gold-bright);}
+  .modal h3{font-family:'Spectral',serif;font-weight:800;font-size:22px;color:var(--ink);margin-bottom:12px;}
+  .modal p{font-family:'Spectral',serif;font-size:16px;line-height:1.6;color:var(--body);margin-bottom:8px;}
+  .modal .signoff{font-family:'Work Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);margin-top:20px;}
+  @media(max-width:860px){.page-layout{grid-template-columns:1fr;max-width:var(--read);}.sidebar{display:none;}h1.headline{font-size:24px;}}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="nameplate">
+      <div class="wordmark">Market <b>Pulse</b></div>
+      <div class="tagline">Your Friend in the News</div>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="market_pulse_november23_2026.html" class="live">Market Pulse</a></li>
+        <li><a href="totem_challenge_issue_19.html">The Challenge</a></li>
+        <li><a href="archive.html">Archive</a></li>
+      <li><a href="email_copy.html">Email Copy</a></li>
+      <li><a href="emergency_po.html">Emergency PO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <main>
+      <div class="article-head">
+        <div class="kicker">Market Pulse <span class="dot">&bull;</span> <span class="date">Monday, November 23, 2026</span></div>
+        <h1 class="headline">The 50bp Risk Is Gone. CD Savers Can Lock Before PCE Wednesday.</h1>
+      </div>
+
+      <div class="body">
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="quick-read">The Quick Read</h2>
+        <p class="setup lead-first">Treasury Secretary Scott Bessent&rsquo;s Sunday morning interview on Face the Nation cleared December&rsquo;s 50bp tail before the week opened. Bessent warned publicly against Fed over-tightening into a slowdown - a signal that, combined with Thursday&rsquo;s 203K Claims overshoot already narrowing the aggressive hike scenario, moved December pricing from 25bp at approximately 91&ndash;94% and 50bp at 6&ndash;9%, to 25bp at approximately 93% and 50bp at approximately 0%. That is the whole mechanism: the CD wait-or-lock decision is now a base-case 25bp math problem, not a tail risk.</p>
+        <p class="setup">Wednesday, November 25 at <b>8:30 AM ET</b> brings PCE, Q3 GDP second estimate, and Initial Claims - simultaneously the FOMC media blackout begins. With 50bp gone, PCE&rsquo;s job has changed: a hot print cannot revive the aggressive tail, but it confirms the base case. After Wednesday morning, no Fed communication reaches markets until December 9 - <b>16 days away</b>. The CD math at 25bp: lock at 4.75% now or wait 16 days for approximately <b>4.90%</b> in January.</p>
+        <p class="setup">South Korea&rsquo;s KOSPI fell <b>3.3%</b> Monday on Samsung and SK Hynix earnings concerns - the global AI repricing&rsquo;s most direct measure on a day when Tokyo markets are closed for Labour Thanksgiving Day. S&amp;P 500 futures are pointing up <b>2.6%</b> pre-market on the relief that the aggressive rate scenario cleared. Gold is recovering <b>2.5%</b> to approximately $3,614 from last week&rsquo;s 14-month low of $3,524. USDA Crop Progress publishes today at <b>3:00 PM ET</b>; Iowa&rsquo;s harvest read is the day&rsquo;s late data point. <b>Curated from</b> Federal Reserve &middot; CME FedWatch &middot; Face the Nation &middot; USDA &middot; AAA &middot; Bloomberg</p>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="monday-opens">How Monday Opens</h2>
+        <ul class="opens">
+          <li id="open-1"><b>What 50bp falling to zero means for the CD lock-in window before Wednesday.</b> Bessent&rsquo;s Sunday warning moved 50bp from approximately 6&ndash;9% to approximately 0%. The wait-or-lock math changed overnight: locking at 4.75% now vs. waiting 16 days for approximately 4.90% is a 15bp question. Wednesday&rsquo;s PCE confirms but cannot widen the tail. The lock window is open. <a class="more" href="#savings">Savings &amp; CD Rates &rarr;</a></li>
+          <li id="open-2"><b>Why gold&rsquo;s 2.5% Monday rebound means something different from its prior bounces this month.</b> Gold fell 9.1% last week to a 14-month low of $3,524 on dollar strength from December hike certainty. Monday&rsquo;s 2.5% rebound to approximately $3,614 arrives with the 50bp tail gone - the most aggressive dollar-strengthening scenario is now off the table. <a class="more" href="#commodities">Commodities &rarr;</a></li>
+          <li id="open-3"><b>What today&rsquo;s USDA Crop Progress at 3:00 PM ET shows about Iowa&rsquo;s harvest window.</b> Iowa corn sat at 84% harvested as of November 15 - 11 points behind the 95% five-year average. Today&rsquo;s report covers the week ending November 22 and reveals this week&rsquo;s pace before the Thanksgiving holiday narrows remaining fieldwork days further. <a class="more" href="#crops">Crop Weather &rarr;</a></li>
+          <li id="open-4"><b>Why S&amp;P 500 futures rising 2.6% pre-market matters for how deep this correction goes.</b> At Friday&rsquo;s close of 6,910, the S&amp;P is 10.5% below its October 6 record - still in correction. Monday&rsquo;s 2.6% pre-market futures gain is the market removing the 50bp risk premium it had been pricing. Whether this holds through Wednesday&rsquo;s PCE data determines the correction&rsquo;s depth. <a class="more" href="#stocks">Stock Market &rarr;</a></li>
+          <li id="open-5"><b>What South Korea&rsquo;s KOSPI falling 3.3% says about where the global AI repricing stands.</b> South Korea&rsquo;s KOSPI fell to 4,708 Monday on Samsung and SK Hynix earnings-revision concerns - the AI repricing&rsquo;s clearest international signal on a day Japan&rsquo;s market is closed. The Korea move suggests AI hardware earnings pressure extends well beyond Nvidia&rsquo;s specific SEC accounting issue. <a class="more" href="#world">Around the World &rarr;</a></li>
+        </ul>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="stocks">Stock Market</h2>
+        <div class="strip">
+          <div><div class="k">S&amp;P 500</div><div class="v">6,910.39</div><div class="d up">&#9650; futures +2.6% pre-market Mon</div></div>
+          <div><div class="k">Nasdaq</div><div class="v">22,617.73</div><div class="d up">&#9650; futures +3.0% pre-market Mon</div></div>
+          <div><div class="k">Dow</div><div class="v">48,147.33</div><div class="d up">&#9650; futures +1.9% pre-market Mon</div></div>
+        </div>
+        <p class="setup">S&amp;P 500 futures are up <b>2.6%</b> pre-market Monday after Treasury Secretary Bessent&rsquo;s Sunday warning cleared the 50bp tail. At Friday&rsquo;s close of <b>6,910.39</b> - still 10.5% below the October 6 record of approximately 7,818.93 - the index is in correction. <b>Nasdaq futures at +3.0%</b> reflect the larger rate-sensitivity of AI-hardware names; Dow futures at +1.9% reflect lower AI concentration. Wednesday&rsquo;s PCE at 8:30 AM ET is the next hard catalyst before the November 25 blackout.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">S&amp;P 500 (Friday November 20 close &ndash; CNBC / AP / Yahoo Finance; Monday pre-market futures):</span> <span class="num">6,910.39</span> <span class="d up">&#9650; futures +2.6% &middot; Fri close down 10.5% from Oct 6 record</span><span class="why">The 2.6% futures gain is the market&rsquo;s one-move answer to Bessent&rsquo;s Sunday warning: the 50bp risk premium that had been embedded in Friday&rsquo;s selloff is now gone. At 6,910, the correction remains intact; the question heading into the week is whether Wednesday&rsquo;s PCE interrupts the relief or confirms the base case. The S&amp;P is approximately 0.9% year-to-date per AP data at Friday&rsquo;s close.</span></div>
+          <div class="line"><span class="lb">Nasdaq Composite (Friday November 20 close &ndash; AP / CNBC; Monday pre-market futures):</span> <span class="num">22,617.73</span> <span class="d up">&#9650; futures +3.0% &middot; Fri close was 2026 YTD negative</span><span class="why">Nasdaq futures at +3.0% produce the largest relative relief among the three major indexes because AI-hardware names carry the most rate-sensitivity. Friday&rsquo;s 5.28% session loss - which pushed the Nasdaq into 2026 year-to-date negative territory - was partially driven by the 50bp tail being priced at 6&ndash;9%. With that tail at approximately 0% Monday, the Nasdaq retraces some of Friday&rsquo;s AI-rate-risk discount.</span></div>
+          <div class="line"><span class="lb">Dow Jones Industrial Average (Friday November 20 close &ndash; AP / The Closing Print; Monday pre-market futures):</span> <span class="num">48,147.33</span> <span class="d up">&#9650; futures +1.9% &middot; Fri close in correction</span><span class="why">The Dow&rsquo;s more modest +1.9% futures response reflects its lower AI-hardware concentration relative to the Nasdaq. The Dow entered correction this week - down approximately 7% from its October record. Healthcare and industrials, which led Friday&rsquo;s losses, should see partial recovery. At 48,147, the Dow is in its first correction of 2026.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>S&amp;P futures up 2.6% pre-market, Nasdaq +3.0%, Dow +1.9% - Bessent&rsquo;s Sunday clearing of the 50bp tail is the catalyst. The correction at 10.5% remains intact; Wednesday&rsquo;s PCE is the next hard catalyst before the November 25 blackout.</p></div>
+        <div class="src"><b>Curated from</b> CNBC &middot; AP &middot; Reuters &middot; Bloomberg &middot; The Closing Print &middot; Yahoo Finance</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="rates">Interest Rates</h2>
+        <div class="strip">
+          <div><div class="k">Fed funds</div><div class="v">3.75&ndash;4.00%</div><div class="d flat">Held Oct 28</div></div>
+          <div><div class="k">2-year</div><div class="v">4.689%</div><div class="d up">&#9650; from 4.63% Fri &middot; risk-on reversal</div></div>
+          <div><div class="k">10-year</div><div class="v">4.959%</div><div class="d up">&#9650; from 4.92% Fri &middot; bonds selling on relief</div></div>
+        </div>
+        <p class="setup">The 10-year yield is ticking up Monday morning to approximately <b>4.959%</b> from Friday&rsquo;s 4.92% - a mild reversal of Friday&rsquo;s flight-to-safety bond buying as equities find relief. <b>50bp is now approximately 0%</b>; 25bp holds at approximately <b>93%</b> after Bessent&rsquo;s Sunday Face the Nation warning. Wednesday&rsquo;s PCE at <b>8:30 AM ET</b> and the FOMC blackout beginning simultaneously are the week&rsquo;s rate-defining events. After Wednesday morning, 16 days of silence before December 9.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">10-year Treasury yield (Monday November 23 morning &ndash; U.S. Treasury / CNBC):</span> <span class="num">~4.959%</span> <span class="d up">&#9650; from 4.92% Fri &middot; mild risk-on reversal</span><span class="why">The 10-year&rsquo;s mild rise from 4.92% Friday to approximately 4.959% Monday reflects the reversal of Friday&rsquo;s flight-to-safety bond buying: when equities find relief, Treasuries sell. The 4-basis-point rise is modest and not a new trend - it is the unwind of Friday&rsquo;s panic-buying in bonds. At 4.959%, the 10-year remains near its lowest level since late October and far below the 5.051% peak that drove Friday&rsquo;s selloff.</span></div>
+          <div class="line"><span class="lb">2-year Treasury yield (Monday November 23 morning &ndash; U.S. Treasury):</span> <span class="num">~4.689%</span> <span class="d up">&#9650; from 4.63% Fri &middot; risk-on reversal</span><span class="why">The 2-year at 4.689% prices December at approximately 93% for 25bp and approximately 0% for 50bp. Bessent&rsquo;s Sunday warning moved the 2-year back toward rate-expectation territory after Friday&rsquo;s flight-to-safety compression. The 2-year at 4.69% is consistent with one more 25bp hike in December with minimal further hiking in 2027.</span></div>
+          <div class="line"><span class="lb">December 2026 hike probabilities (CME FedWatch, as of November 23 &ndash; CME / Bloomberg):</span> <span class="num">25bp ~93% &middot; 50bp ~0%</span> <span class="d flat">Bessent cleared the tail Sun</span><span class="why">The move from 50bp at 6&ndash;9% Friday to approximately 0% Monday is the largest single-weekend shift in the December probability distribution this cycle. Bessent&rsquo;s public pushback combined with Thursday&rsquo;s 203K Claims overshoot (above 197K consensus) to remove the aggressive scenario. Wednesday&rsquo;s PCE is the last opportunity to adjust December&rsquo;s setup before the blackout.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>50bp is now at approximately 0%; 25bp holds at approximately 93% after Bessent&rsquo;s Sunday warning. The 10-year at 4.959% is a mild risk-on reversal from Friday&rsquo;s 4.92% flight-to-safety close. Wednesday&rsquo;s PCE at 8:30 AM ET is the last pre-blackout variable before 16 days of silence heading into December 9.</p></div>
+        <div class="src"><b>Curated from</b> U.S. Treasury &middot; CME FedWatch &middot; CNBC &middot; Bloomberg &middot; Federal Reserve &middot; Face the Nation</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="savings">Savings &amp; CD Rates</h2>
+        <div class="strip">
+          <div><div class="k">Top 1-yr CD</div><div class="v">4.75%</div><div class="d up">&#9650; Bankrate &middot; Nov 23</div></div>
+          <div><div class="k">Top HYSA</div><div class="v">4.40%</div><div class="d flat">Bankrate &middot; Vio Bank</div></div>
+          <div><div class="k">Nat&rsquo;l avg 1-yr CD</div><div class="v">2.13%</div><div class="d flat">Bankrate</div></div>
+        </div>
+        <p class="setup">Best 1-year CDs at <b>4.75% APY</b> today (Bankrate). With <b>50bp now at approximately 0%</b> and 25bp at approximately 93%, a December hike delivers approximately <b>4.90%</b> January CDs. The wait-or-lock math changed overnight: the gap from locking today is now <b>15 basis points</b> (not 25bp as of Friday), closing in 16 days. Wednesday&rsquo;s PCE at <b>8:30 AM ET</b> confirms the base case but cannot revive the 50bp tail - the upside of waiting has narrowed to 15bp or less.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Best 1-year CD (Bankrate, as of November 23, 2026):</span> <span class="num">4.75% APY</span> <span class="d up">&#9650; from 4.65% last week</span><span class="why">The best available 1-year CD at 4.75% today narrowed the wait-or-lock gap from 25bp last week to 15bp now. At 25bp, January CDs are approximately 4.90%. The break-even math on a $25,000 CD: 16 days of foregone interest at 4.75% costs approximately $52; locking at 4.90% after December 9 gains approximately $37.50 per year over staying at 4.75%. The break-even is first-month. Bessent&rsquo;s Sunday clearing removed the 5.15% scenario that made waiting most compelling.</span></div>
+          <div class="line"><span class="lb">Top high-yield savings account (Bankrate, November 2026 &ndash; Vio Bank):</span> <span class="num">4.40% APY</span> <span class="d flat">liquid holding vehicle</span><span class="why">The HYSA at 4.40% remains the optimal holding vehicle for a 16-day wait. With the 50bp tail gone, the case for the HYSA holding strategy weakened: the upside is now 4.90% (not 5.15%). The 35-basis-point spread between holding at 4.40% HYSA and locking at 4.75% CD costs approximately $87.50 per year on $25,000 - a carrying cost the December 25bp must offset.</span></div>
+          <div class="line"><span class="lb">National average 1-year CD (Bankrate, November 2026):</span> <span class="num">2.13% APY</span> <span class="d flat">262bps below best available</span><span class="why">The 262-basis-point gap between national average and best available costs approximately $655 per year on $25,000. After December 9 at an approximately 4.90% best available, that gap grows to approximately $692. The national-average saver who moves to 4.75% today captures $655 per year immediately - the 16-day wait to lock at 4.90% adds approximately $37.50 more.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Sixteen days to December 9. The best 1-year CD moved to 4.75% today; the gap from waiting narrowed to 15bp. Wednesday&rsquo;s PCE at 8:30 AM ET confirms the base case. With 50bp at approximately 0%, the upside of waiting shrank overnight - the lock window is open.</p></div>
+        <div class="src"><b>Curated from</b> Bankrate &middot; NerdWallet &middot; CME FedWatch &middot; Federal Reserve</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="energy">Energy &amp; Gas Prices</h2>
+        <div class="strip">
+          <div><div class="k">Brent</div><div class="v">~$92.57</div><div class="d flat">Fri Nov 20 settlement</div></div>
+          <div><div class="k">WTI</div><div class="v">~$83.21</div><div class="d flat">Fri Nov 20 settlement (est.)</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$3.6448</div><div class="d down">&#9660; Sun Nov 22 &middot; month&rsquo;s low</div></div>
+        </div>
+        <p class="setup">Gas reached a new month&rsquo;s low Sunday at <b>$3.6448/gallon</b> (AAA, November 22) - down from $3.6594 Saturday and 46 cents below the November 1 peak near $4.11. Brent settled near <b>$92.57/barrel</b> and WTI near <b>$83.21/barrel</b> Friday (estimated). Both crude benchmarks have declined approximately <b>20&ndash;21%</b> from their October highs. The Thanksgiving travel week is the demand watch; crude&rsquo;s structural supply adequacy signal continues to work through the supply chain to retail prices.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Brent crude (Friday November 20 settlement &ndash; EnergyNow.com):</span> <span class="num">~$92.57/barrel</span> <span class="d flat">holding near range &middot; down ~21% from Oct high</span><span class="why">Brent&rsquo;s $92.57 settlement holds within the $91&ndash;$93 range since mid-November. The October high above $117 represented both Hormuz premium and demand optimism; the subsequent decline to $92 reflects IEA supply adequacy signals and repeated US inventory builds. Brent at $92 feeds national gas averages near $3.65&ndash;$3.70 with the typical three-to-four-week transmission lag. Thanksgiving travel demand is the week&rsquo;s watch for crude direction.</span></div>
+          <div class="line"><span class="lb">WTI crude (Friday November 20 settlement estimated &ndash; NYMEX / EnergyNow.com):</span> <span class="num">~$83.21/barrel</span> <span class="d flat">holding near range &middot; down ~20% from Oct high (estimated)</span><span class="why">WTI at approximately $83.21 is consistent with its recent $82&ndash;$85 range. At $83, WTI is in a range that historically produces sub-$3.75 national gas averages with a three-to-four-week lag - pointing to continued gas declines into early December. Thanksgiving travel demand could apply short-term upward pressure on crude this week before resuming the trend.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, Sunday November 22, 2026 &ndash; most recent):</span> <span class="num">$3.6448/gallon</span> <span class="d down">&#9660; from $3.6594 Sat &middot; &minus;$0.46 from Nov 1 peak &middot; month&rsquo;s low</span><span class="why">Sunday&rsquo;s $3.6448 is the month&rsquo;s low, down approximately 46 cents from the November 1 peak near $4.11. A 15-gallon fill costs approximately $6.90 less than it did two weeks ago and approximately $13.80 less than on November 1. The trend should continue through Thanksgiving as crude&rsquo;s $83 WTI range works through the supply chain.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Gas at $3.6448 is the month&rsquo;s new low - down 46 cents from the November 1 peak. Oil held near $92 Brent and $83 WTI heading into Thanksgiving week. The supply chain continues to deliver crude&rsquo;s earlier declines to retail prices on schedule.</p></div>
+        <div class="src"><b>Curated from</b> AAA &middot; EnergyNow.com &middot; EIA &middot; IEA &middot; NYMEX</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="commodities">Commodities</h2>
+        <div class="strip">
+          <div><div class="k">Gold</div><div class="v">~$3,614</div><div class="d up">&#9650; +2.5% Mon &middot; recovering from 14-mo low</div></div>
+          <div><div class="k">Silver</div><div class="v">~$42.60</div><div class="d up">&#9650; recovering Mon</div></div>
+          <div><div class="k">Copper</div><div class="v">~$5.62</div><div class="d up">&#9650; recovering Mon</div></div>
+        </div>
+        <p class="setup">Gold is recovering <b>2.5%</b> Monday to approximately <b>$3,614/oz</b> after last week&rsquo;s 9.1% decline to the <b>14-month low of $3,524</b>. The recovery is different from prior bounces this month because the catalyst changed: Bessent&rsquo;s Sunday clearing of the 50bp tail removed the most aggressive dollar-strengthening scenario. <b>Silver recovers to approximately $42.60/oz</b> and <b>copper to approximately $5.62/lb</b> in tandem. All three had been pressured by hike-certainty dollar strength; with 50bp gone, the dollar premium on the most aggressive scenario is now off.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Gold (Monday November 23 morning &ndash; Kitco / Bloomberg):</span> <span class="num">~$3,614/oz</span> <span class="d up">&#9650; +2.5% &middot; from $3,524 Fri close (14-mo low) &middot; worst week since March was last week</span><span class="why">Gold&rsquo;s Monday rebound to $3,614 is structurally different from last week&rsquo;s intraday bounces. Prior bounces this month were technical - the weekly trend remained lower as December hike certainty with 50bp at 6&ndash;9% pressed the dollar higher. Monday&rsquo;s bounce carries a changed rate setup: 50bp at approximately 0% removes the scenario that was delivering the strongest dollar premium. At $3,614, gold is still down approximately $113 from last Friday&rsquo;s $3,727 close; a full recovery waits for December 9.</span></div>
+          <div class="line"><span class="lb">Silver (Monday November 23 morning &ndash; Kitco):</span> <span class="num">~$42.60/oz</span> <span class="d up">&#9650; recovering from ~$42.11 Thu close &middot; last confirmed Friday close not available</span><span class="why">Silver&rsquo;s recovery to approximately $42.60 follows gold&rsquo;s Monday rebound. Silver&rsquo;s industrial component - solar panels and electronics - provides a demand floor that distinguishes its recovery from pure monetary gold. The 50bp tail removal helps both the monetary (less dollar pressure) and industrial (less rate headwind on capex spending) components. Thursday&rsquo;s confirmed close of $42.11 was silver&rsquo;s lowest reading of the month.</span></div>
+          <div class="line"><span class="lb">Copper (Monday November 23 morning &ndash; LME / Skillings):</span> <span class="num">~$5.62/lb</span> <span class="d up">&#9650; recovering from ~$5.51 Thu close (5-mo low)</span><span class="why">Copper&rsquo;s recovery to approximately $5.62 combines the dollar-strength reversal with the AI-hardware relief rally: copper is used in data center cooling systems, and a less aggressive rate outlook supports continued data center buildout. The Chinese demand signal - which had been soft through October - has not improved materially; copper&rsquo;s Monday recovery is primarily dollar-driven rather than demand-driven.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Gold&rsquo;s 2.5% Monday rebound to $3,614 is different from last week&rsquo;s bounces because the catalyst changed: Bessent&rsquo;s Sunday clearing removed the 50bp scenario that was delivering the strongest dollar premium. The floor historically sets up after December 9; this week is the first time the most aggressive hike scenario is off the table.</p></div>
+        <div class="src"><b>Curated from</b> Kitco &middot; Bloomberg &middot; LME &middot; Skillings &middot; Trading Economics &middot; USAGOLD</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crops">Crop Weather</h2>
+        <div class="strip">
+          <div><div class="k">Corn harvest</div><div class="v">88%</div><div class="d up">&#9650; as of Nov 15 &middot; new data 3pm ET today</div></div>
+          <div><div class="k">Soybeans harvest</div><div class="v">96%</div><div class="d flat">as of Nov 15 &middot; essentially complete</div></div>
+          <div><div class="k">Dec corn futures</div><div class="v">~$4.44/bu</div><div class="d flat">CME</div></div>
+        </div>
+        <p class="setup">No USDA update until <b>today, November 23 at 3:00 PM ET</b>. The last reading - week ending November 15, released November 16 - shows national corn at <b>88% harvested</b>, four points behind the 92% five-year average. Iowa corn at <b>84%</b> is 11 points behind the 95% five-year average with the Thanksgiving weather window narrowing. Today&rsquo;s Crop Progress covers the week ending November 22 and reveals the pace before the holiday narrows remaining fieldwork days.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">National corn harvest (USDA Crop Progress, week ending November 15, released November 16 &ndash; USDA NASS / DTN):</span> <span class="num">88% complete</span> <span class="d up">&#9650; from 81% prior week &middot; 4pts behind 92% five-year avg</span><span class="why">National corn at 88% has narrowed the gap with the 92% five-year average to 4 points. Today&rsquo;s Crop Progress at 3:00 PM ET covers the week ending November 22 and reveals how much more progress the favorable early-week weather delivered. Iowa carries the late-harvest risk. The December 10 WASDE sets the season&rsquo;s final yield numbers regardless of harvest pace.</span></div>
+          <div class="line"><span class="lb">Iowa corn harvest (USDA Crop Progress, week ending November 15, released November 16 &ndash; Iowa Dept. of Agriculture / USDA NASS):</span> <span class="num">84% complete</span> <span class="d up">&#9650; from 72% prior week &middot; still 11pts behind 95% five-year avg</span><span class="why">Iowa&rsquo;s 12-point weekly gain was the season&rsquo;s fastest harvest progress. At 84%, Iowa remains the late-harvest risk state with the weather window closing. If today&rsquo;s reading shows 90%+, the gap narrows to 5 points - within reach of the five-year average before freeze-up risk peaks in December. If progress stalled, 84% entering Thanksgiving week would be the final pre-holiday reading.</span></div>
+          <div class="line"><span class="lb">Soybeans harvest (USDA Crop Progress, week ending November 15, released November 16 &ndash; USDA NASS):</span> <span class="num">96% complete</span> <span class="d flat">1pt ahead of 95% five-year average &middot; essentially complete</span><span class="why">Soybeans at 96% are essentially complete - 1 point ahead of the five-year average. No supply-side risk remains for the soybean crop. The crop weather story for the remainder of 2026 is the corn harvest and the December 10 WASDE&rsquo;s final yield estimates.</span></div>
+          <div class="line"><span class="lb">December corn futures (CME, week of November 23, 2026):</span> <span class="num">~$4.44/bu</span> <span class="d flat">stable &middot; no USDA shock yet</span><span class="why">December corn futures near $4.44 are stable heading into today&rsquo;s Crop Progress. No supply-side shock from USDA data has arrived this season; futures react most to yield-threatening events, and the late Iowa harvest has not yet produced a supply signal large enough to move the market. Today&rsquo;s 3:00 PM ET release is the week&rsquo;s crop-data pivot.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>No crop data until today at 3:00 PM ET. Iowa corn at 84% is the late-harvest risk with 11 points behind the five-year average heading into Thanksgiving. Today&rsquo;s Crop Progress covers the week ending November 22; the season&rsquo;s final numbers come from the December 10 WASDE.</p></div>
+        <div class="src"><b>Curated from</b> USDA NASS &middot; Iowa Dept. of Agriculture &middot; DTN Progressive Farmer &middot; CME</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="realestate">Real Estate</h2>
+        <div class="strip">
+          <div><div class="k">30-yr mortgage (Freddie Mac)</div><div class="v">7.28%</div><div class="d up">&#9650; from 7.11% (Nov 12)</div></div>
+          <div><div class="k">10-year</div><div class="v">~4.959%</div><div class="d up">&#9650; mild risk-on reversal from 4.92% Fri</div></div>
+          <div><div class="k">Tariff Day</div><div class="v">Day 104</div><div class="d flat">34.75% combined</div></div>
+        </div>
+        <p class="setup">The most recent Freddie Mac PMMS (November 19) held at <b>7.28%</b> - the reading that ended the four-week declining trend. The 10-year at approximately <b>4.959%</b> Monday morning is a mild reversal of Friday&rsquo;s 4.92% flight-to-safety close as equities find relief. Thursday&rsquo;s Freddie Mac PMMS (November 26 &ndash; Thanksgiving) captures this week&rsquo;s rate environment; if the 10-year holds near 4.92&ndash;4.96%, Thursday&rsquo;s survey could partially reverse the 7.28% November 19 reading. Canada lumber tariff is <b>Day 104</b> at <b>34.75% combined</b>.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">30-year fixed (Freddie Mac PMMS, Thursday November 19, 2026 &ndash; Freddie Mac / GlobeNewsWire):</span> <span class="num">7.28%</span> <span class="d up">&#9650; from 7.11% (November 12) &middot; 15-yr 6.59%</span><span class="why">The PMMS at 7.28% broke the four-week declining streak as the FOMC minutes&rsquo; post-survey-week 10-year move reached the survey window. Each 10-basis-point worsening adds approximately $27 to a $400,000 mortgage&rsquo;s monthly payment; the 17bp rise from 7.11% adds approximately $45/month. Thursday&rsquo;s PMMS (Thanksgiving) captures this week&rsquo;s survey environment - including Friday&rsquo;s 13-basis-point yield decline to 4.92% and Monday&rsquo;s mild reversal.</span></div>
+          <div class="line"><span class="lb">10-year Treasury yield (Monday November 23 morning &ndash; U.S. Treasury / CNBC):</span> <span class="num">~4.959%</span> <span class="d up">&#9650; from 4.92% Fri &middot; mild risk-on reversal</span><span class="why">The 10-year at 4.959% Monday represents the partial unwind of Friday&rsquo;s flight-to-safety bond buying. At 4.959% - still approximately 9 basis points below Thursday&rsquo;s 5.051% peak - the yield is in a range that, if sustained through Thursday&rsquo;s PMMS survey window, could allow next Thursday&rsquo;s reading to hold near or below 7.28%. December 9 remains the next meaningful mortgage rate pivot.</span></div>
+          <div class="line"><span class="lb">Canada softwood lumber tariff (Day 104, Monday November 23 &ndash; NAHB / ScrapMonster):</span> <span class="num">34.75% combined</span> <span class="d flat">antidumping 24.75% + Section 232 10%</span><span class="why">Commerce&rsquo;s mid-October revision cut the antidumping/CVD component to 24.75% (from 35.16%), reducing the combined rate from approximately 45% to 34.75%. The 10% Section 232 tariff remains unchanged. No timeline for relief before the new Congress convenes January 3, 2027. The 34.75% rate adds approximately $7,500&ndash;$12,000 to the cost of a new single-family home at current lumber intensities.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>The PMMS at 7.28% ended the four-week improving streak. The 10-year at 4.959% Monday is a mild reversal of Friday&rsquo;s 4.92% flight-to-safety close. Thursday&rsquo;s PMMS publishes on Thanksgiving - if the 10-year holds near 4.92&ndash;4.96%, it could partially reverse last week&rsquo;s increase. December 9 is the next meaningful rate pivot.</p></div>
+        <div class="src"><b>Curated from</b> Freddie Mac &middot; GlobeNewsWire &middot; NAHB &middot; U.S. Treasury &middot; ScrapMonster &middot; Mortgage News Daily</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="household">Household Finance</h2>
+        <div class="strip">
+          <div><div class="k">Claims</div><div class="v">203K</div><div class="d up">&#9650; above 197K consensus (Nov 20)</div></div>
+          <div><div class="k">Card delinquency 90+</div><div class="v">5.0%</div><div class="d up">&#9650; from 4.7% Q2 &middot; NY Fed Q3</div></div>
+          <div><div class="k">Gas (AAA)</div><div class="v">$3.6448</div><div class="d down">&#9660; Sun Nov 22 &middot; month&rsquo;s low</div></div>
+        </div>
+        <p class="setup">The most recent jobless claims (released <b>Thursday, November 20 at 8:30 AM ET</b>) came in at <b>203K</b> - above the <b>197K consensus</b>, modest labor softening. The NY Fed&rsquo;s Q3 2026 household debt report holds at <b>5.0% card delinquency 90+</b> - up from 4.7% in Q2 - with credit card balances at <b>$1.285 trillion</b>. Gas at <b>$3.6448/gallon</b> (AAA, Sunday) is the month&rsquo;s new low. Wednesday&rsquo;s Claims release at <b>8:30 AM ET</b> covers the week ending November 22.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Initial Jobless Claims (BLS, week ending November 15, released 8:30 AM ET November 20 &ndash; BLS / Reuters):</span> <span class="num">203K</span> <span class="d up">&#9650; above 197K consensus &middot; prior 200K</span><span class="why">The 203K reading was 6K above consensus and contributed to Bessent&rsquo;s Sunday argument against over-tightening: the labor market is showing early signs of softening. The overshoot - modest by historical standards - was one of the inputs that moved 50bp from 6&ndash;9% to approximately 0% by Monday morning. Wednesday&rsquo;s Claims at 8:30 AM ET (week ending November 22) gives the follow-up read alongside PCE before the blackout begins.</span></div>
+          <div class="line"><span class="lb">NY Fed Q3 2026 household debt delinquency (released November 10 &ndash; NY Fed):</span> <span class="num">5.0% delinquency rate &middot; credit card balances $1.285T</span> <span class="d up">&#9650; from 4.7% Q2</span><span class="why">The 0.3-point Q3 rise covers the first full post-September-hike quarter and represents the initial rate transmission to household balance sheets. Delinquency tends to accelerate three to six months after a rate-cycle peak. The December hike adds another layer; Q4 2026 NY Fed data, due in February, will show the full transmission from December&rsquo;s move. At 5.0%, card delinquency is at its highest since 2019.</span></div>
+          <div class="line"><span class="lb">National gas average (AAA, Sunday November 22, 2026 &ndash; most recent):</span> <span class="num">$3.6448/gallon</span> <span class="d down">&#9660; from $3.6594 Sat &middot; &minus;$0.46 from Nov 1 peak &middot; month&rsquo;s low</span><span class="why">Gas below $3.65 is the month&rsquo;s low and the one line in the household budget moving in consumers&rsquo; favor while card balances and delinquencies rise. A weekly 15-gallon fill costs approximately $6.90 less than two weeks ago. The easing continues through Thanksgiving as crude&rsquo;s $83 WTI range works through the supply chain.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Thursday&rsquo;s 203K Claims overshoot helped tip the 50bp tail toward 0% by Monday. Card delinquency at 5.0% and gas at $3.6448 are the two household finance reads heading into Thanksgiving week: one rising, one falling. Wednesday brings Claims alongside PCE at 8:30 AM ET.</p></div>
+        <div class="src"><b>Curated from</b> BLS &middot; NY Fed &middot; Census Bureau &middot; AAA &middot; CNBC &middot; Reuters &middot; Federal Reserve</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="crypto">Crypto</h2>
+        <div class="strip">
+          <div><div class="k">Bitcoin</div><div class="v">~$60,500</div><div class="d up">&#9650; holding above $60K &middot; from $55K Sat low</div></div>
+          <div><div class="k">Ethereum</div><div class="v">~$1,690</div><div class="d up">&#9650; recovering &middot; from ~$1,626 Thu</div></div>
+          <div><div class="k">XRP</div><div class="v">~$0.93</div><div class="d flat">below $1 &middot; CLARITY Act Jan 2027</div></div>
+        </div>
+        <p class="setup">Bitcoin is holding near <b>$60,500</b> Monday morning after Saturday&rsquo;s $55,300 low and Sunday&rsquo;s recovery to approximately $61,000 cleared roughly <b>$2 billion</b> in leveraged short positions. The $60,000 level is the immediate watch for the week. Ethereum holds near <b>$1,690</b>; XRP near <b>$0.93</b> - below $1 since the CLARITY Act&rsquo;s November Senate failure. <b>January 2027 Congress</b> is the next legislative vehicle for crypto regulatory clarity. IBIT (BlackRock Bitcoin ETF) has seen elevated outflows through the correction.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Bitcoin (Monday November 23 morning &ndash; CoinMarketCap / Bloomberg):</span> <span class="num">~$60,500</span> <span class="d up">&#9650; from ~$55,300 Sat low &middot; $2B+ 24-hr liquidations cleared &middot; &minus;25% from Nov 4 high near $81K</span><span class="why">Bitcoin holding above $60,000 Monday morning is the first overnight confirmation that Saturday&rsquo;s $55,300 low was not the start of a new leg down. The weekend liquidation cycle cleared approximately $2 billion in short positions; a close above $60,000 on Monday&rsquo;s US open would signal the correction has found near-term footing. Bessent&rsquo;s 50bp clearing may add modest rate-relief tailwind for crypto, which had been pricing the aggressive hike scenario alongside equities.</span></div>
+          <div class="line"><span class="lb">Ethereum (Monday November 23 morning &ndash; CoinMarketCap):</span> <span class="num">~$1,690</span> <span class="d up">&#9650; from ~$1,626 Thu &middot; recovering with broader crypto</span><span class="why">Ethereum&rsquo;s hold near $1,690 Monday follows the Bitcoin-led stabilization as leveraged positions cleared. The CLARITY Act&rsquo;s November Senate failure removed the near-term regulatory catalyst for Ethereum specifically. January 2027 Congress is the next legislative vehicle. The $1,600 support level held through the weekend selloff, providing the floor that allowed Sunday&rsquo;s recovery.</span></div>
+          <div class="line"><span class="lb">XRP (Monday November 23 morning &ndash; eToro / Yahoo Finance):</span> <span class="num">~$0.93</span> <span class="d flat">holding near $0.91&ndash;$0.93 &middot; below $1 since CLARITY Act Senate failure</span><span class="why">XRP has held near $0.91&ndash;$0.93 since the CLARITY Act&rsquo;s November Senate failure by approximately 50&ndash;49. Ripple&rsquo;s monthly 1-billion-XRP escrow release continues on schedule. On-chain metrics (Daily Active Addresses from Santiment) have held relatively stable despite the price decline. The first Senate vote came within one vote of passage; January 2027 Congress is the realistic next vehicle for the CLARITY Act.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Bitcoin holding above $60,000 Monday morning is the first overnight signal that Saturday&rsquo;s $55,300 low found footing. The weekend&rsquo;s $2 billion liquidation cycle cleared; a Monday US open close above $60K confirms the near-term floor. Bessent&rsquo;s 50bp clearing removes the most aggressive rate-headwind scenario for crypto heading into Wednesday.</p></div>
+        <div class="src"><b>Curated from</b> CoinMarketCap &middot; Bloomberg &middot; eToro &middot; Yahoo Finance &middot; Santiment &middot; Farside Investors</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="world">Around the World</h2>
+        <div class="strip">
+          <div><div class="k">Nikkei 225</div><div class="v">Closed</div><div class="d flat">Labour Thanksgiving Day &middot; resumes Tue</div></div>
+          <div><div class="k">Hang Seng</div><div class="v">~22,380</div><div class="d down">&#9660; &minus;0.1% Mon session</div></div>
+          <div><div class="k">KOSPI (South Korea)</div><div class="v">4,708</div><div class="d down">&#9660; &minus;3.3% Mon &middot; Samsung / SK Hynix</div></div>
+        </div>
+        <p class="setup">South Korea&rsquo;s KOSPI fell <b>3.3%</b> to <b>4,708</b> Monday on Samsung and SK Hynix earnings-revision concerns - the global AI repricing&rsquo;s most direct international signal on a day Japan&rsquo;s Nikkei is <b>closed for Labour Thanksgiving Day</b>. The Hang Seng fell a mild <b>0.1%</b> to approximately <b>22,380</b>. USD/JPY holds near <b>159</b>. <b>Japan&rsquo;s market reopens Tuesday, November 24</b>, giving Tokyo its first session to react to Sunday&rsquo;s crypto recovery, Bessent&rsquo;s warning, and Monday&rsquo;s S&amp;P futures relief.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">KOSPI (South Korea, Monday November 23 &ndash; Korea Exchange / Bloomberg):</span> <span class="num">4,708</span> <span class="d down">&#9660; &minus;3.3% &middot; Samsung and SK Hynix earnings-revision concerns</span><span class="why">The KOSPI&rsquo;s 3.3% Monday decline is the global AI repricing&rsquo;s most direct international measure: Samsung and SK Hynix are primary AI memory chip suppliers, and their earnings-revision risk extends the narrative beyond Nvidia&rsquo;s specific SEC accounting issue. If the AI hardware correction is sector-wide rather than Nvidia-specific, the KOSPI&rsquo;s signal matters for how deep the US correction goes. South Korea is the only major market open Monday that gives a live read on the AI repricing&rsquo;s depth.</span></div>
+          <div class="line"><span class="lb">Nikkei 225 (closed Monday November 23 &ndash; Labour Thanksgiving Day):</span> <span class="num">56,436.65</span> <span class="d flat">Friday Nov 20 close &middot; down ~22% from Jun high &middot; bear market &middot; resumes Tue</span><span class="why">Japan&rsquo;s market is closed Monday for Labour Thanksgiving Day (Kinr&#333; Kansha no Hi). The Nikkei&rsquo;s last close was 56,436.65 on Friday - down 5.06% and approximately 22% below the June 2026 high, in formal bear market territory. Tokyo markets reopen Tuesday and will react then to Sunday&rsquo;s crypto recovery, Bessent&rsquo;s Sunday warning, and Monday&rsquo;s US pre-market relief. Tuesday&rsquo;s Nikkei open is the first Asian read on the week&rsquo;s rate-picture change.</span></div>
+          <div class="line"><span class="lb">Hang Seng (Monday November 23 Hong Kong session &ndash; Reuters / Bloomberg):</span> <span class="num">~22,380</span> <span class="d down">&#9660; &minus;0.1% &middot; modest pressure continuing</span><span class="why">The Hang Seng&rsquo;s mild 0.1% Monday decline reflects continued pressure from US chip export restrictions targeting advanced semiconductor equipment, offset by the Bessent-driven rate-relief signal from US futures. The modest move - compared to KOSPI&rsquo;s 3.3% - suggests Hong Kong is absorbing the US relief and the chip restriction headwind simultaneously. Overnight Futures from Friday settled near 22,238; the actual session landed slightly above that.</span></div>
+          <div class="line"><span class="lb">USD/JPY (Monday November 23 &ndash; FXStreet / Trading Economics):</span> <span class="num">~159</span> <span class="d flat">holding near Friday level &middot; intervention watch</span><span class="why">USD/JPY holding near 159 Monday reflects the offsetting dynamics of Bessent&rsquo;s rate relief (dollar-negative at the margin) and risk-on sentiment (dollar-positive). With Japan&rsquo;s market closed, the yen&rsquo;s trajectory into Wednesday&rsquo;s PCE will update when Tokyo resumes Tuesday. Japanese Finance Ministry officials have flagged 160 as an intervention trigger; the pair has remained below 160 since Thursday&rsquo;s Claims overshoot modestly eased dollar pressure.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>South Korea&rsquo;s KOSPI -3.3% is Monday&rsquo;s clearest international signal: AI hardware earnings risk extends beyond Nvidia to Samsung and SK Hynix. Japan is closed today; Tokyo markets react to the week&rsquo;s rate-picture change when they reopen Tuesday. The Hang Seng&rsquo;s mild 0.1% decline reflects the offsetting signals of US rate relief and chip restriction pressure.</p></div>
+        <div class="src"><b>Curated from</b> Korea Exchange &middot; Bloomberg &middot; Reuters &middot; FXStreet &middot; Trading Economics &middot; Japan Ministry of Finance</div>
+        </div>
+
+        <div class="sec-v2">
+        <h2 class="section-title" id="events">The Week Ahead</h2>
+        <div class="strip">
+          <div><div class="k">Today Mon Nov 23</div><div class="v">USDA Crop Progress</div><div class="d flat">3:00 PM ET &middot; Japan closed</div></div>
+          <div><div class="k">Wed Nov 25</div><div class="v">PCE &middot; Q3 GDP &middot; Claims</div><div class="d flat">8:30 AM ET &middot; Blackout begins</div></div>
+          <div><div class="k">Thu Nov 26</div><div class="v">Thanksgiving</div><div class="d flat">Markets closed &middot; Freddie Mac PMMS</div></div>
+        </div>
+        <p class="setup">The week&rsquo;s defining event is <b>Wednesday, November 25 at 8:30 AM ET</b>: PCE, Q3 GDP second estimate, and Initial Claims - simultaneously the FOMC media blackout begins. <b>Today at 3:00 PM ET</b>: USDA Crop Progress covering the week ending November 22 - Iowa&rsquo;s 11-point harvest deficit is the watch item. Markets are <b>closed Thursday, November 26</b> for Thanksgiving. Freddie Mac&rsquo;s PMMS publishes Thursday per schedule. Friday, November 27 has an early close at <b>1:00 PM ET</b>. December 9 is <b>16 days away</b>.</p>
+        <div class="lines">
+          <div class="line"><span class="lb">Today Monday, November 23 &ndash; USDA Crop Progress at 3:00 PM ET (USDA NASS) &middot; Japan closed for Labour Thanksgiving Day:</span> <span class="d flat">covers week ending November 22</span><span class="why">Today&rsquo;s Crop Progress reveals how much Iowa&rsquo;s 11-point harvest deficit closed before the Thanksgiving weather window narrows further. Iowa at 84% (11 points behind the 95% five-year average) is the season&rsquo;s remaining harvest risk. Tokyo markets are closed today for Labour Thanksgiving Day; Japanese equity reaction to Bessent&rsquo;s warning and Sunday&rsquo;s crypto recovery waits until Tuesday.</span></div>
+          <div class="line"><span class="lb">Wednesday, November 25 &ndash; PCE + Q3 GDP 2nd estimate + Initial Claims + New Home Sales at 8:30/10:00 AM ET (BEA / BLS / Census) + FOMC blackout begins:</span> <span class="d flat">last pre-blackout data before December 9</span><span class="why">With 50bp now at approximately 0%, PCE&rsquo;s job Wednesday has changed: a hot print confirms the base case but cannot revive the aggressive tail. A cool print narrows what little uncertainty remains. Q3 GDP second estimate refines the 2.8% advance estimate. Initial Claims (week ending November 22) gives the follow-up to Thursday&rsquo;s 203K read. New Home Sales at 10:00 AM ET rounds out the housing picture. After Wednesday morning, the market carries whatever position the data establishes into 16 days of FOMC silence.</span></div>
+          <div class="line"><span class="lb">Thursday, November 26 &ndash; Thanksgiving &middot; Freddie Mac PMMS publishes:</span> <span class="d flat">US markets closed &middot; next mortgage rate reading</span><span class="why">US equity and bond markets are closed Thursday. Freddie Mac&rsquo;s PMMS publishes Thursday per schedule, capturing this week&rsquo;s survey environment - including Friday&rsquo;s 13-basis-point yield decline to 4.92% and any additional rate movement through the survey window. If the 10-year holds near 4.92&ndash;4.96%, Thursday&rsquo;s PMMS could partially reverse the 7.28% November 19 reading. Friday November 27 has an early close at 1:00 PM ET.</span></div>
+          <div class="line"><span class="lb">December 8&ndash;9, 2026 &ndash; FOMC meeting:</span> <span class="d flat">25bp hike ~93% probability &middot; 50bp ~0% &middot; 16 days away</span><span class="why">The December 9 decision is the rate cycle&rsquo;s next hard date. With 50bp now at approximately 0% after Bessent&rsquo;s Sunday warning, the CD lock-in math is a 15bp question: lock at 4.75% today or wait 16 days for approximately 4.90% at the 25bp base case. Wednesday&rsquo;s PCE is the last variable before December&rsquo;s setup locks in through 16 days of FOMC silence.</span></div>
+        </div>
+        <div class="bottom"><span class="lbl">Bottom line</span><p>Today&rsquo;s USDA Crop Progress at 3:00 PM ET and Wednesday&rsquo;s PCE plus GDP at 8:30 AM ET are the week&rsquo;s two catalysts. After Wednesday, 16 days of silence before December 9. With 50bp now at approximately 0%, PCE confirms the base case; it cannot revive the tail that cleared Sunday.</p></div>
+        <div class="src"><b>Curated from</b> Federal Reserve &middot; CME FedWatch &middot; BEA &middot; BLS &middot; USDA &middot; NYSE &middot; Bankrate &middot; Freddie Mac</div>
+        </div>
+
+        <div class="disclaimer">
+          <p>This material is provided for informational purposes only and does not constitute legal, tax, securities, lending, investment, or financial advice. Participation in commercial transactions involves risk, including possible loss of capital. Historical performance does not guarantee future outcomes.</p>
+          <p class="asof">Figures reflect the latest readings available as of Monday, November 23, 2026, before the US market open. Sources are listed at the end of each section.</p>
+        </div>
+
+      </div>
+
+    </main>
+
+    <aside class="sidebar">
+      <div class="toc-title" style="color:var(--gold);">Sections</div>
+      <ul class="toc">
+        <li><a href="#quick-read"><span class="dot"></span>The Quick Read</a></li>
+        <li><a href="#monday-opens"><span class="dot"></span>How Monday Opens</a></li>
+        <li><a href="#stocks"><span class="dot"></span>Stock Market</a></li>
+        <li><a href="#rates"><span class="dot"></span>Interest Rates</a></li>
+        <li><a href="#savings"><span class="dot"></span>Savings &amp; CD Rates</a></li>
+        <li><a href="#energy"><span class="dot"></span>Energy &amp; Gas Prices</a></li>
+        <li><a href="#commodities"><span class="dot"></span>Commodities</a></li>
+        <li><a href="#crops"><span class="dot"></span>Crop Weather</a></li>
+        <li><a href="#realestate"><span class="dot"></span>Real Estate</a></li>
+        <li><a href="#household"><span class="dot"></span>Household Finance</a></li>
+        <li><a href="#crypto"><span class="dot"></span>Crypto</a></li>
+        <li><a href="#world"><span class="dot"></span>Around the World</a></li>
+        <li><a href="#events"><span class="dot"></span>The Week Ahead</a></li>
+      </ul>
+      <div style="margin-top:24px;padding-top:16px;border-top:1px solid var(--line);">
+        <div class="toc-title" style="color:var(--gold);">Archive</div>
+        <ul class="toc">
+          <li><a href="market_pulse_november22_2026.html">November 22, 2026</a></li>
+          <li><a href="market_pulse_november21_2026.html">November 21, 2026</a></li>
+          <li><a href="market_pulse_november20_2026.html">November 20, 2026</a></li>
+          <li><a href="market_pulse_november19_2026.html">November 19, 2026</a></li>
+          <li><a href="market_pulse_november18_2026.html">November 18, 2026</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 24px;">
+    <div class="subscribe">
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>The latest market data, analysis, and member resources, delivered weekly.</p>
+      <div class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="Email address" required>
+        <button type="button" id="subscribe-btn">Subscribe</button>
+      </div>
+      <div id="subscribe-msg" style="display:none;font-family:'Work Sans',sans-serif;font-size:14px;margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="thank-you-modal">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-icon">T</div>
+      <h3>Thank You for Signing Up</h3>
+      <p>We&rsquo;re looking forward to being a friend for you in this space.</p>
+      <div class="signoff">Totem Founders</div>
+    </div>
+  </div>
+
+  <footer class="site">
+    <div class="inner">
+      <div class="fm">The Totem <b>Challenge</b> &amp; Market <b>Pulse</b></div>
+      <div class="legal">A publication of Totem LC Group. This material is provided for informational purposes only and does not constitute legal, tax, lending, securities, investment, or financial advice.<br><a href="https://totemlcg.com" style="color:var(--gold);text-decoration:none;">totemlcg.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('subscribe-btn').addEventListener('click', function(){
+      var email = document.getElementById('subscribe-email').value.trim();
+      var msg = document.getElementById('subscribe-msg');
+      var btn = this;
+      if(!email || email.indexOf('@') === -1){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Please enter a valid email address.';return;}
+      btn.textContent='Sending...';btn.disabled=true;
+      fetch('https://script.google.com/macros/s/AKfycbxK45S5f1ersHGXZ24ihfnILuo7Os_Ylv9XPudPpjhN-n9Y5sohhHgSLKvy_UR-PVoD/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})}).then(function(){document.getElementById('subscribe-email').value='';btn.textContent='Subscribed';document.getElementById('thank-you-modal').classList.add('active');}).catch(function(){msg.style.display='block';msg.style.color='#9b2c2c';msg.textContent='Something went wrong. Please try again.';btn.textContent='Subscribe';btn.disabled=false;});
+    });
+    document.getElementById('modal-close').addEventListener('click',function(){document.getElementById('thank-you-modal').classList.remove('active');});
+    document.getElementById('thank-you-modal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('active');});
+  </script>
+</body>
+</html>
